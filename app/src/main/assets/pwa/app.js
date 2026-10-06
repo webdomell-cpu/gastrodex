@@ -1,7 +1,7 @@
 // GastroDex PWA - High-Performance Hospitality & Gastronomy Encyclopedia
 // Offline-first with LocalStorage synchronization & Bilingual EN/DE support
 
-const STORAGE_KEY_ITEMS = 'gastrodex_items_v2';
+const STORAGE_KEY_ITEMS = 'gastrodex_items_v3';
 const STORAGE_KEY_LANG = 'gastrodex_lang';
 const STORAGE_KEY_QUIZ_RESULTS = 'gastrodex_quiz_results';
 

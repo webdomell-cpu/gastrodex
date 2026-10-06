@@ -406,9 +406,14 @@
           </div>
         </div>
 
-        <div style="display: flex; justify-content: flex-end; gap: 12px; margin-top: 24px;">
-          <button type="button" class="btn-action" onclick="closeItemModal()">Abbrechen</button>
-          <button type="submit" class="btn-action btn-primary-action">Eintrag speichern</button>
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 24px;">
+          <button type="button" class="btn-action" style="background: rgba(201,136,34,0.15); border-color: var(--accent-gold); color: var(--accent-gold); display: flex; align-items: center; gap: 6px;" onclick="autoTranslateForm()">
+            <span class="material-symbols-outlined" style="font-size:18px;">translate</span> ✨ Automatisch ins Englische übersetzen
+          </button>
+          <div style="display: flex; gap: 12px;">
+            <button type="button" class="btn-action" onclick="closeItemModal()">Abbrechen</button>
+            <button type="submit" class="btn-action btn-primary-action">In Firestore speichern</button>
+          </div>
         </div>
       </form>
     </div>
@@ -482,7 +487,7 @@
       } else if (typeof curatedItems !== 'undefined') {
         adminItems = JSON.parse(JSON.stringify(curatedItems));
       } else {
-        const saved = localStorage.getItem('gastrodex_items_v2');
+        const saved = localStorage.getItem('gastrodex_items_v3');
         if (saved) adminItems = JSON.parse(saved);
       }
       renderAdminTable();
@@ -497,7 +502,7 @@
             snapshot.forEach(doc => cloudItems.push(doc.data()));
             if (cloudItems.length > 0) {
               adminItems = cloudItems;
-              localStorage.setItem('gastrodex_items_v2', JSON.stringify(adminItems));
+              localStorage.setItem('gastrodex_items_v3', JSON.stringify(adminItems));
               renderAdminTable();
               updateStats();
               document.getElementById('statVersion').innerText = '🔥 Cloud Live (' + adminItems.length + ')';
@@ -658,7 +663,7 @@
         if (idx !== -1) adminItems[idx] = newItem;
       }
 
-      localStorage.setItem('gastrocodex_items_v2', JSON.stringify(adminItems));
+      localStorage.setItem('gastrodex_items_v3', JSON.stringify(adminItems));
       closeItemModal();
       renderAdminTable();
       updateStats();
@@ -670,7 +675,7 @@
       if (!item) return;
       if (confirm(`Möchtest du "${item.nameDe}" wirklich aus der globalen Datenbank entfernen?`)) {
         adminItems = adminItems.filter(i => i.id !== id);
-        localStorage.setItem('gastrodex_items_v2', JSON.stringify(adminItems));
+        localStorage.setItem('gastrodex_items_v3', JSON.stringify(adminItems));
         if (db) {
           db.collection('items').doc(id).delete()
             .then(() => console.log('🗑️ Aus Cloud Firestore gelöscht:', id))
@@ -735,6 +740,48 @@
       alert("catalog_latest.json und catalog_version.json wurden heruntergeladen. Kopiere sie in deinen Firebase Storage Bucket oder den public-Ordner!");
       closeFirebaseModal();
     }
+  
+    // Automatische KI- & Wörterbuch-Übersetzung (DE -> EN)
+    async function translateText(text) {
+      if (!text || text.trim() === '') return '';
+      try {
+        const url = 'https://api.mymemory.translated.net/get?q=' + encodeURIComponent(text) + '&langpair=de|en';
+        const res = await fetch(url);
+        const data = await res.json();
+        if (data && data.responseData && data.responseData.translatedText) {
+          return data.responseData.translatedText;
+        }
+      } catch (err) {
+        console.warn('Translation notice:', err);
+      }
+      return text;
+    }
+
+    async function autoTranslateForm() {
+      const btn = event.currentTarget;
+      const originalText = btn.innerHTML;
+      btn.innerHTML = '<span class="material-symbols-outlined" style="font-size:18px;">sync</span> Übersetze...';
+      btn.disabled = true;
+
+      try {
+        const nameDe = document.getElementById('nameDe').value;
+        const subDe = document.getElementById('subtitleDe').value;
+        const sciDe = document.getElementById('scienceExplainedDe').value;
+        const faqDe = document.getElementById('guestFaqDe').value;
+        const rawDe = document.getElementById('rawMaterialDe').value;
+
+        if (nameDe) document.getElementById('nameEn').value = await translateText(nameDe);
+        if (subDe) document.getElementById('subtitleEn').value = await translateText(subDe);
+        
+        alert('✨ Übersetzung erfolgreich generiert!');
+      } catch (e) {
+        alert('Übersetzungshinweis: ' + e.message);
+      } finally {
+        btn.innerHTML = originalText;
+        btn.disabled = false;
+      }
+    }
+
   </script>
 </body>
 </html>
