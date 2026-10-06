@@ -1,7 +1,7 @@
 {
-  "version": 27,
-  "timestamp": 1791274515459,
-  "updatedAt": "2026-10-06T08:15:15.459Z",
-  "itemsCount": 128,
-  "quizQuestionsCount": 288
+  "version": "3.0.0",
+  "itemCount": 152,
+  "quizCount": 288,
+  "updatedAt": "2026-10-06T11:30:00Z",
+  "changelog": "Complete Curated Master Catalog with all 152 items and 288 quiz questions synced with Android app."
 }

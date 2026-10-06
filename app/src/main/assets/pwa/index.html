@@ -24,11 +24,17 @@
   <!-- TOP APP BAR -->
   <header class="top-bar">
     <div class="brand">
-      <h1>GastroDex</h1>
-      <span class="badge-edu">EDU</span>
+      <img src="logo.svg" alt="GastroDex Logo" class="brand-logo" width="36" height="36" />
+      <div class="brand-text">
+        <div style="display: flex; align-items: center; gap: 6px;">
+          <h1>GastroDex</h1>
+          <span class="badge-edu">EDU</span>
+        </div>
+        <p class="brand-subtitle" id="topBarSubtitle">Das Gastronomie Quiz & Lexikon</p>
+      </div>
     </div>
     <div class="top-actions">
-      <a href="admin.html" class="btn-lang" style="text-decoration: none; margin-right: 6px; background: rgba(201, 136, 34, 0.2); border-color: var(--accent-gold);">🛠️ Web Admin</a>
+      <a href="admin.html" class="btn-lang" style="text-decoration: none; margin-right: 6px; background: rgba(224, 109, 83, 0.15); border-color: var(--accent-gold); font-size: 0.8rem;">🛠️ Web Admin</a>
       <button class="btn-lang" id="langToggleBtn" onclick="toggleLanguage()">🇩🇪 DE</button>
     </div>
   </header>
@@ -45,8 +51,24 @@
     <!-- Category Chips -->
     <div class="category-scroll" id="categoryScroll"></div>
 
+    <!-- Quick Toggle Filters (Favorites, In Stock, Regional/Import) -->
+    <div class="sub-filters">
+      <button class="filter-btn" id="filterFavBtn" onclick="toggleFavoriteFilter()">
+        <span class="material-symbols-outlined" style="font-size: 15px; vertical-align: middle;">favorite</span>
+        <span id="filterFavLabel">Favoriten</span>
+      </button>
+      <button class="filter-btn" id="filterStockBtn" onclick="toggleStockFilter()">
+        <span class="material-symbols-outlined" style="font-size: 15px; vertical-align: middle;">check_circle</span>
+        <span id="filterStockLabel">Auf Lager</span>
+      </button>
+      <button class="filter-btn" id="filterImportBtn" onclick="cycleImportFilter()">
+        <span class="material-symbols-outlined" style="font-size: 15px; vertical-align: middle;">public</span>
+        <span id="filterImportLabel">Alle Herkünfte</span>
+      </button>
+    </div>
+
     <div class="container" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
-      <span id="itemCountBadge" style="font-size: 0.8rem; font-weight: 700; color: var(--accent-gold);"></span>
+      <span id="itemCountBadge" style="font-size: 0.82rem; font-weight: 700; color: var(--accent-gold);"></span>
     </div>
 
     <!-- Catalog Grid -->
@@ -172,16 +194,7 @@
         </p>
 
         <!-- Category selector buttons -->
-        <div style="display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 12px;">
-          <button class="filter-btn active" onclick="initQuizSession('all', 10)">✨ Mix alle</button>
-          <button class="filter-btn" onclick="initQuizSession('spirits', 10)">🥃 Spirituosen</button>
-          <button class="filter-btn" onclick="initQuizSession('wine', 10)">🍷 Wein</button>
-          <button class="filter-btn" onclick="initQuizSession('coffee', 10)">☕ Kaffee</button>
-          <button class="filter-btn" onclick="initQuizSession('dairy', 10)">🥛 Milch</button>
-          <button class="filter-btn" onclick="initQuizSession('cheese', 10)">🧀 Käse</button>
-          <button class="filter-btn" onclick="initQuizSession('eggs', 10)">🍳 Eier</button>
-          <button class="filter-btn" onclick="initQuizSession('vegetables', 10)">🍄 Gemüse</button>
-        </div>
+        <div id="quizCategoryButtons" style="display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 12px;"></div>
       </div>
 
       <!-- Active Question Card -->
@@ -338,6 +351,7 @@
     </button>
   </nav>
 
+  <script src="data_bundle.js"></script>
   <script src="app.js"></script>
   <script>
     // Register Service Worker for PWA
