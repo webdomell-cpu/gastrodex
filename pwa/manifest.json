@@ -1,0 +1,23 @@
+{
+  "name": "GastroCodex - Gastronomie & Hotellerie Lern-App & Inventar",
+  "short_name": "GastroCodex",
+  "description": "Hospitality & gastronomy encyclopedia, quiz trainer, and stock manager with dual English and German language support.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#141210",
+  "theme_color": "#C98822",
+  "icons": [
+    {
+      "src": "./icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "./icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

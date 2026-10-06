@@ -1,0 +1,23 @@
+{
+  "name": "GastroDex - Gastronomie-Wissen, Quiz & Lexikon",
+  "short_name": "GastroDex",
+  "description": "Gastronomie-Wissen, Warenkunde & Multiple-Choice Quiz für Profis und Genießer mit Warm Hospitality Light Theme.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#FAF9F6",
+  "theme_color": "#E06D53",
+  "icons": [
+    {
+      "src": "./icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "./icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

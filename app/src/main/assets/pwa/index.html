@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>GastroDex - Gastronomie-Wissen, Quiz & Lexikon</title>
+  <meta name="description" content="Umfangreiches Spirituosen-, Wein-, Kaffee-, Eier- und Warenkunde-Lexikon mit Multiple-Choice Quiz.">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#FAF9F6">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- TOP APP BAR -->
+  <header class="top-bar">
+    <div class="brand">
+      <h1>GastroDex</h1>
+      <span class="badge-edu">EDU</span>
+    </div>
+    <div class="top-actions">
+      <a href="admin.html" class="btn-lang" style="text-decoration: none; margin-right: 6px; background: rgba(201, 136, 34, 0.2); border-color: var(--accent-gold);">🛠️ Web Admin</a>
+      <button class="btn-lang" id="langToggleBtn" onclick="toggleLanguage()">🇩🇪 DE</button>
+    </div>
+  </header>
+
+  <!-- PANE 1: CATALOG / LEXIKON -->
+  <main id="pane-catalog" class="tab-pane active">
+    <div class="hero-search-area">
+      <div class="search-box">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="searchInput" class="search-input" placeholder="Suche Spirituosen, Weine, Kaffee, Eier, Käse..." />
+      </div>
+    </div>
+
+    <!-- Category Chips -->
+    <div class="category-scroll" id="categoryScroll"></div>
+
+    <div class="container" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+      <span id="itemCountBadge" style="font-size: 0.8rem; font-weight: 700; color: var(--accent-gold);"></span>
+    </div>
+
+    <!-- Catalog Grid -->
+    <div class="container">
+      <div class="items-grid" id="catalogGrid"></div>
+    </div>
+  </main>
+
+  <!-- PANE 2: WINE GUIDE -->
+  <main id="pane-wine" class="tab-pane">
+    <div class="container" style="padding-top: 16px;">
+      <div class="detail-section" style="margin-bottom: 16px;">
+        <h2 style="font-size: 1.25rem; font-weight: 800; color: var(--accent-gold); margin-bottom: 8px;">🍷 Wein- & Schaumweinkompass</h2>
+        <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5;">
+          Von den feinsten Perlen der Champagne über deutschen Steillagen-Riesling bis hin zum geschützten Asti Spumante DOCG und den Geheimnissen der Roséwein-Kelterung.
+        </p>
+      </div>
+
+      <div class="detail-section" style="margin-bottom: 14px;">
+        <h3 class="detail-section-title">🍾 Das Schaumwein-Dreieck</h3>
+        <p class="detail-section-text">
+          • <strong>Champagner (AOP):</strong> Ausschließlich Flaschengärung (Méthode Champenoise) in der Champagne; mind. 15 Monate Hefelager lösen Mannoproteine für edle Brioche-Aromen.<br/>
+          • <strong>Deutscher Sekt:</strong> Riesling- oder Burgunderbasis; frische Säure, Flaschen- oder Charmat-Tankgärung.<br/>
+          • <strong>Asti Spumante (DOCG):</strong> Süße Moscato-Traube; Gärung wird bei ~7% Vol. durch Kälte gestoppt – edle Restsüße ohne Zuckerzusatz!
+        </p>
+      </div>
+
+      <div class="detail-section" style="margin-bottom: 14px;">
+        <h3 class="detail-section-title">🍇 Rebsorten & Kelterung</h3>
+        <p class="detail-section-text">
+          • <strong>Riesling:</strong> Königin der Weißweine. Hohe Säure, Schiefermineralik, im Alter TDN-Petrolnote.<br/>
+          • <strong>Roséwein-Gesetz:</strong> In der EU ist das Zusammenschütten von Weiß- und Rotwein für Stillweine streng verboten! Die Farbe stammt rein aus kurzer Maischestandzeit (2–12h) roter Beerenhäute.
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <!-- PANE 3: COFFEE LAB -->
+  <main id="pane-coffee" class="tab-pane">
+    <div class="container" style="padding-top: 16px;">
+      <div class="detail-section" style="margin-bottom: 16px;">
+        <h2 style="font-size: 1.25rem; font-weight: 800; color: var(--accent-gold); margin-bottom: 8px;">☕ Kaffeespezialitäten & Schichten-Labor</h2>
+        <p style="font-size: 0.88rem; color: var(--text-secondary);">
+          Interaktive Getränke-Schichtung, Extraktionsphysik (9 bar, 25s) und der Unterschied zwischen Arabica und Robusta.
+        </p>
+      </div>
+
+      <div class="detail-section" style="margin-bottom: 14px;">
+        <h3 class="detail-section-title">☕ Cappuccino vs. Latte Macchiato</h3>
+        <div style="background: #111; padding: 12px; border-radius: 8px; margin-top: 8px;">
+          <p style="font-size: 0.85rem; font-weight: 700; margin-bottom: 4px;">Cappuccino (Drittel-Regel):</p>
+          <div class="coffee-mini-bar" style="height: 14px; margin-bottom: 12px;">
+            <div class="coffee-bar-espresso" style="width: 33%" title="Espresso"></div>
+            <div class="coffee-bar-milk" style="width: 33%" title="Milch"></div>
+            <div class="coffee-bar-foam" style="width: 34%" title="Mikroschaum"></div>
+          </div>
+          <p style="font-size: 0.85rem; font-weight: 700; margin-bottom: 4px;">Latte Macchiato (Schichtung im Glas):</p>
+          <div class="coffee-mini-bar" style="height: 14px;">
+            <div class="coffee-bar-milk" style="width: 55%" title="Heiße Milch"></div>
+            <div class="coffee-bar-espresso" style="width: 20%" title="Espresso"></div>
+            <div class="coffee-bar-foam" style="width: 25%" title="Milchschaum"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="detail-section">
+        <h3 class="detail-section-title">🌱 Arabica vs. Robusta</h3>
+        <p class="detail-section-text">
+          • <strong>Arabica:</strong> Hochlagen (1000–2200m), feine Fruchtsäuren, 60% mehr Fette/Öle.<br/>
+          • <strong>Robusta:</strong> Tiefland (0–800m), doppelter Koffeingehalt (2,2%), weniger Fett -> erzeugt die dichte, nussbraune Crema im echten italienischen Espresso!
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <!-- PANE 4: SCIENCE / WIRKUNGSLEHRE -->
+  <main id="pane-science" class="tab-pane">
+    <div class="container" style="padding-top: 16px;">
+      <div class="detail-section" style="margin-bottom: 16px;">
+        <h2 style="font-size: 1.25rem; font-weight: 800; color: var(--accent-gold); margin-bottom: 8px;">🔬 Wirkungslehre & Gastronomie-Physik</h2>
+        <p style="font-size: 0.88rem; color: var(--text-secondary);">
+          Die chemischen und biologischen Vorgänge hinter Gärung, Destillation, Kohlensäure, Milch- und Eierkunde verständlich erklärt.
+        </p>
+      </div>
+
+      <div class="detail-section" style="margin-bottom: 14px;">
+        <h3 class="detail-section-title">⚗️ Destillation vs. Fermentation</h3>
+        <p class="detail-section-text">
+          • <strong>Fermentation (Gärung):</strong> Hefen wandeln Einfachzucker (Fruktose, Glukose) unter Sauerstoffabschluss in Ethanol und CO2 um (Bier max. 12%, Wein max. 16%).<br/>
+          • <strong>Destillation (Brennen):</strong> Trennt Alkohol (Siedepunkt 78,3°C) vom Wasser (100°C) durch Verdampfen und anschließendes Kondensieren in Kupferkühlern.
+        </p>
+      </div>
+
+      <div class="detail-section" style="margin-bottom: 14px;">
+        <h3 class="detail-section-title">🫧 Kohlensäure & Henry-Gesetz</h3>
+        <p class="detail-section-text">
+          Gase lösen sich in kalten Flüssigkeiten physikalisch stabiler als in warmen. Eiskaltes Mineralwasser oder Tonic bindet CO2 fest im Glas; bei Erwärmung perlt es explosionsartig aus.
+        </p>
+      </div>
+
+      <div class="detail-section">
+        <h3 class="detail-section-title">🍳 Eier-Chemie: 62°C vs. 68°C</h3>
+        <p class="detail-section-text">
+          Eiklar gerinnt bei 62–65°C; Eidotter verdickt erst bei 65–70°C. Dieser thermische Abstand ermöglicht das perfekte wachsweiche Frühstücksei (6 Min) und das Onsen-Ei bei 64,5°C.
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <!-- PANE 5: QUIZ TRAINER (10 QUESTIONS WITH CATEGORY FILTER) -->
+  <main id="pane-quiz" class="tab-pane">
+    <div class="container" style="padding-top: 16px;">
+      
+      <!-- Quiz Header & Settings Card -->
+      <div class="detail-section" style="margin-bottom: 16px;">
+        <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 8px;">
+          <h2 style="font-size: 1.2rem; font-weight: 800; color: var(--accent-gold);">🎯 Multiple-Choice Team-Quiz</h2>
+          <span id="quizCategoryDisplay" style="font-size: 0.8rem; font-weight: 700; color: var(--text-muted);"></span>
+        </div>
+
+        <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 12px;">
+          Wähle eine Kategorie oder mixe alle Bereiche für deine 10 Prüfungsfragen:
+        </p>
+
+        <!-- Category selector buttons -->
+        <div style="display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 12px;">
+          <button class="filter-btn active" onclick="initQuizSession('all', 10)">✨ Mix alle</button>
+          <button class="filter-btn" onclick="initQuizSession('spirits', 10)">🥃 Spirituosen</button>
+          <button class="filter-btn" onclick="initQuizSession('wine', 10)">🍷 Wein</button>
+          <button class="filter-btn" onclick="initQuizSession('coffee', 10)">☕ Kaffee</button>
+          <button class="filter-btn" onclick="initQuizSession('dairy', 10)">🥛 Milch</button>
+          <button class="filter-btn" onclick="initQuizSession('cheese', 10)">🧀 Käse</button>
+          <button class="filter-btn" onclick="initQuizSession('eggs', 10)">🍳 Eier</button>
+          <button class="filter-btn" onclick="initQuizSession('vegetables', 10)">🍄 Gemüse</button>
+        </div>
+      </div>
+
+      <!-- Active Question Card -->
+      <div id="quizActiveCard" class="quiz-card">
+        <div>
+          <div style="display: flex; justify-content: space-between; font-size: 0.8rem; color: var(--text-muted); margin-bottom: 6px;">
+            <span id="quizProgressText">Frage 1 von 10</span>
+          </div>
+          <div class="quiz-progress-bar">
+            <div id="quizProgressFill" class="quiz-progress-fill" style="width: 10%"></div>
+          </div>
+        </div>
+
+        <h3 id="quizQuestionText" class="quiz-question-text"></h3>
+
+        <!-- 4 Multiple Choice Options -->
+        <div id="quizOptionsList" class="quiz-options-list"></div>
+
+        <!-- Explanation Box -->
+        <div id="quizExplanationBox" class="quiz-explanation-box" style="display: none;"></div>
+
+        <!-- Next Question Button -->
+        <button id="quizNextBtn" class="btn-primary" style="display: none;" onclick="nextQuestion()">
+          Nächste Frage ➜
+        </button>
+      </div>
+
+      <!-- Completed Scorecard Card -->
+      <div id="quizCompletedCard" class="quiz-card" style="display: none; text-align: center;">
+        <div style="font-size: 3rem;">🏆</div>
+        <h3 style="font-size: 1.4rem; font-weight: 800;">Schulung abgeschlossen!</h3>
+        <p id="quizScoreRate" style="font-size: 1.3rem; font-weight: 800; color: var(--success);"></p>
+        <p id="quizScoreDetail" style="font-size: 0.9rem; color: var(--text-muted);"></p>
+
+        <div style="margin: 16px 0; text-align: left;">
+          <label style="font-size: 0.8rem; font-weight: 700; color: var(--text-secondary);">Dein Name für den Barchef-Bericht:</label>
+          <input type="text" id="quizStaffName" class="form-input" style="width: 100%; margin-top: 4px;" placeholder="z.B. Anna Müller (Chef de Rang)" />
+        </div>
+
+        <button class="btn-primary" style="width: 100%; margin-bottom: 8px;" onclick="shareQuizScore()">
+          📤 Ergebnis an Barchef / Quizmaster senden
+        </button>
+        <button class="btn-secondary" style="width: 100%;" onclick="initQuizSession(quizCategory, 10)">
+          🔄 Quiz erneut starten
+        </button>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- PANE 6: INVENTORY / LAGERBESTAND -->
+  <main id="pane-inventory" class="tab-pane">
+    <div class="container" style="padding-top: 16px;">
+      <div class="detail-section" style="margin-bottom: 16px; display: flex; justify-content: space-between; align-items: center;">
+        <div>
+          <h2 style="font-size: 1.2rem; font-weight: 800; color: var(--accent-gold);">📦 Barbestand & Zählung</h2>
+          <p style="font-size: 0.8rem; color: var(--text-muted);">Bestände anpassen, Fotos tauschen & Inventur</p>
+        </div>
+      </div>
+
+      <div id="inventoryList"></div>
+    </div>
+  </main>
+
+  <!-- ITEM DETAIL MODAL -->
+  <div id="detailModal" class="modal-overlay">
+    <div class="modal-content">
+      <button class="modal-close-btn" onclick="closeDetailModal()">✕</button>
+      <div class="detail-hero">
+        <img id="detailImage" class="detail-hero-img" src="" alt="Detail" />
+        <div id="detailPlaceholder" class="item-placeholder" style="display:none; height: 100%; border-radius: 0;"></div>
+      </div>
+      <div class="detail-body">
+        <div>
+          <div style="display: flex; justify-content: space-between; align-items: baseline;">
+            <h2 id="detailTitle" style="font-size: 1.35rem; font-weight: 800; color: var(--text-primary);"></h2>
+            <span id="detailAbv" style="font-size: 0.85rem; font-weight: 800; color: var(--accent-gold);"></span>
+          </div>
+          <p id="detailSubtitle" style="font-size: 0.88rem; color: var(--text-secondary); margin-top: 2px;"></p>
+          <div style="display: flex; gap: 12px; font-size: 0.82rem; color: var(--text-muted); margin-top: 6px; flex-wrap: wrap;">
+            <span>📍 Herkunft: <strong id="detailOrigin" style="color: var(--text-primary);"></strong></span>
+            <span id="detailCategoryBadge" style="background: var(--bg-surface); padding: 2px 8px; border-radius: 4px; border: 1px solid var(--border-color); color: var(--text-secondary);"></span>
+          </div>
+        </div>
+
+        <!-- Stock Stepper -->
+        <div class="stock-stepper-box">
+          <div>
+            <div style="font-size: 0.78rem; font-weight: 700; color: var(--text-muted);">BESTAND IM LAGER:</div>
+            <div style="font-size: 0.8rem; color: var(--text-secondary);">Regal: <span id="detailLocation"></span></div>
+          </div>
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <button class="stepper-btn" onclick="changeStockInDetail(-1)">-</button>
+            <span id="detailStockCount" class="stock-count-display">0</span>
+            <button class="stepper-btn" onclick="changeStockInDetail(1)">+</button>
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <h4 class="detail-section-title">👅 Geschmacksprofil & Sensorik</h4>
+          <p id="detailTaste" class="detail-section-text"></p>
+        </div>
+
+        <div class="detail-section">
+          <h4 class="detail-section-title">🔬 Herstellung & Warenkunde</h4>
+          <p id="detailScience" class="detail-section-text"></p>
+        </div>
+
+        <div class="detail-section">
+          <h4 class="detail-section-title">🍽️ Gastronomie-Service & Pairing</h4>
+          <p id="detailCulinary" class="detail-section-text"></p>
+        </div>
+
+        <!-- High-Contrast Gast-Fragen Card -->
+        <div class="detail-section faq-highlight-box">
+          <h4 class="detail-section-title" style="color: var(--accent-gold); font-size: 0.9rem;">💬 Gast-Fragen souverän beantworten</h4>
+          <p id="detailFaq" class="detail-section-text" style="color: #ffffff; font-size: 0.92rem; line-height: 1.6;"></p>
+        </div>
+
+        <!-- Allergen- & Inhaltsstoffhinweis Card -->
+        <div id="detailAllergenSection" class="detail-section allergen-highlight-box" style="display: none;">
+          <h4 class="detail-section-title" style="color: #ff6b6b; font-size: 0.85rem;">⚠️ Allergen- & Inhaltsstoffhinweis (EU)</h4>
+          <p id="detailAllergens" class="detail-section-text" style="color: #ffe3e3; font-weight: 600;"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BOTTOM NAVIGATION -->
+  <nav class="bottom-nav">
+    <button class="nav-item active" id="tab-catalog" onclick="switchTab('catalog')">
+      <span class="nav-item-icon">📖</span>
+      <span id="tabCatalogLabel">Lexikon</span>
+    </button>
+    <button class="nav-item" id="tab-wine" onclick="switchTab('wine')">
+      <span class="nav-item-icon">🍷</span>
+      <span id="tabWineLabel">Wein-Guide</span>
+    </button>
+    <button class="nav-item" id="tab-coffee" onclick="switchTab('coffee')">
+      <span class="nav-item-icon">☕</span>
+      <span id="tabCoffeeLabel">Kaffee-Labor</span>
+    </button>
+    <button class="nav-item" id="tab-science" onclick="switchTab('science')">
+      <span class="nav-item-icon">🔬</span>
+      <span id="tabScienceLabel">Wirkung</span>
+    </button>
+    <button class="nav-item" id="tab-quiz" onclick="switchTab('quiz')">
+      <span class="nav-item-icon">🎯</span>
+      <span id="tabQuizLabel">Quiz-Trainer</span>
+    </button>
+    <button class="nav-item" id="tab-inventory" onclick="switchTab('inventory')">
+      <span class="nav-item-icon">📦</span>
+      <span id="tabInventoryLabel">Lager</span>
+    </button>
+  </nav>
+
+  <script src="app.js"></script>
+  <script>
+    // Register Service Worker for PWA
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./sw.js').catch(err => console.log('SW reg error: ', err));
+      });
+    }
+  </script>
+</body>
+</html>

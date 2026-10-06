@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GastroDex CMS - Web Admin & Datenbank-Manager</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .admin-container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .admin-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-bottom: 24px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .stats-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+    .stat-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 16px;
+      text-align: center;
+    }
+    .stat-card .val {
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: var(--accent-gold);
+    }
+    .stat-card .lbl {
+      font-size: 0.82rem;
+      color: var(--text-secondary);
+      margin-top: 4px;
+    }
+    .actions-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 20px;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .btn-action {
+      background: var(--bg-surface-variant);
+      color: var(--text-primary);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-sm);
+      padding: 8px 16px;
+      font-weight: 600;
+      font-size: 0.85rem;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s;
+    }
+    .btn-action:hover {
+      background: var(--accent-gold);
+      color: #000;
+    }
+    .btn-primary-action {
+      background: var(--accent-gold);
+      color: #000;
+      border: none;
+    }
+    .btn-primary-action:hover {
+      background: var(--accent-gold-hover);
+    }
+    .btn-firebase {
+      background: #F5820D;
+      color: #fff;
+      border: none;
+    }
+    .btn-firebase:hover {
+      background: #E65100;
+    }
+    .admin-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: var(--bg-card);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      border: 1px solid var(--border-subtle);
+    }
+    .admin-table th, .admin-table td {
+      padding: 12px 16px;
+      text-align: left;
+      border-bottom: 1px solid var(--border-subtle);
+      font-size: 0.85rem;
+    }
+    .admin-table th {
+      background: var(--bg-surface-variant);
+      color: var(--accent-gold);
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 0.75rem;
+      letter-spacing: 0.5px;
+    }
+    .admin-table tr:hover {
+      background: rgba(201, 136, 34, 0.05);
+    }
+    .table-thumb {
+      width: 44px;
+      height: 44px;
+      border-radius: 6px;
+      object-fit: cover;
+    }
+    .badge-pill {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.72rem;
+      font-weight: 700;
+    }
+    /* Modal Form */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.8);
+      z-index: 2000;
+      overflow-y: auto;
+      padding: 20px;
+      align-items: center;
+      justify-content: center;
+    }
+    .modal-overlay.active {
+      display: flex;
+    }
+    .modal-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      max-width: 720px;
+      width: 100%;
+      max-height: 90vh;
+      overflow-y: auto;
+      padding: 24px;
+    }
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .form-group.full {
+      grid-column: 1 / -1;
+    }
+    .form-group label {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--text-secondary);
+    }
+    .form-control {
+      background: var(--bg-primary);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      padding: 8px 12px;
+      color: var(--text-primary);
+      font-size: 0.88rem;
+    }
+    .form-control:focus {
+      outline: none;
+      border-color: var(--accent-gold);
+    }
+    .preview-box {
+      width: 100%;
+      height: 120px;
+      border-radius: 8px;
+      object-fit: cover;
+      border: 1px solid var(--border-subtle);
+      margin-top: 6px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <header class="top-bar">
+    <div class="brand">
+      <h1>GastroDex CMS</h1>
+      <span class="badge-edu" style="background: #E06D53;">FIREBASE ADMIN</span>
+    </div>
+    <div class="top-actions">
+      <a href="index.html" class="btn-lang" style="text-decoration: none; display: inline-flex; align-items: center; gap: 6px;">
+        📱 Zur PWA App
+      </a>
+    </div>
+  </header>
+
+  <div class="admin-container">
+    <div class="admin-header">
+      <div>
+        <h2 style="font-size: 1.5rem; font-weight: 800; color: var(--accent-gold);">Globale Datenbank-Zentrale</h2>
+        <p style="color: var(--text-secondary); font-size: 0.88rem; margin-top: 4px;">
+          Pflege Einträge für alle Android-Apps und Web-Clients. Änderungen werden über Firebase Hosting / Cloud Storage synchronisiert.
+        </p>
+      </div>
+      <div>
+        <button class="btn-action btn-primary-action" onclick="openNewItemModal()">
+          ➕ Neuer Eintrag
+        </button>
+      </div>
+    </div>
+
+    <!-- STATS -->
+    <div class="stats-row">
+      <div class="stat-card">
+        <div class="val" id="statTotalItems">109</div>
+        <div class="lbl">Katalog-Einträge</div>
+      </div>
+      <div class="stat-card">
+        <div class="val" id="statVersion">v2.4</div>
+        <div class="lbl">Aktuelle Version</div>
+      </div>
+      <div class="stat-card">
+        <div class="val" id="statCategories">17</div>
+        <div class="lbl">Kategorien (Wein, Käse g.U., etc.)</div>
+      </div>
+      <div class="stat-card">
+        <div class="val" style="color: #4CAF50;">Online</div>
+        <div class="lbl">Google Firebase Sync</div>
+      </div>
+    </div>
+
+    <!-- ACTIONS BAR -->
+    <div class="actions-bar">
+      <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+        <button class="btn-action" onclick="downloadCatalogJson()">
+          📥 catalog_latest.json herunterladen
+        </button>
+        <button class="btn-action" onclick="generateVersionJson()">
+          🚀 catalog_version.json erstellen
+        </button>
+        <button class="btn-action" onclick="copyCatalogJson()">
+          📋 JSON kopieren
+        </button>
+        <button class="btn-action btn-firebase" onclick="openFirebaseConfigModal()">
+          🔥 Firebase Cloud Deploy
+        </button>
+      </div>
+
+      <div style="position: relative; width: 280px;">
+        <input type="text" id="adminSearch" class="form-control" placeholder="Eintrag suchen..." oninput="filterAdminTable()" style="width: 100%;">
+      </div>
+    </div>
+
+    <!-- CATEGORY FILTER PILLS -->
+        <div style="display: flex; gap: 8px; overflow-x: auto; padding-bottom: 12px; margin-bottom: 16px;" id="adminCatFilterRow">
+      <button class="btn-action btn-primary-action" onclick="setAdminCategory('ALL')">Alle (109)</button>
+      <button class="btn-action" onclick="setAdminCategory('spirits')">🥃 Spirituosen</button>
+      <button class="btn-action" onclick="setAdminCategory('wine')">🍷 Wein</button>
+      <button class="btn-action" onclick="setAdminCategory('tea')">🍵 Tee</button>
+      <button class="btn-action" onclick="setAdminCategory('coffee')">☕ Kaffee</button>
+      <button class="btn-action" onclick="setAdminCategory('pasta_rice')">🍝 Pasta & Reis</button>
+      <button class="btn-action" onclick="setAdminCategory('sauces_condiments')">🥣 Saucen & Senf</button>
+      <button class="btn-action" onclick="setAdminCategory('cheese')">🧀 Käse</button>
+      <button class="btn-action" onclick="setAdminCategory('dairy')">🥛 Milch</button>
+      <button class="btn-action" onclick="setAdminCategory('eggs')">🍳 Eier</button>
+      <button class="btn-action" onclick="setAdminCategory('vegetables')">🍄 Gemüse</button>
+      <button class="btn-action" onclick="setAdminCategory('fruits')">🍓 Früchte</button>
+      <button class="btn-action" onclick="setAdminCategory('nuts')">🥜 Nüsse</button>
+      <button class="btn-action" onclick="setAdminCategory('spices_herbs')">🌿 Gewürze</button>
+      <button class="btn-action" onclick="setAdminCategory('olives')">🫒 Oliven</button>
+      <button class="btn-action" onclick="setAdminCategory('oils_vinegars')">🏺 Öle & Essig</button>
+    </div>
+
+    <!-- DATA TABLE -->
+    <div style="overflow-x: auto;">
+      <table class="admin-table">
+        <thead>
+          <tr>
+            <th style="width: 60px;">Foto</th>
+            <th>Name (DE / EN)</th>
+            <th>Kategorie</th>
+            <th>Herkunft</th>
+            <th>Verfahren / Vol.</th>
+            <th>Wissenschaft & Gast-Info</th>
+            <th style="text-align: right; width: 140px;">Aktionen</th>
+          </tr>
+        </thead>
+        <tbody id="adminTableBody">
+          <!-- Rows injected by JavaScript -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- MODAL: ADD / EDIT ITEM -->
+  <div class="modal-overlay" id="itemModal">
+    <div class="modal-card">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+        <h3 id="modalTitle" style="font-size: 1.25rem; font-weight: 800; color: var(--accent-gold);">Eintrag bearbeiten</h3>
+        <button onclick="closeItemModal()" style="background: none; border: none; font-size: 1.5rem; color: var(--text-muted); cursor: pointer;">&times;</button>
+      </div>
+
+      <form id="itemForm" onsubmit="saveItemForm(event)">
+        <input type="hidden" id="itemId">
+        <div class="form-grid">
+          <div class="form-group">
+            <label>Name (Deutsch) *</label>
+            <input type="text" id="nameDe" class="form-control" required placeholder="z.B. Emmentaler AOP">
+          </div>
+          <div class="form-group">
+            <label>Name (English)</label>
+            <input type="text" id="nameEn" class="form-control" placeholder="e.g. Emmentaler AOP">
+          </div>
+
+          <div class="form-group">
+            <label>Untertitel (Deutsch)</label>
+            <input type="text" id="subtitleDe" class="form-control" placeholder="Schweizer Hartkäse mit Propionsäure-Gärung">
+          </div>
+          <div class="form-group">
+            <label>Untertitel (English)</label>
+            <input type="text" id="subtitleEn" class="form-control" placeholder="Swiss hard cheese with propionic acid eyes">
+          </div>
+
+          <div class="form-group">
+            <label>Kategorie *</label>
+                        <select id="category" class="form-control" required>
+              <option value="spirits">Spirituosen & Destillate</option>
+              <option value="wine">Wein & Schaumweine</option>
+              <option value="tea">Teekunde & Aufgüsse</option>
+              <option value="coffee">Kaffeespezialitäten</option>
+              <option value="pasta_rice">Pasta & Reisvariationen</option>
+              <option value="sauces_condiments">Saucen, Dressings & Senf</option>
+              <option value="soft_drinks">Softdrinks & Mixer</option>
+              <option value="cheese">Käsekunde & DOP / g.U.</option>
+              <option value="dairy">Milch & Molkerei-Wissenschaft</option>
+              <option value="eggs">Eierspeisen & Eierkunde</option>
+              <option value="vegetables">Gemüse & Speisepilze</option>
+              <option value="fruits">Früchte & Beeren</option>
+              <option value="nuts">Nüsse & Saaten</option>
+              <option value="spices_herbs">Gewürze & Kräuter</option>
+              <option value="olives">Oliven</option>
+              <option value="oils_vinegars">Öle & Essig</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Herkunft & Region *</label>
+            <input type="text" id="origin" class="form-control" required placeholder="z.B. Schweiz (Kanton Bern)">
+          </div>
+
+          <div class="form-group">
+            <label>Verfahren</label>
+            <select id="alcoholProcess" class="form-control">
+              <option value="NONE">Alkoholfrei / Lebensmittel</option>
+              <option value="FERMENTATION">Fermentation / Gärung</option>
+              <option value="DISTILLATION">Destillation / Brennen</option>
+              <option value="BREWING">Brauen & Maischen</option>
+              <option value="FORTIFIED">Aufgespritet / Likörwein</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Alkoholgehalt / Kennwert</label>
+            <input type="text" id="abv" class="form-control" placeholder="z.B. 45% Fett i.Tr. oder 40.0% ABV">
+          </div>
+
+          <div class="form-group full">
+            <label>Bild-URL (Unsplash / Web / Firebase Storage)</label>
+            <input type="url" id="imageUrl" class="form-control" placeholder="https://images.unsplash.com/..." oninput="updateImagePreview(this.value)">
+            <img id="imgPreview" class="preview-box">
+          </div>
+
+          <div class="form-group full">
+            <label>Wissenschaftliche Erklärung & Sensorik (Deutsch)</label>
+            <textarea id="scienceExplainedDe" class="form-control" rows="3" placeholder="Chemische Reaktionen, Milchsäurebakterien, Terroir, Destillationsverfahren..."></textarea>
+          </div>
+
+          <div class="form-group full">
+            <label>Gast-FAQ / Beratung am Tisch (Deutsch)</label>
+            <textarea id="guestFaqDe" class="form-control" rows="2" placeholder="Häufige Gastfragen & wie das Servicepersonal kompetent antwortet..."></textarea>
+          </div>
+
+          <div class="form-group">
+            <label>Rohstoffe & Botanicals</label>
+            <input type="text" id="rawMaterialDe" class="form-control" placeholder="Rohmilch, Lab, Salz">
+          </div>
+
+          <div class="form-group">
+            <label>Tags (Kommagetrennt)</label>
+            <input type="text" id="tags" class="form-control" placeholder="AOP, Rohmilch, Hartkäse, Schweiz">
+          </div>
+        </div>
+
+        <div style="display: flex; justify-content: flex-end; gap: 12px; margin-top: 24px;">
+          <button type="button" class="btn-action" onclick="closeItemModal()">Abbrechen</button>
+          <button type="submit" class="btn-action btn-primary-action">Eintrag speichern</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- MODAL: FIREBASE CONFIG -->
+  <div class="modal-overlay" id="firebaseModal">
+    <div class="modal-card">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+        <h3 style="font-size: 1.25rem; font-weight: 800; color: #F5820D;">🔥 Firebase Live-Deploy</h3>
+        <button onclick="closeFirebaseModal()" style="background: none; border: none; font-size: 1.5rem; color: var(--text-muted); cursor: pointer;">&times;</button>
+      </div>
+
+      <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 16px; line-height: 1.5;">
+        Um die Datenbank direkt in deine Google Cloud Firestore-Datenbank oder dein Firebase Hosting zu pushen, trage hier die Firebase-Projektdaten ein:
+      </p>
+
+      <div class="form-group" style="margin-bottom: 12px;">
+        <label>Firebase Project ID</label>
+        <input type="text" id="fbProjectId" class="form-control" value="gastrodex-823d7" readonly>
+      </div>
+
+      <div class="form-group" style="margin-bottom: 16px;">
+        <label>Hosting-Zielpfad</label>
+        <input type="text" id="fbHostingPath" class="form-control" value="https://gastrodex-823d7.web.app/catalog_latest.json" readonly>
+      </div>
+
+      <div style="background: var(--bg-primary); padding: 12px; border-radius: 8px; font-size: 0.82rem; margin-bottom: 16px;">
+        <strong style="color: var(--accent-gold);">1-Klick Cloud Shell Deploy-Befehl:</strong><br>
+        <code>./deploy_to_firebase.sh</code>
+      </div>
+
+      <div style="display: flex; justify-content: flex-end; gap: 12px;">
+        <button class="btn-action" onclick="closeFirebaseModal()">Schließen</button>
+        <button class="btn-action btn-firebase" onclick="downloadDeployPackage()">Deploy-Dateien bündeln</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+  <script>
+    // Admin CMS State
+    let adminItems = [];
+    let currentCategoryFilter = 'ALL';
+
+    window.addEventListener('DOMContentLoaded', () => {
+      loadAdminData();
+    });
+
+    function loadAdminData() {
+      // Load curated items from GastroDex default dataset
+      if (typeof curatedItems !== 'undefined') {
+        adminItems = JSON.parse(JSON.stringify(curatedItems));
+      } else {
+        // Fallback load from local storage
+        const saved = localStorage.getItem('gastrodex_items_v2');
+        if (saved) {
+          adminItems = JSON.parse(saved);
+        }
+      }
+      renderAdminTable();
+      updateStats();
+    }
+
+    function updateStats() {
+      document.getElementById('statTotalItems').innerText = adminItems.length;
+      document.getElementById('statVersion').innerText = 'v2.4';
+      const cats = new Set(adminItems.map(i => i.category));
+      document.getElementById('statCategories').innerText = cats.size;
+    }
+
+    function renderAdminTable() {
+      const tbody = document.getElementById('adminTableBody');
+      tbody.innerHTML = '';
+      const query = (document.getElementById('adminSearch').value || '').toLowerCase();
+
+      const filtered = adminItems.filter(item => {
+        const matchesCat = (currentCategoryFilter === 'ALL' || item.category === currentCategoryFilter);
+        const matchesQuery = !query || 
+          (item.nameDe && item.nameDe.toLowerCase().includes(query)) ||
+          (item.nameEn && item.nameEn.toLowerCase().includes(query)) ||
+          (item.origin && item.origin.toLowerCase().includes(query));
+        return matchesCat && matchesQuery;
+      });
+
+      filtered.forEach((item, index) => {
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+          <td>
+            <img src="${item.imageUrl || 'https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=200'}" class="table-thumb" alt="${item.nameDe}">
+          </td>
+          <td>
+            <strong style="color: var(--text-primary); font-size: 0.92rem;">${item.nameDe}</strong><br>
+            <span style="color: var(--text-muted); font-size: 0.78rem;">${item.nameEn || ''}</span>
+          </td>
+          <td>
+            <span class="badge-pill" style="background: rgba(201, 136, 34, 0.2); color: var(--accent-gold);">
+              ${item.category.toUpperCase()}
+            </span>
+          </td>
+          <td>${item.origin || 'International'}</td>
+          <td>
+            <span style="font-weight: 700; color: var(--text-secondary);">${item.abv || '-'}</span><br>
+            <span style="font-size: 0.72rem; color: var(--text-muted);">${item.alcoholProcess || 'NONE'}</span>
+          </td>
+          <td style="max-width: 320px;">
+            <div style="font-size: 0.78rem; color: var(--text-secondary); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+              ${item.scienceExplainedDe || item.subtitleDe || '-'}
+            </div>
+          </td>
+          <td style="text-align: right; white-space: nowrap;">
+            <button class="btn-action" style="padding: 4px 8px; font-size: 0.75rem;" onclick="editItem('${item.id}')">✏️ Edit</button>
+            <button class="btn-action" style="padding: 4px 8px; font-size: 0.75rem; color: var(--danger);" onclick="deleteItem('${item.id}')">🗑️</button>
+          </td>
+        `;
+        tbody.appendChild(tr);
+      });
+    }
+
+    function setAdminCategory(cat) {
+      currentCategoryFilter = cat;
+      renderAdminTable();
+    }
+
+    function filterAdminTable() {
+      renderAdminTable();
+    }
+
+    function openNewItemModal() {
+      document.getElementById('modalTitle').innerText = 'Neuen Eintrag anlegen';
+      document.getElementById('itemId').value = '';
+      document.getElementById('itemForm').reset();
+      document.getElementById('imgPreview').style.display = 'none';
+      document.getElementById('itemModal').classList.add('active');
+    }
+
+    function editItem(id) {
+      const item = adminItems.find(i => i.id === id);
+      if (!item) return;
+
+      document.getElementById('modalTitle').innerText = 'Eintrag bearbeiten';
+      document.getElementById('itemId').value = item.id;
+      document.getElementById('nameDe').value = item.nameDe || '';
+      document.getElementById('nameEn').value = item.nameEn || '';
+      document.getElementById('subtitleDe').value = item.subtitleDe || '';
+      document.getElementById('subtitleEn').value = item.subtitleEn || '';
+      document.getElementById('category').value = item.category || 'spirits';
+      document.getElementById('origin').value = item.origin || '';
+      document.getElementById('alcoholProcess').value = item.alcoholProcess || 'NONE';
+      document.getElementById('abv').value = item.abv || '';
+      document.getElementById('imageUrl').value = item.imageUrl || '';
+      document.getElementById('scienceExplainedDe').value = item.scienceExplainedDe || '';
+      document.getElementById('guestFaqDe').value = item.guestFaqDe || '';
+      document.getElementById('rawMaterialDe').value = item.rawMaterialDe || '';
+      document.getElementById('tags').value = (item.tags || []).join(', ');
+
+      updateImagePreview(item.imageUrl);
+      document.getElementById('itemModal').classList.add('active');
+    }
+
+    function closeItemModal() {
+      document.getElementById('itemModal').classList.remove('active');
+    }
+
+    function updateImagePreview(url) {
+      const img = document.getElementById('imgPreview');
+      if (url && url.startsWith('http')) {
+        img.src = url;
+        img.style.display = 'block';
+      } else {
+        img.style.display = 'none';
+      }
+    }
+
+    function saveItemForm(event) {
+      event.preventDefault();
+      const id = document.getElementById('itemId').value || ('curated_' + Date.now());
+      const isNew = !document.getElementById('itemId').value;
+
+      const tagsRaw = document.getElementById('tags').value;
+      const tagsList = tagsRaw.split(',').map(s => s.trim()).filter(Boolean);
+
+      const newItem = {
+        id: id,
+        nameDe: document.getElementById('nameDe').value,
+        nameEn: document.getElementById('nameEn').value || document.getElementById('nameDe').value,
+        subtitleDe: document.getElementById('subtitleDe').value,
+        subtitleEn: document.getElementById('subtitleEn').value,
+        category: document.getElementById('category').value,
+        origin: document.getElementById('origin').value,
+        alcoholProcess: document.getElementById('alcoholProcess').value,
+        abv: document.getElementById('abv').value,
+        imageUrl: document.getElementById('imageUrl').value || 'https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=800',
+        scienceExplainedDe: document.getElementById('scienceExplainedDe').value,
+        scienceExplainedEn: document.getElementById('scienceExplainedDe').value,
+        guestFaqDe: document.getElementById('guestFaqDe').value,
+        guestFaqEn: document.getElementById('guestFaqDe').value,
+        rawMaterialDe: document.getElementById('rawMaterialDe').value,
+        rawMaterialEn: document.getElementById('rawMaterialDe').value,
+        tags: tagsList,
+        isCustom: false
+      };
+
+      if (isNew) {
+        adminItems.unshift(newItem);
+      } else {
+        const idx = adminItems.findIndex(i => i.id === id);
+        if (idx !== -1) adminItems[idx] = newItem;
+      }
+
+      localStorage.setItem('gastrocodex_items_v2', JSON.stringify(adminItems));
+      closeItemModal();
+      renderAdminTable();
+      updateStats();
+      alert(`Eintrag "${newItem.nameDe}" erfolgreich gespeichert!`);
+    }
+
+    function deleteItem(id) {
+      const item = adminItems.find(i => i.id === id);
+      if (!item) return;
+      if (confirm(`Möchtest du "${item.nameDe}" wirklich aus der globalen Datenbank entfernen?`)) {
+        adminItems = adminItems.filter(i => i.id !== id);
+        localStorage.setItem('gastrocodex_items_v2', JSON.stringify(adminItems));
+        renderAdminTable();
+        updateStats();
+      }
+    }
+
+    function downloadCatalogJson() {
+      const payload = {
+        catalogVersion: 25,
+        updatedAt: new Date().toISOString(),
+        itemCount: adminItems.length,
+        items: adminItems
+      };
+      const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = 'catalog_latest.json';
+      a.click();
+    }
+
+    function generateVersionJson() {
+      const payload = {
+        catalogVersion: 25,
+        versionName: "v2.5 (Oktober 2026)",
+        releaseDate: new Date().toISOString().split('T')[0],
+        itemCount: adminItems.length
+      };
+      const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = 'catalog_version.json';
+      a.click();
+    }
+
+    function copyCatalogJson() {
+      const payload = {
+        catalogVersion: 25,
+        updatedAt: new Date().toISOString(),
+        itemCount: adminItems.length,
+        items: adminItems
+      };
+      navigator.clipboard.writeText(JSON.stringify(payload, null, 2)).then(() => {
+        alert("catalog_latest.json erfolgreich in die Zwischenablage kopiert!");
+      });
+    }
+
+    function openFirebaseConfigModal() {
+      document.getElementById('firebaseModal').classList.add('active');
+    }
+
+    function closeFirebaseModal() {
+      document.getElementById('firebaseModal').classList.remove('active');
+    }
+
+    function downloadDeployPackage() {
+      downloadCatalogJson();
+      generateVersionJson();
+      alert("catalog_latest.json und catalog_version.json wurden heruntergeladen. Kopiere sie in deinen Firebase Storage Bucket oder den public-Ordner!");
+      closeFirebaseModal();
+    }
+  </script>
+</body>
+</html>

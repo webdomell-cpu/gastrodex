@@ -1,0 +1,6 @@
+{
+  "name": "GastroDex",
+  "description": "Das Gastronomie-Wissen, Quiz & Lexikon für Profis und Genießer mit Warm Hospitality Light Theme.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
