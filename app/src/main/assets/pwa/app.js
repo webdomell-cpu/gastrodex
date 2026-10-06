@@ -5,6 +5,24 @@ const STORAGE_KEY_ITEMS = 'gastrodex_items_v2';
 const STORAGE_KEY_LANG = 'gastrodex_lang';
 const STORAGE_KEY_QUIZ_RESULTS = 'gastrodex_quiz_results';
 
+// Firebase Firestore Client Integration
+const firebaseConfig = {
+  apiKey: "AIzaSyD3FCooDWBQagyDEKMZf0OkmB2FfihEK6E",
+  projectId: "gastrodex-823d7",
+  authDomain: "gastrodex-823d7.firebaseapp.com"
+};
+let firestoreDb = null;
+try {
+  if (typeof firebase !== 'undefined') {
+    firebase.initializeApp(firebaseConfig);
+    firestoreDb = firebase.firestore();
+    console.log("🔥 GastroDex PWA Firestore live connected to gastrodex-823d7");
+  }
+} catch (e) {
+  console.warn("Firestore client init notice:", e);
+}
+
+
 let currentLang = localStorage.getItem(STORAGE_KEY_LANG) || 'de';
 let currentTab = 'catalog';
 let activeCategory = 'all';

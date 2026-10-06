@@ -189,6 +189,10 @@
       display: none;
     }
   </style>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <!-- Google Firebase Web SDK -->
+  <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore-compat.js"></script>
 </head>
 <body>
 
@@ -446,6 +450,23 @@
 
   <script src="app.js"></script>
   <script>
+    // Google Cloud Firestore Integration (gastrodex-823d7)
+    const firebaseConfig = {
+      apiKey: "AIzaSyD3FCooDWBQagyDEKMZf0OkmB2FfihEK6E",
+      projectId: "gastrodex-823d7",
+      authDomain: "gastrodex-823d7.firebaseapp.com"
+    };
+    let db = null;
+    try {
+      if (typeof firebase !== 'undefined') {
+        firebase.initializeApp(firebaseConfig);
+        db = firebase.firestore();
+        console.log("🔥 Firebase Firestore live connected to gastrodex-823d7");
+      }
+    } catch (e) {
+      console.warn("Firestore init notice:", e);
+    }
+
     // Admin CMS State
     let adminItems = [];
     let currentCategoryFilter = 'ALL';
@@ -455,18 +476,40 @@
     });
 
     function loadAdminData() {
-      // Load curated items from GastroDex default dataset
-      if (typeof curatedItems !== 'undefined') {
+      // 1. Initial local load
+      if (typeof MASTER_ITEMS !== 'undefined' && MASTER_ITEMS.length > 0) {
+        adminItems = JSON.parse(JSON.stringify(MASTER_ITEMS));
+      } else if (typeof curatedItems !== 'undefined') {
         adminItems = JSON.parse(JSON.stringify(curatedItems));
       } else {
-        // Fallback load from local storage
         const saved = localStorage.getItem('gastrodex_items_v2');
-        if (saved) {
-          adminItems = JSON.parse(saved);
-        }
+        if (saved) adminItems = JSON.parse(saved);
       }
       renderAdminTable();
       updateStats();
+
+      // 2. Live sync from Cloud Firestore
+      if (db) {
+        document.getElementById('statVersion').innerText = 'Cloud Sync...';
+        db.collection('items').get().then(snapshot => {
+          if (!snapshot.empty) {
+            const cloudItems = [];
+            snapshot.forEach(doc => cloudItems.push(doc.data()));
+            if (cloudItems.length > 0) {
+              adminItems = cloudItems;
+              localStorage.setItem('gastrodex_items_v2', JSON.stringify(adminItems));
+              renderAdminTable();
+              updateStats();
+              document.getElementById('statVersion').innerText = '🔥 Cloud Live (' + adminItems.length + ')';
+            }
+          } else {
+            document.getElementById('statVersion').innerText = 'v2.7 (Lokal)';
+          }
+        }).catch(err => {
+          console.warn('Firestore fetch notice:', err.message);
+          document.getElementById('statVersion').innerText = 'v2.7 (Offline)';
+        });
+      }
     }
 
     function updateStats() {
@@ -627,7 +670,12 @@
       if (!item) return;
       if (confirm(`Möchtest du "${item.nameDe}" wirklich aus der globalen Datenbank entfernen?`)) {
         adminItems = adminItems.filter(i => i.id !== id);
-        localStorage.setItem('gastrocodex_items_v2', JSON.stringify(adminItems));
+        localStorage.setItem('gastrodex_items_v2', JSON.stringify(adminItems));
+        if (db) {
+          db.collection('items').doc(id).delete()
+            .then(() => console.log('🗑️ Aus Cloud Firestore gelöscht:', id))
+            .catch(e => console.error('Firestore delete error:', e));
+        }
         renderAdminTable();
         updateStats();
       }
