@@ -88,6 +88,7 @@ fun GastroApp(viewModel: GastroViewModel) {
     var showAddDialog by remember { mutableStateOf(false) }
     var showPwaDialog by remember { mutableStateOf(false) }
     var showPwaWebView by remember { mutableStateOf(false) }
+    var pwaUrl by remember { mutableStateOf("file:///android_asset/pwa/index.html") }
 
     if (showAddDialog) {
         AddEditItemDialog(
@@ -104,7 +105,8 @@ fun GastroApp(viewModel: GastroViewModel) {
         PwaInfoDialog(
             language = language,
             onDismiss = { showPwaDialog = false },
-            onOpenInAppWebView = {
+            onOpenInAppWebView = { targetUrl ->
+                pwaUrl = targetUrl
                 showPwaDialog = false
                 showPwaWebView = true
             }
@@ -114,6 +116,7 @@ fun GastroApp(viewModel: GastroViewModel) {
     if (showPwaWebView) {
         PwaWebViewScreen(
             language = language,
+            initialUrl = pwaUrl,
             onBack = { showPwaWebView = false }
         )
     } else if (showProfileScreen) {

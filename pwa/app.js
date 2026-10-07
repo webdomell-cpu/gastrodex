@@ -187,30 +187,35 @@ let quizIsCompleted = false;
 const FALLBACK_ITEMS = (typeof MASTER_ITEMS !== "undefined") ? MASTER_ITEMS : [];
 
 function loadItems() {
+  const masterList = (typeof MASTER_ITEMS !== "undefined") ? MASTER_ITEMS : FALLBACK_ITEMS;
   const saved = localStorage.getItem(STORAGE_KEY_ITEMS);
   if (saved) {
     try {
       const parsed = JSON.parse(saved);
-      const overrideMap = {};
-      parsed.forEach(it => {
-        if (it && it.id) {
-          overrideMap[it.id] = {
-            isFavorite: it.isFavorite,
-            stockQuantity: it.stockQuantity,
-            inStock: it.inStock,
-            userNotes: it.userNotes
-          };
-        }
-      });
-      return FALLBACK_ITEMS.map(m => {
-        const ov = overrideMap[m.id];
-        return ov ? { ...m, ...ov } : { ...m };
-      });
+      if (Array.isArray(parsed) && parsed.length > 0) {
+        const masterIds = new Set(masterList.map(m => m.id));
+        const overrideMap = {};
+        const customOrAdded = [];
+        parsed.forEach(it => {
+          if (it && it.id) {
+            if (masterIds.has(it.id)) {
+              overrideMap[it.id] = it;
+            } else {
+              customOrAdded.push(it);
+            }
+          }
+        });
+        const mergedMaster = masterList.map(m => {
+          const ov = overrideMap[m.id];
+          return ov ? { ...m, ...ov } : { ...m };
+        });
+        return [...customOrAdded, ...mergedMaster];
+      }
     } catch(e) {
-      console.error(e);
+      console.error('Error loading stored items:', e);
     }
   }
-  return FALLBACK_ITEMS.map(m => ({ ...m }));
+  return masterList.map(m => ({ ...m }));
 }
 
 let items = loadItems();
@@ -285,11 +290,14 @@ async function syncWithFirebaseCloud() {
 
 // APP INITIALIZATION
 document.addEventListener('DOMContentLoaded', () => {
+  if (!document.getElementById('catalogGrid')) {
+    return;
+  }
   renderLanguageLabels();
   renderCategoryChips();
   renderQuizCategoryButtons();
   renderCatalog();
-    setupEventListeners();
+  setupEventListeners();
   initQuizSession('all', 10);
   updateCoffeeComparison();
   syncWithFirebaseCloud();

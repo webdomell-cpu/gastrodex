@@ -1,11 +1,11 @@
 {
-  "name": "GastroDex - Gastronomie-Wissen, Quiz & Lexikon",
-  "short_name": "GastroDex",
-  "description": "Gastronomie-Wissen, Warenkunde & Multiple-Choice Quiz für Profis und Genießer mit Warm Hospitality Light Theme.",
+  "name": "GastroCodex - Gastronomie & Hotellerie Lern-App & Inventar",
+  "short_name": "GastroCodex",
+  "description": "Hospitality & gastronomy encyclopedia, quiz trainer, and stock manager with dual English and German language support.",
   "start_url": "./index.html",
   "display": "standalone",
-  "background_color": "#FAF9F6",
-  "theme_color": "#E06D53",
+  "background_color": "#141210",
+  "theme_color": "#C98822",
   "icons": [
     {
       "src": "./icon-192.png",

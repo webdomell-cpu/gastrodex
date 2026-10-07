@@ -23,8 +23,10 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.filled.Build
 import androidx.compose.material.icons.filled.Language
 import androidx.compose.material.icons.filled.Public
+import androidx.compose.material.icons.filled.Refresh
 import androidx.compose.material.icons.filled.Share
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
@@ -32,6 +34,7 @@ import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.FilledTonalButton
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
@@ -42,6 +45,10 @@ import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
@@ -55,7 +62,7 @@ import com.example.model.Language
 fun PwaInfoDialog(
     language: Language,
     onDismiss: () -> Unit,
-    onOpenInAppWebView: () -> Unit
+    onOpenInAppWebView: (url: String) -> Unit
 ) {
     val context = LocalContext.current
     val isDe = (language == Language.DE)
@@ -72,7 +79,7 @@ fun PwaInfoDialog(
         },
         title = {
             Text(
-                text = if (isDe) "🌐 Progressive Web App (PWA)" else "🌐 Progressive Web App (PWA)",
+                text = if (isDe) "🌐 Web & CMS-Zentrale" else "🌐 Web & CMS Hub",
                 style = MaterialTheme.typography.titleMedium,
                 fontWeight = FontWeight.Bold
             )
@@ -84,9 +91,9 @@ fun PwaInfoDialog(
             ) {
                 Text(
                     text = if (isDe)
-                        "GastroDex steht dir als native Android-App und als plattformunabhängige Progressive Web App (PWA) zur Verfügung. Du kannst sie auf jedem Gerät (PC, Mac, iPhone, iPad, Tablet) im Browser öffnen oder als Web-App zum Home-Screen hinzufügen!"
+                        "GastroDex steht dir als native Android-App, als Progressive Web App (PWA) für jedes Endgerät und als Web-Admin CMS zur Verfügung. Über das CMS kannst du neue Artikel anlegen, bearbeiten und synchronisieren!"
                     else
-                        "GastroDex is available both as a native Android app and as a cross-platform Progressive Web App (PWA). You can run it on any browser, PC, Mac, iPad, iPhone, or tablet without store installation!",
+                        "GastroDex is available as a native Android app, a cross-platform Progressive Web App (PWA), and a Web Admin CMS to create, edit, and sync catalog items!",
                     style = MaterialTheme.typography.bodySmall,
                     color = MaterialTheme.colorScheme.onSurfaceVariant
                 )
@@ -97,15 +104,15 @@ fun PwaInfoDialog(
                 ) {
                     Column(modifier = Modifier.padding(12.dp), verticalArrangement = Arrangement.spacedBy(6.dp)) {
                         Text(
-                            text = if (isDe) "✨ PWA-Highlights:" else "✨ PWA Highlights:",
+                            text = if (isDe) "✨ Web-Funktionen:" else "✨ Web Features:",
                             style = MaterialTheme.typography.labelMedium,
                             fontWeight = FontWeight.Bold,
                             color = MaterialTheme.colorScheme.primary
                         )
                         val highlightsText = if (isDe) {
-                            "• Warm Hospitality Light Mode & Terracotta Akzente\n• Offline-Fähigkeit durch integrierten Service Worker\n• Vollständiges Lexikon mit Spirituosen, Wein, Kaffee, Milch, Käse, Eiern, Pilzen & Früchten\n• 10-Fragen Multiple-Choice Quiz mit Kategorie-Filter\n• Cloud-fähiger Datenbestand & stetige Updates"
+                            "• PWA App: Vollständiges Lexikon & 10-Fragen-Quiz im Browser\n• Web Admin CMS: Neue Artikel hinzufügen, Daten als JSON exportieren & bearbeiten\n• Offline-Fähigkeit durch Service Worker"
                         } else {
-                            "• Warm Hospitality light mode & Terracotta accents\n• Offline ready with Service Worker\n• Full encyclopedia (Spirits, Wine, Coffee, Dairy, Cheese, Eggs, Mushrooms, Fruit)\n• 10-Question Multiple Choice Quiz with category selection\n• Cloud-synced database & continuous updates"
+                            "• PWA App: Full encyclopedia & 10-question quiz in browser\n• Web Admin CMS: Add new items, export JSON & edit catalog\n• Offline ready with Service Worker"
                         }
                         Text(
                             text = highlightsText,
@@ -116,14 +123,24 @@ fun PwaInfoDialog(
             }
         },
         confirmButton = {
-            Button(
-                onClick = onOpenInAppWebView,
-                colors = ButtonDefaults.buttonColors(containerColor = MaterialTheme.colorScheme.primary),
-                modifier = Modifier.testTag("open_pwa_webview_btn")
-            ) {
-                Icon(Icons.Default.Language, contentDescription = null, modifier = Modifier.size(16.dp))
-                Spacer(modifier = Modifier.width(6.dp))
-                Text(if (isDe) "PWA jetzt ansehen" else "View PWA Now")
+            Column(verticalArrangement = Arrangement.spacedBy(6.dp)) {
+                Button(
+                    onClick = { onOpenInAppWebView("file:///android_asset/pwa/index.html") },
+                    colors = ButtonDefaults.buttonColors(containerColor = MaterialTheme.colorScheme.primary),
+                    modifier = Modifier.fillMaxWidth().testTag("open_pwa_webview_btn")
+                ) {
+                    Icon(Icons.Default.Language, contentDescription = null, modifier = Modifier.size(16.dp))
+                    Spacer(modifier = Modifier.width(6.dp))
+                    Text(if (isDe) "📱 PWA App öffnen" else "Open PWA App")
+                }
+                FilledTonalButton(
+                    onClick = { onOpenInAppWebView("file:///android_asset/pwa/admin.html") },
+                    modifier = Modifier.fillMaxWidth().testTag("open_admin_webview_btn")
+                ) {
+                    Icon(Icons.Default.Build, contentDescription = null, modifier = Modifier.size(16.dp))
+                    Spacer(modifier = Modifier.width(6.dp))
+                    Text(if (isDe) "🛠️ Web Admin (CMS) öffnen" else "Open Web Admin (CMS)")
+                }
             }
         },
         dismissButton = {
@@ -150,9 +167,20 @@ fun PwaInfoDialog(
 @Composable
 fun PwaWebViewScreen(
     language: Language,
+    initialUrl: String = "file:///android_asset/pwa/index.html",
     onBack: () -> Unit
 ) {
-    BackHandler { onBack() }
+    var webViewInstance by remember { mutableStateOf<WebView?>(null) }
+    var currentUrl by remember { mutableStateOf(initialUrl) }
+    val isAdmin = currentUrl.contains("admin.html")
+
+    BackHandler {
+        if (webViewInstance?.canGoBack() == true) {
+            webViewInstance?.goBack()
+        } else {
+            onBack()
+        }
+    }
 
     Scaffold(
         topBar = {
@@ -160,13 +188,16 @@ fun PwaWebViewScreen(
                 title = {
                     Column {
                         Text(
-                            text = "GastroDex Web / PWA",
+                            text = if (isAdmin) "GastroDex Web Admin CMS" else "GastroDex Web / PWA",
                             style = MaterialTheme.typography.titleMedium,
                             fontWeight = FontWeight.Bold,
                             color = MaterialTheme.colorScheme.primary
                         )
                         Text(
-                            text = if (language == Language.DE) "In-App Progressive Web App Vorschau" else "In-App Progressive Web App Preview",
+                            text = if (language == Language.DE)
+                                (if (isAdmin) "Datenbankverwaltung & Artikel-Editor" else "In-App PWA Vorschau")
+                            else
+                                (if (isAdmin) "Database & Item Manager" else "In-App PWA Preview"),
                             style = MaterialTheme.typography.labelSmall,
                             color = MaterialTheme.colorScheme.onSurfaceVariant
                         )
@@ -177,6 +208,33 @@ fun PwaWebViewScreen(
                         Icon(
                             imageVector = Icons.AutoMirrored.Filled.ArrowBack,
                             contentDescription = "Back"
+                        )
+                    }
+                },
+                actions = {
+                    // Quick toggle between App and Admin
+                    if (!isAdmin) {
+                        TextButton(onClick = {
+                            currentUrl = "file:///android_asset/pwa/admin.html"
+                            webViewInstance?.loadUrl(currentUrl)
+                        }) {
+                            Text("🛠️ CMS")
+                        }
+                    } else {
+                        TextButton(onClick = {
+                            currentUrl = "file:///android_asset/pwa/index.html"
+                            webViewInstance?.loadUrl(currentUrl)
+                        }) {
+                            Text("📱 App")
+                        }
+                    }
+
+                    // Reload button
+                    IconButton(onClick = { webViewInstance?.reload() }) {
+                        Icon(
+                            imageVector = Icons.Default.Refresh,
+                            contentDescription = "Reload",
+                            tint = MaterialTheme.colorScheme.onSurfaceVariant
                         )
                     }
                 },
@@ -202,10 +260,21 @@ fun PwaWebViewScreen(
                         settings.domStorageEnabled = true
                         settings.allowFileAccess = true
                         settings.allowContentAccess = true
-                        webViewClient = WebViewClient()
+                        webViewClient = object : WebViewClient() {
+                            override fun onPageFinished(view: WebView?, url: String?) {
+                                super.onPageFinished(view, url)
+                                if (url != null) {
+                                    currentUrl = url
+                                }
+                            }
+                        }
                         webChromeClient = WebChromeClient()
-                        loadUrl("file:///android_asset/pwa/index.html")
+                        loadUrl(initialUrl)
+                        webViewInstance = this
                     }
+                },
+                update = { webView ->
+                    webViewInstance = webView
                 },
                 modifier = Modifier.fillMaxSize()
             )

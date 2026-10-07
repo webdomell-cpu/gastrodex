@@ -5,11 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>GastroDex CMS - Web Admin & Datenbank-Manager</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/svg+xml" href="logo.svg">
   <style>
     .admin-container {
-      max-width: 1280px;
+      max-width: 1360px;
       margin: 0 auto;
-      padding: 20px;
+      padding: 20px 24px 60px;
     }
     .admin-header {
       display: flex;
@@ -23,7 +24,7 @@
     }
     .stats-row {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 16px;
       margin-bottom: 24px;
     }
@@ -31,18 +32,21 @@
       background: var(--bg-card);
       border: 1px solid var(--border-subtle);
       border-radius: var(--radius-md);
-      padding: 16px;
-      text-align: center;
+      padding: 16px 20px;
+      text-align: left;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.03);
     }
     .stat-card .val {
-      font-size: 1.8rem;
+      font-size: 2rem;
       font-weight: 800;
       color: var(--accent-gold);
+      line-height: 1.2;
     }
     .stat-card .lbl {
       font-size: 0.82rem;
       color: var(--text-secondary);
-      margin-top: 4px;
+      margin-top: 6px;
+      font-weight: 500;
     }
     .actions-bar {
       display: flex;
@@ -51,6 +55,10 @@
       margin-bottom: 20px;
       align-items: center;
       justify-content: space-between;
+      background: var(--bg-card);
+      padding: 14px 18px;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-subtle);
     }
     .btn-action {
       background: var(--bg-surface-variant);
@@ -64,19 +72,22 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      transition: all 0.2s;
+      transition: all 0.2s ease;
+      font-family: inherit;
     }
     .btn-action:hover {
       background: var(--accent-gold);
       color: #000;
+      border-color: var(--accent-gold);
     }
     .btn-primary-action {
       background: var(--accent-gold);
       color: #000;
-      border: none;
+      border: 1px solid var(--accent-gold);
     }
     .btn-primary-action:hover {
-      background: var(--accent-gold-hover);
+      background: var(--accent-gold-hover, #D4803A);
+      color: #000;
     }
     .btn-firebase {
       background: #F5820D;
@@ -85,74 +96,95 @@
     }
     .btn-firebase:hover {
       background: #E65100;
+      color: #fff;
+    }
+    .admin-table-wrapper {
+      background: var(--bg-card);
+      border-radius: var(--radius-md);
+      overflow-x: auto;
+      border: 1px solid var(--border-subtle);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.03);
     }
     .admin-table {
       width: 100%;
       border-collapse: collapse;
-      background: var(--bg-card);
-      border-radius: var(--radius-md);
-      overflow: hidden;
-      border: 1px solid var(--border-subtle);
+      text-align: left;
     }
     .admin-table th, .admin-table td {
-      padding: 12px 16px;
-      text-align: left;
+      padding: 14px 16px;
       border-bottom: 1px solid var(--border-subtle);
-      font-size: 0.85rem;
+      font-size: 0.88rem;
     }
     .admin-table th {
       background: var(--bg-surface-variant);
       color: var(--accent-gold);
       font-weight: 700;
       text-transform: uppercase;
-      font-size: 0.75rem;
-      letter-spacing: 0.5px;
+      font-size: 0.74rem;
+      letter-spacing: 0.6px;
     }
     .admin-table tr:hover {
-      background: rgba(201, 136, 34, 0.05);
+      background: rgba(224, 109, 83, 0.04);
     }
     .table-thumb {
-      width: 44px;
-      height: 44px;
-      border-radius: 6px;
+      width: 48px;
+      height: 48px;
+      border-radius: 8px;
       object-fit: cover;
+      background: var(--bg-surface-variant);
+      border: 1px solid var(--border-subtle);
+      display: block;
     }
     .badge-pill {
       display: inline-block;
-      padding: 2px 8px;
+      padding: 3px 8px;
       border-radius: 4px;
       font-size: 0.72rem;
       font-weight: 700;
+      letter-spacing: 0.3px;
     }
+    .badge-custom {
+      background: rgba(46, 125, 50, 0.15);
+      color: #2E7D32;
+      border: 1px solid rgba(46, 125, 50, 0.3);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      font-weight: 700;
+      margin-left: 6px;
+    }
+
     /* Modal Form */
     .modal-overlay {
       display: none;
       position: fixed;
       top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0,0,0,0.8);
+      background: rgba(0,0,0,0.65);
       z-index: 2000;
       overflow-y: auto;
       padding: 20px;
       align-items: center;
       justify-content: center;
+      backdrop-filter: blur(4px);
     }
     .modal-overlay.active {
       display: flex;
     }
     .modal-card {
-      background: var(--bg-surface);
+      background: var(--bg-card);
       border: 1px solid var(--border-color);
       border-radius: var(--radius-lg);
-      max-width: 720px;
+      max-width: 800px;
       width: 100%;
-      max-height: 90vh;
+      max-height: 92vh;
       overflow-y: auto;
-      padding: 24px;
+      padding: 28px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.25);
     }
     .form-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 14px;
+      gap: 16px;
     }
     .form-group {
       display: flex;
@@ -163,47 +195,92 @@
       grid-column: 1 / -1;
     }
     .form-group label {
-      font-size: 0.8rem;
+      font-size: 0.82rem;
       font-weight: 700;
       color: var(--text-secondary);
     }
     .form-control {
-      background: var(--bg-primary);
+      background: var(--bg-surface);
       border: 1px solid var(--border-subtle);
       border-radius: var(--radius-sm);
-      padding: 8px 12px;
+      padding: 10px 14px;
       color: var(--text-primary);
-      font-size: 0.88rem;
+      font-size: 0.9rem;
+      font-family: inherit;
+      transition: border-color 0.2s ease;
     }
     .form-control:focus {
       outline: none;
       border-color: var(--accent-gold);
+      box-shadow: 0 0 0 2px rgba(224, 109, 83, 0.2);
     }
     .preview-box {
       width: 100%;
-      height: 120px;
+      height: 140px;
       border-radius: 8px;
       object-fit: cover;
       border: 1px solid var(--border-subtle);
-      margin-top: 6px;
+      margin-top: 8px;
       display: none;
+      background: #f5f5f5;
+    }
+    .cat-filter-scroll {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding-bottom: 12px;
+      margin-bottom: 16px;
+      scrollbar-width: thin;
+    }
+    .cat-filter-scroll::-webkit-scrollbar {
+      height: 6px;
+    }
+    .cat-filter-scroll::-webkit-scrollbar-thumb {
+      background: var(--border-subtle);
+      border-radius: 4px;
+    }
+    .notification-toast {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: #2E7D32;
+      color: #fff;
+      padding: 12px 20px;
+      border-radius: 8px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+      font-size: 0.9rem;
+      font-weight: 600;
+      z-index: 3000;
+      display: none;
+      align-items: center;
+      gap: 8px;
+      animation: fadeIn 0.3s;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-  <!-- Google Firebase Web SDK -->
-  <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore-compat.js"></script>
 </head>
 <body>
 
   <!-- TOP BAR -->
   <header class="top-bar">
     <div class="brand">
-      <h1>GastroDex CMS</h1>
-      <span class="badge-edu" style="background: #E06D53;">FIREBASE ADMIN</span>
+      <img src="logo.svg" alt="GastroDex Logo" class="brand-logo" width="36" height="36" />
+      <div class="brand-text">
+        <div style="display: flex; align-items: center; gap: 8px;">
+          <h1>GastroDex CMS</h1>
+          <span class="badge-edu" style="background: #E06D53;">WEB ADMIN</span>
+        </div>
+        <div style="font-size: 0.72rem; color: var(--text-secondary); font-weight: 600;">
+          Datenbank-Zentrale & Artikelverwaltung
+        </div>
+      </div>
     </div>
     <div class="top-actions">
-      <a href="index.html" class="btn-lang" style="text-decoration: none; display: inline-flex; align-items: center; gap: 6px;">
+      <a href="index.html" class="btn-lang" style="text-decoration: none; display: inline-flex; align-items: center; gap: 6px; font-weight: 600;">
         📱 Zur PWA App
       </a>
     </div>
@@ -214,12 +291,12 @@
       <div>
         <h2 style="font-size: 1.5rem; font-weight: 800; color: var(--accent-gold);">Globale Datenbank-Zentrale</h2>
         <p style="color: var(--text-secondary); font-size: 0.88rem; margin-top: 4px;">
-          Pflege Einträge für alle Android-Apps und Web-Clients. Änderungen werden über Firebase Hosting / Cloud Storage synchronisiert.
+          Artikel anlegen, bearbeiten, übersetzen und synchronisieren. Alle Änderungen stehen sofort in der PWA und als Download-JSON bereit.
         </p>
       </div>
-      <div>
+      <div style="display: flex; gap: 10px; flex-wrap: wrap;">
         <button class="btn-action btn-primary-action" onclick="openNewItemModal()">
-          ➕ Neuer Eintrag
+          ➕ Neuer Artikel anlegen
         </button>
       </div>
     </div>
@@ -227,67 +304,56 @@
     <!-- STATS -->
     <div class="stats-row">
       <div class="stat-card">
-        <div class="val" id="statTotalItems">109</div>
-        <div class="lbl">Katalog-Einträge</div>
+        <div class="val" id="statTotalItems">152</div>
+        <div class="lbl">Katalog-Einträge im System</div>
       </div>
       <div class="stat-card">
-        <div class="val" id="statVersion">v2.4</div>
-        <div class="lbl">Aktuelle Version</div>
+        <div class="val" id="statCustomItems">0</div>
+        <div class="lbl">Benutzerdefinierte Karten</div>
       </div>
       <div class="stat-card">
-        <div class="val" id="statCategories">17</div>
-        <div class="lbl">Kategorien (Wein, Käse g.U., etc.)</div>
+        <div class="val" id="statCategories">21</div>
+        <div class="lbl">Kategorien (Spirituosen, Tee, Fleisch, etc.)</div>
       </div>
       <div class="stat-card">
-        <div class="val" style="color: #4CAF50;">Online</div>
-        <div class="lbl">Google Firebase Sync</div>
+        <div class="val" id="statVersion" style="color: #2E7D32;">v2.8 Live</div>
+        <div class="lbl">System-Status & Synchronisation</div>
       </div>
     </div>
 
     <!-- ACTIONS BAR -->
     <div class="actions-bar">
-      <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+      <div style="display: flex; gap: 8px; flex-wrap: wrap; align-items: center;">
         <button class="btn-action" onclick="downloadCatalogJson()">
           📥 catalog_latest.json herunterladen
         </button>
         <button class="btn-action" onclick="generateVersionJson()">
-          🚀 catalog_version.json erstellen
+          🚀 Version-JSON erstellen
         </button>
         <button class="btn-action" onclick="copyCatalogJson()">
           📋 JSON kopieren
         </button>
+        <button class="btn-action" onclick="document.getElementById('fileImportInput').click()">
+          📂 JSON importieren
+        </button>
+        <input type="file" id="fileImportInput" accept=".json" style="display: none;" onchange="importCatalogJsonFile(event)">
         <button class="btn-action btn-firebase" onclick="openFirebaseConfigModal()">
           🔥 Firebase Cloud Deploy
         </button>
       </div>
 
       <div style="position: relative; width: 280px;">
-        <input type="text" id="adminSearch" class="form-control" placeholder="Eintrag suchen..." oninput="filterAdminTable()" style="width: 100%;">
+        <input type="text" id="adminSearch" class="form-control" placeholder="Eintrag suchen (Name, Herkunft)..." oninput="filterAdminTable()" style="width: 100%;">
       </div>
     </div>
 
     <!-- CATEGORY FILTER PILLS -->
-        <div style="display: flex; gap: 8px; overflow-x: auto; padding-bottom: 12px; margin-bottom: 16px;" id="adminCatFilterRow">
-      <button class="btn-action btn-primary-action" onclick="setAdminCategory('ALL')">Alle (109)</button>
-      <button class="btn-action" onclick="setAdminCategory('spirits')">🥃 Spirituosen</button>
-      <button class="btn-action" onclick="setAdminCategory('wine')">🍷 Wein</button>
-      <button class="btn-action" onclick="setAdminCategory('tea')">🍵 Tee</button>
-      <button class="btn-action" onclick="setAdminCategory('coffee')">☕ Kaffee</button>
-      <button class="btn-action" onclick="setAdminCategory('pasta_rice')">🍝 Pasta & Reis</button>
-      <button class="btn-action" onclick="setAdminCategory('sauces_condiments')">🥣 Saucen & Senf</button>
-      <button class="btn-action" onclick="setAdminCategory('cheese')">🧀 Käse</button>
-      <button class="btn-action" onclick="setAdminCategory('dairy')">🥛 Milch</button>
-      <button class="btn-action" onclick="setAdminCategory('eggs')">🍳 Eier</button>
-      <button class="btn-action" onclick="setAdminCategory('vegetables')">🍄 Gemüse</button>
-      <button class="btn-action" onclick="setAdminCategory('fruits')">🍓 Früchte</button>
-      <button class="btn-action" onclick="setAdminCategory('nuts')">🥜 Nüsse</button>
-      <button class="btn-action" onclick="setAdminCategory('spices_herbs')">🌿 Gewürze</button>
-      <button class="btn-action" onclick="setAdminCategory('olives')">🫒 Oliven</button>
-      <button class="btn-action" onclick="setAdminCategory('oils_vinegars')">🏺 Öle & Essig</button>
+    <div class="cat-filter-scroll" id="adminCatFilterRow">
+      <!-- Dynamic category buttons injected by JavaScript -->
     </div>
 
     <!-- DATA TABLE -->
-    <div style="overflow-x: auto;">
+    <div class="admin-table-wrapper">
       <table class="admin-table">
         <thead>
           <tr>
@@ -295,8 +361,8 @@
             <th>Name (DE / EN)</th>
             <th>Kategorie</th>
             <th>Herkunft</th>
-            <th>Verfahren / Vol.</th>
-            <th>Wissenschaft & Gast-Info</th>
+            <th>Verfahren / Kennwert</th>
+            <th>Wissenschaft & Sensorik</th>
             <th style="text-align: right; width: 140px;">Aktionen</th>
           </tr>
         </thead>
@@ -320,54 +386,39 @@
         <div class="form-grid">
           <div class="form-group">
             <label>Name (Deutsch) *</label>
-            <input type="text" id="nameDe" class="form-control" required placeholder="z.B. Emmentaler AOP">
+            <input type="text" id="nameDe" class="form-control" required placeholder="z.B. Matcha Ceremonial Grade">
           </div>
           <div class="form-group">
             <label>Name (English)</label>
-            <input type="text" id="nameEn" class="form-control" placeholder="e.g. Emmentaler AOP">
+            <input type="text" id="nameEn" class="form-control" placeholder="e.g. Ceremonial Grade Matcha">
           </div>
 
           <div class="form-group">
             <label>Untertitel (Deutsch)</label>
-            <input type="text" id="subtitleDe" class="form-control" placeholder="Schweizer Hartkäse mit Propionsäure-Gärung">
+            <input type="text" id="subtitleDe" class="form-control" placeholder="z.B. Japanischer Schattentee aus Uji fein vermahlen">
           </div>
           <div class="form-group">
             <label>Untertitel (English)</label>
-            <input type="text" id="subtitleEn" class="form-control" placeholder="Swiss hard cheese with propionic acid eyes">
+            <input type="text" id="subtitleEn" class="form-control" placeholder="e.g. Stone-ground shade-grown green tea from Uji">
           </div>
 
           <div class="form-group">
             <label>Kategorie *</label>
-                        <select id="category" class="form-control" required>
-              <option value="spirits">Spirituosen & Destillate</option>
-              <option value="wine">Wein & Schaumweine</option>
-              <option value="tea">Teekunde & Aufgüsse</option>
-              <option value="coffee">Kaffeespezialitäten</option>
-              <option value="pasta_rice">Pasta & Reisvariationen</option>
-              <option value="sauces_condiments">Saucen, Dressings & Senf</option>
-              <option value="soft_drinks">Softdrinks & Mixer</option>
-              <option value="cheese">Käsekunde & DOP / g.U.</option>
-              <option value="dairy">Milch & Molkerei-Wissenschaft</option>
-              <option value="eggs">Eierspeisen & Eierkunde</option>
-              <option value="vegetables">Gemüse & Speisepilze</option>
-              <option value="fruits">Früchte & Beeren</option>
-              <option value="nuts">Nüsse & Saaten</option>
-              <option value="spices_herbs">Gewürze & Kräuter</option>
-              <option value="olives">Oliven</option>
-              <option value="oils_vinegars">Öle & Essig</option>
+            <select id="category" class="form-control" required>
+              <!-- Filled dynamically with all 21 categories -->
             </select>
           </div>
 
           <div class="form-group">
             <label>Herkunft & Region *</label>
-            <input type="text" id="origin" class="form-control" required placeholder="z.B. Schweiz (Kanton Bern)">
+            <input type="text" id="origin" class="form-control" required placeholder="z.B. Japan (Kyoto, Uji)">
           </div>
 
           <div class="form-group">
-            <label>Verfahren</label>
+            <label>Verfahren / Herstellung</label>
             <select id="alcoholProcess" class="form-control">
-              <option value="NONE">Alkoholfrei / Lebensmittel</option>
-              <option value="FERMENTATION">Fermentation / Gärung</option>
+              <option value="NONE">Alkoholfrei / Lebensmittel / Aufguss</option>
+              <option value="FERMENTATION">Fermentation / Reifung / Gärung</option>
               <option value="DISTILLATION">Destillation / Brennen</option>
               <option value="BREWING">Brauen & Maischen</option>
               <option value="FORTIFIED">Aufgespritet / Likörwein</option>
@@ -376,43 +427,53 @@
 
           <div class="form-group">
             <label>Alkoholgehalt / Kennwert</label>
-            <input type="text" id="abv" class="form-control" placeholder="z.B. 45% Fett i.Tr. oder 40.0% ABV">
+            <input type="text" id="abv" class="form-control" placeholder="z.B. 40.0% ABV, 45% Fett i.Tr. oder 0% ABV">
           </div>
 
           <div class="form-group full">
-            <label>Bild-URL (Unsplash / Web / Firebase Storage)</label>
+            <label>Bild-URL (Unsplash / CDN / Web)</label>
             <input type="url" id="imageUrl" class="form-control" placeholder="https://images.unsplash.com/..." oninput="updateImagePreview(this.value)">
             <img id="imgPreview" class="preview-box">
           </div>
 
           <div class="form-group full">
             <label>Wissenschaftliche Erklärung & Sensorik (Deutsch)</label>
-            <textarea id="scienceExplainedDe" class="form-control" rows="3" placeholder="Chemische Reaktionen, Milchsäurebakterien, Terroir, Destillationsverfahren..."></textarea>
+            <textarea id="scienceExplainedDe" class="form-control" rows="3" placeholder="Chemische Reaktionen, Terroir, Inhaltsstoffe wie L-Theanin, Chlorophyll..."></textarea>
           </div>
 
           <div class="form-group full">
+            <label>Scientific Explanation & Sensory (English)</label>
+            <textarea id="scienceExplainedEn" class="form-control" rows="2" placeholder="Chemical reactions, terroir, amino acids, distillation details..."></textarea>
+          </div>
+
+          <div class="form-group">
             <label>Gast-FAQ / Beratung am Tisch (Deutsch)</label>
             <textarea id="guestFaqDe" class="form-control" rows="2" placeholder="Häufige Gastfragen & wie das Servicepersonal kompetent antwortet..."></textarea>
           </div>
 
           <div class="form-group">
-            <label>Rohstoffe & Botanicals</label>
-            <input type="text" id="rawMaterialDe" class="form-control" placeholder="Rohmilch, Lab, Salz">
+            <label>Guest FAQ / Table Service (English)</label>
+            <textarea id="guestFaqEn" class="form-control" rows="2" placeholder="Frequent guest questions and how to answer professionally..."></textarea>
+          </div>
+
+          <div class="form-group">
+            <label>Rohstoffe & Botanicals (Deutsch)</label>
+            <input type="text" id="rawMaterialDe" class="form-control" placeholder="z.B. Tencha-Blätter (Camellia sinensis)">
           </div>
 
           <div class="form-group">
             <label>Tags (Kommagetrennt)</label>
-            <input type="text" id="tags" class="form-control" placeholder="AOP, Rohmilch, Hartkäse, Schweiz">
+            <input type="text" id="tags" class="form-control" placeholder="z.B. Japan, Tencha, Umami, Superfood">
           </div>
         </div>
 
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 24px;">
-          <button type="button" class="btn-action" style="background: rgba(201,136,34,0.15); border-color: var(--accent-gold); color: var(--accent-gold); display: flex; align-items: center; gap: 6px;" onclick="autoTranslateForm()">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 24px; flex-wrap: wrap; gap: 12px;">
+          <button type="button" class="btn-action" style="background: rgba(224,109,83,0.15); border-color: var(--accent-gold); color: var(--accent-gold); display: flex; align-items: center; gap: 6px;" onclick="autoTranslateForm(event)">
             <span class="material-symbols-outlined" style="font-size:18px;">translate</span> ✨ Automatisch ins Englische übersetzen
           </button>
           <div style="display: flex; gap: 12px;">
             <button type="button" class="btn-action" onclick="closeItemModal()">Abbrechen</button>
-            <button type="submit" class="btn-action btn-primary-action">In Firestore speichern</button>
+            <button type="submit" class="btn-action btn-primary-action">💾 In Datenbank speichern</button>
           </div>
         </div>
       </form>
@@ -423,12 +484,12 @@
   <div class="modal-overlay" id="firebaseModal">
     <div class="modal-card">
       <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
-        <h3 style="font-size: 1.25rem; font-weight: 800; color: #F5820D;">🔥 Firebase Live-Deploy</h3>
+        <h3 style="font-size: 1.25rem; font-weight: 800; color: #F5820D;">🔥 Firebase Live-Deploy & Sync</h3>
         <button onclick="closeFirebaseModal()" style="background: none; border: none; font-size: 1.5rem; color: var(--text-muted); cursor: pointer;">&times;</button>
       </div>
 
       <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 16px; line-height: 1.5;">
-        Um die Datenbank direkt in deine Google Cloud Firestore-Datenbank oder dein Firebase Hosting zu pushen, trage hier die Firebase-Projektdaten ein:
+        Die GastroDex-Datenbank kann direkt mit Google Cloud Firestore und Firebase Hosting synchronisiert werden:
       </p>
 
       <div class="form-group" style="margin-bottom: 12px;">
@@ -441,9 +502,9 @@
         <input type="text" id="fbHostingPath" class="form-control" value="https://gastrodex-823d7.web.app/catalog_latest.json" readonly>
       </div>
 
-      <div style="background: var(--bg-primary); padding: 12px; border-radius: 8px; font-size: 0.82rem; margin-bottom: 16px;">
-        <strong style="color: var(--accent-gold);">1-Klick Cloud Shell Deploy-Befehl:</strong><br>
-        <code>./deploy_to_firebase.sh</code>
+      <div style="background: var(--bg-surface-variant); padding: 14px; border-radius: 8px; font-size: 0.82rem; margin-bottom: 16px; border: 1px solid var(--border-subtle);">
+        <strong style="color: var(--accent-gold);">1-Klick Cloud Shell Deploy:</strong><br>
+        <code style="display: block; margin-top: 6px; padding: 6px 10px; background: rgba(0,0,0,0.06); border-radius: 4px;">firebase deploy --only hosting</code>
       </div>
 
       <div style="display: flex; justify-content: flex-end; gap: 12px;">
@@ -453,127 +514,158 @@
     </div>
   </div>
 
-  <script src="app.js"></script>
-  <script>
-    // Google Cloud Firestore Integration (gastrodex-823d7)
-    const firebaseConfig = {
-      apiKey: "AIzaSyD3FCooDWBQagyDEKMZf0OkmB2FfihEK6E",
-      projectId: "gastrodex-823d7",
-      authDomain: "gastrodex-823d7.firebaseapp.com"
-    };
-    let db = null;
-    try {
-      if (typeof firebase !== 'undefined') {
-        firebase.initializeApp(firebaseConfig);
-        db = firebase.firestore();
-        console.log("🔥 Firebase Firestore live connected to gastrodex-823d7");
-      }
-    } catch (e) {
-      console.warn("Firestore init notice:", e);
-    }
+  <!-- Notification Toast -->
+  <div id="notificationToast" class="notification-toast">
+    <span class="material-symbols-outlined" style="font-size:20px;">check_circle</span>
+    <span id="toastMessage">Erfolgreich gespeichert!</span>
+  </div>
 
-    // Admin CMS State
+  <!-- Master Data Bundle (Loaded before CMS scripts) -->
+  <script src="data_bundle.js"></script>
+
+  <script>
+    // State
+    const STORAGE_KEY_ITEMS = 'gastrodex_items_v3';
     let adminItems = [];
     let currentCategoryFilter = 'ALL';
 
     window.addEventListener('DOMContentLoaded', () => {
-      loadAdminData();
+      initAdminCMS();
     });
 
-    function loadAdminData() {
-      // 1. Initial local load
-      if (typeof MASTER_ITEMS !== 'undefined' && MASTER_ITEMS.length > 0) {
-        adminItems = JSON.parse(JSON.stringify(MASTER_ITEMS));
-      } else if (typeof curatedItems !== 'undefined') {
-        adminItems = JSON.parse(JSON.stringify(curatedItems));
-      } else {
-        const saved = localStorage.getItem('gastrodex_items_v3');
-        if (saved) adminItems = JSON.parse(saved);
+    function showToast(msg) {
+      const toast = document.getElementById('notificationToast');
+      const msgEl = document.getElementById('toastMessage');
+      if (toast && msgEl) {
+        msgEl.textContent = msg;
+        toast.style.display = 'flex';
+        setTimeout(() => {
+          toast.style.display = 'none';
+        }, 3000);
       }
+    }
+
+    function initAdminCMS() {
+      // 1. Load data
+      loadAdminData();
+
+      // 2. Setup category dropdown in modal
+      populateCategorySelect();
+
+      // 3. Render categories filter pills
+      renderAdminCategoryFilters();
+
+      // 4. Render Table
       renderAdminTable();
+
+      // 5. Update Stat cards
       updateStats();
+    }
 
-      // 2. Live sync from Cloud Firestore
-      if (db) {
-        document.getElementById('statVersion').innerText = 'Cloud Sync...';
-        db.collection('items').get().then(snapshot => {
-          if (!snapshot.empty) {
-            const cloudItems = [];
-            snapshot.forEach(doc => cloudItems.push(doc.data()));
-            if (cloudItems.length > 0) {
-              adminItems = cloudItems;
-              localStorage.setItem('gastrodex_items_v3', JSON.stringify(adminItems));
-              renderAdminTable();
-              updateStats();
-              document.getElementById('statVersion').innerText = '🔥 Cloud Live (' + adminItems.length + ')';
-            }
-          } else {
-            document.getElementById('statVersion').innerText = 'v2.7 (Lokal)';
+    function loadAdminData() {
+      const masterList = (typeof MASTER_ITEMS !== 'undefined' && Array.isArray(MASTER_ITEMS)) ? MASTER_ITEMS : [];
+      const saved = localStorage.getItem(STORAGE_KEY_ITEMS);
+
+      if (saved) {
+        try {
+          const parsed = JSON.parse(saved);
+          if (Array.isArray(parsed) && parsed.length > 0) {
+            const masterIds = new Set(masterList.map(m => m.id));
+            const overrideMap = {};
+            const customItems = [];
+
+            parsed.forEach(p => {
+              if (p && p.id) {
+                if (masterIds.has(p.id)) {
+                  overrideMap[p.id] = p;
+                } else {
+                  customItems.push(p);
+                }
+              }
+            });
+
+            const mergedMaster = masterList.map(m => {
+              const ov = overrideMap[m.id];
+              return ov ? { ...m, ...ov } : { ...m };
+            });
+
+            adminItems = [...customItems, ...mergedMaster];
+            return;
           }
-        }).catch(err => {
-          console.warn('Firestore fetch notice:', err.message);
-          document.getElementById('statVersion').innerText = 'v2.7 (Offline)';
-        });
+        } catch (e) {
+          console.warn('LocalStorage parse notice:', e);
+        }
       }
+
+      // Fallback to master items from data_bundle.js
+      adminItems = JSON.parse(JSON.stringify(masterList));
     }
 
-    function updateStats() {
-      document.getElementById('statTotalItems').innerText = adminItems.length;
-      document.getElementById('statVersion').innerText = 'v2.4';
-      const cats = new Set(adminItems.map(i => i.category));
-      document.getElementById('statCategories').innerText = cats.size;
-    }
+    function populateCategorySelect() {
+      const select = document.getElementById('category');
+      if (!select) return;
 
-    function renderAdminTable() {
-      const tbody = document.getElementById('adminTableBody');
-      tbody.innerHTML = '';
-      const query = (document.getElementById('adminSearch').value || '').toLowerCase();
+      const cats = (typeof CATEGORIES !== 'undefined' && Array.isArray(CATEGORIES)) 
+        ? CATEGORIES.filter(c => c.id !== 'all') 
+        : [
+          { id: 'spirits', titleDe: 'Spirituosen & Destillate', emoji: '🥃' },
+          { id: 'wine', titleDe: 'Wein & Schaumweine', emoji: '🍷' },
+          { id: 'tea', titleDe: 'Teekunde & Aufgüsse', emoji: '🍵' },
+          { id: 'coffee', titleDe: 'Kaffeespezialitäten', emoji: '☕' },
+          { id: 'pasta_rice', titleDe: 'Pasta & Reisvariationen', emoji: '🍝' },
+          { id: 'sauces_condiments', titleDe: 'Saucen, Dressings & Senf', emoji: '🥣' },
+          { id: 'soft_drinks', titleDe: 'Softdrinks & Mixer', emoji: '🥤' },
+          { id: 'dairy', titleDe: 'Milch & Molkerei', emoji: '🥛' },
+          { id: 'cheese', titleDe: 'Käsekunde & DOP / g.U.', emoji: '🧀' },
+          { id: 'eggs', titleDe: 'Eierspeisen & Eierkunde', emoji: '🍳' },
+          { id: 'fruits', titleDe: 'Früchte & Beeren', emoji: '🍓' },
+          { id: 'vegetables', titleDe: 'Gemüse & Speisepilze', emoji: '🍄' },
+          { id: 'nuts', titleDe: 'Nüsse & Saaten', emoji: '🥜' },
+          { id: 'spices_herbs', titleDe: 'Gewürze & Kräuter', emoji: '🌿' },
+          { id: 'olives', titleDe: 'Oliven', emoji: '🫒' },
+          { id: 'oils_vinegars', titleDe: 'Öle & Essig', emoji: '🏺' },
+          { id: 'charcuterie', titleDe: 'Schinken & Charcuterie', emoji: '🥓' },
+          { id: 'meat_cuts', titleDe: 'Fleisch & Reifung', emoji: '🥩' },
+          { id: 'bread_bakery', titleDe: 'Brot & Backwaren', emoji: '🥖' },
+          { id: 'fingerfood', titleDe: 'Bar-Snacks & Fingerfood', emoji: '🍢' }
+        ];
 
-      const filtered = adminItems.filter(item => {
-        const matchesCat = (currentCategoryFilter === 'ALL' || item.category === currentCategoryFilter);
-        const matchesQuery = !query || 
-          (item.nameDe && item.nameDe.toLowerCase().includes(query)) ||
-          (item.nameEn && item.nameEn.toLowerCase().includes(query)) ||
-          (item.origin && item.origin.toLowerCase().includes(query));
-        return matchesCat && matchesQuery;
+      select.innerHTML = '';
+      cats.forEach(c => {
+        const opt = document.createElement('option');
+        opt.value = c.id;
+        opt.textContent = `${c.emoji || ''} ${c.titleDe || c.id}`;
+        select.appendChild(opt);
       });
+    }
 
-      filtered.forEach((item, index) => {
-        const tr = document.createElement('tr');
-        tr.innerHTML = `
-          <td>
-            <img src="${item.imageUrl || 'https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=200'}" class="table-thumb" alt="${item.nameDe}">
-          </td>
-          <td>
-            <strong style="color: var(--text-primary); font-size: 0.92rem;">${item.nameDe}</strong><br>
-            <span style="color: var(--text-muted); font-size: 0.78rem;">${item.nameEn || ''}</span>
-          </td>
-          <td>
-            <span class="badge-pill" style="background: rgba(201, 136, 34, 0.2); color: var(--accent-gold);">
-              ${item.category.toUpperCase()}
-            </span>
-          </td>
-          <td>${item.origin || 'International'}</td>
-          <td>
-            <span style="font-weight: 700; color: var(--text-secondary);">${item.abv || '-'}</span><br>
-            <span style="font-size: 0.72rem; color: var(--text-muted);">${item.alcoholProcess || 'NONE'}</span>
-          </td>
-          <td style="max-width: 320px;">
-            <div style="font-size: 0.78rem; color: var(--text-secondary); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
-              ${item.scienceExplainedDe || item.subtitleDe || '-'}
-            </div>
-          </td>
-          <td style="text-align: right; white-space: nowrap;">
-            <button class="btn-action" style="padding: 4px 8px; font-size: 0.75rem;" onclick="editItem('${item.id}')">✏️ Edit</button>
-            <button class="btn-action" style="padding: 4px 8px; font-size: 0.75rem; color: var(--danger);" onclick="deleteItem('${item.id}')">🗑️</button>
-          </td>
-        `;
-        tbody.appendChild(tr);
+    function renderAdminCategoryFilters() {
+      const container = document.getElementById('adminCatFilterRow');
+      if (!container) return;
+
+      const cats = (typeof CATEGORIES !== 'undefined' && Array.isArray(CATEGORIES)) 
+        ? CATEGORIES 
+        : [{ id: 'all', titleDe: 'Alle', emoji: '✨' }];
+
+      container.innerHTML = '';
+      cats.forEach(c => {
+        const filterKey = (c.id === 'all') ? 'ALL' : c.id;
+        const isActive = (currentCategoryFilter === filterKey);
+        const count = (c.id === 'all') 
+          ? adminItems.length 
+          : adminItems.filter(i => i.category === c.id).length;
+
+        const btn = document.createElement('button');
+        btn.className = `btn-action ${isActive ? 'btn-primary-action' : ''}`;
+        btn.textContent = `${c.emoji || ''} ${c.titleDe || c.id} (${count})`;
+        btn.onclick = () => setAdminCategory(filterKey);
+        container.appendChild(btn);
       });
     }
 
     function setAdminCategory(cat) {
       currentCategoryFilter = cat;
+      renderAdminCategoryFilters();
       renderAdminTable();
     }
 
@@ -581,8 +673,93 @@
       renderAdminTable();
     }
 
+    function updateStats() {
+      const totalEl = document.getElementById('statTotalItems');
+      const customEl = document.getElementById('statCustomItems');
+      const catsEl = document.getElementById('statCategories');
+
+      if (totalEl) totalEl.innerText = adminItems.length;
+      if (customEl) customEl.innerText = adminItems.filter(i => i.isCustom).length;
+      if (catsEl) {
+        const uniqueCats = new Set(adminItems.map(i => i.category));
+        catsEl.innerText = uniqueCats.size;
+      }
+    }
+
+    function renderAdminTable() {
+      const tbody = document.getElementById('adminTableBody');
+      if (!tbody) return;
+      tbody.innerHTML = '';
+
+      const searchInput = document.getElementById('adminSearch');
+      const query = (searchInput ? searchInput.value : '').toLowerCase().trim();
+
+      const filtered = adminItems.filter(item => {
+        const matchesCat = (currentCategoryFilter === 'ALL' || item.category === currentCategoryFilter);
+        const matchesQuery = !query ||
+          (item.nameDe && item.nameDe.toLowerCase().includes(query)) ||
+          (item.nameEn && item.nameEn.toLowerCase().includes(query)) ||
+          (item.origin && item.origin.toLowerCase().includes(query)) ||
+          (item.rawMaterialDe && item.rawMaterialDe.toLowerCase().includes(query)) ||
+          (item.tags && item.tags.some(t => t.toLowerCase().includes(query)));
+        return matchesCat && matchesQuery;
+      });
+
+      if (filtered.length === 0) {
+        tbody.innerHTML = `
+          <tr>
+            <td colspan="7" style="text-align: center; padding: 32px; color: var(--text-secondary);">
+              🔍 Keine Einträge für die aktuelle Suche oder Kategorie gefunden.
+            </td>
+          </tr>
+        `;
+        return;
+      }
+
+      filtered.forEach(item => {
+        const tr = document.createElement('tr');
+        const defaultImg = 'https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=200';
+        const displayImg = item.imageUrl || defaultImg;
+        const customBadge = item.isCustom ? '<span class="badge-custom">EIGENE</span>' : '';
+
+        tr.innerHTML = `
+          <td>
+            <img src="${displayImg}" class="table-thumb" alt="${item.nameDe}" onerror="this.src='${defaultImg}'">
+          </td>
+          <td>
+            <div style="font-weight: 700; color: var(--text-primary); font-size: 0.95rem;">
+              ${item.nameDe} ${customBadge}
+            </div>
+            <div style="color: var(--text-muted); font-size: 0.8rem; margin-top: 2px;">
+              ${item.nameEn || ''}
+            </div>
+          </td>
+          <td>
+            <span class="badge-pill" style="background: rgba(224, 109, 83, 0.15); color: var(--accent-gold); border: 1px solid rgba(224, 109, 83, 0.25);">
+              ${(item.category || '').toUpperCase()}
+            </span>
+          </td>
+          <td>${item.origin || 'International'}</td>
+          <td>
+            <div style="font-weight: 700; color: var(--text-secondary);">${item.abv || '-'}</div>
+            <div style="font-size: 0.72rem; color: var(--text-muted);">${item.alcoholProcess || 'NONE'}</div>
+          </td>
+          <td style="max-width: 320px;">
+            <div style="font-size: 0.8rem; color: var(--text-secondary); line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
+              ${item.scienceExplainedDe || item.subtitleDe || '-'}
+            </div>
+          </td>
+          <td style="text-align: right; white-space: nowrap;">
+            <button class="btn-action" style="padding: 6px 10px; font-size: 0.78rem;" onclick="editItem('${item.id}')">✏️ Bearbeiten</button>
+            <button class="btn-action" style="padding: 6px 10px; font-size: 0.78rem; color: #D32F2F;" onclick="deleteItem('${item.id}')">🗑️</button>
+          </td>
+        `;
+        tbody.appendChild(tr);
+      });
+    }
+
     function openNewItemModal() {
-      document.getElementById('modalTitle').innerText = 'Neuen Eintrag anlegen';
+      document.getElementById('modalTitle').innerText = 'Neuen Artikel anlegen';
       document.getElementById('itemId').value = '';
       document.getElementById('itemForm').reset();
       document.getElementById('imgPreview').style.display = 'none';
@@ -593,7 +770,7 @@
       const item = adminItems.find(i => i.id === id);
       if (!item) return;
 
-      document.getElementById('modalTitle').innerText = 'Eintrag bearbeiten';
+      document.getElementById('modalTitle').innerText = `Artikel bearbeiten: ${item.nameDe}`;
       document.getElementById('itemId').value = item.id;
       document.getElementById('nameDe').value = item.nameDe || '';
       document.getElementById('nameEn').value = item.nameEn || '';
@@ -605,7 +782,9 @@
       document.getElementById('abv').value = item.abv || '';
       document.getElementById('imageUrl').value = item.imageUrl || '';
       document.getElementById('scienceExplainedDe').value = item.scienceExplainedDe || '';
+      document.getElementById('scienceExplainedEn').value = item.scienceExplainedEn || '';
       document.getElementById('guestFaqDe').value = item.guestFaqDe || '';
+      document.getElementById('guestFaqEn').value = item.guestFaqEn || '';
       document.getElementById('rawMaterialDe').value = item.rawMaterialDe || '';
       document.getElementById('tags').value = (item.tags || []).join(', ');
 
@@ -619,7 +798,7 @@
 
     function updateImagePreview(url) {
       const img = document.getElementById('imgPreview');
-      if (url && url.startsWith('http')) {
+      if (url && (url.startsWith('http://') || url.startsWith('https://'))) {
         img.src = url;
         img.style.display = 'block';
       } else {
@@ -629,68 +808,87 @@
 
     function saveItemForm(event) {
       event.preventDefault();
-      const id = document.getElementById('itemId').value || ('curated_' + Date.now());
-      const isNew = !document.getElementById('itemId').value;
+      const existingId = document.getElementById('itemId').value;
+      const isNew = !existingId;
+      const id = existingId || ('item_' + Date.now() + '_' + Math.random().toString(36).substring(2, 7));
 
       const tagsRaw = document.getElementById('tags').value;
       const tagsList = tagsRaw.split(',').map(s => s.trim()).filter(Boolean);
 
+      const nameDe = document.getElementById('nameDe').value.trim();
+      const nameEn = document.getElementById('nameEn').value.trim() || nameDe;
+      const subDe = document.getElementById('subtitleDe').value.trim();
+      const subEn = document.getElementById('subtitleEn').value.trim() || subDe;
+      const sciDe = document.getElementById('scienceExplainedDe').value.trim();
+      const sciEn = document.getElementById('scienceExplainedEn').value.trim() || sciDe;
+      const faqDe = document.getElementById('guestFaqDe').value.trim();
+      const faqEn = document.getElementById('guestFaqEn').value.trim() || faqDe;
+      const rawDe = document.getElementById('rawMaterialDe').value.trim();
+
       const newItem = {
         id: id,
-        nameDe: document.getElementById('nameDe').value,
-        nameEn: document.getElementById('nameEn').value || document.getElementById('nameDe').value,
-        subtitleDe: document.getElementById('subtitleDe').value,
-        subtitleEn: document.getElementById('subtitleEn').value,
+        nameDe: nameDe,
+        nameEn: nameEn,
+        subtitleDe: subDe,
+        subtitleEn: subEn,
         category: document.getElementById('category').value,
-        origin: document.getElementById('origin').value,
+        origin: document.getElementById('origin').value.trim(),
         alcoholProcess: document.getElementById('alcoholProcess').value,
-        abv: document.getElementById('abv').value,
-        imageUrl: document.getElementById('imageUrl').value || 'https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=800',
-        scienceExplainedDe: document.getElementById('scienceExplainedDe').value,
-        scienceExplainedEn: document.getElementById('scienceExplainedDe').value,
-        guestFaqDe: document.getElementById('guestFaqDe').value,
-        guestFaqEn: document.getElementById('guestFaqDe').value,
-        rawMaterialDe: document.getElementById('rawMaterialDe').value,
-        rawMaterialEn: document.getElementById('rawMaterialDe').value,
+        abv: document.getElementById('abv').value.trim() || '0% ABV',
+        imageUrl: document.getElementById('imageUrl').value.trim() || 'https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=800',
+        scienceExplainedDe: sciDe,
+        scienceExplainedEn: sciEn,
+        guestFaqDe: faqDe,
+        guestFaqEn: faqEn,
+        rawMaterialDe: rawDe,
+        rawMaterialEn: rawDe,
         tags: tagsList,
-        isCustom: false
+        isCustom: true
       };
 
       if (isNew) {
         adminItems.unshift(newItem);
       } else {
         const idx = adminItems.findIndex(i => i.id === id);
-        if (idx !== -1) adminItems[idx] = newItem;
+        if (idx !== -1) {
+          adminItems[idx] = { ...adminItems[idx], ...newItem };
+        } else {
+          adminItems.unshift(newItem);
+        }
       }
 
-      localStorage.setItem('gastrodex_items_v3', JSON.stringify(adminItems));
+      // Persist to local storage
+      localStorage.setItem(STORAGE_KEY_ITEMS, JSON.stringify(adminItems));
+
       closeItemModal();
+      renderAdminCategoryFilters();
       renderAdminTable();
       updateStats();
-      alert(`Eintrag "${newItem.nameDe}" erfolgreich gespeichert!`);
+      showToast(`Artikel "${newItem.nameDe}" erfolgreich gespeichert!`);
     }
 
     function deleteItem(id) {
       const item = adminItems.find(i => i.id === id);
       if (!item) return;
-      if (confirm(`Möchtest du "${item.nameDe}" wirklich aus der globalen Datenbank entfernen?`)) {
+
+      if (confirm(`Möchtest du "${item.nameDe}" wirklich entfernen?`)) {
         adminItems = adminItems.filter(i => i.id !== id);
-        localStorage.setItem('gastrodex_items_v3', JSON.stringify(adminItems));
-        if (db) {
-          db.collection('items').doc(id).delete()
-            .then(() => console.log('🗑️ Aus Cloud Firestore gelöscht:', id))
-            .catch(e => console.error('Firestore delete error:', e));
-        }
+        localStorage.setItem(STORAGE_KEY_ITEMS, JSON.stringify(adminItems));
+        renderAdminCategoryFilters();
         renderAdminTable();
         updateStats();
+        showToast(`Artikel "${item.nameDe}" wurde gelöscht.`);
       }
     }
 
+    // Export & Download JSON
     function downloadCatalogJson() {
       const payload = {
-        catalogVersion: 25,
+        catalogVersion: 28,
         updatedAt: new Date().toISOString(),
         itemCount: adminItems.length,
+        categories: (typeof CATEGORIES !== 'undefined') ? CATEGORIES : [],
+        quiz_questions: (typeof MASTER_QUIZ !== 'undefined') ? MASTER_QUIZ : [],
         items: adminItems
       };
       const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
@@ -698,34 +896,86 @@
       a.href = URL.createObjectURL(blob);
       a.download = 'catalog_latest.json';
       a.click();
+      showToast('catalog_latest.json erfolgreich heruntergeladen!');
     }
 
     function generateVersionJson() {
       const payload = {
-        catalogVersion: 25,
-        versionName: "v2.5 (Oktober 2026)",
+        catalogVersion: 28,
+        versionName: "v2.8 Master Release",
         releaseDate: new Date().toISOString().split('T')[0],
-        itemCount: adminItems.length
+        itemCount: adminItems.length,
+        serverEndpoint: "https://gastrodex-823d7.web.app/catalog_latest.json"
       };
       const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
       const a = document.createElement('a');
       a.href = URL.createObjectURL(blob);
       a.download = 'catalog_version.json';
       a.click();
+      showToast('catalog_version.json erstellt!');
     }
 
     function copyCatalogJson() {
       const payload = {
-        catalogVersion: 25,
+        catalogVersion: 28,
         updatedAt: new Date().toISOString(),
         itemCount: adminItems.length,
         items: adminItems
       };
-      navigator.clipboard.writeText(JSON.stringify(payload, null, 2)).then(() => {
-        alert("catalog_latest.json erfolgreich in die Zwischenablage kopiert!");
-      });
+      navigator.clipboard.writeText(JSON.stringify(payload, null, 2))
+        .then(() => showToast('JSON in die Zwischenablage kopiert!'))
+        .catch(() => alert('Kopieren fehlgeschlagen. Bitte manuell exportieren.'));
     }
 
+    // File Import
+    function importCatalogJsonFile(e) {
+      const file = e.target.files[0];
+      if (!file) return;
+
+      const reader = new FileReader();
+      reader.onload = function(evt) {
+        try {
+          const imported = JSON.parse(evt.target.result);
+          const incomingItems = Array.isArray(imported) ? imported : (imported.items || []);
+          if (incomingItems.length === 0) {
+            alert('Keine gültigen Artikel in der Datei gefunden.');
+            return;
+          }
+
+          if (confirm(`${incomingItems.length} Artikel gefunden. Möchtest du diese zur Datenbank hinzufügen?`)) {
+            const currentIds = new Set(adminItems.map(i => i.id));
+            let addedCount = 0;
+            let updatedCount = 0;
+
+            incomingItems.forEach(it => {
+              if (it && it.id) {
+                if (currentIds.has(it.id)) {
+                  const idx = adminItems.findIndex(x => x.id === it.id);
+                  adminItems[idx] = { ...adminItems[idx], ...it };
+                  updatedCount++;
+                } else {
+                  adminItems.push({ ...it, isCustom: true });
+                  currentIds.add(it.id);
+                  addedCount++;
+                }
+              }
+            });
+
+            localStorage.setItem(STORAGE_KEY_ITEMS, JSON.stringify(adminItems));
+            renderAdminCategoryFilters();
+            renderAdminTable();
+            updateStats();
+            showToast(`Import abgeschlossen: +${addedCount} neu, ${updatedCount} aktualisiert!`);
+          }
+        } catch (err) {
+          alert('Fehler beim Parsen der JSON-Datei: ' + err.message);
+        }
+      };
+      reader.readAsText(file);
+      e.target.value = '';
+    }
+
+    // Firebase Modal
     function openFirebaseConfigModal() {
       document.getElementById('firebaseModal').classList.add('active');
     }
@@ -736,14 +986,14 @@
 
     function downloadDeployPackage() {
       downloadCatalogJson();
-      generateVersionJson();
-      alert("catalog_latest.json und catalog_version.json wurden heruntergeladen. Kopiere sie in deinen Firebase Storage Bucket oder den public-Ordner!");
+      setTimeout(generateVersionJson, 500);
+      showToast('Deploy-Dateien (catalog_latest.json & version.json) bereitgestellt!');
       closeFirebaseModal();
     }
-  
-    // Automatische KI- & Wörterbuch-Übersetzung (DE -> EN)
+
+    // Translation Service
     async function translateText(text) {
-      if (!text || text.trim() === '') return '';
+      if (!text || !text.trim()) return '';
       try {
         const url = 'https://api.mymemory.translated.net/get?q=' + encodeURIComponent(text) + '&langpair=de|en';
         const res = await fetch(url);
@@ -752,36 +1002,45 @@
           return data.responseData.translatedText;
         }
       } catch (err) {
-        console.warn('Translation notice:', err);
+        console.warn('Translation API notice:', err);
       }
       return text;
     }
 
-    async function autoTranslateForm() {
-      const btn = event.currentTarget;
-      const originalText = btn.innerHTML;
-      btn.innerHTML = '<span class="material-symbols-outlined" style="font-size:18px;">sync</span> Übersetze...';
-      btn.disabled = true;
+    async function autoTranslateForm(e) {
+      const btn = e ? e.currentTarget : null;
+      let origHtml = '';
+      if (btn) {
+        origHtml = btn.innerHTML;
+        btn.innerHTML = '<span class="material-symbols-outlined" style="font-size:18px;">sync</span> Übersetze...';
+        btn.disabled = true;
+      }
 
       try {
         const nameDe = document.getElementById('nameDe').value;
         const subDe = document.getElementById('subtitleDe').value;
         const sciDe = document.getElementById('scienceExplainedDe').value;
         const faqDe = document.getElementById('guestFaqDe').value;
-        const rawDe = document.getElementById('rawMaterialDe').value;
 
         if (nameDe) document.getElementById('nameEn').value = await translateText(nameDe);
         if (subDe) document.getElementById('subtitleEn').value = await translateText(subDe);
-        
-        alert('✨ Übersetzung erfolgreich generiert!');
-      } catch (e) {
-        alert('Übersetzungshinweis: ' + e.message);
+        if (sciDe && !document.getElementById('scienceExplainedEn').value) {
+          document.getElementById('scienceExplainedEn').value = await translateText(sciDe);
+        }
+        if (faqDe && !document.getElementById('guestFaqEn').value) {
+          document.getElementById('guestFaqEn').value = await translateText(faqDe);
+        }
+
+        showToast('✨ Automatische Übersetzung abgeschlossen!');
+      } catch (err) {
+        alert('Übersetzungshinweis: ' + err.message);
       } finally {
-        btn.innerHTML = originalText;
-        btn.disabled = false;
+        if (btn) {
+          btn.innerHTML = origHtml;
+          btn.disabled = false;
+        }
       }
     }
-
   </script>
 </body>
 </html>
