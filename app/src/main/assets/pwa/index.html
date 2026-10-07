@@ -48,18 +48,18 @@
       </div>
     </div>
 
-    <!-- Category Chips -->
-    <div class="category-scroll" id="categoryScroll"></div>
+    <!-- Category Chips with Scroll Arrows -->
+    <div class="category-scroll-wrapper">
+      <button class="cat-nav-btn cat-nav-left" onclick="scrollCategories(-240)" aria-label="Zurück">‹</button>
+      <div class="category-scroll" id="categoryScroll"></div>
+      <button class="cat-nav-btn cat-nav-right" onclick="scrollCategories(240)" aria-label="Weiter">›</button>
+    </div>
 
-    <!-- Quick Toggle Filters (Favorites, In Stock, Regional/Import) -->
+    <!-- Quick Toggle Filters (Favorites, Regional/Import) -->
     <div class="sub-filters">
       <button class="filter-btn" id="filterFavBtn" onclick="toggleFavoriteFilter()">
         <span class="material-symbols-outlined" style="font-size: 15px; vertical-align: middle;">favorite</span>
         <span id="filterFavLabel">Favoriten</span>
-      </button>
-      <button class="filter-btn" id="filterStockBtn" onclick="toggleStockFilter()">
-        <span class="material-symbols-outlined" style="font-size: 15px; vertical-align: middle;">check_circle</span>
-        <span id="filterStockLabel">Auf Lager</span>
       </button>
       <button class="filter-btn" id="filterImportBtn" onclick="cycleImportFilter()">
         <span class="material-symbols-outlined" style="font-size: 15px; vertical-align: middle;">public</span>
@@ -112,26 +112,57 @@
       <div class="detail-section" style="margin-bottom: 16px;">
         <h2 style="font-size: 1.25rem; font-weight: 800; color: var(--accent-gold); margin-bottom: 8px;">☕ Kaffeespezialitäten & Schichten-Labor</h2>
         <p style="font-size: 0.88rem; color: var(--text-secondary);">
-          Interaktive Getränke-Schichtung, Extraktionsphysik (9 bar, 25s) und der Unterschied zwischen Arabica und Robusta.
+          Interaktive Getränke-Schichtung im Glas, Extraktionsphysik (9 bar, 25s) und der Unterschied zwischen Arabica und Robusta.
         </p>
       </div>
 
-      <div class="detail-section" style="margin-bottom: 14px;">
-        <h3 class="detail-section-title">☕ Cappuccino vs. Latte Macchiato</h3>
-        <div style="background: #111; padding: 12px; border-radius: 8px; margin-top: 8px;">
-          <p style="font-size: 0.85rem; font-weight: 700; margin-bottom: 4px;">Cappuccino (Drittel-Regel):</p>
-          <div class="coffee-mini-bar" style="height: 14px; margin-bottom: 12px;">
-            <div class="coffee-bar-espresso" style="width: 33%" title="Espresso"></div>
-            <div class="coffee-bar-milk" style="width: 33%" title="Milch"></div>
-            <div class="coffee-bar-foam" style="width: 34%" title="Mikroschaum"></div>
+      <!-- Interactive Drink Comparison with Realistic Glasses -->
+      <div class="detail-section" style="margin-bottom: 16px;">
+        <h3 class="detail-section-title" style="margin-bottom: 12px;">🥛 Getränke-Schichten im Glas vergleichen</h3>
+        
+        <!-- Selectors -->
+        <div style="display: flex; gap: 10px; align-items: center; margin-bottom: 16px; flex-wrap: wrap;">
+          <div style="flex: 1; min-width: 140px;">
+            <label style="font-size: 0.75rem; font-weight: 700; color: var(--text-muted); display: block; margin-bottom: 4px;">GETRÄNK 1:</label>
+            <select id="coffeeSelectLeft" class="form-select" onchange="updateCoffeeComparison()" style="width: 100%; font-weight: 700;">
+              <option value="coffee_cappuccino" selected>Cappuccino</option>
+              <option value="coffee_latte_macchiato">Latte Macchiato</option>
+              <option value="coffee_espresso">Espresso</option>
+              <option value="coffee_flat_white">Flat White</option>
+              <option value="coffee_caffe_latte">Caffè Latte</option>
+              <option value="coffee_americano">Americano</option>
+            </select>
           </div>
-          <p style="font-size: 0.85rem; font-weight: 700; margin-bottom: 4px;">Latte Macchiato (Schichtung im Glas):</p>
-          <div class="coffee-mini-bar" style="height: 14px;">
-            <div class="coffee-bar-milk" style="width: 55%" title="Heiße Milch"></div>
-            <div class="coffee-bar-espresso" style="width: 20%" title="Espresso"></div>
-            <div class="coffee-bar-foam" style="width: 25%" title="Milchschaum"></div>
+          <div style="font-size: 1.2rem; font-weight: 800; color: var(--accent-gold); padding-top: 16px;">⚡</div>
+          <div style="flex: 1; min-width: 140px;">
+            <label style="font-size: 0.75rem; font-weight: 700; color: var(--text-muted); display: block; margin-bottom: 4px;">GETRÄNK 2:</label>
+            <select id="coffeeSelectRight" class="form-select" onchange="updateCoffeeComparison()" style="width: 100%; font-weight: 700;">
+              <option value="coffee_cappuccino">Cappuccino</option>
+              <option value="coffee_latte_macchiato" selected>Latte Macchiato</option>
+              <option value="coffee_espresso">Espresso</option>
+              <option value="coffee_flat_white">Flat White</option>
+              <option value="coffee_caffe_latte">Caffè Latte</option>
+              <option value="coffee_americano">Americano</option>
+            </select>
           </div>
         </div>
+
+        <!-- Glass comparison container -->
+        <div class="coffee-glasses-row">
+          <div class="coffee-glass-col">
+            <h4 id="coffeeNameLeft" class="coffee-glass-title">Cappuccino</h4>
+            <div id="coffeeCupLeft" class="coffee-glass"></div>
+            <div id="coffeeLegendLeft" class="coffee-glass-legend"></div>
+          </div>
+          <div class="coffee-glass-col">
+            <h4 id="coffeeNameRight" class="coffee-glass-title">Latte Macchiato</h4>
+            <div id="coffeeCupRight" class="coffee-glass"></div>
+            <div id="coffeeLegendRight" class="coffee-glass-legend"></div>
+          </div>
+        </div>
+
+        <!-- Quick comparison summary -->
+        <div id="coffeeComparisonSummary" class="coffee-comparison-box"></div>
       </div>
 
       <div class="detail-section">
@@ -245,20 +276,6 @@
     </div>
   </main>
 
-  <!-- PANE 6: INVENTORY / LAGERBESTAND -->
-  <main id="pane-inventory" class="tab-pane">
-    <div class="container" style="padding-top: 16px;">
-      <div class="detail-section" style="margin-bottom: 16px; display: flex; justify-content: space-between; align-items: center;">
-        <div>
-          <h2 style="font-size: 1.2rem; font-weight: 800; color: var(--accent-gold);">📦 Barbestand & Zählung</h2>
-          <p style="font-size: 0.8rem; color: var(--text-muted);">Bestände anpassen, Fotos tauschen & Inventur</p>
-        </div>
-      </div>
-
-      <div id="inventoryList"></div>
-    </div>
-  </main>
-
   <!-- ITEM DETAIL MODAL -->
   <div id="detailModal" class="modal-overlay">
     <div class="modal-content">
@@ -277,19 +294,6 @@
           <div style="display: flex; gap: 12px; font-size: 0.82rem; color: var(--text-muted); margin-top: 6px; flex-wrap: wrap;">
             <span>📍 Herkunft: <strong id="detailOrigin" style="color: var(--text-primary);"></strong></span>
             <span id="detailCategoryBadge" style="background: var(--bg-surface); padding: 2px 8px; border-radius: 4px; border: 1px solid var(--border-color); color: var(--text-secondary);"></span>
-          </div>
-        </div>
-
-        <!-- Stock Stepper -->
-        <div class="stock-stepper-box">
-          <div>
-            <div style="font-size: 0.78rem; font-weight: 700; color: var(--text-muted);">BESTAND IM LAGER:</div>
-            <div style="font-size: 0.8rem; color: var(--text-secondary);">Regal: <span id="detailLocation"></span></div>
-          </div>
-          <div style="display: flex; align-items: center; gap: 10px;">
-            <button class="stepper-btn" onclick="changeStockInDetail(-1)">-</button>
-            <span id="detailStockCount" class="stock-count-display">0</span>
-            <button class="stepper-btn" onclick="changeStockInDetail(1)">+</button>
           </div>
         </div>
 
@@ -344,10 +348,6 @@
     <button class="nav-item" id="tab-quiz" onclick="switchTab('quiz')">
       <span class="nav-item-icon material-symbols-outlined">quiz</span>
       <span id="tabQuizLabel">Quiz-Trainer</span>
-    </button>
-    <button class="nav-item" id="tab-inventory" onclick="switchTab('inventory')">
-      <span class="nav-item-icon material-symbols-outlined">inventory_2</span>
-      <span id="tabInventoryLabel">Lager</span>
     </button>
   </nav>
 
