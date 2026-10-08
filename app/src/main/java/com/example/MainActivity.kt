@@ -86,9 +86,6 @@ fun GastroApp(viewModel: GastroViewModel) {
     val showProfileScreen by viewModel.showProfileScreen.collectAsStateWithLifecycle()
 
     var showAddDialog by remember { mutableStateOf(false) }
-    var showPwaDialog by remember { mutableStateOf(false) }
-    var showPwaWebView by remember { mutableStateOf(false) }
-    var pwaUrl by remember { mutableStateOf("file:///android_asset/pwa/index.html") }
 
     if (showAddDialog) {
         AddEditItemDialog(
@@ -101,25 +98,7 @@ fun GastroApp(viewModel: GastroViewModel) {
         )
     }
 
-    if (showPwaDialog) {
-        PwaInfoDialog(
-            language = language,
-            onDismiss = { showPwaDialog = false },
-            onOpenInAppWebView = { targetUrl ->
-                pwaUrl = targetUrl
-                showPwaDialog = false
-                showPwaWebView = true
-            }
-        )
-    }
-
-    if (showPwaWebView) {
-        PwaWebViewScreen(
-            language = language,
-            initialUrl = pwaUrl,
-            onBack = { showPwaWebView = false }
-        )
-    } else if (showProfileScreen) {
+    if (showProfileScreen) {
         // Google Account, Cloud Sync, Sharing & Monetization Screen
         ProfileCloudScreen(
             viewModel = viewModel,
@@ -138,8 +117,7 @@ fun GastroApp(viewModel: GastroViewModel) {
                 GastroTopAppBar(
                     currentLanguage = language,
                     onToggleLanguage = { viewModel.toggleLanguage() },
-                    onOpenProfile = { viewModel.showProfileScreen.value = true },
-                    onOpenPwaInfo = { showPwaDialog = true }
+                    onOpenProfile = { viewModel.showProfileScreen.value = true }
                 )
             },
             bottomBar = {

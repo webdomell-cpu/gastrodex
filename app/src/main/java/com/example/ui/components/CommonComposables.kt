@@ -86,7 +86,6 @@ fun GastroTopAppBar(
     currentLanguage: Language,
     onToggleLanguage: () -> Unit,
     onOpenProfile: () -> Unit,
-    onOpenPwaInfo: () -> Unit = {},
     modifier: Modifier = Modifier
 ) {
     TopAppBar(
@@ -135,18 +134,6 @@ fun GastroTopAppBar(
             }
         },
         actions = {
-            // PWA / Web App button
-            IconButton(
-                onClick = onOpenPwaInfo,
-                modifier = Modifier.testTag("top_bar_pwa_btn")
-            ) {
-                Icon(
-                    imageVector = Icons.Default.Public,
-                    contentDescription = if (currentLanguage == Language.DE) "PWA & Web Version" else "PWA & Web Version",
-                    tint = MaterialTheme.colorScheme.primary
-                )
-            }
-
             // Google Profile & Cloud Sync button
             IconButton(
                 onClick = onOpenProfile,

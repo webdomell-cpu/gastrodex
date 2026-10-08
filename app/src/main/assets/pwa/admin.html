@@ -262,6 +262,9 @@
     }
   </style>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <!-- Google Firebase Web SDK -->
+  <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore-compat.js"></script>
 </head>
 <body>
 
@@ -272,16 +275,16 @@
       <div class="brand-text">
         <div style="display: flex; align-items: center; gap: 8px;">
           <h1>GastroDex CMS</h1>
-          <span class="badge-edu" style="background: #E06D53;">WEB ADMIN</span>
+          <span class="badge-edu" style="background: #E06D53;">FIREBASE CLOUD ADMIN</span>
         </div>
         <div style="font-size: 0.72rem; color: var(--text-secondary); font-weight: 600;">
-          Datenbank-Zentrale & Artikelverwaltung
+          Echtzeit-Synchronisation mit Google Firestore (gastrodex-823d7)
         </div>
       </div>
     </div>
     <div class="top-actions">
       <a href="index.html" class="btn-lang" style="text-decoration: none; display: inline-flex; align-items: center; gap: 6px; font-weight: 600;">
-        📱 Zur PWA App
+        📱 Zur PWA Web-App
       </a>
     </div>
   </header>
@@ -289,12 +292,15 @@
   <div class="admin-container">
     <div class="admin-header">
       <div>
-        <h2 style="font-size: 1.5rem; font-weight: 800; color: var(--accent-gold);">Globale Datenbank-Zentrale</h2>
+        <h2 style="font-size: 1.5rem; font-weight: 800; color: var(--accent-gold);">Globale Datenbank & Cloud-Zentrale</h2>
         <p style="color: var(--text-secondary); font-size: 0.88rem; margin-top: 4px;">
-          Artikel anlegen, bearbeiten, übersetzen und synchronisieren. Alle Änderungen stehen sofort in der PWA und als Download-JSON bereit.
+          Artikel verwalten, Fotos hochladen, Kategorien erstellen oder löschen. Alle Änderungen schreiben direkt in Firebase Firestore und aktualisieren die PWA in Echtzeit.
         </p>
       </div>
       <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+        <button class="btn-action" onclick="openCategoryManagerModal()">
+          📁 Kategorien verwalten
+        </button>
         <button class="btn-action btn-primary-action" onclick="openNewItemModal()">
           ➕ Neuer Artikel anlegen
         </button>
@@ -305,19 +311,19 @@
     <div class="stats-row">
       <div class="stat-card">
         <div class="val" id="statTotalItems">152</div>
-        <div class="lbl">Katalog-Einträge im System</div>
+        <div class="lbl">Katalog-Einträge</div>
       </div>
       <div class="stat-card">
         <div class="val" id="statCustomItems">0</div>
-        <div class="lbl">Benutzerdefinierte Karten</div>
+        <div class="lbl">Benutzerdefinierte / Eigene Karten</div>
       </div>
       <div class="stat-card">
         <div class="val" id="statCategories">21</div>
-        <div class="lbl">Kategorien (Spirituosen, Tee, Fleisch, etc.)</div>
+        <div class="lbl">Kategorien im System</div>
       </div>
       <div class="stat-card">
-        <div class="val" id="statVersion" style="color: #2E7D32;">v2.8 Live</div>
-        <div class="lbl">System-Status & Synchronisation</div>
+        <div class="val" id="statFirebaseStatus" style="color: #2E7D32;">🔥 Verbunden</div>
+        <div class="lbl">Google Cloud Firestore Sync</div>
       </div>
     </div>
 
@@ -404,8 +410,8 @@
 
           <div class="form-group">
             <label>Kategorie *</label>
-            <select id="category" class="form-control" required>
-              <!-- Filled dynamically with all 21 categories -->
+            <select id="category" class="form-control" required onchange="handleAdminCategoryChange(this.value)">
+              <!-- Filled dynamically -->
             </select>
           </div>
 
@@ -415,55 +421,117 @@
           </div>
 
           <div class="form-group">
-            <label>Verfahren / Herstellung</label>
+            <label>Herkunfts-Klassifizierung</label>
+            <select id="isImport" class="form-control">
+              <option value="false">🌱 Regional / Heimisch</option>
+              <option value="true">🌍 Importprodukt (International)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Herstellungsverfahren / Prozess *</label>
             <select id="alcoholProcess" class="form-control">
-              <option value="NONE">Alkoholfrei / Lebensmittel / Aufguss</option>
-              <option value="FERMENTATION">Fermentation / Reifung / Gärung</option>
-              <option value="DISTILLATION">Destillation / Brennen</option>
-              <option value="BREWING">Brauen & Maischen</option>
-              <option value="FORTIFIED">Aufgespritet / Likörwein</option>
+              <option value="DISTILLATION">🥃 Destillation / Brennen (z.B. Whisky, Rum, Gin, Weinbrand)</option>
+              <option value="FERMENTATION">🍷 Fermentation / Gärung (z.B. Wein, Champagner, Essig)</option>
+              <option value="BREWING">🍺 Brauen & Maischen (z.B. Bier, Malz, Sake)</option>
+              <option value="FORTIFIED">🍷 Aufgespritet / Likörwein (z.B. Portwein, Sherry, Wermut)</option>
+              <option value="NONE">🌱 Alkoholfrei / Lebensmittel / Aufguss / Käse & Milch</option>
             </select>
           </div>
 
           <div class="form-group">
             <label>Alkoholgehalt / Kennwert</label>
-            <input type="text" id="abv" class="form-control" placeholder="z.B. 40.0% ABV, 45% Fett i.Tr. oder 0% ABV">
+            <input type="text" id="abv" class="form-control" placeholder="z.B. 40.0% ABV, 13.5% Vol. oder 0% ABV">
           </div>
 
           <div class="form-group full">
-            <label>Bild-URL (Unsplash / CDN / Web)</label>
-            <input type="url" id="imageUrl" class="form-control" placeholder="https://images.unsplash.com/..." oninput="updateImagePreview(this.value)">
+            <label>Foto / Bild-Upload oder Bild-URL</label>
+            <div style="display: flex; gap: 10px; align-items: center; margin-bottom: 6px;">
+              <input type="url" id="imageUrl" class="form-control" style="flex: 1;" placeholder="https://images.unsplash.com/... oder Foto hochladen" oninput="updateImagePreview(this.value)">
+              <button type="button" class="btn-action" onclick="document.getElementById('imageFileInput').click()">
+                📷 Foto hochladen
+              </button>
+              <input type="file" id="imageFileInput" accept="image/*" style="display: none;" onchange="handleImageFileUpload(event)">
+            </div>
             <img id="imgPreview" class="preview-box">
           </div>
 
+          <!-- SENSORIK & GESCHMACKSPROFIL -->
           <div class="form-group full">
-            <label>Wissenschaftliche Erklärung & Sensorik (Deutsch)</label>
-            <textarea id="scienceExplainedDe" class="form-control" rows="3" placeholder="Chemische Reaktionen, Terroir, Inhaltsstoffe wie L-Theanin, Chlorophyll..."></textarea>
+            <label>👅 Sensorik & Geschmacksprofil (Deutsch)</label>
+            <textarea id="tasteProfileDe" class="form-control" rows="2" placeholder="Aromen, Mundgefühl, Abgang, Säurestruktur, Süße..."></textarea>
+          </div>
+          <div class="form-group full">
+            <label>👅 Aroma & Tasting Notes (English)</label>
+            <textarea id="tasteProfileEn" class="form-control" rows="2" placeholder="Flavor profile, mouthfeel, finish, acidity, sweet notes..."></textarea>
           </div>
 
+          <!-- SERVIEREMPFEHLUNG & GASTRONOMIE-EINSATZ -->
           <div class="form-group full">
-            <label>Scientific Explanation & Sensory (English)</label>
+            <label>🍽️ Servierempfehlung & Speisenbegleitung / Food Pairing (Deutsch)</label>
+            <textarea id="culinaryServingDe" class="form-control" rows="2" placeholder="Glaswahl, Temperatur, Speisebegleitung, Cocktail-Einsatz..."></textarea>
+          </div>
+          <div class="form-group full">
+            <label>🍽️ Culinary Serving & Pairing Suggestions (English)</label>
+            <textarea id="culinaryServingEn" class="form-control" rows="2" placeholder="Glassware, serving temperature, food pairing, menu use..."></textarea>
+          </div>
+
+          <!-- WISSENSCHAFTLICHE ERKLÄRUNG -->
+          <div class="form-group full">
+            <label>🔬 Wissenschaft & Herstellung (Deutsch)</label>
+            <textarea id="scienceExplainedDe" class="form-control" rows="3" placeholder="Chemische Reaktionen, Terroir, Inhaltsstoffe wie L-Theanin, Chlorophyll, Ester..."></textarea>
+          </div>
+          <div class="form-group full">
+            <label>🔬 Science & Production Breakdown (English)</label>
             <textarea id="scienceExplainedEn" class="form-control" rows="2" placeholder="Chemical reactions, terroir, amino acids, distillation details..."></textarea>
           </div>
 
-          <div class="form-group">
-            <label>Gast-FAQ / Beratung am Tisch (Deutsch)</label>
-            <textarea id="guestFaqDe" class="form-control" rows="2" placeholder="Häufige Gastfragen & wie das Servicepersonal kompetent antwortet..."></textarea>
+          <!-- GAST-FRAGEN SOUVERÄN BEANTWORTEN -->
+          <div class="form-group full" style="background: rgba(224, 109, 83, 0.08); padding: 12px; border-radius: 8px; border: 1px solid var(--border-color);">
+            <label style="color: var(--accent-gold); font-weight: 800;">💬 Gastfragen souverän beantworten (Deutsch)</label>
+            <textarea id="guestFaqDe" class="form-control" rows="2" placeholder="Häufige Gastfragen & wie das Servicepersonal kompetent und sympathisch antwortet..."></textarea>
+          </div>
+          <div class="form-group full">
+            <label>💬 How to Explain to Guests / FAQ (English)</label>
+            <textarea id="guestFaqEn" class="form-control" rows="2" placeholder="Frequent guest questions and how service staff explains..."></textarea>
           </div>
 
+          <!-- ROHSTOFFE -->
           <div class="form-group">
-            <label>Guest FAQ / Table Service (English)</label>
-            <textarea id="guestFaqEn" class="form-control" rows="2" placeholder="Frequent guest questions and how to answer professionally..."></textarea>
-          </div>
-
-          <div class="form-group">
-            <label>Rohstoffe & Botanicals (Deutsch)</label>
+            <label>🌱 Rohstoffe & Botanicals (Deutsch)</label>
             <input type="text" id="rawMaterialDe" class="form-control" placeholder="z.B. Tencha-Blätter (Camellia sinensis)">
           </div>
+          <div class="form-group">
+            <label>🌱 Raw Materials & Ingredients (English)</label>
+            <input type="text" id="rawMaterialEn" class="form-control" placeholder="e.g. Tencha shade-grown tea leaves">
+          </div>
 
+          <!-- ALLERGENE & INHALTSSTOFFE -->
+          <div class="form-group full">
+            <label>⚠️ Allergen- & Inhaltsstoffhinweis (EU) - Kommagetrennt</label>
+            <input type="text" id="allergens" class="form-control" placeholder="z.B. Gluten, Laktose, Schwefeldioxid / Sulfite, Eier (oder leer lassen)">
+          </div>
+
+          <!-- TAGS & LAGERBESTAND -->
           <div class="form-group">
             <label>Tags (Kommagetrennt)</label>
             <input type="text" id="tags" class="form-control" placeholder="z.B. Japan, Tencha, Umami, Superfood">
+          </div>
+          <div class="form-group">
+            <label>Lagerort / Bar-Station</label>
+            <input type="text" id="storageLocation" class="form-control" placeholder="z.B. Hauptbar, Weinkeller, Zentrallager">
+          </div>
+
+          <div class="form-group">
+            <label>Bestand (Flaschen / Einheiten)</label>
+            <input type="number" id="stockQuantity" class="form-control" min="0" value="5">
+          </div>
+          <div class="form-group">
+            <label>Auf Lager verfügbar?</label>
+            <select id="inStock" class="form-control">
+              <option value="true">Ja (Verfügbar)</option>
+              <option value="false">Nein (Ausverkauft)</option>
+            </select>
           </div>
         </div>
 
@@ -473,10 +541,54 @@
           </button>
           <div style="display: flex; gap: 12px;">
             <button type="button" class="btn-action" onclick="closeItemModal()">Abbrechen</button>
-            <button type="submit" class="btn-action btn-primary-action">💾 In Datenbank speichern</button>
+            <button type="submit" class="btn-action btn-primary-action">💾 In Firestore speichern</button>
           </div>
         </div>
       </form>
+    </div>
+  </div>
+
+  <!-- MODAL: CATEGORY MANAGER -->
+  <div class="modal-overlay" id="categoryModal">
+    <div class="modal-card" style="max-width: 600px;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+        <h3 style="font-size: 1.25rem; font-weight: 800; color: var(--accent-gold);">📁 Kategorien verwalten</h3>
+        <button onclick="closeCategoryManagerModal()" style="background: none; border: none; font-size: 1.5rem; color: var(--text-muted); cursor: pointer;">&times;</button>
+      </div>
+
+      <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 16px;">
+        Erstelle neue Kategorien oder lösche bestehende Kategorien. Änderungen werden direkt in Firebase Firestore gespeichert.
+      </p>
+
+      <form id="categoryForm" onsubmit="saveNewCategory(event)" style="background: var(--bg-surface-variant); padding: 14px; border-radius: 8px; margin-bottom: 20px;">
+        <div style="font-weight: 700; font-size: 0.9rem; margin-bottom: 10px; color: var(--text-primary);">Neue Kategorie hinzufügen</div>
+        <div class="form-grid" style="grid-template-columns: 1fr 2fr 1fr;">
+          <div class="form-group">
+            <label>ID (z.B. cocktails)</label>
+            <input type="text" id="newCatId" class="form-control" required placeholder="cocktails">
+          </div>
+          <div class="form-group">
+            <label>Bezeichnung (DE)</label>
+            <input type="text" id="newCatTitle" class="form-control" required placeholder="Cocktails & Mixgetränke">
+          </div>
+          <div class="form-group">
+            <label>Emoji</label>
+            <input type="text" id="newCatEmoji" class="form-control" required placeholder="🍹">
+          </div>
+        </div>
+        <div style="margin-top: 12px; text-align: right;">
+          <button type="submit" class="btn-action btn-primary-action">Kategorie hinzufügen</button>
+        </div>
+      </form>
+
+      <div style="font-weight: 700; font-size: 0.9rem; margin-bottom: 10px;">Vorhandene Kategorien:</div>
+      <div id="categoryListContainer" style="max-height: 250px; overflow-y: auto; display: flex; flex-direction: column; gap: 8px;">
+        <!-- Injected by JS -->
+      </div>
+
+      <div style="margin-top: 20px; text-align: right;">
+        <button class="btn-action" onclick="closeCategoryManagerModal()">Schließen</button>
+      </div>
     </div>
   </div>
 
@@ -484,12 +596,12 @@
   <div class="modal-overlay" id="firebaseModal">
     <div class="modal-card">
       <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
-        <h3 style="font-size: 1.25rem; font-weight: 800; color: #F5820D;">🔥 Firebase Live-Deploy & Sync</h3>
+        <h3 style="font-size: 1.25rem; font-weight: 800; color: #F5820D;">🔥 Firebase Cloud Live-Sync</h3>
         <button onclick="closeFirebaseModal()" style="background: none; border: none; font-size: 1.5rem; color: var(--text-muted); cursor: pointer;">&times;</button>
       </div>
 
       <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 16px; line-height: 1.5;">
-        Die GastroDex-Datenbank kann direkt mit Google Cloud Firestore und Firebase Hosting synchronisiert werden:
+        Die Datenbank ist direkt mit Google Cloud Firestore verbunden. Alle Artikel und Kategorien werden sofort live in der Cloud gespeichert und an alle Clients synchronisiert:
       </p>
 
       <div class="form-group" style="margin-bottom: 12px;">
@@ -498,18 +610,13 @@
       </div>
 
       <div class="form-group" style="margin-bottom: 16px;">
-        <label>Hosting-Zielpfad</label>
-        <input type="text" id="fbHostingPath" class="form-control" value="https://gastrodex-823d7.web.app/catalog_latest.json" readonly>
-      </div>
-
-      <div style="background: var(--bg-surface-variant); padding: 14px; border-radius: 8px; font-size: 0.82rem; margin-bottom: 16px; border: 1px solid var(--border-subtle);">
-        <strong style="color: var(--accent-gold);">1-Klick Cloud Shell Deploy:</strong><br>
-        <code style="display: block; margin-top: 6px; padding: 6px 10px; background: rgba(0,0,0,0.06); border-radius: 4px;">firebase deploy --only hosting</code>
+        <label>Firestore Database ID</label>
+        <input type="text" id="fbDbId" class="form-control" value="(default) / gastrodex" readonly>
       </div>
 
       <div style="display: flex; justify-content: flex-end; gap: 12px;">
         <button class="btn-action" onclick="closeFirebaseModal()">Schließen</button>
-        <button class="btn-action btn-firebase" onclick="downloadDeployPackage()">Deploy-Dateien bündeln</button>
+        <button class="btn-action btn-firebase" onclick="downloadCatalogJson()">JSON Backup herunterladen</button>
       </div>
     </div>
   </div>
@@ -520,13 +627,35 @@
     <span id="toastMessage">Erfolgreich gespeichert!</span>
   </div>
 
-  <!-- Master Data Bundle (Loaded before CMS scripts) -->
+  <!-- Master Data Bundle -->
   <script src="data_bundle.js"></script>
 
   <script>
-    // State
+    // Firebase Web SDK Configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyD3FCooDWBQagyDEKMZf0OkmB2FfihEK6E",
+      projectId: "gastrodex-823d7",
+      authDomain: "gastrodex-823d7.firebaseapp.com"
+    };
+
+    let db = null;
+    try {
+      if (typeof firebase !== 'undefined') {
+        if (!firebase.apps.length) {
+          firebase.initializeApp(firebaseConfig);
+        }
+        db = firebase.firestore();
+        console.log("🔥 Firebase Firestore live connected in Admin CMS");
+      }
+    } catch (e) {
+      console.warn("Firestore init warning:", e);
+    }
+
+    // CMS State
     const STORAGE_KEY_ITEMS = 'gastrodex_items_v3';
+    const STORAGE_KEY_CATEGORIES = 'gastrodex_categories_v3';
     let adminItems = [];
+    let adminCategories = [];
     let currentCategoryFilter = 'ALL';
 
     window.addEventListener('DOMContentLoaded', () => {
@@ -545,91 +674,147 @@
       }
     }
 
-    function initAdminCMS() {
-      // 1. Load data
-      loadAdminData();
+    async function initAdminCMS() {
+      // 1. Load Categories
+      loadCategories();
 
-      // 2. Setup category dropdown in modal
+      // 2. Load Items (Local + Cloud)
+      await loadAdminData();
+
+      // 3. Setup UI
       populateCategorySelect();
-
-      // 3. Render categories filter pills
       renderAdminCategoryFilters();
-
-      // 4. Render Table
       renderAdminTable();
-
-      // 5. Update Stat cards
       updateStats();
+
+      // 4. Setup Firestore Realtime Listeners if available
+      if (db) {
+        setupFirestoreRealtimeSync();
+      }
     }
 
-    function loadAdminData() {
-      const masterList = (typeof MASTER_ITEMS !== 'undefined' && Array.isArray(MASTER_ITEMS)) ? MASTER_ITEMS : [];
-      const saved = localStorage.getItem(STORAGE_KEY_ITEMS);
+    function loadCategories() {
+      const defaultCats = (typeof CATEGORIES !== 'undefined' && Array.isArray(CATEGORIES)) 
+        ? CATEGORIES 
+        : [
+          { id: 'all', titleDe: 'Alle', titleEn: 'All', emoji: '✨' },
+          { id: 'spirits', titleDe: 'Spirituosen & Destillate', titleEn: 'Spirits & Distillates', emoji: '🥃' },
+          { id: 'wine', titleDe: 'Wein & Schaumweine', titleEn: 'Wine & Sparkling', emoji: '🍷' },
+          { id: 'tea', titleDe: 'Teekunde & Aufgüsse', titleEn: 'Tea & Infusions', emoji: '🍵' },
+          { id: 'coffee', titleDe: 'Kaffeespezialitäten', titleEn: 'Coffee Specialties', emoji: '☕' },
+          { id: 'pasta_rice', titleDe: 'Pasta & Reisvariationen', titleEn: 'Pasta & Rice', emoji: '🍝' },
+          { id: 'sauces_condiments', titleDe: 'Saucen, Dressings & Senf', titleEn: 'Sauces & Condiments', emoji: '🥣' },
+          { id: 'soft_drinks', titleDe: 'Softdrinks & Mixer', titleEn: 'Soft Drinks & Mixers', emoji: '🥤' },
+          { id: 'dairy', titleDe: 'Milch & Molkerei', titleEn: 'Dairy & Milk', emoji: '🥛' },
+          { id: 'cheese', titleDe: 'Käsekunde & DOP / g.U.', titleEn: 'Cheese & DOP', emoji: '🧀' },
+          { id: 'eggs', titleDe: 'Eierspeisen & Eierkunde', titleEn: 'Eggs & Egg Dishes', emoji: '🍳' },
+          { id: 'fruits', titleDe: 'Früchte & Beeren', titleEn: 'Fruits & Berries', emoji: '🍓' },
+          { id: 'vegetables', titleDe: 'Gemüse & Speisepilze', titleEn: 'Vegetables & Mushrooms', emoji: '🍄' },
+          { id: 'nuts', titleDe: 'Nüsse & Saaten', titleEn: 'Nuts & Seeds', emoji: '🥜' },
+          { id: 'spices_herbs', titleDe: 'Gewürze & Kräuter', titleEn: 'Spices & Herbs', emoji: '🌿' },
+          { id: 'olives', titleDe: 'Oliven', titleEn: 'Olives', emoji: '🫒' },
+          { id: 'oils_vinegars', titleDe: 'Öle & Essig', titleEn: 'Oils & Vinegars', emoji: '🏺' },
+          { id: 'charcuterie', titleDe: 'Schinken & Charcuterie', titleEn: 'Charcuterie', emoji: '🥓' },
+          { id: 'meat_cuts', titleDe: 'Fleisch & Reifung', titleEn: 'Meat Cuts', emoji: '🥩' },
+          { id: 'bread_bakery', titleDe: 'Brot & Backwaren', titleEn: 'Bread & Bakery', emoji: '🥖' },
+          { id: 'fingerfood', titleDe: 'Bar-Snacks & Fingerfood', titleEn: 'Fingerfood & Snacks', emoji: '🍢' }
+        ];
 
+      const saved = localStorage.getItem(STORAGE_KEY_CATEGORIES);
       if (saved) {
         try {
           const parsed = JSON.parse(saved);
           if (Array.isArray(parsed) && parsed.length > 0) {
-            const masterIds = new Set(masterList.map(m => m.id));
-            const overrideMap = {};
-            const customItems = [];
-
-            parsed.forEach(p => {
-              if (p && p.id) {
-                if (masterIds.has(p.id)) {
-                  overrideMap[p.id] = p;
-                } else {
-                  customItems.push(p);
-                }
-              }
-            });
-
-            const mergedMaster = masterList.map(m => {
-              const ov = overrideMap[m.id];
-              return ov ? { ...m, ...ov } : { ...m };
-            });
-
-            adminItems = [...customItems, ...mergedMaster];
+            adminCategories = parsed;
             return;
           }
         } catch (e) {
-          console.warn('LocalStorage parse notice:', e);
+          console.warn(e);
+        }
+      }
+      adminCategories = defaultCats;
+    }
+
+    function mergeWithMaster(incomingList, masterList) {
+      if (!incomingList || !incomingList.length) return masterList.map(m => ({ ...m }));
+      const incomingMap = {};
+      incomingList.forEach(it => {
+        if (it && it.id) incomingMap[it.id] = it;
+      });
+      const mergedMaster = masterList
+        .filter(m => !incomingMap[m.id] || !incomingMap[m.id].isDeleted)
+        .map(m => incomingMap[m.id] ? { ...m, ...incomingMap[m.id] } : { ...m });
+      const customOrNew = incomingList.filter(it => !it.isDeleted && !masterList.some(m => m.id === it.id));
+      return [...customOrNew, ...mergedMaster];
+    }
+
+    async function loadAdminData() {
+      const masterList = (typeof MASTER_ITEMS !== 'undefined' && Array.isArray(MASTER_ITEMS)) ? MASTER_ITEMS : [];
+      
+      // 1. Try fetching from Firestore first if available
+      if (db) {
+        try {
+          const snapshot = await db.collection('items').get();
+          if (!snapshot.empty) {
+            const cloudItems = [];
+            snapshot.forEach(doc => {
+              const d = doc.data();
+              if (d) cloudItems.push({ id: doc.id, ...d });
+            });
+            if (cloudItems.length > 0) {
+              adminItems = mergeWithMaster(cloudItems, masterList);
+              localStorage.setItem(STORAGE_KEY_ITEMS, JSON.stringify(adminItems));
+              const statEl = document.getElementById('statFirebaseStatus');
+              if (statEl) statEl.innerText = '🔥 Cloud Live (' + adminItems.length + ')';
+              return;
+            }
+          }
+        } catch (e) {
+          console.warn('Firestore load notice:', e);
         }
       }
 
-      // Fallback to master items from data_bundle.js
-      adminItems = JSON.parse(JSON.stringify(masterList));
+      // 2. Fallback to LocalStorage / Bundle
+      const saved = localStorage.getItem(STORAGE_KEY_ITEMS);
+      if (saved) {
+        try {
+          const parsed = JSON.parse(saved);
+          if (Array.isArray(parsed) && parsed.length > 0) {
+            adminItems = mergeWithMaster(parsed, masterList);
+            return;
+          }
+        } catch (e) {
+          console.warn(e);
+        }
+      }
+
+      adminItems = masterList.map(m => ({ ...m }));
+    }
+
+    function setupFirestoreRealtimeSync() {
+      db.collection('items').onSnapshot(snapshot => {
+        if (!snapshot.empty) {
+          const cloudItems = [];
+          snapshot.forEach(doc => {
+            const d = doc.data();
+            if (d) cloudItems.push({ id: doc.id, ...d });
+          });
+          if (cloudItems.length > 0) {
+            const masterList = (typeof MASTER_ITEMS !== 'undefined' && Array.isArray(MASTER_ITEMS)) ? MASTER_ITEMS : [];
+            adminItems = mergeWithMaster(cloudItems, masterList);
+            localStorage.setItem(STORAGE_KEY_ITEMS, JSON.stringify(adminItems));
+            renderAdminTable();
+            updateStats();
+          }
+        }
+      }, err => console.warn('Realtime sync error:', err));
     }
 
     function populateCategorySelect() {
       const select = document.getElementById('category');
       if (!select) return;
 
-      const cats = (typeof CATEGORIES !== 'undefined' && Array.isArray(CATEGORIES)) 
-        ? CATEGORIES.filter(c => c.id !== 'all') 
-        : [
-          { id: 'spirits', titleDe: 'Spirituosen & Destillate', emoji: '🥃' },
-          { id: 'wine', titleDe: 'Wein & Schaumweine', emoji: '🍷' },
-          { id: 'tea', titleDe: 'Teekunde & Aufgüsse', emoji: '🍵' },
-          { id: 'coffee', titleDe: 'Kaffeespezialitäten', emoji: '☕' },
-          { id: 'pasta_rice', titleDe: 'Pasta & Reisvariationen', emoji: '🍝' },
-          { id: 'sauces_condiments', titleDe: 'Saucen, Dressings & Senf', emoji: '🥣' },
-          { id: 'soft_drinks', titleDe: 'Softdrinks & Mixer', emoji: '🥤' },
-          { id: 'dairy', titleDe: 'Milch & Molkerei', emoji: '🥛' },
-          { id: 'cheese', titleDe: 'Käsekunde & DOP / g.U.', emoji: '🧀' },
-          { id: 'eggs', titleDe: 'Eierspeisen & Eierkunde', emoji: '🍳' },
-          { id: 'fruits', titleDe: 'Früchte & Beeren', emoji: '🍓' },
-          { id: 'vegetables', titleDe: 'Gemüse & Speisepilze', emoji: '🍄' },
-          { id: 'nuts', titleDe: 'Nüsse & Saaten', emoji: '🥜' },
-          { id: 'spices_herbs', titleDe: 'Gewürze & Kräuter', emoji: '🌿' },
-          { id: 'olives', titleDe: 'Oliven', emoji: '🫒' },
-          { id: 'oils_vinegars', titleDe: 'Öle & Essig', emoji: '🏺' },
-          { id: 'charcuterie', titleDe: 'Schinken & Charcuterie', emoji: '🥓' },
-          { id: 'meat_cuts', titleDe: 'Fleisch & Reifung', emoji: '🥩' },
-          { id: 'bread_bakery', titleDe: 'Brot & Backwaren', emoji: '🥖' },
-          { id: 'fingerfood', titleDe: 'Bar-Snacks & Fingerfood', emoji: '🍢' }
-        ];
-
+      const cats = adminCategories.filter(c => c.id !== 'all');
       select.innerHTML = '';
       cats.forEach(c => {
         const opt = document.createElement('option');
@@ -643,12 +828,8 @@
       const container = document.getElementById('adminCatFilterRow');
       if (!container) return;
 
-      const cats = (typeof CATEGORIES !== 'undefined' && Array.isArray(CATEGORIES)) 
-        ? CATEGORIES 
-        : [{ id: 'all', titleDe: 'Alle', emoji: '✨' }];
-
       container.innerHTML = '';
-      cats.forEach(c => {
+      adminCategories.forEach(c => {
         const filterKey = (c.id === 'all') ? 'ALL' : c.id;
         const isActive = (currentCategoryFilter === filterKey);
         const count = (c.id === 'all') 
@@ -680,10 +861,7 @@
 
       if (totalEl) totalEl.innerText = adminItems.length;
       if (customEl) customEl.innerText = adminItems.filter(i => i.isCustom).length;
-      if (catsEl) {
-        const uniqueCats = new Set(adminItems.map(i => i.category));
-        catsEl.innerText = uniqueCats.size;
-      }
+      if (catsEl) catsEl.innerText = adminCategories.length - 1; // excluding 'all'
     }
 
     function renderAdminTable() {
@@ -709,7 +887,7 @@
         tbody.innerHTML = `
           <tr>
             <td colspan="7" style="text-align: center; padding: 32px; color: var(--text-secondary);">
-              🔍 Keine Einträge für die aktuelle Suche oder Kategorie gefunden.
+              🔍 Keine Einträge gefunden.
             </td>
           </tr>
         `;
@@ -739,15 +917,19 @@
               ${(item.category || '').toUpperCase()}
             </span>
           </td>
-          <td>${item.origin || 'International'}</td>
+          <td>
+            <div>${item.origin || 'International'}</div>
+            <div style="font-size: 0.72rem; color: var(--text-muted);">${item.isImport ? '🌍 Import' : '🌱 Regional'}</div>
+          </td>
           <td>
             <div style="font-weight: 700; color: var(--text-secondary);">${item.abv || '-'}</div>
-            <div style="font-size: 0.72rem; color: var(--text-muted);">${item.alcoholProcess || 'NONE'}</div>
+            <div style="font-size: 0.75rem; color: var(--accent-gold); font-weight: 600;">${getProcessDisplayLabel(item.alcoholProcess, item.category)}</div>
           </td>
           <td style="max-width: 320px;">
             <div style="font-size: 0.8rem; color: var(--text-secondary); line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
-              ${item.scienceExplainedDe || item.subtitleDe || '-'}
+              ${item.tasteProfileDe || item.tasteDe || item.scienceExplainedDe || item.subtitleDe || '-'}
             </div>
+            ${item.allergens && item.allergens.length ? `<div style="font-size: 0.7rem; color: #ff6b6b; margin-top: 2px;">⚠️ ${Array.isArray(item.allergens) ? item.allergens.join(', ') : item.allergens}</div>` : ''}
           </td>
           <td style="text-align: right; white-space: nowrap;">
             <button class="btn-action" style="padding: 6px 10px; font-size: 0.78rem;" onclick="editItem('${item.id}')">✏️ Bearbeiten</button>
@@ -758,11 +940,60 @@
       });
     }
 
+    function getProcessDisplayLabel(proc, cat) {
+      let p = proc;
+      if (!p || p === 'NONE') {
+        if (cat === 'spirits') p = 'DISTILLATION';
+        else if (cat === 'wine') p = 'FERMENTATION';
+      }
+      const map = {
+        'DISTILLATION': '🥃 Destillation',
+        'FERMENTATION': '🍷 Fermentation',
+        'BREWING': '🍺 Brauen',
+        'FORTIFIED': '🍷 Aufgespritet',
+        'NONE': '🌱 Alkoholfrei'
+      };
+      return map[p] || (p || '🌱 Alkoholfrei');
+    }
+
+    function handleAdminCategoryChange(catId) {
+      const procSelect = document.getElementById('alcoholProcess');
+      if (!procSelect) return;
+      if (catId === 'spirits') {
+        procSelect.value = 'DISTILLATION';
+      } else if (catId === 'wine') {
+        procSelect.value = 'FERMENTATION';
+      } else if (catId === 'beer') {
+        procSelect.value = 'BREWING';
+      } else {
+        procSelect.value = 'NONE';
+      }
+    }
+
+    // Image File Upload handling (converts to Data URL)
+    function handleImageFileUpload(e) {
+      const file = e.target.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = function(evt) {
+        const dataUrl = evt.target.result;
+        document.getElementById('imageUrl').value = dataUrl;
+        updateImagePreview(dataUrl);
+        showToast('📷 Foto erfolgreich hochgeladen & eingebunden!');
+      };
+      reader.readAsDataURL(file);
+    }
+
     function openNewItemModal() {
       document.getElementById('modalTitle').innerText = 'Neuen Artikel anlegen';
       document.getElementById('itemId').value = '';
       document.getElementById('itemForm').reset();
       document.getElementById('imgPreview').style.display = 'none';
+      document.getElementById('alcoholProcess').value = 'DISTILLATION';
+      document.getElementById('isImport').value = 'true';
+      document.getElementById('stockQuantity').value = '5';
+      document.getElementById('inStock').value = 'true';
+      document.getElementById('storageLocation').value = 'Zentrallager';
       document.getElementById('itemModal').classList.add('active');
     }
 
@@ -778,15 +1009,37 @@
       document.getElementById('subtitleEn').value = item.subtitleEn || '';
       document.getElementById('category').value = item.category || 'spirits';
       document.getElementById('origin').value = item.origin || '';
-      document.getElementById('alcoholProcess').value = item.alcoholProcess || 'NONE';
+      document.getElementById('isImport').value = (item.isImport ? 'true' : 'false');
+      
+      // Intelligent fallback for process so spirits never show as NONE
+      let proc = item.alcoholProcess;
+      if (!proc || proc === 'NONE') {
+        if (item.category === 'spirits') proc = 'DISTILLATION';
+        else if (item.category === 'wine') proc = 'FERMENTATION';
+        else proc = 'NONE';
+      }
+      document.getElementById('alcoholProcess').value = proc;
       document.getElementById('abv').value = item.abv || '';
       document.getElementById('imageUrl').value = item.imageUrl || '';
-      document.getElementById('scienceExplainedDe').value = item.scienceExplainedDe || '';
-      document.getElementById('scienceExplainedEn').value = item.scienceExplainedEn || '';
-      document.getElementById('guestFaqDe').value = item.guestFaqDe || '';
-      document.getElementById('guestFaqEn').value = item.guestFaqEn || '';
+      
+      // Detailed attributes
+      document.getElementById('tasteProfileDe').value = item.tasteProfileDe || item.tasteDe || '';
+      document.getElementById('tasteProfileEn').value = item.tasteProfileEn || item.tasteEn || '';
+      document.getElementById('culinaryServingDe').value = item.culinaryServingDe || item.culinaryDe || '';
+      document.getElementById('culinaryServingEn').value = item.culinaryServingEn || item.culinaryEn || '';
+      document.getElementById('scienceExplainedDe').value = item.scienceExplainedDe || item.scienceDe || '';
+      document.getElementById('scienceExplainedEn').value = item.scienceExplainedEn || item.scienceEn || '';
+      document.getElementById('guestFaqDe').value = item.guestFaqDe || item.faqDe || '';
+      document.getElementById('guestFaqEn').value = item.guestFaqEn || item.faqEn || '';
       document.getElementById('rawMaterialDe').value = item.rawMaterialDe || '';
-      document.getElementById('tags').value = (item.tags || []).join(', ');
+      document.getElementById('rawMaterialEn').value = item.rawMaterialEn || '';
+
+      const allgStr = Array.isArray(item.allergens) ? item.allergens.join(', ') : (item.allergens || '');
+      document.getElementById('allergens').value = allgStr;
+      document.getElementById('tags').value = Array.isArray(item.tags) ? item.tags.join(', ') : (item.tags || '');
+      document.getElementById('storageLocation').value = item.storageLocation || 'Zentrallager';
+      document.getElementById('stockQuantity').value = item.stockQuantity != null ? item.stockQuantity : 5;
+      document.getElementById('inStock').value = (item.inStock !== false ? 'true' : 'false');
 
       updateImagePreview(item.imageUrl);
       document.getElementById('itemModal').classList.add('active');
@@ -798,7 +1051,7 @@
 
     function updateImagePreview(url) {
       const img = document.getElementById('imgPreview');
-      if (url && (url.startsWith('http://') || url.startsWith('https://'))) {
+      if (url && url.length > 5) {
         img.src = url;
         img.style.display = 'block';
       } else {
@@ -815,15 +1068,24 @@
       const tagsRaw = document.getElementById('tags').value;
       const tagsList = tagsRaw.split(',').map(s => s.trim()).filter(Boolean);
 
+      const allergensRaw = document.getElementById('allergens').value;
+      const allergensList = allergensRaw.split(',').map(s => s.trim()).filter(Boolean);
+
       const nameDe = document.getElementById('nameDe').value.trim();
       const nameEn = document.getElementById('nameEn').value.trim() || nameDe;
       const subDe = document.getElementById('subtitleDe').value.trim();
       const subEn = document.getElementById('subtitleEn').value.trim() || subDe;
+      
+      const tasteDe = document.getElementById('tasteProfileDe').value.trim();
+      const tasteEn = document.getElementById('tasteProfileEn').value.trim() || tasteDe;
+      const culDe = document.getElementById('culinaryServingDe').value.trim();
+      const culEn = document.getElementById('culinaryServingEn').value.trim() || culDe;
       const sciDe = document.getElementById('scienceExplainedDe').value.trim();
       const sciEn = document.getElementById('scienceExplainedEn').value.trim() || sciDe;
       const faqDe = document.getElementById('guestFaqDe').value.trim();
       const faqEn = document.getElementById('guestFaqEn').value.trim() || faqDe;
       const rawDe = document.getElementById('rawMaterialDe').value.trim();
+      const rawEn = document.getElementById('rawMaterialEn').value.trim() || rawDe;
 
       const newItem = {
         id: id,
@@ -833,16 +1095,40 @@
         subtitleEn: subEn,
         category: document.getElementById('category').value,
         origin: document.getElementById('origin').value.trim(),
+        isImport: document.getElementById('isImport').value === 'true',
         alcoholProcess: document.getElementById('alcoholProcess').value,
         abv: document.getElementById('abv').value.trim() || '0% ABV',
         imageUrl: document.getElementById('imageUrl').value.trim() || 'https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=800',
+        
+        // Full fields: both canonical & alias names
+        tasteProfileDe: tasteDe,
+        tasteProfileEn: tasteEn,
+        tasteDe: tasteDe,
+        tasteEn: tasteEn,
+        
+        culinaryServingDe: culDe,
+        culinaryServingEn: culEn,
+        culinaryDe: culDe,
+        culinaryEn: culEn,
+        
         scienceExplainedDe: sciDe,
         scienceExplainedEn: sciEn,
+        scienceDe: sciDe,
+        scienceEn: sciEn,
+        
         guestFaqDe: faqDe,
         guestFaqEn: faqEn,
+        faqDe: faqDe,
+        faqEn: faqEn,
+        
         rawMaterialDe: rawDe,
-        rawMaterialEn: rawDe,
+        rawMaterialEn: rawEn,
+        allergens: allergensList,
         tags: tagsList,
+        
+        storageLocation: document.getElementById('storageLocation').value.trim() || 'Zentrallager',
+        stockQuantity: parseInt(document.getElementById('stockQuantity').value) || 0,
+        inStock: document.getElementById('inStock').value === 'true',
         isCustom: true
       };
 
@@ -860,35 +1146,141 @@
       // Persist to local storage
       localStorage.setItem(STORAGE_KEY_ITEMS, JSON.stringify(adminItems));
 
+      // Persist directly to Firebase Firestore
+      if (db) {
+        db.collection('items').doc(id).set(newItem)
+          .then(() => console.log('🔥 Saved to Firestore:', id))
+          .catch(err => console.error('Firestore save error:', err));
+      }
+
       closeItemModal();
       renderAdminCategoryFilters();
       renderAdminTable();
       updateStats();
-      showToast(`Artikel "${newItem.nameDe}" erfolgreich gespeichert!`);
+      showToast(`Artikel "${newItem.nameDe}" erfolgreich in Firestore gespeichert!`);
     }
 
     function deleteItem(id) {
       const item = adminItems.find(i => i.id === id);
       if (!item) return;
 
-      if (confirm(`Möchtest du "${item.nameDe}" wirklich entfernen?`)) {
+      if (confirm(`Möchtest du "${item.nameDe}" wirklich unwiderruflich aus der Datenbank und Firestore löschen?`)) {
         adminItems = adminItems.filter(i => i.id !== id);
         localStorage.setItem(STORAGE_KEY_ITEMS, JSON.stringify(adminItems));
+
+        if (db) {
+          db.collection('items').doc(id).delete()
+            .then(() => console.log('🗑️ Deleted from Firestore:', id))
+            .catch(err => console.error('Firestore delete error:', err));
+        }
+
         renderAdminCategoryFilters();
         renderAdminTable();
         updateStats();
-        showToast(`Artikel "${item.nameDe}" wurde gelöscht.`);
+        showToast(`Artikel "${item.nameDe}" gelöscht.`);
       }
+    }
+
+    // Category Manager Modal
+    function openCategoryManagerModal() {
+      renderCategoryListModal();
+      document.getElementById('categoryModal').classList.add('active');
+    }
+
+    function closeCategoryManagerModal() {
+      document.getElementById('categoryModal').classList.remove('active');
+    }
+
+    function renderCategoryListModal() {
+      const container = document.getElementById('categoryListContainer');
+      if (!container) return;
+      container.innerHTML = '';
+
+      adminCategories.forEach(cat => {
+        if (cat.id === 'all') return;
+        const row = document.createElement('div');
+        row.style.cssText = "display: flex; justify-content: space-between; align-items: center; background: var(--bg-card); padding: 10px 14px; border-radius: 6px; border: 1px solid var(--border-subtle);";
+        row.innerHTML = `
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <span style="font-size: 1.2rem;">${cat.emoji || '📁'}</span>
+            <div>
+              <strong style="color: var(--text-primary); font-size: 0.9rem;">${cat.titleDe}</strong>
+              <div style="font-size: 0.75rem; color: var(--text-muted);">ID: ${cat.id}</div>
+            </div>
+          </div>
+          <button class="btn-action" style="padding: 4px 8px; font-size: 0.75rem; color: #D32F2F;" onclick="deleteCategory('${cat.id}')">🗑️ Löschen</button>
+        `;
+        container.appendChild(row);
+      });
+    }
+
+    function saveNewCategory(e) {
+      e.preventDefault();
+      const id = document.getElementById('newCatId').value.trim().toLowerCase().replace(/\s+/g, '_');
+      const titleDe = document.getElementById('newCatTitle').value.trim();
+      const emoji = document.getElementById('newCatEmoji').value.trim() || '📁';
+
+      if (adminCategories.some(c => c.id === id)) {
+        alert('Eine Kategorie mit dieser ID existiert bereits!');
+        return;
+      }
+
+      const newCat = { id, titleDe, titleEn: titleDe, emoji };
+      adminCategories.push(newCat);
+      localStorage.setItem(STORAGE_KEY_CATEGORIES, JSON.stringify(adminCategories));
+
+      if (db) {
+        db.collection('categories').doc(id).set(newCat)
+          .then(() => console.log('🔥 Category saved to Firestore:', id))
+          .catch(err => console.error(err));
+      }
+
+      document.getElementById('categoryForm').reset();
+      renderCategoryListModal();
+      populateCategorySelect();
+      renderAdminCategoryFilters();
+      updateStats();
+      showToast(`Kategorie "${titleDe}" erfolgreich erstellt!`);
+    }
+
+    function deleteCategory(catId) {
+      const cat = adminCategories.find(c => c.id === catId);
+      if (!cat) return;
+
+      const hasItems = adminItems.some(i => i.category === catId);
+      if (hasItems) {
+        if (!confirm(`Achtung: Es gibt Artikel in der Kategorie "${cat.titleDe}". Möchtest du sie wirklich löschen?`)) {
+          return;
+        }
+      } else {
+        if (!confirm(`Möchtest du die Kategorie "${cat.titleDe}" wirklich löschen?`)) {
+          return;
+        }
+      }
+
+      adminCategories = adminCategories.filter(c => c.id !== catId);
+      localStorage.setItem(STORAGE_KEY_CATEGORIES, JSON.stringify(adminCategories));
+
+      if (db) {
+        db.collection('categories').doc(catId).delete()
+          .then(() => console.log('🗑️ Category deleted from Firestore:', catId))
+          .catch(err => console.error(err));
+      }
+
+      renderCategoryListModal();
+      populateCategorySelect();
+      renderAdminCategoryFilters();
+      updateStats();
+      showToast(`Kategorie "${cat.titleDe}" gelöscht.`);
     }
 
     // Export & Download JSON
     function downloadCatalogJson() {
       const payload = {
-        catalogVersion: 28,
+        catalogVersion: 29,
         updatedAt: new Date().toISOString(),
         itemCount: adminItems.length,
-        categories: (typeof CATEGORIES !== 'undefined') ? CATEGORIES : [],
-        quiz_questions: (typeof MASTER_QUIZ !== 'undefined') ? MASTER_QUIZ : [],
+        categories: adminCategories,
         items: adminItems
       };
       const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
@@ -896,13 +1288,13 @@
       a.href = URL.createObjectURL(blob);
       a.download = 'catalog_latest.json';
       a.click();
-      showToast('catalog_latest.json erfolgreich heruntergeladen!');
+      showToast('catalog_latest.json heruntergeladen!');
     }
 
     function generateVersionJson() {
       const payload = {
-        catalogVersion: 28,
-        versionName: "v2.8 Master Release",
+        catalogVersion: 29,
+        versionName: "v2.9 Cloud Master Release",
         releaseDate: new Date().toISOString().split('T')[0],
         itemCount: adminItems.length,
         serverEndpoint: "https://gastrodex-823d7.web.app/catalog_latest.json"
@@ -917,14 +1309,15 @@
 
     function copyCatalogJson() {
       const payload = {
-        catalogVersion: 28,
+        catalogVersion: 29,
         updatedAt: new Date().toISOString(),
         itemCount: adminItems.length,
+        categories: adminCategories,
         items: adminItems
       };
       navigator.clipboard.writeText(JSON.stringify(payload, null, 2))
         .then(() => showToast('JSON in die Zwischenablage kopiert!'))
-        .catch(() => alert('Kopieren fehlgeschlagen. Bitte manuell exportieren.'));
+        .catch(() => alert('Kopieren fehlgeschlagen.'));
     }
 
     // File Import
@@ -942,21 +1335,19 @@
             return;
           }
 
-          if (confirm(`${incomingItems.length} Artikel gefunden. Möchtest du diese zur Datenbank hinzufügen?`)) {
+          if (confirm(`${incomingItems.length} Artikel importieren?`)) {
             const currentIds = new Set(adminItems.map(i => i.id));
             let addedCount = 0;
-            let updatedCount = 0;
 
             incomingItems.forEach(it => {
               if (it && it.id) {
-                if (currentIds.has(it.id)) {
-                  const idx = adminItems.findIndex(x => x.id === it.id);
-                  adminItems[idx] = { ...adminItems[idx], ...it };
-                  updatedCount++;
-                } else {
+                if (!currentIds.has(it.id)) {
                   adminItems.push({ ...it, isCustom: true });
                   currentIds.add(it.id);
                   addedCount++;
+                  if (db) {
+                    db.collection('items').doc(it.id).set(it).catch(console.error);
+                  }
                 }
               }
             });
@@ -965,7 +1356,7 @@
             renderAdminCategoryFilters();
             renderAdminTable();
             updateStats();
-            showToast(`Import abgeschlossen: +${addedCount} neu, ${updatedCount} aktualisiert!`);
+            showToast(`Import erfolgreich: +${addedCount} neue Artikel!`);
           }
         } catch (err) {
           alert('Fehler beim Parsen der JSON-Datei: ' + err.message);
@@ -982,13 +1373,6 @@
 
     function closeFirebaseModal() {
       document.getElementById('firebaseModal').classList.remove('active');
-    }
-
-    function downloadDeployPackage() {
-      downloadCatalogJson();
-      setTimeout(generateVersionJson, 500);
-      showToast('Deploy-Dateien (catalog_latest.json & version.json) bereitgestellt!');
-      closeFirebaseModal();
     }
 
     // Translation Service
@@ -1019,16 +1403,28 @@
       try {
         const nameDe = document.getElementById('nameDe').value;
         const subDe = document.getElementById('subtitleDe').value;
+        const tasteDe = document.getElementById('tasteProfileDe').value;
+        const culDe = document.getElementById('culinaryServingDe').value;
         const sciDe = document.getElementById('scienceExplainedDe').value;
         const faqDe = document.getElementById('guestFaqDe').value;
+        const rawDe = document.getElementById('rawMaterialDe').value;
 
         if (nameDe) document.getElementById('nameEn').value = await translateText(nameDe);
         if (subDe) document.getElementById('subtitleEn').value = await translateText(subDe);
+        if (tasteDe && !document.getElementById('tasteProfileEn').value) {
+          document.getElementById('tasteProfileEn').value = await translateText(tasteDe);
+        }
+        if (culDe && !document.getElementById('culinaryServingEn').value) {
+          document.getElementById('culinaryServingEn').value = await translateText(culDe);
+        }
         if (sciDe && !document.getElementById('scienceExplainedEn').value) {
           document.getElementById('scienceExplainedEn').value = await translateText(sciDe);
         }
         if (faqDe && !document.getElementById('guestFaqEn').value) {
           document.getElementById('guestFaqEn').value = await translateText(faqDe);
+        }
+        if (rawDe && !document.getElementById('rawMaterialEn').value) {
+          document.getElementById('rawMaterialEn').value = await translateText(rawDe);
         }
 
         showToast('✨ Automatische Übersetzung abgeschlossen!');

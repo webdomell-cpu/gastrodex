@@ -55,8 +55,12 @@ fun AddEditItemDialog(
     var process by remember { mutableStateOf(AlcoholProductionType.DISTILLATION) }
     var rawMaterial by remember { mutableStateOf("") }
     var abv by remember { mutableStateOf("40% ABV") }
+    var imageUrl by remember { mutableStateOf("https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=800") }
     var tasteProfile by remember { mutableStateOf("") }
+    var culinaryServing by remember { mutableStateOf("") }
+    var scienceExplained by remember { mutableStateOf("") }
     var guestFaq by remember { mutableStateOf("") }
+    var allergensText by remember { mutableStateOf("") }
     var inStock by remember { mutableStateOf(true) }
 
     var categoryExpanded by remember { mutableStateOf(false) }
@@ -197,7 +201,23 @@ fun AddEditItemDialog(
                 OutlinedTextField(
                     value = tasteProfile,
                     onValueChange = { tasteProfile = it },
-                    label = { Text(if (language == Language.DE) "Geschmacksprofil / Notizen" else "Tasting notes") },
+                    label = { Text(if (language == Language.DE) "Geschmacksprofil / Sensorik" else "Tasting notes & sensoric") },
+                    modifier = Modifier.fillMaxWidth()
+                )
+
+                // Servierempfehlung
+                OutlinedTextField(
+                    value = culinaryServing,
+                    onValueChange = { culinaryServing = it },
+                    label = { Text(if (language == Language.DE) "Servierempfehlung & Speisenbegleitung" else "Serving & culinary pairing") },
+                    modifier = Modifier.fillMaxWidth()
+                )
+
+                // Wissenschaft & Herstellung
+                OutlinedTextField(
+                    value = scienceExplained,
+                    onValueChange = { scienceExplained = it },
+                    label = { Text(if (language == Language.DE) "Wissenschaft & Herstellungs-Erklärung" else "Science & production breakdown") },
                     modifier = Modifier.fillMaxWidth()
                 )
 
@@ -205,7 +225,24 @@ fun AddEditItemDialog(
                 OutlinedTextField(
                     value = guestFaq,
                     onValueChange = { guestFaq = it },
-                    label = { Text(if (language == Language.DE) "Erklärung für Gäste / FAQ" else "How staff explains to guests") },
+                    label = { Text(if (language == Language.DE) "Gastfragen souverän beantworten / FAQ" else "How staff explains to guests / FAQ") },
+                    modifier = Modifier.fillMaxWidth()
+                )
+
+                // Allergens
+                OutlinedTextField(
+                    value = allergensText,
+                    onValueChange = { allergensText = it },
+                    label = { Text(if (language == Language.DE) "Allergene (z.B. Gluten, Laktose)" else "Allergens (comma separated)") },
+                    modifier = Modifier.fillMaxWidth()
+                )
+
+                // Image URL
+                OutlinedTextField(
+                    value = imageUrl,
+                    onValueChange = { imageUrl = it },
+                    label = { Text(if (language == Language.DE) "Bild-URL (Foto)" else "Image URL") },
+                    singleLine = true,
                     modifier = Modifier.fillMaxWidth()
                 )
 
@@ -232,6 +269,7 @@ fun AddEditItemDialog(
                 onClick = {
                     val finalNameEn = nameEn.ifBlank { nameDe.ifBlank { "House Selection" } }
                     val finalNameDe = nameDe.ifBlank { finalNameEn }
+                    val allergensList = allergensText.split(",").map { it.trim() }.filter { it.isNotBlank() }
                     val newItem = GastroItem(
                         id = "custom_" + UUID.randomUUID().toString().take(8),
                         category = category,
@@ -239,7 +277,7 @@ fun AddEditItemDialog(
                         nameDe = finalNameDe,
                         subtitleEn = subtitleEn.ifBlank { subtitleDe.ifBlank { "Custom house product" } },
                         subtitleDe = subtitleDe.ifBlank { subtitleEn.ifBlank { "Eigener Haus-Eintrag" } },
-                        imageUrl = "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=800&auto=format&fit=crop&q=80",
+                        imageUrl = imageUrl.ifBlank { "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=800" },
                         origin = origin.ifBlank { if (language == Language.DE) "Eigenabfüllung" else "House Selection" },
                         isImport = isImport,
                         alcoholProcess = process,
@@ -248,13 +286,13 @@ fun AddEditItemDialog(
                         abv = abv,
                         tasteProfileEn = tasteProfile.ifBlank { "Custom tasting profile" },
                         tasteProfileDe = tasteProfile.ifBlank { "Eigenes Geschmacksprofil" },
-                        scienceExplainedEn = "House preparation according to traditional gastronomy standards.",
-                        scienceExplainedDe = "Hauseigene Zubereitung nach traditionellen Gastronomiemethoden.",
-                        culinaryServingEn = "Serve according to house recipe.",
-                        culinaryServingDe = "Nach Hausrezeptur im passenden Glas servieren.",
+                        scienceExplainedEn = scienceExplained.ifBlank { "House preparation according to traditional gastronomy standards." },
+                        scienceExplainedDe = scienceExplained.ifBlank { "Hauseigene Zubereitung nach traditionellen Gastronomiemethoden." },
+                        culinaryServingEn = culinaryServing.ifBlank { "Serve according to house recipe." },
+                        culinaryServingDe = culinaryServing.ifBlank { "Nach Hausrezeptur im passenden Glas servieren." },
                         guestFaqEn = guestFaq.ifBlank { "Our exclusive house specialty, curated for your experience." },
                         guestFaqDe = guestFaq.ifBlank { "Unsere exklusive Hausspezialität, speziell für unsere Gäste ausgewählt." },
-                        allergens = emptyList(),
+                        allergens = allergensList,
                         tags = listOf("Custom", "HouseSpecial", category.titleEn),
                         inStock = inStock,
                         isCustom = true

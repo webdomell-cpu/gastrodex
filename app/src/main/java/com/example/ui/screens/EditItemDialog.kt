@@ -55,6 +55,11 @@ fun EditItemDialog(
     onSave: (GastroItem) -> Unit
 ) {
     var imageUrl by remember { mutableStateOf(item.imageUrl) }
+    var tasteProfile by remember { mutableStateOf(item.tasteProfileDe.ifBlank { item.tasteProfileEn }) }
+    var culinaryServing by remember { mutableStateOf(item.culinaryServingDe.ifBlank { item.culinaryServingEn }) }
+    var scienceExplained by remember { mutableStateOf(item.scienceExplainedDe.ifBlank { item.scienceExplainedEn }) }
+    var guestFaq by remember { mutableStateOf(item.guestFaqDe.ifBlank { item.guestFaqEn }) }
+    var allergensText by remember { mutableStateOf(item.allergens.joinToString(", ")) }
     var stockQuantity by remember { mutableIntStateOf(item.stockQuantity) }
     var storageLocation by remember { mutableStateOf(item.storageLocation) }
     var minThreshold by remember { mutableIntStateOf(item.minThreshold) }
@@ -225,6 +230,55 @@ fun EditItemDialog(
                     }
                 }
 
+                // Gastronomische Fachdaten & Wissen
+                Card(
+                    shape = RoundedCornerShape(12.dp),
+                    colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant)
+                ) {
+                    Column(modifier = Modifier.padding(10.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                        Text(
+                            text = if (language == Language.DE) "Gastronomische Inhalte & Sensorik" else "Culinary & Tasting Information",
+                            style = MaterialTheme.typography.labelMedium,
+                            fontWeight = FontWeight.Bold
+                        )
+
+                        OutlinedTextField(
+                            value = tasteProfile,
+                            onValueChange = { tasteProfile = it },
+                            label = { Text(if (language == Language.DE) "Sensorik & Geschmacksprofil" else "Tasting Notes") },
+                            modifier = Modifier.fillMaxWidth()
+                        )
+
+                        OutlinedTextField(
+                            value = culinaryServing,
+                            onValueChange = { culinaryServing = it },
+                            label = { Text(if (language == Language.DE) "Servierempfehlung & Speisenbegleitung" else "Service & Pairing") },
+                            modifier = Modifier.fillMaxWidth()
+                        )
+
+                        OutlinedTextField(
+                            value = scienceExplained,
+                            onValueChange = { scienceExplained = it },
+                            label = { Text(if (language == Language.DE) "Wissenschaft & Herstellung" else "Science & Production") },
+                            modifier = Modifier.fillMaxWidth()
+                        )
+
+                        OutlinedTextField(
+                            value = guestFaq,
+                            onValueChange = { guestFaq = it },
+                            label = { Text(if (language == Language.DE) "Gastfragen souverän beantworten" else "Guest FAQ") },
+                            modifier = Modifier.fillMaxWidth()
+                        )
+
+                        OutlinedTextField(
+                            value = allergensText,
+                            onValueChange = { allergensText = it },
+                            label = { Text(if (language == Language.DE) "Allergene (z.B. Gluten, Laktose)" else "Allergens") },
+                            modifier = Modifier.fillMaxWidth()
+                        )
+                    }
+                }
+
                 // Interne Notizen
                 OutlinedTextField(
                     value = userNotes,
@@ -238,8 +292,18 @@ fun EditItemDialog(
         confirmButton = {
             Button(
                 onClick = {
+                    val allgList = allergensText.split(",").map { it.trim() }.filter { it.isNotBlank() }
                     val updated = item.copy(
                         imageUrl = imageUrl.ifBlank { item.imageUrl },
+                        tasteProfileDe = if (language == Language.DE) tasteProfile else item.tasteProfileDe,
+                        tasteProfileEn = if (language == Language.EN) tasteProfile else item.tasteProfileEn,
+                        culinaryServingDe = if (language == Language.DE) culinaryServing else item.culinaryServingDe,
+                        culinaryServingEn = if (language == Language.EN) culinaryServing else item.culinaryServingEn,
+                        scienceExplainedDe = if (language == Language.DE) scienceExplained else item.scienceExplainedDe,
+                        scienceExplainedEn = if (language == Language.EN) scienceExplained else item.scienceExplainedEn,
+                        guestFaqDe = if (language == Language.DE) guestFaq else item.guestFaqDe,
+                        guestFaqEn = if (language == Language.EN) guestFaq else item.guestFaqEn,
+                        allergens = allgList,
                         inStock = stockQuantity > 0,
                         stockQuantity = stockQuantity,
                         storageLocation = storageLocation,

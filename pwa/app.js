@@ -231,26 +231,58 @@ const FIREBASE_CONFIG = {
   firestoreRestEndpoint: 'https://firestore.googleapis.com/v1/projects/gastrodex-823d7/databases/(default)/documents'
 };
 
+function setupFirebaseRealtimeListener() {
+  if (!firestoreDb) return;
+  try {
+    firestoreDb.collection('items').onSnapshot(snapshot => {
+      if (!snapshot.empty) {
+        const cloudItems = [];
+        snapshot.forEach(doc => {
+          const d = doc.data();
+          if (d && !d.isDeleted) {
+            cloudItems.push({ id: doc.id, ...d });
+          }
+        });
+        if (cloudItems.length > 0) {
+          console.log(`🔥 Realtime sync: received ${cloudItems.length} items from Firestore!`);
+          const masterList = (typeof MASTER_ITEMS !== "undefined") ? MASTER_ITEMS : FALLBACK_ITEMS;
+          const cloudMap = {};
+          cloudItems.forEach(it => { cloudMap[it.id] = it; });
+
+          const mergedMaster = masterList.map(m => cloudMap[m.id] ? { ...m, ...cloudMap[m.id] } : { ...m });
+          const newFromCloud = cloudItems.filter(it => !masterList.some(m => m.id === it.id));
+          items = [...newFromCloud, ...mergedMaster];
+          saveItems();
+          renderCatalog();
+          const badge = document.getElementById('itemCountBadge');
+          if (badge) badge.title = `🔥 Firestore Live DB aktiv (${items.length} Einträge)`;
+        }
+      }
+    }, err => console.warn('Firestore snapshot error:', err));
+  } catch (e) {
+    console.warn('Realtime listener notice:', e);
+  }
+}
+
 async function syncWithFirebaseCloud() {
-  // 1. First attempt: Direct real-time Firebase Firestore query
+  // 1. Direct real-time Firebase Firestore query
   if (firestoreDb) {
     try {
       console.log('🔥 Connecting to live Firestore collection "items"...');
       const snap = await firestoreDb.collection('items').get();
       if (!snap.empty && snap.docs.length > 0) {
-        console.log(`🔥 Synchronized ${snap.docs.length} live items directly from Firestore DB!`);
-        const remoteItems = snap.docs.map(doc => ({ id: doc.id, ...doc.data() }));
-        const localOverrides = (items || []).reduce((acc, it) => {
-          acc[it.id] = { isFavorite: it.isFavorite, stockQuantity: it.stockQuantity, inStock: it.inStock };
-          return acc;
-        }, {});
-        items = remoteItems.map(remoteItem => {
-          const ov = localOverrides[remoteItem.id];
-          return ov ? { ...remoteItem, ...ov } : remoteItem;
-        });
+        const cloudItems = snap.docs.map(doc => ({ id: doc.id, ...doc.data() })).filter(d => !d.isDeleted);
+        console.log(`🔥 Synchronized ${cloudItems.length} live items directly from Firestore DB!`);
+        const masterList = (typeof MASTER_ITEMS !== "undefined") ? MASTER_ITEMS : FALLBACK_ITEMS;
+        const cloudMap = {};
+        cloudItems.forEach(it => { cloudMap[it.id] = it; });
+
+        const mergedMaster = masterList.map(m => cloudMap[m.id] ? { ...m, ...cloudMap[m.id] } : { ...m });
+        const newFromCloud = cloudItems.filter(it => !masterList.some(m => m.id === it.id));
+        items = [...newFromCloud, ...mergedMaster];
         saveItems();
         renderCatalog();
-                const badge = document.getElementById('itemCountBadge');
+        const badge = document.getElementById('itemCountBadge');
         if (badge) badge.title = `🔥 Firestore Live DB aktiv (${items.length} Einträge)`;
         return;
       }
@@ -269,17 +301,16 @@ async function syncWithFirebaseCloud() {
       const data = await res.json();
       if (data && Array.isArray(data.items) && data.items.length > 0) {
         console.log(`🔥 Synchronized ${data.items.length} items from Firebase Hosting JSON!`);
-        const localOverrides = (items || []).reduce((acc, it) => {
-          acc[it.id] = { isFavorite: it.isFavorite, stockQuantity: it.stockQuantity, inStock: it.inStock };
-          return acc;
-        }, {});
-        items = data.items.map(remoteItem => {
-          const ov = localOverrides[remoteItem.id];
-          return ov ? { ...remoteItem, ...ov } : remoteItem;
-        });
+        const masterList = (typeof MASTER_ITEMS !== "undefined") ? MASTER_ITEMS : FALLBACK_ITEMS;
+        const cloudMap = {};
+        data.items.forEach(it => { if (it && it.id) cloudMap[it.id] = it; });
+
+        const mergedMaster = masterList.map(m => cloudMap[m.id] ? { ...m, ...cloudMap[m.id] } : { ...m });
+        const newFromCloud = data.items.filter(it => !masterList.some(m => m.id === it.id));
+        items = [...newFromCloud, ...mergedMaster];
         saveItems();
         renderCatalog();
-                const badge = document.getElementById('itemCountBadge');
+        const badge = document.getElementById('itemCountBadge');
         if (badge) badge.title = `🔥 Firebase Cloud Sync aktiv (${data.items.length} Einträge)`;
       }
     }
@@ -301,6 +332,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initQuizSession('all', 10);
   updateCoffeeComparison();
   syncWithFirebaseCloud();
+  setupFirebaseRealtimeListener();
 });
 
 function toggleLanguage() {
@@ -495,96 +527,196 @@ function showItemDetail(id) {
 
   const isDe = (currentLang === 'de');
   const modal = document.getElementById('detailModal');
-  const title = isDe ? item.nameDe : item.nameEn;
-  const subtitle = isDe ? item.subtitleDe : item.subtitleEn;
-  const taste = isDe ? item.tasteDe : item.tasteEn;
-  const science = isDe ? item.scienceDe : item.scienceEn;
-  const culinary = isDe ? item.culinaryDe : item.culinaryEn;
-  const faq = isDe ? item.faqDe : item.faqEn;
+  if (!modal) return;
+
+  const title = isDe ? (item.nameDe || item.nameEn) : (item.nameEn || item.nameDe);
+  const subtitle = isDe ? (item.subtitleDe || item.subtitleEn) : (item.subtitleEn || item.subtitleDe);
+  const taste = isDe ? (item.tasteProfileDe || item.tasteDe || item.tasteProfileEn || item.tasteEn) : (item.tasteProfileEn || item.tasteEn || item.tasteProfileDe || item.tasteDe);
+  const science = isDe ? (item.scienceExplainedDe || item.scienceDe || item.scienceExplainedEn || item.scienceEn) : (item.scienceExplainedEn || item.scienceEn || item.scienceExplainedDe || item.scienceDe);
+  const culinary = isDe ? (item.culinaryServingDe || item.culinaryDe || item.culinaryServingEn || item.culinaryEn) : (item.culinaryServingEn || item.culinaryEn || item.culinaryServingDe || item.culinaryDe);
+  const faq = isDe ? (item.guestFaqDe || item.faqDe || item.guestFaqEn || item.faqEn) : (item.guestFaqEn || item.faqEn || item.guestFaqDe || item.faqDe);
+  const raw = isDe ? (item.rawMaterialDe || item.rawMaterialEn) : (item.rawMaterialEn || item.rawMaterialDe);
 
   const detailImg = document.getElementById('detailImage');
   const detailPh = document.getElementById('detailPlaceholder');
   const catObj = CATEGORIES_LIST.find(c => c.id === item.category);
   const catIcon = catObj ? catObj.titleDe.split(' ')[0] : '🍽️';
 
-  if (item.imageUrl && item.imageUrl.trim() !== '') {
-    detailImg.style.display = 'block';
-    detailImg.src = item.imageUrl;
-    if (detailPh) detailPh.style.display = 'none';
-    detailImg.onerror = () => {
+  if (detailImg) {
+    if (item.imageUrl && item.imageUrl.trim() !== '') {
+      detailImg.style.display = 'block';
+      detailImg.src = item.imageUrl;
+      if (detailPh) detailPh.style.display = 'none';
+      detailImg.onerror = () => {
+        detailImg.style.display = 'none';
+        if (detailPh) {
+          detailPh.style.display = 'flex';
+          detailPh.innerHTML = `<span class="placeholder-icon" style="font-size:3.5rem;">${catIcon}</span><span class="placeholder-title" style="font-size:1.1rem;margin-top:8px;">${title}</span>`;
+        }
+      };
+    } else {
       detailImg.style.display = 'none';
       if (detailPh) {
         detailPh.style.display = 'flex';
         detailPh.innerHTML = `<span class="placeholder-icon" style="font-size:3.5rem;">${catIcon}</span><span class="placeholder-title" style="font-size:1.1rem;margin-top:8px;">${title}</span>`;
       }
-    };
-  } else {
-    detailImg.style.display = 'none';
-    if (detailPh) {
-      detailPh.style.display = 'flex';
-      detailPh.innerHTML = `<span class="placeholder-icon" style="font-size:3.5rem;">${catIcon}</span><span class="placeholder-title" style="font-size:1.1rem;margin-top:8px;">${title}</span>`;
     }
   }
 
-  document.getElementById('detailTitle').textContent = title;
-  document.getElementById('detailSubtitle').textContent = subtitle;
-  document.getElementById('detailOrigin').textContent = item.origin;
+  // Header Title & Subtitle
+  const tEl = document.getElementById('detailTitle');
+  if (tEl) tEl.textContent = title;
+  const sEl = document.getElementById('detailSubtitle');
+  if (sEl) sEl.textContent = subtitle || '';
 
-  // Category Badge
+  // Origin & Badges
+  const oEl = document.getElementById('detailOrigin');
+  if (oEl) oEl.textContent = item.origin || (isDe ? 'International' : 'International');
+
   const catBadge = document.getElementById('detailCategoryBadge');
   if (catBadge) {
-    catBadge.textContent = catObj ? (isDe ? catObj.titleDe : catObj.titleEn) : '';
+    catBadge.textContent = catObj ? (isDe ? catObj.titleDe : catObj.titleEn) : (item.category || '').toUpperCase();
   }
 
-  // Dynamic ABV: only show for spirits/wine or items with actual ABV percentage
+  const impBadge = document.getElementById('detailImportBadge');
+  if (impBadge) {
+    impBadge.textContent = item.isImport 
+      ? (isDe ? '🌍 IMPORTPRODUKT' : '🌍 IMPORTED') 
+      : (isDe ? '🌱 REGIONAL / HEIMISCH' : '🌱 REGIONAL');
+    impBadge.style.color = item.isImport ? '#FFD166' : '#88D49E';
+  }
+
+  // Dynamic Process & Kennwert
+  let proc = item.alcoholProcess;
+  if (!proc || proc === 'NONE') {
+    if (item.category === 'spirits') proc = 'DISTILLATION';
+    else if (item.category === 'wine') proc = 'FERMENTATION';
+    else proc = 'NONE';
+  }
+  const procMap = {
+    'DISTILLATION': isDe ? '🥃 Destillation' : '🥃 Distillation',
+    'FERMENTATION': isDe ? '🍷 Fermentation' : '🍷 Fermentation',
+    'BREWING': isDe ? '🍺 Brauen & Maischen' : '🍺 Brewing',
+    'FORTIFIED': isDe ? '🍷 Aufgespritet' : '🍷 Fortified',
+    'NONE': isDe ? '🌱 Alkoholfrei' : '🌱 Non-Alcoholic'
+  };
+  const procEl = document.getElementById('detailProcess');
+  if (procEl) procEl.textContent = procMap[proc] || proc;
+
+  const kwEl = document.getElementById('detailKennwert');
+  if (kwEl) kwEl.textContent = item.abv || (item.isImport ? (isDe ? 'International' : 'Import') : (isDe ? 'Regional' : 'Native'));
+
+  // Dynamic ABV top badge
   const abvEl = document.getElementById('detailAbv');
   const isAlcoholCat = item.category === 'spirits' || item.category === 'wine' || (item.abv && item.abv.includes('%'));
   if (abvEl) {
-    if (isAlcoholCat) {
+    if (isAlcoholCat && item.abv) {
       abvEl.style.display = 'inline-block';
-      abvEl.textContent = item.abv || '';
+      abvEl.textContent = item.abv;
     } else {
       abvEl.style.display = 'none';
       abvEl.textContent = '';
     }
   }
 
-  document.getElementById('detailTaste').textContent = taste || '-';
-  document.getElementById('detailScience').textContent = science || '-';
-  document.getElementById('detailCulinary').textContent = culinary || '-';
-  document.getElementById('detailFaq').textContent = faq || '-';
+  // Content sections
+  const faqEl = document.getElementById('detailFaq');
+  if (faqEl) faqEl.textContent = faq || (isDe ? 'Unsere exklusive Hausspezialität, sorgfältig ausgewählt für erstklassigen Genuss.' : 'Curated house specialty selected for premium enjoyment.');
+
+  const sciEl = document.getElementById('detailScience');
+  if (sciEl) sciEl.textContent = science || (isDe ? 'Zubereitung nach traditionellen gastronomischen Handwerksstandards.' : 'Prepared according to traditional gastronomy standards.');
+
+  const rawEl = document.getElementById('detailRawMaterial');
+  if (rawEl) rawEl.textContent = raw || (isDe ? 'Ausgewählte Gastronomie-Zutaten' : 'Curated ingredients');
+
+  const tasteEl = document.getElementById('detailTaste');
+  if (tasteEl) tasteEl.textContent = taste || (isDe ? 'Ausgewogenes, sortentypisches Aromenspiel.' : 'Balanced varietal flavor profile.');
+
+  const culEl = document.getElementById('detailCulinary');
+  if (culEl) culEl.textContent = culinary || (isDe ? 'Im passenden Glas bei optimaler Serviertemperatur anreichen.' : 'Serve in appropriate glassware at optimal temperature.');
 
   // Allergens section
   const allergenSec = document.getElementById('detailAllergenSection');
   const allergenTxt = document.getElementById('detailAllergens');
   if (allergenSec && allergenTxt) {
-    if (item.allergens && item.allergens.length > 0 && !item.allergens.includes('None')) {
+    const allgList = Array.isArray(item.allergens) ? item.allergens : (item.allergens ? [item.allergens] : []);
+    const filteredAllg = allgList.filter(a => a && a !== 'None' && a !== 'Keine' && a !== 'None declared');
+    if (filteredAllg.length > 0) {
       allergenSec.style.display = 'block';
-      allergenTxt.textContent = item.allergens.join(', ');
+      allergenTxt.textContent = filteredAllg.join(', ');
     } else {
       allergenSec.style.display = 'none';
     }
   }
 
+  // Tags
+  const tagsContainer = document.getElementById('detailTagsContainer');
+  if (tagsContainer) {
+    const tagList = Array.isArray(item.tags) ? item.tags : [];
+    if (tagList.length > 0) {
+      tagsContainer.style.display = 'flex';
+      tagsContainer.innerHTML = tagList.map(t => `<span class="tag-pill" style="font-size: 0.75rem; padding: 4px 8px;">#${t}</span>`).join('');
+    } else {
+      tagsContainer.style.display = 'none';
+    }
+  }
+
   // Stock counter in detail modal
-  document.getElementById('detailStockCount').textContent = item.stockQuantity;
-  document.getElementById('detailLocation').textContent = item.storageLocation || (isDe ? 'Nicht zugewiesen' : 'Not assigned');
+  const stockCountEl = document.getElementById('detailStockCount');
+  if (stockCountEl) stockCountEl.textContent = item.stockQuantity != null ? item.stockQuantity : 0;
+  
+  const locEl = document.getElementById('detailLocation');
+  if (locEl) locEl.textContent = item.storageLocation || (isDe ? 'Zentrallager' : 'Main storage');
+
+  // Favorite & Share buttons
+  const favBtn = document.getElementById('detailFavBtn');
+  if (favBtn) favBtn.textContent = item.isFavorite ? '❤️' : '🤍';
 
   modal.classList.add('active');
 }
 
 function closeDetailModal() {
-  document.getElementById('detailModal').classList.remove('active');
+  const modal = document.getElementById('detailModal');
+  if (modal) modal.classList.remove('active');
+}
+
+function shareCurrentItem() {
+  if (!selectedItem) return;
+  const isDe = (currentLang === 'de');
+  const name = isDe ? (selectedItem.nameDe || selectedItem.nameEn) : (selectedItem.nameEn || selectedItem.nameDe);
+  const sub = isDe ? (selectedItem.subtitleDe || '') : (selectedItem.subtitleEn || '');
+  const shareText = `${name} - ${sub}\nMehr erfahren im GastroDex Gastronomie-Lexikon!`;
+  
+  if (navigator.share) {
+    navigator.share({
+      title: `GastroDex: ${name}`,
+      text: shareText,
+      url: window.location.href
+    }).catch(() => {});
+  } else {
+    navigator.clipboard.writeText(`${shareText}\n${window.location.href}`);
+    alert(isDe ? 'Link & Beschreibung in Zwischenablage kopiert!' : 'Link copied to clipboard!');
+  }
+}
+
+function toggleCurrentItemFavorite() {
+  if (!selectedItem) return;
+  selectedItem.isFavorite = !selectedItem.isFavorite;
+  const favBtn = document.getElementById('detailFavBtn');
+  if (favBtn) favBtn.textContent = selectedItem.isFavorite ? '❤️' : '🤍';
+  saveItems();
+  renderCatalog();
 }
 
 function changeStockInDetail(delta) {
   if (!selectedItem) return;
   selectedItem.stockQuantity = Math.max(0, (selectedItem.stockQuantity || 0) + delta);
   selectedItem.inStock = selectedItem.stockQuantity > 0;
-  document.getElementById('detailStockCount').textContent = selectedItem.stockQuantity;
+  const countEl = document.getElementById('detailStockCount');
+  if (countEl) countEl.textContent = selectedItem.stockQuantity;
   saveItems();
   renderCatalog();
-  }
+}
 
 // INVENTORY MANAGEMENT
 function renderInventoryList() {
