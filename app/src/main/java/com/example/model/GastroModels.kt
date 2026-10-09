@@ -62,9 +62,9 @@ data class GastroItem(
     val imageUrl: String,
     val origin: String,
     val isImport: Boolean, // e.g. imported to Central Europe vs native/regional
-    val alcoholProcess: AlcoholProductionType,
-    val rawMaterialEn: String,
-    val rawMaterialDe: String,
+    val alcoholProcess: AlcoholProductionType = AlcoholProductionType.NONE,
+    val rawMaterialEn: String = "",
+    val rawMaterialDe: String = "",
     val abv: String,
     val tasteProfileEn: String,
     val tasteProfileDe: String,

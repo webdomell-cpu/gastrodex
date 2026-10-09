@@ -265,6 +265,8 @@
   <!-- Google Firebase Web SDK -->
   <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore-compat.js"></script>
+  <!-- Dexie.js IndexedDB Wrapper -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dexie.js/3.2.4/dexie.min.js"></script>
 </head>
 <body>
 
@@ -343,8 +345,14 @@
           📂 JSON importieren
         </button>
         <input type="file" id="fileImportInput" accept=".json" style="display: none;" onchange="importCatalogJsonFile(event)">
-        <button class="btn-action btn-firebase" onclick="openFirebaseConfigModal()">
-          🔥 Firebase Cloud Deploy
+        <button class="btn-action btn-firebase" onclick="syncAllToFirestore()" title="Schreibt alle Artikel und Kategorien direkt in die Firebase Firestore Cloud">
+          🚀 In Firebase Cloud synchronisieren
+        </button>
+        <button class="btn-action" onclick="resetLocalCache()" title="Setzt den Browser-Cache zurück und lädt alle 229 Artikel und 21 Kategorien frisch">
+          🔄 Cache aktualisieren (229 Artikel)
+        </button>
+        <button class="btn-action" onclick="openFirebaseConfigModal()">
+          🔥 Firebase Info
         </button>
       </div>
 
@@ -614,9 +622,10 @@
         <input type="text" id="fbDbId" class="form-control" value="(default) / gastrodex" readonly>
       </div>
 
-      <div style="display: flex; justify-content: flex-end; gap: 12px;">
+      <div style="display: flex; justify-content: flex-end; gap: 12px; flex-wrap: wrap;">
         <button class="btn-action" onclick="closeFirebaseModal()">Schließen</button>
-        <button class="btn-action btn-firebase" onclick="downloadCatalogJson()">JSON Backup herunterladen</button>
+        <button class="btn-action" onclick="resetLocalCache(); closeFirebaseModal();">🔄 Cache aktualisieren</button>
+        <button class="btn-action btn-firebase" onclick="syncAllToFirestore(); closeFirebaseModal();">🚀 Jetzt alles in Firebase Cloud schreiben</button>
       </div>
     </div>
   </div>
@@ -695,7 +704,18 @@
 
     function loadCategories() {
       const defaultCats = (typeof CATEGORIES !== 'undefined' && Array.isArray(CATEGORIES)) 
-        ? CATEGORIES 
+        ? CATEGORIES.map(c => {
+            const emojiMatch = c.titleDe.match(/^[\p{Extended_Pictographic}\u2600-\u27BF\uD83C-\uDBFF\uDC00-\uDFFF]+/u);
+            const emoji = emojiMatch ? emojiMatch[0].trim() : '📁';
+            const cleanTitleDe = c.titleDe.replace(/^[\p{Extended_Pictographic}\u2600-\u27BF\uD83C-\uDBFF\uDC00-\uDFFF\s]+/u, '').trim();
+            const cleanTitleEn = c.titleEn.replace(/^[\p{Extended_Pictographic}\u2600-\u27BF\uD83C-\uDBFF\uDC00-\uDFFF\s]+/u, '').trim();
+            return {
+              id: c.id,
+              titleDe: cleanTitleDe || c.titleDe,
+              titleEn: cleanTitleEn || c.titleEn,
+              emoji: emoji
+            };
+          }) 
         : [
           { id: 'all', titleDe: 'Alle', titleEn: 'All', emoji: '✨' },
           { id: 'spirits', titleDe: 'Spirituosen & Destillate', titleEn: 'Spirits & Distillates', emoji: '🥃' },
@@ -712,6 +732,7 @@
           { id: 'vegetables', titleDe: 'Gemüse & Speisepilze', titleEn: 'Vegetables & Mushrooms', emoji: '🍄' },
           { id: 'nuts', titleDe: 'Nüsse & Saaten', titleEn: 'Nuts & Seeds', emoji: '🥜' },
           { id: 'spices_herbs', titleDe: 'Gewürze & Kräuter', titleEn: 'Spices & Herbs', emoji: '🌿' },
+          { id: 'fish_seafood', titleDe: 'Fisch & Meeresfrüchte', titleEn: 'Fish & Seafood', emoji: '🐟' },
           { id: 'olives', titleDe: 'Oliven', titleEn: 'Olives', emoji: '🫒' },
           { id: 'oils_vinegars', titleDe: 'Öle & Essig', titleEn: 'Oils & Vinegars', emoji: '🏺' },
           { id: 'charcuterie', titleDe: 'Schinken & Charcuterie', titleEn: 'Charcuterie', emoji: '🥓' },
@@ -725,7 +746,10 @@
         try {
           const parsed = JSON.parse(saved);
           if (Array.isArray(parsed) && parsed.length > 0) {
-            adminCategories = parsed;
+            const existingIds = new Set(parsed.map(c => c.id));
+            const missingFromDefault = defaultCats.filter(c => !existingIds.has(c.id));
+            adminCategories = [...parsed, ...missingFromDefault];
+            localStorage.setItem(STORAGE_KEY_CATEGORIES, JSON.stringify(adminCategories));
             return;
           }
         } catch (e) {
@@ -733,6 +757,7 @@
         }
       }
       adminCategories = defaultCats;
+      localStorage.setItem(STORAGE_KEY_CATEGORIES, JSON.stringify(adminCategories));
     }
 
     function mergeWithMaster(incomingList, masterList) {
@@ -1364,6 +1389,66 @@
       };
       reader.readAsText(file);
       e.target.value = '';
+    }
+
+    // Direct 1-Click Cloud Sync to Firestore
+    async function syncAllToFirestore() {
+      if (!db) {
+        alert('Firebase Firestore ist momentan nicht initialisiert. Bitte Netzwerkverbindung prüfen.');
+        return;
+      }
+
+      if (!confirm(`Möchtest du alle ${adminItems.length} Artikel und ${adminCategories.length - 1} Kategorien jetzt direkt in die Cloud-Datenbank (Firestore) synchronisieren?`)) {
+        return;
+      }
+
+      showToast('🚀 Synchronisiere Daten mit Firebase Firestore...');
+      let itemsUploaded = 0;
+      let catsUploaded = 0;
+
+      try {
+        // 1. Upload all categories
+        for (const cat of adminCategories) {
+          if (cat.id === 'all') continue;
+          await db.collection('categories').doc(cat.id).set(cat, { merge: true });
+          catsUploaded++;
+        }
+
+        // 2. Upload items in chunks of 50
+        const batchSize = 50;
+        for (let i = 0; i < adminItems.length; i += batchSize) {
+          const batch = db.batch();
+          const chunk = adminItems.slice(i, i + batchSize);
+          chunk.forEach(item => {
+            const ref = db.collection('items').doc(item.id);
+            batch.set(ref, item, { merge: true });
+          });
+          await batch.commit();
+          itemsUploaded += chunk.length;
+        }
+
+        showToast(`✅ Perfekt! ${itemsUploaded} Artikel & ${catsUploaded} Kategorien live in Firebase gespeichert!`);
+        updateStats();
+      } catch (err) {
+        console.error('Cloud Sync Error:', err);
+        alert('Fehler beim Cloud-Sync: ' + err.message);
+      }
+    }
+
+    // Reset Local Browser Cache and reload fresh Master items
+    function resetLocalCache() {
+      if (confirm('Möchtest du den Browser-Cache zurücksetzen und alle 229 Artikel sowie alle 21 Kategorien frisch aus dem Katalog-Master laden?')) {
+        localStorage.removeItem(STORAGE_KEY_CATEGORIES);
+        localStorage.removeItem(STORAGE_KEY_ITEMS);
+        loadCategories();
+        loadAdminData().then(() => {
+          populateCategorySelect();
+          renderAdminCategoryFilters();
+          renderAdminTable();
+          updateStats();
+          showToast(`✅ Browser-Cache aktualisiert! ${adminItems.length} Artikel & ${adminCategories.length - 1} Kategorien geladen.`);
+        });
+      }
     }
 
     // Firebase Modal

@@ -220,8 +220,65 @@ function loadItems() {
 
 let items = loadItems();
 
+// --- ROBUST INDEXEDDB STORAGE WITH DEXIE.JS ---
+let db = null;
+if (typeof Dexie !== 'undefined') {
+  try {
+    db = new Dexie('GastroDexIndexedDB');
+    db.version(1).stores({
+      items: 'id, category, isFavorite',
+      settings: 'key'
+    });
+  } catch (e) {
+    console.warn('Dexie setup notice:', e);
+  }
+}
+
+async function initDexieStorage() {
+  if (!db) return;
+  try {
+    await db.open();
+    const count = await db.items.count();
+    const masterList = (typeof MASTER_ITEMS !== "undefined") ? MASTER_ITEMS : FALLBACK_ITEMS;
+    if (count === 0) {
+      const initial = loadItems();
+      await db.items.bulkPut(initial);
+      console.log(`📦 Dexie.js IndexedDB initialized & seeded with ${initial.length} items.`);
+    } else {
+      const stored = await db.items.toArray();
+      if (stored && stored.length > 0) {
+        const masterIds = new Set(masterList.map(m => m.id));
+        const overrideMap = {};
+        const customOrAdded = [];
+        stored.forEach(it => {
+          if (it && it.id) {
+            if (masterIds.has(it.id)) {
+              overrideMap[it.id] = it;
+            } else {
+              customOrAdded.push(it);
+            }
+          }
+        });
+        const mergedMaster = masterList.map(m => {
+          const ov = overrideMap[m.id];
+          return ov ? { ...m, ...ov } : { ...m };
+        });
+        items = [...customOrAdded, ...mergedMaster];
+        saveItems(); // Sync to localStorage
+        renderCatalog();
+        console.log(`📦 Loaded ${items.length} items from IndexedDB (Dexie.js). Favorites & stock quantities fully restored across reloads.`);
+      }
+    }
+  } catch (err) {
+    console.warn('Dexie initialization error:', err);
+  }
+}
+
 function saveItems() {
   localStorage.setItem(STORAGE_KEY_ITEMS, JSON.stringify(items));
+  if (db) {
+    db.items.bulkPut(items).catch(err => console.warn('Dexie save error:', err));
+  }
 }
 
 // FIREBASE CLOUD FIRESTORE SYNCHRONIZATION
@@ -291,16 +348,21 @@ async function syncWithFirebaseCloud() {
     }
   }
 
-  // 2. Second attempt: Fetch latest JSON bundle from Firebase Hosting
+  // 2. Fetch latest catalog JSON bundle
   try {
-    const url = window.location.hostname.includes('gastrodex-823d7') 
-      ? './catalog_latest.json' 
-      : `${FIREBASE_CONFIG.hostingUrl}/catalog_latest.json`;
-    const res = await fetch(url, { cache: 'no-cache' });
-    if (res.ok) {
+    let res = null;
+    try {
+      res = await fetch('./catalog_latest.json', { cache: 'no-cache' });
+    } catch (_) {}
+    if (!res || !res.ok) {
+      try {
+        res = await fetch(`${FIREBASE_CONFIG.hostingUrl}/catalog_latest.json`, { cache: 'no-cache' });
+      } catch (_) {}
+    }
+    if (res && res.ok) {
       const data = await res.json();
       if (data && Array.isArray(data.items) && data.items.length > 0) {
-        console.log(`🔥 Synchronized ${data.items.length} items from Firebase Hosting JSON!`);
+        console.log(`🔥 Synchronized ${data.items.length} items from catalog JSON!`);
         const masterList = (typeof MASTER_ITEMS !== "undefined") ? MASTER_ITEMS : FALLBACK_ITEMS;
         const cloudMap = {};
         data.items.forEach(it => { if (it && it.id) cloudMap[it.id] = it; });
@@ -311,7 +373,7 @@ async function syncWithFirebaseCloud() {
         saveItems();
         renderCatalog();
         const badge = document.getElementById('itemCountBadge');
-        if (badge) badge.title = `🔥 Firebase Cloud Sync aktiv (${data.items.length} Einträge)`;
+        if (badge) badge.title = `🔥 Katalog Sync aktiv (${items.length} Einträge)`;
       }
     }
   } catch (err) {
@@ -324,6 +386,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (!document.getElementById('catalogGrid')) {
     return;
   }
+  initDexieStorage();
   renderLanguageLabels();
   renderCategoryChips();
   renderQuizCategoryButtons();

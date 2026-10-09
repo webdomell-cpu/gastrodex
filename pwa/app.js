@@ -348,16 +348,21 @@ async function syncWithFirebaseCloud() {
     }
   }
 
-  // 2. Second attempt: Fetch latest JSON bundle from Firebase Hosting
+  // 2. Fetch latest catalog JSON bundle
   try {
-    const url = window.location.hostname.includes('gastrodex-823d7') 
-      ? './catalog_latest.json' 
-      : `${FIREBASE_CONFIG.hostingUrl}/catalog_latest.json`;
-    const res = await fetch(url, { cache: 'no-cache' });
-    if (res.ok) {
+    let res = null;
+    try {
+      res = await fetch('./catalog_latest.json', { cache: 'no-cache' });
+    } catch (_) {}
+    if (!res || !res.ok) {
+      try {
+        res = await fetch(`${FIREBASE_CONFIG.hostingUrl}/catalog_latest.json`, { cache: 'no-cache' });
+      } catch (_) {}
+    }
+    if (res && res.ok) {
       const data = await res.json();
       if (data && Array.isArray(data.items) && data.items.length > 0) {
-        console.log(`🔥 Synchronized ${data.items.length} items from Firebase Hosting JSON!`);
+        console.log(`🔥 Synchronized ${data.items.length} items from catalog JSON!`);
         const masterList = (typeof MASTER_ITEMS !== "undefined") ? MASTER_ITEMS : FALLBACK_ITEMS;
         const cloudMap = {};
         data.items.forEach(it => { if (it && it.id) cloudMap[it.id] = it; });
@@ -368,7 +373,7 @@ async function syncWithFirebaseCloud() {
         saveItems();
         renderCatalog();
         const badge = document.getElementById('itemCountBadge');
-        if (badge) badge.title = `🔥 Firebase Cloud Sync aktiv (${data.items.length} Einträge)`;
+        if (badge) badge.title = `🔥 Katalog Sync aktiv (${items.length} Einträge)`;
       }
     }
   } catch (err) {

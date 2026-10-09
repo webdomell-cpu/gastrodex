@@ -1,22 +1,18 @@
 rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
-    // Curated encyclopedia database collections: publicly readable by Web, PWA, and Android app
+    // Curated encyclopedia database collections: readable and writable by Web Admin CMS, PWA, and Android app
     match /items/{itemId} {
-      allow read: if true;
-      allow write: if request.auth != null;
+      allow read, write: if true;
     }
     match /categories/{catId} {
-      allow read: if true;
-      allow write: if request.auth != null;
+      allow read, write: if true;
     }
     match /quiz_questions/{questionId} {
-      allow read: if true;
-      allow write: if request.auth != null;
+      allow read, write: if true;
     }
     match /catalog/{document=**} {
-      allow read: if true;
-      allow write: if request.auth != null;
+      allow read, write: if true;
     }
 
     // Authenticated user private storage (favorites, notes, inventory overrides)

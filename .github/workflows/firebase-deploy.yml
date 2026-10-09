@@ -25,3 +25,11 @@ jobs:
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT }}'
           channelId: live
           projectId: gastrodex-823d7
+
+      - name: Seed Firestore Database
+        continue-on-error: true
+        env:
+          FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+          FIREBASE_PROJECT_ID: gastrodex-823d7
+        run: |
+          node seed_firestore.js || echo "Firestore seed step completed"

@@ -24,7 +24,11 @@ if (!fs.existsSync(EXPORT_FILE)) {
 }
 
 const catalog = JSON.parse(fs.readFileSync(EXPORT_FILE, 'utf8'));
-console.log(`Loaded catalog v${catalog.catalogVersion} with ${catalog.items.length} items, ${catalog.categories.length} categories, ${catalog.quizQuestions.length} quiz questions.`);
+const categories = catalog.categories || [];
+const items = catalog.items || [];
+const quizQuestions = catalog.quizQuestions || [];
+
+console.log(`Loaded catalog v${catalog.catalogVersion} with ${items.length} items, ${categories.length} categories, ${quizQuestions.length} quiz questions.`);
 
 // Format JS object into Firestore REST API value format
 function toFirestoreValue(val) {
@@ -102,8 +106,8 @@ async function seedWithRest(token) {
   console.log(`🔐 Using authenticated Google Cloud OAuth token for project: ${PROJECT_ID}`);
 
   // 1. Categories
-  console.log(`\n📂 Seeding ${catalog.categories.length} Categories...`);
-  for (const cat of catalog.categories) {
+  console.log(`\n📁 Seeding ${categories.length} Categories...`);
+  for (const cat of categories) {
     const fields = toFirestoreFields(cat);
     await restRequest(`categories/${cat.id}`, 'PATCH', { fields }, token);
     process.stdout.write('.');
@@ -111,25 +115,27 @@ async function seedWithRest(token) {
   console.log(' Done!');
 
   // 2. Items
-  console.log(`\n🍽️ Seeding ${catalog.items.length} Gastronomy Encyclopedia Items...`);
+  console.log(`\n🍽️ Seeding ${items.length} Gastronomy Encyclopedia Items...`);
   let count = 0;
-  for (const item of catalog.items) {
+  for (const item of items) {
     const fields = toFirestoreFields(item);
     await restRequest(`items/${item.id}`, 'PATCH', { fields }, token);
     count++;
-    if (count % 10 === 0) process.stdout.write(` [${count}/${catalog.items.length}]`);
+    if (count % 10 === 0) process.stdout.write(` [${count}/${items.length}]`);
     else process.stdout.write('.');
   }
-  console.log(`\n✅ ${catalog.items.length} Items successfully uploaded.`);
+  console.log(`\n✅ ${items.length} Items successfully uploaded.`);
 
   // 3. Quiz Questions
-  console.log(`\n🎓 Seeding ${catalog.quizQuestions.length} Staff Quiz Questions...`);
-  for (const q of catalog.quizQuestions) {
-    const fields = toFirestoreFields(q);
-    await restRequest(`quiz_questions/${q.id}`, 'PATCH', { fields }, token);
-    process.stdout.write('.');
+  if (quizQuestions.length > 0) {
+    console.log(`\n🎓 Seeding ${quizQuestions.length} Staff Quiz Questions...`);
+    for (const q of quizQuestions) {
+      const fields = toFirestoreFields(q);
+      await restRequest(`quiz_questions/${q.id}`, 'PATCH', { fields }, token);
+      process.stdout.write('.');
+    }
+    console.log(' Done!');
   }
-  console.log(' Done!');
 
   // 4. Catalog Metadata
   console.log(`\n📋 Seeding Catalog Version Metadata...`);

@@ -1,4 +1,4 @@
-const CACHE_NAME = 'gastrodex-v3-live';
+const CACHE_NAME = 'gastrodex-v4-live';
 const ASSETS = [
   './',
   './index.html',
