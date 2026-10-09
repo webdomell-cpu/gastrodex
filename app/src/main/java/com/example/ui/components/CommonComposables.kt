@@ -41,6 +41,7 @@ import androidx.compose.material.icons.filled.Opacity
 import androidx.compose.material.icons.filled.Person
 import androidx.compose.material.icons.filled.Public
 import androidx.compose.material.icons.filled.Restaurant
+import androidx.compose.material.icons.filled.SetMeal
 import androidx.compose.material.icons.filled.SoupKitchen
 import androidx.compose.material.icons.filled.Spa
 import androidx.compose.material.icons.filled.WineBar
@@ -730,6 +731,7 @@ fun getCategoryIcon(category: GastroCategory): ImageVector {
         GastroCategory.VEGETABLES -> Icons.Default.Yard
         GastroCategory.NUTS_SEEDS -> Icons.Default.Grain
         GastroCategory.SPICES_HERBS -> Icons.Default.Spa
+        GastroCategory.FISH_SEAFOOD -> Icons.Default.SetMeal
         GastroCategory.OLIVES -> Icons.Default.Eco
         GastroCategory.OILS_VINEGARS -> Icons.Default.Opacity
         GastroCategory.CHARCUTERIE_DELI -> Icons.Default.DinnerDining

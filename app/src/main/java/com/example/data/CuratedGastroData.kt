@@ -15,6 +15,7 @@ object CuratedGastroData {
         CuratedProduceData.items +
         CuratedDairyCheeseEggsData.items +
         CuratedSpicesHerbsData.items +
+        CuratedFishData.items +
         CuratedOlivesData.items +
         CuratedOilsVinegarsData.items +
         CuratedMeatDeliData.items +
@@ -3188,6 +3189,48 @@ object CuratedGastroData {
             correctIndex = 0,
             explanationEn = "Neutral grapeseed oil creates emulsified dressings where herbs, truffles, or lemon take center stage.",
             explanationDe = "Da es keinen Eigengeschmack hat, lässt es feine Kräuter, Zitrone oder Trüffel voll zur Geltung kommen."
+        ),
+        QuizQuestion(
+            id = "q_meat_nitrosamine_01",
+            category = GastroCategory.CHARCUTERIE_DELI,
+            questionEn = "Why should cured sausages (Bockwurst, Wieners) never be grilled or fried at high heat?",
+            questionDe = "Warum dürfen Bockwürste, Wiener oder Kasseler niemals scharf angebraten oder gegrillt werden?",
+            optionsEn = listOf(
+                "Nitrite curing salt reacts with meat amines above 130°C to form carcinogenic nitrosamines",
+                "The natural casing melts into toxic plastic",
+                "The meat loses 100% of its nutritional value",
+                "The smoke flavor evaporates, turning it bitter"
+            ),
+            optionsDe = listOf(
+                "Das Nitritpökelsalz reagiert ab 130°C mit Fleischeiweiß zu krebserregenden Nitrosaminen",
+                "Der Naturdarm schmilzt zu giftigem Kunststoff",
+                "Das Fleisch verliert sofort seinen gesamten Nährwert",
+                "Der Rauchgeschmack verdampft und die Wurst wird bitter"
+            ),
+            correctIndex = 0,
+            explanationEn = "High heat causes curing nitrites to bind with secondary amines in meat, forming carcinogenic nitrosamines. Cured sausages belong strictly in 75-80°C hot water baths.",
+            explanationDe = "Bei starker Hitze (>130°C) reagieren Pökelnitrite mit sekundären Aminen des Fleisches zu krebserregenden Nitrosaminen. Gepökelte Würste gehören nur ins 75–80°C heiße Wasserbad!"
+        ),
+        QuizQuestion(
+            id = "q_meat_bratwurst_salt_02",
+            category = GastroCategory.MEAT_CUTS,
+            questionEn = "What makes fresh Thuringian bratwurst safe for open-fire grilling unlike scalded wieners?",
+            questionDe = "Was unterscheidet echte Thüringer Rostbratwurst von Brühwürsten bezüglich der Grilltauglichkeit?",
+            optionsEn = listOf(
+                "It is seasoned strictly with plain table salt (NaCl) and zero curing nitrites",
+                "It is boiled in vinegar before grilling",
+                "It possesses a heat-reflective outer membrane",
+                "It contains high Vitamin C that absorbs all heat"
+            ),
+            optionsDe = listOf(
+                "Sie enthält nur reines Speisesalz (NaCl) und kein Nitritpökelsalz",
+                "Sie wird vor dem Grillen in Essig gekocht",
+                "Sie hat eine hitzeabweisende Rinderschicht",
+                "Sie enthält Vitamin C, das Hitze absorbiert"
+            ),
+            correctIndex = 0,
+            explanationEn = "Uncured sausages use plain sodium chloride. Without nitrites, high-heat charcoal searing produces flavorful Maillard browning without nitrosamines.",
+            explanationDe = "Ungepökelte Bratwürste nutzen gewöhnliches Kochsalz. Ohne Nitrite entstehen beim Grillen über Holzkohle keine Nitrosamine, sondern nur aromatische Maillard-Krusten."
         )
     )
 }

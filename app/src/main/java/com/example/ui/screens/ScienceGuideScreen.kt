@@ -20,8 +20,13 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.BubbleChart
 import androidx.compose.material.icons.filled.Eco
 import androidx.compose.material.icons.filled.LocalDrink
+import androidx.compose.material.icons.filled.LocalFireDepartment
+import androidx.compose.material.icons.filled.Restaurant
 import androidx.compose.material.icons.filled.Science
+import androidx.compose.material.icons.filled.Security
+import androidx.compose.material.icons.filled.SetMeal
 import androidx.compose.material.icons.filled.Thermostat
+import androidx.compose.material.icons.filled.Warning
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.HorizontalDivider
@@ -291,6 +296,98 @@ fun ScienceGuideScreen(
                 BotanicalOriginItem(
                     plant = if (language == Language.DE) "Kartoffel & Weizen (Solanum / Triticum)" else "Potato & Wheat (Solanum / Triticum)",
                     yields = if (language == Language.DE) "Wodka, Korn, Neutralalkohol für Liköre" else "Vodka, Korn, Neutral spirit for liqueurs"
+                )
+            }
+        }
+
+        // SECTION 6: FOOD SAFETY & GRILLEN GEPOEKELTER WAREN (NITROSAMINE)
+        ScienceCard(
+            title = if (language == Language.DE) "6. Lebensmittelsicherheit: Grillen gepökelter & geräucherter Fleischwaren" else "6. Food Safety: Grilling Cured & Smoked Meats",
+            icon = Icons.Default.Warning
+        ) {
+            Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
+                ComparisonConcept(
+                    title = if (language == Language.DE) "⚠️ Krebserregende Nitrosamine: Warum Brüh- & Pökelwürste nicht auf den Grill gehören!" else "⚠️ Carcinogenic Nitrosamines: Why Cured Sausages Must Not Be Grilled",
+                    desc = if (language == Language.DE)
+                        "Gepökelte Fleischwaren (Kasseler, Wiener Würstchen, Bockwurst, Fleischkäse, Speck, geräucherter Schinken) enthalten Natriumnitrit (E250). Bei hohen Temperaturen (Grillrost, heiße Pfanne über 150°C) reagiert das Nitrit mit körpereigenen Aminosäuren zu krebserregenden Nitrosaminen (v.a. Dimethylnitrosamin).\n\n" +
+                        "• Faustregel für die Küche: Gepökelte Brühwürste ausschließlich im heißen Wasserbad (max. 80°C) ziehen lassen – niemals direkt auf offenes Feuer oder Grillstäbe legen!\n" +
+                        "• Für Grill & BBQ: Nur rohe, ungepökelte Grillwürste (z.B. Thüringer Rostbratwurst mit reinem Kochsalz) oder frisches Fleisch verwenden."
+                    else
+                        "Cured meats (cured pork loin, frankfurters, bockwurst, leberkäse, bacon, smoked ham) contain sodium nitrite (E250). Exposed to high dry heat (>150°C / grilling / searing), nitrites react with secondary meat amines forming highly carcinogenic nitrosamines.\n\n" +
+                        "• Kitchen Golden Rule: Gently steep cured sausages in water bath (<80°C) — never grill over direct open fire or charcoal!\n" +
+                        "• For Grills & BBQ: Exclusively grill uncured raw bratwurst preserved solely with pure table salt."
+                )
+
+                HorizontalDivider(color = MaterialTheme.colorScheme.outline.copy(alpha = 0.2f))
+
+                ComparisonConcept(
+                    title = if (language == Language.DE) "Rauchgase & PAK (Polyzyklische Aromatische Kohlenwasserstoffe)" else "Smoke & PAHs (Polycyclic Aromatic Hydrocarbons)",
+                    desc = if (language == Language.DE)
+                        "Tropft Fett oder Marinade direkt in die glühenden Kohlen, verbrennt es unvollständig und erzeugt giftigen, bläulichen Rauch reich an Benzo[a]pyren. Dieser Rauch schlägt sich direkt auf der Fleischoberfläche nieder. Verwende Grillschalen oder indirekte Grillzonen."
+                    else
+                        "Fat dripping onto hot coals pyrolyzes into polycyclic aromatic hydrocarbons (PAHs such as benzo[a]pyrene), rising back into the food via smoke. Always use drip trays or indirect heat zones."
+                )
+            }
+        }
+
+        // SECTION 7: HACCP & KREUZKONTAMINATION IN DER PROFIKÜCHE
+        ScienceCard(
+            title = if (language == Language.DE) "7. HACCP & Kreuzkontamination (Schneidbrett-System)" else "7. HACCP & Cross-Contamination (Color-Coded Boards)",
+            icon = Icons.Default.Security
+        ) {
+            Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
+                ComparisonConcept(
+                    title = if (language == Language.DE) "Strengste Trennung von Rohwaren: Gemüse vs. Geflügel vs. Fisch" else "Strict Separation: Raw Poultry vs. Fish vs. Vegetables",
+                    desc = if (language == Language.DE)
+                        "Kreuzkontamination entsteht, wenn Keime von rohen tierischen Produkten (Campylobacter auf Geflügel, Salmonellen auf Eiern/Schweinefleisch, Listerien oder Anisakis auf Fisch) auf verzehrfertige Lebensmittel wie Salat oder Obst übertragen werden.\n\n" +
+                        "Profi-Schneidebrett-Farbkodierung nach HACCP:\n" +
+                        "🔴 ROT: Rohes Fleisch (Rind, Schwein, Lamm)\n" +
+                        "🟡 GELB: Rohes Geflügel (Hähnchen, Pute – höchste Keimlast!)\n" +
+                        "🔵 BLAU: Roher Fisch & Meeresfrüchte\n" +
+                        "🟢 GRÜN: Gemüse, Obst & Salate\n" +
+                        "⚪ WEISS: Backwaren, Milchprodukte & Käse\n" +
+                        "🟤 BRAUN: Gegartes / gebratenes Fleisch"
+                    else
+                        "Cross-contamination occurs when pathogens from raw animal products (Campylobacter, Salmonella, Listeria) transfer onto ready-to-eat salads or fruit.\n\n" +
+                        "HACCP Color-Coded Cutting Board Standard:\n" +
+                        "🔴 RED: Raw red meat (beef, pork, lamb)\n" +
+                        "🟡 YELLOW: Raw poultry (highest bacterial risk!)\n" +
+                        "🔵 BLUE: Raw fish & seafood\n" +
+                        "🟢 GREEN: Produce, fruit & salads\n" +
+                        "⚪ WHITE: Bakery, cheese & dairy\n" +
+                        "🟤 BROWN: Cooked & carved meats"
+                )
+            }
+        }
+
+        // SECTION 8: KERNTEMPERATUREN & GARSTUFEN (ROH VS. DURCHGEGART)
+        ScienceCard(
+            title = if (language == Language.DE) "8. Garstufen & Mikrobiologie: Was darf roh gegessen werden?" else "8. Safe Cooking Temperatures: What Can Be Eaten Raw?",
+            icon = Icons.Default.LocalFireDepartment
+        ) {
+            Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
+                ComparisonConcept(
+                    title = if (language == Language.DE) "Verzehrsicherheit von Rohwaren" else "Microbiological Raw Safety Rules",
+                    desc = if (language == Language.DE)
+                        "• Rindfleisch (Steak, Carpaccio, Tatar): Keime sitzen nur auf der äußeren Schnittfläche. Daher kann ein Rindersteak innen blutig (Rare 48-52°C) oder rosa (Medium 56-58°C) gegessen werden, sobald die Außenfläche scharf angebraten ist. Tatar muss tagesfrisch zubereitet werden!\n" +
+                        "• Geflügel (Huhn, Pute, Ente): NIEMALS roh oder rosa verzehren! Geflügel muss ausnahmslos auf mindestens 74°C Kerntemperatur durchgegart werden, um Salmonellen & Campylobacter sicher abzutöten.\n" +
+                        "• Schweinefleisch: Früher wegen Trichinen zwingend durchgegart; heute in der EU kontrolliert. Hochwertiges Schweinefilet darf leicht zartrosa (60-65°C) serviert werden. Mett / Hackepeter unterliegt strengster Hackfleisch-Verordnung (Herstellung & Verkauf am selben Kalendertag bei max. 4°C).\n" +
+                        "• Fisch & Sushi: Rohverzehr (Lachs, Gelbflossenthunfisch) erfordert nach EU-Verordnung 853/2004 ein gesetzliches Schockfrosten bei mind. -20°C für mindestens 24 Stunden, um Fadenwurm-Parasiten (Anisakis) zuverlässig abzutöten. Wildfisch aus Flüssen oder Seen niemals roh essen!"
+                    else
+                        "• Beef (Steaks, Carpaccio, Tartare): Bacteria colonize only external cuts. A whole steak can be served rare (48-52°C) once exterior is seared. Fresh tartare must be prepared on day of consumption!\n" +
+                        "• Poultry (Chicken, Turkey): NEVER eaten raw or pink. Core temperature must reach min. 74°C to neutralize Campylobacter & Salmonella.\n" +
+                        "• Pork: High quality pork tenderloin can be served tender pink at 62-65°C. Raw minced pork (Mett) strictly governed by cold-chain laws (<4°C, sold on production day).\n" +
+                        "• Fish & Sushi: Under EU Regulation 853/2004, wild fish destined for raw eating must be blast-frozen at -20°C for at least 24 hours to eradicate Anisakis parasites."
+                )
+
+                HorizontalDivider(color = MaterialTheme.colorScheme.outline.copy(alpha = 0.2f))
+
+                ComparisonConcept(
+                    title = if (language == Language.DE) "Die mikrobiologische Temperaturzone (Gefahrenbereich)" else "The Bacterial Danger Zone",
+                    desc = if (language == Language.DE)
+                        "Zwischen +10°C und +60°C verdoppeln sich pathogene Keime alle 20 Minuten! Gekochte Speisen müssen entweder über 65°C heiß gehalten oder innerhalb von maximal 90 Minuten auf unter 10°C schockgekühlt werden."
+                    else
+                        "Between 10°C and 60°C, foodborne bacteria double exponentially every 20 minutes! Hot food must be held >65°C or blast-chilled to <10°C within 90 minutes."
                 )
             }
         }

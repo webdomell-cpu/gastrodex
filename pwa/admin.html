@@ -1302,7 +1302,7 @@
     // Export & Download JSON
     function downloadCatalogJson() {
       const payload = {
-        catalogVersion: 29,
+        catalogVersion: 35,
         updatedAt: new Date().toISOString(),
         itemCount: adminItems.length,
         categories: adminCategories,
@@ -1318,8 +1318,8 @@
 
     function generateVersionJson() {
       const payload = {
-        catalogVersion: 29,
-        versionName: "v2.9 Cloud Master Release",
+        catalogVersion: 35,
+        versionName: "v3.5 Cloud Master Release",
         releaseDate: new Date().toISOString().split('T')[0],
         itemCount: adminItems.length,
         serverEndpoint: "https://gastrodex-823d7.web.app/catalog_latest.json"
@@ -1334,7 +1334,7 @@
 
     function copyCatalogJson() {
       const payload = {
-        catalogVersion: 29,
+        catalogVersion: 35,
         updatedAt: new Date().toISOString(),
         itemCount: adminItems.length,
         categories: adminCategories,

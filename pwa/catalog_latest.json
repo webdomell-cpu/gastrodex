@@ -1,7 +1,7 @@
 {
-  "catalogVersion": 33,
-  "updatedAt": "2026-10-08T23:55:00.000Z",
-  "itemCount": 229,
+  "catalogVersion": 35,
+  "updatedAt": "2026-10-09T08:18:20.880Z",
+  "itemCount": 232,
   "categories": [
     {
       "id": "all",
@@ -8376,8 +8376,16 @@
       "faqEn": "What is the white residue? Overcooking forces liquid albumin protein to coagulate on the surface.",
       "guestFaqDe": "Warum tritt weißer Schaum aus? Bei zu starker Hitze denaturiert Albumin-Eiweiß und flockt aus.",
       "guestFaqEn": "What is the white residue? Overcooking forces liquid albumin protein to coagulate on the surface.",
-      "allergens": ["Fish"],
-      "tags": ["Salmon", "Lachs", "Seafood", "Omega3", "Standard"],
+      "allergens": [
+        "Fish"
+      ],
+      "tags": [
+        "Salmon",
+        "Lachs",
+        "Seafood",
+        "Omega3",
+        "Standard"
+      ],
       "inStock": true,
       "stockQuantity": 12,
       "storageLocation": "Fischkühlhaus F1",
@@ -8410,8 +8418,15 @@
       "faqEn": "Why salt crust? The crust hardens into a sealed chamber steaming the fish in natural juices.",
       "guestFaqDe": "Warum Salzkruste? Der feuchte Salzteig härtet aus und dämpft den Fisch luftdicht im eigenen Saft.",
       "guestFaqEn": "Why salt crust? The crust hardens into a sealed chamber steaming the fish in natural juices.",
-      "allergens": ["Fish"],
-      "tags": ["SeaBass", "LoupDeMer", "Branzino", "FineDining"],
+      "allergens": [
+        "Fish"
+      ],
+      "tags": [
+        "SeaBass",
+        "LoupDeMer",
+        "Branzino",
+        "FineDining"
+      ],
       "inStock": true,
       "stockQuantity": 10,
       "storageLocation": "Fischkühlhaus F1",
@@ -8444,8 +8459,16 @@
       "faqEn": "Why prized in the Gulf? Its firm steak-like texture holds together perfectly under fire.",
       "guestFaqDe": "Warum so beliebt in den VAE? Weil sein Fleisch weder auf dem Grillrost noch im Schmortopf zerfällt.",
       "guestFaqEn": "Why prized in the Gulf? Its firm steak-like texture holds together perfectly under fire.",
-      "allergens": ["Fish"],
-      "tags": ["Hamour", "Grouper", "ArabianGulf", "Dubai", "Machboos"],
+      "allergens": [
+        "Fish"
+      ],
+      "tags": [
+        "Hamour",
+        "Grouper",
+        "ArabianGulf",
+        "Dubai",
+        "Machboos"
+      ],
       "inStock": true,
       "stockQuantity": 8,
       "storageLocation": "Fischkühlhaus F1",
@@ -8478,8 +8501,16 @@
       "faqEn": "What is Skrei? Wild migrating Lofoten cod caught strictly during Arctic winter months.",
       "guestFaqDe": "Was ist Skrei? Der geschützte norwegische Winterkabeljau, der nur zwischen Januar und April gefischt wird.",
       "guestFaqEn": "What is Skrei? Wild migrating Lofoten cod caught strictly during Arctic winter months.",
-      "allergens": ["Fish"],
-      "tags": ["Cod", "Kabeljau", "Skrei", "Seafood", "Classic"],
+      "allergens": [
+        "Fish"
+      ],
+      "tags": [
+        "Cod",
+        "Kabeljau",
+        "Skrei",
+        "Seafood",
+        "Classic"
+      ],
       "inStock": true,
       "stockQuantity": 14,
       "storageLocation": "Fischkühlhaus F1",
@@ -8512,8 +8543,16 @@
       "faqEn": "Why serve rare? Lacking marbling, it turns chalky and dry when cooked through.",
       "guestFaqDe": "Darf Thunfisch durchgebraten werden? Nein, durchgebratener Thunfisch verliert seine Textur und schmeckt trocken.",
       "guestFaqEn": "Why serve rare? Lacking marbling, it turns chalky and dry when cooked through.",
-      "allergens": ["Fish"],
-      "tags": ["Tuna", "Thunfisch", "Sashimi", "Tataki", "Steak"],
+      "allergens": [
+        "Fish"
+      ],
+      "tags": [
+        "Tuna",
+        "Thunfisch",
+        "Sashimi",
+        "Tataki",
+        "Steak"
+      ],
       "inStock": true,
       "stockQuantity": 6,
       "storageLocation": "Fischkühlhaus F1",
@@ -8546,8 +8585,16 @@
       "faqEn": "Why desalt Akkawi? Desalting allows clean melting in sweet dessert pastries.",
       "guestFaqDe": "Warum vor dem Backen wässern? Um das Konservierungssalz zu entziehen, damit er süß und cremig zerfließt.",
       "guestFaqEn": "Why desalt Akkawi? Desalting allows clean melting in sweet dessert pastries.",
-      "allergens": ["Milk / Dairy"],
-      "tags": ["Akkawi", "Levant", "Knafeh", "BrineCheese", "ArabCuisine"],
+      "allergens": [
+        "Milk / Dairy"
+      ],
+      "tags": [
+        "Akkawi",
+        "Levant",
+        "Knafeh",
+        "BrineCheese",
+        "ArabCuisine"
+      ],
       "inStock": true,
       "stockQuantity": 12,
       "storageLocation": "Käsekeller C2",
@@ -8580,8 +8627,15 @@
       "faqEn": "Why squeaky? Rigid protein fibers slide with elastic friction against tooth enamel.",
       "guestFaqDe": "Warum quietscht Halloumi? Die hitzegehärteten Eiweißstränge reiben elastisch am Zahnschmelz.",
       "guestFaqEn": "Why squeaky? Rigid protein fibers slide with elastic friction against tooth enamel.",
-      "allergens": ["Milk / Dairy"],
-      "tags": ["Halloumi", "Cyprus", "GrillCheese", "PDO"],
+      "allergens": [
+        "Milk / Dairy"
+      ],
+      "tags": [
+        "Halloumi",
+        "Cyprus",
+        "GrillCheese",
+        "PDO"
+      ],
       "inStock": true,
       "stockQuantity": 15,
       "storageLocation": "Käsekeller C2",
@@ -8614,8 +8668,15 @@
       "faqEn": "What provides the flavor? Aromatic ground cherry kernels (mahlep) and nigella seeds.",
       "guestFaqDe": "Was erzeugt das Aroma? Mahlep (Steinweichselkerne) und ganzer Schwarzkümmel.",
       "guestFaqEn": "What provides the flavor? Aromatic ground cherry kernels (mahlep) and nigella seeds.",
-      "allergens": ["Milk / Dairy"],
-      "tags": ["Nabulsi", "Palestine", "Mahlep", "Mezze"],
+      "allergens": [
+        "Milk / Dairy"
+      ],
+      "tags": [
+        "Nabulsi",
+        "Palestine",
+        "Mahlep",
+        "Mezze"
+      ],
       "inStock": true,
       "stockQuantity": 9,
       "storageLocation": "Käsekeller C2",
@@ -8648,8 +8709,16 @@
       "faqEn": "How is it served? Mashed with fresh tomatoes and olive oil into a savory mezze spread.",
       "guestFaqDe": "Wie wird Shanklish gegessen? Immer zerbröselt als würziger Mezze-Salat mit frischem Gemüse.",
       "guestFaqEn": "How is it served? Mashed with fresh tomatoes and olive oil into a savory mezze spread.",
-      "allergens": ["Milk / Dairy"],
-      "tags": ["Shanklish", "AgedCheese", "Syria", "Lebanon", "Zaatar"],
+      "allergens": [
+        "Milk / Dairy"
+      ],
+      "tags": [
+        "Shanklish",
+        "AgedCheese",
+        "Syria",
+        "Lebanon",
+        "Zaatar"
+      ],
       "inStock": true,
       "stockQuantity": 8,
       "storageLocation": "Käsekeller C2",
@@ -8682,8 +8751,15 @@
       "faqEn": "What defines AOP? Made strictly from raw Normande cow milk ladled in 5 separate passes.",
       "guestFaqDe": "Woran erkennt man echte AOP? An unpasteurisierter Rohmilch und fünfschichtigem Kellen-Schöpfen.",
       "guestFaqEn": "What defines AOP? Made strictly from raw Normande cow milk ladled in 5 separate passes.",
-      "allergens": ["Milk / Dairy"],
-      "tags": ["Camembert", "Normandie", "AOP", "RawMilk"],
+      "allergens": [
+        "Milk / Dairy"
+      ],
+      "tags": [
+        "Camembert",
+        "Normandie",
+        "AOP",
+        "RawMilk"
+      ],
       "inStock": true,
       "stockQuantity": 10,
       "storageLocation": "Käsekeller C1",
@@ -8716,8 +8792,16 @@
       "faqEn": "Does it have holes? Authentic Swiss Le Gruyère AOP is blind and practically hole-free.",
       "guestFaqDe": "Hat Gruyère Löcher? Nein, echter Le Gruyère AOP ist dicht geschlossen und praktisch lochfrei.",
       "guestFaqEn": "Does it have holes? Authentic Swiss Le Gruyère AOP is blind and practically hole-free.",
-      "allergens": ["Milk / Dairy"],
-      "tags": ["Gruyere", "Switzerland", "AOP", "Fondue", "Alpine"],
+      "allergens": [
+        "Milk / Dairy"
+      ],
+      "tags": [
+        "Gruyere",
+        "Switzerland",
+        "AOP",
+        "Fondue",
+        "Alpine"
+      ],
       "inStock": true,
       "stockQuantity": 12,
       "storageLocation": "Käsekeller C1",
@@ -8751,7 +8835,13 @@
       "guestFaqDe": "Was bewirkt das Fettauge? Es schmilzt beim Garen und hält das Steak von innen saftig.",
       "guestFaqEn": "What is the fat eye? An intramuscular fat core that self-bastes the meat during cooking.",
       "allergens": [],
-      "tags": ["Ribeye", "Beef", "DryAged", "Steak", "BBQ"],
+      "tags": [
+        "Ribeye",
+        "Beef",
+        "DryAged",
+        "Steak",
+        "BBQ"
+      ],
       "inStock": true,
       "stockQuantity": 15,
       "storageLocation": "Fleischkühlung F1",
@@ -8785,7 +8875,12 @@
       "guestFaqDe": "Was bedeutet French Trimmed? Das saubere Freischaben der Rippenknochen von Fett und Sehnen.",
       "guestFaqEn": "What is French Trimmed? Rib bones scraped clean of connective tissue for elegant presentation.",
       "allergens": [],
-      "tags": ["Lamb", "Carre", "Lammkarree", "FineDining"],
+      "tags": [
+        "Lamb",
+        "Carre",
+        "Lammkarree",
+        "FineDining"
+      ],
       "inStock": true,
       "stockQuantity": 10,
       "storageLocation": "Fleischkühlung F2",
@@ -8819,7 +8914,12 @@
       "guestFaqDe": "Was bedeutet Suprême beim Geflügel? Brustfilet mit Haut und dem ersten geputzten Flügelknochen.",
       "guestFaqEn": "What is Suprême? Skin-on breast fillet with the first cleaned wing bone attached.",
       "allergens": [],
-      "tags": ["Chicken", "Poultry", "Supreme", "Cornfed"],
+      "tags": [
+        "Chicken",
+        "Poultry",
+        "Supreme",
+        "Cornfed"
+      ],
       "inStock": true,
       "stockQuantity": 15,
       "storageLocation": "Fleischkühlung F2",
@@ -8853,7 +8953,13 @@
       "guestFaqDe": "Darf Ibérico-Schwein rosa serviert werden? Ja, Spitzenqualitäten schmecken erst rosa saftig und butterweich.",
       "guestFaqEn": "Can pork be pink? Yes, certified free-range bellota cuts are safe and best enjoyed medium.",
       "allergens": [],
-      "tags": ["Iberico", "Pork", "Bellota", "Secreto", "BBQ"],
+      "tags": [
+        "Iberico",
+        "Pork",
+        "Bellota",
+        "Secreto",
+        "BBQ"
+      ],
       "inStock": true,
       "stockQuantity": 8,
       "storageLocation": "Fleischkühlung F2",
@@ -8887,7 +8993,12 @@
       "guestFaqDe": "Warum nicht ins Kochwasser? Weil sich die kostbare Knusperstruktur im Wasser wirkungslos auflöst.",
       "guestFaqEn": "Why never boil with it? Boiling water instantly dissolves the delicate crystal texture.",
       "allergens": [],
-      "tags": ["FleurDeSel", "Salt", "Guerande", "FinishingSalt"],
+      "tags": [
+        "FleurDeSel",
+        "Salt",
+        "Guerande",
+        "FinishingSalt"
+      ],
       "inStock": true,
       "stockQuantity": 20,
       "storageLocation": "Trockenlager T1",
@@ -8921,7 +9032,13 @@
       "guestFaqDe": "Warum kein Fertigpulver? Gemahlener Pfeffer verliert innerhalb von Tagen seine ätherischen Fruchtöle.",
       "guestFaqEn": "Why avoid pre-ground? Pre-ground loses volatile terpenes in days, leaving only flat heat.",
       "allergens": [],
-      "tags": ["Pepper", "Kampot", "Tellicherry", "Piperine", "SpiceKing"],
+      "tags": [
+        "Pepper",
+        "Kampot",
+        "Tellicherry",
+        "Piperine",
+        "SpiceKing"
+      ],
       "inStock": true,
       "stockQuantity": 15,
       "storageLocation": "Trockenlager T1",
@@ -8955,7 +9072,13 @@
       "guestFaqDe": "Warum Sumach statt Zitrone? Sumach säuert aromatisch, ohne die knusprige Grillkruste aufzuweichen.",
       "guestFaqEn": "Why sumac over lemon juice? Sumac provides fruit acidity without making grilled meat crusts soggy.",
       "allergens": [],
-      "tags": ["Sumac", "Levant", "Acidity", "Fattoush", "Mezze"],
+      "tags": [
+        "Sumac",
+        "Levant",
+        "Acidity",
+        "Fattoush",
+        "Mezze"
+      ],
       "inStock": true,
       "stockQuantity": 12,
       "storageLocation": "Trockenlager T1",
@@ -8988,8 +9111,16 @@
       "faqEn": "Can Bockwurst be fried? No, high pan or grill heat converts curing nitrites into toxic nitrosamines.",
       "guestFaqDe": "Darf man Bockwurst braten? Nein! Das enthaltene Nitritpökelsalz bildet bei starker Hitze schädliche Nitrosamine.",
       "guestFaqEn": "Can Bockwurst be fried? No, high pan or grill heat converts curing nitrites into toxic nitrosamines.",
-      "allergens": ["Mustard (in some spice blends)"],
-      "tags": ["Bockwurst", "Sausage", "Brühwurst", "Smoked", "NitrosamineScience"],
+      "allergens": [
+        "Mustard (in some spice blends)"
+      ],
+      "tags": [
+        "Bockwurst",
+        "Sausage",
+        "Brühwurst",
+        "Smoked",
+        "NitrosamineScience"
+      ],
       "inStock": true,
       "stockQuantity": 25,
       "storageLocation": "Kühlhaus W1",
@@ -9023,7 +9154,13 @@
       "guestFaqDe": "Was ist der Unterschied zu Wiener Würstchen? Frankfurter enthalten 100% Schweinefleisch; Wiener enthalten zusätzlich Rindfleisch.",
       "guestFaqEn": "Difference between Frankfurter and Wiener? Frankfurters are strictly 100% pork; Wieners contain added beef.",
       "allergens": [],
-      "tags": ["Frankfurter", "PDO", "Pork", "Sausage", "Classic"],
+      "tags": [
+        "Frankfurter",
+        "PDO",
+        "Pork",
+        "Sausage",
+        "Classic"
+      ],
       "inStock": true,
       "stockQuantity": 30,
       "storageLocation": "Kühlhaus W1",
@@ -9057,7 +9194,13 @@
       "guestFaqDe": "Warum platzen Wiener im Wasser? Wenn das Wasser kocht (100°C), dehnt sich der Wasserdampf im Inneren aus und sprengt den Naturdarm.",
       "guestFaqEn": "Why do wieners burst in boiling water? Steam expansion at 100°C tears the tender collagen casing.",
       "allergens": [],
-      "tags": ["Wiener", "ViennaSausage", "HotDog", "Beef", "Pork"],
+      "tags": [
+        "Wiener",
+        "ViennaSausage",
+        "HotDog",
+        "Beef",
+        "Pork"
+      ],
       "inStock": true,
       "stockQuantity": 30,
       "storageLocation": "Kühlhaus W1",
@@ -9090,8 +9233,16 @@
       "faqEn": "Why can this be grilled? It is uncured and free of nitrites, eliminating chemical nitrosamine formation.",
       "guestFaqDe": "Warum darf Thüringer Bratwurst gegrillt werden, Bockwurst aber nicht? Weil die Rostbratwurst ungepökelt ist und kein Nitrit enthält.",
       "guestFaqEn": "Why can this be grilled? It is uncured and free of nitrites, eliminating chemical nitrosamine formation.",
-      "allergens": ["Mustard (served with)"],
-      "tags": ["Bratwurst", "Thueringer", "PGI", "GrillSausage", "Uncured"],
+      "allergens": [
+        "Mustard (served with)"
+      ],
+      "tags": [
+        "Bratwurst",
+        "Thueringer",
+        "PGI",
+        "GrillSausage",
+        "Uncured"
+      ],
       "inStock": true,
       "stockQuantity": 20,
       "storageLocation": "Kühlhaus W2",
@@ -9125,7 +9276,13 @@
       "guestFaqDe": "Warum darf die Weißwurst das Zwölfläuten nicht hören? Historisch gab es keine Kühlung; das frische Kalbfleischbrät musste vormittags verzehrt werden.",
       "guestFaqEn": "Why eaten before noon? Historically invented before refrigeration, requiring same-morning consumption.",
       "allergens": [],
-      "tags": ["Weisswurst", "Bavaria", "Veal", "Pretzel", "Breakfast"],
+      "tags": [
+        "Weisswurst",
+        "Bavaria",
+        "Veal",
+        "Pretzel",
+        "Breakfast"
+      ],
       "inStock": true,
       "stockQuantity": 20,
       "storageLocation": "Kühlhaus W2",
@@ -9159,7 +9316,12 @@
       "guestFaqDe": "Enthält echte Rindswurst Schweinefleisch? Nein, echte Frankfurter Rindswurst besteht gesetzlich zu 100% aus Rindfleisch.",
       "guestFaqEn": "Does it contain pork? No, traditional Frankfurter Rindswurst is strictly 100% beef.",
       "allergens": [],
-      "tags": ["Rindswurst", "BeefSausage", "Frankfurt", "HalalFriendly"],
+      "tags": [
+        "Rindswurst",
+        "BeefSausage",
+        "Frankfurt",
+        "HalalFriendly"
+      ],
       "inStock": true,
       "stockQuantity": 15,
       "storageLocation": "Kühlhaus W1",
@@ -9193,7 +9355,13 @@
       "guestFaqDe": "Warum sind Geflügelwürstchen heller? Weil Geflügelfleisch weniger rotes Muskelfarbstoff-Myoglobin enthält als Rind oder Schwein.",
       "guestFaqEn": "Why are poultry sausages paler? Poultry muscle contains far less red myoglobin pigment.",
       "allergens": [],
-      "tags": ["Gefluegel", "Turkey", "Chicken", "PorkFree", "Diet"],
+      "tags": [
+        "Gefluegel",
+        "Turkey",
+        "Chicken",
+        "PorkFree",
+        "Diet"
+      ],
       "inStock": true,
       "stockQuantity": 20,
       "storageLocation": "Kühlhaus W1",
@@ -9227,7 +9395,14 @@
       "guestFaqDe": "Ist Merguez gepökelt? Nein! Echte Merguez ist eine frische Rohbratwurst ohne Pökelsalz und gehört auf den Grill.",
       "guestFaqEn": "Is Merguez cured? No, it is a fresh raw grilling sausage containing only natural spices and salt.",
       "allergens": [],
-      "tags": ["Merguez", "Lamb", "Spicy", "Harissa", "GrillSausage", "HalalFriendly"],
+      "tags": [
+        "Merguez",
+        "Lamb",
+        "Spicy",
+        "Harissa",
+        "GrillSausage",
+        "HalalFriendly"
+      ],
       "inStock": true,
       "stockQuantity": 15,
       "storageLocation": "Fleischkühlung F2",
@@ -9261,7 +9436,13 @@
       "guestFaqDe": "Mit oder ohne Darm? 'Ohne Darm' ist die klassische Berliner Ost-Variante (weiß vorgeformt); 'mit Darm' stammt aus West-Berlin.",
       "guestFaqEn": "Skinless or cased? Skinless is the traditional East Berlin variant; cased is favored in West Berlin.",
       "allergens": [],
-      "tags": ["Currywurst", "Berlin", "StreetFood", "Bratwurst", "GermanIcon"],
+      "tags": [
+        "Currywurst",
+        "Berlin",
+        "StreetFood",
+        "Bratwurst",
+        "GermanIcon"
+      ],
       "inStock": true,
       "stockQuantity": 30,
       "storageLocation": "Fleischkühlung F2",
@@ -9295,11 +9476,160 @@
       "guestFaqDe": "Warum sind Nürnberger so klein? Legende: Damit man sie nachts durch das Schlüsselloch der Stadtmauer an Reisende verkaufen konnte.",
       "guestFaqEn": "Why so small? Legend says they were sized to fit through city wall keyholes after curfews.",
       "allergens": [],
-      "tags": ["Nuernberger", "PGI", "Marjoram", "GrillSausage", "Fingerfood"],
+      "tags": [
+        "Nuernberger",
+        "PGI",
+        "Marjoram",
+        "GrillSausage",
+        "Fingerfood"
+      ],
       "inStock": true,
       "stockQuantity": 40,
       "storageLocation": "Fleischkühlung F2",
       "isFavorite": true
+    },
+    {
+      "id": "sausage_debrecziner",
+      "category": "charcuterie",
+      "nameDe": "Debrecziner (Würzige Paprikawürstchen)",
+      "nameEn": "Debrecener Sausage",
+      "subtitleDe": "Grobe, geräucherte Brühwurst mit reichlich ungarischem Paprika; pikant und saftig",
+      "subtitleEn": "Coarse smoked pork sausage heavily seasoned with Hungarian paprika and garlic",
+      "origin": "Ungarn (Debrecen) / Österreich",
+      "abv": "0.0% ABV",
+      "isImport": true,
+      "tasteDe": "Pikant-scharf, rauchig, deutliche Paprika- und Knoblauchnote, saftig-fettreich.",
+      "tasteEn": "Piquant, smoky, bold sweet and hot paprika, garlic warmth, juicy texture.",
+      "scienceDe": "Das grobe Brät bleibt auch nach langem Erwärmen saftig, da das Paprikapulver Fett bindet. Enthält Pökelsalz und wird warm im Wasserbad serviert.",
+      "scienceEn": "Coarse pork emulsion retains moisture as paprika stabilizes fat globules; cured with sodium nitrite.",
+      "culinaryDe": "Im Wasserbad erhitzt mit Kren (Meerrettich) und Senf oder in Gulaschsuppen mitgekocht.",
+      "culinaryEn": "Heated in hot water with grated horseradish or sliced into hearty goulash soups.",
+      "faqDe": "Sind Debrecziner scharf? Sie besitzen eine angenehme, pikante Paprikaschärfe, sind aber nicht brennend scharf.",
+      "faqEn": "Are they spicy? They have a warm, piquant paprika glow rather than scorching chili heat.",
+      "allergens": [],
+      "tags": [
+        "Debrecziner",
+        "Paprika",
+        "Hungary",
+        "Austria",
+        "Smoked",
+        "Sausage"
+      ],
+      "inStock": true,
+      "stockQuantity": 15,
+      "storageLocation": "Kühlhaus W1",
+      "isFavorite": false
+    },
+    {
+      "id": "sausage_knackwurst_harzer",
+      "category": "charcuterie",
+      "nameDe": "Knackwurst / Knacker",
+      "nameEn": "German Knackwurst",
+      "subtitleDe": "Kurze, dicke Brühwurst im Rinderkranzdarm, kräftig über Kaltrauch gereift",
+      "subtitleEn": "Short, plump scalded sausage in sturdy beef casing with distinctive audible snap",
+      "origin": "Deutschland (Harz / Thüringen)",
+      "abv": "0.0% ABV",
+      "isImport": false,
+      "tasteDe": "Sehr kräftiger Knack beim Hineinbeißen, intensiver Rauch, feine Kümmel- und Knoblauchnote.",
+      "tasteEn": "Loud audible snap, robust smoke, firm dense texture with caraway and garlic.",
+      "scienceDe": "Der dicke Rinderdarm sorgt für den typischen Knack-Laut beim Reinbeißen. Enthält Pökelsalz – daher nur im 75°C Wasserbad sieden.",
+      "scienceEn": "Thick beef runner casing creates the signature audible crunch when bitten. Cured; heat strictly in water.",
+      "culinaryDe": "Zu Grünkohl mit Pinkel, Linseneintopf oder kalt aus der Hand zur Vesper.",
+      "culinaryEn": "Served with braised kale, brown lentil stews, or cold as a hearty hiking snack.",
+      "faqDe": "Woher hat die Knackwurst ihren Namen? Vom laut vernehmbaren Knacken, wenn die straff gespannte Wursthaut zerbeißt.",
+      "faqEn": "Why is it called Knackwurst? From the German verb knacken, describing the loud snap when bitten into.",
+      "allergens": [],
+      "tags": [
+        "Knackwurst",
+        "Knacker",
+        "Smoked",
+        "Classic",
+        "GermanSausage"
+      ],
+      "inStock": true,
+      "stockQuantity": 20,
+      "storageLocation": "Kühlhaus W1",
+      "isFavorite": false
+    },
+    {
+      "id": "fish_safi_rabbitfish",
+      "category": "fish_seafood",
+      "nameDe": "Safi (Weißflecken-Kaninchenfisch)",
+      "nameEn": "Safi (White-Spotted Rabbitfish)",
+      "subtitleDe": "Beliebter kleiner Speisefisch der Golfregion; ganz knusprig frittiert mit Fladenbrot",
+      "subtitleEn": "Small coastal Gulf delicacy; traditionally deep-fried whole with local spices",
+      "origin": "Arabischer Golf (Siganus canaliculatus)",
+      "abv": "0.0% ABV",
+      "isImport": false,
+      "tasteDe": "Kräftig, aromatisch-maritim, nussig, krosse Haut, saftiges weißes Fleisch.",
+      "tasteEn": "Flavorful, distinct oceanic sweetness, crisp skin, tender delicate meat.",
+      "scienceDe": "Ernährt sich von marinen Algen im Flachwasser des Golfs, was ihm seinen charakteristischen würzigen Geschmack verleiht. Geringe Grätenanzahl.",
+      "scienceEn": "Herbivorous grazer feeding on shallow seagrass, producing distinct aromatic coastal savoriness.",
+      "culinaryDe": "Im Ganzen mit Kurkuma, Koriander und Mehl bestäubt knusprig frittiert; mit warmem Fladenbrot und Tahina.",
+      "culinaryEn": "Dusted with turmeric and flour, deep-fried whole until crisp, served with warm pita and tahini.",
+      "faqDe": "Wie wird Safi gegessen? Typischerweise im Ganzen frittiert mit den Fingern vom Knochen gezupft.",
+      "faqEn": "How is Safi eaten? Eaten whole as local comfort food, picking succulent meat off the bone.",
+      "allergens": [
+        "Fish"
+      ],
+      "tags": [
+        "Safi",
+        "Rabbitfish",
+        "Dubai",
+        "GulfSeafood",
+        "FriedFish",
+        "Seafood"
+      ],
+      "inStock": true,
+      "stockQuantity": 15,
+      "storageLocation": "Fischkühlung FI1",
+      "isFavorite": false
+    }
+  ],
+  "quiz_questions": [
+    {
+      "id": "q_meat_nitrosamine_01",
+      "category": "charcuterie",
+      "qDe": "Warum dürfen Bockwürste, Wiener oder Kasseler niemals scharf angebraten oder gegrillt werden?",
+      "qEn": "Why should cured sausages (Bockwurst, Wieners) never be grilled or fried at high heat?",
+      "optionsDe": [
+        "Das Nitritpökelsalz reagiert ab 130°C mit Fleischeiweiß zu krebserregenden Nitrosaminen",
+        "Der Naturdarm schmilzt zu giftigem Kunststoff",
+        "Das Fleisch verliert sofort seinen gesamten Nährwert",
+        "Der Rauchgeschmack verdampft und die Wurst wird bitter"
+      ],
+      "optionsEn": [
+        "Nitrite curing salt reacts with meat amines above 130°C to form carcinogenic nitrosamines",
+        "The natural casing melts into toxic plastic",
+        "The meat loses 100% of its nutritional value",
+        "The smoke flavor evaporates, turning it bitter"
+      ],
+      "correct": 0,
+      "correctIndex": 0,
+      "expDe": "Bei starker Hitze (>130°C) reagieren Pökelnitrite mit sekundären Aminen des Fleisches zu krebserregenden Nitrosaminen. Gepökelte Würste gehören nur ins 75–80°C heiße Wasserbad!",
+      "expEn": "High heat causes curing nitrites to bind with secondary amines in meat, forming carcinogenic nitrosamines. Cured sausages belong strictly in 75-80°C hot water baths."
+    },
+    {
+      "id": "q_meat_bratwurst_salt_02",
+      "category": "meat_cuts",
+      "qDe": "Was unterscheidet echte Thüringer Rostbratwurst von Brühwürsten bezüglich der Grilltauglichkeit?",
+      "qEn": "What makes fresh Thuringian bratwurst safe for open-fire grilling unlike scalded wieners?",
+      "optionsDe": [
+        "Sie enthält nur reines Speisesalz (NaCl) und kein Nitritpökelsalz",
+        "Sie wird vor dem Grillen in Essig gekocht",
+        "Sie hat eine hitzeabweisende Rinderschicht",
+        "Sie enthält Vitamin C, das Hitze absorbiert"
+      ],
+      "optionsEn": [
+        "It is seasoned strictly with plain table salt (NaCl) and zero curing nitrites",
+        "It is boiled in vinegar before grilling",
+        "It possesses a heat-reflective outer membrane",
+        "It contains high Vitamin C that absorbs all heat"
+      ],
+      "correct": 0,
+      "correctIndex": 0,
+      "expDe": "Ungepökelte Bratwürste nutzen gewöhnliches Kochsalz. Ohne Nitrite entstehen beim Grillen über Holzkohle keine Nitrosamine, sondern nur aromatische Maillard-Krusten.",
+      "expEn": "Uncured sausages use plain sodium chloride. Without nitrites, high-heat charcoal searing produces flavorful Maillard browning without nitrosamines."
     }
   ]
 }

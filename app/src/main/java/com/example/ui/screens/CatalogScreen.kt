@@ -45,6 +45,16 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import androidx.compose.foundation.clickable
+import androidx.compose.foundation.lazy.grid.GridCells
+import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
+import androidx.compose.foundation.lazy.grid.items
+import androidx.compose.material.icons.filled.GridView
+import androidx.compose.material3.AlertDialog
+import androidx.compose.material3.TextButton
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import com.example.model.GastroCategory
 import com.example.model.GastroItem
 import com.example.model.Language
@@ -52,6 +62,7 @@ import com.example.ui.GastroViewModel
 import com.example.ui.components.CategoryFilterRow
 import com.example.ui.components.GastroAdBanner
 import com.example.ui.components.GastroItemCard
+import com.example.ui.components.getCategoryIcon
 
 @Composable
 fun CatalogScreen(
@@ -69,6 +80,71 @@ fun CatalogScreen(
     val items by viewModel.filteredItems.collectAsStateWithLifecycle()
     val isPro by viewModel.isProUser.collectAsStateWithLifecycle()
     val customCount by viewModel.customItemsCount.collectAsStateWithLifecycle()
+    var showCategoryGridDialog by remember { mutableStateOf(false) }
+
+    if (showCategoryGridDialog) {
+        AlertDialog(
+            onDismissRequest = { showCategoryGridDialog = false },
+            title = {
+                Text(
+                    text = if (language == Language.DE) "Kategorie-Schnellauswahl (21)" else "Category Quick Select (21)",
+                    style = MaterialTheme.typography.titleMedium,
+                    fontWeight = FontWeight.Bold
+                )
+            },
+            text = {
+                LazyVerticalGrid(
+                    columns = GridCells.Fixed(2),
+                    horizontalArrangement = Arrangement.spacedBy(8.dp),
+                    verticalArrangement = Arrangement.spacedBy(8.dp),
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .height(380.dp)
+                ) {
+                    items(GastroCategory.entries) { cat ->
+                        val isSelected = cat == selectedCategory
+                        val title = if (language == Language.DE) cat.titleDe else cat.titleEn
+                        val icon = getCategoryIcon(cat)
+                        Surface(
+                            onClick = {
+                                viewModel.selectCategory(cat)
+                                showCategoryGridDialog = false
+                            },
+                            shape = RoundedCornerShape(10.dp),
+                            color = if (isSelected) MaterialTheme.colorScheme.primaryContainer else MaterialTheme.colorScheme.surfaceVariant,
+                            border = if (isSelected) androidx.compose.foundation.BorderStroke(2.dp, MaterialTheme.colorScheme.primary) else null,
+                            modifier = Modifier.fillMaxWidth()
+                        ) {
+                            Row(
+                                verticalAlignment = Alignment.CenterVertically,
+                                modifier = Modifier.padding(horizontal = 10.dp, vertical = 8.dp)
+                            ) {
+                                Icon(
+                                    imageVector = icon,
+                                    contentDescription = title,
+                                    tint = if (isSelected) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.onSurfaceVariant,
+                                    modifier = Modifier.size(18.dp)
+                                )
+                                Spacer(modifier = Modifier.width(8.dp))
+                                Text(
+                                    text = title,
+                                    style = MaterialTheme.typography.labelMedium,
+                                    fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Medium,
+                                    maxLines = 1,
+                                    color = if (isSelected) MaterialTheme.colorScheme.onPrimaryContainer else MaterialTheme.colorScheme.onSurface
+                                )
+                            }
+                        }
+                    }
+                }
+            },
+            confirmButton = {
+                TextButton(onClick = { showCategoryGridDialog = false }) {
+                    Text(if (language == Language.DE) "Schließen" else "Close")
+                }
+            }
+        )
+    }
 
     Box(modifier = modifier.fillMaxSize()) {
         Column(modifier = Modifier.fillMaxSize()) {
@@ -118,14 +194,47 @@ fun CatalogScreen(
                     .testTag("catalog_search_bar")
             )
 
-            // Category Chips Row
-            CategoryFilterRow(
-                categories = GastroCategory.entries,
-                selectedCategory = selectedCategory,
-                language = language,
-                onSelectCategory = { viewModel.selectCategory(it) },
-                modifier = Modifier.padding(horizontal = 16.dp, vertical = 2.dp)
-            )
+            // Category Chips Row with Quick Grid Button
+            Row(
+                verticalAlignment = Alignment.CenterVertically,
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = 16.dp, vertical = 2.dp)
+            ) {
+                Surface(
+                    onClick = { showCategoryGridDialog = true },
+                    shape = RoundedCornerShape(12.dp),
+                    color = MaterialTheme.colorScheme.secondaryContainer,
+                    modifier = Modifier.padding(end = 6.dp)
+                ) {
+                    Row(
+                        verticalAlignment = Alignment.CenterVertically,
+                        modifier = Modifier.padding(horizontal = 10.dp, vertical = 8.dp)
+                    ) {
+                        Icon(
+                            imageVector = Icons.Default.GridView,
+                            contentDescription = if (language == Language.DE) "Alle 21 Kategorien" else "All 21 Categories",
+                            tint = MaterialTheme.colorScheme.onSecondaryContainer,
+                            modifier = Modifier.size(18.dp)
+                        )
+                        Spacer(modifier = Modifier.width(4.dp))
+                        Text(
+                            text = if (language == Language.DE) "21 Kat." else "21 Cats",
+                            style = MaterialTheme.typography.labelSmall,
+                            fontWeight = FontWeight.Bold,
+                            color = MaterialTheme.colorScheme.onSecondaryContainer
+                        )
+                    }
+                }
+
+                CategoryFilterRow(
+                    categories = GastroCategory.entries,
+                    selectedCategory = selectedCategory,
+                    language = language,
+                    onSelectCategory = { viewModel.selectCategory(it) },
+                    modifier = Modifier.weight(1f)
+                )
+            }
 
             // Quick Toggle Filters (Favorites, Custom Cards, Origin)
             Row(

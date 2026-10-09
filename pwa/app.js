@@ -495,10 +495,64 @@ function renderCategoryChips() {
     chip.onclick = () => {
       activeCategory = cat.id;
       renderCategoryChips();
-  renderQuizCategoryButtons();
+      renderCategoryGrid();
+      renderQuizCategoryButtons();
       renderCatalog();
     };
     container.appendChild(chip);
+  });
+}
+
+function openCategoryGridModal() {
+  renderCategoryGrid();
+  const modal = document.getElementById('categoryGridModal');
+  if (modal) modal.classList.add('active');
+}
+
+function closeCategoryGridModal(e) {
+  if (e && e.target && e.target.id !== 'categoryGridModal' && !e.target.classList.contains('modal-close-btn') && !e.target.classList.contains('btn-primary')) {
+    return;
+  }
+  const modal = document.getElementById('categoryGridModal');
+  if (modal) modal.classList.remove('active');
+}
+
+function renderCategoryGrid() {
+  const container = document.getElementById('categoryGridContainer');
+  if (!container) return;
+  container.innerHTML = '';
+
+  CATEGORIES_LIST.forEach(cat => {
+    const isSelected = activeCategory === cat.id;
+    const item = document.createElement('div');
+    item.style.padding = '10px 8px';
+    item.style.borderRadius = '8px';
+    item.style.border = isSelected ? '2px solid var(--accent-gold)' : '1px solid var(--border-subtle)';
+    item.style.background = isSelected ? 'rgba(212, 175, 55, 0.15)' : 'var(--bg-surface)';
+    item.style.cursor = 'pointer';
+    item.style.textAlign = 'center';
+    item.style.transition = 'all 0.15s ease';
+
+    const count = cat.id === 'all' 
+      ? items.length 
+      : items.filter(it => it.category === cat.id).length;
+
+    const label = (currentLang === 'de') ? cat.titleDe : cat.titleEn;
+    item.innerHTML = `
+      <div style="font-size: 0.85rem; font-weight: ${isSelected ? '800' : '600'}; color: ${isSelected ? 'var(--accent-gold)' : 'var(--text-primary)'};">${label}</div>
+      <div style="font-size: 0.72rem; color: var(--text-muted); margin-top: 2px;">${count} Einträge</div>
+    `;
+
+    item.onclick = () => {
+      activeCategory = cat.id;
+      renderCategoryChips();
+      renderCategoryGrid();
+      renderQuizCategoryButtons();
+      renderCatalog();
+      closeCategoryGridModal();
+    };
+
+    container.appendChild(item);
   });
 }
 

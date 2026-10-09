@@ -20,18 +20,23 @@ import java.util.Date
 import java.util.Locale
 
 data class CatalogVersionInfo(
-    val version: Int = 25,
-    val versionName: String = "v2.5 (Firebase Cloud Live)",
-    val totalCuratedItems: Int = 89,
-    val lastCheckTimestamp: Long = System.currentTimeMillis() - 3600000L * 2,
+    val version: Int = 35,
+    val versionName: String = "v3.5 (Cloud Master Release)",
+    val totalCuratedItems: Int = 170,
+    val lastCheckTimestamp: Long = System.currentTimeMillis(),
     val serverEndpoint: String = "https://gastrodex-823d7.web.app/catalog_latest.json",
     val isAutoCheckEnabled: Boolean = true,
-    val lastStatusMessage: String = "Google Firebase Datenbank (gastrodex-823d7) angebunden"
+    val lastStatusMessage: String = "Google Firebase Datenbank (gastrodex-823d7) • v3.5 Master synchronisiert (170 Artikel, 21 Kategorien)"
 )
 
 class GastroSyncManager(private val repository: GastroRepository) {
 
-    private val _versionInfo = MutableStateFlow(CatalogVersionInfo())
+    private val _versionInfo = MutableStateFlow(
+        CatalogVersionInfo(
+            totalCuratedItems = CuratedGastroData.items.size,
+            lastStatusMessage = "Google Firebase Datenbank (gastrodex-823d7) • v3.5 Master synchronisiert (${CuratedGastroData.items.size} Artikel, 21 Kategorien)"
+        )
+    )
     val versionInfo: StateFlow<CatalogVersionInfo> = _versionInfo
 
     private val _isCheckingUpdate = MutableStateFlow(false)
@@ -46,7 +51,7 @@ class GastroSyncManager(private val repository: GastroRepository) {
         val targetUrl = customEndpoint ?: _versionInfo.value.serverEndpoint
 
         try {
-            // Simulated network check with graceful fallback to built-in fast check
+            // Check remote server for database updates
             val connection = (URL(targetUrl).openConnection() as? HttpURLConnection)?.apply {
                 connectTimeout = 4000
                 readTimeout = 4000
@@ -60,20 +65,33 @@ class GastroSyncManager(private val repository: GastroRepository) {
                 jsonContent = reader.use { it.readText() }
             }
 
-            // If remote URL is not reachable yet (e.g. during dev before bucket setup),
-            // we simulate a verified check against Google Firebase CDN
-            val currentV = _versionInfo.value.version
-            _versionInfo.value = _versionInfo.value.copy(
-                lastCheckTimestamp = System.currentTimeMillis(),
-                lastStatusMessage = "Server geprüft: Version v${currentV / 10}.${currentV % 10} ist aktuell"
-            )
+            if (jsonContent != null) {
+                val root = JSONObject(jsonContent)
+                val remoteVersion = root.optInt("catalogVersion", _versionInfo.value.version)
+                if (remoteVersion > _versionInfo.value.version) {
+                    applyCatalogJsonUpdate(jsonContent)
+                } else {
+                    val currentV = _versionInfo.value.version
+                    _versionInfo.value = _versionInfo.value.copy(
+                        lastCheckTimestamp = System.currentTimeMillis(),
+                        lastStatusMessage = "Server geprüft: Version v${currentV / 10}.${currentV % 10} ist aktuell (${CuratedGastroData.items.size} Artikel)"
+                    )
+                }
+            } else {
+                val currentV = _versionInfo.value.version
+                _versionInfo.value = _versionInfo.value.copy(
+                    lastCheckTimestamp = System.currentTimeMillis(),
+                    lastStatusMessage = "Server geprüft: Version v${currentV / 10}.${currentV % 10} ist aktuell (${CuratedGastroData.items.size} Artikel)"
+                )
+            }
             _isCheckingUpdate.value = false
             Result.success(0)
         } catch (e: Exception) {
             Log.w("GastroSyncManager", "Remote check offline or endpoint pending: ${e.message}")
+            val currentV = _versionInfo.value.version
             _versionInfo.value = _versionInfo.value.copy(
                 lastCheckTimestamp = System.currentTimeMillis(),
-                lastStatusMessage = "Offline-Modus aktiv: Lokale Datenbank v2.4 bereit"
+                lastStatusMessage = "Offline-Modus aktiv: Lokale Datenbank v${currentV / 10}.${currentV % 10} bereit (${CuratedGastroData.items.size} Artikel)"
             )
             _isCheckingUpdate.value = false
             Result.success(0)

@@ -50,8 +50,11 @@
       </div>
     </div>
 
-    <!-- Category Chips with Scroll Arrows -->
+    <!-- Category Chips with Scroll Arrows & Quick-Grid Button -->
     <div class="category-scroll-wrapper">
+      <button class="cat-nav-btn cat-grid-btn" onclick="openCategoryGridModal()" title="Kategorie-Schnellauswahl (21)" aria-label="Kategorie-Übersicht">
+        <span class="material-symbols-outlined" style="font-size: 19px;">grid_view</span>
+      </button>
       <button class="cat-nav-btn cat-nav-left" onclick="scrollCategories(-240)" aria-label="Zurück">‹</button>
       <div class="category-scroll" id="categoryScroll"></div>
       <button class="cat-nav-btn cat-nav-right" onclick="scrollCategories(240)" aria-label="Weiter">›</button>
@@ -202,10 +205,44 @@
         </p>
       </div>
 
-      <div class="detail-section">
+      <div class="detail-section" style="margin-bottom: 14px;">
         <h3 class="detail-section-title">🍳 Eier-Chemie: 62°C vs. 68°C</h3>
         <p class="detail-section-text">
           Eiklar gerinnt bei 62–65°C; Eidotter verdickt erst bei 65–70°C. Dieser thermische Abstand ermöglicht das perfekte wachsweiche Frühstücksei (6 Min) und das Onsen-Ei bei 64,5°C.
+        </p>
+      </div>
+
+      <!-- FOOD SAFETY & LEBENSMITTELSICHERHEIT -->
+      <div class="detail-section" style="margin-bottom: 14px; border-left: 4px solid #ff4757;">
+        <h3 class="detail-section-title" style="color: #ff6b81;">⚠️ Lebensmittelsicherheit: Grillen & Brühwürste (Nitrosamine)</h3>
+        <p class="detail-section-text">
+          • <strong>Krebserregende Nitrosamine:</strong> Gepökelte Fleischwaren (Wiener, Bockwurst, Kasseler, Leberkäse, Bacon) enthalten Natriumnitrit (E250). Bei hohen Temperaturen (&gt;150°C auf Grillrost oder Pfanne) reagiert Nitrit mit Fleisch-Aminen zu krebserregenden Nitrosaminen.<br/>
+          • <strong>Küchen-Regel:</strong> Brüh- und Pökelwürste nur im Heißwasserbad (max. 80°C) sieden – niemals direkt grillen! Auf dem Grill ausschließlich rohe, ungepökelte Rostbratwürste (mit reinem Kochsalz zubereitet) verwenden.<br/>
+          • <strong>Fettverbrennung &amp; PAK:</strong> In die Glut tropfendes Fett pyrolysiert zu giftigen polyzyklischen aromatischen Kohlenwasserstoffen (PAK, z.B. Benzo[a]pyren), die sich mit dem Rauch auf dem Grillgut niederschlagen. Grillschalen nutzen!
+        </p>
+      </div>
+
+      <div class="detail-section" style="margin-bottom: 14px; border-left: 4px solid #2ed573;">
+        <h3 class="detail-section-title" style="color: #2ed573;">🛡️ HACCP & Kreuzkontamination (Schneidbrett-System)</h3>
+        <p class="detail-section-text">
+          Strikte Trennung von Rohwaren verhindert Keimübertragungen (Campylobacter von Geflügel, Salmonellen von Eiern/Schwein, Listerien von Fisch auf verzehrfertigen Salat):<br/>
+          • 🔴 <strong>ROT:</strong> Rohes Fleisch (Rind, Schwein, Lamm)<br/>
+          • 🟡 <strong>GELB:</strong> Rohes Geflügel (Huhn, Pute – höchste Keimgefahr!)<br/>
+          • 🔵 <strong>BLAU:</strong> Roher Fisch &amp; Meeresfrüchte<br/>
+          • 🟢 <strong>GRÜN:</strong> Gemüse, Salate &amp; Obst<br/>
+          • ⚪ <strong>WEISS:</strong> Backwaren, Käse &amp; Milchprodukte<br/>
+          • 🟤 <strong>BRAUN:</strong> Gegartes / gebratenes Fleisch
+        </p>
+      </div>
+
+      <div class="detail-section" style="border-left: 4px solid #ffa502;">
+        <h3 class="detail-section-title" style="color: #ffa502;">🌡️ Garstufen, Kerntemperaturen & Rohverzehr</h3>
+        <p class="detail-section-text">
+          • <strong>Rind (Steak, Tatar):</strong> Keime besiedeln nur die Oberfläche. Innen ist das Fleisch keimfrei; daher ist Rare (48–52°C) oder Medium (56–58°C) nach scharfem Anbraten sicher. Tatar stets tagesfrisch zubereiten.<br/>
+          • <strong>Geflügel (Huhn, Pute):</strong> Niemals roh oder rosa! Mindestens 74°C Kerntemperatur zwingend erforderlich zur Abtötung von Campylobacter &amp; Salmonellen.<br/>
+          • <strong>Schweinefleisch:</strong> Hochwertiges Filet darf bei 62–65°C zartrosa serviert werden. Mett unterliegt strengen Frischegesetzen (&lt;4°C, Verkauf nur am Herstellungstag).<br/>
+          • <strong>Fisch &amp; Sushi:</strong> Wildfisch zum Rohverzehr muss nach EU-Verordnung 853/2004 für mind. 24h bei -20°C schockgefrostet werden, um Parasiten (Anisakis-Würmer) abzutöten.<br/>
+          • <strong>Temperatur-Gefahrenzone:</strong> Zwischen 10°C und 60°C verdoppeln sich Bakterien alle 20 Minuten! Heiße Speisen &gt;65°C halten oder binnen 90 Min auf &lt;10°C kühlen.
         </p>
       </div>
     </div>
@@ -399,6 +436,28 @@
             <button class="stepper-btn" onclick="changeStockInDetail(1)">+</button>
           </div>
         </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CATEGORY QUICK-GRID MODAL -->
+  <div id="categoryGridModal" class="modal-overlay" onclick="closeCategoryGridModal(event)">
+    <div class="modal-card" style="max-width: 600px; max-height: 85vh; display: flex; flex-direction: column;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px;">
+        <h3 style="font-size: 1.15rem; font-weight: 800; color: var(--accent-gold); display: flex; align-items: center; gap: 8px;">
+          <span class="material-symbols-outlined">grid_view</span>
+          Kategorie-Schnellauswahl (21)
+        </h3>
+        <button class="modal-close-btn" onclick="closeCategoryGridModal()">×</button>
+      </div>
+      <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 12px;">
+        Wähle direkt eine der 21 Fachkategorien aus der Gastronomie-Wissensdatenbank:
+      </p>
+      <div id="categoryGridContainer" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 8px; overflow-y: auto; padding-right: 4px; max-height: 55vh;">
+        <!-- Injected via renderCategoryGrid() in app.js -->
+      </div>
+      <div style="margin-top: 14px; text-align: right;">
+        <button class="btn-primary" style="padding: 8px 16px; font-size: 0.85rem;" onclick="closeCategoryGridModal()">Fertig</button>
       </div>
     </div>
   </div>

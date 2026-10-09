@@ -27,6 +27,7 @@ enum class GastroCategory(
     VEGETABLES("vegetables", "Vegetables & Mushrooms", "Gemüse & Speisepilze", "Yard", 0xFF588157),
     NUTS_SEEDS("nuts", "Nuts & Seeds", "Nüsse & Saaten", "Grain", 0xFFB08968),
     SPICES_HERBS("spices_herbs", "Spices & Herbs", "Gewürze & Kräuter", "Spa", 0xFFD97706),
+    FISH_SEAFOOD("fish_seafood", "Fish & Seafood", "Fisch & Meeresfrüchte", "SetMeal", 0xFF0077B6),
     OLIVES("olives", "Olives", "Oliven", "Eco", 0xFF4A7C59),
     OILS_VINEGARS("oils_vinegars", "Oils & Vinegars", "Öle & Essig", "Opacity", 0xFFE06D53),
     CHARCUTERIE_DELI("charcuterie", "Charcuterie & Cold Cuts", "Deli & Aufschnitt", "DinnerDining", 0xFF8D5B4C),
