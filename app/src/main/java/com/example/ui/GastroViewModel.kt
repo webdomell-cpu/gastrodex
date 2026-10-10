@@ -29,6 +29,7 @@ import java.util.Date
 import java.util.Locale
 
 enum class NavTab(val titleEn: String, val titleDe: String) {
+    HOME("Home", "Übersicht"),
     CATALOG("Encyclopedia", "Lexikon"),
     WINE_GUIDE("Wine Guide", "Wein-Guide"),
     COFFEE_LAB("Coffee Lab", "Kaffee-Labor"),
@@ -56,7 +57,7 @@ class GastroViewModel(
             Language.entries.find { it.code.equals(code, ignoreCase = true) }
         } ?: Language.DE
     )
-    val currentTab = MutableStateFlow(NavTab.CATALOG)
+    val currentTab = MutableStateFlow(NavTab.HOME)
     val showAdminInventory = MutableStateFlow(false)
     val showProfileScreen = MutableStateFlow(false)
     val showMonetizationDialog = MutableStateFlow(false)

@@ -174,9 +174,6 @@ const MASTER_ITEMS = [
       "Peat",
       "Distillate"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "alcoholProcess": "DISTILLATION",
     "tasteProfileDe": "Torfrauch, Jod, Heidehonig, Trockenfrüchte, kräftige Malzsüße, Eichenvanille.",
@@ -217,9 +214,6 @@ const MASTER_ITEMS = [
       "Oak",
       "Whiskey"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "alcoholProcess": "DISTILLATION",
     "tasteProfileDe": "Süßer Mais, Vanillin, Karamell, geröstetes Holz, Zimt und Gewürze.",
@@ -260,9 +254,6 @@ const MASTER_ITEMS = [
       "Grapes",
       "Digestif"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "alcoholProcess": "DISTILLATION",
     "tasteProfileDe": "Feine Traubennoten, Dörrpflaume, dunkle Schokolade, Eichenholz, milder samtiger Abgang.",
@@ -303,9 +294,6 @@ const MASTER_ITEMS = [
       "Nordic",
       "Digestif"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "alcoholProcess": "DISTILLATION",
     "tasteProfileDe": "Charakteristischer herber Kümmel, frischer Dill, Zitrusnoten, wärmende Kräuterwürze.",
@@ -346,9 +334,6 @@ const MASTER_ITEMS = [
       "Louche",
       "Aperitif"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "alcoholProcess": "DISTILLATION",
     "tasteProfileDe": "Süßliche Lakritznoten, erfrischende Aniskühle, Fenchel, wärmende Kräuterwürze.",
@@ -389,9 +374,6 @@ const MASTER_ITEMS = [
       "Suma",
       "Aperitif"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "alcoholProcess": "DISTILLATION",
     "tasteProfileDe": "Kräftig-würziger Anis, getrocknete Traubenfrucht, trockene Mineralik, markanter Körper.",
@@ -432,9 +414,6 @@ const MASTER_ITEMS = [
       "Distillate",
       "Cocktails"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "alcoholProcess": "DISTILLATION",
     "tasteProfileDe": "Frischer harziger Wacholder, lebhafte Zitrusnoten, würziger Koriander, trockener Abgang.",
@@ -474,9 +453,6 @@ const MASTER_ITEMS = [
       "Charcoal",
       "Distillate"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "alcoholProcess": "DISTILLATION",
     "tasteProfileDe": "Klar und neutral, dezente Getreidesüße oder cremige Textur (Kartoffel), samtig.",
@@ -516,9 +492,6 @@ const MASTER_ITEMS = [
       "Caribbean",
       "Tiki"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "alcoholProcess": "DISTILLATION",
     "tasteProfileDe": "Melasse, brauner Zucker, fruchtige Bananen-Ester (Hogo), Eichenvanille, Röstnoten.",
@@ -558,9 +531,6 @@ const MASTER_ITEMS = [
       "Mezcal",
       "Tequila"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "alcoholProcess": "DISTILLATION",
     "tasteProfileDe": "Gekochte Agavensüße, Zitruspfeffer, mineralisch-vegetabil, Lagerfeuer-Rauch (Mezcal).",
@@ -600,9 +570,6 @@ const MASTER_ITEMS = [
       "Perlage",
       "Wine"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "alcoholProcess": "FERMENTATION",
     "tasteProfileDe": "Champagner: Brioche, Hefegebäck, zarte Perlage. Deutscher Sekt: Rassig fruchtig. Asti: Süß, weiße Pfirsiche, Holunderblüte.",
@@ -643,9 +610,6 @@ const MASTER_ITEMS = [
       "Mosel",
       "Minerality"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "alcoholProcess": "FERMENTATION",
     "tasteProfileDe": "Grüner Apfel, Weinbergpfirsich, Limette, Schiefermineralik, im Alter edle Petrolnote (TDN).",
@@ -686,9 +650,6 @@ const MASTER_ITEMS = [
       "Oak",
       "Terroir"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "alcoholProcess": "FERMENTATION",
     "tasteProfileDe": "Sauvignon Blanc: Frisches Gras, Stachelbeere, Holunder. Chardonnay: Reife Birne, Butter, getoastete Haselnuss, Vanille.",
@@ -729,9 +690,6 @@ const MASTER_ITEMS = [
       "Tannins",
       "Burgundy"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "alcoholProcess": "FERMENTATION",
     "tasteProfileDe": "Spätburgunder: Sauerkirsche, Himbeere, Waldboden, seidig milde Tannine. Cabernet: Schwarze Johannisbeere (Cassis), Zeder, kräftiges Tannin.",
@@ -772,9 +730,6 @@ const MASTER_ITEMS = [
       "Saignee",
       "Wine"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "alcoholProcess": "FERMENTATION",
     "tasteProfileDe": "Frische Erdbeere, Wassermelone, Johannisbeere, mineralisch frisch, kräuterig-trocken.",
@@ -816,9 +771,6 @@ const MASTER_ITEMS = [
       "AOC",
       "Luxury"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "alcoholProcess": "FERMENTATION",
     "tasteProfileDe": "Grüner Apfel, warmes Brioche-Hefegebäck, Zitronenabrieb, nasser Kreidestein, seidenweiche Perlage.",
@@ -859,9 +811,6 @@ const MASTER_ITEMS = [
       "Italy",
       "Aperitivo"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "alcoholProcess": "FERMENTATION",
     "tasteProfileDe": "Weißer Pfirsich, grüner Apfel, Glyzinien- und Akazienblüten, erfrischend feinfruchtige Mousse.",
@@ -903,9 +852,6 @@ const MASTER_ITEMS = [
       "Barrique",
       "RedWine"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "alcoholProcess": "FERMENTATION",
     "tasteProfileDe": "Schwarze Johannisbeere (Cassis), Zedernholz, Zigarrenkiste, Grafit, samtig-kraftvolles Tannin.",
@@ -946,9 +892,6 @@ const MASTER_ITEMS = [
       "DOCG",
       "TruffleWine"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "alcoholProcess": "FERMENTATION",
     "tasteProfileDe": "Helles durchscheinendes Granatrot, getrocknete Rosenblätter, Teer, weißer Trüffel, Sauerkirsche, gigantisches Tannin.",
@@ -989,9 +932,6 @@ const MASTER_ITEMS = [
       "Tuscany",
       "DOCG"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "alcoholProcess": "FERMENTATION",
     "tasteProfileDe": "Knackige Sauerkirsche, getrockneter Oregano, warmer Waldboden, Veilchen, lebendige bekömmliche Weinsäure.",
@@ -1033,9 +973,6 @@ const MASTER_ITEMS = [
       "Malt",
       "British"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Kräftig, vollmundig malzig, lebendige herbe Frische, tief kupferrote Farbe, samtig mit Milch.",
     "tasteProfileEn": "Bold, rich maltiness, brisk astringency, deep amber liquor, smooth honey warmth with milk.",
@@ -1075,9 +1012,6 @@ const MASTER_ITEMS = [
       "AfternoonTea",
       "BlackTea"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Kräftig, malzig, zitrisch-herb durch Bergamotteöl; spritzige Eleganz, florale Kopfnote.",
     "tasteProfileEn": "Bright citrus freshness, aromatic floral lavender undertones, crisp dry tea finish.",
@@ -1117,9 +1051,6 @@ const MASTER_ITEMS = [
       "Umami",
       "Antioxidants"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Frisch, grasig, Meeresbrise, zarte vegetative Süße, feines Umami, belebend.",
     "tasteProfileEn": "Fresh cut spring grass, marine oceanic breeze, sweet vegetal umami, clean refreshing finish.",
@@ -1160,9 +1091,6 @@ const MASTER_ITEMS = [
       "Umami",
       "Chasen"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Intensiv pflanzlich, cremig, kräftiges Umami, samtig-smaragdgrüner Schaum, mild-herb.",
     "tasteProfileEn": "Thick, creamy, intense sweet chlorophyll, deep savory broth-like umami, velvety lingering sweetness.",
@@ -1203,9 +1131,6 @@ const MASTER_ITEMS = [
       "Floral",
       "DimSum"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Hoch aromatisch, betörend floral, weich, erfrischend süßlich ohne jede Bitternis.",
     "tasteProfileEn": "Intoxicating sweet jasmine perfume, honeyed floral elegance, crisp clean soothing green tea base.",
@@ -1246,9 +1171,6 @@ const MASTER_ITEMS = [
       "Delicate",
       "Antioxidants"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Zart, samtig, Noten von weißem Pfirsich und Pfingstrose, feine Heunote, minimale Bitterkeit, süßlicher Nachhall.",
     "tasteProfileEn": "Delicate floral peony sweetness, subtle white peach, fresh hay, velvety soft mouthfeel, zero astringency.",
@@ -1289,9 +1211,6 @@ const MASTER_ITEMS = [
       "Orchid",
       "China"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Röstig, nussig, warme Orchideenblüte, getrocknete Aprikose, samtiger Körper, mineralisch.",
     "tasteProfileEn": "Roasted charcoal warmth, toasted hazelnut, delicate sweet orchid aroma, ripe peach, mineral wet-stone finish.",
@@ -1332,9 +1251,6 @@ const MASTER_ITEMS = [
       "Vanilla",
       "HerbalInfusion"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Natürlich süß, warm holzig, feine Vanille- und Karamellnote, erdig, vollkommen frei von Bitternis.",
     "tasteProfileEn": "Natural honeyed sweetness, warm woody vanilla, earthy caramel, zero bitter tannins, soothing smooth finish.",
@@ -1375,9 +1291,6 @@ const MASTER_ITEMS = [
       "Digestive",
       "HerbalTea"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Kühlend, intensiv mentholig, kräuterig-frisch, belebend, reinigend auf Gaumen und Atem.",
     "tasteProfileEn": "Instant crisp cold rush from menthol, clean herbal sweetness, peppery warmth, intensely refreshing finish.",
@@ -1418,9 +1331,6 @@ const MASTER_ITEMS = [
       "PGI",
       "GourmetTea"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "First Flush: Zart blumig, spritzig, grüner Pfirsich. Second Flush: Vollmundig, reife Muskatellertraube, nussig.",
     "tasteProfileEn": "First Flush: Floral, brisk, spring green grape, peach. Second Flush: Warm amber, ripe muscatel grape, nutty finish.",
@@ -1459,9 +1369,6 @@ const MASTER_ITEMS = [
       "CO2",
       "Minerals"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Frisches Prickeln, belebende Säurespitze, mineralische Klarheit.",
     "tasteProfileEn": "Crisp effervescence, clean mineral balance (calcium, magnesium, bicarbonate).",
@@ -1500,9 +1407,6 @@ const MASTER_ITEMS = [
       "Phosphoric",
       "SoftDrink"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Karamell- und Vanillenoten, würziger Kräuterhintergrund, herber Säurebiss.",
     "tasteProfileEn": "Sweet vanilla-caramel, spicy herbal undertone, sharp phosphoric bite.",
@@ -1540,9 +1444,6 @@ const MASTER_ITEMS = [
       "Mixer",
       "Fluorescence"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Markant bittere Chininnote, balancierte Süße, frische Zitrusanklänge.",
     "tasteProfileEn": "Distinct quinine bitterness, balanced crisp sweetness, lemon-citrus freshness.",
@@ -1581,9 +1482,6 @@ const MASTER_ITEMS = [
       "Quinine",
       "Mixer"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Säuerlich-frische Zitrone, herb-ätherische Schalenöle, trockener Chinin-Nachhall.",
     "tasteProfileEn": "Tart sour citrus, aromatic lemon essential oils, clean dry bitter finish.",
@@ -1622,9 +1520,6 @@ const MASTER_ITEMS = [
       "MoscowMule",
       "SoftDrink"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Ginger Ale: Mild, süffig. Ginger Beer: Kräftig scharf, naturtrüb, feuriger Ingwerbiss.",
     "tasteProfileEn": "Ginger Ale: Mild sweet, gentle warmth. Ginger Beer: Fiery ginger spice, cloudy, peppery bite.",
@@ -1661,9 +1556,6 @@ const MASTER_ITEMS = [
       "Taurine",
       "Stimulant"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Süß-säuerlich, Gummibärchen-Aroma, markante Zitrusfrische.",
     "tasteProfileEn": "Sweet candy-tart profile, gummy bear aroma, citric acidity.",
@@ -1702,9 +1594,6 @@ const MASTER_ITEMS = [
       "Crema",
       "Italian"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "coffeeLayers": {
       "espresso": 1,
@@ -1748,9 +1637,6 @@ const MASTER_ITEMS = [
       "Microfoam",
       "Milk"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "coffeeLayers": {
       "espresso": 0.33,
@@ -1794,9 +1680,6 @@ const MASTER_ITEMS = [
       "Layered",
       "Milk"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "coffeeLayers": {
       "espresso": 0.2,
@@ -1842,9 +1725,6 @@ const MASTER_ITEMS = [
       "Cardamom",
       "Coffee"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "coffeeLayers": {
       "espresso": 0.85,
@@ -1891,9 +1771,6 @@ const MASTER_ITEMS = [
       "CondensedMilk",
       "IcedCoffee"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "coffeeLayers": {
       "espresso": 0.5,
@@ -1938,9 +1815,6 @@ const MASTER_ITEMS = [
       "Italian",
       "Barista"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "coffeeLayers": {
       "espresso": 1,
@@ -1986,9 +1860,6 @@ const MASTER_ITEMS = [
       "Italian",
       "Barista"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "coffeeLayers": {
       "espresso": 0.8,
@@ -2033,9 +1904,6 @@ const MASTER_ITEMS = [
       "Concentrated",
       "ShortShot"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "coffeeLayers": {
       "espresso": 1,
@@ -2079,9 +1947,6 @@ const MASTER_ITEMS = [
       "AlDente",
       "Italian"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Perfekter federnder Biss (Al dente), nussiger Getreidegeschmack, verbindet sich homogen mit Öl und Emulsionen.",
     "tasteProfileEn": "Firm chewy bite (al dente), nutty toasted wheat grain flavor, holds emulsion perfectly.",
@@ -2120,9 +1985,6 @@ const MASTER_ITEMS = [
       "Ragu",
       "Italian"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Intensiv eifrisch, samtig-weicher Biss, poröse Oberfläche saugt dickflüssige Saucen auf.",
     "tasteProfileEn": "Rich eggy tenderness, delicate toothsome chew, velvety coating, porous meat absorption.",
@@ -2160,9 +2022,6 @@ const MASTER_ITEMS = [
       "ShortPasta",
       "Italian"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Fester Biss, Röhre füllt sich mit Sauce, Außenseite hält Emulsion fest.",
     "tasteProfileEn": "Sturdy al dente resistance, hollow center holds pieces of garlic, chili, and tomato pulp.",
@@ -2200,9 +2059,6 @@ const MASTER_ITEMS = [
       "Amatriciana",
       "Gricia"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Kräftiger herzhafter Biss, dicke Wandung bleibt perfekt al dente, fängt Fleischwürfel auf.",
     "tasteProfileEn": "Substantial hearty chew, dense wheat presence, captures large chunks of guanciale, sausage, and cheese.",
@@ -2240,9 +2096,6 @@ const MASTER_ITEMS = [
       "PastaSalad",
       "Spirals"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Federnder Biss, die Spiralwindungen fangen Kräutersaucen und Pinienkerne wie kleine Schaufeln auf.",
     "tasteProfileEn": "Playful springy mouthfeel, corkscrew traps fine purees, minced herbs, and pine nuts in every turn.",
@@ -2280,9 +2133,6 @@ const MASTER_ITEMS = [
       "CimeDiRapa",
       "ArtisanPasta"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Zwei Texturen in einem Bissen: Kräftiger Biss am Rand, zart-schmelzende Schalenmitte, fängt Bittergemüse auf.",
     "tasteProfileEn": "Dual texture: toothsome chewy thick rim contrasting with a silky tender concave cup center.",
@@ -2321,9 +2171,6 @@ const MASTER_ITEMS = [
       "InBrodo",
       "Bologna"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Zarte Hülle mit Biss, gefolgt von einer saftigen, cremigen Füllung; aromatische Butternote mit Salbei.",
     "tasteProfileEn": "Silky toothsome pasta wrapper yielding to a rich, molten, savory or sweet-nutty core.",
@@ -2364,9 +2211,6 @@ const MASTER_ITEMS = [
       "FragrantRice",
       "GlutenFree"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Fein nussiges Popcorn-Aroma, florale Duftnote, federleicht, bleibt perfekt körnig.",
     "tasteProfileEn": "Delicate roasted popcorn nuttiness, floral aroma, light fluffy separate grains.",
@@ -2407,9 +2251,6 @@ const MASTER_ITEMS = [
       "Curry",
       "GlutenFree"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Zarte florale Pandan- und Vanillenoten, feucht-weicher Schmelz, zarter angenehmer Zusammenhalt.",
     "tasteProfileEn": "Sweet floral pandan notes, moist tender texture, delicate comforting softness.",
@@ -2450,9 +2291,6 @@ const MASTER_ITEMS = [
       "AllOnda",
       "Mantecatura"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Cremig, samtig-schlotzig mit vollem Schmelz, umhüllt einen perfekt bissfesten Kern (Al dente).",
     "tasteProfileEn": "Velvety, rich, creamy suspension holding broth, wine and parmesan around a toothsome al dente center.",
@@ -2493,9 +2331,6 @@ const MASTER_ITEMS = [
       "Nigiri",
       "Japan"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Zarte Süße, feinsäuerlich-frischer Essighauch, glänzend, klebend mit spürbarem Einzelkorn.",
     "tasteProfileEn": "Sweet subtle grain, clean rice vinegar tang, glossy, sticky yet firm individual kernels that melt in the mouth.",
@@ -2536,9 +2371,6 @@ const MASTER_ITEMS = [
       "Piedmont",
       "SeafoodPairing"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Kräftig nussig, Noten von frisch gebackenem Brot und gerösteter Walnuss, fester elastischer Biss.",
     "tasteProfileEn": "Earthy, intense toasted walnut, freshly baked sourdough crust, firm chewy whole-grain al dente texture.",
@@ -2579,9 +2411,6 @@ const MASTER_ITEMS = [
       "HighProtein",
       "Autumn"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Knackiger Biss, erdig, rauchige Holznote, herber Teegeschmack, kernig und nussig.",
     "tasteProfileEn": "Crunchy pop, smoky toasted wood, wild mushroom, black tea undertone, robust vegetal earthiness.",
@@ -2621,9 +2450,6 @@ const MASTER_ITEMS = [
       "Vitamins",
       "CookingScience"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Fester gleichmäßiger Biss, neutraler Reisgeschmack, absolut klebefrei und bissfest.",
     "tasteProfileEn": "Firm, uniform al dente bite, neutral clean grain flavor, zero stickiness.",
@@ -2663,9 +2489,6 @@ const MASTER_ITEMS = [
       "Burger",
       "Condiments"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Süß-säuerlich, umamireich, glatt-viskos, fruchtige Tomatentiefe, feine Nelkenwürze.",
     "tasteProfileEn": "Sweet-tangy equilibrium, deep concentrated sun-dried tomato depth, warm clove spice, savory umami finish.",
@@ -2705,9 +2528,6 @@ const MASTER_ITEMS = [
       "FrenchCuisine",
       "Emulsion"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Scharf, stechend in der Nase, säurebetont, feinherb, ungesüßt, seidig-cremig.",
     "tasteProfileEn": "Piercing nasal heat, clean pungent sharpness, dry white wine acidity, smooth fine texture, zero sugar.",
@@ -2747,9 +2567,6 @@ const MASTER_ITEMS = [
       "Develey",
       "Wholegrain"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Süß-würzig mit kernigem Texturbiss, Malz- und Karamellschmelz, milde Würze ohne stechende Schärfe.",
     "tasteProfileEn": "Malty caramel sweetness, pleasant rustic seed pop, mellow mustard warmth without nasal burn.",
@@ -2789,9 +2606,6 @@ const MASTER_ITEMS = [
       "Lecithin",
       "Umami"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Fettreich, seidig, cremig, mild-säuerlich; Kewpie schmeckt deutlich eireicher und intensiver umami.",
     "tasteProfileEn": "Rich, unctuous, silky, creamy, mild acidity; Kewpie has intense egg-rich savoriness and umami depth.",
@@ -2831,9 +2645,6 @@ const MASTER_ITEMS = [
       "Louisiana",
       "BloodyMary"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Essigscharf, dünnflüssig, fermentierte pikante Säure, stechender Capsaicin-Kick, feine Holznote.",
     "tasteProfileEn": "Sharp vinegar tang, pungent chili burn (2,500-5,000 Scoville), fermented oak wood depth, clean piercing finish.",
@@ -2873,9 +2684,6 @@ const MASTER_ITEMS = [
       "SpicyMayo",
       "AsianStreetFood"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Mittelscharf, süßlich-knoblauchig, dickflüssig, ausgewogene Säure, haftet perfekt an Speisen.",
     "tasteProfileEn": "Sweet upfront, pungent roasted garlic, medium chili glow (1,000-2,500 Scoville), thick clingy texture.",
@@ -2914,9 +2722,6 @@ const MASTER_ITEMS = [
       "Ribs",
       "PulledPork"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Rauchig, dickflüssig, tief-süß, dunkles Karamell, balancierte Essigsäure, würziger Abgang.",
     "tasteProfileEn": "Deep hickory smoke, caramelized molasses sweetness, tangy vinegar bite, thick glossy lacquered texture.",
@@ -2957,9 +2762,6 @@ const MASTER_ITEMS = [
       "Tacos",
       "Molcajete"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Frisch, säuerlich, pikant, stückig; Roja mit Rauchnote, Verde mit spritziger Tomatillo-Fruchtsäure.",
     "tasteProfileEn": "Roja: Smoky char, sweet roasted tomato, warming chili heat. Verde: Tart, citrusy, herbaceous, vibrant fresh acidity.",
@@ -2999,9 +2801,6 @@ const MASTER_ITEMS = [
       "Dijon",
       "Emulsion"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Hell, säurebetont, emulgiert, pikant, fruchtiges Öl und Schalottenfrische.",
     "tasteProfileEn": "Zesty, bright, peppery, harmonious acid punch tempered by fruity oil and mustard warmth.",
@@ -3041,9 +2840,6 @@ const MASTER_ITEMS = [
       "Mediterranean",
       "Salad"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Krautig, spritzig, leicht ölig, pikante Knoblauchnote, aromatischer Oregano und frische Zitrone.",
     "tasteProfileEn": "Herbaceous, punchy garlic aroma, zesty red wine vinegar bite, fruity olive oil richness, sun-drenched Mediterranean finish.",
@@ -3083,9 +2879,6 @@ const MASTER_ITEMS = [
       "Umami",
       "SaladDressing"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Salzig-cremig, starkes Umami, nussig, dicht, Knoblauchschärfe und feine Sardellenwürze.",
     "tasteProfileEn": "Bold, savory umami explosion, garlic warmth, salty brine from anchovies, nutty aged cheese richness, thick creamy cling.",
@@ -3125,9 +2918,6 @@ const MASTER_ITEMS = [
       "Dill",
       "LowCalorie"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Milchsauer, frisch, kühlend, leicht, aromatische Gartenkräuter (Dill, Petersilie, Schnittlauch).",
     "tasteProfileEn": "Lactic tang, cooling creamy freshness, vibrant garden herbs, gentle garlic hum, refreshing light body.",
@@ -3167,9 +2957,6 @@ const MASTER_ITEMS = [
       "PrawnCocktail",
       "Buffet"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Süßlich, mild-cremig, orangerot, samtig auf der Zunge, milde Säure mit fruchtiger Paprika.",
     "tasteProfileEn": "Sweet and mellow, creamy mild tang, savory tomato warmth, velvety orange-red emulsion.",
@@ -3209,9 +2996,6 @@ const MASTER_ITEMS = [
       "SmokedSalmon",
       "SweetSpicy"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Ausbalanciert süß-scharf, bindend, samtige Konsistenz, fruchtige Honigsüße trifft pikanten Senfbiss.",
     "tasteProfileEn": "Sweet floral honey upfront, sharp pungent mustard warmth, clean cider vinegar tang, rich emulsified texture.",
@@ -3252,9 +3036,6 @@ const MASTER_ITEMS = [
       "FrenchCuisine",
       "Escoffier"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Samtig, cremig-schmelzend, vollmundige Butternote mit feiner Säure-Frische von Zitrone und Weißwein.",
     "tasteProfileEn": "Luxuriously velvety, rich dairy butteriness, bright lemony acidity, warm comforting froth.",
@@ -3294,9 +3075,6 @@ const MASTER_ITEMS = [
       "Chateaubriand",
       "FrenchCuisine"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Charakteristische herbe Anisnote durch Estragon, reichhaltiger Butterschmelz, pikante Essigfrische und Kerbelaroma.",
     "tasteProfileEn": "Herbaceous anise warmth from fresh tarragon, rich buttery body, bright wine vinegar acidity, peppery aroma.",
@@ -3334,9 +3112,6 @@ const MASTER_ITEMS = [
       "Regional",
       "Fruit"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Süß-aromatischer Duft, ausgewogene Fruchtsäure (Zitronen- und Äpfelsäure), saftig-frisch.",
     "tasteProfileEn": "Sweet aromatic floral fragrance, crisp balance of citric and malic acids, juicy texture.",
@@ -3376,9 +3151,6 @@ const MASTER_ITEMS = [
       "Regional",
       "Fruit"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Intensiv aromatisch, beerig-blumig, samtige Säure, schmilzt auf der Zunge.",
     "tasteProfileEn": "Intensely aromatic, floral perfume, delicate velvety tartness, melt-in-mouth.",
@@ -3418,9 +3190,6 @@ const MASTER_ITEMS = [
       "Antioxidant",
       "Berries"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Wild: Intensiv waldig-süß, färbt Zunge blau. Kultur: Knackig fest, mild süß, sauberes weißes Fleisch.",
     "tasteProfileEn": "Wild: Deep woodland sweetness, tart, stains mouth violet. Cultivated: Mild, firm, crisp, subtle sweet.",
@@ -3458,9 +3227,6 @@ const MASTER_ITEMS = [
       "Import",
       "Exotic"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Üppig honigsüß, feine harzige Kiefernnote, Aprikose, buttrig-schmelzendes Fruchtfleisch.",
     "tasteProfileEn": "Lush tropical honey sweetness, resinous pine notes, peach-citrus undertone, melting texture.",
@@ -3500,9 +3266,6 @@ const MASTER_ITEMS = [
       "Import",
       "Fruit"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Milde Süße, Anklänge an Kiwi und Melone, erfrischend saftig und knackig.",
     "tasteProfileEn": "Subtle sweetness, kiwi-pear blend, watery refreshing crunch.",
@@ -3541,9 +3304,6 @@ const MASTER_ITEMS = [
       "Tropical",
       "Import"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Fein blumig, edle Harmonie aus Litschi, Pfirsich und milder Zitrusnote.",
     "tasteProfileEn": "Floral, delicate balance of sweet lychee, peach, strawberry, and citrus.",
@@ -3583,9 +3343,6 @@ const MASTER_ITEMS = [
       "KitchenBasics",
       "Regional"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Erdig, nussig, dezente Süße, Textur von schnittfest-feucht bis locker-mehlig.",
     "tasteProfileEn": "Earthy, nutty, sweet starch umami, distinct mouthfeel texture depending on type.",
@@ -3625,9 +3382,6 @@ const MASTER_ITEMS = [
       "Luxury",
       "Fungus"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Betörendes Knoblauch-Schalotten-Aroma, gereifter Parmesan, Waldhonig, pure Dekadenz.",
     "tasteProfileEn": "Intoxicating garlic-shallot perfume, aged cheese, wild honey, delicate earthy decadence.",
@@ -3667,9 +3421,6 @@ const MASTER_ITEMS = [
       "Forest",
       "Umami"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Steinpilz: Nussig, feines Waldaroma, fleischige Textur. Pfifferling: Pfeffrig-würzig mit feiner Aprikosennote.",
     "tasteProfileEn": "Porcini: Deep forest hazelnut, meaty texture, intense umami. Chanterelle: Peppery apricot aroma, firm bite.",
@@ -3708,9 +3459,6 @@ const MASTER_ITEMS = [
       "Regional",
       "Spring"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Weiß: Zart, mild, feine Bitternote. Grün: Knackig, nussig, kräuterig-herzhaft.",
     "tasteProfileEn": "White: Tender, mild bittersweet. Green: Grassy, nutty, robust pea-like flavor.",
@@ -3748,9 +3496,6 @@ const MASTER_ITEMS = [
       "DOP",
       "Nuts"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Süß-würzig, intensiv harzig, smaragdgrün, mineralischer Schmelz.",
     "tasteProfileEn": "Intensely aromatic, resinous sweetness, vibrant emerald color, sweet mineral crunch.",
@@ -3787,9 +3532,6 @@ const MASTER_ITEMS = [
       "Tapas",
       "Nuts"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Butterweich, feine natürliche Süße, zarter Biss, nussiger Schmelz.",
     "tasteProfileEn": "Buttery, sweet almond flavor, delicate tender crunch, velvety oil finish.",
@@ -3827,9 +3569,6 @@ const MASTER_ITEMS = [
       "Nuts",
       "CheesePairing"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Intensiv nussig, erdig, buttriger Kern mit feinherbem Gerbstoff-Abgang durch die Samenhaut.",
     "tasteProfileEn": "Rich earthy nuttiness, buttery sweet kernel, distinctive pleasant astringency from skin tannins.",
@@ -3867,9 +3606,6 @@ const MASTER_ITEMS = [
       "Gianduja",
       "Pastry"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Überragendes Nougat- und Röstaroma, schokoladig, süß, samtig ohne jede Bitterkeit.",
     "tasteProfileEn": "Intensely aromatic after roasting, milk chocolate nuances, sweet hazelnut oil, silky texture.",
@@ -3905,9 +3641,6 @@ const MASTER_ITEMS = [
       "Luxury",
       "Nuts"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Extrem cremig, butterähnlicher Schmelz, dezente Kokossüße.",
     "tasteProfileEn": "Ultra-rich, creamy dairy-like butteriness, sweet coconut hint, tender crunch.",
@@ -3945,9 +3678,6 @@ const MASTER_ITEMS = [
       "Barista",
       "Fat"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Vollmilch: Vollmundig, sahnig-süß, cremig. Magermilch: Wässrig, dünn, süßliche Laktosenote.",
     "tasteProfileEn": "Whole: Rich, sweet, creamy, velvety mouthfeel. Skimmed: Watery, thin, sweet lactose note.",
@@ -3985,9 +3715,6 @@ const MASTER_ITEMS = [
       "Fermentation",
       "Protein"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Joghurt: Säuerlich-frisch, fließend. Griechisch: Extrem dicht, samtig, 10% Fett. Quark: Standfest, mild-cremig, löffelfest.",
     "tasteProfileEn": "Yogurt: Tangy, lactic freshness, fluid. Greek: Ultra-thick, decadent, mild acidity. Quark: Firm, creamy, clean curd flavor.",
@@ -4027,9 +3754,6 @@ const MASTER_ITEMS = [
       "FreshCheese",
       "Italian"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Ricotta: Zart-krümelig, natürlich milchsüß, federleicht. Frischkäse: Vollmundig, streichfähig, sahnig.",
     "tasteProfileEn": "Ricotta: Light, sweet, delicate granular curds, milky. Cream Cheese: Rich, spreadable, tangy, dense.",
@@ -4070,9 +3794,6 @@ const MASTER_ITEMS = [
       "Law",
       "Terroir"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Unverfälschtes Terroir, komplexe Aromen durch Rohmilchflora, Reifekristalle und Tradition.",
     "tasteProfileEn": "Authentic terroir expression, depth of flavor from unpasteurized raw milk and aged crystals.",
@@ -4110,9 +3831,6 @@ const MASTER_ITEMS = [
       "Umami",
       "HardCheese"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Gewaltiges Umami (Glutamat), nussig, fruchtige Ananasnoten, knusprige Reifekristalle.",
     "tasteProfileEn": "Explosive savory umami, pineapple fruitiness, toasted butter, crunchy calcium-tyrosine crunch.",
@@ -4150,9 +3868,6 @@ const MASTER_ITEMS = [
       "France",
       "SheepMilk"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Pikant-würzig, feine Schafsmilchsüße, cremiger Schmelz, edle Schimmelschärfe.",
     "tasteProfileEn": "Intensely salty, piquant blue spice, creamy sheep fat sweetness, metallic sharpness.",
@@ -4190,9 +3905,6 @@ const MASTER_ITEMS = [
       "Holes",
       "Propionibacterium"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Nussig-mild, feine Buttersüße, dezente Heunote, elastisch-zarter Teig.",
     "tasteProfileEn": "Sweet hazelnut, mild buttery acidity, faint hay notes, smooth elastic texture.",
@@ -4230,9 +3942,6 @@ const MASTER_ITEMS = [
       "PastaFilata",
       "Campania"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Porzellanweiße Milchsüße, saftiger Rahmkern, leicht säuerlich-moschusartig, ultra-zart.",
     "tasteProfileEn": "Porcelain milk sweetness, delicate musk, rich buttery juiciness, pleasantly lactic tang.",
@@ -4272,9 +3981,6 @@ const MASTER_ITEMS = [
       "Eggs",
       "Yolk"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Cremig-zerfließender warmer Dotter, samtiges Mundgefühl, zartes Eiklar.",
     "tasteProfileEn": "Luxurious, warm velvety yolk coating the palate, delicate tender white.",
@@ -4314,9 +4020,6 @@ const MASTER_ITEMS = [
       "Peeling",
       "Breakfast"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Schnittfest, saftig, aromatisch-vollmundig, kein trockener mehliger Dotter.",
     "tasteProfileEn": "Firm, clean, rich savory egg umami, moist yolk without dry chalkiness.",
@@ -4356,9 +4059,6 @@ const MASTER_ITEMS = [
       "OverEasy",
       "Breakfast"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Nussige Butternote, knuspriger Rand, zartes Eiklar und flüssiger Dotter.",
     "tasteProfileEn": "Crispy buttered lace edges, delicate soft albumen, flowing warm yolk.",
@@ -4398,9 +4098,6 @@ const MASTER_ITEMS = [
       "Gourmet",
       "Breakfast"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Cremig wie eine Sauce, saftig, nussige Butternote, niemals trocken oder gummiartig.",
     "tasteProfileEn": "Silky, custard-like, incredibly rich and juicy, melts like sauce on tongue.",
@@ -4440,9 +4137,6 @@ const MASTER_ITEMS = [
       "ChefStandard",
       "Breakfast"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Zarte blassgelbe Hülle, innen saftig-schmelzender Kern, edle Kräuterbutter.",
     "tasteProfileEn": "Tender pillowy outer envelope, decadent flowing creamy core, herbal elegance.",
@@ -4482,9 +4176,6 @@ const MASTER_ITEMS = [
       "Whirlpool",
       "Hollandaise"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Zarte seidige Hülle, explosionsartig zerfließender Dotter, perfekt zur buttrigen Hollandaise.",
     "tasteProfileEn": "Silky envelope giving way to warm, rich liquid yolk, cut by buttery lemon Hollandaise.",
@@ -4524,9 +4215,6 @@ const MASTER_ITEMS = [
       "FinishingSalt",
       "Minerals"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Zarter mineralischer Knusper-Biss, milde harmonische Salzigkeit, kein stechender Geschmack.",
     "tasteProfileEn": "Clean briny mineral crunch, soft salinity, lingering ocean freshness without harsh bitterness.",
@@ -4566,9 +4254,6 @@ const MASTER_ITEMS = [
       "Unrefined",
       "KitchenStaple"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Trocken, direkt, kräftig salzig, reine mineralische Schärfe ohne Eigengeruch.",
     "tasteProfileEn": "Dry, direct, pure and potent salinity, subtle earthy undertones, highly soluble.",
@@ -4608,9 +4293,6 @@ const MASTER_ITEMS = [
       "Kampot",
       "SpiceKing"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Prickelnde Schärfe, waldig-harzige Wärme, Kampfernoten, dezente Zitrusfrische.",
     "tasteProfileEn": "Biting heat, woody pine warmth, camphor notes, citrus zest, bold lingering pungency.",
@@ -4650,9 +4332,6 @@ const MASTER_ITEMS = [
       "Fermented",
       "Piperine"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Klare, prägnante Schärfe, animalisch-würzige Tiefe, trocken, keine holzige Süße.",
     "tasteProfileEn": "Sharp, pungent, animalic warmth, grassy fermented undertones, no woody sweetness.",
@@ -4690,9 +4369,6 @@ const MASTER_ITEMS = [
       "SteakSauce",
       "Gourmet"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Grün: Würzig-säuerlich, saftiger Knack. Rosa: Süßlich-blumig, harzig, hauchzart, kaum scharf.",
     "tasteProfileEn": "Green: Tart, herbal, juicy pop. Pink: Sweet floral, fruity resin, delicate fragile crunch, mild.",
@@ -4732,9 +4408,6 @@ const MASTER_ITEMS = [
       "Citrus",
       "AsianCuisine"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Intensive Zitrus- und Zitronengrasnoten, Bergamotte, gefolgt von prickelnder Vibration auf der Zunge.",
     "tasteProfileEn": "Vibrant citrus zest, lemongrass perfume, lavender, followed by electric buzzing tingling sensation.",
@@ -4774,9 +4447,6 @@ const MASTER_ITEMS = [
       "Paella",
       "Risotto"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Edel-herb, bittersüß, Noten von sonnengetrocknetem Heu und Honig, leuchtendes Sonnengelb.",
     "tasteProfileEn": "Sweet hay-like floral aroma, metallic iodine note, subtle earthy honey bitterness, vibrant golden color.",
@@ -4816,9 +4486,6 @@ const MASTER_ITEMS = [
       "Cassia",
       "BakingSpice"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Ceylon: Zart, blumig, edle Zimtnote, feine Süße. Cassia: Kräftig, holzig-scharf, intensiv dominant.",
     "tasteProfileEn": "Ceylon: Delicate, floral, sweet woody perfume, mild warmth. Cassia: Bold, punchy, sharp, pungent winter spice.",
@@ -4858,9 +4525,6 @@ const MASTER_ITEMS = [
       "Basil",
       "Mediterranean"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Harzig-waldig (Rosmarin), würzig-herb (Thymian), pfeffrig-frisch (Basilikum), warm (Oregano).",
     "tasteProfileEn": "Pine resin, camphor, lemon thyme freshness, peppery clove warmth (basil), savory umami boost.",
@@ -4900,9 +4564,6 @@ const MASTER_ITEMS = [
       "Sumac",
       "Orient"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Za'atar: Nussig gerösteter Sesam, fruchtig-zitronige Säure (Sumach), herber Wildthymian. Ras el Hanout: Vielschichtig, warm, blumig, zimtig-pfeffrig.",
     "tasteProfileEn": "Za'atar: Nutty roasted sesame, tangy citric tartness (sumac), herbal thyme warmth. Ras el Hanout: Complex warm floral sweetness, cumin, pepper.",
@@ -4942,9 +4603,6 @@ const MASTER_ITEMS = [
       "Muskat",
       "KitchenStaple"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Paprika: Fruchtig-milde Süße, tiefrot. Cumin: Erdig-warm, unverwechselbar würzig. Muskat: Balsamisch-süß, warm, feinherb.",
     "tasteProfileEn": "Paprika: Deep fruity-sweet red warmth. Cumin: Pungent earthy-warm lemon undertone. Nutmeg: Sweet, woody, warm balsamic aroma.",
@@ -4984,9 +4642,6 @@ const MASTER_ITEMS = [
       "PDO",
       "Meze"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Fleischig-saftiger Biss, feine Weinessigsäure, edle herbe Fruchtnote, voller öliger Schmelz.",
     "tasteProfileEn": "Rich, meaty flesh, winey fruity tartness from red wine vinegar, savory umami depth, gentle bitterness.",
@@ -5024,9 +4679,6 @@ const MASTER_ITEMS = [
       "Tapas",
       "TabelOlives"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Knackiger, fester Biss, mild-herbes Fruchtfleisch, angenehm salzig-erfrischend.",
     "tasteProfileEn": "Crisp firm snap, refreshing herbal tang, delicate mild bitterness, savory brine.",
@@ -5066,9 +4718,6 @@ const MASTER_ITEMS = [
       "PDO",
       "SunDried"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Samtig-weiche Rosinen-Textur, hochkonzentriertes Olivenölaroma, milde Trockenfruchtsüße, kein Wassergeschmack.",
     "tasteProfileEn": "Soft raisin-like texture, rich concentrated olive oil flavor, mellow fruity sweetness, no watery brine.",
@@ -5108,9 +4757,6 @@ const MASTER_ITEMS = [
       "QualityCheck",
       "GastronomyKnowledge"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Echt schwarz: Zart, weich, saftig, ölig-fruchtig. Künstlich geschwärzt: Gummig-hart, wässrig, metallischer Beigeschmack.",
     "tasteProfileEn": "Real Black: Soft, tender, oily, complex savory fruit. Dyed Black: Rubber-firm, watery, metallic aftertaste.",
@@ -5150,9 +4796,6 @@ const MASTER_ITEMS = [
       "Mezze",
       "PreservedLemon"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Pikant-würzig, feine Säure eingelegter Salzzitronen, erdiger Kreuzkümmel, dezente Harissa-Schärfe.",
     "tasteProfileEn": "Tangy, intensely savory, floral lemon salinity, warm cumin spice, gentle chili heat from harissa.",
@@ -5192,9 +4835,6 @@ const MASTER_ITEMS = [
       "Gourmet",
       "FineDining"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Süßlich-mild, feine Haselnuss- und Mandelnoten, buttrig, keinerlei kratzende Bitterkeit.",
     "tasteProfileEn": "Sweet, delicate, nutty almond notes, buttery smooth texture, completely free of harsh tannin.",
@@ -5235,9 +4875,6 @@ const MASTER_ITEMS = [
       "Mezze",
       "Makbous"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Pfeffrige Schärfe, lebendige Zitrusfrische, angenehm herber Biss, feurige Chili-Note, vollfruchtiges Olivenaroma.",
     "tasteProfileEn": "Vibrant peppery bite, crisp firm crunch, aromatic citrus acidity, spicy chili kick, deep grassy olive fruit.",
@@ -5277,9 +4914,6 @@ const MASTER_ITEMS = [
       "ColdPressed",
       "HealthyFats"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Frisches Gras, grüne Tomate, Artischocke, zartbitter mit markantem pfeffrigem Kratzen im Hals.",
     "tasteProfileEn": "Fresh cut grass, green tomato leaf, artichoke, pleasant peppery throat tickle (oleocanthal).",
@@ -5319,9 +4953,6 @@ const MASTER_ITEMS = [
       "Terroir",
       "OliveVarieties"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Koroneiki: Wildkräuter, feuriger Pfefferabgang. Picual: Grüne Tomate, Feigenblatt, markant bitter. Arbequina: Süßer Apfel, Mandel, butterweich.",
     "tasteProfileEn": "Koroneiki: Herbaceous, wild thyme, intense peppery kick. Picual: Green tomato, fig leaf, bold bitterness. Arbequina: Sweet apple, banana, buttery almond.",
@@ -5359,9 +4990,6 @@ const MASTER_ITEMS = [
       "PumpkinSeed",
       "Omega3"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Raffiniert: Geschmacksneutral, rein. Kaltgepresstes Rapsöl: Nussig, saatig. Steirisches Kürbiskernöl: Tiefgrün, intensiv röstig.",
     "tasteProfileEn": "Refined: Neutral, clean, odorless. Cold-Pressed Rapeseed: Nutty, golden. Pumpkin Seed: Dark green, intense roasted pumpkin.",
@@ -5401,9 +5029,6 @@ const MASTER_ITEMS = [
       "Modena",
       "LuxuryVinegar"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Sirupartig dickflüssig, perfektes Gleichgewicht aus Edelsüße und Weinsäure, getrocknete Feigen, Holznoten.",
     "tasteProfileEn": "Syrupy dense velvet, harmonic sweet-sour equilibrium, dried fig, dark plum, toasted oak vanilla.",
@@ -5443,9 +5068,6 @@ const MASTER_ITEMS = [
       "SaladDressing",
       "Modena"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Balsamico IGP: Fruchtig-säuerlich, dunkle Süße, Weinsäure. Condimento Bianco: Helles Goldgelb, spritzig-süß, sauber fruchtig.",
     "tasteProfileEn": "Balsamico IGP: Fruity sweet-sour, lively acidity, caramel depth. Condimento Bianco: Bright golden, crisp floral sweetness, clean acidity.",
@@ -5483,9 +5105,6 @@ const MASTER_ITEMS = [
       "AcidScience",
       "CulinaryBasics"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Weinessig: Edles Weinbouquet, zarte Fruchtsäure, weich. Branntweinessig: Stechend scharf, aggressiv sauer, null Eigengeschmack.",
     "tasteProfileEn": "Wine Vinegar: Noble fruit bouquet, wine acidity, round body. Spirit Vinegar: Harte, piercing, chemical, monochromatic sharp acidity.",
@@ -5525,9 +5144,6 @@ const MASTER_ITEMS = [
       "Spain",
       "GourmetVinegar"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Dunkles Mahagoni, geröstete Haselnuss, Rosinen, altes Eichenholz, konzentrierte milde Säure.",
     "tasteProfileEn": "Rich mahogany color, toasted hazelnut, dried raisins, vanilla oak, intense concentrated mellow acidity.",
@@ -5565,9 +5181,6 @@ const MASTER_ITEMS = [
       "Charcuterie",
       "ItalianDeli"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Samtig, zart schmelzend, milde fleischige Süße, würziger Pfefferbiss und nussiger Pistazienschmelz.",
     "tasteProfileEn": "Delicate, velvety melting texture, sweet savory pork warmth, spicy pepper bite, nutty pistachio crunch.",
@@ -5607,9 +5220,6 @@ const MASTER_ITEMS = [
       "DOP",
       "Charcuterie"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Süßlich-mild, nussig, samtig mürbe auf der Zunge, feine Salzigkeit ohne jede Schärfe.",
     "tasteProfileEn": "Sweet, fragrant, nutty, delicate salty undertone, melt-in-the-mouth tenderness, zero harshness.",
@@ -5649,9 +5259,6 @@ const MASTER_ITEMS = [
       "Fermentation",
       "Antipasti"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Herzhaft, laktische Milchsäurefrische, dezenter Knoblauchhauch, pfeffrig-würziger Biss.",
     "tasteProfileEn": "Savory, lactic tang from fermentation, subtle garlic warmth, peppery bite, firm chew.",
@@ -5689,9 +5296,6 @@ const MASTER_ITEMS = [
       "Brisket",
       "Coriander"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Rauchig, pfeffrig-scharfe Kruste, warmes Korianderaroma, saftig-schmelzendes Rindfleisch mit feinem Fettgehalt.",
     "tasteProfileEn": "Smoky, peppery crust, aromatic citrus-floral coriander notes, meltingly tender fatty beef umami.",
@@ -5729,9 +5333,6 @@ const MASTER_ITEMS = [
       "Remoulade",
       "ClassicBistro"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Reiner saftiger Rindfleischgeschmack, pfeffrig-würziger Kräuterrand, zarter Biss, fettarm.",
     "tasteProfileEn": "Pure juicy beef flavor, delicate peppery herbal crust, tender springy texture, clean finish.",
@@ -5771,9 +5372,6 @@ const MASTER_ITEMS = [
       "BeefCharcuterie",
       "Lean"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Mager, samtig-zart, reines Rindfleischaroma mit dezenten Noten von Wacholder und Lorbeer, mineralisch.",
     "tasteProfileEn": "Lean, velvet texture, clean savory beef essence, subtle juniper and clove aromatics, zero fattiness.",
@@ -5813,9 +5411,6 @@ const MASTER_ITEMS = [
       "Steak",
       "PrimeBeef"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Höchste Zartheit, schmilzt förmlich im Mund, sehr feine Faser, milder Eigengeschmack.",
     "tasteProfileEn": "Supreme tenderness, melt-in-the-mouth, mild refined beef essence, benefits immensely from butter-basting.",
@@ -5855,9 +5450,6 @@ const MASTER_ITEMS = [
       "Steak",
       "Spinalis"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Maximaler Rindfleischgeschmack, saftig, schmelzendes intramuskuläres Fett, nussige Röstaromen.",
     "tasteProfileEn": "Intensely juicy, rich beef umami, buttery mouthfeel from rendered fat, savory caramelized crust.",
@@ -5897,9 +5489,6 @@ const MASTER_ITEMS = [
       "Steak",
       "Sirloin"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Kräftiger Biss, markant mineralisches Fleischaroma, nussig geröstetes Fett vom krossen Fettdeckel.",
     "tasteProfileEn": "Firm chewy bite, robust mineral beefiness, sweet roasted fat aroma from the scored rind.",
@@ -5939,9 +5528,6 @@ const MASTER_ITEMS = [
       "BoneInSteak",
       "SharingCut"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Zwei Welten in einem Cut: Butterzartes Filet links, herzhaftes Roastbeef rechts, intensives Knochenaroma.",
     "tasteProfileEn": "Best of both worlds: delicate silky filet on one side, bold beefy striploin on the other, deep bone marrow aroma.",
@@ -5981,9 +5567,6 @@ const MASTER_ITEMS = [
       "Tacos",
       "Chimichurri"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Sehr intensiv fleischig, mineralisch, saftig bei festem Biss, saugt Marinaden perfekt auf.",
     "tasteProfileEn": "Deep, robust, mineral beefiness, succulent chew, absorbs marinades and chimichurri exceptionally.",
@@ -6023,9 +5606,6 @@ const MASTER_ITEMS = [
       "ShowSteak",
       "BoneIn"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Saftig, kernig marmoriert, reichhaltig, herrlich geröstete Kruste und optische Wucht.",
     "tasteProfileEn": "Rich, buttery, intensely beefy, identical to prime ribeye with added visual drama and bone roasting aroma.",
@@ -6063,9 +5643,6 @@ const MASTER_ITEMS = [
       "ArtisanBread",
       "CrispyCrust"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Röstiges Getreidearoma, feine Nussnote, splitternde Kruste, feuchte und großporige Krume mit zartem Schmelz.",
     "tasteProfileEn": "Toasted wheat, hazelnut aroma, light lactic sweetness, shattering glass-like crust, chewy custard-like interior.",
@@ -6103,9 +5680,6 @@ const MASTER_ITEMS = [
       "Fermentation",
       "ArtisanBread"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Kräftige Röstkruste mit Malznoten, ausgewogene milde Milchsäure, saftige Krume, langanhaltend frisch.",
     "tasteProfileEn": "Caramelized dark malt crust, balanced acetic and lactic tang, deep fermented cereal depth, springy texture.",
@@ -6143,9 +5717,6 @@ const MASTER_ITEMS = [
       "OliveOil",
       "HighHydration"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Fruchtiges Olivenölaroma, zarte Hefesüße, federleichte Kruste, riesige Poren, ideal zum Aufsaugen.",
     "tasteProfileEn": "Fruity olive oil aroma, subtle fermented yeast sweetness, light paper-thin crispy crust, airy hollow texture.",
@@ -6183,9 +5754,6 @@ const MASTER_ITEMS = [
       "Butter",
       "Maillard"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Vollmundig buttrig, zart süßlich, watteweich auf der Zunge, bildet beim Toasten eine goldbraune Röstschicht.",
     "tasteProfileEn": "Rich buttery sweetness, pillow-soft golden crumb, melting texture, shiny golden-brown toasted crown.",
@@ -6223,9 +5791,6 @@ const MASTER_ITEMS = [
       "OliveOil",
       "Aperitivo"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Knusprige Röstkruste, saftig-feuchter Kern, üppiges fruchtiges Olivenöl, salzige Spitzen, duftender Rosmarin.",
     "tasteProfileEn": "Crunchy bottom crust, pillowy moist center, fragrant fruity olive oil, briny bursts of sea salt, piney rosemary.",
@@ -6263,9 +5828,6 @@ const MASTER_ITEMS = [
       "Breakfast",
       "Vienna"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Feine Malzsüße, zart knuspernde Röhrenkruste, watteweiche helle Krume, idealer Geschmacksträger.",
     "tasteProfileEn": "Sweet malt notes, light shattering crackle, tender soft crumb, clean neutral bakery profile.",
@@ -6303,9 +5865,6 @@ const MASTER_ITEMS = [
       "Garlic",
       "Tomatoes"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Knusprig geröstet, pikante Knoblauchschärfe, süßlich-fruchtige Tomatenfrische, aromatisches Olivenöl.",
     "tasteProfileEn": "Crisp charred crunch, pungent garlic warmth, sweet juicy tomato acidity, grassy floral olive oil, herbal basil freshness.",
@@ -6343,9 +5902,6 @@ const MASTER_ITEMS = [
       "Fingerfood",
       "Mozzarella"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Knusprige goldbraune Panade, cremiger Safranreis, schmelzender Käsestreck-Kern, würziges Ragù.",
     "tasteProfileEn": "Ultra-crispy golden shell, creamy saffron rice interior, hot gooey cheese pull, rich savory ragù core.",
@@ -6385,9 +5941,6 @@ const MASTER_ITEMS = [
       "Tare",
       "Fingerfood"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Rauchige Holzkohlenote, süß-salziges Umami der Tare-Glasur, saftiges Fleisch, süßliche Frühlingszwiebel.",
     "tasteProfileEn": "Smoky binchotan charcoal char, sweet-savory umami glaze, succulent tender chicken, sweet roasted onion sharpness.",
@@ -6425,9 +5978,6 @@ const MASTER_ITEMS = [
       "Pastry",
       "Chimichurri"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Mürbe Teighülle, saftige Fleischfüllung mit Kreuzkümmel- und Paprikanote, salzige Olive und süßliche Zwiebel.",
     "tasteProfileEn": "Flaky tender pastry, warm aromatic cumin and paprika heat, juicy savory beef juices, briny olive contrast.",
@@ -6465,9 +6015,6 @@ const MASTER_ITEMS = [
       "Dumplings",
       "CrispyBottom"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Spannender Texturkontrast: Knusprig-krosser Boden, seidig-weiche Oberseite, saftige würzige Fleischfüllung mit Ingwer.",
     "tasteProfileEn": "Addictive textural contrast: glass-crisp fried bottom, silky tender steamed top, fragrant ginger-garlic pork broth inside.",
@@ -6506,9 +6053,6 @@ const MASTER_ITEMS = [
       "Tahini",
       "StreetFood"
     ],
-    "inStock": true,
-    "stockQuantity": 5,
-    "storageLocation": "Zentrallager",
     "isFavorite": false,
     "tasteProfileDe": "Herrlich krosse Kruste, federleicht-lockerer smaragdgrüner Kern, erdiger Kreuzkümmel, frische Kräuter, nussiger Sesam.",
     "tasteProfileEn": "Deeply crunchy exterior, light fluffy vibrant-green crumb, warm earthy cumin and coriander spice, fresh herbal finish.",
@@ -8396,9 +7940,6 @@ const MASTER_ITEMS = [
       "Omega3",
       "Standard"
     ],
-    "inStock": true,
-    "stockQuantity": 12,
-    "storageLocation": "Fischkühlhaus F1",
     "isFavorite": true
   },
   {
@@ -8437,9 +7978,6 @@ const MASTER_ITEMS = [
       "Branzino",
       "FineDining"
     ],
-    "inStock": true,
-    "stockQuantity": 10,
-    "storageLocation": "Fischkühlhaus F1",
     "isFavorite": true
   },
   {
@@ -8479,9 +8017,6 @@ const MASTER_ITEMS = [
       "Dubai",
       "Machboos"
     ],
-    "inStock": true,
-    "stockQuantity": 8,
-    "storageLocation": "Fischkühlhaus F1",
     "isFavorite": true
   },
   {
@@ -8521,9 +8056,6 @@ const MASTER_ITEMS = [
       "Seafood",
       "Classic"
     ],
-    "inStock": true,
-    "stockQuantity": 14,
-    "storageLocation": "Fischkühlhaus F1",
     "isFavorite": false
   },
   {
@@ -8563,9 +8095,6 @@ const MASTER_ITEMS = [
       "Tataki",
       "Steak"
     ],
-    "inStock": true,
-    "stockQuantity": 6,
-    "storageLocation": "Fischkühlhaus F1",
     "isFavorite": true
   },
   {
@@ -8605,9 +8134,6 @@ const MASTER_ITEMS = [
       "BrineCheese",
       "ArabCuisine"
     ],
-    "inStock": true,
-    "stockQuantity": 12,
-    "storageLocation": "Käsekeller C2",
     "isFavorite": true
   },
   {
@@ -8646,9 +8172,6 @@ const MASTER_ITEMS = [
       "GrillCheese",
       "PDO"
     ],
-    "inStock": true,
-    "stockQuantity": 15,
-    "storageLocation": "Käsekeller C2",
     "isFavorite": true
   },
   {
@@ -8687,9 +8210,6 @@ const MASTER_ITEMS = [
       "Mahlep",
       "Mezze"
     ],
-    "inStock": true,
-    "stockQuantity": 9,
-    "storageLocation": "Käsekeller C2",
     "isFavorite": false
   },
   {
@@ -8729,9 +8249,6 @@ const MASTER_ITEMS = [
       "Lebanon",
       "Zaatar"
     ],
-    "inStock": true,
-    "stockQuantity": 8,
-    "storageLocation": "Käsekeller C2",
     "isFavorite": false
   },
   {
@@ -8770,9 +8287,6 @@ const MASTER_ITEMS = [
       "AOP",
       "RawMilk"
     ],
-    "inStock": true,
-    "stockQuantity": 10,
-    "storageLocation": "Käsekeller C1",
     "isFavorite": true
   },
   {
@@ -8812,9 +8326,6 @@ const MASTER_ITEMS = [
       "Fondue",
       "Alpine"
     ],
-    "inStock": true,
-    "stockQuantity": 12,
-    "storageLocation": "Käsekeller C1",
     "isFavorite": true
   },
   {
@@ -8852,9 +8363,6 @@ const MASTER_ITEMS = [
       "Steak",
       "BBQ"
     ],
-    "inStock": true,
-    "stockQuantity": 15,
-    "storageLocation": "Fleischkühlung F1",
     "isFavorite": true
   },
   {
@@ -8891,9 +8399,6 @@ const MASTER_ITEMS = [
       "Lammkarree",
       "FineDining"
     ],
-    "inStock": true,
-    "stockQuantity": 10,
-    "storageLocation": "Fleischkühlung F2",
     "isFavorite": true
   },
   {
@@ -8930,9 +8435,6 @@ const MASTER_ITEMS = [
       "Supreme",
       "Cornfed"
     ],
-    "inStock": true,
-    "stockQuantity": 15,
-    "storageLocation": "Fleischkühlung F2",
     "isFavorite": false
   },
   {
@@ -8970,9 +8472,6 @@ const MASTER_ITEMS = [
       "Secreto",
       "BBQ"
     ],
-    "inStock": true,
-    "stockQuantity": 8,
-    "storageLocation": "Fleischkühlung F2",
     "isFavorite": false
   },
   {
@@ -9009,9 +8508,6 @@ const MASTER_ITEMS = [
       "Guerande",
       "FinishingSalt"
     ],
-    "inStock": true,
-    "stockQuantity": 20,
-    "storageLocation": "Trockenlager T1",
     "isFavorite": true
   },
   {
@@ -9049,9 +8545,6 @@ const MASTER_ITEMS = [
       "Piperine",
       "SpiceKing"
     ],
-    "inStock": true,
-    "stockQuantity": 15,
-    "storageLocation": "Trockenlager T1",
     "isFavorite": true
   },
   {
@@ -9089,9 +8582,6 @@ const MASTER_ITEMS = [
       "Fattoush",
       "Mezze"
     ],
-    "inStock": true,
-    "stockQuantity": 12,
-    "storageLocation": "Trockenlager T1",
     "isFavorite": false
   },
   {
@@ -9131,9 +8621,6 @@ const MASTER_ITEMS = [
       "Smoked",
       "NitrosamineScience"
     ],
-    "inStock": true,
-    "stockQuantity": 25,
-    "storageLocation": "Kühlhaus W1",
     "isFavorite": true
   },
   {
@@ -9171,9 +8658,6 @@ const MASTER_ITEMS = [
       "Sausage",
       "Classic"
     ],
-    "inStock": true,
-    "stockQuantity": 30,
-    "storageLocation": "Kühlhaus W1",
     "isFavorite": true
   },
   {
@@ -9211,9 +8695,6 @@ const MASTER_ITEMS = [
       "Beef",
       "Pork"
     ],
-    "inStock": true,
-    "stockQuantity": 30,
-    "storageLocation": "Kühlhaus W1",
     "isFavorite": false
   },
   {
@@ -9253,9 +8734,6 @@ const MASTER_ITEMS = [
       "GrillSausage",
       "Uncured"
     ],
-    "inStock": true,
-    "stockQuantity": 20,
-    "storageLocation": "Kühlhaus W2",
     "isFavorite": true
   },
   {
@@ -9293,9 +8771,6 @@ const MASTER_ITEMS = [
       "Pretzel",
       "Breakfast"
     ],
-    "inStock": true,
-    "stockQuantity": 20,
-    "storageLocation": "Kühlhaus W2",
     "isFavorite": true
   },
   {
@@ -9332,9 +8807,6 @@ const MASTER_ITEMS = [
       "Frankfurt",
       "HalalFriendly"
     ],
-    "inStock": true,
-    "stockQuantity": 15,
-    "storageLocation": "Kühlhaus W1",
     "isFavorite": false
   },
   {
@@ -9372,9 +8844,6 @@ const MASTER_ITEMS = [
       "PorkFree",
       "Diet"
     ],
-    "inStock": true,
-    "stockQuantity": 20,
-    "storageLocation": "Kühlhaus W1",
     "isFavorite": false
   },
   {
@@ -9413,9 +8882,6 @@ const MASTER_ITEMS = [
       "GrillSausage",
       "HalalFriendly"
     ],
-    "inStock": true,
-    "stockQuantity": 15,
-    "storageLocation": "Fleischkühlung F2",
     "isFavorite": true
   },
   {
@@ -9453,9 +8919,6 @@ const MASTER_ITEMS = [
       "Bratwurst",
       "GermanIcon"
     ],
-    "inStock": true,
-    "stockQuantity": 30,
-    "storageLocation": "Fleischkühlung F2",
     "isFavorite": true
   },
   {
@@ -9493,9 +8956,6 @@ const MASTER_ITEMS = [
       "GrillSausage",
       "Fingerfood"
     ],
-    "inStock": true,
-    "stockQuantity": 40,
-    "storageLocation": "Fleischkühlung F2",
     "isFavorite": true
   },
   {
@@ -9525,9 +8985,6 @@ const MASTER_ITEMS = [
       "Smoked",
       "Sausage"
     ],
-    "inStock": true,
-    "stockQuantity": 15,
-    "storageLocation": "Kühlhaus W1",
     "isFavorite": false
   },
   {
@@ -9556,9 +9013,6 @@ const MASTER_ITEMS = [
       "Classic",
       "GermanSausage"
     ],
-    "inStock": true,
-    "stockQuantity": 20,
-    "storageLocation": "Kühlhaus W1",
     "isFavorite": false
   },
   {
@@ -9590,9 +9044,6 @@ const MASTER_ITEMS = [
       "FriedFish",
       "Seafood"
     ],
-    "inStock": true,
-    "stockQuantity": 15,
-    "storageLocation": "Fischkühlung FI1",
     "isFavorite": false
   },
   {
@@ -9621,9 +9072,6 @@ const MASTER_ITEMS = [
       "Gala",
       "RestaurantBasics"
     ],
-    "inStock": true,
-    "stockQuantity": 10,
-    "storageLocation": "Service M1",
     "isFavorite": true
   },
   {
@@ -9652,9 +9100,6 @@ const MASTER_ITEMS = [
       "ServiceHygiene",
       "TableArt"
     ],
-    "inStock": true,
-    "stockQuantity": 10,
-    "storageLocation": "Service M1",
     "isFavorite": false
   },
   {
@@ -9683,9 +9128,6 @@ const MASTER_ITEMS = [
       "ServiceRules",
       "Etiquette"
     ],
-    "inStock": true,
-    "stockQuantity": 10,
-    "storageLocation": "Service M1",
     "isFavorite": true
   },
   {
@@ -9714,9 +9156,6 @@ const MASTER_ITEMS = [
       "Presentation",
       "ServiceRules"
     ],
-    "inStock": true,
-    "stockQuantity": 10,
-    "storageLocation": "Service M1",
     "isFavorite": false
   },
   {
@@ -9747,9 +9186,6 @@ const MASTER_ITEMS = [
       "Healthy",
       "Scottish"
     ],
-    "inStock": true,
-    "stockQuantity": 20,
-    "storageLocation": "Trockenlager C1",
     "isFavorite": true
   },
   {
@@ -9781,9 +9217,6 @@ const MASTER_ITEMS = [
       "Healthy",
       "RawFood"
     ],
-    "inStock": true,
-    "stockQuantity": 15,
-    "storageLocation": "Kühlhaus C1",
     "isFavorite": true
   },
   {
@@ -9814,9 +9247,6 @@ const MASTER_ITEMS = [
       "Crispy",
       "Classic"
     ],
-    "inStock": true,
-    "stockQuantity": 25,
-    "storageLocation": "Trockenlager C1",
     "isFavorite": false
   },
   {
@@ -9847,9 +9277,6 @@ const MASTER_ITEMS = [
       "KidsBreakfast",
       "SweetPuffs"
     ],
-    "inStock": true,
-    "stockQuantity": 20,
-    "storageLocation": "Trockenlager C1",
     "isFavorite": false
   },
   {
@@ -9880,9 +9307,6 @@ const MASTER_ITEMS = [
       "BreakfastCoffee",
       "Classic"
     ],
-    "inStock": true,
-    "stockQuantity": 30,
-    "storageLocation": "Kaffeelager K1",
     "isFavorite": true
   },
   {
@@ -9912,9 +9336,6 @@ const MASTER_ITEMS = [
       "LongCoffee",
       "Café"
     ],
-    "inStock": true,
-    "stockQuantity": 25,
-    "storageLocation": "Kaffeelager K1",
     "isFavorite": false
   },
   {
@@ -9945,9 +9366,6 @@ const MASTER_ITEMS = [
       "CondensedMilk",
       "Barista"
     ],
-    "inStock": true,
-    "stockQuantity": 30,
-    "storageLocation": "Kaffeelager K1",
     "isFavorite": true
   },
   {
@@ -9977,9 +9395,6 @@ const MASTER_ITEMS = [
       "Legume",
       "Snacks"
     ],
-    "inStock": true,
-    "stockQuantity": 20,
-    "storageLocation": "Trockenlager N1",
     "isFavorite": false
   },
   {
@@ -10009,9 +9424,6 @@ const MASTER_ITEMS = [
       "Tahini",
       "Seeds"
     ],
-    "inStock": true,
-    "stockQuantity": 15,
-    "storageLocation": "Trockenlager N1",
     "isFavorite": false
   },
   {
@@ -10039,9 +9451,6 @@ const MASTER_ITEMS = [
       "Baking",
       "Seeds"
     ],
-    "inStock": true,
-    "stockQuantity": 20,
-    "storageLocation": "Trockenlager N1",
     "isFavorite": false
   },
   {
@@ -10070,9 +9479,6 @@ const MASTER_ITEMS = [
       "Austria",
       "Seeds"
     ],
-    "inStock": true,
-    "stockQuantity": 15,
-    "storageLocation": "Trockenlager N1",
     "isFavorite": true
   },
   {
@@ -10101,9 +9507,6 @@ const MASTER_ITEMS = [
       "GrannySmith",
       "Baking"
     ],
-    "inStock": true,
-    "stockQuantity": 40,
-    "storageLocation": "Obstkühlung O1",
     "isFavorite": true
   },
   {
@@ -10132,9 +9535,6 @@ const MASTER_ITEMS = [
       "Juice",
       "Fruit"
     ],
-    "inStock": true,
-    "stockQuantity": 35,
-    "storageLocation": "Obstkühlung O1",
     "isFavorite": false
   },
   {
@@ -10163,9 +9563,6 @@ const MASTER_ITEMS = [
       "Tropical",
       "Fruit"
     ],
-    "inStock": true,
-    "stockQuantity": 30,
-    "storageLocation": "Obstkühlung O1",
     "isFavorite": false
   },
   {
@@ -10194,9 +9591,1013 @@ const MASTER_ITEMS = [
       "ExoticFruit",
       "VitaminC"
     ],
-    "inStock": true,
-    "stockQuantity": 25,
-    "storageLocation": "Obstkühlung O1",
     "isFavorite": true
+  },
+  {
+    "id": "wine_champagne_brut_reserve",
+    "category": "wine",
+    "nameDe": "Champagne Brut Réserve (Méthode Champenoise)",
+    "nameEn": "Champagne Brut Réserve (Traditional Method)",
+    "subtitleDe": "Klassische Flaschengärung (Chardonnay, Pinot Noir, Meunier); mind. 15 Monate Hefelager",
+    "subtitleEn": "Traditional bottle fermentation, cellar-aged on lees min. 15 months; brioche & fine perlage",
+    "imageUrl": "https://images.unsplash.com/photo-1569919659476-f0852f6834b7?w=800&auto=format&fit=crop&q=80",
+    "origin": "Frankreich (Champagne AOC / Reims & Épernay)",
+    "isImport": true,
+    "abv": "12.5% ABV",
+    "tasteDe": "Feinperlig, Aromen von weißem Pfirsich, gerösteter Brioche, grüner Apfel und mineralische Kreidefrische.",
+    "tasteEn": "Fine delicate mousse, white peach, toasted brioche, crisp green apple, and chalky minerality.",
+    "tasteProfileDe": "Feinperlig, Aromen von weißem Pfirsich, gerösteter Brioche, grüner Apfel und mineralische Kreidefrische.",
+    "tasteProfileEn": "Fine delicate mousse, white peach, toasted brioche, crisp green apple, and chalky minerality.",
+    "scienceDe": "Das Champagner-Verfahren (Méthode Traditionnelle) erfordert eine zweite Gärung direkt in der Flasche durch Zugabe von Liqueur de Tirage. Während der monatelangen Autolyse lösen sich abgestorbene Hefezellen auf und geben Mannoproteine an den Wein ab. Dies sorgt für den cremigen Schmelz und bindet das Kohlendioxid in mikroskopisch feinen Perlen (Perlage).",
+    "scienceEn": "The Méthode Champenoise relies on in-bottle secondary fermentation triggered by tirage liqueur. Slow yeast autolysis over 15 to 36 months releases mannoproteins, buffering acidity and integrating CO2 into microscopic, persistent bubbles with signature autolytic bread-crust aromas.",
+    "scienceExplainedDe": "Das Champagner-Verfahren (Méthode Traditionnelle) erfordert eine zweite Gärung direkt in der Flasche durch Zugabe von Liqueur de Tirage. Während der monatelangen Autolyse lösen sich abgestorbene Hefezellen auf und geben Mannoproteine an den Wein ab. Dies sorgt für den cremigen Schmelz und bindet das Kohlendioxid in mikroskopisch feinen Perlen (Perlage).",
+    "scienceExplainedEn": "The Méthode Champenoise relies on in-bottle secondary fermentation triggered by tirage liqueur. Slow yeast autolysis over 15 to 36 months releases mannoproteins, buffering acidity and integrating CO2 into microscopic, persistent bubbles with signature autolytic bread-crust aromas.",
+    "culinaryDe": "Als Aperitif, zu frischen Austern, Beluga-Kaviar, pochiertem Steinbutt oder cremigem Brie de Meaux.",
+    "culinaryEn": "Ideal as an aperitif, paired with fresh oysters, caviar, butter-poached turbot, or aged Brie.",
+    "culinaryServingDe": "Als Aperitif, zu frischen Austern, Beluga-Kaviar, pochiertem Steinbutt oder cremigem Brie de Meaux.",
+    "culinaryServingEn": "Ideal as an aperitif, paired with fresh oysters, caviar, butter-poached turbot, or aged Brie.",
+    "faqDe": "Warum keine Flöte mehr für Spitzen-Champagner? Moderne Sommeliers servieren Champagner im bauchigen Weißweinglas, damit sich die komplexen Hefearomen voll entfalten können.",
+    "faqEn": "Why use white wine glasses instead of flutes? Wider tulip bowls allow autolytic brioche notes to breathe and develop on the nose.",
+    "guestFaqDe": "Warum keine Flöte mehr für Spitzen-Champagner? Moderne Sommeliers servieren Champagner im bauchigen Weißweinglas, damit sich die komplexen Hefearomen voll entfalten können.",
+    "guestFaqEn": "Why use white wine glasses instead of flutes? Wider tulip bowls allow autolytic brioche notes to breathe and develop on the nose.",
+    "allergens": [
+      "Sulfite"
+    ],
+    "tags": [
+      "Champagne",
+      "SparklingWine",
+      "MethodeChampenoise",
+      "AOC",
+      "Brioche",
+      "Luxury"
+    ],
+    "isFavorite": true
+  },
+  {
+    "id": "wine_cava_gran_reserva",
+    "category": "wine",
+    "nameDe": "Cava Gran Reserva Brut Nature",
+    "nameEn": "Cava Gran Reserva Brut Nature",
+    "subtitleDe": "Traditionelle Flaschengärung aus Katalonien, mind. 30 Monate Hefelager, ungezuckert (Brut Nature)",
+    "subtitleEn": "Traditional method sparkling wine from Penedès, min. 30 months lees aging, zero dosage",
+    "imageUrl": "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=800&auto=format&fit=crop&q=80",
+    "origin": "Spanien (Katalonien / Penedès DO Cava)",
+    "isImport": true,
+    "abv": "12.0% ABV",
+    "tasteDe": "Trocken, straffe Kräuterwürze, Fenchel, geröstete Mandeln, reife Zitrusnoten und rauchige Mineralität.",
+    "tasteEn": "Bone dry, wild Mediterranean herbs, fennel, toasted almonds, lemon zest, and stony minerality.",
+    "tasteProfileDe": "Trocken, straffe Kräuterwürze, Fenchel, geröstete Mandeln, reife Zitrusnoten und rauchige Mineralität.",
+    "tasteProfileEn": "Bone dry, wild Mediterranean herbs, fennel, toasted almonds, lemon zest, and stony minerality.",
+    "scienceDe": "Erzeugt aus den autochthonen Rebsorten Xarel·lo (liefert Säure und Alterungspotenzial), Macabeo und Parellada. Ein 'Gran Reserva' reift mindestens 30 Monate auf der Hefe. Brut Nature bedeutet, dass nach dem Degorgieren keine Versanddosage mit Zucker erfolgt – der Restzucker liegt unter 3 g/l.",
+    "scienceEn": "Crafted from indigenous Xarel·lo, Macabeo, and Parellada. Gran Reserva classification mandates min. 30 months bottle aging. Brut Nature receives zero sugar dosage after disgorgement, resulting in unmasked mineral terroir clarity.",
+    "scienceExplainedDe": "Erzeugt aus den autochthonen Rebsorten Xarel·lo (liefert Säure und Alterungspotenzial), Macabeo und Parellada. Ein 'Gran Reserva' reift mindestens 30 Monate auf der Hefe. Brut Nature bedeutet, dass nach dem Degorgieren keine Versanddosage mit Zucker erfolgt – der Restzucker liegt unter 3 g/l.",
+    "scienceExplainedEn": "Crafted from indigenous Xarel·lo, Macabeo, and Parellada. Gran Reserva classification mandates min. 30 months bottle aging. Brut Nature receives zero sugar dosage after disgorgement, resulting in unmasked mineral terroir clarity.",
+    "culinaryDe": "Zu Jamón Ibérico de Bellota, gegrillten Gambas, Tapas und salzigem Hartkäse.",
+    "culinaryEn": "Superb with acorn-fed Ibérico ham, wood-grilled prawns, seafood paella, and aged Manchego.",
+    "culinaryServingDe": "Zu Jamón Ibérico de Bellota, gegrillten Gambas, Tapas und salzigem Hartkäse.",
+    "culinaryServingEn": "Superb with acorn-fed Ibérico ham, wood-grilled prawns, seafood paella, and aged Manchego.",
+    "faqDe": "Was unterscheidet Cava von Prosecco? Cava reift zwingend in der Einzelflasche auf Hefe (wie Champagner), während Prosecco fast immer im Stahltank vergoren wird.",
+    "faqEn": "Cava vs. Prosecco? Cava must undergo secondary bottle fermentation on dead yeast cells; Prosecco is tank-fermented.",
+    "guestFaqDe": "Was unterscheidet Cava von Prosecco? Cava reift zwingend in der Einzelflasche auf Hefe (wie Champagner), während Prosecco fast immer im Stahltank vergoren wird.",
+    "guestFaqEn": "Cava vs. Prosecco? Cava must undergo secondary bottle fermentation on dead yeast cells; Prosecco is tank-fermented.",
+    "allergens": [
+      "Sulfite"
+    ],
+    "tags": [
+      "Cava",
+      "GranReserva",
+      "BrutNature",
+      "Penedes",
+      "Spain",
+      "Sparkling"
+    ],
+    "isFavorite": false
+  },
+  {
+    "id": "wine_prosecco_valdobbiadene_docg",
+    "category": "wine",
+    "nameDe": "Valdobbiadene Prosecco Superiore DOCG",
+    "nameEn": "Valdobbiadene Prosecco Superiore DOCG",
+    "subtitleDe": "Steillagen-Glera aus Venetien, Charmat-Tankgärung; fruchtbetont, blumig, lebendig",
+    "subtitleEn": "Steep hillside Glera from Veneto, Charmat method; aromatic pear, white flowers & crisp freshness",
+    "imageUrl": "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=800&auto=format&fit=crop&q=80",
+    "origin": "Italien (Venetien / Conegliano Valdobbiadene DOCG)",
+    "isImport": true,
+    "abv": "11.5% ABV",
+    "tasteDe": "Saftige Williamsbirne, Akazienblüten, weißer Pfirsich, zarte Perlage mit animierender Säure.",
+    "tasteEn": "Crisp green pear, acacia flowers, golden apple, fresh white peach, and a lively refreshing finish.",
+    "tasteProfileDe": "Saftige Williamsbirne, Akazienblüten, weißer Pfirsich, zarte Perlage mit animierender Säure.",
+    "tasteProfileEn": "Crisp green pear, acacia flowers, golden apple, fresh white peach, and a lively refreshing finish.",
+    "scienceDe": "Wird nach der Charmat-Martinotti-Methode in druckfesten Edelstahltanks (Autoklaven) vergoren. Im Gegensatz zur Flaschengärung bewahrt dieses Verfahren die primären Frucht- und Blütenaromen der Glera-Traube, anstatt brotige Hefeautolysenoten zu bilden.",
+    "scienceEn": "Produced using the Martinotti-Charmat pressurized autoclave method. Quick fermentation under pressure preserves crisp primary terpenes and fruity esters of the Glera grape without heavy yeast influence.",
+    "scienceExplainedDe": "Wird nach der Charmat-Martinotti-Methode in druckfesten Edelstahltanks (Autoklaven) vergoren. Im Gegensatz zur Flaschengärung bewahrt dieses Verfahren die primären Frucht- und Blütenaromen der Glera-Traube, anstatt brotige Hefeautolysenoten zu bilden.",
+    "scienceExplainedEn": "Produced using the Martinotti-Charmat pressurized autoclave method. Quick fermentation under pressure preserves crisp primary terpenes and fruity esters of the Glera grape without heavy yeast influence.",
+    "culinaryDe": "Perfekt als Terrassen-Aperitif, zu leichten Antipasti, Prosciutto di San Daniele oder Melone.",
+    "culinaryEn": "Light aperitivo, pairs with melon and prosciutto, seafood carpaccio, or mild fresh goat cheese.",
+    "culinaryServingDe": "Perfekt als Terrassen-Aperitif, zu leichten Antipasti, Prosciutto di San Daniele oder Melone.",
+    "culinaryServingEn": "Light aperitivo, pairs with melon and prosciutto, seafood carpaccio, or mild fresh goat cheese.",
+    "faqDe": "Was bedeutet DOCG beim Prosecco? Höchste italienische Qualitätsstufe aus den historischen Steillagen zwischen Conegliano und Valdobbiadene – nicht zu verwechseln mit einfachem Flachland-DOC-Prosecco.",
+    "faqEn": "What does DOCG mean for Prosecco? Strict origin guarantee from steep hand-harvested hills, distinctly superior to flatland DOC.",
+    "guestFaqDe": "Was bedeutet DOCG beim Prosecco? Höchste italienische Qualitätsstufe aus den historischen Steillagen zwischen Conegliano und Valdobbiadene – nicht zu verwechseln mit einfachem Flachland-DOC-Prosecco.",
+    "guestFaqEn": "What does DOCG mean for Prosecco? Strict origin guarantee from steep hand-harvested hills, distinctly superior to flatland DOC.",
+    "allergens": [
+      "Sulfite"
+    ],
+    "tags": [
+      "Prosecco",
+      "Valdobbiadene",
+      "DOCG",
+      "Charmat",
+      "Italy",
+      "Aperitivo"
+    ],
+    "isFavorite": false
+  },
+  {
+    "id": "wine_riesling_grosses_gewaechs",
+    "category": "wine",
+    "nameDe": "Riesling Großes Gewächs (VDP.GG Trocken)",
+    "nameEn": "German Riesling Großes Gewächs (Dry Grand Cru)",
+    "subtitleDe": "Spitzenlage auf Steillagen-Schiefer, trockener Ausbau, vibrierende Säure & Schiefermineralität",
+    "subtitleEn": "Steep slate slope single vineyard dry Riesling; crystalline acidity & profound mineral depth",
+    "imageUrl": "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?w=800&auto=format&fit=crop&q=80",
+    "origin": "Deutschland (Mosel / Rheingau / Nahe - VDP)",
+    "isImport": false,
+    "abv": "12.5% ABV",
+    "tasteDe": "Knackiger grüner Apfel, Weinbergpfirsich, Feuerstein, nasser Schiefer, straffe rassige Säure und enormer Nachhall.",
+    "tasteEn": "Crisp vineyard peach, green apple, flint smoke, wet slate minerality, precise racy acidity.",
+    "tasteProfileDe": "Knackiger grüner Apfel, Weinbergpfirsich, Feuerstein, nasser Schiefer, straffe rassige Säure und enormer Nachhall.",
+    "tasteProfileEn": "Crisp vineyard peach, green apple, flint smoke, wet slate minerality, precise racy acidity.",
+    "scienceDe": "Riesling bildet überdurchschnittlich viel natürliche Äpfel- und Weinsäure. Auf Steillagen-Schieferböden erwärmt sich das Gestein tagsüber und speichert Wärme für die Nacht. Trocken ausgebaut balanciert der mineralische Schmelz die Säurestruktur ohne spürbare Restsüße. Bei Reifung entsteht durch Carotinoid-Abbau das typische Edel-Aroma (TDN).",
+    "scienceEn": "High natural malic and tartaric acid paired with slate-derived minerality. Dry Grand Cru (VDP.GG) requires strict yield limits below 50 hl/ha. Aging breaks down carotenoids into 1,1,6-trimethyl-1,2-dihydronaphthalene (TDN), creating prized noble kerosene/petrol complexity.",
+    "scienceExplainedDe": "Riesling bildet überdurchschnittlich viel natürliche Äpfel- und Weinsäure. Auf Steillagen-Schieferböden erwärmt sich das Gestein tagsüber und speichert Wärme für die Nacht. Trocken ausgebaut balanciert der mineralische Schmelz die Säurestruktur ohne spürbare Restsüße. Bei Reifung entsteht durch Carotinoid-Abbau das typische Edel-Aroma (TDN).",
+    "scienceExplainedEn": "High natural malic and tartaric acid paired with slate-derived minerality. Dry Grand Cru (VDP.GG) requires strict yield limits below 50 hl/ha. Aging breaks down carotenoids into 1,1,6-trimethyl-1,2-dihydronaphthalene (TDN), creating prized noble kerosene/petrol complexity.",
+    "culinaryDe": "Zu Zander auf der Haut gebraten, Kalbsbries, Meeresfrüchten oder würziger asiatischer Haute Cuisine.",
+    "culinaryEn": "Pairs with pan-roasted pikeperch, veal sweetbreads, shellfish, or spicy Asian fine dining.",
+    "culinaryServingDe": "Zu Zander auf der Haut gebraten, Kalbsbries, Meeresfrüchten oder würziger asiatischer Haute Cuisine.",
+    "culinaryServingEn": "Pairs with pan-roasted pikeperch, veal sweetbreads, shellfish, or spicy Asian fine dining.",
+    "faqDe": "Was bedeutet 'Großes Gewächs'? Es ist die höchste deutsche Klassifikation des VDP für trockene Spitzenweine aus streng parzellierten Grand-Cru-Lagen.",
+    "faqEn": "What is Großes Gewächs? The German equivalent of Grand Cru: dry wine from strictly classified historic terroir.",
+    "guestFaqDe": "Was bedeutet 'Großes Gewächs'? Es ist die höchste deutsche Klassifikation des VDP für trockene Spitzenweine aus streng parzellierten Grand-Cru-Lagen.",
+    "guestFaqEn": "What is Großes Gewächs? The German equivalent of Grand Cru: dry wine from strictly classified historic terroir.",
+    "allergens": [
+      "Sulfite"
+    ],
+    "tags": [
+      "Riesling",
+      "GrossesGewaechs",
+      "VDP",
+      "Mosel",
+      "DryWhite",
+      "Terroir"
+    ],
+    "isFavorite": true
+  },
+  {
+    "id": "wine_barolo_docg_nebbiolo",
+    "category": "wine",
+    "nameDe": "Barolo DOCG ('König der Weine')",
+    "nameEn": "Barolo DOCG (100% Nebbiolo)",
+    "subtitleDe": "Aus 100% Nebbiolo-Trauben der Langhe; granatrot, Teer, getrocknete Rosen, mächtiges Tannin",
+    "subtitleEn": "100% Nebbiolo aged in oak; translucent garnet color, tar, dried rose petals & massive tannins",
+    "imageUrl": "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=800&auto=format&fit=crop&q=80",
+    "origin": "Italien (Piemont / Langhe - DOCG)",
+    "isImport": true,
+    "abv": "14.5% ABV",
+    "tasteDe": "Getrocknete Rosenblätter, Sauerkirsche, Trüffel, Teer, Leder, feste Tanninstruktur mit unendlicher Länge.",
+    "tasteEn": "Dried rose petals, sour cherry, damp forest earth, white truffle, firm youthful tannins, endless finish.",
+    "tasteProfileDe": "Getrocknete Rosenblätter, Sauerkirsche, Trüffel, Teer, Leder, feste Tanninstruktur mit unendlicher Länge.",
+    "tasteProfileEn": "Dried rose petals, sour cherry, damp forest earth, white truffle, firm youthful tannins, endless finish.",
+    "scienceDe": "Nebbiolo besitzt eine helle Schale mit wenig Anthocyanen, aber extrem hohem Tanningehalt und hoher Säure. Gesetzlich muss Barolo mindestens 38 Monate reifen (davon 18 im Holzfass; Riserva 62 Monate). Die oxidative Reife im großen Holzfass baut die adstringierenden Gerbstoffe ab und lässt das komplexe tertiäre Aromaprofil entstehen.",
+    "scienceEn": "Nebbiolo is characterized by pale pigments combined with immense polyphenol and acidity concentrations. Aging mandates min. 38 months (18 in wood). Micro-oxygenation in Slavonian casks polymerizes harsh catechins into velvety complex tannins.",
+    "scienceExplainedDe": "Nebbiolo besitzt eine helle Schale mit wenig Anthocyanen, aber extrem hohem Tanningehalt und hoher Säure. Gesetzlich muss Barolo mindestens 38 Monate reifen (davon 18 im Holzfass; Riserva 62 Monate). Die oxidative Reife im großen Holzfass baut die adstringierenden Gerbstoffe ab und lässt das komplexe tertiäre Aromaprofil entstehen.",
+    "scienceExplainedEn": "Nebbiolo is characterized by pale pigments combined with immense polyphenol and acidity concentrations. Aging mandates min. 38 months (18 in wood). Micro-oxygenation in Slavonian casks polymerizes harsh catechins into velvety complex tannins.",
+    "culinaryDe": "Klassisch zu Schmorgerichten wie Brasato al Barolo, Tagliolini mit weißem Alba-Trüffel oder gereiftem Castelmagno-Käse.",
+    "culinaryEn": "Essential match for braised beef (Brasato), pasta with fresh white Alba truffles, or aged Castelmagno cheese.",
+    "culinaryServingDe": "Klassisch zu Schmorgerichten wie Brasato al Barolo, Tagliolini mit weißem Alba-Trüffel oder gereiftem Castelmagno-Käse.",
+    "culinaryServingEn": "Essential match for braised beef (Brasato), pasta with fresh white Alba truffles, or aged Castelmagno cheese.",
+    "faqDe": "Warum sieht Barolo trotz kraftvollem Geschmack relativ hell aus? Weil Nebbiolo-Trauben von Natur aus sehr wenige rote Schalenfarbstoffe enthalten.",
+    "faqEn": "Why is Barolo pale despite being full-bodied? Nebbiolo contains minimal red anthocyanins, yielding brick-orange rims early in life.",
+    "guestFaqDe": "Warum sieht Barolo trotz kraftvollem Geschmack relativ hell aus? Weil Nebbiolo-Trauben von Natur aus sehr wenige rote Schalenfarbstoffe enthalten.",
+    "guestFaqEn": "Why is Barolo pale despite being full-bodied? Nebbiolo contains minimal red anthocyanins, yielding brick-orange rims early in life.",
+    "allergens": [
+      "Sulfite"
+    ],
+    "tags": [
+      "Barolo",
+      "Nebbiolo",
+      "DOCG",
+      "Piedmont",
+      "FineWine",
+      "TrufflePairing"
+    ],
+    "isFavorite": true
+  },
+  {
+    "id": "wine_bordeaux_grand_cru_classe",
+    "category": "wine",
+    "nameDe": "Bordeaux Grand Cru Classé (Médoc / Saint-Émilion)",
+    "nameEn": "Bordeaux Grand Cru Classé (Cabernet / Merlot Blend)",
+    "subtitleDe": "Klassischer Verschnitt aus Cabernet Sauvignon & Merlot; 18 Monate in Barrique-Fässern gereift",
+    "subtitleEn": "Benchmark Left/Right Bank blend; aged 18 months in French oak barrels with cedar & cassis",
+    "imageUrl": "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=800&auto=format&fit=crop&q=80",
+    "origin": "Frankreich (Bordeaux / Médoc & Saint-Émilion AOC)",
+    "isImport": true,
+    "abv": "13.5% ABV",
+    "tasteDe": "Schwarze Johannisbeere (Cassis), Zedernholz, Zigarrenkiste, Grafit, feinkörnige Tannine und dichter Körper.",
+    "tasteEn": "Ripe cassis, black plum, pencil shavings, cedar chest, dark cocoa, structured velvety tannins.",
+    "tasteProfileDe": "Schwarze Johannisbeere (Cassis), Zedernholz, Zigarrenkiste, Grafit, feinkörnige Tannine und dichter Körper.",
+    "tasteProfileEn": "Ripe cassis, black plum, pencil shavings, cedar chest, dark cocoa, structured velvety tannins.",
+    "scienceDe": "Das Zusammenwirken zweier Rebsorten: Cabernet Sauvignon liefert Gerüst, Säure, dunkle Frucht und langlebige Tannine; Merlot steuert weichen Schmelz, fleischigen Körper und Pflaumenaromen bei. Im 225-Liter-Barrique aus französischer Eiche findet die malolaktische Gärung statt; Vanillin und Eichenlactone binden sich harmonisch ein.",
+    "scienceEn": "Classic synergy: Cabernet Sauvignon provides acid-tannin framework and cassis pyrazines; Merlot buffers the mid-palate with rounded plum flesh. Aging in toasted French oak (Quercus petraea) releases vanillin and syringaldehyde, stabilizing pigments.",
+    "scienceExplainedDe": "Das Zusammenwirken zweier Rebsorten: Cabernet Sauvignon liefert Gerüst, Säure, dunkle Frucht und langlebige Tannine; Merlot steuert weichen Schmelz, fleischigen Körper und Pflaumenaromen bei. Im 225-Liter-Barrique aus französischer Eiche findet die malolaktische Gärung statt; Vanillin und Eichenlactone binden sich harmonisch ein.",
+    "scienceExplainedEn": "Classic synergy: Cabernet Sauvignon provides acid-tannin framework and cassis pyrazines; Merlot buffers the mid-palate with rounded plum flesh. Aging in toasted French oak (Quercus petraea) releases vanillin and syringaldehyde, stabilizing pigments.",
+    "culinaryDe": "Zu Rinderfilet Chateaubriand, Lammkarree mit Kräuterkruste oder gereiftem Comté.",
+    "culinaryEn": "Classic pairing for roasted rack of lamb, dry-aged ribeye, venison loin, and hard aged cheeses.",
+    "culinaryServingDe": "Zu Rinderfilet Chateaubriand, Lammkarree mit Kräuterkruste oder gereiftem Comté.",
+    "culinaryServingEn": "Classic pairing for roasted rack of lamb, dry-aged ribeye, venison loin, and hard aged cheeses.",
+    "faqDe": "Warum dekantiert man Bordeaux? Junge Weine profitieren von Sauerstoffzufuhr zur Öffnung der Aromen; reife Jahrgänge werden vorsichtig vom Bodensatz (Depot) getrennt.",
+    "faqEn": "Why decant Bordeaux? Aeration softens youthful oak tannins; with older bottles, it separates clear wine from tannin sediment.",
+    "guestFaqDe": "Warum dekantiert man Bordeaux? Junge Weine profitieren von Sauerstoffzufuhr zur Öffnung der Aromen; reife Jahrgänge werden vorsichtig vom Bodensatz (Depot) getrennt.",
+    "guestFaqEn": "Why decant Bordeaux? Aeration softens youthful oak tannins; with older bottles, it separates clear wine from tannin sediment.",
+    "allergens": [
+      "Sulfite"
+    ],
+    "tags": [
+      "Bordeaux",
+      "GrandCru",
+      "CabernetSauvignon",
+      "Merlot",
+      "Barrique",
+      "RedWine"
+    ],
+    "isFavorite": true
+  },
+  {
+    "id": "spirits_single_malt_islay_whisky",
+    "category": "spirits",
+    "nameDe": "Single Malt Scotch Whisky (Islay Torfrauch)",
+    "nameEn": "Islay Peated Single Malt Scotch Whisky",
+    "subtitleDe": "Über schwelendem Torffeuer gedarrtes Gerstenmalz, zweifach in Kupferblasen gebrannt",
+    "subtitleEn": "Heavily peated barley dried over island peat smoke, double pot still distillation",
+    "imageUrl": "https://images.unsplash.com/photo-1527281400683-1aae777175f8?w=800&auto=format&fit=crop&q=80",
+    "origin": "Schottland (Islay)",
+    "isImport": true,
+    "abv": "46.0% ABV",
+    "tasteDe": "Intensiver Lagerfeuerrauch, Jod, Meersalzgischt, geröstete Eiche, dunkle Vanille und süßliches Malz.",
+    "tasteEn": "Heavy peat campfire smoke, iodine, coastal brine, smoked bacon, vanilla oak, and sweet malt core.",
+    "tasteProfileDe": "Intensiver Lagerfeuerrauch, Jod, Meersalzgischt, geröstete Eiche, dunkle Vanille und süßliches Malz.",
+    "tasteProfileEn": "Heavy peat campfire smoke, iodine, coastal brine, smoked bacon, vanilla oak, and sweet malt core.",
+    "scienceDe": "Das gemälzte Gerstenkorn wird im Kiln über Torfrauch getrocknet. Die dabei freigesetzten Phenole, Kresole und Guajakole lagern sich auf der Kornhülle ab (gemessen in ppm Phenolgehalt). Nach zweifacher Kupferbrennung reift das Destillat mindestens 10 Jahre in Eichenfässern, wo Holzlignine in süßliche Vanilline umgewandelt werden.",
+    "scienceEn": "Barley malt is smoked over smoldering heather peat moss in kiln towers. Phenolic compounds (phenol, cresol, guaiacol) adhere to grain husks. Double copper pot distillation and min. 10 years barrel maturation marry medicinal smoke with sweet oak vanillins.",
+    "scienceExplainedDe": "Das gemälzte Gerstenkorn wird im Kiln über Torfrauch getrocknet. Die dabei freigesetzten Phenole, Kresole und Guajakole lagern sich auf der Kornhülle ab (gemessen in ppm Phenolgehalt). Nach zweifacher Kupferbrennung reift das Destillat mindestens 10 Jahre in Eichenfässern, wo Holzlignine in süßliche Vanilline umgewandelt werden.",
+    "scienceExplainedEn": "Barley malt is smoked over smoldering heather peat moss in kiln towers. Phenolic compounds (phenol, cresol, guaiacol) adhere to grain husks. Double copper pot distillation and min. 10 years barrel maturation marry medicinal smoke with sweet oak vanillins.",
+    "culinaryDe": "Pur im Nosing-Glas bei Zimmertemperatur; mit wenigen Tropfen stillem Quellwasser geöffnet; passt genial zu Roquefort oder Austern.",
+    "culinaryEn": "Sipped neat in a tulip Glencairn glass; open with 3 drops of still water; stunning match for smoked oysters or Roquefort cheese.",
+    "culinaryServingDe": "Pur im Nosing-Glas bei Zimmertemperatur; mit wenigen Tropfen stillem Quellwasser geöffnet; passt genial zu Roquefort oder Austern.",
+    "culinaryServingEn": "Sipped neat in a tulip Glencairn glass; open with 3 drops of still water; stunning match for smoked oysters or Roquefort cheese.",
+    "faqDe": "Warum öffnet ein Tropfen Wasser den Whisky? Wasser senkt die Oberflächenspannung und setzt hydrophobe Aromastoffe (wie Guajakol) an der Flüssigkeitsoberfläche frei.",
+    "faqEn": "Why add water to cask-strength whisky? A few drops dilute ethanol, releasing hydrophobic aromatic molecules (guaiacol) to vaporize freely.",
+    "guestFaqDe": "Warum öffnet ein Tropfen Wasser den Whisky? Wasser senkt die Oberflächenspannung und setzt hydrophobe Aromastoffe (wie Guajakol) an der Flüssigkeitsoberfläche frei.",
+    "guestFaqEn": "Why add water to cask-strength whisky? A few drops dilute ethanol, releasing hydrophobic aromatic molecules (guaiacol) to vaporize freely.",
+    "allergens": [],
+    "tags": [
+      "Whisky",
+      "SingleMalt",
+      "Islay",
+      "PeatSmoke",
+      "Scotch",
+      "Spirits"
+    ],
+    "isFavorite": true
+  },
+  {
+    "id": "spirits_london_dry_gin",
+    "category": "spirits",
+    "nameDe": "London Dry Gin (Botanical Destillat)",
+    "nameEn": "London Dry Gin (Artisanal Botanical)",
+    "subtitleDe": "Reines Agraralkohol-Destillat mit Wacholder, Koriander & Zitrusschalen; streng zuckerfrei",
+    "subtitleEn": "Pure neutral grain spirit redistilled with natural botanicals, strictly zero sweetening",
+    "imageUrl": "https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=800&auto=format&fit=crop&q=80",
+    "origin": "Großbritannien & International",
+    "isImport": false,
+    "abv": "44.0% ABV",
+    "tasteDe": "Dominanter Kiefernwacholder, frische Zitronen- und Koriandernoten, trockener kräuteriger Abgang.",
+    "tasteEn": "Crisp piney juniper, cracked coriander, bright citrus peel, angelica root, dry botanical finish.",
+    "tasteProfileDe": "Dominanter Kiefernwacholder, frische Zitronen- und Koriandernoten, trockener kräuteriger Abgang.",
+    "tasteProfileEn": "Crisp piney juniper, cracked coriander, bright citrus peel, angelica root, dry botanical finish.",
+    "scienceDe": "Das Prädikat 'London Dry' unterliegt dem EU-Recht: Alle Aromen müssen aus der erneuten Destillation von reinem Alkohol mit natürlichen Pflanzenstoffen (Botanicals) stammen. Nachträgliches Hinzufügen von künstlichen Aromen, Farbstoffen oder nennenswertem Zucker ist verboten.",
+    "scienceEn": "Strictly regulated under EU spirits law: all botanicals must be introduced during redistillation in traditional pot stills. Artificial flavorings and colorings are prohibited, and sugar addition is limited to maximum 0.1 g/L.",
+    "scienceExplainedDe": "Das Prädikat 'London Dry' unterliegt dem EU-Recht: Alle Aromen müssen aus der erneuten Destillation von reinem Alkohol mit natürlichen Pflanzenstoffen (Botanicals) stammen. Nachträgliches Hinzufügen von künstlichen Aromen, Farbstoffen oder nennenswertem Zucker ist verboten.",
+    "scienceExplainedEn": "Strictly regulated under EU spirits law: all botanicals must be introduced during redistillation in traditional pot stills. Artificial flavorings and colorings are prohibited, and sugar addition is limited to maximum 0.1 g/L.",
+    "culinaryDe": "Die Basis für den perfekten Dry Martini, Negroni oder Gin & Tonic mit trockenem Indian Tonic Water.",
+    "culinaryEn": "Gold standard for dry martinis with olive or twist, classic Negroni, and premium Gin & Tonic.",
+    "culinaryServingDe": "Die Basis für den perfekten Dry Martini, Negroni oder Gin & Tonic mit trockenem Indian Tonic Water.",
+    "culinaryServingEn": "Gold standard for dry martinis with olive or twist, classic Negroni, and premium Gin & Tonic.",
+    "faqDe": "Muss London Dry Gin aus London kommen? Nein, es ist eine geschützte Herstellungsmethode, kein geografischer Herkunftsschutz.",
+    "faqEn": "Must London Dry be made in London? No, it defines a distillation process and quality standard, not a geographic origin.",
+    "guestFaqDe": "Muss London Dry Gin aus London kommen? Nein, es ist eine geschützte Herstellungsmethode, kein geografischer Herkunftsschutz.",
+    "guestFaqEn": "Must London Dry be made in London? No, it defines a distillation process and quality standard, not a geographic origin.",
+    "allergens": [],
+    "tags": [
+      "Gin",
+      "LondonDry",
+      "Juniper",
+      "Martini",
+      "Cocktails",
+      "Spirits"
+    ],
+    "isFavorite": false
+  },
+  {
+    "id": "spirits_rhum_agricole_martinique_aoc",
+    "category": "spirits",
+    "nameDe": "Rhum Agricole Blanc (AOC Martinique)",
+    "nameEn": "Rhum Agricole Blanc (AOC Martinique)",
+    "subtitleDe": "Aus 100% frischem Zuckerrohrsaft (Vesou) destilliert statt Melasse; grasig, fruchtig, terroir-geprägt",
+    "subtitleEn": "Distilled directly from fresh-pressed pure sugarcane juice rather than molasses",
+    "imageUrl": "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=800&auto=format&fit=crop&q=80",
+    "origin": "Martinique (Französische Antillen - AOC)",
+    "isImport": true,
+    "abv": "50.0% ABV",
+    "tasteDe": "Frisches grünes Zuckerrohr, weißer Pfeffer, Limettenzeste, nasse Erde und exotische Blumennoten.",
+    "tasteEn": "Grassy sugarcane, crushed green pepper, lime zest, floral earthiness, explosive aromatic kick.",
+    "tasteProfileDe": "Frisches grünes Zuckerrohr, weißer Pfeffer, Limettenzeste, nasse Erde und exotische Blumennoten.",
+    "tasteProfileEn": "Grassy sugarcane, crushed green pepper, lime zest, floral earthiness, explosive aromatic kick.",
+    "scienceDe": "Über 95% der weltweiten Rumsorten werden aus billiger Melasse (einem zähen Restprodukt der Zuckerfabrikation) gebrannt. Echter 'Rhum Agricole' wird direkt aus dem frisch gepressten, rohen Zuckerrohrsaft innerhalb von 24 Stunden vergoren und in kreolischen Kolonnen gebrannt. Das AOC-Siegel der Insel Martinique garantiert die Reinheit.",
+    "scienceEn": "Unlike industrial rum distilled from residual refinery molasses, Rhum Agricole is fermented strictly from fresh sugarcane juice (vesou) pressed within 24 hours of harvest. The AOC Martinique standard preserves vegetal grassy terpenes.",
+    "scienceExplainedDe": "Über 95% der weltweiten Rumsorten werden aus billiger Melasse (einem zähen Restprodukt der Zuckerfabrikation) gebrannt. Echter 'Rhum Agricole' wird direkt aus dem frisch gepressten, rohen Zuckerrohrsaft innerhalb von 24 Stunden vergoren und in kreolischen Kolonnen gebrannt. Das AOC-Siegel der Insel Martinique garantiert die Reinheit.",
+    "scienceExplainedEn": "Unlike industrial rum distilled from residual refinery molasses, Rhum Agricole is fermented strictly from fresh sugarcane juice (vesou) pressed within 24 hours of harvest. The AOC Martinique standard preserves vegetal grassy terpenes.",
+    "culinaryDe": "Das Herzstück des klassischen 'Ti' Punch' (Rhum Agricole, Limettenscheibe, Rohrzuckersirup).",
+    "culinaryEn": "Essential spirit for authentic Caribbean Ti' Punch (swizzled with fresh lime coin and cane syrup).",
+    "culinaryServingDe": "Das Herzstück des klassischen 'Ti' Punch' (Rhum Agricole, Limettenscheibe, Rohrzuckersirup).",
+    "culinaryServingEn": "Essential spirit for authentic Caribbean Ti' Punch (swizzled with fresh lime coin and cane syrup).",
+    "faqDe": "Was ist der Unterschied zu kubanischem Rum? Kubanischer Rum basiert auf Melasse (schwerer, süßlicher); Agricole ist frischer Zuckerrohrsaft (frisch, grün, kräuterig).",
+    "faqEn": "Agricole vs. Traditional Rum? Traditional rum uses molasses byproduct; Agricole uses 100% fresh agricultural sugarcane juice.",
+    "guestFaqDe": "Was ist der Unterschied zu kubanischem Rum? Kubanischer Rum basiert auf Melasse (schwerer, süßlicher); Agricole ist frischer Zuckerrohrsaft (frisch, grün, kräuterig).",
+    "guestFaqEn": "Agricole vs. Traditional Rum? Traditional rum uses molasses byproduct; Agricole uses 100% fresh agricultural sugarcane juice.",
+    "allergens": [],
+    "tags": [
+      "Rum",
+      "RhumAgricole",
+      "Martinique",
+      "AOC",
+      "SugarCane",
+      "TiPunch"
+    ],
+    "isFavorite": false
+  },
+  {
+    "id": "spirits_tequila_100_agave_anejo",
+    "category": "spirits",
+    "nameDe": "Tequila 100% de Agave Añejo",
+    "nameEn": "Tequila 100% de Agave Añejo",
+    "subtitleDe": "Reine Blaue Weber-Agave, im Steinofen gegart, mind. 12 Monate im Eichenfass gereift",
+    "subtitleEn": "100% Blue Weber agave slow-steamed in masonry ovens, aged min. 1 year in oak",
+    "imageUrl": "https://images.unsplash.com/photo-1516594798947-e65505dbb29d?w=800&auto=format&fit=crop&q=80",
+    "origin": "Mexiko (Jalisco - CRT zertifiziert)",
+    "isImport": true,
+    "abv": "40.0% ABV",
+    "tasteDe": "Gebackene süße Agave, Karamell, geröstete Mandeln, Vanille, Pfeffer und zarte Eichenwürze.",
+    "tasteEn": "Roasted sweet agave heart, rich vanilla caramel, toasted almond, warm black pepper, silky wood.",
+    "tasteProfileDe": "Gebackene süße Agave, Karamell, geröstete Mandeln, Vanille, Pfeffer und zarte Eichenwürze.",
+    "tasteProfileEn": "Roasted sweet agave heart, rich vanilla caramel, toasted almond, warm black pepper, silky wood.",
+    "scienceDe": "Echter Premium-Tequila trägt die Aufschrift '100% de Agave' (Mixto-Tequila darf bis zu 49% Fremdzucker enthalten). Die Agavenherzen (Piñas) werden 7-8 Jahre aufgezogen und in Öfen gegart, um Inulin in vergärbaren Fruchtzucker zu spalten. Ein 'Añejo' reift mindestens ein Jahr in kleinen Eichenholzfässern unter 600 Litern.",
+    "scienceEn": "Requires 100% Blue Weber Agave (Agave tequilana). Mature 7-year-old piñas are slow-steamed in brick ovens to hydrolyze inulin polysaccharides into fermentable fructose. Añejo status requires min. 12 months maturation in small oak barrels.",
+    "scienceExplainedDe": "Echter Premium-Tequila trägt die Aufschrift '100% de Agave' (Mixto-Tequila darf bis zu 49% Fremdzucker enthalten). Die Agavenherzen (Piñas) werden 7-8 Jahre aufgezogen und in Öfen gegart, um Inulin in vergärbaren Fruchtzucker zu spalten. Ein 'Añejo' reift mindestens ein Jahr in kleinen Eichenholzfässern unter 600 Litern.",
+    "scienceExplainedEn": "Requires 100% Blue Weber Agave (Agave tequilana). Mature 7-year-old piñas are slow-steamed in brick ovens to hydrolyze inulin polysaccharides into fermentable fructose. Añejo status requires min. 12 months maturation in small oak barrels.",
+    "culinaryDe": "Als Sipping Tequila im Riedel-Tequilaglas bei ca. 18°C serviert – niemals mit Salz und Zitrone hinunterstürzen!",
+    "culinaryEn": "Sipped neat from a tequila tasting glass at room temperature; pairs beautifully with dark single-origin chocolate.",
+    "culinaryServingDe": "Als Sipping Tequila im Riedel-Tequilaglas bei ca. 18°C serviert – niemals mit Salz und Zitrone hinunterstürzen!",
+    "culinaryServingEn": "Sipped neat from a tequila tasting glass at room temperature; pairs beautifully with dark single-origin chocolate.",
+    "faqDe": "Warum niemals billigen Tequila mit Salz und Zitrone? Der 'Salz-Zitronen-Trick' wurde erfunden, um den brennenden Geschmack minderwertiger Industrie-Mixtos zu überdecken.",
+    "faqEn": "Why avoid salt and lemon shots? The lime-and-salt ritual was designed to mask harsh impurities in cheap mixed tequilas.",
+    "guestFaqDe": "Warum niemals billigen Tequila mit Salz und Zitrone? Der 'Salz-Zitronen-Trick' wurde erfunden, um den brennenden Geschmack minderwertiger Industrie-Mixtos zu überdecken.",
+    "guestFaqEn": "Why avoid salt and lemon shots? The lime-and-salt ritual was designed to mask harsh impurities in cheap mixed tequilas.",
+    "allergens": [],
+    "tags": [
+      "Tequila",
+      "Agave",
+      "Anejo",
+      "Mexico",
+      "Jalisco",
+      "PremiumSpirits"
+    ],
+    "isFavorite": false
+  },
+  {
+    "id": "spirits_cognac_xo_grande_champagne",
+    "category": "spirits",
+    "nameDe": "Cognac XO (Grande Champagne Premier Cru)",
+    "nameEn": "Cognac XO (Grande Champagne Premier Cru)",
+    "subtitleDe": "Zweifach in Kupferblasen gebrannt aus Ugni Blanc; mind. 10 Jahre in Limousin-Eiche gereift",
+    "subtitleEn": "Double distilled in Charentais pot stills from Ugni Blanc, min. 10 years aged in French oak",
+    "imageUrl": "https://images.unsplash.com/photo-1569529465841-dfecdab7503b?w=800&auto=format&fit=crop&q=80",
+    "origin": "Frankreich (Charente / Cognac AOC - Grande Champagne)",
+    "isImport": true,
+    "abv": "40.0% ABV",
+    "tasteDe": "Feine Rancio-Noten, kandierte Feigen, Muskatnuss, Schokolade, Zedernholz, samtiger Schmelz.",
+    "tasteEn": "Complex rancio, candied orange peel, dried figs, nutmeg spice, dark chocolate, and cigar box oak.",
+    "tasteProfileDe": "Feine Rancio-Noten, kandierte Feigen, Muskatnuss, Schokolade, Zedernholz, samtiger Schmelz.",
+    "tasteProfileEn": "Complex rancio, candied orange peel, dried figs, nutmeg spice, dark chocolate, and cigar box oak.",
+    "scienceDe": "Gebrannt aus säurereichem Weißwein der Rebsorte Ugni Blanc in der traditionellen Charentais-Kupferbrennblase (Alambic Charentais). Nach zwei Brenndurchgängen reift das Eau-de-vie jahrzehntelang in Fässern aus grobfaseriger Limousin-Eiche. Dabei entwickelt sich der legendäre 'Rancio Charentais' – ein nussig-erdiges Alterungsaroma durch langsame Lipidoxidation.",
+    "scienceEn": "Distilled from high-acid Ugni Blanc base wine in traditional copper Charentais alembics. Aging in porous Limousin oak over decades induces mild oxidation, generating classic 'rancio' (drying ketones and fatty acid esters).",
+    "scienceExplainedDe": "Gebrannt aus säurereichem Weißwein der Rebsorte Ugni Blanc in der traditionellen Charentais-Kupferbrennblase (Alambic Charentais). Nach zwei Brenndurchgängen reift das Eau-de-vie jahrzehntelang in Fässern aus grobfaseriger Limousin-Eiche. Dabei entwickelt sich der legendäre 'Rancio Charentais' – ein nussig-erdiges Alterungsaroma durch langsame Lipidoxidation.",
+    "scienceExplainedEn": "Distilled from high-acid Ugni Blanc base wine in traditional copper Charentais alembics. Aging in porous Limousin oak over decades induces mild oxidation, generating classic 'rancio' (drying ketones and fatty acid esters).",
+    "culinaryDe": "Als Digestif im Schwenker oder Nosing-Glas nach dem Menü; ideal zu Espresso und feiner Zigarre.",
+    "culinaryEn": "Classic post-dinner digestif served in a snifter alongside dark truffles or an espresso.",
+    "culinaryServingDe": "Als Digestif im Schwenker oder Nosing-Glas nach dem Menü; ideal zu Espresso und feiner Zigarre.",
+    "culinaryServingEn": "Classic post-dinner digestif served in a snifter alongside dark truffles or an espresso.",
+    "faqDe": "Was bedeutet XO beim Cognac? 'Extra Old' – seit 2018 muss das jüngste im Verschnitt enthaltene Destillat mindestens 10 Jahre im Eichenfass gereift sein.",
+    "faqEn": "What does XO mean? Extra Old: by law, the youngest eau-de-vie in the blend must have aged at least 10 years in oak.",
+    "guestFaqDe": "Was bedeutet XO beim Cognac? 'Extra Old' – seit 2018 muss das jüngste im Verschnitt enthaltene Destillat mindestens 10 Jahre im Eichenfass gereift sein.",
+    "guestFaqEn": "What does XO mean? Extra Old: by law, the youngest eau-de-vie in the blend must have aged at least 10 years in oak.",
+    "allergens": [],
+    "tags": [
+      "Cognac",
+      "XO",
+      "GrandeChampagne",
+      "AOC",
+      "Brandy",
+      "Luxury"
+    ],
+    "isFavorite": true
+  },
+  {
+    "id": "cheese_comte_aop_extra_aged",
+    "category": "cheese",
+    "nameDe": "Comté AOP (24 Monate Höhlenreifung)",
+    "nameEn": "Comté AOP Extra Aged (24 Months Cave Reserve)",
+    "subtitleDe": "Unpasteurisierte Montbéliarde-Rohmilch, im Jura-Kalksteinkeller gereift; nussig, dicht, Reifekristalle",
+    "subtitleEn": "Raw cow's milk aged 24 months in Jura limestone fortresses; brown butter, hazelnut & tyrosine crystals",
+    "imageUrl": "https://images.unsplash.com/photo-1452195100486-9cc805987862?w=800&auto=format&fit=crop&q=80",
+    "origin": "Frankreich (Jura / Franche-Comté - AOP)",
+    "isImport": true,
+    "abv": "0.0% ABV",
+    "tasteDe": "Gebräunte Butter, Haselnuss, Dörrobst, feine Reifekristalle, tiefes Umami und blumige Alpenkräuter.",
+    "tasteEn": "Toasted hazelnut, caramelized butter, dried apricot, savory bone broth umami, crunchy tyrosine crystals.",
+    "tasteProfileDe": "Gebräunte Butter, Haselnuss, Dörrobst, feine Reifekristalle, tiefes Umami und blumige Alpenkräuter.",
+    "tasteProfileEn": "Toasted hazelnut, caramelized butter, dried apricot, savory bone broth umami, crunchy tyrosine crystals.",
+    "scienceDe": "Jeder Laib Comté benötigt ca. 450 Liter tagesfrische Rohmilch von Montbéliarde-Kühen. Während der 24 Monate auf Fichtenholzbrettern in den kühlen Festungskellern des Jura bauen Enzyme Proteine in freie Glutaminsäure und Tyrosin-Kristalle ab. Die Rinde wird regelmäßig mit Salzlake abgebürstet, um eine natürliche Rotschmiere-Flora zu erhalten.",
+    "scienceEn": "Requires 450 liters of raw milk per 40kg wheel. Aged on local spruce boards. Proteolysis over 24 months generates high levels of savory glutamates and crunchy tyrosine crystals without sourness.",
+    "scienceExplainedDe": "Jeder Laib Comté benötigt ca. 450 Liter tagesfrische Rohmilch von Montbéliarde-Kühen. Während der 24 Monate auf Fichtenholzbrettern in den kühlen Festungskellern des Jura bauen Enzyme Proteine in freie Glutaminsäure und Tyrosin-Kristalle ab. Die Rinde wird regelmäßig mit Salzlake abgebürstet, um eine natürliche Rotschmiere-Flora zu erhalten.",
+    "scienceExplainedEn": "Requires 450 liters of raw milk per 40kg wheel. Aged on local spruce boards. Proteolysis over 24 months generates high levels of savory glutamates and crunchy tyrosine crystals without sourness.",
+    "culinaryDe": "Auf der Käseplatte bei 18°C serviert; perfekt zu Vin Jaune, Walnussbrot oder im luxuriösen Käsefondue.",
+    "culinaryEn": "Served at cellar temperature with Vin Jaune from Jura, sourdough walnut loaf, or shaved over risotto.",
+    "culinaryServingDe": "Auf der Käseplatte bei 18°C serviert; perfekt zu Vin Jaune, Walnussbrot oder im luxuriösen Käsefondue.",
+    "culinaryServingEn": "Served at cellar temperature with Vin Jaune from Jura, sourdough walnut loaf, or shaved over risotto.",
+    "faqDe": "Was sind die weißen Pünktchen im gereiften Comté? Es sind reine Aminosäurekristalle (Tyrosin) – das Kennzeichen einer echten langen Reifung und kein Salz!",
+    "faqEn": "What are the crunchy white specks? Pure amino acid crystals (tyrosine) resulting from long enzymatic protein breakdown, not salt grains.",
+    "guestFaqDe": "Was sind die weißen Pünktchen im gereiften Comté? Es sind reine Aminosäurekristalle (Tyrosin) – das Kennzeichen einer echten langen Reifung und kein Salz!",
+    "guestFaqEn": "What are the crunchy white specks? Pure amino acid crystals (tyrosine) resulting from long enzymatic protein breakdown, not salt grains.",
+    "allergens": [
+      "Milch (Laktosefrei durch Reifung)"
+    ],
+    "tags": [
+      "Comte",
+      "AOP",
+      "France",
+      "RawMilk",
+      "HardCheese",
+      "TyrosineCrystals"
+    ],
+    "isFavorite": true
+  },
+  {
+    "id": "cheese_appenzeller_edelkristall",
+    "category": "cheese",
+    "nameDe": "Appenzeller Edelkristall (Kräutersulz-Reserve)",
+    "nameEn": "Appenzeller Edelkristall (Aged Herbal Brine Reserve)",
+    "subtitleDe": "Schweizer Rohmilch-Hartkäse, über 8 Monate mit geheimer Bergkräuter-Sulz gepflegt; pikant, intensiv",
+    "subtitleEn": "Cave-aged Swiss raw cow's milk rubbed with secret 42-herb secret brine; spicy, pungent & dense",
+    "imageUrl": "https://images.unsplash.com/photo-1452195100486-9cc805987862?w=800&auto=format&fit=crop&q=80",
+    "origin": "Schweiz (Appenzellerland)",
+    "isImport": true,
+    "abv": "0.0% ABV",
+    "tasteDe": "Kräftig-würzig, Noten von Bergkräutern, Hefe, gerösteten Zwiebeln, feine Knusperkristalle im Teig.",
+    "tasteEn": "Boldly pungent, savory mountain herbs, roasted onions, rich broth umami, and delicate crunch.",
+    "tasteProfileDe": "Kräftig-würzig, Noten von Bergkräutern, Hefe, gerösteten Zwiebeln, feine Knusperkristalle im Teig.",
+    "tasteProfileEn": "Boldly pungent, savory mountain herbs, roasted onions, rich broth umami, and delicate crunch.",
+    "scienceDe": "Das Geheimnis des Appenzellers liegt in der sogenannten 'Kräutersulz': Eine streng gehütete Rezeptur aus über 42 alpinen Kräutern, Wurzeln, Blättern, Weißwein und Salz. Während der Reifung wird die Rinde mehrmals wöchentlich damit gebürstet, wodurch Schmierebakterien ein unvergleichlich würziges Aroma von außen nach innen transportieren.",
+    "scienceEn": "Treated during aging with the 'Kräutersulz', a secret wash of 42 mountain herbs, roots, white wine, and salt. Brevibacterium linens and surface bacteria metabolize proteins and impart heavy savory pungency.",
+    "scienceExplainedDe": "Das Geheimnis des Appenzellers liegt in der sogenannten 'Kräutersulz': Eine streng gehütete Rezeptur aus über 42 alpinen Kräutern, Wurzeln, Blättern, Weißwein und Salz. Während der Reifung wird die Rinde mehrmals wöchentlich damit gebürstet, wodurch Schmierebakterien ein unvergleichlich würziges Aroma von außen nach innen transportieren.",
+    "scienceExplainedEn": "Treated during aging with the 'Kräutersulz', a secret wash of 42 mountain herbs, roots, white wine, and salt. Brevibacterium linens and surface bacteria metabolize proteins and impart heavy savory pungency.",
+    "culinaryDe": "Für rustikale Schweizer Chäswähe, im Fondue für maximale Würze oder zur herzhaften Brotzeit.",
+    "culinaryEn": "Melted into robust fondue mixes, Swiss cheese tarts (Chäswähe), or served on crusty rye bread.",
+    "culinaryServingDe": "Für rustikale Schweizer Chäswähe, im Fondue für maximale Würze oder zur herzhaften Brotzeit.",
+    "culinaryServingEn": "Melted into robust fondue mixes, Swiss cheese tarts (Chäswähe), or served on crusty rye bread.",
+    "faqDe": "Kennt jemand das genaue Rezept der Kräutersulz? Nur zwei Personen in der gesamten Schweiz kennen die exakte Zusammensetzung der 42 Zutaten.",
+    "faqEn": "Who knows the herbal brine recipe? Only two designated master distillers in Switzerland hold the complete formula.",
+    "guestFaqDe": "Kennt jemand das genaue Rezept der Kräutersulz? Nur zwei Personen in der gesamten Schweiz kennen die exakte Zusammensetzung der 42 Zutaten.",
+    "guestFaqEn": "Who knows the herbal brine recipe? Only two designated master distillers in Switzerland hold the complete formula.",
+    "allergens": [
+      "Milch (Laktosefrei durch Reifung)"
+    ],
+    "tags": [
+      "Appenzeller",
+      "Switzerland",
+      "RawMilk",
+      "HerbalBrine",
+      "SpicyCheese"
+    ],
+    "isFavorite": false
+  },
+  {
+    "id": "cheese_gouda_noord_holland_oud",
+    "category": "cheese",
+    "nameDe": "Noord-Hollandse Gouda g.U. (Oud / Überjährig)",
+    "nameEn": "Aged Noord-Holland Gouda PDO (Oude Kaas)",
+    "subtitleDe": "Traditioneller Bruch-Waschprozess; nach 18 Monaten mürbe, dunkelgold, Karamell- & Salzkristallnoten",
+    "subtitleEn": "Curd-washed traditional Dutch cheese aged 18+ months; crumbly, dark gold with butterscotch & salt crystals",
+    "imageUrl": "https://images.unsplash.com/photo-1552767059-ce182ead6c1b?w=800&auto=format&fit=crop&q=80",
+    "origin": "Niederlande (Noord-Holland - g.U. / PDO)",
+    "isImport": true,
+    "abv": "0.0% ABV",
+    "tasteDe": "Intensives Buttertoffee, getrocknete Früchte, nussig, mürber Bruch mit feinen Knusperkristallen.",
+    "tasteEn": "Rich butterscotch, roasted nuts, crystallization crunch, savory caramel sweetness, long umami finish.",
+    "tasteProfileDe": "Intensives Buttertoffee, getrocknete Früchte, nussig, mürber Bruch mit feinen Knusperkristallen.",
+    "tasteProfileEn": "Rich butterscotch, roasted nuts, crystallization crunch, savory caramel sweetness, long umami finish.",
+    "scienceDe": "Das holländische Geheimnis ist das 'Waschen des Bruchs': Vor dem Pressen wird Molke abgezogen und durch warmes Wasser ersetzt. Dadurch wird Milchzucker verdünnt und die Säurebildung gebremst. Nach über 18 Monaten verliert der Käse viel Wasser, schrumpft, wird dunkelbernsteinfarben und bildet reiche Tyrosin-Ablagerungen.",
+    "scienceEn": "The signature Dutch technique is 'curd washing': draining a portion of whey and replacing it with warm water washes out residual lactose. This prevents high acidity, allowing deep caramel and savory amino acid crystals to evolve over 18-24 months.",
+    "scienceExplainedDe": "Das holländische Geheimnis ist das 'Waschen des Bruchs': Vor dem Pressen wird Molke abgezogen und durch warmes Wasser ersetzt. Dadurch wird Milchzucker verdünnt und die Säurebildung gebremst. Nach über 18 Monaten verliert der Käse viel Wasser, schrumpft, wird dunkelbernsteinfarben und bildet reiche Tyrosin-Ablagerungen.",
+    "scienceExplainedEn": "The signature Dutch technique is 'curd washing': draining a portion of whey and replacing it with warm water washes out residual lactose. This prevents high acidity, allowing deep caramel and savory amino acid crystals to evolve over 18-24 months.",
+    "culinaryDe": "In mundgerechte Bröckchen gebrochen zu Senf, dunklem Abteibier oder im Caesar Salad gehobelt.",
+    "culinaryEn": "Crumbled into irregular shards with grain mustard, paired with Belgian dubbel ale or Port wine.",
+    "culinaryServingDe": "In mundgerechte Bröckchen gebrochen zu Senf, dunklem Abteibier oder im Caesar Salad gehobelt.",
+    "culinaryServingEn": "Crumbled into irregular shards with grain mustard, paired with Belgian dubbel ale or Port wine.",
+    "faqDe": "Warum ist alter Gouda bröckelig und fast süßlich? Weil das Auswaschen der Laktose die Säure mildert und die 18-monatige Reifung das Kasein zerkrümelt.",
+    "faqEn": "Why does aged Gouda taste like butterscotch? Curd washing leaves pleasant sweetness that concentrates into caramel notes with moisture loss.",
+    "guestFaqDe": "Warum ist alter Gouda bröckelig und fast süßlich? Weil das Auswaschen der Laktose die Säure mildert und die 18-monatige Reifung das Kasein zerkrümelt.",
+    "guestFaqEn": "Why does aged Gouda taste like butterscotch? Curd washing leaves pleasant sweetness that concentrates into caramel notes with moisture loss.",
+    "allergens": [
+      "Milch (Laktosefrei durch Reifung)"
+    ],
+    "tags": [
+      "Gouda",
+      "NoordHolland",
+      "PDO",
+      "AgedCheese",
+      "Butterscotch",
+      "Netherlands"
+    ],
+    "isFavorite": false
+  },
+  {
+    "id": "cheese_blue_stilton_pdo",
+    "category": "cheese",
+    "nameDe": "Blue Stilton PDO ('König der englischen Käse')",
+    "nameEn": "Blue Stilton PDO (King of English Cheeses)",
+    "subtitleDe": "Ungepresster Zylinderkäse mit Penicillium roqueforti; cremig, buttrig, scharf-würzig",
+    "subtitleEn": "Unpressed cow's milk blue cheese with natural crust and delicate blue veins",
+    "imageUrl": "https://images.unsplash.com/photo-1544025162-d76694265947?w=800&auto=format&fit=crop&q=80",
+    "origin": "Großbritannien (Derbyshire, Leicestershire, Nottinghamshire - PDO)",
+    "isImport": true,
+    "abv": "0.0% ABV",
+    "tasteDe": "Cremig-schmelzender Teig, buttrige Süße, edle Pilzschärfe und feines Salz.",
+    "tasteEn": "Rich creamy butterfat, mellow blue mold piquant warmth, earthy mineral tang.",
+    "tasteProfileDe": "Cremig-schmelzender Teig, buttrige Süße, edle Pilzschärfe und feines Salz.",
+    "tasteProfileEn": "Rich creamy butterfat, mellow blue mold piquant warmth, earthy mineral tang.",
+    "scienceDe": "Stilton wird niemals gepresst; der Bruch tropft nur unter dem Eigengewicht ab. Nach einigen Wochen wird der Laib mit Edelstahlnadeln angestochen. Der einströmende Sauerstoff aktiviert die ruhenden Sporen von Penicillium roqueforti, die entlang der Luftkanäle die charakteristischen blauen Adern bilden.",
+    "scienceEn": "Curds are never pressed mechanically; natural settling leaves air pockets. Piercing with stainless needles introduces oxygen, prompting Penicillium roqueforti to form blue-green mycelial veins that break down fats into pungent ketones.",
+    "scienceExplainedDe": "Stilton wird niemals gepresst; der Bruch tropft nur unter dem Eigengewicht ab. Nach einigen Wochen wird der Laib mit Edelstahlnadeln angestochen. Der einströmende Sauerstoff aktiviert die ruhenden Sporen von Penicillium roqueforti, die entlang der Luftkanäle die charakteristischen blauen Adern bilden.",
+    "scienceExplainedEn": "Curds are never pressed mechanically; natural settling leaves air pockets. Piercing with stainless needles introduces oxygen, prompting Penicillium roqueforti to form blue-green mycelial veins that break down fats into pungent ketones.",
+    "culinaryDe": "Traditionell serviert mit süßem Vintage Portwein, Walnüssen und Birnenspalten.",
+    "culinaryEn": "British festive classic with Vintage Port, fresh pear slices, oatcakes, or melted into steak sauces.",
+    "culinaryServingDe": "Traditionell serviert mit süßem Vintage Portwein, Walnüssen und Birnenspalten.",
+    "culinaryServingEn": "British festive classic with Vintage Port, fresh pear slices, oatcakes, or melted into steak sauces.",
+    "faqDe": "Darf Stilton im Ort Stilton hergestellt werden? Ironischerweise nein! Stilton liegt in Cambridgeshire, wo die Herstellung nach PDO-Recht verboten ist.",
+    "faqEn": "Can Stilton be made in the village of Stilton? No, EU PDO law limits production strictly to Derbyshire, Leicestershire, and Nottinghamshire.",
+    "guestFaqDe": "Darf Stilton im Ort Stilton hergestellt werden? Ironischerweise nein! Stilton liegt in Cambridgeshire, wo die Herstellung nach PDO-Recht verboten ist.",
+    "guestFaqEn": "Can Stilton be made in the village of Stilton? No, EU PDO law limits production strictly to Derbyshire, Leicestershire, and Nottinghamshire.",
+    "allergens": [
+      "Milch"
+    ],
+    "tags": [
+      "Stilton",
+      "BlueCheese",
+      "PDO",
+      "England",
+      "PortPairing"
+    ],
+    "isFavorite": false
+  },
+  {
+    "id": "cheese_feta_original_greece_pso",
+    "category": "cheese",
+    "nameDe": "Original Griechischer Feta g.U. (Schaf & Ziege)",
+    "nameEn": "Authentic Greek Feta PDO (Sheep & Goat Milk)",
+    "subtitleDe": "Traditioneller Salzlakenkäse (mind. 70% Schafsmilch, max. 30% Ziegenmilch); cremig-bröckelig",
+    "subtitleEn": "Protected Greek brine cheese made strictly with fresh sheep and goat milk, never cow's milk",
+    "imageUrl": "https://images.unsplash.com/photo-1452195100486-9cc805987862?w=800&auto=format&fit=crop&q=80",
+    "origin": "Griechenland (Makedonien, Thrakien, Epirus, Thessalien, Peloponnes - g.U.)",
+    "isImport": true,
+    "abv": "0.0% ABV",
+    "tasteDe": "Frisch-säuerlich, angenehm salzig, feine Schafsmilchcreme, leicht pikanter Ziegenabgang.",
+    "tasteEn": "Tangy lactic acidity, balanced sea brine, rich creamy sheep milk fat, gentle goat tang.",
+    "tasteProfileDe": "Frisch-säuerlich, angenehm salzig, feine Schafsmilchcreme, leicht pikanter Ziegenabgang.",
+    "tasteProfileEn": "Tangy lactic acidity, balanced sea brine, rich creamy sheep milk fat, gentle goat tang.",
+    "scienceDe": "Der Europäische Gerichtshof urteilte 2002: Nur Käse aus bestimmten Regionen Griechenlands aus mindestens 70% Schafsmilch und maximal 30% Ziegenmilch darf 'Feta' heißen. Kuhmilch-Produkte müssen als 'Weißkäse in Salzlake' deklariert werden. Die Reifung erfolgt mindestens 2 Monate in Holzfässern oder Blechkanistern in 7%-iger Salzlake.",
+    "scienceEn": "EU Protected Designation of Origin mandates min. 70% sheep's milk and up to 30% goat's milk from designated Greek pasture regions. Aged at least 2 months in brine. Products made from cow's milk are legally prohibited from using the name Feta.",
+    "scienceExplainedDe": "Der Europäische Gerichtshof urteilte 2002: Nur Käse aus bestimmten Regionen Griechenlands aus mindestens 70% Schafsmilch und maximal 30% Ziegenmilch darf 'Feta' heißen. Kuhmilch-Produkte müssen als 'Weißkäse in Salzlake' deklariert werden. Die Reifung erfolgt mindestens 2 Monate in Holzfässern oder Blechkanistern in 7%-iger Salzlake.",
+    "scienceExplainedEn": "EU Protected Designation of Origin mandates min. 70% sheep's milk and up to 30% goat's milk from designated Greek pasture regions. Aged at least 2 months in brine. Products made from cow's milk are legally prohibited from using the name Feta.",
+    "culinaryDe": "Im griechischen Bauernsalat (Choriatiki), im Ofen gebacken mit Olivenöl und Oregano oder in Spanakopita.",
+    "culinaryEn": "Horiatiki Greek salad with Kalamata olives, baked in parchment with oregano and chili, or spanakopita filo pie.",
+    "culinaryServingDe": "Im griechischen Bauernsalat (Choriatiki), im Ofen gebacken mit Olivenöl und Oregano oder in Spanakopita.",
+    "culinaryServingEn": "Horiatiki Greek salad with Kalamata olives, baked in parchment with oregano and chili, or spanakopita filo pie.",
+    "faqDe": "Warum schmeckt echter Feta viel cremiger als 'Hirtenkäse'? Weil Schafsmilch fast doppelt so viel Fett und Trockenmasse enthält wie billige Kuhmilch.",
+    "faqEn": "Why is authentic Feta richer than cow's milk brine cheese? Sheep's milk contains nearly double the natural butterfat and protein of cow's milk.",
+    "guestFaqDe": "Warum schmeckt echter Feta viel cremiger als 'Hirtenkäse'? Weil Schafsmilch fast doppelt so viel Fett und Trockenmasse enthält wie billige Kuhmilch.",
+    "guestFaqEn": "Why is authentic Feta richer than cow's milk brine cheese? Sheep's milk contains nearly double the natural butterfat and protein of cow's milk.",
+    "allergens": [
+      "Milch (Schaf, Ziege)"
+    ],
+    "tags": [
+      "Feta",
+      "Greece",
+      "PDO",
+      "SheepMilk",
+      "Salad",
+      "BrineCheese"
+    ],
+    "isFavorite": true
+  },
+  {
+    "id": "charcuterie_jamon_iberico_bellota_pata_negra",
+    "category": "charcuterie",
+    "nameDe": "Jamón Ibérico de Bellota (100% Pata Negra DOP)",
+    "nameEn": "Jamón Ibérico de Bellota 100% (Pata Negra DOP)",
+    "subtitleDe": "Reine Ibérico-Rasse, freilaufende Eichelmast (Montanera), 36–48 Monate gereift; Schmelz bei 28°C",
+    "subtitleEn": "100% pure acorn-fed Iberian pork, cured 36-48 months; melts at human body temperature",
+    "imageUrl": "https://images.unsplash.com/photo-1544025162-d76694265947?w=800&auto=format&fit=crop&q=80",
+    "origin": "Spanien (Jabugo / Dehesa de Extremadura - DOP)",
+    "isImport": true,
+    "abv": "0.0% ABV",
+    "tasteDe": "Nussig-süß, Eichelnoten, schmilzt sofort auf der Zunge, feine Reifekristalle und langanhaltendes Umami.",
+    "tasteEn": "Intense roasted acorn nuttiness, sweet umami depth, buttery fat melting instantly on the tongue.",
+    "tasteProfileDe": "Nussig-süß, Eichelnoten, schmilzt sofort auf der Zunge, feine Reifekristalle und langanhaltendes Umami.",
+    "tasteProfileEn": "Intense roasted acorn nuttiness, sweet umami depth, buttery fat melting instantly on the tongue.",
+    "scienceDe": "Die Schweine weiden während der 'Montanera' in Kork- und Steineichenwäldern und fressen täglich bis zu 10 kg Eicheln. Dadurch reichert sich Ölsäure (einfach ungesättigte Fettsäure) im Fettgewebe an. Der Schmelzpunkt des Fettes sinkt auf ca. 28°C – es schmilzt bereits bei Berührung mit der warmen Zunge.",
+    "scienceEn": "Free-range Iberian pigs feed exclusively on holm and cork oak acorns during the final fattening months (Montanera). Acorn bellotas infuse the fat with over 55% oleic acid, lowering the lipid melting point to 28°C.",
+    "scienceExplainedDe": "Die Schweine weiden während der 'Montanera' in Kork- und Steineichenwäldern und fressen täglich bis zu 10 kg Eicheln. Dadurch reichert sich Ölsäure (einfach ungesättigte Fettsäure) im Fettgewebe an. Der Schmelzpunkt des Fettes sinkt auf ca. 28°C – es schmilzt bereits bei Berührung mit der warmen Zunge.",
+    "scienceExplainedEn": "Free-range Iberian pigs feed exclusively on holm and cork oak acorns during the final fattening months (Montanera). Acorn bellotas infuse the fat with over 55% oleic acid, lowering the lipid melting point to 28°C.",
+    "culinaryDe": "Von Hand mit dem Schinkenmesser hauchdünn ('lascas') geschnitten und handwarm serviert.",
+    "culinaryEn": "Carved by hand with a jamonero knife into paper-thin bite-sized slices; served strictly at room temperature.",
+    "culinaryServingDe": "Von Hand mit dem Schinkenmesser hauchdünn ('lascas') geschnitten und handwarm serviert.",
+    "culinaryServingEn": "Carved by hand with a jamonero knife into paper-thin bite-sized slices; served strictly at room temperature.",
+    "faqDe": "Woran erkennt man die beste Stufe? Am schwarzen Etikett (Precinto Negro): Garantiert 100% reinrassiges Ibérico-Schwein mit reiner Eichelmast.",
+    "faqEn": "How to verify top grade? The official Black Label (Etiqueta Negra) guarantees 100% purebred Iberian breed and acorn diet.",
+    "guestFaqDe": "Woran erkennt man die beste Stufe? Am schwarzen Etikett (Precinto Negro): Garantiert 100% reinrassiges Ibérico-Schwein mit reiner Eichelmast.",
+    "guestFaqEn": "How to verify top grade? The official Black Label (Etiqueta Negra) guarantees 100% purebred Iberian breed and acorn diet.",
+    "allergens": [],
+    "tags": [
+      "JamonIberico",
+      "Bellota",
+      "PataNegra",
+      "DOP",
+      "Spain",
+      "Charcuterie",
+      "Luxury"
+    ],
+    "isFavorite": true
+  },
+  {
+    "id": "charcuterie_guanciale_pepato",
+    "category": "charcuterie",
+    "nameDe": "Guanciale Stagionato (Luftgetrocknete Schweinebacke)",
+    "nameEn": "Guanciale Stagionato (Cured Pork Jowl)",
+    "subtitleDe": "Traditionell mit Meersalz und viel schwarzem Pfeffer gereift; das Herzstück echter Carbonara",
+    "subtitleEn": "Cured pork jowl crusted in black pepper; dense velvety fat that renders into silky sauce",
+    "imageUrl": "https://images.unsplash.com/photo-1544025162-d76694265947?w=800&auto=format&fit=crop&q=80",
+    "origin": "Italien (Latium / Umbrien)",
+    "isImport": true,
+    "abv": "0.0% ABV",
+    "tasteDe": "Herzhaft-fleischig, aromatischer Pfeffer, feines edles Fett mit intensivem Umami beim Auslassen.",
+    "tasteEn": "Rich savory pork sweetness, pungent cracked black pepper, melting silky fat with deep umami.",
+    "tasteProfileDe": "Herzhaft-fleischig, aromatischer Pfeffer, feines edles Fett mit intensivem Umami beim Auslassen.",
+    "tasteProfileEn": "Rich savory pork sweetness, pungent cracked black pepper, melting silky fat with deep umami.",
+    "scienceDe": "Guanciale stammt aus der Schweinebacke ('guancia'). Das Fett der Backe ist deutlich fester und muskulöser durchzogen als gewöhnlicher Bauchspeck (Pancetta). Beim langsamen Braten in der Pfanne schmilzt es glasklar aus, ohne zu verbrennen, und verbindet sich mit Nudelwasser zu einer sämigen Emulsion.",
+    "scienceEn": "Made from pork cheek muscle and fat. The jowl's connective tissue and dense lipids have a higher melting resistance than belly pancetta, rendering out clear, rich fat that emulsifies with starchy pasta water.",
+    "scienceExplainedDe": "Guanciale stammt aus der Schweinebacke ('guancia'). Das Fett der Backe ist deutlich fester und muskulöser durchzogen als gewöhnlicher Bauchspeck (Pancetta). Beim langsamen Braten in der Pfanne schmilzt es glasklar aus, ohne zu verbrennen, und verbindet sich mit Nudelwasser zu einer sämigen Emulsion.",
+    "scienceExplainedEn": "Made from pork cheek muscle and fat. The jowl's connective tissue and dense lipids have a higher melting resistance than belly pancetta, rendering out clear, rich fat that emulsifies with starchy pasta water.",
+    "culinaryDe": "Die einzig authentische Grundlage für Pasta alla Carbonara und Pasta all'Amatriciana.",
+    "culinaryEn": "The non-negotiable authentic pillar of classic Roman Carbonara and Amatriciana.",
+    "culinaryServingDe": "Die einzig authentische Grundlage für Pasta alla Carbonara und Pasta all'Amatriciana.",
+    "culinaryServingEn": "The non-negotiable authentic pillar of classic Roman Carbonara and Amatriciana.",
+    "faqDe": "Darf man Carbonara mit Bacon oder Pancetta kochen? In Rom gilt: Niemals! Nur Guanciale liefert die nötige Festigkeit und das charakteristische Aroma.",
+    "faqEn": "Why not use bacon for Carbonara? Bacon is smoked and belly-cut; authentic Roman Carbonara demands the unsmoked, peppered sweetness of cured jowl.",
+    "guestFaqDe": "Darf man Carbonara mit Bacon oder Pancetta kochen? In Rom gilt: Niemals! Nur Guanciale liefert die nötige Festigkeit und das charakteristische Aroma.",
+    "guestFaqEn": "Why not use bacon for Carbonara? Bacon is smoked and belly-cut; authentic Roman Carbonara demands the unsmoked, peppered sweetness of cured jowl.",
+    "allergens": [],
+    "tags": [
+      "Guanciale",
+      "Carbonara",
+      "Amatriciana",
+      "PorkJowl",
+      "Italy",
+      "Deli"
+    ],
+    "isFavorite": true
+  },
+  {
+    "id": "charcuterie_schwarzwaelder_schinken_gga",
+    "category": "charcuterie",
+    "nameDe": "Schwarzwälder Schinken g.g.A.",
+    "nameEn": "Black Forest Ham PGI (Schwarzwälder Schinken)",
+    "subtitleDe": "Mit Wacholder trocken gepökelt und kalt über heimischem Tannen- und Fichtenholz geräuchert",
+    "subtitleEn": "Dry-cured with juniper and cold-smoked over native Black Forest fir and spruce wood",
+    "imageUrl": "https://images.unsplash.com/photo-1544025162-d76694265947?w=800&auto=format&fit=crop&q=80",
+    "origin": "Deutschland (Schwarzwald - g.g.A. / PGI)",
+    "isImport": false,
+    "abv": "0.0% ABV",
+    "tasteDe": "Würziger Nadelholzrauch, feine Wacholdernote, tiefrot, mürber Biss mit weißem Fettrand.",
+    "tasteEn": "Aromatic evergreen wood smoke, juniper berry spice, deep ruby color, savory firm cure.",
+    "tasteProfileDe": "Würziger Nadelholzrauch, feine Wacholdernote, tiefrot, mürber Biss mit weißem Fettrand.",
+    "tasteProfileEn": "Aromatic evergreen wood smoke, juniper berry spice, deep ruby color, savory firm cure.",
+    "scienceDe": "Das Fleisch wird mit Knoblauch, Koriander, Pfeffer und Wacholder trocken eingesalzen. Anschließend erfolgt das mehrwöchige Kalträuchern bei maximal 25°C in gemauerten Räuchertürmen mit Nadelholzsägemehl. Ätherische Harze im Nadelholz verleihen dem Schinken seine dunkle Außenfarbe und den typisch harzigen Geschmack.",
+    "scienceEn": "Dry-salted with juniper, garlic, and coriander before being cold-smoked (max 25°C) in stone towers using Black Forest fir and spruce sawdust. Coniferous wood resins impart signature dark exterior color and resinous phenols.",
+    "scienceExplainedDe": "Das Fleisch wird mit Knoblauch, Koriander, Pfeffer und Wacholder trocken eingesalzen. Anschließend erfolgt das mehrwöchige Kalträuchern bei maximal 25°C in gemauerten Räuchertürmen mit Nadelholzsägemehl. Ätherische Harze im Nadelholz verleihen dem Schinken seine dunkle Außenfarbe und den typisch harzigen Geschmack.",
+    "scienceExplainedEn": "Dry-salted with juniper, garlic, and coriander before being cold-smoked (max 25°C) in stone towers using Black Forest fir and spruce sawdust. Coniferous wood resins impart signature dark exterior color and resinous phenols.",
+    "culinaryDe": "Dünn geschnitten zur traditionellen Schwarzwälder Vesper auf herzhaftem Bauernbrot mit Essiggurke.",
+    "culinaryEn": "Sliced paper-thin for rustic German Brotzeit platters with crusty rye sourdough and pickles.",
+    "culinaryServingDe": "Dünn geschnitten zur traditionellen Schwarzwälder Vesper auf herzhaftem Bauernbrot mit Essiggurke.",
+    "culinaryServingEn": "Sliced paper-thin for rustic German Brotzeit platters with crusty rye sourdough and pickles.",
+    "faqDe": "Was schützt die g.g.A.? Die Verarbeitung und das Räuchern müssen zwingend im Schwarzwald stattfinden.",
+    "faqEn": "What guarantees the PGI? Curing and smoking must strictly take place within the designated Black Forest region.",
+    "guestFaqDe": "Was schützt die g.g.A.? Die Verarbeitung und das Räuchern müssen zwingend im Schwarzwald stattfinden.",
+    "guestFaqEn": "What guarantees the PGI? Curing and smoking must strictly take place within the designated Black Forest region.",
+    "allergens": [],
+    "tags": [
+      "SchwarzwaelderSchinken",
+      "PGI",
+      "SmokedHam",
+      "Juniper",
+      "GermanDeli"
+    ],
+    "isFavorite": false
+  },
+  {
+    "id": "charcuterie_chorizo_iberico_bellota",
+    "category": "charcuterie",
+    "nameDe": "Chorizo Ibérico de Bellota",
+    "nameEn": "Chorizo Ibérico de Bellota",
+    "subtitleDe": "Grob gehacktes Fleisch von Eichelschweinen mit geräuchertem Pimentón de la Vera & Knoblauch",
+    "subtitleEn": "Coarse acorn-fed Iberian pork sausage cured with smoked oak-fired paprika & garlic",
+    "imageUrl": "https://images.unsplash.com/photo-1544025162-d76694265947?w=800&auto=format&fit=crop&q=80",
+    "origin": "Spanien (Salamanca / Guijuelo)",
+    "isImport": true,
+    "abv": "0.0% ABV",
+    "tasteDe": "Rauchige Paprikawürze, Knoblauchfrische, saftiger Biss mit nussigem Schmelz des Ibérico-Fettes.",
+    "tasteEn": "Deep smoked paprika warmth, subtle garlic tang, sweet acorn pork fat, firm rustic chew.",
+    "tasteProfileDe": "Rauchige Paprikawürze, Knoblauchfrische, saftiger Biss mit nussigem Schmelz des Ibérico-Fettes.",
+    "tasteProfileEn": "Deep smoked paprika warmth, subtle garlic tang, sweet acorn pork fat, firm rustic chew.",
+    "scienceDe": "Das grobe Brät wird mit Pimentón de la Vera (über Eichenholz geräuchertem spanischem Paprikapulver) gewürzt. Die natürlichen Capsaicinoide und ätherischen Öle des Paprikas wirken zusammen mit dem Meersalz als natürliches Konservierungsmittel gegen Bakterien, während Milchsäurebakterien die Wurst schnittfest fermentieren.",
+    "scienceEn": "Seasoned with Pimentón de la Vera (oak-smoked paprika). Capsaicin and polyphenols in paprika act as natural antimicrobials and antioxidants, preventing fat oxidation during dry air-curing.",
+    "scienceExplainedDe": "Das grobe Brät wird mit Pimentón de la Vera (über Eichenholz geräuchertem spanischem Paprikapulver) gewürzt. Die natürlichen Capsaicinoide und ätherischen Öle des Paprikas wirken zusammen mit dem Meersalz als natürliches Konservierungsmittel gegen Bakterien, während Milchsäurebakterien die Wurst schnittfest fermentieren.",
+    "scienceExplainedEn": "Seasoned with Pimentón de la Vera (oak-smoked paprika). Capsaicin and polyphenols in paprika act as natural antimicrobials and antioxidants, preventing fat oxidation during dry air-curing.",
+    "culinaryDe": "Schräg in dünne Scheiben geschnitten als Tapas, auf Schieferplatten oder angebraten im Eintopf.",
+    "culinaryEn": "Sliced on a diagonal for charcuterie platters, tapas pintxos, or rendered in bean stews.",
+    "culinaryServingDe": "Schräg in dünne Scheiben geschnitten als Tapas, auf Schieferplatten oder angebraten im Eintopf.",
+    "culinaryServingEn": "Sliced on a diagonal for charcuterie platters, tapas pintxos, or rendered in bean stews.",
+    "faqDe": "Woher hat Chorizo ihre typisch rote Farbe? Ausschließlich vom hochwertigen geräucherten Paprikapulver (Pimentón), nicht von künstlichen Farbstoffen.",
+    "faqEn": "Where does the red color come from? Exclusively from ground smoked paprika, without artificial colors.",
+    "guestFaqDe": "Woher hat Chorizo ihre typisch rote Farbe? Ausschließlich vom hochwertigen geräucherten Paprikapulver (Pimentón), nicht von künstlichen Farbstoffen.",
+    "guestFaqEn": "Where does the red color come from? Exclusively from ground smoked paprika, without artificial colors.",
+    "allergens": [],
+    "tags": [
+      "Chorizo",
+      "Iberico",
+      "Paprika",
+      "Pimenton",
+      "Tapas",
+      "Spain"
+    ],
+    "isFavorite": false
+  },
+  {
+    "id": "spices_safran_super_negin",
+    "category": "spices_herbs",
+    "nameDe": "Safranfäden (Super Negin / 'Rotes Gold')",
+    "nameEn": "Saffron Threads (Super Negin Grade / Red Gold)",
+    "subtitleDe": "Getrocknete rote Stempelfäden der Krokusblüte; handgeerntet, intensiv färbend & herb-aromatisch",
+    "subtitleEn": "All-red stigmas of Crocus sativus; hand-harvested, floral honey & bitter-sweet warmth",
+    "imageUrl": "https://images.unsplash.com/photo-1509358271058-acd22cc93898?w=800&auto=format&fit=crop&q=80",
+    "origin": "Iran (Chorasan) & Spanien (La Mancha DOP)",
+    "isImport": true,
+    "abv": "0.0% ABV",
+    "tasteDe": "Feinbitter, erdig-herb, blumiges Heuaroma mit süßlichem Unterton; färbt Speisen intensiv goldgelb.",
+    "tasteEn": "Earthy-floral, sweet hay aroma, delicate pleasant bitterness, imparts brilliant gold color.",
+    "tasteProfileDe": "Feinbitter, erdig-herb, blumiges Heuaroma mit süßlichem Unterton; färbt Speisen intensiv goldgelb.",
+    "tasteProfileEn": "Earthy-floral, sweet hay aroma, delicate pleasant bitterness, imparts brilliant gold color.",
+    "scienceDe": "Das teuerste Gewürz der Welt stammt von den Blütennarben des Crocus sativus. Für 1 kg Safran werden ca. 150.000 Blüten von Hand gepflückt. Drei Schlüsselmoleküle bestimmen seine Qualität: Crocin sorgt für die goldene Wasserlöslichkeit, Picrocrocin für den herben Geschmack und Safranal für das betörende Parfüm.",
+    "scienceEn": "The world's most valuable spice by weight. Yields ~1 kg dried saffron from 150,000 hand-picked Crocus sativus blooms. Driven by crocin (water-soluble yellow pigment), picrocrocin (bitter taste), and safranal (volatile aroma).",
+    "scienceExplainedDe": "Das teuerste Gewürz der Welt stammt von den Blütennarben des Crocus sativus. Für 1 kg Safran werden ca. 150.000 Blüten von Hand gepflückt. Drei Schlüsselmoleküle bestimmen seine Qualität: Crocin sorgt für die goldene Wasserlöslichkeit, Picrocrocin für den herben Geschmack und Safranal für das betörende Parfüm.",
+    "scienceExplainedEn": "The world's most valuable spice by weight. Yields ~1 kg dried saffron from 150,000 hand-picked Crocus sativus blooms. Driven by crocin (water-soluble yellow pigment), picrocrocin (bitter taste), and safranal (volatile aroma).",
+    "culinaryDe": "Unverzichtbar für Risotto alla Milanese, Paella Valenciana, Bouillabaisse und persischen Juwelenreis.",
+    "culinaryEn": "Essential for Risotto alla Milanese, Spanish seafood Paella, Bouillabaisse, and Persian saffron rice.",
+    "culinaryServingDe": "Unverzichtbar für Risotto alla Milanese, Paella Valenciana, Bouillabaisse und persischen Juwelenreis.",
+    "culinaryServingEn": "Essential for Risotto alla Milanese, Spanish seafood Paella, Bouillabaisse, and Persian saffron rice.",
+    "faqDe": "Wie verwendet man Safran richtig? Fäden vor dem Kochen 15 Minuten in etwas lauwarmem Wasser oder Weißwein einweichen, um Farbe und Aroma optimal zu lösen.",
+    "faqEn": "How to unlock saffron flavor? Soak threads in warm water, milk, or broth for 15 minutes before adding to the dish.",
+    "guestFaqDe": "Wie verwendet man Safran richtig? Fäden vor dem Kochen 15 Minuten in etwas lauwarmem Wasser oder Weißwein einweichen, um Farbe und Aroma optimal zu lösen.",
+    "guestFaqEn": "How to unlock saffron flavor? Soak threads in warm water, milk, or broth for 15 minutes before adding to the dish.",
+    "allergens": [],
+    "tags": [
+      "Safran",
+      "Saffron",
+      "SuperNegin",
+      "RisottoMilanese",
+      "Paella",
+      "LuxurySpice"
+    ],
+    "isFavorite": true
+  },
+  {
+    "id": "spices_kardamom_gruen_guatemala_malabar",
+    "category": "spices_herbs",
+    "nameDe": "Grüner Kardamom (Königin der Gewürze)",
+    "nameEn": "Green Cardamom Pods (Queen of Spices)",
+    "subtitleDe": "Ganze Samenkapseln mit ätherischem Cineol; erfrischend mentholig, eukalyptusartig, warm",
+    "subtitleEn": "Whole aromatic green pods packed with essential cineole; cooling mint & herbal warmth",
+    "imageUrl": "https://images.unsplash.com/photo-1509358271058-acd22cc93898?w=800&auto=format&fit=crop&q=80",
+    "origin": "Guatemala & Indien (Malabarküste)",
+    "isImport": true,
+    "abv": "0.0% ABV",
+    "tasteDe": "Intensiv aromatisch, zitrusfrisch, kühlende Eukalyptus- und Mentholnoten mit wärmendem Nachklang.",
+    "tasteEn": "Fragrant eucalyptus, cooling camphor, herbal citrus brightness, warm spicy background.",
+    "tasteProfileDe": "Intensiv aromatisch, zitrusfrisch, kühlende Eukalyptus- und Mentholnoten mit wärmendem Nachklang.",
+    "tasteProfileEn": "Fragrant eucalyptus, cooling camphor, herbal citrus brightness, warm spicy background.",
+    "scienceDe": "Gehört zur Familie der Ingwergewächse. Die grüne Kapselhülle schützt die dunklen, ölreichen Samen vor dem Verflüchtigen der ätherischen Öle (vor allem 1,8-Cineol und Terpinylacetat). Im arabischen Raum neutralisiert Kardamom die Gerbstoffbitterkeit von Kaffee und fördert die Magenverträglichkeit.",
+    "scienceEn": "Belongs to the ginger family (Zingiberaceae). The outer pericarp shields internal dark seeds from volatile oil evaporation. High concentrations of 1,8-cineole and alpha-terpinyl acetate provide camphoraceous citrus aroma.",
+    "scienceExplainedDe": "Gehört zur Familie der Ingwergewächse. Die grüne Kapselhülle schützt die dunklen, ölreichen Samen vor dem Verflüchtigen der ätherischen Öle (vor allem 1,8-Cineol und Terpinylacetat). Im arabischen Raum neutralisiert Kardamom die Gerbstoffbitterkeit von Kaffee und fördert die Magenverträglichkeit.",
+    "scienceExplainedEn": "Belongs to the ginger family (Zingiberaceae). The outer pericarp shields internal dark seeds from volatile oil evaporation. High concentrations of 1,8-cineole and alpha-terpinyl acetate provide camphoraceous citrus aroma.",
+    "culinaryDe": "Für arabischen Mokka (Gahwa), Chai-Tee, schwedische Kardamombullar und indische Currys.",
+    "culinaryEn": "Essential for Arabic Gahwa coffee, spiced chai tea, Scandinavian cardamom buns, and biryanis.",
+    "culinaryServingDe": "Für arabischen Mokka (Gahwa), Chai-Tee, schwedische Kardamombullar und indische Currys.",
+    "culinaryServingEn": "Essential for Arabic Gahwa coffee, spiced chai tea, Scandinavian cardamom buns, and biryanis.",
+    "faqDe": "Warum immer ganze Kapseln kaufen? Gemahlener Kardamom verliert seine flüchtigen Aromen innerhalb weniger Wochen fast vollständig.",
+    "faqEn": "Why buy whole pods? Pre-ground cardamom oxidizes rapidly, losing its distinctive cineole fragrance.",
+    "guestFaqDe": "Warum immer ganze Kapseln kaufen? Gemahlener Kardamom verliert seine flüchtigen Aromen innerhalb weniger Wochen fast vollständig.",
+    "guestFaqEn": "Why buy whole pods? Pre-ground cardamom oxidizes rapidly, losing its distinctive cineole fragrance.",
+    "allergens": [],
+    "tags": [
+      "Cardamom",
+      "Kardamom",
+      "Spices",
+      "Chai",
+      "Gahwa",
+      "Baking"
+    ],
+    "isFavorite": true
+  },
+  {
+    "id": "spices_bourbon_vanille_madagaskar",
+    "category": "spices_herbs",
+    "nameDe": "Echte Bourbon-Vanilleschote (Madagaskar)",
+    "nameEn": "Madagascar Bourbon Vanilla Bean (Gourmet Grade)",
+    "subtitleDe": "Fermentierte Samenkapsel der Kletterorchidee mit kristallisiertem natürlichem Vanillin",
+    "subtitleEn": "Sun-cured orchid seed pods rich in natural vanillin crystals; floral, buttery & deep",
+    "imageUrl": "https://images.unsplash.com/photo-1599940824399-b87987ceb72a?w=800&auto=format&fit=crop&q=80",
+    "origin": "Madagaskar (Sava-Region / Île Bourbon)",
+    "isImport": true,
+    "abv": "0.0% ABV",
+    "tasteDe": "Cremig, süß-würzig, balsamisch, feine Holztöne mit floralem Hintergrund; reichhaltiges Vanillemark.",
+    "tasteEn": "Rich buttery sweetness, balsamic warmth, floral orchid perfume, creamy vanillin depth.",
+    "tasteProfileDe": "Cremig, süß-würzig, balsamisch, feine Holztöne mit floralem Hintergrund; reichhaltiges Vanillemark.",
+    "tasteProfileEn": "Rich buttery sweetness, balsamic warmth, floral orchid perfume, creamy vanillin depth.",
+    "scienceDe": "Die Vanilleschote ist die Frucht einer tropischen Kletterorchidee (Vanilla planifolia). Da natürliche Bestäuber außerhalb Mexikos fehlen, wird jede Blüte auf Madagaskar am Tag des Aufblühens von Hand mit einem Bambussplitter bestäubt. Nach der Ernte werden die grünen Schoten blanchiert und monatelang im Wechsel in Wolldecken geschwitzt und in der Sonne getrocknet, wodurch Enzyme natürliches Vanillin bilden.",
+    "scienceEn": "Fruit of the tropical orchid Vanilla planifolia. Hand-pollinated with a wooden needle. A grueling 6-month curing process (blanching, blanket sweating, sun drying) triggers enzymatic hydrolysis of glucovanillin into pure aromatic vanillin.",
+    "scienceExplainedDe": "Die Vanilleschote ist die Frucht einer tropischen Kletterorchidee (Vanilla planifolia). Da natürliche Bestäuber außerhalb Mexikos fehlen, wird jede Blüte auf Madagaskar am Tag des Aufblühens von Hand mit einem Bambussplitter bestäubt. Nach der Ernte werden die grünen Schoten blanchiert und monatelang im Wechsel in Wolldecken geschwitzt und in der Sonne getrocknet, wodurch Enzyme natürliches Vanillin bilden.",
+    "scienceExplainedEn": "Fruit of the tropical orchid Vanilla planifolia. Hand-pollinated with a wooden needle. A grueling 6-month curing process (blanching, blanket sweating, sun drying) triggers enzymatic hydrolysis of glucovanillin into pure aromatic vanillin.",
+    "culinaryDe": "Ausgekratztes Mark für Crème Brûlée, Panna Cotta, Sauce Béarnaise oder feine Schalentiersaucen.",
+    "culinaryEn": "Essential for classic Crème Brûlée, French pastry creams, custards, or savory lobster reductions.",
+    "culinaryServingDe": "Ausgekratztes Mark für Crème Brûlée, Panna Cotta, Sauce Béarnaise oder feine Schalentiersaucen.",
+    "culinaryServingEn": "Essential for classic Crème Brûlée, French pastry creams, custards, or savory lobster reductions.",
+    "faqDe": "Was tun mit der ausgekratzten Schote? Niemals wegwerfen! Die Schote in ein Glas mit Zucker legen – nach zwei Wochen entsteht feinster echter Vanillezucker.",
+    "faqEn": "What to do with empty pods? Infuse them in granulated sugar jars to create homemade pure vanilla sugar.",
+    "guestFaqDe": "Was tun mit der ausgekratzten Schote? Niemals wegwerfen! Die Schote in ein Glas mit Zucker legen – nach zwei Wochen entsteht feinster echter Vanillezucker.",
+    "guestFaqEn": "What to do with empty pods? Infuse them in granulated sugar jars to create homemade pure vanilla sugar.",
+    "allergens": [],
+    "tags": [
+      "Vanilla",
+      "BourbonVanille",
+      "Madagascar",
+      "Pastry",
+      "GourmetSpice"
+    ],
+    "isFavorite": true
+  },
+  {
+    "id": "spices_ceylon_zimt_echter_kaneel",
+    "category": "spices_herbs",
+    "nameDe": "Echter Ceylon-Zimt (Kaneel / Cinnamomum verum)",
+    "nameEn": "True Ceylon Cinnamon (Cinnamomum verum)",
+    "subtitleDe": "Mehrschichtig gerollte, hauchdünne Innenrinde aus Sri Lanka; feinsüß, edel & cumarinarm",
+    "subtitleEn": "Thinly layered inner bark quills; delicate sweet warmth with virtually zero coumarin",
+    "imageUrl": "https://images.unsplash.com/photo-1509358271058-acd22cc93898?w=800&auto=format&fit=crop&q=80",
+    "origin": "Sri Lanka (früher Ceylon)",
+    "isImport": true,
+    "abv": "0.0% ABV",
+    "tasteDe": "Feinsinnig süß, edelholzig, blumig, dezent wärmend ohne die beißende Schärfe von billigem Cassia-Zimt.",
+    "tasteEn": "Delicate natural sweetness, subtle floral woodiness, gentle spice without harsh burn.",
+    "tasteProfileDe": "Feinsinnig süß, edelholzig, blumig, dezent wärmend ohne die beißende Schärfe von billigem Cassia-Zimt.",
+    "tasteProfileEn": "Delicate natural sweetness, subtle floral woodiness, gentle spice without harsh burn.",
+    "scienceDe": "Echter Ceylon-Zimt unterscheidet sich chemisch drastisch von gewöhnlichem China-Zimt (Cassia): Während Cassia aus einer dicken Rindenschicht besteht und hohe Mengen des lebertoxischen Stoffs Cumarin (bis zu 3.000 mg/kg) enthält, besteht Ceylon-Zimt aus hauchdünnen, zigarrenartig ineinandergerollten Rindenschichten und weist praktisch kein Cumarin (< 100 mg/kg) auf.",
+    "scienceEn": "Unlike thick, single-layered Cassia cinnamon (Cinnamomum cassia) which contains toxic levels of coumarin, true Ceylon cinnamon consists of multiple thin layers rolled like a cigar and contains almost undetectable coumarin trace levels.",
+    "scienceExplainedDe": "Echter Ceylon-Zimt unterscheidet sich chemisch drastisch von gewöhnlichem China-Zimt (Cassia): Während Cassia aus einer dicken Rindenschicht besteht und hohe Mengen des lebertoxischen Stoffs Cumarin (bis zu 3.000 mg/kg) enthält, besteht Ceylon-Zimt aus hauchdünnen, zigarrenartig ineinandergerollten Rindenschichten und weist praktisch kein Cumarin (< 100 mg/kg) auf.",
+    "scienceExplainedEn": "Unlike thick, single-layered Cassia cinnamon (Cinnamomum cassia) which contains toxic levels of coumarin, true Ceylon cinnamon consists of multiple thin layers rolled like a cigar and contains almost undetectable coumarin trace levels.",
+    "culinaryDe": "Für Pâtisserie, Glühwein-Gewürzmischungen, orientalische Fleischgerichte (Tagines) und Apfelstrudel.",
+    "culinaryEn": "Finest choice for gourmet desserts, Moroccan lamb tagines, hot mulled wine, and apple pastries.",
+    "culinaryServingDe": "Für Pâtisserie, Glühwein-Gewürzmischungen, orientalische Fleischgerichte (Tagines) und Apfelstrudel.",
+    "culinaryServingEn": "Finest choice for gourmet desserts, Moroccan lamb tagines, hot mulled wine, and apple pastries.",
+    "faqDe": "Woran erkennt man Ceylon-Zimt optisch? Die Stange ähnelt einer angeschnittenen Zigarre aus vielen feinen Schichten; Cassia-Zimt ist ein einzelnes, dickes, hartes Rindenstück.",
+    "faqEn": "How to visually identify Ceylon cinnamon? Looks like a tightly rolled cigar with paper-thin layers; Cassia is a single thick, woody bark curve.",
+    "guestFaqDe": "Woran erkennt man Ceylon-Zimt optisch? Die Stange ähnelt einer angeschnittenen Zigarre aus vielen feinen Schichten; Cassia-Zimt ist ein einzelnes, dickes, hartes Rindenstück.",
+    "guestFaqEn": "How to visually identify Ceylon cinnamon? Looks like a tightly rolled cigar with paper-thin layers; Cassia is a single thick, woody bark curve.",
+    "allergens": [],
+    "tags": [
+      "Zimt",
+      "Ceylon",
+      "Cinnamon",
+      "CoumarinFree",
+      "Baking",
+      "Spices"
+    ],
+    "isFavorite": false
+  },
+  {
+    "id": "spices_sumach_levantinisch",
+    "category": "spices_herbs",
+    "nameDe": "Sumach (Rhus coriaria / Levantinisches Essiggewürz)",
+    "nameEn": "Sumac Spice (Wild Levantine Sumac)",
+    "subtitleDe": "Grob gemahlene rote Steinfrüchte; fruchtig-säuerlich, mineralisch, natürliche Zitrusalternative",
+    "subtitleEn": "Crushed red berries of the wild sumac shrub; zesty, tart, astringent citrus alternative",
+    "imageUrl": "https://images.unsplash.com/photo-1599940824399-b87987ceb72a?w=800&auto=format&fit=crop&q=80",
+    "origin": "Türkei & Levante (Libanon / Syrien)",
+    "isImport": true,
+    "abv": "0.0% ABV",
+    "tasteDe": "Erfrischende, fruchtige Säure mit Noten von herber Zitrone, roten Beeren und dezent salzigem Abgang.",
+    "tasteEn": "Pleasantly tart, tangy fruity lemon notes, mild astringency, vibrant crimson color.",
+    "tasteProfileDe": "Erfrischende, fruchtige Säure mit Noten von herber Zitrone, roten Beeren und dezent salzigem Abgang.",
+    "tasteProfileEn": "Pleasantly tart, tangy fruity lemon notes, mild astringency, vibrant crimson color.",
+    "scienceDe": "Sumach stammt von den beerenartigen Steinfrüchten des Färberbaums (Rhus coriaria). Seine markante, saubere Säure verdankt er hohen Konzentrationen an organischer Äpfelsäure, Zitronensäure und Weinsäure sowie antioxidativen Anthocyanen. In der nahöstlichen Küche dient er als trockener Säureträger, der Gerichte frisch macht, ohne unerwünschte Flüssigkeit einzutragen.",
+    "scienceEn": "Ground sumac berries are saturated with organic malic and citric acids and anthocyanin antioxidants. Acts as a dry acidifier, delivering bright citrus tartness without adding liquid to grilled meats or flatbreads.",
+    "scienceExplainedDe": "Sumach stammt von den beerenartigen Steinfrüchten des Färberbaums (Rhus coriaria). Seine markante, saubere Säure verdankt er hohen Konzentrationen an organischer Äpfelsäure, Zitronensäure und Weinsäure sowie antioxidativen Anthocyanen. In der nahöstlichen Küche dient er als trockener Säureträger, der Gerichte frisch macht, ohne unerwünschte Flüssigkeit einzutragen.",
+    "scienceExplainedEn": "Ground sumac berries are saturated with organic malic and citric acids and anthocyanin antioxidants. Acts as a dry acidifier, delivering bright citrus tartness without adding liquid to grilled meats or flatbreads.",
+    "culinaryDe": "Großzügig über Fattoush-Salat, gegrilltes Fleisch (Kebab, Schawarma), Zwiebelsalate und Hummus gestreut.",
+    "culinaryEn": "Generously dusted over Fattoush salad, grilled lamb kebabs, hummus platters, and marinated red onions.",
+    "culinaryServingDe": "Großzügig über Fattoush-Salat, gegrilltes Fleisch (Kebab, Schawarma), Zwiebelsalate und Hummus gestreut.",
+    "culinaryServingEn": "Generously dusted over Fattoush salad, grilled lamb kebabs, hummus platters, and marinated red onions.",
+    "faqDe": "Warum ist Sumach oft leicht salzig? Reiner Sumach ist von Natur aus säuerlich; traditionell wird beim Mahlen etwas Meersalz hinzugefügt, um die Restfeuchte zu binden.",
+    "faqEn": "Why does sumac often contain salt? Commercial and artisan producers add a pinch of sea salt during milling to draw out residual moisture.",
+    "guestFaqDe": "Warum ist Sumach oft leicht salzig? Reiner Sumach ist von Natur aus säuerlich; traditionell wird beim Mahlen etwas Meersalz hinzugefügt, um die Restfeuchte zu binden.",
+    "guestFaqEn": "Why does sumac often contain salt? Commercial and artisan producers add a pinch of sea salt during milling to draw out residual moisture.",
+    "allergens": [],
+    "tags": [
+      "Sumach",
+      "Sumac",
+      "Levant",
+      "Mezze",
+      "Fattoush",
+      "ZestySpice"
+    ],
+    "isFavorite": true
+  },
+  {
+    "id": "spices_piment_despelette_aop",
+    "category": "spices_herbs",
+    "nameDe": "Piment d'Espelette AOP (Baskischer Edelpfeffer)",
+    "nameEn": "Piment d'Espelette AOP (Basque Chili Pepper)",
+    "subtitleDe": "Sonnengereifte Gorria-Chilis aus dem Baskenland; warmes Heuaroma, mild-würzige 4.000 Scoville",
+    "subtitleEn": "Protected Basque Gorria chili pepper, sun-dried on whitewashed house facades; fruity, smoky warmth",
+    "imageUrl": "https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=800&auto=format&fit=crop&q=80",
+    "origin": "Frankreich (Baskenland / Espelette AOP)",
+    "isImport": true,
+    "abv": "0.0% ABV",
+    "tasteDe": "Fruchtige getrocknete Tomate, Heu, milder Rauch und eine sanft wärmende, edle Schärfe.",
+    "tasteEn": "Sun-dried fruit, sweet tomato warmth, mild hay smoke, elegant balanced piquant glow.",
+    "tasteProfileDe": "Fruchtige getrocknete Tomate, Heu, milder Rauch und eine sanft wärmende, edle Schärfe.",
+    "tasteProfileEn": "Sun-dried fruit, sweet tomato warmth, mild hay smoke, elegant balanced piquant glow.",
+    "scienceDe": "Das baskische Mikroklima zwischen Pyrenäen und Atlantik verleiht der Sorte 'Gorria' ihren unverwechselbaren Charakter. Nach der Ernte werden die Chilis traditionell wochenlang an den weißen Hauswänden im Dorf Espelette sonnengetrocknet, bevor sie im Ofen getoastet und gemahlen werden. Mit ca. 4.000 Scoville überdeckt die Schärfe den Eigengeschmack der Speisen nicht, sondern hebt ihn wie ein Geschmacksverstärker an.",
+    "scienceEn": "Grown in the French Basque country from the Gorria pepper cultivar. Sun-dried in braids on village facades then gently toasted in wood ovens. At ~4,000 Scoville Heat Units, its capsaicin level provides a warm glow without overpowering subtle ingredients.",
+    "scienceExplainedDe": "Das baskische Mikroklima zwischen Pyrenäen und Atlantik verleiht der Sorte 'Gorria' ihren unverwechselbaren Charakter. Nach der Ernte werden die Chilis traditionell wochenlang an den weißen Hauswänden im Dorf Espelette sonnengetrocknet, bevor sie im Ofen getoastet und gemahlen werden. Mit ca. 4.000 Scoville überdeckt die Schärfe den Eigengeschmack der Speisen nicht, sondern hebt ihn wie ein Geschmacksverstärker an.",
+    "scienceExplainedEn": "Grown in the French Basque country from the Gorria pepper cultivar. Sun-dried in braids on village facades then gently toasted in wood ovens. At ~4,000 Scoville Heat Units, its capsaicin level provides a warm glow without overpowering subtle ingredients.",
+    "culinaryDe": "Für baskisches Axoa (Kalbsragout), Omelettes, über gebratene Jakobsmuscheln oder auf cremige Schafskäse.",
+    "culinaryEn": "Finishing touch for seared sea scallops, Piperade, Basque fish stews, and roasted poultry.",
+    "culinaryServingDe": "Für baskisches Axoa (Kalbsragout), Omelettes, über gebratene Jakobsmuscheln oder auf cremige Schafskäse.",
+    "culinaryServingEn": "Finishing touch for seared sea scallops, Piperade, Basque fish stews, and roasted poultry.",
+    "faqDe": "Warum wird Piment d'Espelette oft anstelle von schwarzem Pfeffer verwendet? Weil er keine bittere Pfefferschärfe mitbringt, sondern fruchtige Wärme und appetitanregende rote Farbe schenkt.",
+    "faqEn": "Why use it over black pepper? It adds warm complex fruitiness rather than harsh piperine bite.",
+    "guestFaqDe": "Warum wird Piment d'Espelette oft anstelle von schwarzem Pfeffer verwendet? Weil er keine bittere Pfefferschärfe mitbringt, sondern fruchtige Wärme und appetitanregende rote Farbe schenkt.",
+    "guestFaqEn": "Why use it over black pepper? It adds warm complex fruitiness rather than harsh piperine bite.",
+    "allergens": [],
+    "tags": [
+      "PimentDEspelette",
+      "AOP",
+      "Basque",
+      "Chili",
+      "FrenchGastronomy",
+      "Spices"
+    ],
+    "isFavorite": false
   }
 ];

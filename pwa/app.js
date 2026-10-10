@@ -163,7 +163,7 @@ try {
 }
 
 
-let currentLang = localStorage.getItem(STORAGE_KEY_LANG) || 'de';
+let currentLang = localStorage.getItem(STORAGE_KEY_LANG) || 'en';
 let currentTab = 'catalog';
 let activeCategory = 'all';
 let searchQuery = '';

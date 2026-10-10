@@ -45,7 +45,8 @@ import com.example.model.Language
 import com.example.ui.GastroViewModel
 import com.example.ui.GastroViewModelFactory
 import com.example.ui.NavTab
-import com.example.ui.components.GastroTopAppBar
+import androidx.compose.material.icons.filled.Home
+import com.example.ui.screens.HomeScreen
 import com.example.ui.screens.AddEditItemDialog
 import com.example.ui.screens.CatalogScreen
 import com.example.ui.screens.CoffeeComparisonScreen
@@ -127,6 +128,7 @@ fun GastroApp(viewModel: GastroViewModel) {
                     modifier = Modifier.testTag("bottom_nav_bar")
                 ) {
                     val tabs = listOf(
+                        NavTab.HOME to Icons.Default.Home,
                         NavTab.CATALOG to Icons.Default.MenuBook,
                         NavTab.WINE_GUIDE to Icons.Default.WineBar,
                         NavTab.COFFEE_LAB to Icons.Default.Coffee,
@@ -175,7 +177,22 @@ fun GastroApp(viewModel: GastroViewModel) {
                     .fillMaxSize()
                     .padding(innerPadding)
             ) {
+                // BackHandler on non-home tabs to return easily to Home screen
+                if (currentTab != NavTab.HOME) {
+                    BackHandler {
+                        viewModel.currentTab.value = NavTab.HOME
+                    }
+                }
+
                 when (currentTab) {
+                    NavTab.HOME -> HomeScreen(
+                        viewModel = viewModel,
+                        onNavigateToTab = { tab -> viewModel.currentTab.value = tab },
+                        onSelectCategoryAndOpenCatalog = { category ->
+                            viewModel.selectedCategory.value = category
+                            viewModel.currentTab.value = NavTab.CATALOG
+                        }
+                    )
                     NavTab.CATALOG -> CatalogScreen(
                         viewModel = viewModel,
                         onOpenAddDialog = { showAddDialog = true }
