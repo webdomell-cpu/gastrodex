@@ -3,150 +3,149 @@
 const CATEGORIES = [
   {
     "id": "all",
-    "titleDe": "✨ Alle Einträge",
-    "titleEn": "✨ All Entries",
+    "titleDe": "Alle Einträge",
+    "titleEn": "All Entries",
     "icon": "restaurant"
   },
   {
     "id": "spirits",
-    "titleDe": "🥃 Spirituosen",
-    "titleEn": "🥃 Spirits",
+    "titleDe": "Spirituosen",
+    "titleEn": "Spirits",
     "icon": "liquor"
   },
   {
     "id": "wine",
-    "titleDe": "🍷 Wein & Sekt",
-    "titleEn": "🍷 Wine & Sparking",
+    "titleDe": "Wein & Sekt",
+    "titleEn": "Wine & Sparking",
     "icon": "wine_bar"
   },
   {
     "id": "tea",
-    "titleDe": "🍵 Teekunde",
-    "titleEn": "🍵 Tea",
+    "titleDe": "Teekunde",
+    "titleEn": "Tea",
     "icon": "emoji_food_beverage"
   },
   {
     "id": "coffee",
-    "titleDe": "☕ Kaffee-Labor",
-    "titleEn": "☕ Coffee Lab",
+    "titleDe": "Kaffee-Labor",
+    "titleEn": "Coffee Lab",
     "icon": "coffee"
   },
   {
     "id": "pasta_rice",
-    "titleDe": "🍝 Pasta & Reis",
-    "titleEn": "🍝 Pasta & Rice",
+    "titleDe": "Pasta & Reis",
+    "titleEn": "Pasta & Rice",
     "icon": "dinner_dining"
   },
   {
     "id": "sauces_condiments",
-    "titleDe": "🥣 Saucen & Senf",
-    "titleEn": "🥣 Sauces & Mustard",
+    "titleDe": "Saucen & Senf",
+    "titleEn": "Sauces & Mustard",
     "icon": "soup_kitchen"
   },
   {
     "id": "soft_drinks",
-    "titleDe": "🥤 Erfrischung",
-    "titleEn": "🥤 Soft Drinks",
+    "titleDe": "Erfrischung",
+    "titleEn": "Soft Drinks",
     "icon": "local_bar"
   },
   {
     "id": "dairy",
-    "titleDe": "🥛 Molkerei",
-    "titleEn": "🥛 Dairy",
+    "titleDe": "Molkerei",
+    "titleEn": "Dairy",
     "icon": "breakfast_dining"
   },
   {
     "id": "cheese",
-    "titleDe": "🧀 Käsekunde (g.U.)",
-    "titleEn": "🧀 Cheese (PDO)",
+    "titleDe": "Käsekunde (g.U.)",
+    "titleEn": "Cheese (PDO)",
     "icon": "bakery_dining"
   },
   {
     "id": "eggs",
-    "titleDe": "🥚 Eierkunde",
-    "titleEn": "🥚 Eggs & Science",
+    "titleDe": "Eierkunde",
+    "titleEn": "Eggs & Science",
     "icon": "egg"
   },
   {
     "id": "fruits",
-    "titleDe": "🍎 Früchte & Beeren",
-    "titleEn": "🍎 Fruits & Berries",
+    "titleDe": "Früchte & Beeren",
+    "titleEn": "Fruits & Berries",
     "icon": "spa"
   },
   {
     "id": "vegetables",
-    "titleDe": "🥦 Gemüse & Pilze",
-    "titleEn": "🥦 Vegetables",
+    "titleDe": "Gemüse & Pilze",
+    "titleEn": "Vegetables",
     "icon": "yard"
   },
   {
     "id": "nuts",
-    "titleDe": "🥜 Nüsse & Saaten",
-    "titleEn": "🥜 Nuts & Seeds",
+    "titleDe": "Nüsse & Saaten",
+    "titleEn": "Nuts & Seeds",
     "icon": "grain"
   },
   {
     "id": "spices_herbs",
-    "titleDe": "🌿 Gewürze & Kräuter",
-    "titleEn": "🌿 Spices & Herbs",
+    "titleDe": "Gewürze & Kräuter",
+    "titleEn": "Spices & Herbs",
     "icon": "spa"
   },
   {
     "id": "fish_seafood",
-    "titleDe": "🐟 Fisch & Meeresfrüchte",
-    "titleEn": "🐟 Fish & Seafood",
+    "titleDe": "Fisch & Meeresfrüchte",
+    "titleEn": "Fish & Seafood",
     "icon": "set_meal"
   },
   {
     "id": "olives",
-    "titleDe": "🫒 Olivenkunde",
-    "titleEn": "🫒 Olives",
+    "titleDe": "Olivenkunde",
+    "titleEn": "Olives",
     "icon": "eco"
   },
   {
     "id": "oils_vinegars",
-    "titleDe": "🍶 Öle & Essige",
-    "titleEn": "🍶 Oils & Vinegars",
+    "titleDe": "Öle & Essige",
+    "titleEn": "Oils & Vinegars",
     "icon": "opacity"
   },
   {
     "id": "charcuterie",
-    "titleDe": "🥩 Schinken & Aufschnitt",
-    "titleEn": "🥩 Charcuterie & Deli",
+    "titleDe": "Schinken & Aufschnitt",
+    "titleEn": "Charcuterie & Deli",
     "icon": "dinner_dining"
   },
   {
     "id": "meat_cuts",
-    "titleDe": "🥩 Steaks & Fleisch-Cuts",
-    "titleEn": "🥩 Steaks & Cuts",
+    "titleDe": "Steaks & Fleisch-Cuts",
+    "titleEn": "Steaks & Cuts",
     "icon": "restaurant"
   },
   {
     "id": "bread_bakery",
-    "titleDe": "🥖 Brote & Backwaren",
-    "titleEn": "🥖 Bread & Bakery",
+    "titleDe": "Brote & Backwaren",
+    "titleEn": "Bread & Bakery",
     "icon": "bakery_dining"
   },
   {
     "id": "fingerfood",
-    "titleDe": "🍢 Fingerfood & Snacks",
-    "titleEn": "🍢 Fingerfood & Snacks",
+    "titleDe": "Fingerfood & Snacks",
+    "titleEn": "Fingerfood & Snacks",
     "icon": "breakfast_dining"
   },
   {
     "id": "non_food",
-    "titleDe": "🛎️ Non-Food & Service",
-    "titleEn": "🛎️ Non-Food & Service",
+    "titleDe": "Non-Food & Service",
+    "titleEn": "Non-Food & Service",
     "icon": "room_service"
   },
   {
     "id": "cereals",
-    "titleDe": "🥣 Cerealien & Frühstück",
-    "titleEn": "🥣 Cereals & Breakfast",
+    "titleDe": "Cerealien & Frühstück",
+    "titleEn": "Cereals & Breakfast",
     "icon": "grain"
   }
 ];
-
 const MASTER_ITEMS = [
   {
     "id": "spirit_scotch",

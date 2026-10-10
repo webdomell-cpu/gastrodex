@@ -476,7 +476,8 @@ function renderQuizCategoryButtons() {
   CATEGORIES_LIST.forEach(cat => {
     const btn = document.createElement('button');
     btn.className = `filter-btn ${quizCategory === cat.id ? 'active' : ''}`;
-    btn.textContent = (currentLang === 'de') ? cat.titleDe : cat.titleEn;
+    const iconSpan = cat.icon ? `<span class="material-symbols-outlined" style="font-size:16px; vertical-align:middle; margin-right:4px;">${cat.icon}</span>` : '';
+    btn.innerHTML = `${iconSpan}${(currentLang === 'de') ? cat.titleDe : cat.titleEn}`;
     btn.onclick = () => {
       initQuizSession(cat.id, 10);
       renderQuizCategoryButtons();
@@ -487,11 +488,14 @@ function renderQuizCategoryButtons() {
 
 function renderCategoryChips() {
   const container = document.getElementById('categoryScroll');
+  if (!container) return;
   container.innerHTML = '';
   CATEGORIES_LIST.forEach(cat => {
     const chip = document.createElement('button');
     chip.className = `chip ${activeCategory === cat.id ? 'active' : ''}`;
-    chip.textContent = (currentLang === 'de') ? cat.titleDe : cat.titleEn;
+    const iconSpan = cat.icon ? `<span class="chip-icon material-symbols-outlined">${cat.icon}</span>` : '';
+    const label = (currentLang === 'de') ? cat.titleDe : cat.titleEn;
+    chip.innerHTML = `${iconSpan}<span>${label}</span>`;
     chip.onclick = () => {
       activeCategory = cat.id;
       renderCategoryChips();
@@ -526,21 +530,28 @@ function renderCategoryGrid() {
     const isSelected = activeCategory === cat.id;
     const item = document.createElement('div');
     item.style.padding = '10px 8px';
-    item.style.borderRadius = '8px';
+    item.style.borderRadius = '10px';
     item.style.border = isSelected ? '2px solid var(--accent-gold)' : '1px solid var(--border-subtle)';
-    item.style.background = isSelected ? 'rgba(212, 175, 55, 0.15)' : 'var(--bg-surface)';
+    item.style.background = isSelected ? 'var(--accent-gold-container)' : 'var(--bg-surface)';
     item.style.cursor = 'pointer';
     item.style.textAlign = 'center';
     item.style.transition = 'all 0.15s ease';
+    item.style.display = 'flex';
+    item.style.flexDirection = 'column';
+    item.style.alignItems = 'center';
+    item.style.gap = '4px';
 
     const count = cat.id === 'all' 
       ? items.length 
       : items.filter(it => it.category === cat.id).length;
 
     const label = (currentLang === 'de') ? cat.titleDe : cat.titleEn;
+    const iconHtml = cat.icon ? `<span class="material-symbols-outlined" style="font-size: 24px; color: ${isSelected ? 'var(--accent-gold)' : 'var(--text-secondary)'};">${cat.icon}</span>` : '';
+
     item.innerHTML = `
-      <div style="font-size: 0.85rem; font-weight: ${isSelected ? '800' : '600'}; color: ${isSelected ? 'var(--accent-gold)' : 'var(--text-primary)'};">${label}</div>
-      <div style="font-size: 0.72rem; color: var(--text-muted); margin-top: 2px;">${count} Einträge</div>
+      ${iconHtml}
+      <div style="font-size: 0.84rem; font-weight: ${isSelected ? '800' : '600'}; color: ${isSelected ? 'var(--text-primary)' : 'var(--text-primary)'}; line-height: 1.2;">${label}</div>
+      <div style="font-size: 0.72rem; color: var(--text-muted); margin-top: 1px;">${count} Einträge</div>
     `;
 
     item.onclick = () => {
@@ -606,16 +617,19 @@ function renderCatalog() {
       `;
     }
 
+    const catIconName = catObj ? (catObj.icon || 'restaurant') : 'restaurant';
+    const catDisplayName = catObj ? (currentLang === 'de' ? catObj.titleDe : catObj.titleEn) : item.category;
+
     const imgMarkup = item.imageUrl ? 
-      `<img class="item-img" src="${item.imageUrl}" alt="${title}" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" /><div class="item-placeholder" style="display:none;"><span class="placeholder-icon">${catLabel.split(' ')[0]}</span><span class="placeholder-title">${title}</span></div>` :
-      `<div class="item-placeholder"><span class="placeholder-icon">${catLabel.split(' ')[0]}</span><span class="placeholder-title">${title}</span></div>`;
+      `<img class="item-img" src="${item.imageUrl}" alt="${title}" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" /><div class="item-placeholder" style="display:none;"><span class="material-symbols-outlined placeholder-icon">${catIconName}</span><span class="placeholder-title">${title}</span></div>` :
+      `<div class="item-placeholder"><span class="material-symbols-outlined placeholder-icon">${catIconName}</span><span class="placeholder-title">${title}</span></div>`;
 
     card.innerHTML = `
       <div class="item-image-wrapper">
         ${imgMarkup}
         <div class="item-badges">
-          <span class="badge">${catLabel.split(' ')[0]}</span>
-          ${item.isImport ? '<span class="badge">✈️ Import</span>' : '<span class="badge">🌱 Regional</span>'}
+          <span class="badge" style="display:flex;align-items:center;gap:3px;"><span class="material-symbols-outlined" style="font-size:13px;">${catIconName}</span>${catDisplayName}</span>
+          ${item.isImport ? '<span class="badge" style="display:flex;align-items:center;gap:3px;"><span class="material-symbols-outlined" style="font-size:13px;">flight</span>Import</span>' : '<span class="badge" style="display:flex;align-items:center;gap:3px;"><span class="material-symbols-outlined" style="font-size:13px;">eco</span>Regional</span>'}
         </div>
         <button class="card-fav-btn ${item.isFavorite ? 'active' : ''}" onclick="event.stopPropagation(); toggleItemFavorite('${item.id}');" title="Favorit">
           ${item.isFavorite ? '❤️' : '🤍'}
@@ -657,7 +671,7 @@ function showItemDetail(id) {
   const detailImg = document.getElementById('detailImage');
   const detailPh = document.getElementById('detailPlaceholder');
   const catObj = CATEGORIES_LIST.find(c => c.id === item.category);
-  const catIcon = catObj ? catObj.titleDe.split(' ')[0] : '🍽️';
+  const catIconName = catObj ? (catObj.icon || 'restaurant') : 'restaurant';
 
   if (detailImg) {
     if (item.imageUrl && item.imageUrl.trim() !== '') {
@@ -668,14 +682,14 @@ function showItemDetail(id) {
         detailImg.style.display = 'none';
         if (detailPh) {
           detailPh.style.display = 'flex';
-          detailPh.innerHTML = `<span class="placeholder-icon" style="font-size:3.5rem;">${catIcon}</span><span class="placeholder-title" style="font-size:1.1rem;margin-top:8px;">${title}</span>`;
+          detailPh.innerHTML = `<span class="material-symbols-outlined placeholder-icon" style="font-size:3.5rem; color: var(--accent-gold);">${catIconName}</span><span class="placeholder-title" style="font-size:1.1rem;margin-top:8px;">${title}</span>`;
         }
       };
     } else {
       detailImg.style.display = 'none';
       if (detailPh) {
         detailPh.style.display = 'flex';
-        detailPh.innerHTML = `<span class="placeholder-icon" style="font-size:3.5rem;">${catIcon}</span><span class="placeholder-title" style="font-size:1.1rem;margin-top:8px;">${title}</span>`;
+        detailPh.innerHTML = `<span class="material-symbols-outlined placeholder-icon" style="font-size:3.5rem; color: var(--accent-gold);">${catIconName}</span><span class="placeholder-title" style="font-size:1.1rem;margin-top:8px;">${title}</span>`;
       }
     }
   }
@@ -692,14 +706,14 @@ function showItemDetail(id) {
 
   const catBadge = document.getElementById('detailCategoryBadge');
   if (catBadge) {
-    catBadge.textContent = catObj ? (isDe ? catObj.titleDe : catObj.titleEn) : (item.category || '').toUpperCase();
+    catBadge.innerHTML = `<span class="material-symbols-outlined" style="font-size:13px;vertical-align:middle;margin-right:3px;">${catIconName}</span>` + (catObj ? (isDe ? catObj.titleDe : catObj.titleEn) : (item.category || '').toUpperCase());
   }
 
   const impBadge = document.getElementById('detailImportBadge');
   if (impBadge) {
-    impBadge.textContent = item.isImport 
-      ? (isDe ? '🌍 IMPORTPRODUKT' : '🌍 IMPORTED') 
-      : (isDe ? '🌱 REGIONAL / HEIMISCH' : '🌱 REGIONAL');
+    impBadge.innerHTML = item.isImport 
+      ? `<span class="material-symbols-outlined" style="font-size:13px;vertical-align:middle;margin-right:3px;">flight</span>${isDe ? 'IMPORTPRODUKT' : 'IMPORTED'}` 
+      : `<span class="material-symbols-outlined" style="font-size:13px;vertical-align:middle;margin-right:3px;">eco</span>${isDe ? 'REGIONAL / HEIMISCH' : 'REGIONAL'}`;
     impBadge.style.color = item.isImport ? '#FFD166' : '#88D49E';
   }
 
@@ -1063,3 +1077,94 @@ function setupEventListeners() {
     renderCatalog();
   });
 }
+
+// ==========================================
+// PWA AUTOMATIC INSTALL PROMPT / HOMESCREEN
+// ==========================================
+let deferredPrompt = null;
+
+window.addEventListener('beforeinstallprompt', (e) => {
+  // Prevent immediate default mini-infobar on mobile Chrome
+  e.preventDefault();
+  deferredPrompt = e;
+  // Automatically show the install prompt banner/dialog to the user
+  showPwaInstallPrompt();
+});
+
+window.addEventListener('appinstalled', () => {
+  deferredPrompt = null;
+  const banner = document.getElementById('pwaInstallBanner');
+  if (banner) banner.style.display = 'none';
+  console.log('GastroDex was successfully installed on the device.');
+});
+
+function showPwaInstallPrompt() {
+  // Don't show if already dismissed in this session
+  if (sessionStorage.getItem('pwa_prompt_dismissed') === 'true') {
+    return;
+  }
+  const isStandalone = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true;
+  if (isStandalone) {
+    return; // Already running as installed PWA app
+  }
+
+  const isDe = (currentLang === 'de');
+  const banner = document.getElementById('pwaInstallBanner');
+  if (banner) {
+    const titleEl = document.getElementById('pwaInstallTitle');
+    const subEl = document.getElementById('pwaInstallSub');
+    if (titleEl) titleEl.textContent = isDe ? 'GastroDex auf dem Gerät installieren?' : 'Install GastroDex on your device?';
+    if (subEl) subEl.textContent = isDe 
+      ? 'Als App auf dem Startbildschirm speichern für schnellen Offline-Zugriff.' 
+      : 'Add to homescreen for instant offline hospitality reference.';
+    banner.style.display = 'flex';
+  }
+}
+
+function triggerPwaInstall() {
+  if (deferredPrompt) {
+    // Native browser prompt on Android / Chromium / Desktop
+    deferredPrompt.prompt();
+    deferredPrompt.userChoice.then((choiceResult) => {
+      if (choiceResult.outcome === 'accepted') {
+        console.log('User accepted PWA installation');
+      } else {
+        console.log('User dismissed PWA installation');
+      }
+      deferredPrompt = null;
+      dismissInstallPrompt();
+    });
+  } else {
+    // iOS Safari or browser without beforeinstallprompt support: show step-by-step instructions
+    const iosModal = document.getElementById('iosInstallModal');
+    if (iosModal) {
+      iosModal.classList.add('active');
+    }
+  }
+}
+
+function dismissInstallPrompt() {
+  const banner = document.getElementById('pwaInstallBanner');
+  if (banner) banner.style.display = 'none';
+  sessionStorage.setItem('pwa_prompt_dismissed', 'true');
+}
+
+function closeIosInstallModal(e) {
+  if (e && e.target && e.target.id !== 'iosInstallModal' && !e.target.classList.contains('btn-primary')) {
+    return;
+  }
+  const modal = document.getElementById('iosInstallModal');
+  if (modal) modal.classList.remove('active');
+  dismissInstallPrompt();
+}
+
+// Proactive check on page load: if not triggered via event after 1.8s (e.g. iOS or manual browser), check if mobile
+setTimeout(() => {
+  const isStandalone = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true;
+  if (!isStandalone && sessionStorage.getItem('pwa_prompt_dismissed') !== 'true') {
+    const banner = document.getElementById('pwaInstallBanner');
+    if (banner && banner.style.display === 'none') {
+      showPwaInstallPrompt();
+    }
+  }
+}, 1800);

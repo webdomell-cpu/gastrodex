@@ -28,15 +28,11 @@
     <div class="brand">
       <img src="logo.svg" alt="GastroDex Logo" class="brand-logo" width="36" height="36" />
       <div class="brand-text">
-        <div style="display: flex; align-items: center; gap: 6px;">
-          <h1>GastroDex</h1>
-          <span class="badge-edu">EDU</span>
-        </div>
+        <h1>GastroDex</h1>
         <p class="brand-subtitle" id="topBarSubtitle">Das Gastronomie Quiz & Lexikon</p>
       </div>
     </div>
     <div class="top-actions">
-      <a href="admin.html" class="btn-lang" style="text-decoration: none; margin-right: 6px; background: rgba(224, 109, 83, 0.15); border-color: var(--accent-gold); font-size: 0.8rem;">🛠️ Web Admin</a>
       <button class="btn-lang" id="langToggleBtn" onclick="toggleLanguage()">🇩🇪 DE</button>
     </div>
   </header>
@@ -52,7 +48,7 @@
 
     <!-- Category Chips with Scroll Arrows & Quick-Grid Button -->
     <div class="category-scroll-wrapper">
-      <button class="cat-nav-btn cat-grid-btn" onclick="openCategoryGridModal()" title="Kategorie-Schnellauswahl (21)" aria-label="Kategorie-Übersicht">
+      <button class="cat-nav-btn cat-grid-btn" onclick="openCategoryGridModal()" title="Kategorie-Schnellauswahl (24)" aria-label="Kategorie-Übersicht">
         <span class="material-symbols-outlined" style="font-size: 19px;">grid_view</span>
       </button>
       <button class="cat-nav-btn cat-nav-left" onclick="scrollCategories(-240)" aria-label="Zurück">‹</button>
@@ -446,12 +442,12 @@
       <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px;">
         <h3 style="font-size: 1.15rem; font-weight: 800; color: var(--accent-gold); display: flex; align-items: center; gap: 8px;">
           <span class="material-symbols-outlined">grid_view</span>
-          Kategorie-Schnellauswahl (21)
+          Kategorie-Schnellauswahl (24)
         </h3>
         <button class="modal-close-btn" onclick="closeCategoryGridModal()">×</button>
       </div>
       <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 12px;">
-        Wähle direkt eine der 21 Fachkategorien aus der Gastronomie-Wissensdatenbank:
+        Wähle direkt eine der 24 Fachkategorien aus der Gastronomie-Wissensdatenbank:
       </p>
       <div id="categoryGridContainer" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 8px; overflow-y: auto; padding-right: 4px; max-height: 55vh;">
         <!-- Injected via renderCategoryGrid() in app.js -->
@@ -459,6 +455,39 @@
       <div style="margin-top: 14px; text-align: right;">
         <button class="btn-primary" style="padding: 8px 16px; font-size: 0.85rem;" onclick="closeCategoryGridModal()">Fertig</button>
       </div>
+    </div>
+  </div>
+
+  <!-- PWA INSTALL PROMPT BANNER & MODAL -->
+  <div id="pwaInstallBanner" class="pwa-install-banner" style="display: none;">
+    <div class="pwa-install-content">
+      <img src="logo.svg" alt="App Icon" class="pwa-install-icon" width="38" height="38" />
+      <div class="pwa-install-text">
+        <strong id="pwaInstallTitle">GastroDex installieren?</strong>
+        <span id="pwaInstallSub">Als Web-App auf dem Homescreen speichern für blitzschnellen Offline-Zugriff.</span>
+      </div>
+    </div>
+    <div class="pwa-install-actions">
+      <button class="pwa-btn-dismiss" onclick="dismissInstallPrompt()">Später</button>
+      <button class="pwa-btn-install" id="pwaInstallBtn" onclick="triggerPwaInstall()">📲 Installieren</button>
+    </div>
+  </div>
+
+  <!-- iOS / Manual Add to Homescreen Modal -->
+  <div id="iosInstallModal" class="modal-overlay" onclick="closeIosInstallModal(event)">
+    <div class="modal-card" style="max-width: 480px; text-align: center; padding: 24px 20px;">
+      <div style="font-size: 2.2rem; margin-bottom: 8px;">📲</div>
+      <h3 style="font-size: 1.2rem; font-weight: 800; color: var(--accent-gold); margin-bottom: 8px;">
+        Zum Startbildschirm hinzufügen
+      </h3>
+      <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5; margin-bottom: 16px;">
+        Nutze GastroDex wie eine echte App direkt auf deinem Smartphone:
+      </p>
+      <div style="background: var(--bg-surface-variant); padding: 14px; border-radius: var(--radius-md); text-align: left; font-size: 0.86rem; color: var(--text-primary); margin-bottom: 18px; border: 1px solid var(--border-subtle);">
+        <p style="margin-bottom: 8px;">1. Im Browser auf das <strong>Teilen-Symbol</strong> <span style="font-size: 1.1rem; vertical-align: middle;">⎋</span> (iOS Safari) oder die <strong>Drei Punkte</strong> <strong>⋮</strong> (Chrome/Android) tippen.</p>
+        <p>2. Wähle <strong>„Zum Home-Bildschirm“</strong> bzw. <strong>„App installieren“</strong> aus.</p>
+      </div>
+      <button class="btn-primary" style="width: 100%; padding: 10px;" onclick="closeIosInstallModal()">Verstanden</button>
     </div>
   </div>
 
