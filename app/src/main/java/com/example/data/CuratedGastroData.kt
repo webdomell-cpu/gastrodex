@@ -19,7 +19,9 @@ object CuratedGastroData {
         CuratedOlivesData.items +
         CuratedOilsVinegarsData.items +
         CuratedMeatDeliData.items +
-        CuratedBakerySnacksData.items
+        CuratedBakerySnacksData.items +
+        CuratedNonFoodData.items +
+        CuratedCerealsData.items
 
     val quizQuestions: List<QuizQuestion> = listOf(
         QuizQuestion(

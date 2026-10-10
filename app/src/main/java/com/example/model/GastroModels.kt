@@ -33,7 +33,9 @@ enum class GastroCategory(
     CHARCUTERIE_DELI("charcuterie", "Charcuterie & Cold Cuts", "Deli & Aufschnitt", "DinnerDining", 0xFF8D5B4C),
     MEAT_CUTS("meat_cuts", "Steaks & Meat Cuts", "Fleischstücke & Cuts", "Restaurant", 0xFFA83232),
     BREAD_BAKERY("bread_bakery", "Breads & Rolls", "Brote & Brötchen", "BakeryDining", 0xFFDDA15E),
-    FINGERFOOD_SNACKS("fingerfood", "Fingerfood, Bites & Snacks", "Fingerfood & Snacks", "BreakfastDining", 0xFF457B9D)
+    FINGERFOOD_SNACKS("fingerfood", "Fingerfood, Bites & Snacks", "Fingerfood & Snacks", "BreakfastDining", 0xFF457B9D),
+    NON_FOOD_SERVICE("non_food", "Non-Food & Service Basics", "Non-Food & Service Basics", "DesignServices", 0xFF3D5A80),
+    CEREALS_BREAKFAST("cereals", "Cereals & Breakfast", "Cereals & Frühstück", "Grain", 0xFFE09F3E)
 }
 
 enum class AlcoholProductionType(val titleEn: String, val titleDe: String) {
