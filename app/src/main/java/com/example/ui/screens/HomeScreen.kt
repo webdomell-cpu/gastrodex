@@ -20,11 +20,15 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
+import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowForward
 import androidx.compose.material.icons.filled.Coffee
+import androidx.compose.material.icons.filled.DesignServices
+import androidx.compose.material.icons.filled.Kitchen
+import androidx.compose.material.icons.filled.LocalBar
 import androidx.compose.material.icons.filled.MenuBook
 import androidx.compose.material.icons.filled.Quiz
 import androidx.compose.material.icons.filled.Science
@@ -65,7 +69,7 @@ fun HomeScreen(
     val language by viewModel.language.collectAsStateWithLifecycle()
     val isPro by viewModel.isProUser.collectAsStateWithLifecycle()
     val isDe = (language == Language.DE)
-    val allItems by viewModel.items.collectAsStateWithLifecycle()
+    val allItems by viewModel.rawItems.collectAsStateWithLifecycle()
     val categories = GastroCategory.entries
 
     LazyColumn(
@@ -124,7 +128,7 @@ fun HomeScreen(
             )
         }
 
-        // 3. Main Navigation Hub (Lexikon, Wine-Guide, Coffee Lab, Process Science, Staff Trainer)
+        // 3. Main Navigation Hub (3-Column Square Grid)
         item {
             Column(modifier = Modifier.padding(horizontal = 16.dp, vertical = 8.dp)) {
                 Text(
@@ -135,36 +139,32 @@ fun HomeScreen(
                     modifier = Modifier.padding(bottom = 10.dp)
                 )
 
-                // 2x2 Grid or Cards
-                HomeNavCard(
-                    title = if (isDe) "Warenkunde & Fachlexikon" else "Encyclopedia & Catalog",
-                    subtitle = if (isDe) "24 Kategorien: Spirituosen, Käse, Steaks, Brote & Non-Food" else "24 Categories: Spirits, Cheese, Steaks, Bread & Service",
-                    icon = Icons.Default.MenuBook,
-                    badgeText = "${allItems.size} Artikel",
-                    color = MaterialTheme.colorScheme.primary,
-                    onClick = { onNavigateToTab(NavTab.CATALOG) },
-                    testTag = "home_hub_catalog"
-                )
-
-                Spacer(modifier = Modifier.height(10.dp))
-
+                // Row 1
                 Row(
                     modifier = Modifier.fillMaxWidth(),
-                    horizontalArrangement = Arrangement.spacedBy(10.dp)
+                    horizontalArrangement = Arrangement.spacedBy(8.dp)
                 ) {
                     HomeCompactNavCard(
+                        title = if (isDe) "Lexikon" else "Catalog",
+                        subtitle = if (isDe) "${allItems.size} Artikel" else "${allItems.size} Items",
+                        icon = Icons.Default.MenuBook,
+                        color = MaterialTheme.colorScheme.primary,
+                        onClick = { onNavigateToTab(NavTab.CATALOG) },
+                        modifier = Modifier.weight(1f),
+                        testTag = "home_hub_catalog"
+                    )
+                    HomeCompactNavCard(
                         title = if (isDe) "Wein-Guide" else "Wine Guide",
-                        subtitle = if (isDe) "Champagner & Terroirs" else "Champagne & Terroirs",
+                        subtitle = if (isDe) "Terroirs" else "Terroirs",
                         icon = Icons.Default.WineBar,
                         color = Color(0xFFC2185B),
                         onClick = { onNavigateToTab(NavTab.WINE_GUIDE) },
                         modifier = Modifier.weight(1f),
                         testTag = "home_hub_wine"
                     )
-
                     HomeCompactNavCard(
-                        title = if (isDe) "Kaffee-Labor" else "Coffee Lab",
-                        subtitle = if (isDe) "Schichten & Barista" else "Layers & Barista",
+                        title = if (isDe) "Kaffee-Lab" else "Coffee Lab",
+                        subtitle = if (isDe) "Barista" else "Barista",
                         icon = Icons.Default.Coffee,
                         color = Color(0xFF6D4C41),
                         onClick = { onNavigateToTab(NavTab.COFFEE_LAB) },
@@ -173,31 +173,68 @@ fun HomeScreen(
                     )
                 }
 
-                Spacer(modifier = Modifier.height(10.dp))
+                Spacer(modifier = Modifier.height(8.dp))
 
+                // Row 2
                 Row(
                     modifier = Modifier.fillMaxWidth(),
-                    horizontalArrangement = Arrangement.spacedBy(10.dp)
+                    horizontalArrangement = Arrangement.spacedBy(8.dp)
                 ) {
                     HomeCompactNavCard(
-                        title = if (isDe) "Wirkungslehre" else "Process Science",
-                        subtitle = if (isDe) "HACCP & Garchemie" else "HACCP & Chemistry",
+                        title = if (isDe) "Cocktails" else "Cocktails",
+                        subtitle = if (isDe) "Bar & Mix" else "Bar & Mix",
+                        icon = Icons.Default.LocalBar,
+                        color = Color(0xFF8E24AA),
+                        onClick = { onNavigateToTab(NavTab.COCKTAILS) },
+                        modifier = Modifier.weight(1f),
+                        testTag = "home_hub_cocktails"
+                    )
+                    HomeCompactNavCard(
+                        title = if (isDe) "Service" else "Service",
+                        subtitle = if (isDe) "Tischkultur" else "Table Culture",
+                        icon = Icons.Default.DesignServices,
+                        color = Color(0xFF00796B),
+                        onClick = { onNavigateToTab(NavTab.SERVICE) },
+                        modifier = Modifier.weight(1f),
+                        testTag = "home_hub_service"
+                    )
+                    HomeCompactNavCard(
+                        title = if (isDe) "Wirkungslehre" else "Science",
+                        subtitle = if (isDe) "HACCP" else "HACCP",
                         icon = Icons.Default.Science,
                         color = Color(0xFF00897B),
                         onClick = { onNavigateToTab(NavTab.SCIENCE) },
                         modifier = Modifier.weight(1f),
                         testTag = "home_hub_science"
                     )
+                }
 
+                Spacer(modifier = Modifier.height(8.dp))
+
+                // Row 3
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.spacedBy(8.dp)
+                ) {
                     HomeCompactNavCard(
-                        title = if (isDe) "Schulungs-Quiz" else "Staff Trainer",
-                        subtitle = if (isDe) "Multiple-Choice Test" else "Interactive Quizzes",
+                        title = if (isDe) "Quiz-Trainer" else "Trainer",
+                        subtitle = if (isDe) "Prüfung" else "Quiz",
                         icon = Icons.Default.Quiz,
                         color = Color(0xFFE65100),
                         onClick = { onNavigateToTab(NavTab.QUIZ) },
                         modifier = Modifier.weight(1f),
                         testTag = "home_hub_quiz"
                     )
+                    HomeCompactNavCard(
+                        title = if (isDe) "Rezepte" else "Recipes",
+                        subtitle = if (isDe) "In Vorb." else "Prep",
+                        icon = Icons.Default.Kitchen,
+                        color = Color(0xFF33691E),
+                        onClick = { onNavigateToTab(NavTab.RECIPES) },
+                        modifier = Modifier.weight(1f),
+                        testTag = "home_hub_recipes"
+                    )
+                    Spacer(modifier = Modifier.weight(1f))
                 }
             }
         }
@@ -367,33 +404,40 @@ fun HomeCompactNavCard(
         onClick = onClick,
         shape = RoundedCornerShape(16.dp),
         colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
-        border = BorderStroke(1.dp, MaterialTheme.colorScheme.outline.copy(alpha = 0.25f)),
-        elevation = CardDefaults.cardElevation(defaultElevation = 2.dp),
-        modifier = modifier.testTag(testTag)
+        border = BorderStroke(1.5.dp, MaterialTheme.colorScheme.outline.copy(alpha = 0.22f)),
+        elevation = CardDefaults.cardElevation(defaultElevation = 3.dp),
+        modifier = modifier
+            .aspectRatio(1f)
+            .testTag(testTag)
     ) {
         Column(
-            modifier = Modifier.padding(14.dp)
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(8.dp),
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.Center
         ) {
             Surface(
                 shape = CircleShape,
                 color = color.copy(alpha = 0.15f),
-                modifier = Modifier.size(40.dp)
+                modifier = Modifier.size(42.dp)
             ) {
                 Box(contentAlignment = Alignment.Center) {
                     Icon(
                         imageVector = icon,
                         contentDescription = null,
                         tint = color,
-                        modifier = Modifier.size(22.dp)
+                        modifier = Modifier.size(24.dp)
                     )
                 }
             }
-            Spacer(modifier = Modifier.height(10.dp))
+            Spacer(modifier = Modifier.height(6.dp))
             Text(
                 text = title,
-                style = MaterialTheme.typography.titleSmall,
+                style = MaterialTheme.typography.labelLarge,
                 fontWeight = FontWeight.Bold,
-                color = MaterialTheme.colorScheme.onSurface
+                color = MaterialTheme.colorScheme.onSurface,
+                maxLines = 1
             )
             Spacer(modifier = Modifier.height(2.dp))
             Text(

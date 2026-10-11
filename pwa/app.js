@@ -164,7 +164,7 @@ try {
 
 
 let currentLang = localStorage.getItem(STORAGE_KEY_LANG) || 'en';
-let currentTab = 'catalog';
+let currentTab = 'home';
 let activeCategory = 'all';
 let searchQuery = '';
 let filterOnlyStock = false;
@@ -421,12 +421,58 @@ function renderLanguageLabels() {
   document.getElementById('topBarSubtitle').textContent = isDe ? "Gastronomie & Hotellerie Wissenskompass" : "Hospitality & Gastronomy Encyclopedia";
   document.getElementById('searchInput').placeholder = isDe ? "Suche Spirituosen, Weine, Kaffee, Eier, Käse..." : "Search spirits, wine, coffee, eggs, cheese...";
   
+  const tabHomeLabel = document.getElementById('tabHomeLabel');
+  if (tabHomeLabel) tabHomeLabel.textContent = isDe ? "Startseite" : "Home";
   document.getElementById('tabCatalogLabel').textContent = isDe ? "Lexikon" : "Catalog";
   document.getElementById('tabWineLabel').textContent = isDe ? "Wein-Guide" : "Wine Guide";
   document.getElementById('tabCoffeeLabel').textContent = isDe ? "Kaffee-Labor" : "Coffee Lab";
   document.getElementById('tabScienceLabel').textContent = isDe ? "Wirkungslehre" : "Science";
-  document.getElementById('tabQuizLabel').textContent = isDe ? "Quiz-Trainer" : "Staff Quiz";
-  
+  document.getElementById('tabQuizLabel').textContent = isDe ? "Quiz-Trainer" : "Quiz";
+
+  const homeCatalog = document.getElementById('homeCardCatalog');
+  if (homeCatalog) homeCatalog.textContent = isDe ? "Lexikon & Katalog" : "Catalog & Lexicon";
+  const homeCatalogSub = document.getElementById('homeCardCatalogSub');
+  if (homeCatalogSub) homeCatalogSub.textContent = isDe ? "24 Kategorien & Fachartikel" : "24 Categories & Entries";
+
+  const homeWine = document.getElementById('homeCardWine');
+  if (homeWine) homeWine.textContent = isDe ? "Wein-Guide" : "Wine Guide";
+  const homeWineSub = document.getElementById('homeCardWineSub');
+  if (homeWineSub) homeWineSub.textContent = isDe ? "Schaumwein & Rebsorten" : "Sparkling & Viticulture";
+
+  const homeCoffee = document.getElementById('homeCardCoffee');
+  if (homeCoffee) homeCoffee.textContent = isDe ? "Kaffee-Labor" : "Coffee Lab";
+  const homeCoffeeSub = document.getElementById('homeCardCoffeeSub');
+  if (homeCoffeeSub) homeCoffeeSub.textContent = isDe ? "Schichten & Glas-Physik" : "Glass layers & Physics";
+
+  const homeScience = document.getElementById('homeCardScience');
+  if (homeScience) homeScience.textContent = isDe ? "Alkohol-Wirkungslehre" : "Alcohol Science";
+  const homeScienceSub = document.getElementById('homeCardScienceSub');
+  if (homeScienceSub) homeScienceSub.textContent = isDe ? "Metabolismus & Promille" : "Metabolism & Effects";
+
+  const homeQuiz = document.getElementById('homeCardQuiz');
+  if (homeQuiz) homeQuiz.textContent = isDe ? "Quiz-Trainer" : "Quiz Trainer";
+  const homeQuizSub = document.getElementById('homeCardQuizSub');
+  if (homeQuizSub) homeQuizSub.textContent = isDe ? "Wissen spielend testen" : "Test your knowledge";
+
+  const homeGrid = document.getElementById('homeCardGrid');
+  if (homeGrid) homeGrid.textContent = isDe ? "Alle Kategorien" : "All Categories";
+  const homeGridSub = document.getElementById('homeCardGridSub');
+  if (homeGridSub) homeGridSub.textContent = isDe ? "Schnellwahl-Raster" : "Quick 24-grid selector";
+
+  const homeCocktails = document.getElementById('homeCardCocktails');
+  if (homeCocktails) homeCocktails.textContent = isDe ? "Cocktails & Bar" : "Cocktails & Bar";
+  const homeCocktailsSub = document.getElementById('homeCardCocktailsSub');
+  if (homeCocktailsSub) homeCocktailsSub.textContent = isDe ? "Longdrinks & Technik" : "Longdrinks & Tech";
+
+  const homeService = document.getElementById('homeCardService');
+  if (homeService) homeService.textContent = isDe ? "Service & Kultur" : "Service & Culture";
+  const homeServiceSub = document.getElementById('homeCardServiceSub');
+  if (homeServiceSub) homeServiceSub.textContent = isDe ? "Tischdecke & HACCP" : "Table & HACCP";
+
+  const homeRecipes = document.getElementById('homeCardRecipes');
+  if (homeRecipes) homeRecipes.textContent = isDe ? "Basis-Rezepte" : "Basic Recipes";
+  const homeRecipesSub = document.getElementById('homeCardRecipesSub');
+  if (homeRecipesSub) homeRecipesSub.textContent = isDe ? "In Vorbereitung" : "Coming Soon";
 }
 
 // Categories loaded from data_bundle.js
@@ -1072,10 +1118,19 @@ function switchTab(tabId) {
 }
 
 function setupEventListeners() {
-  document.getElementById('searchInput').addEventListener('input', (e) => {
-    searchQuery = e.target.value;
-    renderCatalog();
-  });
+  const searchInput = document.getElementById('searchInput');
+  if (searchInput) {
+    searchInput.addEventListener('input', (e) => {
+      searchQuery = e.target.value;
+      renderCatalog();
+    });
+    searchInput.addEventListener('change', (e) => {
+      addSearchHistory(e.target.value);
+    });
+    searchInput.addEventListener('focus', () => {
+      renderSearchHistory();
+    });
+  }
 }
 
 // ==========================================
@@ -1168,3 +1223,74 @@ setTimeout(() => {
     }
   }
 }, 1800);
+
+// ==========================================
+// SEARCH HISTORY & IN PREPARATION MODAL
+// ==========================================
+const STORAGE_KEY_SEARCH_HISTORY = 'gastrodex_search_history';
+
+function getSearchHistory() {
+  try {
+    return JSON.parse(localStorage.getItem(STORAGE_KEY_SEARCH_HISTORY)) || [];
+  } catch(e) {
+    return [];
+  }
+}
+
+function addSearchHistory(query) {
+  if (!query || query.trim().length < 2) return;
+  let history = getSearchHistory();
+  history = history.filter(q => q.toLowerCase() !== query.toLowerCase());
+  history.unshift(query.trim());
+  if (history.length > 5) history = history.slice(0, 5);
+  localStorage.setItem(STORAGE_KEY_SEARCH_HISTORY, JSON.stringify(history));
+  renderSearchHistory();
+}
+
+function renderSearchHistory() {
+  const container = document.getElementById('searchHistoryContainer');
+  if (!container) return;
+  const history = getSearchHistory();
+  if (history.length === 0) {
+    container.style.display = 'none';
+    return;
+  }
+  container.style.display = 'flex';
+  const isDe = (currentLang === 'de');
+  container.innerHTML = `<span style="font-size:0.75rem; color:var(--text-muted); width:100%; margin-bottom:2px;">${isDe ? 'Letzte Suchen:' : 'Recent searches:'}</span>` + history.map(q => `
+    <button onclick="selectSearchHistory('${q}')" style="background: var(--bg-surface-variant); border: 1px solid var(--border-subtle); color: var(--text-secondary); font-size: 0.78rem; padding: 3px 10px; border-radius: 12px; cursor: pointer;">
+      🕒 ${q}
+    </button>
+  `).join('');
+}
+
+function selectSearchHistory(q) {
+  const input = document.getElementById('searchInput');
+  if (input) {
+    input.value = q;
+    searchQuery = q;
+    renderCatalog();
+    const container = document.getElementById('searchHistoryContainer');
+    if (container) container.style.display = 'none';
+  }
+}
+
+function openInPreparationModal(sectionName) {
+  const modal = document.getElementById('inPrepModal');
+  const titleEl = document.getElementById('inPrepTitle');
+  const textEl = document.getElementById('inPrepText');
+  const isDe = (currentLang === 'de');
+  if (titleEl) titleEl.textContent = isDe ? "In Vorbereitung" : "Coming Soon";
+  if (textEl) textEl.textContent = isDe 
+    ? `Der Bereich "${sectionName}" wird aktuell ausgearbeitet und steht in Kürze zur Verfügung.` 
+    : `The section "${sectionName}" is currently under development and will be available soon.`;
+  if (modal) modal.classList.add('active');
+}
+
+function closeInPrepModal(e) {
+  if (!e || e.target.id === 'inPrepModal' || e.target.tagName === 'BUTTON') {
+    const modal = document.getElementById('inPrepModal');
+    if (modal) modal.classList.remove('active');
+  }
+}
+

@@ -34,7 +34,6 @@ enum class GastroCategory(
     MEAT_CUTS("meat_cuts", "Steaks & Meat Cuts", "Fleischstücke & Cuts", "Restaurant", 0xFFA83232),
     BREAD_BAKERY("bread_bakery", "Breads & Rolls", "Brote & Brötchen", "BakeryDining", 0xFFDDA15E),
     FINGERFOOD_SNACKS("fingerfood", "Fingerfood, Bites & Snacks", "Fingerfood & Snacks", "BreakfastDining", 0xFF457B9D),
-    NON_FOOD_SERVICE("non_food", "Non-Food & Service Basics", "Non-Food & Service Basics", "DesignServices", 0xFF3D5A80),
     CEREALS_BREAKFAST("cereals", "Cereals & Breakfast", "Cereals & Frühstück", "Grain", 0xFFE09F3E)
 }
 

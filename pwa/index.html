@@ -37,13 +37,98 @@
     </div>
   </header>
 
+  <!-- PANE 0: HOMESCREEN -->
+  <main id="pane-home" class="tab-pane active">
+    <div class="container" style="padding-top: 20px; padding-bottom: 30px;">
+      
+      <!-- Werbebanner / Partner Banner Slot -->
+      <div style="background: linear-gradient(135deg, rgba(212, 160, 23, 0.15), rgba(42, 42, 42, 0.6)); border: 1px solid var(--accent-gold); border-radius: var(--radius-lg); padding: 16px; margin-bottom: 20px; text-align: center; position: relative;">
+        <span style="position: absolute; top: 6px; right: 10px; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 1px; color: var(--accent-gold); background: rgba(0,0,0,0.4); padding: 2px 6px; border-radius: 4px;">Partner & Ad</span>
+        <div style="font-size: 1.1rem; font-weight: 800; color: var(--accent-gold); margin-bottom: 4px;">🌟 GastroDex Premium Partner</div>
+        <p style="font-size: 0.82rem; color: var(--text-secondary); margin-bottom: 10px;">Professional Bar Equipment, Wine Climate Cabinets & Glassware.</p>
+        <a href="https://example.com" target="_blank" style="display: inline-block; background: var(--accent-gold); color: #121212; font-weight: 700; font-size: 0.82rem; padding: 6px 14px; border-radius: 20px; text-decoration: none;">Learn More &rarr;</a>
+      </div>
+
+      <!-- Welcome Hero -->
+      <div class="detail-section" style="margin-bottom: 20px; text-align: center;">
+        <h2 style="font-size: 1.4rem; font-weight: 800; color: var(--text-primary); margin-bottom: 6px;">Welcome to GastroDex</h2>
+        <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5;">
+          Your professional knowledge base for gastronomy, spirits, wine, coffee science, and interactive staff training.
+        </p>
+      </div>
+
+      <!-- Homescreen Navigation Grid (3 Columns, Square Buttons) -->
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 24px;">
+        
+        <!-- Lexikon / Catalog -->
+        <div onclick="switchTab('catalog')" class="home-square-btn">
+          <span class="material-symbols-outlined" style="font-size: 2.4rem; color: var(--accent-gold); margin-bottom: 6px;">menu_book</span>
+          <h3 style="font-size: 0.95rem; font-weight: 800; color: var(--text-primary); margin-bottom: 2px;" id="homeCardCatalog">Catalog</h3>
+          <p style="font-size: 0.72rem; color: var(--text-muted);" id="homeCardCatalogSub">Products</p>
+        </div>
+
+        <!-- Wine Guide -->
+        <div onclick="switchTab('wine')" class="home-square-btn">
+          <span class="material-symbols-outlined" style="font-size: 2.4rem; color: #ffb703; margin-bottom: 6px;">wine_bar</span>
+          <h3 style="font-size: 0.95rem; font-weight: 800; color: var(--text-primary); margin-bottom: 2px;" id="homeCardWine">Wine Guide</h3>
+          <p style="font-size: 0.72rem; color: var(--text-muted);" id="homeCardWineSub">Sparkling & Wine</p>
+        </div>
+
+        <!-- Coffee Lab -->
+        <div onclick="switchTab('coffee')" class="home-square-btn">
+          <span class="material-symbols-outlined" style="font-size: 2.4rem; color: #fb8500; margin-bottom: 6px;">coffee</span>
+          <h3 style="font-size: 0.95rem; font-weight: 800; color: var(--text-primary); margin-bottom: 2px;" id="homeCardCoffee">Coffee Lab</h3>
+          <p style="font-size: 0.72rem; color: var(--text-muted);" id="homeCardCoffeeSub">Glass layers</p>
+        </div>
+
+        <!-- Cocktails & Longdrinks -->
+        <div onclick="switchTab('cocktails')" class="home-square-btn">
+          <span class="material-symbols-outlined" style="font-size: 2.4rem; color: #e76f51; margin-bottom: 6px;">local_bar</span>
+          <h3 style="font-size: 0.95rem; font-weight: 800; color: var(--text-primary); margin-bottom: 2px;" id="homeCardCocktails">Cocktails</h3>
+          <p style="font-size: 0.72rem; color: var(--text-muted);" id="homeCardCocktailsSub">Longdrinks & Bar</p>
+        </div>
+
+        <!-- Service & Tischkultur -->
+        <div onclick="switchTab('service')" class="home-square-btn">
+          <span class="material-symbols-outlined" style="font-size: 2.4rem; color: #2a9d8f; margin-bottom: 6px;">room_service</span>
+          <h3 style="font-size: 0.95rem; font-weight: 800; color: var(--text-primary); margin-bottom: 2px;" id="homeCardService">Service</h3>
+          <p style="font-size: 0.72rem; color: var(--text-muted);" id="homeCardServiceSub">Table setting</p>
+        </div>
+
+        <!-- Science & Alcohol -->
+        <div onclick="switchTab('science')" class="home-square-btn">
+          <span class="material-symbols-outlined" style="font-size: 2.4rem; color: #219ebc; margin-bottom: 6px;">science</span>
+          <h3 style="font-size: 0.95rem; font-weight: 800; color: var(--text-primary); margin-bottom: 2px;" id="homeCardScience">Science</h3>
+          <p style="font-size: 0.72rem; color: var(--text-muted);" id="homeCardScienceSub">Metabolism</p>
+        </div>
+
+        <!-- Quiz Trainer -->
+        <div onclick="switchTab('quiz')" class="home-square-btn">
+          <span class="material-symbols-outlined" style="font-size: 2.4rem; color: #8ecae6; margin-bottom: 6px;">quiz</span>
+          <h3 style="font-size: 0.95rem; font-weight: 800; color: var(--text-primary); margin-bottom: 2px;" id="homeCardQuiz">Quiz</h3>
+          <p style="font-size: 0.72rem; color: var(--text-muted);" id="homeCardQuizSub">Staff training</p>
+        </div>
+
+        <!-- Basic Recipes -->
+        <div onclick="openInPreparationModal('Basic Recipes / Rezepte')" class="home-square-btn" style="border: 2px dashed var(--accent-gold);">
+          <span class="material-symbols-outlined" style="font-size: 2.4rem; color: var(--accent-gold); margin-bottom: 6px;">receipt_long</span>
+          <h3 style="font-size: 0.95rem; font-weight: 800; color: var(--text-primary); margin-bottom: 2px;" id="homeCardRecipes">Recipes</h3>
+          <p style="font-size: 0.72rem; color: var(--accent-gold); font-weight: 700;" id="homeCardRecipesSub">In Vorbereitung</p>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
   <!-- PANE 1: CATALOG / LEXIKON -->
-  <main id="pane-catalog" class="tab-pane active">
+  <main id="pane-catalog" class="tab-pane">
     <div class="hero-search-area">
       <div class="search-box">
         <span class="search-icon material-symbols-outlined">search</span>
         <input type="text" id="searchInput" class="search-input" placeholder="Suche Spirituosen, Weine, Kaffee, Eier, Käse..." />
       </div>
+      <div id="searchHistoryContainer" style="display: none; gap: 6px; flex-wrap: wrap; margin-top: 8px; padding: 0 16px;"></div>
     </div>
 
     <!-- Category Chips with Scroll Arrows & Quick-Grid Button -->
@@ -171,6 +256,80 @@
         <p class="detail-section-text">
           • <strong>Arabica:</strong> Hochlagen (1000–2200m), feine Fruchtsäuren, 60% mehr Fette/Öle.<br/>
           • <strong>Robusta:</strong> Tiefland (0–800m), doppelter Koffeingehalt (2,2%), weniger Fett -> erzeugt die dichte, nussbraune Crema im echten italienischen Espresso!
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <!-- PANE: COCKTAILS & LONGDRINKS -->
+  <main id="pane-cocktails" class="tab-pane">
+    <div class="container" style="padding-top: 16px;">
+      <div class="detail-section" style="margin-bottom: 16px;">
+        <h2 style="font-size: 1.25rem; font-weight: 800; color: var(--accent-gold); margin-bottom: 8px;">🍸 Cocktails, Longdrinks & Bar-Technik</h2>
+        <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5;">
+          Klassische Bar-Rezepte, Highball-Balance, Eis-Physik und die grundlegenden Handgriffe professioneller Bartender.
+        </p>
+      </div>
+
+      <div class="detail-section" style="margin-bottom: 14px;">
+        <h3 class="detail-section-title">🧊 Eis-Physik & Glas-Kompensation</h3>
+        <p class="detail-section-text">
+          • <strong>Großes Eis vs. Schmelzwasser:</strong> Große Eiswürkel oder klare Eis-Chunks schmelzen extrem langsam, wodurch Longdrinks (z.B. Gin & Tonic) eiskalt bleiben, ohne verwässert zu werden.<br/>
+          • <strong>Glas-Vorkühlung:</strong> Ein vorgekühltes Ballonglas oder Tumbler verhindert den sofortigen Temperaturschock und hält Kohlensäure länger im Getränk.
+        </p>
+      </div>
+
+      <div class="detail-section" style="margin-bottom: 14px;">
+        <h3 class="detail-section-title">🍹 Klassische Longdrink-Standards</h3>
+        <p class="detail-section-text">
+          • <strong>Gin & Tonic:</strong> 5 cl Premium Gin, 150-200 ml Tonic Water, reichlich Eis, botanische Garnitur (Wacholder, Rosmarin oder Gurkenscheibe).<br/>
+          • <strong>Moscow Mule:</strong> 5 cl Wodka, 2 cl Limettensaft, 150 ml Ginger Beer, Gurkenscheibe & Minzzweig im Kupferbecher.<br/>
+          • <strong>Negroni:</strong> Zu gleichen Teilen (je 3 cl) Gin, Vermouth Rosso und Campari; auf Eis gerührt, mit Orangenzeste garniert.
+        </p>
+      </div>
+
+      <div class="detail-section">
+        <h3 class="detail-section-title">🥄 Rühren (Stir) vs. Schütteln (Shake)</h3>
+        <p class="detail-section-text">
+          • <strong>Rühren (Stir):</strong> Für Drinks aus reinen Spirituosen ohne Fruchtsaft oder Eier (z.B. Negroni, Martini, Old Fashioned). Verhindert Trübung und sorgt für seidige Textur.<br/>
+          • <strong>Schütteln (Shake):</strong> Für Zutaten mit Zitrusfrüchten, Eiern, Sahne oder Fruchtsirup (z.B. Sour, Daiquiri). Kühlt schnell und belüftet die Emulsion.
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <!-- PANE: SERVICE & TISCHKULTUR -->
+  <main id="pane-service" class="tab-pane">
+    <div class="container" style="padding-top: 16px;">
+      <div class="detail-section" style="margin-bottom: 16px;">
+        <h2 style="font-size: 1.25rem; font-weight: 800; color: var(--accent-gold); margin-bottom: 8px;">🛎️ Service & Tischkultur (Non-Food & Etikette)</h2>
+        <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5;">
+          Professionelles Eindecken, Serviettenfalttechniken, Besteck- und Gläserkunde sowie HACCP-Hygienestandards im Gastgewerbe.
+        </p>
+      </div>
+
+      <div class="detail-section" style="margin-bottom: 14px;">
+        <h3 class="detail-section-title">🍽️ Professionelle Tisch-Eindeckung (Gala vs. À la carte)</h3>
+        <p class="detail-section-text">
+          • <strong>Abstand zum Tischrand:</strong> Genormte 1 bis 2 cm (ca. zwei Daumenbreiten).<br/>
+          • <strong>Besteck-Logik:</strong> Von außen nach innen arbeiten. Der erste Gang liegt ganz außen. Gabeln links, Messer (Klinge nach innen) und Löffel rechts.<br/>
+          • <strong>Gläser-Anordnung:</strong> Oberhalb der Messerspitze platziert (Wasserglas als Basis, rechts daneben Weißwein- und Rotweinglas diagonal).
+        </p>
+      </div>
+
+      <div class="detail-section" style="margin-bottom: 14px;">
+        <h3 class="detail-section-title">🧻 Serviettenfalttechnik & Hygiene</h3>
+        <p class="detail-section-text">
+          • Stoffservietten dürfen im Service nur mit frisch gewaschenen, desinfizierten Händen oder Servierzange gefaltet werden.<br/>
+          • Klassische Formen: Bischofsmütze, Lotusblüte, Tafelspitz oder Bestecktasche für effizienten Serviceablauf.
+        </p>
+      </div>
+
+      <div class="detail-section">
+        <h3 class="detail-section-title">👥 Service-Etikette & Gastgeberschaft</h3>
+        <p class="detail-section-text">
+          • <strong>Servieren & Abräumen:</strong> Getränke und Speisen grundsätzlich von rechts einsetzen und von rechts abräumen (Ausnahme: Teller oft von links nach Wunsch des Hauses).<br/>
+          • <strong>Aufmerksamkeit:</strong> Gläser rechtzeitig nachschenken, leere Teller zügig nach dem letzten Gast abräumen.
         </p>
       </div>
     </div>
@@ -420,18 +579,6 @@
           <!-- Injected by JS -->
         </div>
 
-        <!-- Bar- & Lagerbestand -->
-        <div class="stock-stepper-box" id="detailStockBox">
-          <div>
-            <div style="font-size: 0.82rem; font-weight: 700; color: var(--text-primary);">Bar- & Lagerbestand</div>
-            <div id="detailLocation" style="font-size: 0.75rem; color: var(--text-muted);">Zentrallager</div>
-          </div>
-          <div style="display: flex; align-items: center; gap: 12px;">
-            <button class="stepper-btn" onclick="changeStockInDetail(-1)">−</button>
-            <span id="detailStockCount" class="stock-count-display">0</span>
-            <button class="stepper-btn" onclick="changeStockInDetail(1)">+</button>
-          </div>
-        </div>
       </div>
     </div>
   </div>
@@ -455,6 +602,18 @@
       <div style="margin-top: 14px; text-align: right;">
         <button class="btn-primary" style="padding: 8px 16px; font-size: 0.85rem;" onclick="closeCategoryGridModal()">Fertig</button>
       </div>
+    </div>
+  </div>
+
+  <!-- IN VORBEREITUNG MODAL -->
+  <div id="inPrepModal" class="modal-overlay" onclick="closeInPrepModal(event)">
+    <div class="modal-card" style="max-width: 420px; text-align: center; padding: 28px 20px;">
+      <div style="font-size: 2.5rem; margin-bottom: 8px;">🚧</div>
+      <h3 id="inPrepTitle" style="font-size: 1.2rem; font-weight: 800; color: var(--accent-gold); margin-bottom: 8px;">In Vorbereitung</h3>
+      <p id="inPrepText" style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5; margin-bottom: 20px;">
+        Dieser Bereich wird aktuell für dich entwickelt und steht in Kürze zur Verfügung.
+      </p>
+      <button class="btn-primary" style="width: 100%; padding: 10px;" onclick="closeInPrepModal()">Verstanden</button>
     </div>
   </div>
 
@@ -493,25 +652,29 @@
 
   <!-- BOTTOM NAVIGATION -->
   <nav class="bottom-nav">
-    <button class="nav-item active" id="tab-catalog" onclick="switchTab('catalog')">
+    <button class="nav-item active" id="tab-home" onclick="switchTab('home')">
+      <span class="nav-item-icon material-symbols-outlined">home</span>
+      <span id="tabHomeLabel">Home</span>
+    </button>
+    <button class="nav-item" id="tab-catalog" onclick="switchTab('catalog')">
       <span class="nav-item-icon material-symbols-outlined">menu_book</span>
-      <span id="tabCatalogLabel">Lexikon</span>
+      <span id="tabCatalogLabel">Catalog</span>
     </button>
     <button class="nav-item" id="tab-wine" onclick="switchTab('wine')">
       <span class="nav-item-icon material-symbols-outlined">wine_bar</span>
-      <span id="tabWineLabel">Wein-Guide</span>
+      <span id="tabWineLabel">Wine Guide</span>
     </button>
     <button class="nav-item" id="tab-coffee" onclick="switchTab('coffee')">
       <span class="nav-item-icon material-symbols-outlined">coffee</span>
-      <span id="tabCoffeeLabel">Kaffee-Labor</span>
+      <span id="tabCoffeeLabel">Coffee Lab</span>
     </button>
     <button class="nav-item" id="tab-science" onclick="switchTab('science')">
       <span class="nav-item-icon material-symbols-outlined">science</span>
-      <span id="tabScienceLabel">Wirkung</span>
+      <span id="tabScienceLabel">Science</span>
     </button>
     <button class="nav-item" id="tab-quiz" onclick="switchTab('quiz')">
       <span class="nav-item-icon material-symbols-outlined">quiz</span>
-      <span id="tabQuizLabel">Quiz-Trainer</span>
+      <span id="tabQuizLabel">Quiz</span>
     </button>
   </nav>
 

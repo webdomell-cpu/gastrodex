@@ -1,0 +1,64 @@
+{
+  "categories": [
+    {
+      "id": "spirits",
+      "titleDe": "Spirituosen & Bar",
+      "titleEn": "Spirits & Bar",
+      "icon": "liquor"
+    },
+    {
+      "id": "wine",
+      "titleDe": "Wein & Schaumwein",
+      "titleEn": "Wine & Sparkling",
+      "icon": "wine_bar"
+    },
+    {
+      "id": "beer",
+      "titleDe": "Bier & Braukunst",
+      "titleEn": "Beer & Brewing",
+      "icon": "sports_bar"
+    },
+    {
+      "id": "coffee",
+      "titleDe": "Kaffee & Heißgetränke",
+      "titleEn": "Coffee & Hot Drinks",
+      "icon": "coffee"
+    },
+    {
+      "id": "fruit",
+      "titleDe": "Obst & Früchte",
+      "titleEn": "Fruit & Produce",
+      "icon": "nutrition"
+    },
+    {
+      "id": "vegetables",
+      "titleDe": "Gemüse & Kräuter",
+      "titleEn": "Vegetables & Herbs",
+      "icon": "eco"
+    },
+    {
+      "id": "cheese",
+      "titleDe": "Käse & Milchprodukte",
+      "titleEn": "Cheese & Dairy",
+      "icon": "cheese"
+    },
+    {
+      "id": "meat",
+      "titleDe": "Fleisch & Delikatessen",
+      "titleEn": "Meat & Delicatessen",
+      "icon": "kebab_dining"
+    },
+    {
+      "id": "bakery",
+      "titleDe": "Brot & Backwaren",
+      "titleEn": "Bakery & Pastry",
+      "icon": "bakery_dining"
+    },
+    {
+      "id": "longdrinks_service",
+      "titleDe": "Longdrinks & Service",
+      "titleEn": "Longdrinks & Service",
+      "icon": "room_service"
+    }
+  ]
+}

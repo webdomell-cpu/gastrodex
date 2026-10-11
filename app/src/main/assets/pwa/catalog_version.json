@@ -1,7 +1,4 @@
 {
-  "version": "3.5.0",
-  "itemCount": 239,
-  "quizCount": 310,
-  "updatedAt": "2026-10-09T07:30:00Z",
-  "changelog": "GastroDex v3.5 Master Release: 21 Kategorien inkl. Fisch & Meeresfrüchte, Wurstspezialitäten & Pökel-Wissenschaft, Rohstoffkunde und Dexie/Room Sync."
+  "catalogVersion": 36,
+  "updatedAt": "2026-10-10T06:14:58.335Z"
 }

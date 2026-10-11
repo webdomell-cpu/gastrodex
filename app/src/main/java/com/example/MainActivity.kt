@@ -46,6 +46,7 @@ import com.example.ui.GastroViewModel
 import com.example.ui.GastroViewModelFactory
 import com.example.ui.NavTab
 import androidx.compose.material.icons.filled.Home
+import com.example.ui.components.GastroTopAppBar
 import com.example.ui.screens.HomeScreen
 import com.example.ui.screens.AddEditItemDialog
 import com.example.ui.screens.CatalogScreen
@@ -57,6 +58,9 @@ import com.example.ui.screens.PwaWebViewScreen
 import com.example.ui.screens.ScienceGuideScreen
 import com.example.ui.screens.StaffQuizScreen
 import com.example.ui.screens.WineGuideScreen
+import com.example.ui.screens.CocktailsGuideScreen
+import com.example.ui.screens.ServiceCultureScreen
+import com.example.ui.screens.BasicRecipesScreen
 import com.example.ui.theme.MyApplicationTheme
 
 class MainActivity : ComponentActivity() {
@@ -207,6 +211,15 @@ fun GastroApp(viewModel: GastroViewModel) {
                         viewModel = viewModel
                     )
                     NavTab.QUIZ -> StaffQuizScreen(
+                        viewModel = viewModel
+                    )
+                    NavTab.COCKTAILS -> CocktailsGuideScreen(
+                        viewModel = viewModel
+                    )
+                    NavTab.SERVICE -> ServiceCultureScreen(
+                        viewModel = viewModel
+                    )
+                    NavTab.RECIPES -> BasicRecipesScreen(
                         viewModel = viewModel
                     )
                 }

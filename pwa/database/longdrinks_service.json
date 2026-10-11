@@ -1,0 +1,44 @@
+{
+  "category": "longdrinks_service",
+  "count": 2,
+  "items": [
+    {
+      "id": "longdrink_gin_tonic",
+      "category": "longdrinks_service",
+      "nameEn": "Gin & Tonic",
+      "nameDe": "Gin & Tonic",
+      "subtitleEn": "Highball Classic with Botanical Balance",
+      "subtitleDe": "Highball-Klassiker mit botanischer Balance",
+      "origin": "UK / Global",
+      "isImport": true,
+      "tasteEn": "Crisp, juniper-forward, effervescent quinine bitterness",
+      "tasteDe": "Frisch, Wacholderbetont, prickelnde Chinin-Bitternote",
+      "culinaryEn": "Served in a balloon glass or highball with plenty of ice and botanical garnish.",
+      "culinaryDe": "Serviert im Ballonglas oder Highball mit reichlich Eis und botanischer Garnitur.",
+      "tags": [
+        "longdrink",
+        "bar",
+        "gin"
+      ]
+    },
+    {
+      "id": "service_table_coverage",
+      "category": "longdrinks_service",
+      "nameEn": "Table Coverage & Gastronomy Setup",
+      "nameDe": "Tischabdeckung & Service-Standard",
+      "subtitleEn": "Professional Restaurant Setting & Cutlery Placement",
+      "subtitleDe": "Professionelles Gedeck & Besteckplatzierung",
+      "origin": "International Gastronomy",
+      "isImport": false,
+      "tasteEn": "Precision hospitality setup, alignment of cutlery and glassware",
+      "tasteDe": "Präzises Gedeck, Ausrichtung von Besteck und Gläsern",
+      "culinaryEn": "Fork to the left, knife and spoon to the right, bread plate upper left, water/wine glasses upper right.",
+      "culinaryDe": "Gabel links, Messer und Löffel rechts, Teller oben links, Gläser oben rechts.",
+      "tags": [
+        "service",
+        "tischabdeckung",
+        "gastronomie"
+      ]
+    }
+  ]
+}

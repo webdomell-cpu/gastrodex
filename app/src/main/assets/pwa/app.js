@@ -163,8 +163,8 @@ try {
 }
 
 
-let currentLang = localStorage.getItem(STORAGE_KEY_LANG) || 'de';
-let currentTab = 'catalog';
+let currentLang = localStorage.getItem(STORAGE_KEY_LANG) || 'en';
+let currentTab = 'home';
 let activeCategory = 'all';
 let searchQuery = '';
 let filterOnlyStock = false;
@@ -421,12 +421,58 @@ function renderLanguageLabels() {
   document.getElementById('topBarSubtitle').textContent = isDe ? "Gastronomie & Hotellerie Wissenskompass" : "Hospitality & Gastronomy Encyclopedia";
   document.getElementById('searchInput').placeholder = isDe ? "Suche Spirituosen, Weine, Kaffee, Eier, Käse..." : "Search spirits, wine, coffee, eggs, cheese...";
   
+  const tabHomeLabel = document.getElementById('tabHomeLabel');
+  if (tabHomeLabel) tabHomeLabel.textContent = isDe ? "Startseite" : "Home";
   document.getElementById('tabCatalogLabel').textContent = isDe ? "Lexikon" : "Catalog";
   document.getElementById('tabWineLabel').textContent = isDe ? "Wein-Guide" : "Wine Guide";
   document.getElementById('tabCoffeeLabel').textContent = isDe ? "Kaffee-Labor" : "Coffee Lab";
   document.getElementById('tabScienceLabel').textContent = isDe ? "Wirkungslehre" : "Science";
-  document.getElementById('tabQuizLabel').textContent = isDe ? "Quiz-Trainer" : "Staff Quiz";
-  
+  document.getElementById('tabQuizLabel').textContent = isDe ? "Quiz-Trainer" : "Quiz";
+
+  const homeCatalog = document.getElementById('homeCardCatalog');
+  if (homeCatalog) homeCatalog.textContent = isDe ? "Lexikon & Katalog" : "Catalog & Lexicon";
+  const homeCatalogSub = document.getElementById('homeCardCatalogSub');
+  if (homeCatalogSub) homeCatalogSub.textContent = isDe ? "24 Kategorien & Fachartikel" : "24 Categories & Entries";
+
+  const homeWine = document.getElementById('homeCardWine');
+  if (homeWine) homeWine.textContent = isDe ? "Wein-Guide" : "Wine Guide";
+  const homeWineSub = document.getElementById('homeCardWineSub');
+  if (homeWineSub) homeWineSub.textContent = isDe ? "Schaumwein & Rebsorten" : "Sparkling & Viticulture";
+
+  const homeCoffee = document.getElementById('homeCardCoffee');
+  if (homeCoffee) homeCoffee.textContent = isDe ? "Kaffee-Labor" : "Coffee Lab";
+  const homeCoffeeSub = document.getElementById('homeCardCoffeeSub');
+  if (homeCoffeeSub) homeCoffeeSub.textContent = isDe ? "Schichten & Glas-Physik" : "Glass layers & Physics";
+
+  const homeScience = document.getElementById('homeCardScience');
+  if (homeScience) homeScience.textContent = isDe ? "Alkohol-Wirkungslehre" : "Alcohol Science";
+  const homeScienceSub = document.getElementById('homeCardScienceSub');
+  if (homeScienceSub) homeScienceSub.textContent = isDe ? "Metabolismus & Promille" : "Metabolism & Effects";
+
+  const homeQuiz = document.getElementById('homeCardQuiz');
+  if (homeQuiz) homeQuiz.textContent = isDe ? "Quiz-Trainer" : "Quiz Trainer";
+  const homeQuizSub = document.getElementById('homeCardQuizSub');
+  if (homeQuizSub) homeQuizSub.textContent = isDe ? "Wissen spielend testen" : "Test your knowledge";
+
+  const homeGrid = document.getElementById('homeCardGrid');
+  if (homeGrid) homeGrid.textContent = isDe ? "Alle Kategorien" : "All Categories";
+  const homeGridSub = document.getElementById('homeCardGridSub');
+  if (homeGridSub) homeGridSub.textContent = isDe ? "Schnellwahl-Raster" : "Quick 24-grid selector";
+
+  const homeCocktails = document.getElementById('homeCardCocktails');
+  if (homeCocktails) homeCocktails.textContent = isDe ? "Cocktails & Bar" : "Cocktails & Bar";
+  const homeCocktailsSub = document.getElementById('homeCardCocktailsSub');
+  if (homeCocktailsSub) homeCocktailsSub.textContent = isDe ? "Longdrinks & Technik" : "Longdrinks & Tech";
+
+  const homeService = document.getElementById('homeCardService');
+  if (homeService) homeService.textContent = isDe ? "Service & Kultur" : "Service & Culture";
+  const homeServiceSub = document.getElementById('homeCardServiceSub');
+  if (homeServiceSub) homeServiceSub.textContent = isDe ? "Tischdecke & HACCP" : "Table & HACCP";
+
+  const homeRecipes = document.getElementById('homeCardRecipes');
+  if (homeRecipes) homeRecipes.textContent = isDe ? "Basis-Rezepte" : "Basic Recipes";
+  const homeRecipesSub = document.getElementById('homeCardRecipesSub');
+  if (homeRecipesSub) homeRecipesSub.textContent = isDe ? "In Vorbereitung" : "Coming Soon";
 }
 
 // Categories loaded from data_bundle.js
@@ -476,7 +522,8 @@ function renderQuizCategoryButtons() {
   CATEGORIES_LIST.forEach(cat => {
     const btn = document.createElement('button');
     btn.className = `filter-btn ${quizCategory === cat.id ? 'active' : ''}`;
-    btn.textContent = (currentLang === 'de') ? cat.titleDe : cat.titleEn;
+    const iconSpan = cat.icon ? `<span class="material-symbols-outlined" style="font-size:16px; vertical-align:middle; margin-right:4px;">${cat.icon}</span>` : '';
+    btn.innerHTML = `${iconSpan}${(currentLang === 'de') ? cat.titleDe : cat.titleEn}`;
     btn.onclick = () => {
       initQuizSession(cat.id, 10);
       renderQuizCategoryButtons();
@@ -487,18 +534,82 @@ function renderQuizCategoryButtons() {
 
 function renderCategoryChips() {
   const container = document.getElementById('categoryScroll');
+  if (!container) return;
   container.innerHTML = '';
   CATEGORIES_LIST.forEach(cat => {
     const chip = document.createElement('button');
     chip.className = `chip ${activeCategory === cat.id ? 'active' : ''}`;
-    chip.textContent = (currentLang === 'de') ? cat.titleDe : cat.titleEn;
+    const iconSpan = cat.icon ? `<span class="chip-icon material-symbols-outlined">${cat.icon}</span>` : '';
+    const label = (currentLang === 'de') ? cat.titleDe : cat.titleEn;
+    chip.innerHTML = `${iconSpan}<span>${label}</span>`;
     chip.onclick = () => {
       activeCategory = cat.id;
       renderCategoryChips();
-  renderQuizCategoryButtons();
+      renderCategoryGrid();
+      renderQuizCategoryButtons();
       renderCatalog();
     };
     container.appendChild(chip);
+  });
+}
+
+function openCategoryGridModal() {
+  renderCategoryGrid();
+  const modal = document.getElementById('categoryGridModal');
+  if (modal) modal.classList.add('active');
+}
+
+function closeCategoryGridModal(e) {
+  if (e && e.target && e.target.id !== 'categoryGridModal' && !e.target.classList.contains('modal-close-btn') && !e.target.classList.contains('btn-primary')) {
+    return;
+  }
+  const modal = document.getElementById('categoryGridModal');
+  if (modal) modal.classList.remove('active');
+}
+
+function renderCategoryGrid() {
+  const container = document.getElementById('categoryGridContainer');
+  if (!container) return;
+  container.innerHTML = '';
+
+  CATEGORIES_LIST.forEach(cat => {
+    const isSelected = activeCategory === cat.id;
+    const item = document.createElement('div');
+    item.style.padding = '10px 8px';
+    item.style.borderRadius = '10px';
+    item.style.border = isSelected ? '2px solid var(--accent-gold)' : '1px solid var(--border-subtle)';
+    item.style.background = isSelected ? 'var(--accent-gold-container)' : 'var(--bg-surface)';
+    item.style.cursor = 'pointer';
+    item.style.textAlign = 'center';
+    item.style.transition = 'all 0.15s ease';
+    item.style.display = 'flex';
+    item.style.flexDirection = 'column';
+    item.style.alignItems = 'center';
+    item.style.gap = '4px';
+
+    const count = cat.id === 'all' 
+      ? items.length 
+      : items.filter(it => it.category === cat.id).length;
+
+    const label = (currentLang === 'de') ? cat.titleDe : cat.titleEn;
+    const iconHtml = cat.icon ? `<span class="material-symbols-outlined" style="font-size: 24px; color: ${isSelected ? 'var(--accent-gold)' : 'var(--text-secondary)'};">${cat.icon}</span>` : '';
+
+    item.innerHTML = `
+      ${iconHtml}
+      <div style="font-size: 0.84rem; font-weight: ${isSelected ? '800' : '600'}; color: ${isSelected ? 'var(--text-primary)' : 'var(--text-primary)'}; line-height: 1.2;">${label}</div>
+      <div style="font-size: 0.72rem; color: var(--text-muted); margin-top: 1px;">${count} Einträge</div>
+    `;
+
+    item.onclick = () => {
+      activeCategory = cat.id;
+      renderCategoryChips();
+      renderCategoryGrid();
+      renderQuizCategoryButtons();
+      renderCatalog();
+      closeCategoryGridModal();
+    };
+
+    container.appendChild(item);
   });
 }
 
@@ -552,16 +663,19 @@ function renderCatalog() {
       `;
     }
 
+    const catIconName = catObj ? (catObj.icon || 'restaurant') : 'restaurant';
+    const catDisplayName = catObj ? (currentLang === 'de' ? catObj.titleDe : catObj.titleEn) : item.category;
+
     const imgMarkup = item.imageUrl ? 
-      `<img class="item-img" src="${item.imageUrl}" alt="${title}" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" /><div class="item-placeholder" style="display:none;"><span class="placeholder-icon">${catLabel.split(' ')[0]}</span><span class="placeholder-title">${title}</span></div>` :
-      `<div class="item-placeholder"><span class="placeholder-icon">${catLabel.split(' ')[0]}</span><span class="placeholder-title">${title}</span></div>`;
+      `<img class="item-img" src="${item.imageUrl}" alt="${title}" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" /><div class="item-placeholder" style="display:none;"><span class="material-symbols-outlined placeholder-icon">${catIconName}</span><span class="placeholder-title">${title}</span></div>` :
+      `<div class="item-placeholder"><span class="material-symbols-outlined placeholder-icon">${catIconName}</span><span class="placeholder-title">${title}</span></div>`;
 
     card.innerHTML = `
       <div class="item-image-wrapper">
         ${imgMarkup}
         <div class="item-badges">
-          <span class="badge">${catLabel.split(' ')[0]}</span>
-          ${item.isImport ? '<span class="badge">✈️ Import</span>' : '<span class="badge">🌱 Regional</span>'}
+          <span class="badge" style="display:flex;align-items:center;gap:3px;"><span class="material-symbols-outlined" style="font-size:13px;">${catIconName}</span>${catDisplayName}</span>
+          ${item.isImport ? '<span class="badge" style="display:flex;align-items:center;gap:3px;"><span class="material-symbols-outlined" style="font-size:13px;">flight</span>Import</span>' : '<span class="badge" style="display:flex;align-items:center;gap:3px;"><span class="material-symbols-outlined" style="font-size:13px;">eco</span>Regional</span>'}
         </div>
         <button class="card-fav-btn ${item.isFavorite ? 'active' : ''}" onclick="event.stopPropagation(); toggleItemFavorite('${item.id}');" title="Favorit">
           ${item.isFavorite ? '❤️' : '🤍'}
@@ -603,7 +717,7 @@ function showItemDetail(id) {
   const detailImg = document.getElementById('detailImage');
   const detailPh = document.getElementById('detailPlaceholder');
   const catObj = CATEGORIES_LIST.find(c => c.id === item.category);
-  const catIcon = catObj ? catObj.titleDe.split(' ')[0] : '🍽️';
+  const catIconName = catObj ? (catObj.icon || 'restaurant') : 'restaurant';
 
   if (detailImg) {
     if (item.imageUrl && item.imageUrl.trim() !== '') {
@@ -614,14 +728,14 @@ function showItemDetail(id) {
         detailImg.style.display = 'none';
         if (detailPh) {
           detailPh.style.display = 'flex';
-          detailPh.innerHTML = `<span class="placeholder-icon" style="font-size:3.5rem;">${catIcon}</span><span class="placeholder-title" style="font-size:1.1rem;margin-top:8px;">${title}</span>`;
+          detailPh.innerHTML = `<span class="material-symbols-outlined placeholder-icon" style="font-size:3.5rem; color: var(--accent-gold);">${catIconName}</span><span class="placeholder-title" style="font-size:1.1rem;margin-top:8px;">${title}</span>`;
         }
       };
     } else {
       detailImg.style.display = 'none';
       if (detailPh) {
         detailPh.style.display = 'flex';
-        detailPh.innerHTML = `<span class="placeholder-icon" style="font-size:3.5rem;">${catIcon}</span><span class="placeholder-title" style="font-size:1.1rem;margin-top:8px;">${title}</span>`;
+        detailPh.innerHTML = `<span class="material-symbols-outlined placeholder-icon" style="font-size:3.5rem; color: var(--accent-gold);">${catIconName}</span><span class="placeholder-title" style="font-size:1.1rem;margin-top:8px;">${title}</span>`;
       }
     }
   }
@@ -638,14 +752,14 @@ function showItemDetail(id) {
 
   const catBadge = document.getElementById('detailCategoryBadge');
   if (catBadge) {
-    catBadge.textContent = catObj ? (isDe ? catObj.titleDe : catObj.titleEn) : (item.category || '').toUpperCase();
+    catBadge.innerHTML = `<span class="material-symbols-outlined" style="font-size:13px;vertical-align:middle;margin-right:3px;">${catIconName}</span>` + (catObj ? (isDe ? catObj.titleDe : catObj.titleEn) : (item.category || '').toUpperCase());
   }
 
   const impBadge = document.getElementById('detailImportBadge');
   if (impBadge) {
-    impBadge.textContent = item.isImport 
-      ? (isDe ? '🌍 IMPORTPRODUKT' : '🌍 IMPORTED') 
-      : (isDe ? '🌱 REGIONAL / HEIMISCH' : '🌱 REGIONAL');
+    impBadge.innerHTML = item.isImport 
+      ? `<span class="material-symbols-outlined" style="font-size:13px;vertical-align:middle;margin-right:3px;">flight</span>${isDe ? 'IMPORTPRODUKT' : 'IMPORTED'}` 
+      : `<span class="material-symbols-outlined" style="font-size:13px;vertical-align:middle;margin-right:3px;">eco</span>${isDe ? 'REGIONAL / HEIMISCH' : 'REGIONAL'}`;
     impBadge.style.color = item.isImport ? '#FFD166' : '#88D49E';
   }
 
@@ -1004,8 +1118,179 @@ function switchTab(tabId) {
 }
 
 function setupEventListeners() {
-  document.getElementById('searchInput').addEventListener('input', (e) => {
-    searchQuery = e.target.value;
-    renderCatalog();
-  });
+  const searchInput = document.getElementById('searchInput');
+  if (searchInput) {
+    searchInput.addEventListener('input', (e) => {
+      searchQuery = e.target.value;
+      renderCatalog();
+    });
+    searchInput.addEventListener('change', (e) => {
+      addSearchHistory(e.target.value);
+    });
+    searchInput.addEventListener('focus', () => {
+      renderSearchHistory();
+    });
+  }
 }
+
+// ==========================================
+// PWA AUTOMATIC INSTALL PROMPT / HOMESCREEN
+// ==========================================
+let deferredPrompt = null;
+
+window.addEventListener('beforeinstallprompt', (e) => {
+  // Prevent immediate default mini-infobar on mobile Chrome
+  e.preventDefault();
+  deferredPrompt = e;
+  // Automatically show the install prompt banner/dialog to the user
+  showPwaInstallPrompt();
+});
+
+window.addEventListener('appinstalled', () => {
+  deferredPrompt = null;
+  const banner = document.getElementById('pwaInstallBanner');
+  if (banner) banner.style.display = 'none';
+  console.log('GastroDex was successfully installed on the device.');
+});
+
+function showPwaInstallPrompt() {
+  // Don't show if already dismissed in this session
+  if (sessionStorage.getItem('pwa_prompt_dismissed') === 'true') {
+    return;
+  }
+  const isStandalone = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true;
+  if (isStandalone) {
+    return; // Already running as installed PWA app
+  }
+
+  const isDe = (currentLang === 'de');
+  const banner = document.getElementById('pwaInstallBanner');
+  if (banner) {
+    const titleEl = document.getElementById('pwaInstallTitle');
+    const subEl = document.getElementById('pwaInstallSub');
+    if (titleEl) titleEl.textContent = isDe ? 'GastroDex auf dem Gerät installieren?' : 'Install GastroDex on your device?';
+    if (subEl) subEl.textContent = isDe 
+      ? 'Als App auf dem Startbildschirm speichern für schnellen Offline-Zugriff.' 
+      : 'Add to homescreen for instant offline hospitality reference.';
+    banner.style.display = 'flex';
+  }
+}
+
+function triggerPwaInstall() {
+  if (deferredPrompt) {
+    // Native browser prompt on Android / Chromium / Desktop
+    deferredPrompt.prompt();
+    deferredPrompt.userChoice.then((choiceResult) => {
+      if (choiceResult.outcome === 'accepted') {
+        console.log('User accepted PWA installation');
+      } else {
+        console.log('User dismissed PWA installation');
+      }
+      deferredPrompt = null;
+      dismissInstallPrompt();
+    });
+  } else {
+    // iOS Safari or browser without beforeinstallprompt support: show step-by-step instructions
+    const iosModal = document.getElementById('iosInstallModal');
+    if (iosModal) {
+      iosModal.classList.add('active');
+    }
+  }
+}
+
+function dismissInstallPrompt() {
+  const banner = document.getElementById('pwaInstallBanner');
+  if (banner) banner.style.display = 'none';
+  sessionStorage.setItem('pwa_prompt_dismissed', 'true');
+}
+
+function closeIosInstallModal(e) {
+  if (e && e.target && e.target.id !== 'iosInstallModal' && !e.target.classList.contains('btn-primary')) {
+    return;
+  }
+  const modal = document.getElementById('iosInstallModal');
+  if (modal) modal.classList.remove('active');
+  dismissInstallPrompt();
+}
+
+// Proactive check on page load: if not triggered via event after 1.8s (e.g. iOS or manual browser), check if mobile
+setTimeout(() => {
+  const isStandalone = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true;
+  if (!isStandalone && sessionStorage.getItem('pwa_prompt_dismissed') !== 'true') {
+    const banner = document.getElementById('pwaInstallBanner');
+    if (banner && banner.style.display === 'none') {
+      showPwaInstallPrompt();
+    }
+  }
+}, 1800);
+
+// ==========================================
+// SEARCH HISTORY & IN PREPARATION MODAL
+// ==========================================
+const STORAGE_KEY_SEARCH_HISTORY = 'gastrodex_search_history';
+
+function getSearchHistory() {
+  try {
+    return JSON.parse(localStorage.getItem(STORAGE_KEY_SEARCH_HISTORY)) || [];
+  } catch(e) {
+    return [];
+  }
+}
+
+function addSearchHistory(query) {
+  if (!query || query.trim().length < 2) return;
+  let history = getSearchHistory();
+  history = history.filter(q => q.toLowerCase() !== query.toLowerCase());
+  history.unshift(query.trim());
+  if (history.length > 5) history = history.slice(0, 5);
+  localStorage.setItem(STORAGE_KEY_SEARCH_HISTORY, JSON.stringify(history));
+  renderSearchHistory();
+}
+
+function renderSearchHistory() {
+  const container = document.getElementById('searchHistoryContainer');
+  if (!container) return;
+  const history = getSearchHistory();
+  if (history.length === 0) {
+    container.style.display = 'none';
+    return;
+  }
+  container.style.display = 'flex';
+  const isDe = (currentLang === 'de');
+  container.innerHTML = `<span style="font-size:0.75rem; color:var(--text-muted); width:100%; margin-bottom:2px;">${isDe ? 'Letzte Suchen:' : 'Recent searches:'}</span>` + history.map(q => `
+    <button onclick="selectSearchHistory('${q}')" style="background: var(--bg-surface-variant); border: 1px solid var(--border-subtle); color: var(--text-secondary); font-size: 0.78rem; padding: 3px 10px; border-radius: 12px; cursor: pointer;">
+      🕒 ${q}
+    </button>
+  `).join('');
+}
+
+function selectSearchHistory(q) {
+  const input = document.getElementById('searchInput');
+  if (input) {
+    input.value = q;
+    searchQuery = q;
+    renderCatalog();
+    const container = document.getElementById('searchHistoryContainer');
+    if (container) container.style.display = 'none';
+  }
+}
+
+function openInPreparationModal(sectionName) {
+  const modal = document.getElementById('inPrepModal');
+  const titleEl = document.getElementById('inPrepTitle');
+  const textEl = document.getElementById('inPrepText');
+  const isDe = (currentLang === 'de');
+  if (titleEl) titleEl.textContent = isDe ? "In Vorbereitung" : "Coming Soon";
+  if (textEl) textEl.textContent = isDe 
+    ? `Der Bereich "${sectionName}" wird aktuell ausgearbeitet und steht in Kürze zur Verfügung.` 
+    : `The section "${sectionName}" is currently under development and will be available soon.`;
+  if (modal) modal.classList.add('active');
+}
+
+function closeInPrepModal(e) {
+  if (!e || e.target.id === 'inPrepModal' || e.target.tagName === 'BUTTON') {
+    const modal = document.getElementById('inPrepModal');
+    if (modal) modal.classList.remove('active');
+  }
+}
+

@@ -34,7 +34,10 @@ enum class NavTab(val titleEn: String, val titleDe: String) {
     WINE_GUIDE("Wine Guide", "Wein-Guide"),
     COFFEE_LAB("Coffee Lab", "Kaffee-Labor"),
     SCIENCE("Process Science", "Wirkungslehre"),
-    QUIZ("Staff Trainer", "Schulungs-Quiz")
+    QUIZ("Staff Trainer", "Schulungs-Quiz"),
+    COCKTAILS("Cocktails & Bar", "Cocktails & Bar"),
+    SERVICE("Service & Table", "Service & Tischkultur"),
+    RECIPES("Basic Recipes", "Basis-Rezepte")
 }
 
 data class QuizSessionState(
