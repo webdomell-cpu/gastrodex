@@ -37,6 +37,7 @@ import androidx.compose.material.icons.filled.Inventory2
 import androidx.compose.material.icons.filled.Language
 import androidx.compose.material.icons.filled.Liquor
 import androidx.compose.material.icons.filled.LocalBar
+import androidx.compose.material.icons.filled.LocalDrink
 import androidx.compose.material.icons.filled.Opacity
 import androidx.compose.material.icons.filled.Person
 import androidx.compose.material.icons.filled.Public
@@ -100,28 +101,12 @@ fun GastroTopAppBar(
                 )
                 Spacer(modifier = Modifier.width(10.dp))
                 Column {
-                    Row(verticalAlignment = Alignment.CenterVertically) {
-                        Text(
-                            text = "GastroDex",
-                            style = MaterialTheme.typography.titleLarge,
-                            fontWeight = FontWeight.Bold,
-                            color = MaterialTheme.colorScheme.primary
-                        )
-                        Spacer(modifier = Modifier.width(6.dp))
-                        Surface(
-                            shape = RoundedCornerShape(4.dp),
-                            color = MaterialTheme.colorScheme.secondary.copy(alpha = 0.15f),
-                            modifier = Modifier.padding(top = 2.dp)
-                        ) {
-                            Text(
-                                text = "EDU",
-                                style = MaterialTheme.typography.labelSmall,
-                                fontWeight = FontWeight.Bold,
-                                color = MaterialTheme.colorScheme.secondary,
-                                modifier = Modifier.padding(horizontal = 5.dp, vertical = 1.dp)
-                            )
-                        }
-                    }
+                    Text(
+                        text = "GastroDex",
+                        style = MaterialTheme.typography.titleLarge,
+                        fontWeight = FontWeight.Bold,
+                        color = MaterialTheme.colorScheme.primary
+                    )
                     Text(
                         text = if (currentLanguage == Language.DE)
                             "Das Gastronomie Quiz & Lexikon"
@@ -480,6 +465,9 @@ fun GastroItemCard(
 
             // Text Info & Details
             Column(modifier = Modifier.padding(12.dp)) {
+                val isAlcoholicItem = (item.category == GastroCategory.SPIRITS || item.category == GastroCategory.WINE || item.category == GastroCategory.BEER) &&
+                        item.abv.isNotBlank() && item.abv != "0.0% ABV" && !item.abv.startsWith("0.0%")
+
                 Row(
                     modifier = Modifier.fillMaxWidth(),
                     horizontalArrangement = Arrangement.SpaceBetween,
@@ -495,7 +483,7 @@ fun GastroItemCard(
                         modifier = Modifier.weight(1f)
                     )
 
-                    if (item.abv.isNotBlank() && item.abv != "0.0% ABV") {
+                    if (isAlcoholicItem) {
                         Surface(
                             shape = RoundedCornerShape(6.dp),
                             color = MaterialTheme.colorScheme.primaryContainer,
@@ -535,8 +523,8 @@ fun GastroItemCard(
                     horizontalArrangement = Arrangement.SpaceBetween,
                     verticalAlignment = Alignment.CenterVertically
                 ) {
-                    // Process tag
-                    if (item.alcoholProcess != AlcoholProductionType.NONE) {
+                    // Process tag (only for alcoholic categories: Spirits, Wine, Beer)
+                    if (isAlcoholicItem && item.alcoholProcess != AlcoholProductionType.NONE) {
                         Surface(
                             shape = RoundedCornerShape(6.dp),
                             color = MaterialTheme.colorScheme.surface,
@@ -550,13 +538,14 @@ fun GastroItemCard(
                             )
                         }
                     } else {
+                        // Food / Culinary items: display category or key culinary label instead of redundant alcohol tag
                         Surface(
                             shape = RoundedCornerShape(6.dp),
                             color = MaterialTheme.colorScheme.surface,
                             border = androidx.compose.foundation.BorderStroke(1.dp, MaterialTheme.colorScheme.outline.copy(alpha = 0.3f))
                         ) {
                             Text(
-                                text = if (language == Language.DE) "Alkoholfrei" else "Non-Alcoholic",
+                                text = if (language == Language.DE) item.category.titleDe else item.category.titleEn,
                                 style = MaterialTheme.typography.labelSmall,
                                 color = MaterialTheme.colorScheme.onSurfaceVariant,
                                 modifier = Modifier.padding(horizontal = 6.dp, vertical = 2.dp)
@@ -720,6 +709,7 @@ fun getCategoryIcon(category: GastroCategory): ImageVector {
         GastroCategory.ALL -> Icons.Default.Restaurant
         GastroCategory.SPIRITS -> Icons.Default.Liquor
         GastroCategory.WINE -> Icons.Default.WineBar
+        GastroCategory.BEER -> Icons.Default.LocalDrink
         GastroCategory.TEA -> Icons.Default.EmojiFoodBeverage
         GastroCategory.COFFEE -> Icons.Default.Coffee
         GastroCategory.PASTA_RICE -> Icons.Default.DinnerDining

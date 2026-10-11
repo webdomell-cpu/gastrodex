@@ -2,28 +2,36 @@ const fs = require('fs');
 const path = require('path');
 
 const CATEGORIES = [
-  { id: 'all', titleDe: '✨ Alle Einträge', titleEn: '✨ All Entries' },
-  { id: 'spirits', titleDe: '🥃 Spirituosen & Destillate', titleEn: '🥃 Spirits & Distillates' },
-  { id: 'wine', titleDe: '🍷 Wein & Schaumweine', titleEn: '🍷 Wine & Champagne' },
-  { id: 'tea', titleDe: '🍵 Teekunde & Aufgüsse', titleEn: '🍵 Tea & Infusions' },
-  { id: 'coffee', titleDe: '☕ Kaffeespezialitäten', titleEn: '☕ Coffee Specialties' },
-  { id: 'pasta_rice', titleDe: '🍝 Pasta & Reisvariationen', titleEn: '🍝 Pasta & Rice Varieties' },
-  { id: 'sauces_condiments', titleDe: '🥣 Saucen, Dressings & Senf', titleEn: '🥣 Sauces, Dressings & Mustard' },
-  { id: 'soft_drinks', titleDe: '🥤 Erfrischung & Mixer', titleEn: '🥤 Soft Drinks & Mixers' },
-  { id: 'dairy', titleDe: '🥛 Milch & Molkerei', titleEn: '🥛 Dairy & Milk Science' },
-  { id: 'cheese', titleDe: '🧀 Käsekunde & g.U.', titleEn: '🧀 Cheese & DOP / g.U.' },
-  { id: 'eggs', titleDe: '🍳 Eierspeisen & Eierkunde', titleEn: '🍳 Egg Dishes & Science' },
-  { id: 'vegetables', titleDe: '🍄 Gemüse & Speisepilze', titleEn: '🍄 Vegetables & Mushrooms' },
-  { id: 'fruits', titleDe: '🍓 Früchte & Beeren', titleEn: '🍓 Fruits & Berries' },
-  { id: 'nuts', titleDe: '🥜 Nüsse & Saaten', titleEn: '🥜 Nuts & Seeds' },
-  { id: 'spices_herbs', titleDe: '🌿 Gewürze & Kräuter', titleEn: '🌿 Spices & Herbs' },
-  { id: 'olives', titleDe: '🫒 Oliven', titleEn: '🫒 Olives' },
-  { id: 'oils_vinegars', titleDe: '🏺 Öle & Essig', titleEn: '🏺 Oils & Vinegars' }
+  { id: 'all', titleDe: '✨ Alle Einträge', titleEn: '✨ All Entries', icon: 'restaurant' },
+  { id: 'spirits', titleDe: '🥃 Spirituosen & Destillate', titleEn: '🥃 Spirits & Distillates', icon: 'liquor' },
+  { id: 'wine', titleDe: '🍷 Wein & Schaumweine', titleEn: '🍷 Wine & Champagne', icon: 'wine_bar' },
+  { id: 'beer', titleDe: '🍺 Bier & Braukunst', titleEn: '🍺 Beer & Brewing', icon: 'sports_bar' },
+  { id: 'tea', titleDe: '🍵 Teekunde & Aufgüsse', titleEn: '🍵 Tea & Infusions', icon: 'emoji_food_beverage' },
+  { id: 'coffee', titleDe: '☕ Kaffeespezialitäten', titleEn: '☕ Coffee Specialties', icon: 'coffee' },
+  { id: 'pasta_rice', titleDe: '🍝 Pasta & Reisvariationen', titleEn: '🍝 Pasta & Rice Varieties', icon: 'dinner_dining' },
+  { id: 'sauces_condiments', titleDe: '🥣 Saucen, Dressings & Senf', titleEn: '🥣 Sauces, Dressings & Mustard', icon: 'soup_kitchen' },
+  { id: 'soft_drinks', titleDe: '🥤 Erfrischung & Mixer', titleEn: '🥤 Soft Drinks & Mixers', icon: 'local_bar' },
+  { id: 'dairy', titleDe: '🥛 Milch & Molkerei', titleEn: '🥛 Dairy & Milk Science', icon: 'breakfast_dining' },
+  { id: 'cheese', titleDe: '🧀 Käsekunde & g.U.', titleEn: '🧀 Cheese & DOP / g.U.', icon: 'bakery_dining' },
+  { id: 'eggs', titleDe: '🍳 Eierspeisen & Eierkunde', titleEn: '🍳 Egg Dishes & Science', icon: 'egg' },
+  { id: 'vegetables', titleDe: '🍄 Gemüse & Speisepilze', titleEn: '🍄 Vegetables & Mushrooms', icon: 'yard' },
+  { id: 'fruits', titleDe: '🍓 Früchte & Beeren', titleEn: '🍓 Fruits & Berries', icon: 'spa' },
+  { id: 'nuts', titleDe: '🥜 Nüsse & Saaten', titleEn: '🥜 Nuts & Seeds', icon: 'grain' },
+  { id: 'spices_herbs', titleDe: '🌿 Gewürze & Kräuter', titleEn: '🌿 Spices & Herbs', icon: 'spa' },
+  { id: 'fish_seafood', titleDe: '🐟 Fisch & Meeresfrüchte', titleEn: '🐟 Fish & Seafood', icon: 'set_meal' },
+  { id: 'olives', titleDe: '🫒 Oliven', titleEn: '🫒 Olives', icon: 'eco' },
+  { id: 'oils_vinegars', titleDe: '🏺 Öle & Essig', titleEn: '🏺 Oils & Vinegars', icon: 'opacity' },
+  { id: 'charcuterie', titleDe: '🥩 Deli & Aufschnitt', titleEn: '🥩 Charcuterie & Cold Cuts', icon: 'dinner_dining' },
+  { id: 'meat_cuts', titleDe: '🥩 Fleischstücke & Cuts', titleEn: '🥩 Steaks & Meat Cuts', icon: 'restaurant' },
+  { id: 'bread_bakery', titleDe: '🥖 Brote & Backwaren', titleEn: '🥖 Breads & Rolls', icon: 'bakery_dining' },
+  { id: 'fingerfood', titleDe: '🥟 Fingerfood & Snacks', titleEn: '🥟 Fingerfood, Bites & Snacks', icon: 'breakfast_dining' },
+  { id: 'cereals', titleDe: '🥣 Cereals & Frühstück', titleEn: '🥣 Cereals & Breakfast', icon: 'grain' }
 ];
 
 const kotlinFiles = [
   'app/src/main/java/com/example/data/CuratedSpiritsData.kt',
   'app/src/main/java/com/example/data/CuratedWineData.kt',
+  'app/src/main/java/com/example/data/CuratedBeerData.kt',
   'app/src/main/java/com/example/data/CuratedTeaData.kt',
   'app/src/main/java/com/example/data/CuratedBeveragesData.kt',
   'app/src/main/java/com/example/data/CuratedPastaRiceData.kt',
@@ -31,8 +39,12 @@ const kotlinFiles = [
   'app/src/main/java/com/example/data/CuratedProduceData.kt',
   'app/src/main/java/com/example/data/CuratedDairyCheeseEggsData.kt',
   'app/src/main/java/com/example/data/CuratedSpicesHerbsData.kt',
+  'app/src/main/java/com/example/data/CuratedFishData.kt',
   'app/src/main/java/com/example/data/CuratedOlivesData.kt',
-  'app/src/main/java/com/example/data/CuratedOilsVinegarsData.kt'
+  'app/src/main/java/com/example/data/CuratedOilsVinegarsData.kt',
+  'app/src/main/java/com/example/data/CuratedMeatDeliData.kt',
+  'app/src/main/java/com/example/data/CuratedBakerySnacksData.kt',
+  'app/src/main/java/com/example/data/CuratedCerealsData.kt'
 ];
 
 function parseKotlinItems(filePath) {
@@ -90,6 +102,9 @@ function parseKotlinItems(filePath) {
 
     let cat = getEnum('category');
     if (cat === 'nuts_seeds') cat = 'nuts';
+    if (cat === 'charcuterie_deli') cat = 'charcuterie';
+    if (cat === 'cereals_breakfast') cat = 'cereals';
+    if (cat === 'fingerfood_snacks') cat = 'fingerfood';
 
     // Parse coffee layers if present
     let coffeeLayers = null;

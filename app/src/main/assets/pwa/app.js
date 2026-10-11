@@ -674,8 +674,8 @@ function renderCatalog() {
       <div class="item-image-wrapper">
         ${imgMarkup}
         <div class="item-badges">
-          <span class="badge" style="display:flex;align-items:center;gap:3px;"><span class="material-symbols-outlined" style="font-size:13px;">${catIconName}</span>${catDisplayName}</span>
-          ${item.isImport ? '<span class="badge" style="display:flex;align-items:center;gap:3px;"><span class="material-symbols-outlined" style="font-size:13px;">flight</span>Import</span>' : '<span class="badge" style="display:flex;align-items:center;gap:3px;"><span class="material-symbols-outlined" style="font-size:13px;">eco</span>Regional</span>'}
+          <span class="badge badge-category" style="display:inline-flex;align-items:center;gap:3px;"><span class="material-symbols-outlined" style="font-size:13px;">${catIconName}</span>${catDisplayName}</span>
+          ${item.isImport ? '<span class="badge badge-origin-import" style="display:inline-flex;align-items:center;gap:3px;"><span class="material-symbols-outlined" style="font-size:13px;">flight</span>Import</span>' : '<span class="badge badge-origin-regional" style="display:inline-flex;align-items:center;gap:3px;"><span class="material-symbols-outlined" style="font-size:13px;">eco</span>Regional</span>'}
         </div>
         <button class="card-fav-btn ${item.isFavorite ? 'active' : ''}" onclick="event.stopPropagation(); toggleItemFavorite('${item.id}');" title="Favorit">
           ${item.isFavorite ? '❤️' : '🤍'}
@@ -684,7 +684,7 @@ function renderCatalog() {
       <div class="item-body">
         <div class="item-title-row">
           <h3 class="item-title">${title}</h3>
-          <span class="item-abv">${item.abv || ''}</span>
+          ${((item.category === 'spirits' || item.category === 'wine' || item.category === 'beer') && item.abv && !item.abv.startsWith('0.0%') && item.abv !== '0%') ? `<span class="item-abv">${item.abv}</span>` : ''}
         </div>
         <p class="item-subtitle">${subtitle}</p>
         ${coffeeBarHtml}
@@ -763,11 +763,13 @@ function showItemDetail(id) {
     impBadge.style.color = item.isImport ? '#FFD166' : '#88D49E';
   }
 
-  // Dynamic Process & Kennwert
+  // Dynamic Process & Kennwert (strictly separated: spirits/wine/beer show alcohol stats; foods show category & character)
+  const isAlcoholItem = (item.category === 'spirits' || item.category === 'wine' || item.category === 'beer') && item.abv && !item.abv.startsWith('0.0%') && item.abv !== '0%';
   let proc = item.alcoholProcess;
   if (!proc || proc === 'NONE') {
     if (item.category === 'spirits') proc = 'DISTILLATION';
     else if (item.category === 'wine') proc = 'FERMENTATION';
+    else if (item.category === 'beer') proc = 'BREWING';
     else proc = 'NONE';
   }
   const procMap = {
@@ -775,19 +777,28 @@ function showItemDetail(id) {
     'FERMENTATION': isDe ? '🍷 Fermentation' : '🍷 Fermentation',
     'BREWING': isDe ? '🍺 Brauen & Maischen' : '🍺 Brewing',
     'FORTIFIED': isDe ? '🍷 Aufgespritet' : '🍷 Fortified',
-    'NONE': isDe ? '🌱 Alkoholfrei' : '🌱 Non-Alcoholic'
+    'NONE': isDe ? '🌱 Frische / Küche' : '🌱 Culinary Fresh'
   };
   const procEl = document.getElementById('detailProcess');
-  if (procEl) procEl.textContent = procMap[proc] || proc;
+  const procLabel = document.getElementById('detailProcessLabel');
+  if (procLabel) procLabel.textContent = isAlcoholItem ? (isDe ? 'Verfahren' : 'Process') : (isDe ? 'Kategorie' : 'Category');
+  if (procEl) procEl.textContent = isAlcoholItem ? (procMap[proc] || proc) : (catObj ? (isDe ? catObj.titleDe : catObj.titleEn) : (isDe ? 'Kulinarik' : 'Culinary'));
 
   const kwEl = document.getElementById('detailKennwert');
-  if (kwEl) kwEl.textContent = item.abv || (item.isImport ? (isDe ? 'International' : 'Import') : (isDe ? 'Regional' : 'Native'));
+  const kwLabel = document.getElementById('detailKennwertLabel');
+  if (kwLabel) kwLabel.textContent = isAlcoholItem ? (isDe ? 'Alkoholgehalt' : 'Alcohol by Vol') : (isDe ? 'Charakter' : 'Character');
+  if (kwEl) {
+    if (isAlcoholItem) {
+      kwEl.textContent = item.abv;
+    } else {
+      kwEl.textContent = item.isImport ? (isDe ? 'International' : 'Import') : (isDe ? 'Klassiker / Regional' : 'Classic / Regional');
+    }
+  }
 
   // Dynamic ABV top badge
   const abvEl = document.getElementById('detailAbv');
-  const isAlcoholCat = item.category === 'spirits' || item.category === 'wine' || (item.abv && item.abv.includes('%'));
   if (abvEl) {
-    if (isAlcoholCat && item.abv) {
+    if (isAlcoholItem) {
       abvEl.style.display = 'inline-block';
       abvEl.textContent = item.abv;
     } else {

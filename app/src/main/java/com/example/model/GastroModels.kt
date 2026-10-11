@@ -15,6 +15,7 @@ enum class GastroCategory(
     ALL("all", "All Entries", "Alle Einträge", "Restaurant", 0xFFC98822),
     SPIRITS("spirits", "Spirits & Distillates", "Spirituosen & Destillate", "Liquor", 0xFF9E2A2B),
     WINE("wine", "Wine & Champagne", "Wein & Schaumweine", "WineBar", 0xFF722F37),
+    BEER("beer", "Beer & Brewing Culture", "Bier & Braukunst", "SportsBar", 0xFFD48B38),
     TEA("tea", "Tea & Infusions", "Teekunde & Aufgüsse", "EmojiFoodBeverage", 0xFF2D6A4F),
     COFFEE("coffee", "Coffee Specialties", "Kaffeespezialitäten", "Coffee", 0xFF6F4E37),
     PASTA_RICE("pasta_rice", "Pasta & Rice Varieties", "Pasta & Reisvariationen", "DinnerDining", 0xFFD4A373),
@@ -43,6 +44,13 @@ enum class AlcoholProductionType(val titleEn: String, val titleDe: String) {
     BREWING("Brewing & Mashing", "Brauen & Maischen"),
     FORTIFIED("Fortified Wine", "Aufgespritet"),
     NONE("Non-Alcoholic", "Alkoholfrei")
+}
+
+enum class GastroSortOrder(val titleDe: String, val titleEn: String) {
+    DEFAULT("Standard", "Curated"),
+    FAVORITES_FIRST("Favoriten zuerst", "Favorites First"),
+    ALPHABETICAL_ASC("A bis Z", "A to Z"),
+    ALPHABETICAL_DESC("Z bis A", "Z to A")
 }
 
 data class CoffeeLayers(

@@ -27,6 +27,8 @@ import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.filled.Star
 import androidx.compose.material3.AssistChip
 import androidx.compose.material3.AssistChipDefaults
+import androidx.compose.material3.DropdownMenu
+import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -34,6 +36,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
+import com.example.model.GastroSortOrder
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
@@ -80,6 +83,8 @@ fun CatalogScreen(
     val items by viewModel.filteredItems.collectAsStateWithLifecycle()
     val isPro by viewModel.isProUser.collectAsStateWithLifecycle()
     val customCount by viewModel.customItemsCount.collectAsStateWithLifecycle()
+    val currentSort by viewModel.sortOrder.collectAsStateWithLifecycle()
+    var showSortMenu by remember { mutableStateOf(false) }
     var showCategoryGridDialog by remember { mutableStateOf(false) }
 
     if (showCategoryGridDialog) {
@@ -87,7 +92,7 @@ fun CatalogScreen(
             onDismissRequest = { showCategoryGridDialog = false },
             title = {
                 Text(
-                    text = if (language == Language.DE) "Kategorie-Schnellauswahl (21)" else "Category Quick Select (21)",
+                    text = if (language == Language.DE) "Kategorie-Schnellauswahl (${GastroCategory.entries.size})" else "Category Quick Select (${GastroCategory.entries.size})",
                     style = MaterialTheme.typography.titleMedium,
                     fontWeight = FontWeight.Bold
                 )
@@ -334,7 +339,7 @@ fun CatalogScreen(
                 )
             }
 
-            // Results count label
+            // Results count label & Sort Order Selector
             Row(
                 modifier = Modifier
                     .fillMaxWidth()
@@ -350,6 +355,49 @@ fun CatalogScreen(
                     style = MaterialTheme.typography.labelSmall,
                     color = MaterialTheme.colorScheme.onSurfaceVariant
                 )
+
+                Box {
+                    Surface(
+                        onClick = { showSortMenu = true },
+                        shape = RoundedCornerShape(8.dp),
+                        color = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.7f),
+                        border = androidx.compose.foundation.BorderStroke(1.dp, MaterialTheme.colorScheme.outline.copy(alpha = 0.2f)),
+                        modifier = Modifier.testTag("sort_order_button")
+                    ) {
+                        Row(
+                            verticalAlignment = Alignment.CenterVertically,
+                            modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp)
+                        ) {
+                            Text(
+                                text = "⇅ " + if (language == Language.DE) currentSort.titleDe else currentSort.titleEn,
+                                style = MaterialTheme.typography.labelSmall,
+                                fontWeight = FontWeight.Bold,
+                                color = MaterialTheme.colorScheme.primary
+                            )
+                        }
+                    }
+
+                    DropdownMenu(
+                        expanded = showSortMenu,
+                        onDismissRequest = { showSortMenu = false }
+                    ) {
+                        GastroSortOrder.entries.forEach { order ->
+                            DropdownMenuItem(
+                                text = {
+                                    Text(
+                                        text = if (language == Language.DE) order.titleDe else order.titleEn,
+                                        fontWeight = if (order == currentSort) FontWeight.Bold else FontWeight.Normal,
+                                        color = if (order == currentSort) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.onSurface
+                                    )
+                                },
+                                onClick = {
+                                    viewModel.setSortOrder(order)
+                                    showSortMenu = false
+                                }
+                            )
+                        }
+                    }
+                }
             }
 
             // Optional non-intrusive Ad Banner (for Free tier)

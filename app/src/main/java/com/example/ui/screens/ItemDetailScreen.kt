@@ -299,7 +299,8 @@ fun ItemDetailScreen(
                 colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant)
             ) {
                 Column(modifier = Modifier.padding(16.dp)) {
-                    val isBeverageWithAlcohol = item.category == GastroCategory.SPIRITS || item.category == GastroCategory.WINE || item.abv.contains("%")
+                    val isBeverageWithAlcohol = (item.category == GastroCategory.SPIRITS || item.category == GastroCategory.WINE || item.category == GastroCategory.BEER) && 
+                            item.abv.isNotBlank() && item.abv != "0.0% ABV" && !item.abv.startsWith("0.0%")
                     Row(
                         modifier = Modifier.fillMaxWidth(),
                         horizontalArrangement = Arrangement.SpaceEvenly

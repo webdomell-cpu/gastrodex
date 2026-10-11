@@ -12,6 +12,7 @@ import com.example.model.AlcoholProductionType
 import com.example.model.GastroCategory
 import com.example.model.GastroItem
 import com.example.model.GastroRole
+import com.example.model.GastroSortOrder
 import com.example.model.Language
 import com.example.model.QuizQuestion
 import com.example.model.UserProfile
@@ -71,6 +72,11 @@ class GastroViewModel(
     val filterOnlyFavorites = MutableStateFlow(false)
     val filterOnlyCustom = MutableStateFlow(false)
     val filterImportType = MutableStateFlow<Boolean?>(null) // null = all, true = import, false = regional
+    val sortOrder = MutableStateFlow(GastroSortOrder.DEFAULT)
+
+    fun setSortOrder(order: GastroSortOrder) {
+        sortOrder.value = order
+    }
 
     // User Profile, Google Sync & Monetization State
     val userProfile = MutableStateFlow(UserProfile())
@@ -118,6 +124,7 @@ class GastroViewModel(
         val onlyFavorites: Boolean = false,
         val onlyCustom: Boolean = false,
         val importType: Boolean? = null,
+        val sortOrder: GastroSortOrder = GastroSortOrder.DEFAULT,
         val lang: Language = Language.DE
     )
 
@@ -125,26 +132,28 @@ class GastroViewModel(
         combine(selectedCategory, searchQuery, filterOnlyFavorites) { cat, query, fav ->
             Triple(cat, query, fav)
         },
-        combine(filterOnlyCustom, filterImportType, language) { custom, importType, lang ->
-            Triple(custom, importType, lang)
-        }
-    ) { (cat, query, fav), (custom, importType, lang) ->
+        combine(filterOnlyCustom, filterImportType, sortOrder) { custom, importType, sort ->
+            Triple(custom, importType, sort)
+        },
+        language
+    ) { (cat, query, fav), (custom, importType, sort), lang ->
         FilterState(
             category = cat,
             query = query,
             onlyFavorites = fav,
             onlyCustom = custom,
             importType = importType,
+            sortOrder = sort,
             lang = lang
         )
     }
 
-    // Filtered items based on category, search, favorite, custom, imports
+    // Filtered items based on category, search, favorite, custom, imports and sortOrder
     val filteredItems: StateFlow<List<GastroItem>> = combine(
         rawItems,
         filterStateFlow
     ) { items, filter ->
-        items.filter { item ->
+        val filtered = items.filter { item ->
             val matchesCategory = (filter.category == GastroCategory.ALL || item.category == filter.category)
             val matchesSearch = filter.query.isBlank() ||
                     item.localizedName(filter.lang).contains(filter.query, ignoreCase = true) ||
@@ -159,6 +168,12 @@ class GastroViewModel(
             val matchesImport = (filter.importType == null) || (item.isImport == filter.importType)
 
             matchesCategory && matchesSearch && matchesFav && matchesCustom && matchesImport
+        }
+        when (filter.sortOrder) {
+            GastroSortOrder.DEFAULT -> filtered
+            GastroSortOrder.FAVORITES_FIRST -> filtered.sortedByDescending { it.isFavorite }
+            GastroSortOrder.ALPHABETICAL_ASC -> filtered.sortedBy { it.localizedName(filter.lang).lowercase() }
+            GastroSortOrder.ALPHABETICAL_DESC -> filtered.sortedByDescending { it.localizedName(filter.lang).lowercase() }
         }
     }.stateIn(
         scope = viewModelScope,

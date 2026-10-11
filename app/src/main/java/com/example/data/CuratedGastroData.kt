@@ -8,6 +8,7 @@ object CuratedGastroData {
     val items: List<GastroItem> =
         CuratedSpiritsData.items +
         CuratedWineData.items +
+        CuratedBeerData.items +
         CuratedTeaData.items +
         CuratedBeveragesData.items +
         CuratedPastaRiceData.items +
