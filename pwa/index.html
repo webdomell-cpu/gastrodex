@@ -51,72 +51,80 @@
 
       <!-- Welcome Hero -->
       <div class="detail-section" style="margin-bottom: 20px; text-align: center;">
-        <h2 style="font-size: 1.4rem; font-weight: 800; color: var(--text-primary); margin-bottom: 6px;">Welcome to GastroDex</h2>
-        <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5;">
-          Your professional knowledge base for gastronomy, spirits, wine, coffee science, and interactive staff training.
+        <h2 style="font-size: 1.4rem; font-weight: 800; color: var(--text-primary); margin-bottom: 6px;" id="homeWelcomeTitle">Willkommen bei GastroDex</h2>
+        <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5;" id="homeWelcomeSub">
+          Dein professioneller Wissenskompass für Bar, Gastronomie, Weinkunde, Kaffee-Labor und Team-Schulungen.
         </p>
       </div>
 
-      <!-- Homescreen Navigation Grid (3 Columns, Square Buttons) -->
-      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 24px;">
+      <!-- Homescreen Navigation Grid (3x3 Responsive Square Grid, Perfectly Scaled) -->
+      <div class="home-nav-grid">
         
-        <!-- Lexikon / Catalog -->
-        <div onclick="switchTab('catalog')" class="home-square-btn">
-          <span class="material-symbols-outlined" style="font-size: 2.4rem; color: var(--accent-gold); margin-bottom: 6px;">menu_book</span>
-          <h3 style="font-size: 0.95rem; font-weight: 800; color: var(--text-primary); margin-bottom: 2px;" id="homeCardCatalog">Catalog</h3>
-          <p style="font-size: 0.72rem; color: var(--text-muted);" id="homeCardCatalogSub">Products</p>
+        <!-- 1. Lexikon / Catalog -->
+        <div onclick="switchTab('catalog')" class="home-square-btn" title="Katalog & Fachartikel">
+          <span class="material-symbols-outlined home-square-icon" style="color: var(--accent-gold);">menu_book</span>
+          <h3 class="home-square-title" id="homeCardCatalog">Catalog</h3>
+          <p class="home-square-sub" id="homeCardCatalogSub">Products</p>
         </div>
 
-        <!-- Wine Guide -->
-        <div onclick="switchTab('wine')" class="home-square-btn">
-          <span class="material-symbols-outlined" style="font-size: 2.4rem; color: #ffb703; margin-bottom: 6px;">wine_bar</span>
-          <h3 style="font-size: 0.95rem; font-weight: 800; color: var(--text-primary); margin-bottom: 2px;" id="homeCardWine">Wine Guide</h3>
-          <p style="font-size: 0.72rem; color: var(--text-muted);" id="homeCardWineSub">Sparkling & Wine</p>
+        <!-- 2. Wine Guide -->
+        <div onclick="switchTab('wine')" class="home-square-btn" title="Wein- & Sommelier-Kompass">
+          <span class="material-symbols-outlined home-square-icon" style="color: #ffb703;">wine_bar</span>
+          <h3 class="home-square-title" id="homeCardWine">Wine Guide</h3>
+          <p class="home-square-sub" id="homeCardWineSub">Sparkling & Wine</p>
         </div>
 
-        <!-- Coffee Lab -->
-        <div onclick="switchTab('coffee')" class="home-square-btn">
-          <span class="material-symbols-outlined" style="font-size: 2.4rem; color: #fb8500; margin-bottom: 6px;">coffee</span>
-          <h3 style="font-size: 0.95rem; font-weight: 800; color: var(--text-primary); margin-bottom: 2px;" id="homeCardCoffee">Coffee Lab</h3>
-          <p style="font-size: 0.72rem; color: var(--text-muted);" id="homeCardCoffeeSub">Glass layers</p>
+        <!-- 3. Coffee Lab -->
+        <div onclick="switchTab('coffee')" class="home-square-btn" title="Kaffee-Labor & Schichten">
+          <span class="material-symbols-outlined home-square-icon" style="color: #fb8500;">coffee</span>
+          <h3 class="home-square-title" id="homeCardCoffee">Coffee Lab</h3>
+          <p class="home-square-sub" id="homeCardCoffeeSub">Glass layers</p>
         </div>
 
-        <!-- Cocktails & Longdrinks -->
-        <div onclick="switchTab('cocktails')" class="home-square-btn">
-          <span class="material-symbols-outlined" style="font-size: 2.4rem; color: #e76f51; margin-bottom: 6px;">local_bar</span>
-          <h3 style="font-size: 0.95rem; font-weight: 800; color: var(--text-primary); margin-bottom: 2px;" id="homeCardCocktails">Cocktails</h3>
-          <p style="font-size: 0.72rem; color: var(--text-muted);" id="homeCardCocktailsSub">Longdrinks & Bar</p>
+        <!-- 4. Cocktails & Longdrinks -->
+        <div onclick="switchTab('cocktails')" class="home-square-btn" title="Cocktails & Bar-Technik">
+          <span class="material-symbols-outlined home-square-icon" style="color: #e76f51;">local_bar</span>
+          <h3 class="home-square-title" id="homeCardCocktails">Cocktails</h3>
+          <p class="home-square-sub" id="homeCardCocktailsSub">Bar & Mix</p>
         </div>
 
-        <!-- Service & Tischkultur -->
-        <div onclick="switchTab('service')" class="home-square-btn">
-          <span class="material-symbols-outlined" style="font-size: 2.4rem; color: #2a9d8f; margin-bottom: 6px;">room_service</span>
-          <h3 style="font-size: 0.95rem; font-weight: 800; color: var(--text-primary); margin-bottom: 2px;" id="homeCardService">Service</h3>
-          <p style="font-size: 0.72rem; color: var(--text-muted);" id="homeCardServiceSub">Table setting</p>
+        <!-- 5. Service & Tischkultur -->
+        <div onclick="switchTab('service')" class="home-square-btn" title="Service, Eindecken & Knigge">
+          <span class="material-symbols-outlined home-square-icon" style="color: #2a9d8f;">room_service</span>
+          <h3 class="home-square-title" id="homeCardService">Service</h3>
+          <p class="home-square-sub" id="homeCardServiceSub">Table setting</p>
         </div>
 
-        <!-- Science & Alcohol -->
-        <div onclick="switchTab('science')" class="home-square-btn">
-          <span class="material-symbols-outlined" style="font-size: 2.4rem; color: #219ebc; margin-bottom: 6px;">science</span>
-          <h3 style="font-size: 0.95rem; font-weight: 800; color: var(--text-primary); margin-bottom: 2px;" id="homeCardScience">Science</h3>
-          <p style="font-size: 0.72rem; color: var(--text-muted);" id="homeCardScienceSub">Metabolism</p>
+        <!-- 6. Science & Wirkungslehre -->
+        <div onclick="switchTab('science')" class="home-square-btn" title="Wirkungslehre & HACCP">
+          <span class="material-symbols-outlined home-square-icon" style="color: #219ebc;">science</span>
+          <h3 class="home-square-title" id="homeCardScience">Science</h3>
+          <p class="home-square-sub" id="homeCardScienceSub">HACCP & Physics</p>
         </div>
 
-        <!-- Quiz Trainer -->
-        <div onclick="switchTab('quiz')" class="home-square-btn">
-          <span class="material-symbols-outlined" style="font-size: 2.4rem; color: #8ecae6; margin-bottom: 6px;">quiz</span>
-          <h3 style="font-size: 0.95rem; font-weight: 800; color: var(--text-primary); margin-bottom: 2px;" id="homeCardQuiz">Quiz</h3>
-          <p style="font-size: 0.72rem; color: var(--text-muted);" id="homeCardQuizSub">Staff training</p>
+        <!-- 7. Quiz Trainer -->
+        <div onclick="switchTab('quiz')" class="home-square-btn" title="Team-Quiz & Schulungsfragen">
+          <span class="material-symbols-outlined home-square-icon" style="color: #8ecae6;">quiz</span>
+          <h3 class="home-square-title" id="homeCardQuiz">Quiz</h3>
+          <p class="home-square-sub" id="homeCardQuizSub">Staff training</p>
         </div>
 
-        <!-- Basic Recipes -->
-        <div onclick="openInPreparationModal('Basic Recipes / Rezepte')" class="home-square-btn" style="border: 2px dashed var(--accent-gold);">
-          <span class="material-symbols-outlined" style="font-size: 2.4rem; color: var(--accent-gold); margin-bottom: 6px;">receipt_long</span>
-          <h3 style="font-size: 0.95rem; font-weight: 800; color: var(--text-primary); margin-bottom: 2px;" id="homeCardRecipes">Recipes</h3>
-          <p style="font-size: 0.72rem; color: var(--accent-gold); font-weight: 700;" id="homeCardRecipesSub">In Vorbereitung</p>
+        <!-- 8. Alle Kategorien Quick-Grid (24 Kategorien) -->
+        <div onclick="openCategoryGridModal()" class="home-square-btn" title="Alle 24 Fachkategorien">
+          <span class="material-symbols-outlined home-square-icon" style="color: #a7c957;">grid_view</span>
+          <h3 class="home-square-title" id="homeCardGrid">Kategorien</h3>
+          <p class="home-square-sub" id="homeCardGridSub">24 Fachbereiche</p>
+        </div>
+
+        <!-- 9. Basic Recipes -->
+        <div onclick="openInPreparationModal(currentLang === 'de' ? 'Basis-Rezepte' : 'Basic Recipes')" class="home-square-btn" style="border: 1.5px dashed var(--accent-gold);" title="Basis-Rezepte (In Vorbereitung)">
+          <span class="material-symbols-outlined home-square-icon" style="color: var(--accent-gold);">receipt_long</span>
+          <h3 class="home-square-title" id="homeCardRecipes">Recipes</h3>
+          <p class="home-square-sub" id="homeCardRecipesSub" style="color: var(--accent-gold); font-weight: 700;">In Prep</p>
         </div>
 
       </div>
+
 
     </div>
   </main>
@@ -173,52 +181,30 @@
   </main>
 
   <!-- PANE 2: WINE GUIDE -->
-  <main id="pane-wine" class="tab-pane">
-    <div class="container" style="padding-top: 16px;">
-      <div class="detail-section" style="margin-bottom: 16px;">
-        <h2 style="font-size: 1.25rem; font-weight: 800; color: var(--accent-gold); margin-bottom: 8px;">🍷 Wein- & Schaumweinkompass</h2>
-        <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5;">
-          Von den feinsten Perlen der Champagne über deutschen Steillagen-Riesling bis hin zum geschützten Asti Spumante DOCG und den Geheimnissen der Roséwein-Kelterung.
-        </p>
-      </div>
-
-      <div class="detail-section" style="margin-bottom: 14px;">
-        <h3 class="detail-section-title">🍾 Das Schaumwein-Dreieck</h3>
-        <p class="detail-section-text">
-          • <strong>Champagner (AOP):</strong> Ausschließlich Flaschengärung (Méthode Champenoise) in der Champagne; mind. 15 Monate Hefelager lösen Mannoproteine für edle Brioche-Aromen.<br/>
-          • <strong>Deutscher Sekt:</strong> Riesling- oder Burgunderbasis; frische Säure, Flaschen- oder Charmat-Tankgärung.<br/>
-          • <strong>Asti Spumante (DOCG):</strong> Süße Moscato-Traube; Gärung wird bei ~7% Vol. durch Kälte gestoppt – edle Restsüße ohne Zuckerzusatz!
-        </p>
-      </div>
-
-      <div class="detail-section" style="margin-bottom: 14px;">
-        <h3 class="detail-section-title">🍇 Rebsorten & Kelterung</h3>
-        <p class="detail-section-text">
-          • <strong>Riesling:</strong> Königin der Weißweine. Hohe Säure, Schiefermineralik, im Alter TDN-Petrolnote.<br/>
-          • <strong>Roséwein-Gesetz:</strong> In der EU ist das Zusammenschütten von Weiß- und Rotwein für Stillweine streng verboten! Die Farbe stammt rein aus kurzer Maischestandzeit (2–12h) roter Beerenhäute.
-        </p>
-      </div>
+    <main id="pane-wine" class="tab-pane">
+    <div class="container" style="padding-top: 16px;" id="wineGuideContent">
+      <!-- Rendered dynamically via renderWineGuide() in app.js -->
     </div>
   </main>
 
   <!-- PANE 3: COFFEE LAB -->
-  <main id="pane-coffee" class="tab-pane">
+    <main id="pane-coffee" class="tab-pane">
     <div class="container" style="padding-top: 16px;">
       <div class="detail-section" style="margin-bottom: 16px;">
-        <h2 style="font-size: 1.25rem; font-weight: 800; color: var(--accent-gold); margin-bottom: 8px;">☕ Kaffeespezialitäten & Schichten-Labor</h2>
-        <p style="font-size: 0.88rem; color: var(--text-secondary);">
+        <h2 style="font-size: 1.25rem; font-weight: 800; color: var(--accent-gold); margin-bottom: 8px;" id="coffeeHeaderTitle">☕ Kaffeespezialitäten & Schichten-Labor</h2>
+        <p style="font-size: 0.88rem; color: var(--text-secondary);" id="coffeeHeaderSub">
           Interaktive Getränke-Schichtung im Glas, Extraktionsphysik (9 bar, 25s) und der Unterschied zwischen Arabica und Robusta.
         </p>
       </div>
 
       <!-- Interactive Drink Comparison with Realistic Glasses -->
       <div class="detail-section" style="margin-bottom: 16px;">
-        <h3 class="detail-section-title" style="margin-bottom: 12px;">🥛 Getränke-Schichten im Glas vergleichen</h3>
+        <h3 class="detail-section-title" style="margin-bottom: 12px;" id="coffeeCompareTitle">🥛 Getränke-Schichten im Glas vergleichen</h3>
         
         <!-- Selectors -->
         <div style="display: flex; gap: 10px; align-items: center; margin-bottom: 16px; flex-wrap: wrap;">
           <div style="flex: 1; min-width: 140px;">
-            <label style="font-size: 0.75rem; font-weight: 700; color: var(--text-muted); display: block; margin-bottom: 4px;">GETRÄNK 1:</label>
+            <label style="font-size: 0.75rem; font-weight: 700; color: var(--text-muted); display: block; margin-bottom: 4px;" id="coffeeLabelLeft">GETRÄNK 1:</label>
             <select id="coffeeSelectLeft" class="form-select" onchange="updateCoffeeComparison()" style="width: 100%; font-weight: 700;">
               <option value="coffee_cappuccino" selected>Cappuccino</option>
               <option value="coffee_latte_macchiato">Latte Macchiato</option>
@@ -230,7 +216,7 @@
           </div>
           <div style="font-size: 1.2rem; font-weight: 800; color: var(--accent-gold); padding-top: 16px;">⚡</div>
           <div style="flex: 1; min-width: 140px;">
-            <label style="font-size: 0.75rem; font-weight: 700; color: var(--text-muted); display: block; margin-bottom: 4px;">GETRÄNK 2:</label>
+            <label style="font-size: 0.75rem; font-weight: 700; color: var(--text-muted); display: block; margin-bottom: 4px;" id="coffeeLabelRight">GETRÄNK 2:</label>
             <select id="coffeeSelectRight" class="form-select" onchange="updateCoffeeComparison()" style="width: 100%; font-weight: 700;">
               <option value="coffee_cappuccino">Cappuccino</option>
               <option value="coffee_latte_macchiato" selected>Latte Macchiato</option>
@@ -260,194 +246,45 @@
         <div id="coffeeComparisonSummary" class="coffee-comparison-box"></div>
       </div>
 
-      <div class="detail-section">
-        <h3 class="detail-section-title">🌱 Arabica vs. Robusta</h3>
-        <p class="detail-section-text">
-          • <strong>Arabica:</strong> Hochlagen (1000–2200m), feine Fruchtsäuren, 60% mehr Fette/Öle.<br/>
-          • <strong>Robusta:</strong> Tiefland (0–800m), doppelter Koffeingehalt (2,2%), weniger Fett -> erzeugt die dichte, nussbraune Crema im echten italienischen Espresso!
-        </p>
+      <div class="detail-section" id="coffeeSpeciesSection">
+        <!-- Injected via renderCoffeeSpecies() -->
       </div>
     </div>
   </main>
 
   <!-- PANE: COCKTAILS & LONGDRINKS -->
-  <main id="pane-cocktails" class="tab-pane">
-    <div class="container" style="padding-top: 16px;">
-      <div class="detail-section" style="margin-bottom: 16px;">
-        <h2 style="font-size: 1.25rem; font-weight: 800; color: var(--accent-gold); margin-bottom: 8px;">🍸 Cocktails, Longdrinks & Bar-Technik</h2>
-        <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5;">
-          Klassische Bar-Rezepte, Highball-Balance, Eis-Physik und die grundlegenden Handgriffe professioneller Bartender.
-        </p>
-      </div>
-
-      <div class="detail-section" style="margin-bottom: 14px;">
-        <h3 class="detail-section-title">🧊 Eis-Physik & Glas-Kompensation</h3>
-        <p class="detail-section-text">
-          • <strong>Großes Eis vs. Schmelzwasser:</strong> Große Eiswürkel oder klare Eis-Chunks schmelzen extrem langsam, wodurch Longdrinks (z.B. Gin & Tonic) eiskalt bleiben, ohne verwässert zu werden.<br/>
-          • <strong>Glas-Vorkühlung:</strong> Ein vorgekühltes Ballonglas oder Tumbler verhindert den sofortigen Temperaturschock und hält Kohlensäure länger im Getränk.
-        </p>
-      </div>
-
-      <div class="detail-section" style="margin-bottom: 14px;">
-        <h3 class="detail-section-title">🍹 Klassische Longdrink-Standards</h3>
-        <p class="detail-section-text">
-          • <strong>Gin & Tonic:</strong> 5 cl Premium Gin, 150-200 ml Tonic Water, reichlich Eis, botanische Garnitur (Wacholder, Rosmarin oder Gurkenscheibe).<br/>
-          • <strong>Moscow Mule:</strong> 5 cl Wodka, 2 cl Limettensaft, 150 ml Ginger Beer, Gurkenscheibe & Minzzweig im Kupferbecher.<br/>
-          • <strong>Negroni:</strong> Zu gleichen Teilen (je 3 cl) Gin, Vermouth Rosso und Campari; auf Eis gerührt, mit Orangenzeste garniert.
-        </p>
-      </div>
-
-      <div class="detail-section">
-        <h3 class="detail-section-title">🥄 Rühren (Stir) vs. Schütteln (Shake)</h3>
-        <p class="detail-section-text">
-          • <strong>Rühren (Stir):</strong> Für Drinks aus reinen Spirituosen ohne Fruchtsaft oder Eier (z.B. Negroni, Martini, Old Fashioned). Verhindert Trübung und sorgt für seidige Textur.<br/>
-          • <strong>Schütteln (Shake):</strong> Für Zutaten mit Zitrusfrüchten, Eiern, Sahne oder Fruchtsirup (z.B. Sour, Daiquiri). Kühlt schnell und belüftet die Emulsion.
-        </p>
-      </div>
+    <main id="pane-cocktails" class="tab-pane">
+    <div class="container" style="padding-top: 16px;" id="cocktailsGuideContent">
+      <!-- Rendered dynamically via renderCocktailsGuide() in app.js -->
     </div>
   </main>
 
   <!-- PANE: SERVICE & TISCHKULTUR -->
-  <main id="pane-service" class="tab-pane">
-    <div class="container" style="padding-top: 16px;">
-      <div class="detail-section" style="margin-bottom: 16px;">
-        <h2 style="font-size: 1.25rem; font-weight: 800; color: var(--accent-gold); margin-bottom: 8px;">🛎️ Service &amp; Tischkultur (Non-Food, Eindeckung &amp; Knigge)</h2>
-        <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5;">
-          Professionelles Eindecken, Tischabdeckung, Serviettenfalttechniken, Gläser- &amp; Besteckkunde, Vorlegebesteck-Regeln sowie HACCP-Hygienestandards im Gastgewerbe.
-        </p>
-      </div>
-
-      <div class="detail-section" style="margin-bottom: 14px;">
-        <h3 class="detail-section-title">🍽️ Professionelle Tisch-Eindeckung (Gala vs. À la carte)</h3>
-        <p class="detail-section-text">
-          • <strong>Abstand zum Tischrand:</strong> Genormte 1 bis 2 cm (ca. zwei Daumenbreiten).<br/>
-          • <strong>Besteck-Logik:</strong> Von außen nach innen arbeiten. Der erste Gang liegt ganz außen. Gabeln links, Messer (Klinge immer nach innen zum Teller) und Suppenlöffel rechts.<br/>
-          • <strong>Brotteller &amp; Buttermesser:</strong> Links neben dem Couvert platziert. Das Buttermesser liegt auf der rechten Kante des Brottellers mit Klinge nach links.<br/>
-          • <strong>Dessertbesteck:</strong> Oberhalb des Platztellers. Dessertlöffel zeigt nach links (Stiel rechts), Dessertgabel zeigt nach rechts (Stiel links).
-        </p>
-      </div>
-
-      <div class="detail-section" style="margin-bottom: 14px;">
-        <h3 class="detail-section-title">🍷 Gläser-Hierarchie &amp; Anordnung</h3>
-        <p class="detail-section-text">
-          • <strong>Richtglas:</strong> Das Haupt-Wasserglas (oder Rotweinglas beim Menü) steht genau senkrecht über der Spitze des Hauptmessers.<br/>
-          • <strong>Diagonal-Aufstellung (Klassiker):</strong> Vom Wasserglas ausgehend schräg nach rechts unten im 45°-Winkel: Rotweinglas, Weißweinglas, optional Champagnerflöte.<br/>
-          • <strong>Dreiecks-Aufstellung:</strong> Kompakte Eleganz bei runden Tischen: Wasserglas hinten, Rotweinglas vorne links, Weißweinglas vorne rechts.
-        </p>
-      </div>
-
-      <div class="detail-section" style="margin-bottom: 14px;">
-        <h3 class="detail-section-title">🍴 Besteckkunde &amp; Vorlegebesteck-Regeln</h3>
-        <p class="detail-section-text">
-          • <strong>Strikte Vorlege-Trennung:</strong> Jede Vorlegeplatte und Schüssel erhält ein eigenes, fest zugeordnetes Vorlegebesteck (Salatzange, Tortenheber, Suppenkelle).<br/>
-          • <strong>Keine Kreuzkontamination:</strong> Niemals Salatbesteck für Joghurtsaucen, Fleischbesteck für Fisch oder Rohwarenbesteck für gegarte Speisen vertauschen (Schutz vor Keim- &amp; Allergenverschleppung!).<br/>
-          • <strong>Vorlegebesteck-Ablage:</strong> Nach dem Vorlegen wird das Besteck stets so auf der Platte abgelegt, dass die Griffe sauber zum Gast zeigen.
-        </p>
-      </div>
-
-      <div class="detail-section" style="margin-bottom: 14px;">
-        <h3 class="detail-section-title">🧻 Serviettenfalttechnik &amp; Hygiene</h3>
-        <p class="detail-section-text">
-          • <strong>Hygiene-Protokoll:</strong> Stoffservietten dürfen im Service ausschließlich mit frisch gewaschenen, desinfizierten Händen oder Servierzangen gefaltet werden.<br/>
-          • <strong>Mundkontakt-Schutz:</strong> Bereiche der Serviette, die später mit Mund oder Gesicht des Gastes in Berührung kommen, dürfen beim Falten nicht berührt werden.<br/>
-          • <strong>Klassiker-Faltungen:</strong> Bischofsmütze (Gala-Dinner), Tafelspitz (stehend auf Platzteller), Lotusblüte (elegante Schale) oder Bestecktasche (Mittagsservice).<br/>
-          • <strong>Servietten-Knigge:</strong> Verlässt der Gast kurz den Tisch, legt er die Serviette links neben das Couvert oder auf die Stuhlsitzfläche – niemals zusammengeknüllt auf den Teller!
-        </p>
-      </div>
-
-      <div class="detail-section">
-        <h3 class="detail-section-title">👥 Service-Etikette, Einsetzen &amp; Abräumen</h3>
-        <p class="detail-section-text">
-          • <strong>Einsetzen von Speisen &amp; Getränken:</strong> Grundsätzlich von der rechten Seite des Gastes mit der rechten Hand.<br/>
-          • <strong>Ausnahme Vorlegeplatten:</strong> Präsentation von links, damit sich der Gast bequem mit der rechten Hand bedienen kann.<br/>
-          • <strong>Abräumen (De-barrassieren):</strong> Klassisch von der rechten Seite (beim Gourmet-Menü oder nach Hausstandard oft mit gekreuztem Bestecksignal von links).<br/>
-          • <strong>Weinservice:</strong> Flaschenetikett zeigt stets sichtbar zum Gast. Glas niemals anheben beim Eingießen; Tropfen mit Drehbewegung und Serviette abfangen.<br/>
-          • <strong>Bestecksprache des Gastes:</strong> Parallel auf 20 nach 4 Uhr (oder 5 Uhr) = Gang beendet, bereit zum Abräumen. Gekreuzt auf dem Teller = kurze Pause.
-        </p>
-      </div>
+    <main id="pane-service" class="tab-pane">
+    <div class="container" style="padding-top: 16px;" id="serviceCultureContent">
+      <!-- Rendered dynamically via renderServiceCulture() in app.js -->
     </div>
   </main>
 
   <!-- PANE 4: SCIENCE / WIRKUNGSLEHRE -->
-  <main id="pane-science" class="tab-pane">
-    <div class="container" style="padding-top: 16px;">
-      <div class="detail-section" style="margin-bottom: 16px;">
-        <h2 style="font-size: 1.25rem; font-weight: 800; color: var(--accent-gold); margin-bottom: 8px;">🔬 Wirkungslehre & Gastronomie-Physik</h2>
-        <p style="font-size: 0.88rem; color: var(--text-secondary);">
-          Die chemischen und biologischen Vorgänge hinter Gärung, Destillation, Kohlensäure, Milch- und Eierkunde verständlich erklärt.
-        </p>
-      </div>
-
-      <div class="detail-section" style="margin-bottom: 14px;">
-        <h3 class="detail-section-title">⚗️ Destillation vs. Fermentation</h3>
-        <p class="detail-section-text">
-          • <strong>Fermentation (Gärung):</strong> Hefen wandeln Einfachzucker (Fruktose, Glukose) unter Sauerstoffabschluss in Ethanol und CO2 um (Bier max. 12%, Wein max. 16%).<br/>
-          • <strong>Destillation (Brennen):</strong> Trennt Alkohol (Siedepunkt 78,3°C) vom Wasser (100°C) durch Verdampfen und anschließendes Kondensieren in Kupferkühlern.
-        </p>
-      </div>
-
-      <div class="detail-section" style="margin-bottom: 14px;">
-        <h3 class="detail-section-title">🫧 Kohlensäure & Henry-Gesetz</h3>
-        <p class="detail-section-text">
-          Gase lösen sich in kalten Flüssigkeiten physikalisch stabiler als in warmen. Eiskaltes Mineralwasser oder Tonic bindet CO2 fest im Glas; bei Erwärmung perlt es explosionsartig aus.
-        </p>
-      </div>
-
-      <div class="detail-section" style="margin-bottom: 14px;">
-        <h3 class="detail-section-title">🍳 Eier-Chemie: 62°C vs. 68°C</h3>
-        <p class="detail-section-text">
-          Eiklar gerinnt bei 62–65°C; Eidotter verdickt erst bei 65–70°C. Dieser thermische Abstand ermöglicht das perfekte wachsweiche Frühstücksei (6 Min) und das Onsen-Ei bei 64,5°C.
-        </p>
-      </div>
-
-      <!-- FOOD SAFETY & LEBENSMITTELSICHERHEIT -->
-      <div class="detail-section" style="margin-bottom: 14px; border-left: 4px solid #ff4757;">
-        <h3 class="detail-section-title" style="color: #ff6b81;">⚠️ Lebensmittelsicherheit: Grillen & Brühwürste (Nitrosamine)</h3>
-        <p class="detail-section-text">
-          • <strong>Krebserregende Nitrosamine:</strong> Gepökelte Fleischwaren (Wiener, Bockwurst, Kasseler, Leberkäse, Bacon) enthalten Natriumnitrit (E250). Bei hohen Temperaturen (&gt;150°C auf Grillrost oder Pfanne) reagiert Nitrit mit Fleisch-Aminen zu krebserregenden Nitrosaminen.<br/>
-          • <strong>Küchen-Regel:</strong> Brüh- und Pökelwürste nur im Heißwasserbad (max. 80°C) sieden – niemals direkt grillen! Auf dem Grill ausschließlich rohe, ungepökelte Rostbratwürste (mit reinem Kochsalz zubereitet) verwenden.<br/>
-          • <strong>Fettverbrennung &amp; PAK:</strong> In die Glut tropfendes Fett pyrolysiert zu giftigen polyzyklischen aromatischen Kohlenwasserstoffen (PAK, z.B. Benzo[a]pyren), die sich mit dem Rauch auf dem Grillgut niederschlagen. Grillschalen nutzen!
-        </p>
-      </div>
-
-      <div class="detail-section" style="margin-bottom: 14px; border-left: 4px solid #2ed573;">
-        <h3 class="detail-section-title" style="color: #2ed573;">🛡️ HACCP & Kreuzkontamination (Schneidbrett-System)</h3>
-        <p class="detail-section-text">
-          Strikte Trennung von Rohwaren verhindert Keimübertragungen (Campylobacter von Geflügel, Salmonellen von Eiern/Schwein, Listerien von Fisch auf verzehrfertigen Salat):<br/>
-          • 🔴 <strong>ROT:</strong> Rohes Fleisch (Rind, Schwein, Lamm)<br/>
-          • 🟡 <strong>GELB:</strong> Rohes Geflügel (Huhn, Pute – höchste Keimgefahr!)<br/>
-          • 🔵 <strong>BLAU:</strong> Roher Fisch &amp; Meeresfrüchte<br/>
-          • 🟢 <strong>GRÜN:</strong> Gemüse, Salate &amp; Obst<br/>
-          • ⚪ <strong>WEISS:</strong> Backwaren, Käse &amp; Milchprodukte<br/>
-          • 🟤 <strong>BRAUN:</strong> Gegartes / gebratenes Fleisch
-        </p>
-      </div>
-
-      <div class="detail-section" style="border-left: 4px solid #ffa502;">
-        <h3 class="detail-section-title" style="color: #ffa502;">🌡️ Garstufen, Kerntemperaturen & Rohverzehr</h3>
-        <p class="detail-section-text">
-          • <strong>Rind (Steak, Tatar):</strong> Keime besiedeln nur die Oberfläche. Innen ist das Fleisch keimfrei; daher ist Rare (48–52°C) oder Medium (56–58°C) nach scharfem Anbraten sicher. Tatar stets tagesfrisch zubereiten.<br/>
-          • <strong>Geflügel (Huhn, Pute):</strong> Niemals roh oder rosa! Mindestens 74°C Kerntemperatur zwingend erforderlich zur Abtötung von Campylobacter &amp; Salmonellen.<br/>
-          • <strong>Schweinefleisch:</strong> Hochwertiges Filet darf bei 62–65°C zartrosa serviert werden. Mett unterliegt strengen Frischegesetzen (&lt;4°C, Verkauf nur am Herstellungstag).<br/>
-          • <strong>Fisch &amp; Sushi:</strong> Wildfisch zum Rohverzehr muss nach EU-Verordnung 853/2004 für mind. 24h bei -20°C schockgefrostet werden, um Parasiten (Anisakis-Würmer) abzutöten.<br/>
-          • <strong>Temperatur-Gefahrenzone:</strong> Zwischen 10°C und 60°C verdoppeln sich Bakterien alle 20 Minuten! Heiße Speisen &gt;65°C halten oder binnen 90 Min auf &lt;10°C kühlen.
-        </p>
-      </div>
+    <main id="pane-science" class="tab-pane">
+    <div class="container" style="padding-top: 16px;" id="scienceGuideContent">
+      <!-- Rendered dynamically via renderScienceGuide() in app.js -->
     </div>
   </main>
 
   <!-- PANE 5: QUIZ TRAINER (10 QUESTIONS WITH CATEGORY FILTER) -->
-  <main id="pane-quiz" class="tab-pane">
+    <main id="pane-quiz" class="tab-pane">
     <div class="container" style="padding-top: 16px;">
       
       <!-- Quiz Header & Settings Card -->
       <div class="detail-section" style="margin-bottom: 16px;">
         <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 8px;">
-          <h2 style="font-size: 1.2rem; font-weight: 800; color: var(--accent-gold);">🎯 Multiple-Choice Team-Quiz</h2>
+          <h2 style="font-size: 1.2rem; font-weight: 800; color: var(--accent-gold);" id="quizHeaderTitle">🎯 Multiple-Choice Team-Quiz</h2>
           <span id="quizCategoryDisplay" style="font-size: 0.8rem; font-weight: 700; color: var(--text-muted);"></span>
         </div>
 
-        <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 12px;">
+        <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 12px;" id="quizHeaderDesc">
           Wähle eine Kategorie oder mixe alle Bereiche für deine 10 Prüfungsfragen:
         </p>
 
@@ -483,19 +320,19 @@
       <!-- Completed Scorecard Card -->
       <div id="quizCompletedCard" class="quiz-card" style="display: none; text-align: center;">
         <div style="font-size: 3rem;">🏆</div>
-        <h3 style="font-size: 1.4rem; font-weight: 800;">Schulung abgeschlossen!</h3>
+        <h3 style="font-size: 1.4rem; font-weight: 800;" id="quizCompleteTitle">Schulung abgeschlossen!</h3>
         <p id="quizScoreRate" style="font-size: 1.3rem; font-weight: 800; color: var(--success);"></p>
         <p id="quizScoreDetail" style="font-size: 0.9rem; color: var(--text-muted);"></p>
 
         <div style="margin: 16px 0; text-align: left;">
-          <label style="font-size: 0.8rem; font-weight: 700; color: var(--text-secondary);">Dein Name für den Barchef-Bericht:</label>
+          <label style="font-size: 0.8rem; font-weight: 700; color: var(--text-secondary);" id="quizStaffNameLabel">Dein Name für den Barchef-Bericht:</label>
           <input type="text" id="quizStaffName" class="form-input" style="width: 100%; margin-top: 4px;" placeholder="z.B. Anna Müller (Chef de Rang)" />
         </div>
 
-        <button class="btn-primary" style="width: 100%; margin-bottom: 8px;" onclick="shareQuizScore()">
+        <button class="btn-primary" style="width: 100%; margin-bottom: 8px;" id="quizShareBtn" onclick="shareQuizScore()">
           📤 Ergebnis an Barchef / Quizmaster senden
         </button>
-        <button class="btn-secondary" style="width: 100%;" onclick="initQuizSession(quizCategory, 10)">
+        <button class="btn-secondary" style="width: 100%;" id="quizRestartBtn" onclick="initQuizSession(quizCategory, 10)">
           🔄 Quiz erneut starten
         </button>
       </div>
@@ -712,6 +549,7 @@
   </nav>
 
   <script src="data_bundle.js"></script>
+  <script src="quiz_data.js"></script>
   <script src="app.js"></script>
   <script>
     // Register Service Worker for PWA

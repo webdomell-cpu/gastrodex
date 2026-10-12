@@ -1,6 +1,6 @@
 {
   "category": "oils_vinegars",
-  "count": 9,
+  "count": 7,
   "items": [
     {
       "id": "oil_natives_olivenoel_extra",
@@ -31,15 +31,10 @@
         "ColdPressed",
         "HealthyFats"
       ],
-      "isFavorite": false,
-      "tasteProfileDe": "Frisches Gras, grüne Tomate, Artischocke, zartbitter mit markantem pfeffrigem Kratzen im Hals.",
-      "tasteProfileEn": "Fresh cut grass, green tomato leaf, artichoke, pleasant peppery throat tickle (oleocanthal).",
-      "scienceExplainedDe": "Die europäische Güteklasse 'Nativ Extra' (Extra Virgin) verlangt strengste Grenzwerte: 1) Freie Fettsäuren (Ölsäure) dürfen maximal 0,8 g pro 100 g betragen (Spitzenöle liegen unter 0,2 g); 2) Rein mechanische Kaltextraktion unter 27°C – keinerlei Erhitzung oder chemische Lösungsmittel; 3) Sensorische Fehlerfreiheit: Es muss fruchtig riechen und schmecken. Das charakteristische Kratzen/Brennen im Hals bei Spitzenölen ist kein Mangel, sondern der Beweis für den Wirkstoff Oleocanthal – ein kraftvolles natürliches Antioxidans.",
-      "scienceExplainedEn": "By strict EU Regulation (2022/2104), 'Extra Virgin' requires: 1) Free acidity (free oleic acid) of 0.8g per 100g or lower (top artisan EVOOs achieve <0.2%); 2) Strict physical extraction below 27°C (cold extraction), without solvents or chemical refining; 3) Certified sensory test confirming zero sensory defects and positive attributes: fruitiness, bitterness, and pungency. The peppery tickle in the throat is caused by Oleocanthal, a natural phenolic antioxidant possessing anti-inflammatory properties identical to ibuprofen.",
-      "culinaryServingDe": "Ausschließlich roh als Vollendung über heiße Pasta, Bistecca Fiorentina, Burrata, Salate oder edles Sauerteigbrot träufeln. Nie über 180°C stark erhitzen!",
-      "culinaryServingEn": "Finishing oil drizzled raw over burrata, carpaccio, pasta, grilled fish, and sourdough bread.",
-      "guestFaqDe": "Warum kratzt hochwertiges Olivenöl im Hals? Das Kratzen stammt von Oleocanthal, einem hochwirksamen natürlichen Entzündungshemmer. Je mehr Polyphenole, desto gesünder und kratziger das frische Öl!",
-      "guestFaqEn": "Why does premium olive oil burn slightly in the back of the throat? That burning sensation is Oleocanthal, a prized polyphenol antioxidant; tasting panels rate EVOO quality by 'one-cough' or 'two-cough' pungency!"
+      "inStock": true,
+      "stockQuantity": 5,
+      "storageLocation": "Zentrallager",
+      "isFavorite": false
     },
     {
       "id": "oil_terroirs_koroneiki_picual_arbequina",
@@ -70,15 +65,10 @@
         "Terroir",
         "OliveVarieties"
       ],
-      "isFavorite": false,
-      "tasteProfileDe": "Koroneiki: Wildkräuter, feuriger Pfefferabgang. Picual: Grüne Tomate, Feigenblatt, markant bitter. Arbequina: Süßer Apfel, Mandel, butterweich.",
-      "tasteProfileEn": "Koroneiki: Herbaceous, wild thyme, intense peppery kick. Picual: Green tomato, fig leaf, bold bitterness. Arbequina: Sweet apple, banana, buttery almond.",
-      "scienceExplainedDe": "Sortenreine Olivenöle besitzen faszinierende Charakterunterschiede: 1) Koroneiki (Griechenland / Kalamata): Winzige Frucht, schmeckt grasig nach Wildkräutern mit feurigem Abgang. 2) Picual (Spanien / Andalusien): Der König der Polyphenole; kräftig-herb, schmeckt nach Tomatenstrunk und ist durch den Schutzstoffgehalt extrem lange haltbar. 3) Arbequina (Spanien): Sehr mild, fruchtig, schmeckt nach grünem Apfel und Haselnuss – perfekt für Gäste, die bittere Öle ablehnen, oder für Mayonnaisen und Desserts.",
-      "scienceExplainedEn": "Olive varieties express dramatically different fatty acid and polyphenol profiles: 1) Koroneiki (Greece): Tiny drought-hardy fruit with over 75% oleic acid and herbaceous aromas of wild thyme and green pepper. 2) Picual (Spain / Jaén): World's most planted variety; massive polyphenol content (up to 800+ mg/kg) gives intense stability and natural bitterness, making it the most heat-resistant olive oil. 3) Arbequina (Spain): Low in bitter polyphenols, creamy, ripe with aromas of green almond and apple—ideal for desserts or guests sensitive to bitterness.",
-      "culinaryServingDe": "Koroneiki zu gegrilltem Fisch und Bauernsalat; Picual zu Rindfleisch, Lamm und Gazpacho; Arbequina für feine Vinaigrettes, Fisch-Carpaccio und Schokoladendesserts.",
-      "culinaryServingEn": "Koroneiki for grilled octopus and Greek salads; Picual for rich lamb roasts and tomato gazpacho; Arbequina for dressings and olive oil ice cream.",
-      "guestFaqDe": "Welches Öl empfiehlt man Gästen, die keine Bitterkeit mögen? Ein sortenreines Arbequina-Öl: Es ist wunderbar mild, fruchtig und butterweich ohne Bitterstoffe.",
-      "guestFaqEn": "Which olive oil is best for guests who dislike bitterness? Recommend Arbequina olive oil: it is naturally sweet, delicate, buttery, and devoid of astringent sharpness."
+      "inStock": true,
+      "stockQuantity": 5,
+      "storageLocation": "Zentrallager",
+      "isFavorite": false
     },
     {
       "id": "oil_gesunde_oele_rauchpunkte",
@@ -99,7 +89,9 @@
       "culinaryDe": "Raffiniertes Rapsöl/High-Oleic-Öl zum scharfen Braten von Steaks und Wiener Schnitzel. Steirisches Kürbiskernöl ausschließlich kalt über Kürbissuppe oder Vanilleeis.",
       "faqEn": "Can you fry with extra virgin olive oil? High-quality low-acidity EVOO can handle gentle pan frying up to 180°C, but deep frying destroys its expensive polyphenols.",
       "faqDe": "Darf man mit nativem Olivenöl braten? Zum sanften Dünsten bis 170-180°C ja, aber scharfes Anbraten oder Frittieren zerstört die wertvollen Aromen und ist reine Geldverschwendung.",
-      "allergens": [],
+      "allergens": [
+        "Tree nuts (Walnut oil only"
+      ],
       "tags": [
         "CookingOil",
         "SmokePoint",
@@ -107,15 +99,10 @@
         "PumpkinSeed",
         "Omega3"
       ],
-      "isFavorite": false,
-      "tasteProfileDe": "Raffiniert: Geschmacksneutral, rein. Kaltgepresstes Rapsöl: Nussig, saatig. Steirisches Kürbiskernöl: Tiefgrün, intensiv röstig.",
-      "tasteProfileEn": "Refined: Neutral, clean, odorless. Cold-Pressed Rapeseed: Nutty, golden. Pumpkin Seed: Dark green, intense roasted pumpkin.",
-      "scienceExplainedDe": "Das unverzichtbare Küchenwissen über Speiseöle: 1) Der Rauchpunkt: Die Temperatur, bei der Fettsäuren zerfallen und giftiges Acrolein verdampft. Kaltgepresste Öle (Leinöl 107°C, kaltgepresstes Rapsöl 120°C, Walnussöl 160°C) dürfen NIEMALS zum heißen Anbraten genutzt werden! 2) Raffinierte Öle (raffiniertes Rapsöl, Erdnussöl, High-Oleic-Sonnenblumenöl) sind von Trübstoffen befreit, rauchen erst ab 220-240°C und sind ideal für Pfanne und Fritteuse. 3) Kaltgepresstes Steirisches Kürbiskernöl g.g.A. ist ein reines Kaltöl – bei Hitze verbrennen die edlen Aromen sofort!",
-      "scienceExplainedEn": "The critical kitchen chemistry of cooking oils: 1) Smoke Point: The temperature at which volatile free fatty acids break down into toxic blue smoke and carcinogenic acrolein. Unrefined virgin oils (flaxseed 107°C, extra virgin olive oil 190°C, cold-pressed rapeseed 110°C) must never be used for searing steaks or deep-frying! 2) Refined oils (refined high-oleic sunflower, refined canola, peanut oil) have free acids stripped out, raising smoke points above 225-240°C. 3) Omega-3 vs Omega-6: Cold-pressed rapeseed oil has an optimal 1:2 ratio of Omega-3 to Omega-6; standard sunflower oil is high in inflammatory Omega-6.",
-      "culinaryServingDe": "Raffiniertes Rapsöl/High-Oleic-Öl zum scharfen Braten von Steaks und Wiener Schnitzel. Steirisches Kürbiskernöl ausschließlich kalt über Kürbissuppe oder Vanilleeis.",
-      "culinaryServingEn": "Refined high-oleic oil for schnitzel and high-heat searing. Cold-pressed pumpkin seed oil drizzled over vanilla ice cream and pumpkin soup.",
-      "guestFaqDe": "Darf man mit nativem Olivenöl braten? Zum sanften Dünsten bis 170-180°C ja, aber scharfes Anbraten oder Frittieren zerstört die wertvollen Aromen und ist reine Geldverschwendung.",
-      "guestFaqEn": "Can you fry with extra virgin olive oil? High-quality low-acidity EVOO can handle gentle pan frying up to 180°C, but deep frying destroys its expensive polyphenols."
+      "inStock": true,
+      "stockQuantity": 5,
+      "storageLocation": "Zentrallager",
+      "isFavorite": false
     },
     {
       "id": "vinegar_balsamico_tradizionale_dop",
@@ -146,15 +133,10 @@
         "Modena",
         "LuxuryVinegar"
       ],
-      "isFavorite": false,
-      "tasteProfileDe": "Sirupartig dickflüssig, perfektes Gleichgewicht aus Edelsüße und Weinsäure, getrocknete Feigen, Holznoten.",
-      "tasteProfileEn": "Syrupy dense velvet, harmonic sweet-sour equilibrium, dried fig, dark plum, toasted oak vanilla.",
-      "scienceExplainedDe": "Die Königsdisziplin des Essigs: Tradizionale DOP wird NICHT aus Wein gemacht! Frischer Traubenmost wird über offenem Feuer bis zu 36 Stunden eingekocht. Anschließend wandert er in eine 'Batteria' aus 5 bis 7 Holzfässern abnehmender Größe aus verschiedenen Hölzern: Eiche, Kastanie, Kirsche, Esche und Maulbeere. Über 12 Jahre ('Affinato') oder über 25 Jahre ('Extravecchio') verdunstet das Wasser durch das Holz. Das Ergebnis ist eine sirupartige, dunkle Essenz von unvergleichlicher aromatischer Dichte.",
-      "scienceExplainedEn": "One of the crowning glories of world gastronomy: 'Tradizionale DOP' is strictly NOT made from finished wine. Late-harvested Trebbiano and Lambrusco grape must is simmered gently over direct fire for 24-36 hours, concentrating sugars and acids. It enters a 'batteria' of 5 to 7 barrels of decreasing size made of different woods: oak (vanilla), chestnut (tannins), cherry (sweetness), ash (porosity), and juniper/mulberry (aroma). Through annual 'rincalzo' (transferring and topping up), water evaporates through the wood over 12 years (Affinato - red cap) or 25+ years (Extravecchio - gold cap). It is thick without any starch or sugar additives.",
-      "culinaryServingDe": "Tropfenweise aus der Pipette serviert zu 36 Monate gereiftem Parmigiano Reggiano, frischen Erdbeeren, cremigem Vanilleeis oder rosa gebratenem Rinderfilet.",
-      "culinaryServingEn": "Served in drops from a glass pipette over 36-month Parmigiano Reggiano, vanilla gelato, strawberries, or grilled beef tenderloin.",
-      "guestFaqDe": "Warum kostet ein Fläschchen 100 Euro? Weil man über 100 kg Trauben und 25 Jahre geduldige Holzfassreifung braucht, um 100 ml Extravecchio zu gewinnen!",
-      "guestFaqEn": "Why does a 100ml bottle cost over 100 euros? It takes over 100 kg of grapes and 25 years of barrel evaporation to yield one small bottle of Extravecchio!"
+      "inStock": true,
+      "stockQuantity": 5,
+      "storageLocation": "Zentrallager",
+      "isFavorite": false
     },
     {
       "id": "vinegar_balsamico_igp_condimento_bianco",
@@ -185,15 +167,10 @@
         "SaladDressing",
         "Modena"
       ],
-      "isFavorite": false,
-      "tasteProfileDe": "Balsamico IGP: Fruchtig-säuerlich, dunkle Süße, Weinsäure. Condimento Bianco: Helles Goldgelb, spritzig-süß, sauber fruchtig.",
-      "tasteProfileEn": "Balsamico IGP: Fruity sweet-sour, lively acidity, caramel depth. Condimento Bianco: Bright golden, crisp floral sweetness, clean acidity.",
-      "scienceExplainedDe": "1. Aceto Balsamico di Modena IGP: Der weltweite Gastronomie-Allrounder. Eine geschützte Mischung aus konzentriertem Traubenmost und echtem Weinessig, mindestens 60 Tage im Holzfass gereift (ab 3 Jahren 'Invecchiato'). Karamelldezusatz (E150d) ist gesetzlich erlaubt, um die dunkle Glanzfarbe zu sichern.\\n2. Condimento Bianco (Weißer Balsamico): Weißer Traubenmost wird im Vakuum bei niedriger Temperatur schonend eingedampft, damit der Traubenzucker NICHT karamellisiert. Mit Weißweinessig vermählt, liefert er die balsamische Süße-Säure-Balance, ohne Salate, Geflügel oder hellen Fisch grau-braun zu färben!",
-      "scienceExplainedEn": "1. Aceto Balsamico di Modena IGP: The ubiquitous restaurant standard. Unlike the rare 'Tradizionale', IGP is a blend of cooked/concentrated grape must and finished quality wine vinegar (aged min 60 days in wood, min 3 years for 'Invecchiato'). Up to 2% caramel coloring (E150d) is legally permitted for dark gloss.\\n2. Condimento Bianco (White Balsamic): Made from white Trebbiano grape must evaporated under vacuum at low temperatures so natural sugars do NOT caramelize brown. Blended with premium white wine vinegar, it delivers balsamic sweet-sour fruitiness without staining light salads or fish dishes dark brown.",
-      "culinaryServingDe": "Balsamico IGP für Tomatensalate, Bratensaucen und Vinaigrettes. Condimento Bianco zwingend für helle Blattsalate, Fenchel-Carpaccio und Jakobsmuscheln.",
-      "culinaryServingEn": "Balsamico IGP for tomato salads, marinades, and pan reductions. Condimento Bianco for crisp green salads, fennel carpaccio, and seafood tartare.",
-      "guestFaqDe": "Warum nutzt die Küche weißen Balsamico? Aus optischen Gründen: Dunkler Balsamico färbt helle Blattsalate, Ziegenkäse und Meeresfrüchte unansehnlich schmutzig-braun.",
-      "guestFaqEn": "Why use white balsamic instead of regular balsamic in fine dining? Color esthetics: regular dark balsamic turns light lettuce, white fish, and goat cheese an unappetizing muddy brown."
+      "inStock": true,
+      "stockQuantity": 5,
+      "storageLocation": "Zentrallager",
+      "isFavorite": false
     },
     {
       "id": "vinegar_weinessig_vs_branntweinessig",
@@ -214,7 +191,9 @@
       "culinaryDe": "Rotweinessig für Schmorbraten, Gulasch und dunkle Vinaigrettes. Weißweinessig für klassische Sauce Béarnaise, Sauce Hollandaise, Beurre Blanc und pochiertes Ei.",
       "faqEn": "Can spirit vinegar be used for fine dining salad dressings? Never in professional kitchens: its aggressive, harsh acetic acid overpowers delicate vegetables and herbs.",
       "faqDe": "Gehört Branntweinessig in die Salatsauce? In der Gastronomie ein absolutes No-Go: Die stechende Säure betäubt die Geschmacksnerven und zerstört das feine Aroma frischer Kräuter.",
-      "allergens": [],
+      "allergens": [
+        "Contains Sulphites (Wine vinegar only"
+      ],
       "tags": [
         "WineVinegar",
         "Weinessig",
@@ -222,15 +201,10 @@
         "AcidScience",
         "CulinaryBasics"
       ],
-      "isFavorite": false,
-      "tasteProfileDe": "Weinessig: Edles Weinbouquet, zarte Fruchtsäure, weich. Branntweinessig: Stechend scharf, aggressiv sauer, null Eigengeschmack.",
-      "tasteProfileEn": "Wine Vinegar: Noble fruit bouquet, wine acidity, round body. Spirit Vinegar: Harte, piercing, chemical, monochromatic sharp acidity.",
-      "scienceExplainedDe": "Die biochemische Essigentstehung: Essigsäurebakterien (Acetobacter) veratmen Alkohol mit Luftsauerstoff zu Essigsäure. 1) Echter Wein-Essig (Weißwein- & Rotweinessig): Entsteht aus echtem Traubenwein! Er enthält wertvolle Weinsäure, Glycerin und flüchtige Ester des Weins und schmeckt harmonisch und vielschichtig.\\n2) Branntweinessig (Tafelessig): Entsteht im Turbo-Industrieverfahren aus billigem 96%-igem Industriealkohol (aus Zuckerrübenmelasse, Mais oder Holzresten). Er besitzt keinerlei Weinaroma, schmeckt extrem aggressiv und stechend und gehört nur zum Entkalken oder für billigen Senf, niemals in die feine Küche!",
-      "scienceExplainedEn": "How vinegar is created biochemically: Acetic acid bacteria (Acetobacter aceti) oxidize ethanol in the presence of oxygen into acetic acid (CH3COOH). 1) Wine Vinegar (Red & White): Made by fermenting finished grape wine; it preserves natural tartaric acid, esters, and secondary grape aromas, maturing into a rounded, culinary acidifier. 2) Spirit Vinegar (Branntweinessig / Distilled white vinegar): Synthetically fermented in submerged aeration tanks from cheap 96% industrial neutral ethanol (made from agricultural molasses, potatoes, or cellulose plant waste). It has zero aroma, pure 5-10% harsh acetic acid, and is mainly used as an industrial preservative or household cleaner.",
-      "culinaryServingDe": "Rotweinessig für Schmorbraten, Gulasch und dunkle Vinaigrettes. Weißweinessig für klassische Sauce Béarnaise, Sauce Hollandaise, Beurre Blanc und pochiertes Ei.",
-      "culinaryServingEn": "Red wine vinegar for Beef Bourguignon, vinaigrettes for frisée salad. White wine vinegar for Sauce Béarnaise, Hollandaise, and beurre blanc.",
-      "guestFaqDe": "Gehört Branntweinessig in die Salatsauce? In der Gastronomie ein absolutes No-Go: Die stechende Säure betäubt die Geschmacksnerven und zerstört das feine Aroma frischer Kräuter.",
-      "guestFaqEn": "Can spirit vinegar be used for fine dining salad dressings? Never in professional kitchens: its aggressive, harsh acetic acid overpowers delicate vegetables and herbs."
+      "inStock": true,
+      "stockQuantity": 5,
+      "storageLocation": "Zentrallager",
+      "isFavorite": false
     },
     {
       "id": "vinegar_sherry_vinagre_de_jerez",
@@ -261,91 +235,10 @@
         "Spain",
         "GourmetVinegar"
       ],
-      "isFavorite": false,
-      "tasteProfileDe": "Dunkles Mahagoni, geröstete Haselnuss, Rosinen, altes Eichenholz, konzentrierte milde Säure.",
-      "tasteProfileEn": "Rich mahogany color, toasted hazelnut, dried raisins, vanilla oak, intense concentrated mellow acidity.",
-      "scienceExplainedDe": "Aus dem andalusischen Sherry-Dreieck stammend, reift Vinagre de Jerez g.U. über Jahre im berühmten Solera-System in Fässern aus amerikanischer Weißeiche. Durch die langsame Sauerstoffzufuhr im Fass verdunstet Wasser, und der Essig nimmt nussige Aromen von gerösteten Haselnüssen, Rosinen und Eichenholz an. Gesetzliche Reifestufen: Vinagre de Jerez (mind. 6 Monate), Reserva (mind. 2 Jahre im Fass), Gran Reserva (mind. 10 Jahre im Eichenfass).",
-      "scienceExplainedEn": "Originating strictly within the 'Sherry Triangle' of Andalusia, Spain, Vinagre de Jerez is produced from genuine Sherry wines (primarily the Palomino grape). It matures for years in stacked rows of American oak barrels called a Solera and Criaderas system. Micro-oxidation through the oak wood and continuous fractional blending yields intense volatile acidity, enriched with aromas of roasted nuts, dried fruits, and wood lactones. Classifications: Vinagre de Jerez (min 6 months), Reserva (min 2 years), Gran Reserva (min 10 years).",
-      "culinaryServingDe": "Das unverzichtbare Geheimnis für echtes andalusisches Gazpacho, lauwarme Linsensalate, Ziegenkäse und zum Ablöschen von Entenbrustsaucen.",
-      "culinaryServingEn": "The secret weapon of Andalusian Gazpacho, warm goat cheese salads, lentil stews, and pan deglazing for duck breast.",
-      "guestFaqDe": "Was macht Sherry-Essig so einzigartig? Die jahrelange Fassreife im Solera-System: Das Holz bindet Schärfe ab und schenkt komplexe Röst- und Nussaromen.",
-      "guestFaqEn": "Why does Sherry vinegar taste so much deeper than red wine vinegar? Years of barrel maturation in oak soleras evaporate water and infuse concentrated wood vanillin and hazelnut notes."
-    },
-    {
-      "id": "oil_argan_morocco_culinary",
-      "category": "oils_vinegars",
-      "nameEn": "Toasted Culinary Argan Oil",
-      "nameDe": "Geröstetes Arganöl (Marokko)",
-      "subtitleEn": "Cold-pressed from roasted kernels of the ancient Argania spinosa tree",
-      "subtitleDe": "Kaltgepresst aus gerösteten Kernen der marokkanischen Arganfrucht (UNESCO-Biosphäre)",
-      "imageUrl": "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=800&auto=format&fit=crop&q=80",
-      "origin": "Morocco (Souss Valley / Essaouira)",
-      "isImport": true,
-      "abv": "0.0% ABV",
-      "tasteEn": "Deep toasted hazelnut, sesame, warm walnut bread, golden buttery finish.",
-      "tasteDe": "Intensive Rösthaselnuss, Sesam, nussiges Krustenbrot und warmer, samtiger Schmelz.",
-      "scienceEn": "Rich in tocopherols (vitamin E) and unsaturated oleic/linoleic acids. Light toasting develops pyrazines without damaging fatty acid bonds.",
-      "scienceDe": "Enthält hohe Dosen Vitamin E und Phytosterine. Schonendes Rösten schließt nussige Pyrazinaromen auf.",
-      "culinaryEn": "Finishing oil drizzled over couscous, tagines, fresh goat cheese, or mixed with almonds & honey into Amlou.",
-      "culinaryDe": "Finishing-Öl für Couscous, Tajine, Ziegenkäse oder mit Mandeln und Honig zu Amlou gerührt.",
-      "faqEn": "Culinary vs Cosmetic Argan Oil? Culinary argan kernels are toasted before pressing (giving nut flavor); cosmetic oil is pressed raw (virtually odorless).",
-      "faqDe": "Speiseöl vs. Kosmetiköl? Speiseöl wird aus gerösteten Kernen gepresst (nussiger Duft); Kosmetiköl aus ungerösteten Kernen.",
-      "allergens": [
-        "Nuts (Argan kernel)"
-      ],
-      "tags": [
-        "Argan",
-        "Morocco",
-        "Oil",
-        "Nutty",
-        "UNESCO"
-      ],
-      "tasteProfileDe": "Intensive Rösthaselnuss, Sesam, nussiges Krustenbrot und warmer, samtiger Schmelz.",
-      "tasteProfileEn": "Deep toasted hazelnut, sesame, warm walnut bread, golden buttery finish.",
-      "scienceExplainedDe": "Enthält hohe Dosen Vitamin E und Phytosterine. Schonendes Rösten schließt nussige Pyrazinaromen auf.",
-      "scienceExplainedEn": "Rich in tocopherols (vitamin E) and unsaturated oleic/linoleic acids. Light toasting develops pyrazines without damaging fatty acid bonds.",
-      "culinaryServingDe": "Finishing-Öl für Couscous, Tajine, Ziegenkäse oder mit Mandeln und Honig zu Amlou gerührt.",
-      "culinaryServingEn": "Finishing oil drizzled over couscous, tagines, fresh goat cheese, or mixed with almonds & honey into Amlou.",
-      "guestFaqDe": "Speiseöl vs. Kosmetiköl? Speiseöl wird aus gerösteten Kernen gepresst (nussiger Duft); Kosmetiköl aus ungerösteten Kernen.",
-      "guestFaqEn": "Culinary vs Cosmetic Argan Oil? Culinary argan kernels are toasted before pressing (giving nut flavor); cosmetic oil is pressed raw (virtually odorless)."
-    },
-    {
-      "id": "vinegar_sherry_gran_reserva",
-      "category": "oils_vinegars",
-      "nameEn": "Vinagre de Jerez Gran Reserva",
-      "nameDe": "Sherry-Essig Gran Reserva (DOP, 10+ Jahre)",
-      "subtitleEn": "Palomino wine vinegar aged over 10 years in American oak Sherry criaderas",
-      "subtitleDe": "Aus Palomino-Sherryweinen im Solera-System über 10 Jahre in amerikanischer Eiche gereift",
-      "imageUrl": "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=800&auto=format&fit=crop&q=80",
-      "origin": "Spain (Andalusia, Jerez)",
-      "isImport": true,
-      "abv": "0.0% ABV",
-      "tasteEn": "Intense acetic punch, mahogany wood, dried fig, toasted walnut, lingering balsamic warmth.",
-      "tasteDe": "Kraftvolle Weinessignote, edles Eichenholz, getrocknete Feigen, Walnuss und herbe Fülle.",
-      "scienceEn": "Acetobacter bacteria convert Sherry ethanol into acetic acid, subsequently aged in old Oloroso/Pedro Ximénez barrels through the Solera fractional blending method.",
-      "scienceDe": "Essigmutter wandelt Sherrywein in Essigsäure um; jahrelange Reifung im Solera-Fasssystem konzentriert Holzlaktone.",
-      "culinaryEn": "Drop by drop into gazpacho, tomato vinaigrettes, escabeche marinades, or reductions for game birds.",
-      "culinaryDe": "Tropfenweise in andalusisches Gazpacho, Vinaigrettes, Saucenreduktionen und zu Linsen.",
-      "faqEn": "What qualifies as Gran Reserva? Must be aged in wood for a minimum of 10 certified years in the Jerez triangle.",
-      "faqDe": "Was bedeutet Gran Reserva bei Sherry-Essig? Mindestens 10 Jahre zertifizierte Fassreife in andalusischen Soleras.",
-      "allergens": [
-        "Sulfites"
-      ],
-      "tags": [
-        "Vinegar",
-        "Jerez",
-        "Spain",
-        "Solera",
-        "Gazpacho"
-      ],
-      "tasteProfileDe": "Kraftvolle Weinessignote, edles Eichenholz, getrocknete Feigen, Walnuss und herbe Fülle.",
-      "tasteProfileEn": "Intense acetic punch, mahogany wood, dried fig, toasted walnut, lingering balsamic warmth.",
-      "scienceExplainedDe": "Essigmutter wandelt Sherrywein in Essigsäure um; jahrelange Reifung im Solera-Fasssystem konzentriert Holzlaktone.",
-      "scienceExplainedEn": "Acetobacter bacteria convert Sherry ethanol into acetic acid, subsequently aged in old Oloroso/Pedro Ximénez barrels through the Solera fractional blending method.",
-      "culinaryServingDe": "Tropfenweise in andalusisches Gazpacho, Vinaigrettes, Saucenreduktionen und zu Linsen.",
-      "culinaryServingEn": "Drop by drop into gazpacho, tomato vinaigrettes, escabeche marinades, or reductions for game birds.",
-      "guestFaqDe": "Was bedeutet Gran Reserva bei Sherry-Essig? Mindestens 10 Jahre zertifizierte Fassreife in andalusischen Soleras.",
-      "guestFaqEn": "What qualifies as Gran Reserva? Must be aged in wood for a minimum of 10 certified years in the Jerez triangle."
+      "inStock": true,
+      "stockQuantity": 5,
+      "storageLocation": "Zentrallager",
+      "isFavorite": false
     }
   ]
 }

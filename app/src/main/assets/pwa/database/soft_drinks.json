@@ -1,6 +1,6 @@
 {
   "category": "soft_drinks",
-  "count": 6,
+  "count": 19,
   "items": [
     {
       "id": "soft_sparkling_water",
@@ -30,15 +30,10 @@
         "CO2",
         "Minerals"
       ],
-      "isFavorite": false,
-      "tasteProfileDe": "Frisches Prickeln, belebende Säurespitze, mineralische Klarheit.",
-      "tasteProfileEn": "Crisp effervescence, clean mineral balance (calcium, magnesium, bicarbonate).",
-      "scienceExplainedDe": "Unter Druck gelöstes CO2 bildet schwache Kohlensäure (H2CO3). Der leicht saure pH-Wert und das Platzen der Gasbläschen stimulieren Rezeptoren auf der Zunge und signalisieren maximale Frische.",
-      "scienceExplainedEn": "CO2 injected under pressure reacts with water to form carbonic acid (CO2 + H2O <-> H2CO3), lowering pH slightly to ~4.5. On the tongue, bursting bubbles stimulate cold mechanoreceptors and the enzyme carbonic anhydrase.",
-      "culinaryServingDe": "Gekühlt bei 6-8°C serviert. Neutralisiert den Gaumen ideal zwischen Gängen.",
-      "culinaryServingEn": "Chilled at 6-8°C. Cleanses the palate between rich courses and wine tastings.",
-      "guestFaqDe": "Warum schmeckt Sprudel säuerlich? Weil gelöstes CO2 echte Kohlensäure (H2CO3) bildet und den pH-Wert absenkt.",
-      "guestFaqEn": "Why does sparkling water taste slightly sour? Carbonic acid is an actual acid (H2CO3) that slightly lowers the water's pH."
+      "inStock": true,
+      "stockQuantity": 5,
+      "storageLocation": "Zentrallager",
+      "isFavorite": false
     },
     {
       "id": "soft_cola",
@@ -68,15 +63,10 @@
         "Phosphoric",
         "SoftDrink"
       ],
-      "isFavorite": false,
-      "tasteProfileDe": "Karamell- und Vanillenoten, würziger Kräuterhintergrund, herber Säurebiss.",
-      "tasteProfileEn": "Sweet vanilla-caramel, spicy herbal undertone, sharp phosphoric bite.",
-      "scienceExplainedDe": "Phosphorsäure (H3PO4) liefert einen trockenen, säuerlichen Biss, der die hohe Zuckersüße bricht, ohne fruchtig zu schmecken. Kolanüsse liefern natürliches Koffein.",
-      "scienceExplainedEn": "Phosphoric acid (H3PO4) provides a dry, sharp bite that balances high sweetness without imparting fruity flavors like citric acid. Kola nuts provide caffeine and theobromine.",
-      "culinaryServingDe": "Klassisch im Cuba Libre mit Rum und Limette; oder für herzhafte BBQ-Glasuren.",
-      "culinaryServingEn": "Cuba Libre (with rum), Long Island Iced Tea, or BBQ marinades.",
-      "guestFaqDe": "Woher die dunkle Farbe? Von Zuckerkulör (E150d), durch kontrolliertes Erhitzen von Zucker.",
-      "guestFaqEn": "Why is cola brown? Caramel color (E150d), produced by heating carbohydrates."
+      "inStock": true,
+      "stockQuantity": 5,
+      "storageLocation": "Zentrallager",
+      "isFavorite": false
     },
     {
       "id": "soft_tonic_water",
@@ -97,7 +87,9 @@
       "culinaryDe": "Klassiker im Gin Tonic oder Trendgetränk Espresso Tonic mit Rosmarinzweig.",
       "faqEn": "Why is it bitter? Quinine is an intensely bitter alkaloid originally used to prevent malaria.",
       "faqDe": "Warum bitter? Chinin ist ein natürliches Bitteralkaloid, das historisch als Malariaprophylaxe diente.",
-      "allergens": [],
+      "allergens": [
+        "Contains Quinine (Chinin"
+      ],
       "tags": [
         "Tonic",
         "Quinine",
@@ -105,15 +97,10 @@
         "Mixer",
         "Fluorescence"
       ],
-      "isFavorite": false,
-      "tasteProfileDe": "Markant bittere Chininnote, balancierte Süße, frische Zitrusanklänge.",
-      "tasteProfileEn": "Distinct quinine bitterness, balanced crisp sweetness, lemon-citrus freshness.",
-      "scienceExplainedDe": "Chinin aus der Rinde des Chinarindenbaums erzeugt die Edle Bitterkeit. Unter UV-Licht (Schwarzlicht) fluoresziert Chinin leuchtend blau.",
-      "scienceExplainedEn": "Quinine from Cinchona bark binds to TAS2R bitter receptors. Under ultraviolet light (UV blacklight), quinine molecules fluoresce bright cyan blue.",
-      "culinaryServingDe": "Klassiker im Gin Tonic oder Trendgetränk Espresso Tonic mit Rosmarinzweig.",
-      "culinaryServingEn": "Gin & Tonic in a Copa glass or trendy Espresso Tonic.",
-      "guestFaqDe": "Warum bitter? Chinin ist ein natürliches Bitteralkaloid, das historisch als Malariaprophylaxe diente.",
-      "guestFaqEn": "Why is it bitter? Quinine is an intensely bitter alkaloid originally used to prevent malaria."
+      "inStock": true,
+      "stockQuantity": 5,
+      "storageLocation": "Zentrallager",
+      "isFavorite": false
     },
     {
       "id": "soft_bitter_lemon",
@@ -143,15 +130,10 @@
         "Quinine",
         "Mixer"
       ],
-      "isFavorite": false,
-      "tasteProfileDe": "Säuerlich-frische Zitrone, herb-ätherische Schalenöle, trockener Chinin-Nachhall.",
-      "tasteProfileEn": "Tart sour citrus, aromatic lemon essential oils, clean dry bitter finish.",
-      "scienceExplainedDe": "Verbindet Fruchtsäure, Schalenöle (Limonen) und Chinin zu einem erfrischend herben Dreiklang.",
-      "scienceExplainedEn": "Combines lemon juice (citric acid), cold-pressed flavedo peel oil (limonene), and quinine alkaloid, stimulating sour + bitter receptors simultaneously.",
-      "culinaryServingDe": "Im Vodka Lemon oder alkoholfrei mit frischer Minze auf Crushed Ice.",
-      "culinaryServingEn": "In Vodka Lemon or non-alcoholic aperitif on crushed ice with mint.",
-      "guestFaqDe": "Unterschied zu Zitronenlimonade? Bitter Lemon enthält herbes Chinin und ätherische Schalenöle statt nur Süße.",
-      "guestFaqEn": "How does it differ from lemonade? Bitter Lemon contains quinine and peel oils giving a dry, sophisticated bitterness."
+      "inStock": true,
+      "stockQuantity": 5,
+      "storageLocation": "Zentrallager",
+      "isFavorite": false
     },
     {
       "id": "soft_ginger_ale_beer",
@@ -181,15 +163,10 @@
         "MoscowMule",
         "SoftDrink"
       ],
-      "isFavorite": false,
-      "tasteProfileDe": "Ginger Ale: Mild, süffig. Ginger Beer: Kräftig scharf, naturtrüb, feuriger Ingwerbiss.",
-      "tasteProfileEn": "Ginger Ale: Mild sweet, gentle warmth. Ginger Beer: Fiery ginger spice, cloudy, peppery bite.",
-      "scienceExplainedDe": "Schärfe rührt von Gingerolen her. Ginger Ale ist eine klare Limonade; Ginger Beer wird traditionell gebraut, ist trüb und deutlich schärfer.",
-      "scienceExplainedEn": "Ginger's heat stems from gingerols. When heated, gingerols convert to shogaols (twice as pungent). Ginger beer is traditionally brewed and cloudy.",
-      "culinaryServingDe": "Ginger Beer zwingend im Moscow Mule (im Kupferbecher) und Dark 'n' Stormy.",
-      "culinaryServingEn": "Ginger Ale: Horse's Neck. Ginger Beer: Moscow Mule and Dark 'n' Stormy.",
-      "guestFaqDe": "Enthält Ginger Beer Alkohol? Handelsübliches Bar-Ginger-Beer ist alkoholfrei.",
-      "guestFaqEn": "Is Ginger Beer alcoholic? Commercial bar ginger beers are non-alcoholic (<0.5% ABV)."
+      "inStock": true,
+      "stockQuantity": 5,
+      "storageLocation": "Zentrallager",
+      "isFavorite": false
     },
     {
       "id": "soft_energy_drink",
@@ -210,22 +187,466 @@
       "culinaryDe": "Eiskalt serviert in der Nachtgastronomie.",
       "faqEn": "Does taurine come from bulls? No, commercial taurine is 100% synthetically synthesized in certified labs.",
       "faqDe": "Stammt Taurin aus Stieren? Nein, das Bar-Taurin wird rein synthetisch hergestellt und ist komplett vegan.",
-      "allergens": [],
+      "allergens": [
+        "High caffeine content (32mg/100ml"
+      ],
       "tags": [
         "Energy",
         "Caffeine",
         "Taurine",
         "Stimulant"
       ],
-      "isFavorite": false,
-      "tasteProfileDe": "Süß-säuerlich, Gummibärchen-Aroma, markante Zitrusfrische.",
-      "tasteProfileEn": "Sweet candy-tart profile, gummy bear aroma, citric acidity.",
-      "scienceExplainedDe": "Koffein (EU-Limit: 32mg/100ml) blockiert Müdigkeitsrezeptoren. Das enthaltene Taurin ist rein synthetisch und 100% vegan.",
-      "scienceExplainedEn": "Caffeine blocks adenosine receptors. Taurine stabilizes cell hydration. Commercial taurine is 100% synthetically produced and vegan.",
-      "culinaryServingDe": "Eiskalt serviert in der Nachtgastronomie.",
-      "culinaryServingEn": "Chilled over ice or in nightlife cocktails.",
-      "guestFaqDe": "Stammt Taurin aus Stieren? Nein, das Bar-Taurin wird rein synthetisch hergestellt und ist komplett vegan.",
-      "guestFaqEn": "Does taurine come from bulls? No, commercial taurine is 100% synthetically synthesized in certified labs."
+      "inStock": true,
+      "stockQuantity": 5,
+      "storageLocation": "Zentrallager",
+      "isFavorite": false
+    },
+    {
+      "id": "soft_apfelschorle",
+      "category": "soft_drinks",
+      "nameEn": "Natural Cloudy Apfelschorle (German Apple Spritzer)",
+      "nameDe": "Naturtrübe Apfelschorle (Das deutsche Nationalgetränk)",
+      "subtitleEn": "55% direct cloudy apple juice blended with sparkling mineral water: isotonic refresher",
+      "subtitleDe": "55–60% Direktsaft naturtrüb mit kohlensäurehaltigem Mineralwasser gemischt; isotonischer Durstlöscher",
+      "imageUrl": "https://images.unsplash.com/photo-1568644396922-5c3bfae12521?w=800&auto=format&fit=crop&q=80",
+      "origin": "Germany & Austria (Wirtshaus- & Biergarten-Kultur)",
+      "isImport": false,
+      "abv": "0.0% ABV",
+      "tasteEn": "Crisp, thirst-quenching, balanced apple sweetness, tingling effervescence, zero cloying sugar.",
+      "tasteDe": "Herrlich spritzig, feine Apfelsüße balanciert durch Kohlensäure und natürliche Apfelfruchtsäure.",
+      "scienceEn": "Apfelschorle is the undisputed staple of German gastronomy. Because its carbohydrate (sugar) and mineral concentration closely mirrors human blood serum (~280-300 mOsm/kg), a 50/50 blend of apple juice and mineral water is naturally isotonic: fluid, electrolytes (potassium, magnesium), and glucose are absorbed through the intestinal wall faster than pure water or pure juice.",
+      "scienceDe": "Der beliebteste alkoholfreie Gastro-Klassiker Deutschlands. Durch das Mischungsverhältnis von ca. 55% Saft und 45% Mineralwasser ist die Schorle von Natur aus ISOTONISCH: Die Osmolarität entspricht der des menschlichen Blutes, wodurch Flüssigkeit, Fruchtzucker und Mineralstoffe (Kalium, Magnesium) extrem schnell vom Körper aufgenommen werden.",
+      "culinaryEn": "Served chilled in a 0.4L or 0.5L glass in beer gardens, with hearty schnitzel, roast pork, or light lunches.",
+      "culinaryDe": "Im 0,4l- oder 0,5l-Glas frisch gezapft zum Wiener Schnitzel, deftigen Brotzeiten oder beim Sport serviert.",
+      "faqEn": "Why specify 'naturtrüb' (cloudy)? Cloudy juice is not clarified with gelatin or bentonite, retaining suspended apple pulp pectin and 4x higher polyphenol antioxidants.",
+      "faqDe": "Warum schmeckt naturtrüb besser? Weil naturtrüber Saft Pektine und Schwebstoffe enthält, die das volle Apfelaroma tragen und viermal mehr Antioxidantien liefern.",
+      "allergens": [
+        "None"
+      ],
+      "tags": [
+        "Apfelschorle",
+        "Isotonic",
+        "Germany",
+        "Biergarten",
+        "SoftDrink",
+        "Juice"
+      ],
+      "inStock": true,
+      "stockQuantity": 5,
+      "storageLocation": "Zentrallager",
+      "isFavorite": false
+    },
+    {
+      "id": "soft_mate_tea_soda",
+      "category": "soft_drinks",
+      "nameEn": "Sparkling Mate Soda (Club Mate Style)",
+      "nameDe": "Mate-Limonade (Kult-Erfrischungsgetränk mit Mate-Extrakt)",
+      "subtitleEn": "South American yerba mate infusion carbonated with sugar: sustained theobromine & caffeine energy",
+      "subtitleDe": "Aufguss aus gerösteten Yerba-Mate-Blättern, spritzig carbonisiert; anhaltender Koffein-Fokus",
+      "imageUrl": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=800&auto=format&fit=crop&q=80",
+      "origin": "Germany (Berlin Nightlife & Tech Culture) / South America (Ilex paraguariensis)",
+      "isImport": false,
+      "abv": "0.0% ABV",
+      "tasteEn": "Smoky, dry herbal tobacco notes, restrained sweetness, clean brisk astringency, refreshing effervescence.",
+      "tasteDe": "Rauchig-herb, trocken-kräuterig, wenig süß, belebend herb und erfrischend prickelnd.",
+      "scienceEn": "Unlike high-sugar colas or taurine energy drinks, mate soda relies on extract from the South American holly tree Ilex paraguariensis. Mate contains caffeine combined with theobromine and theophylline. This xanthine triad releases into the bloodstream more gradually, preventing the nervous crash associated with coffee while delivering crisp digestive refreshment.",
+      "scienceDe": "Kultgetränk der urbanen Szene und Clubkultur. Der Extrakt aus den Blättern der südamerikanischen Stechpalme (Yerba Mate) kombiniert Koffein mit Theobromin. Dieser Wirkstoffkomplex wird langsamer verstoffwechselt als Espresso, sorgt für wachen Fokus ohne Herzrasen und hat deutlich weniger Zucker als Colagetränke.",
+      "culinaryEn": "Served ice-cold directly from the glass bottle with a straw, or as 'Tschunk' mixed with dark rum and fresh lime.",
+      "culinaryDe": "Eiskalt aus der Flasche mit Strohhalm genossen; oder an der Bar als 'Tschunk' mit braunem Rum und Limette serviert.",
+      "faqEn": "Why does mate soda taste unusual on first sip? It has an intentionally dry, smoky herbal profile that grows on you after the second bottle, avoiding cloying sugar fatigue.",
+      "faqDe": "Warum schmeckt Mate beim ersten Schluck ungewohnt? Weil sie deutlich herber und rauchiger ist als süße Limonaden – genau das macht ihren erfrischenden Kultcharakter aus.",
+      "allergens": [
+        "Caffeine (20mg/100ml"
+      ],
+      "tags": [
+        "Mate",
+        "YerbaMate",
+        "ClubMate",
+        "Caffeine",
+        "HerbalSoda",
+        "Nightlife"
+      ],
+      "inStock": true,
+      "stockQuantity": 5,
+      "storageLocation": "Zentrallager",
+      "isFavorite": false
+    },
+    {
+      "id": "soft_san_pellegrino_aranciata_chinotto",
+      "category": "soft_drinks",
+      "nameEn": "Italian Bitter Citrus Sodas: Chinotto & Aranciata Amara",
+      "nameDe": "Italienische Bitter-Limonaden: Chinotto & Aranciata Amara",
+      "subtitleEn": "Citrus myrtifolia bitter orange infusion; deep amber color with complex botanical herbal aperitivo notes",
+      "subtitleDe": "Aus der bitteren Myrtenblättrigen Orange (Citrus myrtifolia); bernsteinfarben & herb-süß",
+      "imageUrl": "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=800&auto=format&fit=crop&q=80",
+      "origin": "Italy (Liguria: Savona / Sicily - Slow Food Presidio)",
+      "isImport": true,
+      "abv": "0.0% ABV",
+      "tasteEn": "Dark herbal cola look, complex bittersweet orange peel, gentian root bitterness, aromatic spice depth.",
+      "tasteDe": "Dunkelbraun im Glas, herb-süß wie ein alkoholfreier Amaro, Orangenschale, Rhabarberwurzel, edle Bitternote.",
+      "scienceEn": "Chinotto is crafted from the bitter, golf-ball-sized fruit of the myrtle-leaved orange tree (Citrus aurantium var. myrtifolia), grown along the Riviera of Savona. Inedible raw due to extreme bitterness, its peel essential oils and bitter naringin flavonoids are extracted and blended with caramel to produce Italy's beloved non-alcoholic aperitivo.",
+      "scienceDe": "Das italienische Nationalgetränk wird aus der kleinen, extrem bitteren Frucht der Chinotto-Pflanze (Riviera di Ponente) gewonnen. Das enthaltene Naringin liefert den herben Aperitivo-Geschmack, der den Appetit anregt und Magenbitter-Aromen alkoholfrei erlebbar macht.",
+      "culinaryEn": "Served over plenty of ice with a fresh orange slice and a sprig of rosemary as an Italian non-alcoholic aperitivo.",
+      "culinaryDe": "Im Tumbler auf viel Eis mit einer Orangenscheibe und einem Zweig Rosmarin als eleganter alkoholfreier Aperitif serviert.",
+      "faqEn": "Is Chinotto a cola? No, although dark brown, Chinotto contains zero cola nuts; it is an authentic bitter-orange herbal soda.",
+      "faqDe": "Ist Chinotto eine Cola? Nein! Trotz dunkler Farbe enthält Chinotto keine Kolanuss, sondern ist eine rein mediterrane Bitterorangen-Kräuterlimonade.",
+      "allergens": [
+        "None"
+      ],
+      "tags": [
+        "Chinotto",
+        "Aranciata",
+        "Italy",
+        "Aperitivo",
+        "BitterSoda",
+        "SlowFood"
+      ],
+      "inStock": true,
+      "stockQuantity": 5,
+      "storageLocation": "Zentrallager",
+      "isFavorite": false
+    },
+    {
+      "id": "soft_ginger_beer_spicy",
+      "category": "soft_drinks",
+      "nameEn": "Spicy Craft Ginger Beer (Brewed & Fermented)",
+      "nameDe": "Spicy Ginger Beer (Scharfe Ingwer-Limonade für Moscow Mule)",
+      "subtitleEn": "Brewed ginger root, chili capsicum kick & citric acidity: the indispensable cocktail mixer",
+      "subtitleDe": "Echte Ingwerwurzel, naturtrüb, kräftiges Gingerol & prickelnde Schärfe für Bar-Klassiker",
+      "imageUrl": "https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=800&auto=format&fit=crop&q=80",
+      "origin": "England (18th Century Ginger Beer Tradition) / Jamaica",
+      "isImport": false,
+      "abv": "0.0% ABV",
+      "tasteEn": "Explosive fiery ginger heat in throat, refreshing citrus bite, cloudy natural body, long warming glow.",
+      "tasteDe": "Feurige Ingwerschärfe am Gaumen, erfrischende Zitronensäure, trüb, wärmender Abgang.",
+      "scienceEn": "Ginger Ale vs. Ginger Beer: Ginger Ale is clear, sweet, and lightly flavored with ginger syrup; Ginger Beer is cloudy, made with boiled or fermented whole ginger root. The active chemical compound is GINGEROL (which transforms into fiery SHOGAOL when heated), activating TRPV1 heat receptors in the throat and cutting through spirit base liquids.",
+      "scienceDe": "Unterschied zu Ginger Ale: Ginger Ale ist klar, süß und mild. Echtes Ginger Beer ist trüb, scharf und wird aus echter Ingwerwurzel gebraut. Das enthaltene Gingerol aktiviert Wärmerezeptoren im Rachen – unverzichtbar, um Spirituosen an der Bar Struktur zu verleihen.",
+      "culinaryEn": "The essential mixer for Moscow Mule (vodka, lime, ginger beer in copper mug) and Dark 'n Stormy (black rum).",
+      "culinaryDe": "Im Kupferbecher für den originalen Moscow Mule mit Vodka und Limette, oder Dark 'n Stormy mit Rum.",
+      "faqEn": "Does Ginger Beer contain beer/alcohol? No: modern commercial Ginger Beer is a 100% non-alcoholic carbonated soft drink.",
+      "faqDe": "Enthält Ginger Beer Alkohol? Nein! Trotz des Namens 'Beer' handelt es sich um eine alkoholfreie Limonade (0.0% Vol).",
+      "allergens": [
+        "None"
+      ],
+      "tags": [
+        "GingerBeer",
+        "MoscowMule",
+        "CocktailMixer",
+        "Gingerol",
+        "BarStandard"
+      ],
+      "inStock": true,
+      "stockQuantity": 5,
+      "storageLocation": "Zentrallager",
+      "isFavorite": false
+    },
+    {
+      "id": "soft_fassbrause_tradition",
+      "category": "soft_drinks",
+      "nameEn": "Traditional Berlin Fassbrause",
+      "nameDe": "Traditionelle Berliner Fassbrause",
+      "subtitleEn": "Brewed malt extract, apple essence & liquorice root: Berlin's historical alcohol-free keg specialty",
+      "subtitleDe": "1908 von Ludwig Scholvien erfunden: Malzextrakt, Apfelnote & Süßholz, goldgelb & alkoholfrei",
+      "imageUrl": "https://images.unsplash.com/photo-1527661591475-527312dd65f5?w=800&auto=format&fit=crop&q=80",
+      "origin": "Germany (Berlin / Rixdorf 1908)",
+      "isImport": false,
+      "abv": "0.0% ABV",
+      "tasteEn": "Malty bread sweetness, crisp apple cider aroma, subtle liquorice herbal depth, beer-like golden color.",
+      "tasteDe": "Malzig-würzig, fruchtige Apfelnote, feines Süßholz-Kräuteraroma, goldgelb wie Bier mit Schaumkrone.",
+      "scienceEn": "Invented in Berlin in 1908 by chemist Ludwig Scholvien as an alcohol-free beverage for his son that looked and foamed like beer. The foundation is real barley malt extract, enriched with natural apple essence and liquorice root (glycyrrhizin), creating a thirst-quencher with genuine brewing character without alcohol fermentation.",
+      "scienceDe": "1908 vom Berliner Chemiker Ludwig Scholvien erfunden, damit sein Sohn ein Getränk trinken konnte, das wie Bier aussieht. Die Basis ist echter Gerstenmalzextrakt, verfeinert mit Süßholzwurzel und Apfelessenz – herb, malzig, goldgelb mit schöner Schaumkrone und 100% alkoholfrei.",
+      "culinaryEn": "Drafted fresh from the tap ('vom Fass') in Berlin bistros, paired with Currywurst or summer beer garden fare.",
+      "culinaryDe": "Frisch vom Zapfhahn im Berliner Traditionslokal gezapft; der perfekte alkoholfreie Begleiter zur Currywurst.",
+      "faqEn": "Why is it called 'Fassbrause'? Because it was historically delivered and tapped exclusively from wooden beer kegs ('Fass') by brewery wagons.",
+      "faqDe": "Warum heißt es Fassbrause? Weil das Getränk historisch von Brauereien im Bierfass angeliefert und wie Bier frisch gezapft wurde.",
+      "allergens": [
+        "Cereals containing Gluten (Barley malt"
+      ],
+      "tags": [
+        "Fassbrause",
+        "Berlin",
+        "Malt",
+        "Tradition",
+        "NonAlcoholic"
+      ],
+      "inStock": true,
+      "stockQuantity": 5,
+      "storageLocation": "Zentrallager",
+      "isFavorite": false
+    },
+    {
+      "id": "soft_spezi_cola_orange",
+      "category": "soft_drinks",
+      "nameEn": "Spezi / Cola-Orange Mix",
+      "nameDe": "Spezi (Kultiges Cola-Orange Mischgetränk)",
+      "subtitleEn": "German pub classic: Dark cola infused with real orange juice & citrus peel oils",
+      "subtitleDe": "Der Wirtshaus- & Biergartenliebling: Cola mit echtem Orangensaft & Mandarinenschalenöl",
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/Spezi_logo.svg/330px-Spezi_logo.svg.png",
+      "origin": "Germany (Bavaria / Riegele Brewery Augsburg 1956)",
+      "isImport": false,
+      "abv": "0.0% ABV",
+      "tasteEn": "Sweet caramel cola warmth cutting into juicy fruity orange acidity; highly refreshing.",
+      "tasteDe": "Süffige Karamell-Cola, abgerundet durch fruchtige Orangensäure und sonnige Zitrusfrische.",
+      "scienceEn": "Originating in 1950s Bavarian pubs where barkeeps mixed leftover cola with orange soda. The combination of phosphoric acid (cola) and citric/ascorbic acid (orange) creates a dynamic dual-acid curve that makes the beverage far more refreshing and thirst-quenching than either drink alone.",
+      "scienceDe": "In den 1950er Jahren in bayerischen Wirtshäusern erfunden, wo Wirte Cola und Orangenlimonade mischten. Die Kombination aus Phosphorsäure (Cola) und Zitronensäure (Orange) erzeugt ein spritziges Säurespiel, das die Süße perfekt puffert und das Getränk zum beliebtesten alkoholfreien Wirtshausgetränk macht.",
+      "culinaryEn": "Served chilled in a tall 0.5L glass or classic stubby bottle with an orange slice.",
+      "culinaryDe": "Eiskalt im 0,5l-Glas oder der typischen 0,5l-Bügel- oder Kronkorkenflasche mit Orangenscheibe serviert.",
+      "faqEn": "Is Spezi a protected trademark? Yes, 'Spezi' is a legally protected brand by Brauhaus Riegele in Augsburg, licensed to select breweries.",
+      "faqDe": "Ist Spezi ein geschützter Markenname? Ja, das Original 'Spezi' ist ein geschütztes Markenzeichen des Brauhauses Riegele in Augsburg.",
+      "allergens": [
+        "Caffeine"
+      ],
+      "tags": [
+        "Spezi",
+        "ColaOrange",
+        "Bavaria",
+        "Wirtshaus",
+        "SoftDrink"
+      ],
+      "inStock": true,
+      "stockQuantity": 5,
+      "storageLocation": "Zentrallager",
+      "isFavorite": false
+    },
+    {
+      "id": "soft_club_soda_table",
+      "category": "soft_drinks",
+      "nameEn": "Club Soda (Highball Table Soda)",
+      "nameDe": "Club Soda (Spritziges Sodawasser für Highballs)",
+      "subtitleEn": "Purified carbonated water enriched with sodium bicarbonate & mineral salts; the backbone of whiskey highballs",
+      "subtitleDe": "Mit Natron & Mineralsalzen angereichertes Tafelwasser; kräftige Kohlensäure für Whisky Highballs & Spritzer",
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/35/President%27s_Choice_Club_Soda.jpg/330px-President%27s_Choice_Club_Soda.jpg",
+      "origin": "Ireland (Cantrell & Cochrane 1877) / Global Bar Standard",
+      "isImport": false,
+      "abv": "0.0% ABV",
+      "tasteEn": "Clean, intensely effervescent, delicate alkaline mineral roundness, zero sugar.",
+      "tasteDe": "Ultra-prickelnd, neutrale mineralische Frische, leichter Natron-Schmelz, völlig zuckerfrei.",
+      "scienceEn": "Unlike plain seltzer or natural mineral water, Club Soda has added alkaline mineral salts (especially sodium bicarbonate). These salts neutralize the harsh acidity of pure carbonic acid and soften the bite of high-proof whiskey or Campari in Highballs without adding flavors.",
+      "scienceDe": "Im Unterschied zu normalem Mineralwasser werden Club Soda gezielt alkalische Mineralsalze (Natron/Kalium) zugesetzt. Das puffert den Säurebiss der Kohlensäure ab und bindet sich samtig mit hochprozentigen Spirituosen im klassischen Whisky Soda oder Campari Soda.",
+      "culinaryEn": "Highballs, Whiskey Soda, Campari Soda, Aperol Spritz, Wine Spritzers (Weinschorle).",
+      "culinaryDe": "Klassiker für Highballs, Whisky Soda, Campari Soda, Aperol Spritz und erfrischende Weinschorlen.",
+      "faqEn": "Seltzer vs. Club Soda? Seltzer is just carbonated tap water; Club Soda contains added mineral salts for a silky mouthfeel.",
+      "faqDe": "Unterschied Seltzer zu Club Soda? Seltzer ist reines kohlensäurehaltiges Wasser; Club Soda enthält Natriumsalze für seidigen Glanz an der Bar.",
+      "allergens": [
+        "None"
+      ],
+      "tags": [
+        "ClubSoda",
+        "Highball",
+        "WhiskeySoda",
+        "Mixer",
+        "BarStandard"
+      ],
+      "inStock": true,
+      "stockQuantity": 5,
+      "storageLocation": "Zentrallager",
+      "isFavorite": false
+    },
+    {
+      "id": "soft_zitronenlimonade",
+      "category": "soft_drinks",
+      "nameEn": "Classic Clear Lemonade (Zitronenlimonade)",
+      "nameDe": "Klassische Zitronenlimonade (Klare Limonade / Gazose)",
+      "subtitleEn": "Crisp, effervescent lemon soda with citric acidity and natural cold-pressed lemon oils",
+      "subtitleDe": "Kristallklar, prickelnde Kohlensäure, sonnige Zitronenöle; der unverzichtbare Mixer für Radler & Shandy",
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/10/Lemonade_-_27682817724.jpg/330px-Lemonade_-_27682817724.jpg",
+      "origin": "Europe (Traditional Gazose / Lemonade)",
+      "isImport": false,
+      "abv": "0.0% ABV",
+      "tasteEn": "Brisk, bright citrus sweetness, zesty lemon fragrance, clean thirst-quenching finish.",
+      "tasteDe": "Spritzig-süß, frisches Zitrusaroma, belebende Säure, glasklar und durstlöschend.",
+      "scienceEn": "The secret of quality clear lemonade is cold-pressed lemon peel oil (rich in limonene and citral). When dissolved in carbonated sugar water, the volatile terpenes vaporize as bubbles burst on the tongue, creating an immediate perception of freshly sliced lemons.",
+      "scienceDe": "Hochwertige Limonade nutzt ätherisches Zitronenöl aus der Fruchtschale. Beim Aufsteigen der Kohlensäurebläschen werden die Duftstoffe freigesetzt und signalisieren dem Geruchssinn pure Frische. Unverzichtbar für Radler (Bier + Limo) und Panaché.",
+      "culinaryEn": "Pure on ice with a lemon slice, or 50/50 mixed with draft lager beer as Radler/Alsterwasser.",
+      "culinaryDe": "Pur auf Eiswürfeln mit Zitronenscheibe; oder im Verhältnis 1:1 mit hellem Bier zum Radler / Alsterwasser gemischt.",
+      "faqEn": "Why is clear lemonade used for Radler? Its bright citrus notes complement the mild hops and malt sweetness of German helles lager.",
+      "faqDe": "Warum klare Limo für Radler? Sie harmoniert perfekt mit den Malz- und Hopfennoten des Bieres ohne Trübung.",
+      "allergens": [
+        "None"
+      ],
+      "tags": [
+        "Lemonade",
+        "Radler",
+        "Citrus",
+        "Biergarten",
+        "SoftDrink"
+      ],
+      "inStock": true,
+      "stockQuantity": 5,
+      "storageLocation": "Zentrallager",
+      "isFavorite": false
+    },
+    {
+      "id": "soft_eistee_pfirsich_zitrone",
+      "category": "soft_drinks",
+      "nameEn": "Artisan Brewed Iced Tea (Peach & Lemon)",
+      "nameDe": "Hausgemachter Gastronomie-Eistee (Pfirsich & Zitrone)",
+      "subtitleEn": "Freshly brewed black tea shock-chilled over ice with peach nectar, lemon juice & mint",
+      "subtitleDe": "Frisch aufgebrühter Schwarztee, schockgekühlt auf Eis mit Pfirsichnektar, Zitrone & Minze",
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Iced_Tea_from_flickr.jpg/330px-Iced_Tea_from_flickr.jpg",
+      "origin": "USA (1904 St. Louis World's Fair / Richard Blechynden) & Modern European Cafés",
+      "isImport": false,
+      "abv": "0.0% ABV",
+      "tasteEn": "Velvety peach fruitiness, brisk black tea tannins, refreshing citrus zing, soothing herbal mint finish.",
+      "tasteDe": "Fruchtige Pfirsichsüße, feine herbe Teegerbstoffe, spritzige Zitrone und kühle Minzfrische.",
+      "scienceEn": "To prevent black tea from clouding ('tea creaming') when cooled, hot concentrated tea must be poured directly over generous amounts of ice. Rapid cooling prevents polyphenols and caffeine from coalescing into an opaque milky precipitate, maintaining crystal-clear amber clarity.",
+      "scienceDe": "Das Geheimnis glasklaren Eistees: Konzentrierter heißer Tee muss direkt über reichlich Eiswürfel geschockt werden! Durch das schlagartige Kühlen flockt der Komplex aus Theaflavinen und Koffein nicht aus ('Teetrübung'), sondern bleibt glänzend bernsteinfarben.",
+      "culinaryEn": "Served in a 0.4L carafon or highball glass with fresh peach slices, lemon wheels, and a mint sprig.",
+      "culinaryDe": "Im großen Glas mit Crushed Ice, frischen Pfirsichspalten, Zitronenrädchen und Minzzweig serviert.",
+      "faqEn": "Why does homemade iced tea taste better than commercial bottled tea? Freshly brewed tea contains vibrant aroma terpenes and catechins rather than artificial flavor powders.",
+      "faqDe": "Warum schmeckt hausgemachter Eistee besser? Weil echter gebrühter Tee frische Gerbstoffe und Polyphenole liefert statt chemischer Aromapulver.",
+      "allergens": [
+        "Caffeine"
+      ],
+      "tags": [
+        "IcedTea",
+        "Peach",
+        "BlackTea",
+        "Refreshing",
+        "SummerDrink"
+      ],
+      "inStock": true,
+      "stockQuantity": 5,
+      "storageLocation": "Zentrallager",
+      "isFavorite": false
+    },
+    {
+      "id": "soft_almdudler_kraeuter",
+      "category": "soft_drinks",
+      "nameEn": "Almdudler Alpine Herb Lemonade",
+      "nameDe": "Almdudler (Österreichische Alpenkräuter-Limonade)",
+      "subtitleEn": "32 natural Alpine herbs (coneflower, sage, lemon balm) matured in wooden vats; Austrian cult soda",
+      "subtitleDe": "32 natürliche Alpenkräuter (Echinacea, Salbei, Melisse, Holunder) monatelang gereift; der Alpen-Kult",
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/32/Almdudlerflaschen.jpg/330px-Almdudlerflaschen.jpg",
+      "origin": "Austria (Vienna / Erwin Klein 1957)",
+      "isImport": true,
+      "abv": "0.0% ABV",
+      "tasteEn": "Sweet floral meadow aroma, cooling sage and lemon balm, elderflower notes, sparkling refreshing effervescence.",
+      "tasteDe": "Blumig-würzig nach Alpenwiese, zarter Salbei, Melisse und Holunderblüte, spritzig und nicht zu süß.",
+      "scienceEn": "Created in Vienna in 1957. The secret extract contains 32 wild Alpine herbs dried and macerated in wooden vats for several months. High levels of rosmarinic acid (from sage and balm) give the beverage its distinctive botanical warmth that pairs effortlessly with savory Alpine mountain foods.",
+      "scienceDe": "1957 von Erwin Klein in Wien kreiert: Der Extrakt aus 32 wilden Alpenkräutern reift monatelang im Holzfass. Die ätherischen Öle von Salbei, Melisse und Enzian verleihen der Limonade ihre legendäre würzige Frische, die in Österreich Kultstatus genießt.",
+      "culinaryEn": "Pur on ice in mountain ski huts, or mixed 50/50 with white wine as 'Almspritzer' (Kräuterweinschorle).",
+      "culinaryDe": "Pur auf Eis auf der Berghütte; oder im Verhältnis 1:1 mit trockenem Grüner Veltliner als 'Almspritzer' serviert.",
+      "faqEn": "What does 'Almdudler' mean? Derived from the Viennese dialect phrase 'auf der Alm dudeln' (yodeling on the mountain meadow).",
+      "faqDe": "Was bedeutet der Name Almdudler? Er leitet sich von der Wiener Redensart 'auf der Alm dudeln' (jodeln) ab.",
+      "allergens": [
+        "None"
+      ],
+      "tags": [
+        "Almdudler",
+        "Austria",
+        "HerbalSoda",
+        "Alpine",
+        "SkiHut"
+      ],
+      "inStock": true,
+      "stockQuantity": 5,
+      "storageLocation": "Zentrallager",
+      "isFavorite": false
+    },
+    {
+      "id": "soft_kombucha_fermented",
+      "category": "soft_drinks",
+      "nameEn": "Raw Organic Kombucha (Live Cultured Tea)",
+      "nameDe": "Bio-Kombucha (Fermentierter Bio-Tee mit lebenden Kulturen)",
+      "subtitleEn": "Symbiotic culture of bacteria and yeast (SCOBY) fermenting green tea into a sparkling probiotic tonic",
+      "subtitleDe": "Fermentation von Grün- und Schwarztee mit der SCOBY-Kultur; naturtrüb, perlend, reich an organischen Säuren",
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/48/Kombucha_Mature.jpg/330px-Kombucha_Mature.jpg",
+      "origin": "East Asia (Northeast China / Qin Dynasty 221 BC) & Modern Wellness Gastronomy",
+      "isImport": false,
+      "abv": "0.0% ABV",
+      "tasteEn": "Tangy, tart cider-like effervescence, delicate fruit vinegar notes, crisp lactic finish, refreshing probiotic zing.",
+      "tasteDe": "Spritzig-feinsäuerlich wie junger Apfelwein, hefig-fruchtig, erfrischend perlend, belebende Tiefe.",
+      "scienceEn": "Kombucha is brewed by introducing a SCOBY (Symbiotic Culture of Bacteria and Yeast) to sweetened tea. Yeasts break sucrose down into ethanol and CO2; Acetobacter bacteria immediately oxidize the ethanol into acetic acid, gluconic acid, and glucuronic acid. This creates natural effervescence and low pH (~3.0) with negligible residual alcohol (<0.5%).",
+      "scienceDe": "Kombucha entsteht durch Fermentation mit dem SCOBY (Pilzkultur aus Hefen und Essigsäurebakterien). Die Hefen wandeln Zucker um, die Bakterien verstoffwechseln dies sofort in wertvolle Glukonsäure und Essigsäure. Das Getränk prickelt von Natur aus und schmeckt angenehm säuerlich-fruchtig.",
+      "culinaryEn": "Served chilled in a wine glass with a thin slice of fresh ginger or dehydrated orange wheel.",
+      "culinaryDe": "Gekühlt im Weißweinglas serviert mit einer dünnen Ingwerscheibe als alkoholfreie Speisenbegleitung.",
+      "faqEn": "Does Kombucha contain live bacteria? Yes, authentic raw unpasteurized kombucha contains billions of beneficial lactic and acetic acid bacteria.",
+      "faqDe": "Enthält Kombucha lebende Bakterien? Echter unpasteurisierter Gastro-Kombucha enthält aktive lebende Mikroorganismen, die gut für die Darmflora sind.",
+      "allergens": [
+        "None"
+      ],
+      "tags": [
+        "Kombucha",
+        "Fermentation",
+        "SCOBY",
+        "Probiotic",
+        "Wellness",
+        "Superfood"
+      ],
+      "inStock": true,
+      "stockQuantity": 5,
+      "storageLocation": "Zentrallager",
+      "isFavorite": false
+    },
+    {
+      "id": "soft_cranberry_saft",
+      "category": "soft_drinks",
+      "nameEn": "Cranberry Nectar (Bar & Lounge Mixer)",
+      "nameDe": "Cranberry-Nektar (Herbe Moosbeere für Bar & Lounge)",
+      "subtitleEn": "North American large cranberries (Vaccinium macrocarpon) balanced with cane sugar; essential for Cosmopolitans",
+      "subtitleDe": "Große amerikanische Moosbeere mit herb-saurer Fruchtnote; der unverzichtbare rote Bar-Mixer",
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/59/Cranberry_juice_in_a_cup.jpg/330px-Cranberry_juice_in_a_cup.jpg",
+      "origin": "North America (New England / Massachusetts & Wisconsin)",
+      "isImport": true,
+      "abv": "0.0% ABV",
+      "tasteEn": "Crisp, intensely tart astringency, ruby red color, balanced sweet-tart berry finish.",
+      "tasteDe": "Herb-säuerlich, herrlicher Tanninbiss, tief rubinrot im Glas, erfrischend adstringierend.",
+      "scienceEn": "Raw cranberries contain exceptionally high concentrations of quinic acid, malic acid, and proanthocyanidins, making 100% pure juice almost undrinkably sour (pH ~2.5). In gastronomy, it is prepared as a nectar (~30% juice + sugar): the sugar tempers the tartness while preserving the dry, puckering astringency that gives cocktails structure.",
+      "scienceDe": "Cranberries enthalten extrem viel Chinasäure und herbe Gerbstoffe. Als Nektar (ca. 30% Saft) balanciert, schneidet die feine Säure perfekt durch Wodka und Fruchtliköre und schenkt Cocktails wie dem Cosmopolitan oder Sex on the Beach ihre brillante pink-rote Farbe.",
+      "culinaryEn": "Cosmopolitan (vodka, triple sec, lime, cranberry), Vodka Cranberry, or mixed with soda as a refreshing spritzer.",
+      "culinaryDe": "Klassiker im Cosmopolitan, Vodka Cranberry oder mit Sodawasser als herbe alkoholfreie Schorle.",
+      "faqEn": "Cranberry vs. German Preiselbeere? They are close relatives, but Cranberries (Vaccinium macrocarpon) are significantly larger and firmer than Alpine lingonberries.",
+      "faqDe": "Unterschied Cranberry zu Preiselbeere? Sie sind botanisch verwandt, aber die amerikanische Cranberry ist dreimal so groß und saurer als die Preiselbeere.",
+      "allergens": [
+        "None"
+      ],
+      "tags": [
+        "Cranberry",
+        "CocktailMixer",
+        "Cosmopolitan",
+        "Tart",
+        "BarStandard"
+      ],
+      "inStock": true,
+      "stockQuantity": 5,
+      "storageLocation": "Zentrallager",
+      "isFavorite": false
+    },
+    {
+      "id": "soft_tomatensaft_spicy",
+      "category": "soft_drinks",
+      "nameEn": "Seasoned Tomato Juice (Virgin Mary Style)",
+      "nameDe": "Gewürzter Tomatensaft (Gastro-Ikone mit Pfeffer, Tabasco & Zitrone)",
+      "subtitleEn": "Thick umami-rich sun-ripened tomato puree seasoned with celery salt, black pepper, Tabasco & fresh lemon",
+      "subtitleDe": "Dickflüssiger Tomatensaft gewürzt mit Selleriesalz, Tellicherry-Pfeffer, Tabasco & Zitrone; die Brunch- & Flugzeug-Ikone",
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/Tomato_juice_316744.jpg/330px-Tomato_juice_316744.jpg",
+      "origin": "International Aviation & Grand Hotel Tradition",
+      "isImport": false,
+      "abv": "0.0% ABV",
+      "tasteEn": "Thick velvety savory umami, spicy peppery kick, refreshing citrus acidity, warming chili tingle.",
+      "tasteDe": "Sämig, intensiv herzhaftes Tomaten-Umami, pikante Pfeffer- und Tabascoschärfe, abgerundet durch Zitrone.",
+      "scienceEn": "Tomatoes are packed with natural free glutamates, creating intense umami. In airplane cabins or dry air environments, olfactory sensitivity to salt and sugar drops by 30%, whereas umami perception remains sharp—making spiced tomato juice the most craved beverage during flights and brunch services.",
+      "scienceDe": "Tomaten sind reich an natürlichem Glutamat und Lycopin. Wissenschaftlich erwiesen: Bei niedrigem Luftdruck (Flugzeug) oder vor dem Essen schmeckt Umami besonders intensiv, weshalb gewürzter Tomatensaft der beliebteste herzhafte Aperitif der Gastronomie ist.",
+      "culinaryEn": "Served in a tumbler over ice cubes with a fresh celery stalk for stirring and a lemon wedge.",
+      "culinaryDe": "Im Tumbler auf Eiswürfeln serviert mit einer Staudenselleriestange zum Umrühren und einer Zitronenspalte.",
+      "faqEn": "Why do so many people drink tomato juice on flights? Lower cabin pressure mutes sweet tastes but enhances umami receptor perception on the tongue.",
+      "faqDe": "Warum trinken so viele Tomatensaft im Flugzeug? Weil der Kabinendruck die Süß-Wahrnehmung dämpft, aber den herzhaften Umami-Geschmack von Tomaten hervorhebt.",
+      "allergens": [
+        "Celery (Sellerie"
+      ],
+      "tags": [
+        "TomatoJuice",
+        "VirginMary",
+        "Umami",
+        "Brunch",
+        "Aviation",
+        "Savory"
+      ],
+      "inStock": true,
+      "stockQuantity": 5,
+      "storageLocation": "Zentrallager",
+      "isFavorite": false
     }
   ]
 }

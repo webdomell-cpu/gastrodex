@@ -26,6 +26,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowForward
 import androidx.compose.material.icons.filled.Coffee
+import androidx.compose.material.icons.filled.GridView
 import androidx.compose.material.icons.filled.DesignServices
 import androidx.compose.material.icons.filled.Kitchen
 import androidx.compose.material.icons.filled.LocalBar
@@ -211,7 +212,7 @@ fun HomeScreen(
 
                 Spacer(modifier = Modifier.height(8.dp))
 
-                // Row 3
+                // Row 3 (Completes the 3x3 symmetric square grid)
                 Row(
                     modifier = Modifier.fillMaxWidth(),
                     horizontalArrangement = Arrangement.spacedBy(8.dp)
@@ -226,6 +227,15 @@ fun HomeScreen(
                         testTag = "home_hub_quiz"
                     )
                     HomeCompactNavCard(
+                        title = if (isDe) "Kategorien" else "Categories",
+                        subtitle = if (isDe) "24 Bereiche" else "24 Hubs",
+                        icon = Icons.Default.GridView,
+                        color = Color(0xFF558B2F),
+                        onClick = { onNavigateToTab(NavTab.CATALOG) },
+                        modifier = Modifier.weight(1f),
+                        testTag = "home_hub_categories"
+                    )
+                    HomeCompactNavCard(
                         title = if (isDe) "Rezepte" else "Recipes",
                         subtitle = if (isDe) "In Vorb." else "Prep",
                         icon = Icons.Default.Kitchen,
@@ -234,7 +244,6 @@ fun HomeScreen(
                         modifier = Modifier.weight(1f),
                         testTag = "home_hub_recipes"
                     )
-                    Spacer(modifier = Modifier.weight(1f))
                 }
             }
         }

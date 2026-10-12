@@ -1,6 +1,6 @@
 {
   "category": "pasta_rice",
-  "count": 14,
+  "count": 22,
   "items": [
     {
       "id": "pasta_spaghetti_bronze",
@@ -9,7 +9,7 @@
       "nameDe": "Spaghetti (Lange Pasta & Bronzedüsen)",
       "subtitleEn": "Long cylindrical strands, extruded through bronze dies for chalky, rough sauce adhesion",
       "subtitleDe": "Zylindrisch, Bronze-rau (trafilata al bronzo); saugt leichte bis mittelschwere Saucen auf",
-      "imageUrl": "https://images.unsplash.com/photo-1551183053-bf91a1d81141?w=800&auto=format&fit=crop&q=80",
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/92/Spaghettoni.jpg/330px-Spaghettoni.jpg",
       "origin": "Italy (Campania: Gragnano PGI, Puglia, Abruzzo)",
       "isImport": false,
       "abv": "0.0% ABV",
@@ -21,7 +21,9 @@
       "culinaryDe": "Klassiker für Carbonara, Aglio Olio e Peperoncino, Sugo di Pomodoro und Spaghetti alle Vongole.",
       "faqEn": "Why does cooking pasta water look cloudy? Bronze-die pasta sheds porous surface starch into the water, which cooks transform into silky emulsified pasta sauces.",
       "faqDe": "Warum ist das Nudelwasser trüb? Weil die raue Bronze-Pasta Stärke abgibt. Ein Schöpfer dieses stärkehaltigen Wassers bindet mit Butter oder Öl die Sauce perfekt ab!",
-      "allergens": [],
+      "allergens": [
+        "Cereals containing Gluten (Wheat"
+      ],
       "tags": [
         "Pasta",
         "Spaghetti",
@@ -30,15 +32,10 @@
         "AlDente",
         "Italian"
       ],
-      "isFavorite": false,
-      "tasteProfileDe": "Perfekter federnder Biss (Al dente), nussiger Getreidegeschmack, verbindet sich homogen mit Öl und Emulsionen.",
-      "tasteProfileEn": "Firm chewy bite (al dente), nutty toasted wheat grain flavor, holds emulsion perfectly.",
-      "scienceExplainedDe": "Traditionelle Bronze-Düsen reißen die Nudeloberfläche mikroskopisch rau und kreideweiß auf. Dadurch haftet die Sauce an der Nudel, statt auf den Teller abzugleiten. Ein Schöpflöffel des stärkehaltigen Kochwassers bindet mit Öl oder Fett die perfekte Emulsion. Kochzeit: 9–11 Minuten.",
-      "scienceExplainedEn": "Bronze dies (Trafilata al bronzo) tear microscopic fissures onto the noodle surface. This porous, chalky texture binds starches into starchy pasta water emulsions. Teflon dies produce smooth yellow pasta where sauce simply slides off. Cooking: 9-11 min. Portion: 80-100g dry.",
-      "culinaryServingDe": "Klassiker für Carbonara, Aglio Olio e Peperoncino, Sugo di Pomodoro und Spaghetti alle Vongole.",
-      "culinaryServingEn": "Carbonara, Aglio Olio e Peperoncino, Pomodoro, Spaghetti alle Vongole.",
-      "guestFaqDe": "Warum ist das Nudelwasser trüb? Weil die raue Bronze-Pasta Stärke abgibt. Ein Schöpfer dieses stärkehaltigen Wassers bindet mit Butter oder Öl die Sauce perfekt ab!",
-      "guestFaqEn": "Why does cooking pasta water look cloudy? Bronze-die pasta sheds porous surface starch into the water, which cooks transform into silky emulsified pasta sauces."
+      "inStock": true,
+      "stockQuantity": 5,
+      "storageLocation": "Zentrallager",
+      "isFavorite": false
     },
     {
       "id": "pasta_tagliatelle_emilia_bologna",
@@ -47,7 +44,7 @@
       "nameDe": "Tagliatelle / Pappardelle (Bandnudeln)",
       "subtitleEn": "Wide, porous egg ribbon pasta (1 egg per 100g flour), the authentic partner of hearty meat ragù",
       "subtitleDe": "Breit, porös, nimmt schwere Flüssigkeiten optimal auf; 1 Ei auf 100g Mehl",
-      "imageUrl": "https://images.unsplash.com/photo-1551183053-bf91a1d81141?w=800&auto=format&fit=crop&q=80",
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c6/Tagliatelle_2.jpg/330px-Tagliatelle_2.jpg",
       "origin": "Italy (Emilia-Romagna: Bologna & Tuscany)",
       "isImport": false,
       "abv": "0.0% ABV",
@@ -59,7 +56,9 @@
       "culinaryDe": "Das einzig authentische Original für Ragù alla Bolognese; Pappardelle zu Wildschweinragù (Cinghiale) und Steinpilz-Trüffel-Sauce.",
       "faqEn": "Why do Italians cringe at 'Spaghetti Bolognese'? Spaghetti are too thin and slick for coarse minced meat sauce, which falls to the plate; wide porous Tagliatelle lift the meat.",
       "faqDe": "Warum gibt es in Italien kein 'Spaghetti Bolognese'? Weil Spaghetti zu dünn und glatt für Hackfleisch sind; breite, poröse Tagliatelle binden das Fleischragù an jeder Gabel.",
-      "allergens": [],
+      "allergens": [
+        "Cereals containing Gluten (Wheat"
+      ],
       "tags": [
         "Tagliatelle",
         "Pappardelle",
@@ -68,15 +67,10 @@
         "Ragu",
         "Italian"
       ],
-      "isFavorite": false,
-      "tasteProfileDe": "Intensiv eifrisch, samtig-weicher Biss, poröse Oberfläche saugt dickflüssige Saucen auf.",
-      "tasteProfileEn": "Rich eggy tenderness, delicate toothsome chew, velvety coating, porous meat absorption.",
-      "scienceExplainedDe": "In Bologna ist die Breite der Tagliatelle mit 8 mm amtlich fixiert (Pappardelle sind 20–30 mm breit). Frische Eier verleihen Geschmeidigkeit und Porosität. In Italien gehört Fleischragù ausschließlich auf breite Bandnudeln, da dünne Spaghetti zu glatt sind und das Hackfleisch auf den Tellerboden fällt.",
-      "scienceExplainedEn": "Officially decreed at the Bologna Chamber of Commerce: cooked Tagliatelle measure exactly 8mm wide (Pappardelle 20-30mm). Egg yolk fats and lecithin create an elastic, silky gluten matrix that cradles dense minced beef and wild boar ragù. It is a culinary taboo in Italy to serve bolognese with spaghetti.",
-      "culinaryServingDe": "Das einzig authentische Original für Ragù alla Bolognese; Pappardelle zu Wildschweinragù (Cinghiale) und Steinpilz-Trüffel-Sauce.",
-      "culinaryServingEn": "Ragù alla Bolognese, Tuscan wild boar ragù (cinghiale), porcini mushroom & truffle sauce.",
-      "guestFaqDe": "Warum gibt es in Italien kein 'Spaghetti Bolognese'? Weil Spaghetti zu dünn und glatt für Hackfleisch sind; breite, poröse Tagliatelle binden das Fleischragù an jeder Gabel.",
-      "guestFaqEn": "Why do Italians cringe at 'Spaghetti Bolognese'? Spaghetti are too thin and slick for coarse minced meat sauce, which falls to the plate; wide porous Tagliatelle lift the meat."
+      "inStock": true,
+      "stockQuantity": 5,
+      "storageLocation": "Zentrallager",
+      "isFavorite": false
     },
     {
       "id": "pasta_penne_rigate",
@@ -85,7 +79,7 @@
       "nameDe": "Penne Rigate (Kurze Röhrenpasta)",
       "subtitleEn": "Diagonally quill-cut tubes with exterior ridges capturing chunky sauces inside and out",
       "subtitleDe": "Schräg geschnitten, geriffelt, speichert Sauce innen und außen",
-      "imageUrl": "https://images.unsplash.com/photo-1551183053-bf91a1d81141?w=800&auto=format&fit=crop&q=80",
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0b/Pennelisce_closeup.png/330px-Pennelisce_closeup.png",
       "origin": "Italy (Campania & Liguria, patented 1865 by Giovanni Battista Capurro)",
       "isImport": false,
       "abv": "0.0% ABV",
@@ -97,7 +91,9 @@
       "culinaryDe": "Klassiker für Penne all'Arrabbiata (feurige Chilitomate), Penne alla Vodka und Quattro Formaggi.",
       "faqEn": "Why choose Penne Rigate over smooth Penne Lisce? Ridged (rigate) pasta holds significantly more emulsion and oil than slippery smooth noodles.",
       "faqDe": "Warum sollte man immer Penne Rigate statt Lisce (glatt) kaufen? Weil an glatten Penne flüssige Sauce abrutscht, während gerillte Nudeln die Sauce festhalten.",
-      "allergens": [],
+      "allergens": [
+        "Cereals containing Gluten (Wheat"
+      ],
       "tags": [
         "Penne",
         "PenneRigate",
@@ -105,15 +101,10 @@
         "ShortPasta",
         "Italian"
       ],
-      "isFavorite": false,
-      "tasteProfileDe": "Fester Biss, Röhre füllt sich mit Sauce, Außenseite hält Emulsion fest.",
-      "tasteProfileEn": "Sturdy al dente resistance, hollow center holds pieces of garlic, chili, and tomato pulp.",
-      "scienceExplainedDe": "Penne wurden 1865 mit der Erfindung der schrägen Schnittmaschine kreiert. Die Rillen ('rigate') wirken wie Kapillaren für Sauce; die schräge Öffnung schaufelt stückige Tomaten, Chilis und Knoblauchstücke direkt ins Innere der Nudel.",
-      "scienceExplainedEn": "Invented in 1865 with the invention of the diagonal cutting machine. The angled ends mimic a dip-pen quill ('penna'), creating a wide entrance for chunky pieces of vegetables and tomato skins to enter the cavity, while outer grooves ('rigate') act like capillary channels for spicy chili oil.",
-      "culinaryServingDe": "Klassiker für Penne all'Arrabbiata (feurige Chilitomate), Penne alla Vodka und Quattro Formaggi.",
-      "culinaryServingEn": "Penne all'Arrabbiata (spicy chili tomato), Penne alla Vodka, Quattro Formaggi cheese bakes.",
-      "guestFaqDe": "Warum sollte man immer Penne Rigate statt Lisce (glatt) kaufen? Weil an glatten Penne flüssige Sauce abrutscht, während gerillte Nudeln die Sauce festhalten.",
-      "guestFaqEn": "Why choose Penne Rigate over smooth Penne Lisce? Ridged (rigate) pasta holds significantly more emulsion and oil than slippery smooth noodles."
+      "inStock": true,
+      "stockQuantity": 5,
+      "storageLocation": "Zentrallager",
+      "isFavorite": false
     },
     {
       "id": "pasta_rigatoni",
@@ -122,7 +113,7 @@
       "nameDe": "Rigatoni (Große Röhren)",
       "subtitleEn": "Wide straight tubes with thick walls & pronounced ridges; holds whole peas, meat & baked cheese",
       "subtitleDe": "Weite Öffnung, dicke Wandung, stark geriffelt, exzellenter Biss – ideal für Aufläufe (al forno)",
-      "imageUrl": "https://images.unsplash.com/photo-1551183053-bf91a1d81141?w=800&auto=format&fit=crop&q=80",
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/84/Rigatoni.jpg/330px-Rigatoni.jpg",
       "origin": "Italy (Lazio / Rome & Southern Italy)",
       "isImport": false,
       "abv": "0.0% ABV",
@@ -134,7 +125,9 @@
       "culinaryDe": "Römische Klassiker: Pasta alla Gricia, Amatriciana, Ragù di Salsiccia und Nudelaufläufe (al Forno).",
       "faqEn": "Rigatoni vs. Penne? Rigatoni have straight square cuts and larger diameter; Penne are diagonal and narrower.",
       "faqDe": "Unterschied Rigatoni zu Penne? Rigatoni sind gerade abgeschnitten, haben dickere Wände und einen deutlich größeren Hohlraum.",
-      "allergens": [],
+      "allergens": [
+        "Cereals containing Gluten (Wheat"
+      ],
       "tags": [
         "Rigatoni",
         "Rome",
@@ -142,15 +135,10 @@
         "Amatriciana",
         "Gricia"
       ],
-      "isFavorite": false,
-      "tasteProfileDe": "Kräftiger herzhafter Biss, dicke Wandung bleibt perfekt al dente, fängt Fleischwürfel auf.",
-      "tasteProfileEn": "Substantial hearty chew, dense wheat presence, captures large chunks of guanciale, sausage, and cheese.",
-      "scienceExplainedDe": "Rigatoni (von 'rigato' = gerillt) sind der Liebling der römischen Küche. Durch das große Röhrenvolumen rutschen gebratene Guanciale-Streifen, Erbsen und grobes Wurstbrät direkt in den Hohlraum. Dicke Wände garantieren perfekten Biss auch beim Überbacken im Ofen.",
-      "scienceExplainedEn": "From 'rigato' (ridged). Rigatoni's large internal caliber allows coarse bits of minced pork, spicy salsiccia sausage, and peas to lodge directly inside the tube during tossing. Thick extruded walls withstand long baking in casseroles (Pasta al Forno) without going soggy.",
-      "culinaryServingDe": "Römische Klassiker: Pasta alla Gricia, Amatriciana, Ragù di Salsiccia und Nudelaufläufe (al Forno).",
-      "culinaryServingEn": "Pasta alla Gricia, Rigatoni all'Amatriciana, Ragù di Salsiccia, Rigatoni al Forno.",
-      "guestFaqDe": "Unterschied Rigatoni zu Penne? Rigatoni sind gerade abgeschnitten, haben dickere Wände und einen deutlich größeren Hohlraum.",
-      "guestFaqEn": "Rigatoni vs. Penne? Rigatoni have straight square cuts and larger diameter; Penne are diagonal and narrower."
+      "inStock": true,
+      "stockQuantity": 5,
+      "storageLocation": "Zentrallager",
+      "isFavorite": false
     },
     {
       "id": "pasta_fusilli_trottole",
@@ -159,7 +147,7 @@
       "nameDe": "Fusilli / Trottole (Gedrehte Formen)",
       "subtitleEn": "Corkscrew 3-blade helical spirals that trap emulsified herb pestos, tuna sauce & salad dressings",
       "subtitleDe": "Spiralform, fängt emulgierte Saucen und Kräuterflocken ein – perfekt für Pesto & Nudelsalate",
-      "imageUrl": "https://images.unsplash.com/photo-1551183053-bf91a1d81141?w=800&auto=format&fit=crop&q=80",
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c0/Fusilli_bucati.jpg/330px-Fusilli_bucati.jpg",
       "origin": "Italy (Campania / Gragnano & Southern Italy)",
       "isImport": false,
       "abv": "0.0% ABV",
@@ -171,7 +159,9 @@
       "culinaryDe": "Klassiker für Pesto Genovese mit Basilikum und Pecorino, Thunfisch-Kapernsauce oder mediterrane Pasta Fredda.",
       "faqEn": "Why do Fusilli work best with pesto? Flat noodles let oily pesto slide off; the corkscrew ridges trap the emulsified basil puree.",
       "faqDe": "Warum passen Fusilli so gut zu Pesto? Die Spiralflügel halten das ölhaltige Kräuterpüree in ihren Windungen fest.",
-      "allergens": [],
+      "allergens": [
+        "Cereals containing Gluten (Wheat"
+      ],
       "tags": [
         "Fusilli",
         "Trottole",
@@ -179,15 +169,10 @@
         "PastaSalad",
         "Spirals"
       ],
-      "isFavorite": false,
-      "tasteProfileDe": "Federnder Biss, die Spiralwindungen fangen Kräutersaucen und Pinienkerne wie kleine Schaufeln auf.",
-      "tasteProfileEn": "Playful springy mouthfeel, corkscrew traps fine purees, minced herbs, and pine nuts in every turn.",
-      "scienceExplainedDe": "Traditionell wurden Fusilli um eine Stricknadel ('fuso') gewickelt. Die Korkenzieher-Geometrie wirkt wie eine archimedische Schraube: Fein pürierte Pestos, Pinienkerne und Kräuterflocken verfangen sich in den Windungen. Erste Wahl für kalte Nudelsalate, da die Nudel auch abgekühlt bissfest bleibt.",
-      "scienceExplainedEn": "Historically made by twisting spaghetti strands around a knitting needle ('fuso'). The 3-dimensional corkscrew acts like Archimedes' screw, locking in smooth emulsions, pestos, and cold vinaigrettes that would run off long noodles. Excellent in cold pasta salads because the twisted structure holds shape when chilled.",
-      "culinaryServingDe": "Klassiker für Pesto Genovese mit Basilikum und Pecorino, Thunfisch-Kapernsauce oder mediterrane Pasta Fredda.",
-      "culinaryServingEn": "Pesto Genovese (basil, pine nuts, pecorino), tuna olive tomato sauce, cold Mediterranean pasta salads.",
-      "guestFaqDe": "Warum passen Fusilli so gut zu Pesto? Die Spiralflügel halten das ölhaltige Kräuterpüree in ihren Windungen fest.",
-      "guestFaqEn": "Why do Fusilli work best with pesto? Flat noodles let oily pesto slide off; the corkscrew ridges trap the emulsified basil puree."
+      "inStock": true,
+      "stockQuantity": 5,
+      "storageLocation": "Zentrallager",
+      "isFavorite": false
     },
     {
       "id": "pasta_orecchiette_pugliesi",
@@ -196,7 +181,7 @@
       "nameDe": "Orecchiette Pugliesi (Geformte Öhrchenpasta)",
       "subtitleEn": "Handmade concave disc cups with thick ridged rim & thin center; the soul of Apulian cime di rapa",
       "subtitleDe": "Muschel-/Öhrchenform, dickerer Rand, dünner Kern – die Seele der apulischen Küche",
-      "imageUrl": "https://images.unsplash.com/photo-1551183053-bf91a1d81141?w=800&auto=format&fit=crop&q=80",
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/Orecchiette_carbonara.jpg/330px-Orecchiette_carbonara.jpg",
       "origin": "Italy (Puglia / Bari)",
       "isImport": false,
       "abv": "0.0% ABV",
@@ -208,7 +193,9 @@
       "culinaryDe": "Kultgericht: Orecchiette con Cime di Rapa e Salsiccia (Stängelkohl, Fenchelwurst, Sardellen, Knoblauch, Peperoncino).",
       "faqEn": "Why are authentic Orecchiette made without eggs? Southern Italian culinary tradition relied on water and durum semolina due to historic economic thrift and semolina quality.",
       "faqDe": "Warum werden traditionelle Orecchiette ohne Ei gemacht? Der apulische Hartweizen enthält so viel Protein, dass reines Wasser genügt, um festen Teig zu bilden.",
-      "allergens": [],
+      "allergens": [
+        "Cereals containing Gluten (Wheat"
+      ],
       "tags": [
         "Orecchiette",
         "Puglia",
@@ -216,15 +203,10 @@
         "CimeDiRapa",
         "ArtisanPasta"
       ],
-      "isFavorite": false,
-      "tasteProfileDe": "Zwei Texturen in einem Bissen: Kräftiger Biss am Rand, zart-schmelzende Schalenmitte, fängt Bittergemüse auf.",
-      "tasteProfileEn": "Dual texture: toothsome chewy thick rim contrasting with a silky tender concave cup center.",
-      "scienceExplainedDe": "In den Gassen von Bari werden Orecchiette ('Öhrchen') von Nonnas mit dem Messer über Holzbretter gezogen und über dem Daumen umgestülpt. Die Wölbung wirkt wie ein kleiner Löffel, der bitteres Stängelkohl-Gemüse (Cime di Rapa), Knoblauch und zerdrücktes Salsiccia-Brät aufschaufelt.",
-      "scienceExplainedEn": "Orecchiette ('little ears') are rolled on rough wooden boards with the tip of a dull knife, then flipped over the artisan's thumb. The result is a cup with a rough, dome-like exterior and a depression inside that scoops up chunky sauces. The varied thickness creates a unique mouthfeel: the firm rim stays deeply al dente while the center cooks tender.",
-      "culinaryServingDe": "Kultgericht: Orecchiette con Cime di Rapa e Salsiccia (Stängelkohl, Fenchelwurst, Sardellen, Knoblauch, Peperoncino).",
-      "culinaryServingEn": "Authentic Orecchiette con Cime di Rapa (turnip tops, anchovy, garlic, chili) or with slow-braised beef ragù.",
-      "guestFaqDe": "Warum werden traditionelle Orecchiette ohne Ei gemacht? Der apulische Hartweizen enthält so viel Protein, dass reines Wasser genügt, um festen Teig zu bilden.",
-      "guestFaqEn": "Why are authentic Orecchiette made without eggs? Southern Italian culinary tradition relied on water and durum semolina due to historic economic thrift and semolina quality."
+      "inStock": true,
+      "stockQuantity": 5,
+      "storageLocation": "Zentrallager",
+      "isFavorite": false
     },
     {
       "id": "pasta_ravioli_tortellini_ripiene",
@@ -233,7 +215,7 @@
       "nameDe": "Ravioli / Tortellini (Gefüllte Frische Pasta)",
       "subtitleEn": "Silky egg pasta parcels filled with ricotta-spinach, meat or pumpkin; tossed in foaming sage butter or broth",
       "subtitleDe": "Teigtaschen mit Füllung (Fleisch, Ricotta-Spinat, Kürbis); in schäumender Salbeibutter oder Kapaunbrühe",
-      "imageUrl": "https://images.unsplash.com/photo-1551183053-bf91a1d81141?w=800&auto=format&fit=crop&q=80",
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/95/Flickr_-_cyclonebill_-_Ravioli_med_skinke_og_asparges_i_mascarponecreme.jpg/330px-Flickr_-_cyclonebill_-_Ravioli_med_skinke_og_asparges_i_mascarponecreme.jpg",
       "origin": "Italy (Emilia-Romagna: Bologna & Modena / Lombardy: Mantova)",
       "isImport": false,
       "abv": "0.0% ABV",
@@ -245,7 +227,9 @@
       "culinaryDe": "Burro e Salvia (aufgeschäumte Butter und knuspriger Salbei), Tortellini in Brodo oder mit weißem Trüffel.",
       "faqEn": "Why must filled pasta never be paired with heavy tomato sauce? Heavy sauces mask the delicate artisanal flavor of the interior filling.",
       "faqDe": "Warum serviert man Tortellini nicht mit schwerer Tomatensauce? Weil dicke Tomatensaucen den feinen Geschmack der handgemachten Füllung erschlagen würden.",
-      "allergens": [],
+      "allergens": [
+        "Cereals containing Gluten (Wheat"
+      ],
       "tags": [
         "Ravioli",
         "Tortellini",
@@ -254,15 +238,284 @@
         "InBrodo",
         "Bologna"
       ],
-      "isFavorite": false,
-      "tasteProfileDe": "Zarte Hülle mit Biss, gefolgt von einer saftigen, cremigen Füllung; aromatische Butternote mit Salbei.",
-      "tasteProfileEn": "Silky toothsome pasta wrapper yielding to a rich, molten, savory or sweet-nutty core.",
-      "scienceExplainedDe": "Gefüllte Pasta ist die Krönung der Sfoglina-Kunst: Der Teig muss hauchdünn ausgerollt werden, damit die gefalteten Ränder gleichzeitig mit der Füllung gar werden. Traditionelle Tortellini werden um den Zeigefinger zum 'Bauchnabel der Venus' gewickelt und in Kapaunbrühe serviert; Ravioli werden in Salbeibutter geschwenkt.",
-      "scienceExplainedEn": "Filled pasta balances dough elasticity and filling moisture. The pasta sheet ('sfoglia') must be rolled paper-thin (<0.8 mm) so the edges cook through without becoming leathery, while the filling must have controlled free water so steam doesn't rupture the envelope. Traditional Tortellini di Bologna are folded into a naval shape and boiled in rich capon broth ('in Brodo').",
-      "culinaryServingDe": "Burro e Salvia (aufgeschäumte Butter und knuspriger Salbei), Tortellini in Brodo oder mit weißem Trüffel.",
-      "culinaryServingEn": "Burro e Salvia (foaming butter with fried fresh sage leaves), Tortellini in Brodo, shaved white truffles.",
-      "guestFaqDe": "Warum serviert man Tortellini nicht mit schwerer Tomatensauce? Weil dicke Tomatensaucen den feinen Geschmack der handgemachten Füllung erschlagen würden.",
-      "guestFaqEn": "Why must filled pasta never be paired with heavy tomato sauce? Heavy sauces mask the delicate artisanal flavor of the interior filling."
+      "inStock": true,
+      "stockQuantity": 5,
+      "storageLocation": "Zentrallager",
+      "isFavorite": false
+    },
+    {
+      "id": "pasta_lasagna_sfoglia",
+      "category": "pasta_rice",
+      "nameEn": "Lasagne Sheets (Lasagne al Forno)",
+      "nameDe": "Lasagne / Lasagneblätter (Schichtpasta)",
+      "subtitleEn": "Wide egg pasta sheets layered with slow-simmered Bolognese ragù & velvety Béchamel",
+      "subtitleDe": "Rechteckige Teigblätter für Lasagne al Forno; schichtet Ragù alla Bolognese & Béchamelsauce",
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/ba/Lasagne_-_stonesoup.jpg/330px-Lasagne_-_stonesoup.jpg",
+      "origin": "Italy (Emilia-Romagna: Bologna & Campania: Naples)",
+      "isImport": false,
+      "abv": "0.0% ABV",
+      "tasteEn": "Rich, comforting layered harmony of silky pasta, savory beef-pork umami, and creamy nutmeg béchamel.",
+      "tasteDe": "Perfekte Schichtung: Seidige Teigblätter, tiefes Fleisch-Umami und cremige Muskat-Béchamel mit goldbrauner Kruste.",
+      "scienceEn": "Classic Lasagne alla Bolognese alternates at least 4 to 6 thin sheets of pasta with Ragù and Béchamel (Besciamella). Béchamel provides moisture so the dry or blanched pasta sheets can fully hydrate and gelatinize in the oven without boiling away, while top Parmigiano forms a browned Maillard gratin.",
+      "scienceDe": "Klassische Lasagne alla Bolognese besteht aus mindestens 4 bis 5 dünnen Teigschichten. Die Béchamelsauce liefert die notwendige Feuchtigkeit, damit die Nudelblätter im Ofen sanft garen und Stärke binden, während die Oberfläche mit Parmigiano Reggiano goldbraun gratiniert.",
+      "culinaryEn": "Baked in terracotta casserole dish, rested 10 minutes before slicing into neat squares.",
+      "culinaryDe": "Klassisch in der Auflaufform gebacken, vor dem Anschneiden 10 Minuten ruhen lassen für saubere Schichten.",
+      "faqEn": "Do you have to precook dry lasagna sheets? High-quality sheets bake directly in the oven if the sauce and béchamel are sufficiently liquid.",
+      "faqDe": "Muss man Lasagneblätter vorkochen? Bei ausreichend flüssiger Béchamel- und Fleischsauce garen moderne Lasagneblätter direkt im Ofen.",
+      "allergens": [
+        "Cereals containing Gluten (Wheat"
+      ],
+      "tags": [
+        "Lasagne",
+        "AlForno",
+        "Bologna",
+        "PastaSheets",
+        "ComfortFood"
+      ],
+      "inStock": true,
+      "stockQuantity": 5,
+      "storageLocation": "Zentrallager",
+      "isFavorite": false
+    },
+    {
+      "id": "pasta_linguine_bavette",
+      "category": "pasta_rice",
+      "nameEn": "Linguine / Bavette (Flat Spaghetti for Seafood)",
+      "nameDe": "Linguine / Bavette (Flache Spaghetti)",
+      "subtitleEn": "Flattened strands with oval cross-section; the gold standard for Vongole shellfish & Genovese pesto",
+      "subtitleDe": "Flach-ovaler Querschnitt; der weltweite Goldstandard für Spaghetti alle Vongole & Pesto alla Genovese",
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/da/Linguine.jpg/330px-Linguine.jpg",
+      "origin": "Italy (Liguria: Genova & Campania)",
+      "isImport": false,
+      "abv": "0.0% ABV",
+      "tasteEn": "Silky slick glide with tender snap, coats perfectly with olive oil, garlic broth, and clam juices.",
+      "tasteDe": "Geschmeidiger Schmelz, federnder Al-dente-Biss, saugt Weißwein-Muschelsud und Olivenöl perfekt auf.",
+      "scienceEn": "Linguine ('little tongues') have an elliptical cross-section. The flat surface provides larger surface area than round spaghetti without becoming as heavy as ribbon pasta. This makes them ideal for lighter seafood emulsions (white wine, garlic, clam liquor) that would slide off round pasta.",
+      "scienceDe": "Linguine besitzen einen linsenförmigen, ovalen Querschnitt. Die flachere Oberfläche bietet mehr Haftung als runde Spaghetti, ist aber leichter als Bandnudeln. Dadurch sind sie die ideale Pasta für feine Weißwein-Knoblauch-Sude mit Venusmuscheln (Vongole) oder Frutti di Mare.",
+      "culinaryEn": "Linguine alle Vongole (clams, garlic, white wine, parsley, chili), Linguine al Pesto Genovese with green beans and potatoes.",
+      "culinaryDe": "Klassiker: Linguine alle Vongole mit frischen Venusmuscheln, Weißwein, Petersilie und Knoblauch, oder mit Pesto Genovese.",
+      "faqEn": "Why use Linguine instead of Spaghetti for seafood? The oval flat profile binds clear oil-and-wine shellfish reductions far better than round spaghetti.",
+      "faqDe": "Warum Linguine zu Meeresfrüchten? Weil der flache Querschnitt den leichten Weißwein-Muschelsud deutlich besser aufnimmt als runde Spaghetti.",
+      "allergens": [
+        "Cereals containing Gluten (Wheat"
+      ],
+      "tags": [
+        "Linguine",
+        "Bavette",
+        "Vongole",
+        "Seafood",
+        "Liguria",
+        "Pasta"
+      ],
+      "inStock": true,
+      "stockQuantity": 5,
+      "storageLocation": "Zentrallager",
+      "isFavorite": false
+    },
+    {
+      "id": "pasta_farfalle_bowties",
+      "category": "pasta_rice",
+      "nameEn": "Farfalle (Bowtie / Butterfly Pasta)",
+      "nameDe": "Farfalle (Schmetterlings- & Schleifennudeln)",
+      "subtitleEn": "Pleated center with ruffled butterfly wings; delightful contrast of chewy center and delicate edges",
+      "subtitleDe": "Gezackte Schmetterlingsflügel mit gefälteltem Kern; herrlicher Texturkontrast für Lachs & Salate",
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ac/Farfalle_Pasta.JPG/330px-Farfalle_Pasta.JPG",
+      "origin": "Italy (Lombardy & Emilia-Romagna)",
+      "isImport": false,
+      "abv": "0.0% ABV",
+      "tasteEn": "Textural duality: thick toothsome chewy pinched center paired with light tender outer wings.",
+      "tasteDe": "Faszinierender Doppel-Biss: Der zusammengeraffte Kern bleibt herzhaft al dente, die Flügel zart.",
+      "scienceEn": "From 'farfalla' (butterfly). Farfalle are stamped from flat sheets and pinched in the middle. Because the center is multiple layers of dough thick while the wings are a single layer, the pasta inherently develops two different textures during cooking, which catches creamy sauces like salmon cream or sweet peas.",
+      "scienceDe": "Farfalle ('Schmetterlinge') entstehen durch das Zusammenfalten eines Teigrechtecks in der Mitte. Der Kern ist dadurch dreimal so dick wie die Flügel: Beim Kochen bleibt die Mitte bissfest al dente, während die zarten Flügel Sahnesaucen mit Lachs oder Erbsen aufnehmen.",
+      "culinaryEn": "Farfalle al Salmone (smoked salmon in light tomato-cream sauce with dill), cold pasta salads with cherry tomatoes and mozzarella.",
+      "culinaryDe": "Klassiker: Farfalle al Salmone mit Räucherlachs, Kirschtomaten und Sahnesauce, oder in bunten Sommersalaten.",
+      "faqEn": "Why do the wings cook faster than the center? It's intentional: the dual texture gives Farfalle their distinctive lively mouthfeel.",
+      "faqDe": "Warum ist die Mitte fester als der Rand? Das ist der gewollte Charakter der Farfalle – der gefältelte Kern sorgt für den perfekten Biss.",
+      "allergens": [
+        "Cereals containing Gluten (Wheat"
+      ],
+      "tags": [
+        "Farfalle",
+        "Bowties",
+        "Salmone",
+        "PastaSalad",
+        "ShortPasta"
+      ],
+      "inStock": true,
+      "stockQuantity": 5,
+      "storageLocation": "Zentrallager",
+      "isFavorite": false
+    },
+    {
+      "id": "pasta_conchiglie_shells",
+      "category": "pasta_rice",
+      "nameEn": "Conchiglie Rigate (Sea Shell Pasta)",
+      "nameDe": "Conchiglie Rigate (Muschelnudeln)",
+      "subtitleEn": "Deep shell cavity and grooved exterior; scoops up thick meat ragù, melted cheeses, and whole peas",
+      "subtitleDe": "Tief gewölbte Muschelform mit Außenrillen; schaufelt sämige Saucen, Erbsen & Ricotta wie ein Löffel auf",
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/20/Conchiglie_rigate.png/330px-Conchiglie_rigate.png",
+      "origin": "Italy (Campania & Southern Italy)",
+      "isImport": false,
+      "abv": "0.0% ABV",
+      "tasteEn": "Burst of trapped sauce from shell pocket on every bite, firm al dente backbone.",
+      "tasteDe": "Die Muschelöffnung füllt sich vollflächig mit Sauce; intensiver, saftiger Geschmack bei jedem Bissen.",
+      "scienceEn": "The concave seashell geometry ('conchiglia') functions as an edible spoon. As pasta is tossed in sauce, thick ragù, chunks of sausage, and peas slide into the interior cavity and remain trapped until chewed. The exterior ridges create friction against the tongue.",
+      "scienceDe": "Conchiglie ('Muscheln') wirken wie kleine essbare Löffel. Beim Schwenken in der Pfanne fängt die konkave Wölbung stückige Saucen, Fleischragùs und Erbsen auf und hält sie im Inneren fest. Große 'Conchiglioni' eignen sich ideal zum Füllen mit Ricotta und Spinat.",
+      "culinaryEn": "Tossed with rich Bolognese, four-cheese sauce (Gorgonzola, Fontina, Taleggio), or filled jumbo shells baked in tomato sauce.",
+      "culinaryDe": "Hervorragend mit cremigem Käseragù (Gorgonzola & Walnuss), Erbsen-Schinken-Sauce oder als gefüllte Ofenpasta.",
+      "faqEn": "Conchiglie vs. Conchiglioni? Conchiglie are standard short pasta; Conchiglioni are jumbo shells designed specifically for stuffing and baking.",
+      "faqDe": "Unterschied Conchiglie und Conchiglioni? Conchiglie sind normale Beilagennudeln; Conchiglioni sind riesige Muscheln zum Füllen.",
+      "allergens": [
+        "Cereals containing Gluten (Wheat"
+      ],
+      "tags": [
+        "Conchiglie",
+        "Shells",
+        "Muschelnudeln",
+        "Campania",
+        "CheeseSauce"
+      ],
+      "inStock": true,
+      "stockQuantity": 5,
+      "storageLocation": "Zentrallager",
+      "isFavorite": false
+    },
+    {
+      "id": "pasta_cannelloni_al_forno",
+      "category": "pasta_rice",
+      "nameEn": "Cannelloni (Stuffed Baked Pasta Tubes)",
+      "nameDe": "Cannelloni (Gefüllte Ofen-Röhrenpasta)",
+      "subtitleEn": "Large cylinder tubes filled with seasoned minced meat or ricotta-spinach, baked in béchamel & tomato gratin",
+      "subtitleDe": "Große glatte Röhren zum Füllen mit Hackfleisch oder Ricotta-Spinat; überbacken unter Béchamel & Sugo",
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/Cannelloni2.png/330px-Cannelloni2.png",
+      "origin": "Italy (Campania: Amalfi / Sorrento & Emilia-Romagna)",
+      "isImport": false,
+      "abv": "0.0% ABV",
+      "tasteEn": "Decadent, melting softness, rich savory core encased in tender pasta and bubbling cheese crust.",
+      "tasteDe": "Wunderbar schmelzend, saftiger Kern, samtige Sauce und krosse Gratin-Kruste aus Parmigiano Reggiano.",
+      "scienceEn": "Cannelloni ('large reeds') are filled raw or parboiled using a piping bag. In the baking dish, they are completely blanketed with a layer of tomato passata and velvety béchamel. During 30-35 minutes of oven baking, the pasta absorbs liquid from the surrounding sauces and softens into tender deliciousness without tearing.",
+      "scienceDe": "Cannelloni ('große Röhrchen') werden traditionell mit dem Spritzbeutel mit Ricotta-Spinat oder Rinderhack gefüllt. In der Auflaufform werden sie vollständig mit Béchamel und Tomatensauce bedeckt, sodass sie die Feuchtigkeit aufsaugen und beim Überbacken butterzart werden.",
+      "culinaryEn": "Served straight from the oven in hot baking dishes; classic Sunday family lunch throughout Italy.",
+      "culinaryDe": "Klassisches Festtagsgericht: Heiß aus dem Ofen serviert mit Blattsalat und kräftigem Rotwein.",
+      "faqEn": "Can you fill Cannelloni without precooking? Yes, if the filling and sauces are sufficiently moist, dry tubes bake perfectly tender in 35 minutes.",
+      "faqDe": "Muss man Cannelloni vorkochen? Nein, mit einem Spritzbeutel lassen sich ungekochte Röhren leicht füllen; sie garen in der Sauce im Ofen perfekt gar.",
+      "allergens": [
+        "Cereals containing Gluten (Wheat"
+      ],
+      "tags": [
+        "Cannelloni",
+        "AlForno",
+        "RicottaSpinach",
+        "BakedPasta",
+        "Gratin"
+      ],
+      "inStock": true,
+      "stockQuantity": 5,
+      "storageLocation": "Zentrallager",
+      "isFavorite": false
+    },
+    {
+      "id": "pasta_paccheri_napoli",
+      "category": "pasta_rice",
+      "nameEn": "Paccheri di Gragnano IGP (Giant Neapolitan Tubes)",
+      "nameDe": "Paccheri di Gragnano IGP (Riesige Neapolitanische Röhren)",
+      "subtitleEn": "Massive smooth tubes from Gragnano; collapses around seafood ragù with a slap ('paccaria')",
+      "subtitleDe": "Großformatige Röhren aus Gragnano; fällt saftig in Calamarata- & Meeresfrüchtesaucen zusammen",
+      "imageUrl": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800&auto=format&fit=crop&q=80",
+      "origin": "Italy (Campania: Gragnano IGP)",
+      "isImport": true,
+      "abv": "0.0% ABV",
+      "tasteEn": "Massive satisfying toothsome bite, rich wheaty chew, pockets entire shellfish chunks.",
+      "tasteDe": "Kraftvoller Al-dente-Biss, saugt stückige Meeresfrüchteragùs und Tomatensugo in den Hohlraum.",
+      "scienceEn": "Protected under Gragnano IGP law: dried slowly below 50°C for up to 60 hours, preserving the wheat starch protein structure. When boiled for 13-15 minutes, their large diameter allows them to collapse pleasantly upon plating, creating a saucy suction that captures entire mussels, shrimp, and calamari rings.",
+      "scienceDe": "Geschützt durch Gragnano IGP: Bei unter 50°C bis zu 60 Stunden getrocknet. Beim Kochen behalten sie ihre Stabilität, fallen aber auf dem Teller leicht zusammen ('Pacchero' = neapolitanisch für klatschende Ohrfeige) und schließen Calamari und Muscheln im Hohlraum ein.",
+      "culinaryEn": "Classic Calamarata, rich seafood ragù (scoglio), or stuffed with ricotta and baked in the oven.",
+      "culinaryDe": "Klassische Calamarata mit Tintenfischringen, Krustentiersaucen oder mit Ricotta gefüllt im Ofen gratiniert.",
+      "faqEn": "Why are Paccheri so famous in Naples? Their giant hollow caliber is engineered specifically for hearty Mediterranean seafood stews where small pasta gets lost.",
+      "faqDe": "Warum liebt Neapel Paccheri? Weil normale Nudeln in stückigen Meeresfrüchte-Saucen untergehen – Paccheri fangen ganze Garnelen und Tintenfische im Inneren ein.",
+      "allergens": [
+        "Cereals containing Gluten (Wheat"
+      ],
+      "tags": [
+        "Paccheri",
+        "Gragnano",
+        "IGP",
+        "Seafood",
+        "Naples",
+        "Pasta"
+      ],
+      "inStock": true,
+      "stockQuantity": 5,
+      "storageLocation": "Zentrallager",
+      "isFavorite": false
+    },
+    {
+      "id": "pasta_bucatini_amatriciana",
+      "category": "pasta_rice",
+      "nameEn": "Bucatini (Thick Hollow Spaghetti)",
+      "nameDe": "Bucatini (Hohle Spaghetti aus Rom)",
+      "subtitleEn": "Thick long pasta with a hollow central hole, the compulsory Roman vehicle for Sugo all'Amatriciana",
+      "subtitleDe": "Dicke Spaghetti mit durchgehendem Loch im Kern (buco); saugt Sauce von innen & außen auf",
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a2/Bucatini.jpg/330px-Bucatini.jpg",
+      "origin": "Italy (Lazio / Rome)",
+      "isImport": true,
+      "abv": "0.0% ABV",
+      "tasteEn": "Firm robust tubular resistance, bursts with trapped sauce from the hollow center on every bite.",
+      "tasteDe": "Kräftiger Widerstand, saugt Sauce durch den Hohlraum ins Innere – saftige Sauce bei jedem Bissen.",
+      "scienceEn": "Derived from 'buco' (hole). The hollow center allows boiling water to cook the thick strand simultaneously from the inside and outside, ensuring even cooking despite its 3mm thickness. When tossed in sauce, capillary action pulls sauce inside the bore.",
+      "scienceDe": "Vom italienischen 'buco' (Loch). Der durchgehende Hohlraum sorgt dafür, dass kochendes Wasser den dicken Strang von innen und außen gleichzeitig gart. Durch Kapillarwirkung zieht der Hohlraum die Amatriciana-Sauce ins Nudelinnere.",
+      "culinaryEn": "The non-negotiable standard for Bucatini all'Amatriciana (crisp Guanciale, San Marzano tomato, Pecorino Romano, black pepper).",
+      "culinaryDe": "Das römische Gesetz für Bucatini all'Amatriciana mit krossem Guanciale-Speck und Pecorino Romano.",
+      "faqEn": "Why don't Romans use spaghetti for Amatriciana? The thick hollow Bucatini stand up to the crunchy rendered pork fat of Guanciale, absorbing spicy sauce internally.",
+      "faqDe": "Warum nicht Spaghetti für Amatriciana? Weil die fetthaltige Tomatensauce mit Guanciale-Speck eine robuste Nudel braucht, die die Sauce im Hohlraum speichert.",
+      "allergens": [
+        "Cereals containing Gluten (Wheat"
+      ],
+      "tags": [
+        "Bucatini",
+        "Rome",
+        "Amatriciana",
+        "Guanciale",
+        "Pasta"
+      ],
+      "inStock": true,
+      "stockQuantity": 5,
+      "storageLocation": "Zentrallager",
+      "isFavorite": false
+    },
+    {
+      "id": "pasta_gnocchi_patate",
+      "category": "pasta_rice",
+      "nameEn": "Fresh Potato Gnocchi (Gnocchi di Patate)",
+      "nameDe": "Gnocchi di Patate (Frische Kartoffelklößchen)",
+      "subtitleEn": "Floury riced potatoes, minimal flour (Tipo 00), ridge-rolled for sauce grip; cloud-like pillows",
+      "subtitleDe": "Gedämpfte mehlige Kartoffeln, minimal Mehl, über das Rillenbrettchen gerollt; federzart",
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/86/Gnocchi_di_ricotta_burro_e_salvia.jpg/330px-Gnocchi_di_ricotta_burro_e_salvia.jpg",
+      "origin": "Italy (All Regions / Thursday Gnocchi tradition)",
+      "isImport": false,
+      "abv": "0.0% ABV",
+      "tasteEn": "Cloud-like tender softness, melts on tongue like potato silk, holds rich buttery sauces.",
+      "tasteDe": "Federzart wie kleine Wölkchen, schmilzt auf der Zunge, feiner Kartoffel-Buttergeschmack.",
+      "scienceEn": "The secret of pillowy gnocchi is steam evaporation: potatoes must be steamed dry and riced while piping hot so excess steam escapes. Adding too much flour produces heavy leaden rubber pellets. Rolling them over a ridged wooden 'rigagnocchi' board creates an indentation on the back and grooves on the front to pocket sauce.",
+      "scienceDe": "Das Geheimnis lockerer Gnocchi: Kartoffeln heiß ausdampfen lassen und noch warm durch die Presse drücken! Zu viel Mehl macht sie zäh wie Gummi. Das Rollen über das hölzerne Rillenbrettchen ('Rigagnocchi') formt eine Mulde auf der Rückseite, die Salbeibutter oder Gorgonzolasauce aufnimmt.",
+      "culinaryEn": "Gnocchi alla Sorrentina (tomato, basil, melted fresh mozzarella baked in terracotta), or browned sage butter (Burro e Salvia).",
+      "culinaryDe": "Gnocchi alla Sorrentina mit Tomatensauce und geschmolzenem Mozzarella überbacken, oder in brauner Salbeibutter.",
+      "faqEn": "When are gnocchi cooked? They float to the surface within 2 minutes! Skim them off immediately with a slotted spoon; overcooking makes them dissolve.",
+      "faqDe": "Wann sind frische Gnocchi gar? Sobald sie an die Wasseroberfläche steigen (nach ca. 90 Sekunden)! Sofort mit dem Schaumlöffel herausheben.",
+      "allergens": [
+        "Cereals containing Gluten (Wheat"
+      ],
+      "tags": [
+        "Gnocchi",
+        "PotatoGnocchi",
+        "FreshPasta",
+        "Sorrentina",
+        "Italian"
+      ],
+      "inStock": true,
+      "stockQuantity": 5,
+      "storageLocation": "Zentrallager",
+      "isFavorite": false
     },
     {
       "id": "rice_basmati_himalaya",
@@ -271,7 +524,7 @@
       "nameDe": "Basmati-Reis (Himalaya-Edellangkorn)",
       "subtitleEn": "Fragrant long-grain aged rice, doubles in length without sticking, 2-acetyl-1-pyrroline aroma",
       "subtitleDe": "Aromatischer Duftreis aus den Vorgebirgen des Himalayas; extra lang, schlank, locker körnig",
-      "imageUrl": "https://images.unsplash.com/photo-1586201375761-83865001e31c?w=800&auto=format&fit=crop&q=80",
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1b/Cooked_white_rice.jpg/330px-Cooked_white_rice.jpg",
       "origin": "India (Punjab, Haryana) & Pakistan (Punjab)",
       "isImport": true,
       "abv": "0.0% ABV",
@@ -294,15 +547,10 @@
         "FragrantRice",
         "GlutenFree"
       ],
-      "isFavorite": false,
-      "tasteProfileDe": "Fein nussiges Popcorn-Aroma, florale Duftnote, federleicht, bleibt perfekt körnig.",
-      "tasteProfileEn": "Delicate roasted popcorn nuttiness, floral aroma, light fluffy separate grains.",
-      "scienceExplainedDe": "Basmati bedeutet auf Sanskrit 'der Duftende'. Der Duft stammt von 2-Acetyl-1-pyrrolin (2-AP), das auch in Pandanblättern vorkommt. Die monatelange Reifung sorgt dafür, dass sich das Korn in die Länge dehnt statt aufzuplatzen. Zubereitung: Gründlich waschen, Verhältnis 1:1,5 Wasser, 10–12 Minuten sanft köcheln.",
-      "scienceExplainedEn": "Basmati translates to 'fragrant' in Sanskrit. Its distinctive aroma is caused by 2-acetyl-1-pyrroline (2-AP), present at 12x higher levels than regular rice. Aging for 1-2 years dehydrates starch so grains expand purely longitudinally (doubling in length) without bursting radially. Cooking: 1:1.5 water ratio, 10-12 min.",
-      "culinaryServingDe": "Klassische Beilage zu indischen Currys, Biryani, persischem Safranreis (Tahdig) und Tandoori.",
-      "culinaryServingEn": "Biryani, Indian curries, Persian saffron polo (Tahdig), tandoori meats.",
-      "guestFaqDe": "Warum klebt echter Basmati nicht? Der hohe Gehalt an Amylose-Stärke und die Reifung sorgen dafür, dass die Körner trocken und locker abrollen.",
-      "guestFaqEn": "Why does authentic Basmati not stick together? High amylose content (~22%) and aged dehydration prevent starch grains from dissolving into sticky paste."
+      "inStock": true,
+      "stockQuantity": 5,
+      "storageLocation": "Zentrallager",
+      "isFavorite": false
     },
     {
       "id": "rice_jasmin_duftreis_thailand",
@@ -311,7 +559,7 @@
       "nameDe": "Jasminreis / Duftreis (Thai Hom Mali)",
       "subtitleEn": "Tender floral Thai long grain, natural pandan aroma, soft subtle cling ideal for chopsticks & curries",
       "subtitleDe": "Thailändischer Duftreis mit natürlichem Pandan-Pfeilwurz-Aroma und zartem Klebeeffekt",
-      "imageUrl": "https://images.unsplash.com/photo-1586201375761-83865001e31c?w=800&auto=format&fit=crop&q=80",
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7b/Bowl_of_white_rice.jpg/330px-Bowl_of_white_rice.jpg",
       "origin": "Thailand (Isan Plateau / Ubon Ratchathani - Hom Mali)",
       "isImport": true,
       "abv": "0.0% ABV",
@@ -334,15 +582,10 @@
         "Curry",
         "GlutenFree"
       ],
-      "isFavorite": false,
-      "tasteProfileDe": "Zarte florale Pandan- und Vanillenoten, feucht-weicher Schmelz, zarter angenehmer Zusammenhalt.",
-      "tasteProfileEn": "Sweet floral pandan notes, moist tender texture, delicate comforting softness.",
-      "scienceExplainedDe": "Jasminreis wird bevorzugt erntefrisch genossen ('New Crop'). Durch den etwas höheren Amylopektin-Anteil besitzt er eine seidig-feuchte Textur mit leichtem Klebeeffekt, sodass man ihn perfekt mit Stäbchen essen kann und er feine Currysaucen optimal bindet.",
-      "scienceExplainedEn": "Unlike aged dry Basmati, Jasmine rice is best enjoyed fresh from the latest harvest ('New Crop'). A slightly higher amylopectin-to-amylose ratio gives the cooked grains a tender, slightly glossy cling that holds rich coconut curries and enables eating with chopsticks without being heavy.",
-      "culinaryServingDe": "Die unverzichtbare Basis für thailändische Currys, Wokgerichte, gebratenen Reis und Mango Sticky Rice.",
-      "culinaryServingEn": "Essential pairing for Thai green/red curries, Tom Yum, Massaman, and Mango Sticky Rice.",
-      "guestFaqDe": "Wird Jasminreis mit Jasminblüten parfümiert? Nein! Das Aroma ist 100% natürlich gewachsen; der Name bezieht sich auf die schneeweiße Farbe, die an Jasminblüten erinnert.",
-      "guestFaqEn": "Is Jasmine rice scented with jasmine blossoms? No! It is 100% naturally aromatic; the name 'Hom Mali' refers to the pristine white color resembling jasmine flowers."
+      "inStock": true,
+      "stockQuantity": 5,
+      "storageLocation": "Zentrallager",
+      "isFavorite": false
     },
     {
       "id": "rice_carnaroli_arborio_risotto",
@@ -351,7 +594,7 @@
       "nameDe": "Carnaroli / Arborio (Risottoreis)",
       "subtitleEn": "Medium-grain japonica rice rich in surface amylopectin; creates wavy creaminess (all'onda) with firm core",
       "subtitleDe": "Mittelkorn mit hohem Amylopektingehalt; gibt Stärke ab für sämige Bindung bei bissfestem Kern (al dente)",
-      "imageUrl": "https://images.unsplash.com/photo-1586201375761-83865001e31c?w=800&auto=format&fit=crop&q=80",
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a5/Risotto_with_speck_and_goat_cheese_%286101067436%29.jpg/330px-Risotto_with_speck_and_goat_cheese_%286101067436%29.jpg",
       "origin": "Italy (Po Valley / Piedmont: Vercelli & Lombardy)",
       "isImport": false,
       "abv": "0.0% ABV",
@@ -374,15 +617,10 @@
         "AllOnda",
         "Mantecatura"
       ],
-      "isFavorite": false,
-      "tasteProfileDe": "Cremig, samtig-schlotzig mit vollem Schmelz, umhüllt einen perfekt bissfesten Kern (Al dente).",
-      "tasteProfileEn": "Velvety, rich, creamy suspension holding broth, wine and parmesan around a toothsome al dente center.",
-      "scienceExplainedDe": "Carnaroli gilt als bruchfester und bissfester als Arborio. Beim Rühren unter schubweiser Zugabe heißer Brühe löst sich die Oberflächenstärke und emulgiert mit kalter Butter und Parmesan zur legendären 'Mantecatura' – einer fließenden Cremigkeit ('all'onda').",
-      "scienceExplainedEn": "Carnaroli is crowned as 'Il Re dei Risi'. The pearly center ('perla') rich in compact amylose stays al dente, while outer layers packed with amylopectin dissolve during stirring (mantecatura) to form the luxurious starch-butter-cheese emulsion called 'all'onda' (wavy creaminess). Carnaroli resists overcooking far better than Arborio.",
-      "culinaryServingDe": "Klassisch für Risotto alla Milanese (mit Safran), Steinpilz-Risotto, Meeresfrüchte und Arancini-Bällchen.",
-      "culinaryServingEn": "Risotto alla Milanese (saffron), Porcini mushroom risotto, Radicchio Gorgonzola, crispy Arancini.",
-      "guestFaqDe": "Warum darf man Risotto-Reis vor dem Kochen niemals waschen? Weil das Wasser die wertvolle Oberflächenstärke abwaschen würde, die für die sämige Cremigkeit unverzichtbar ist!",
-      "guestFaqEn": "Why must you NEVER rinse risotto rice before cooking? Rinsing washes away the precious loose amylopectin starch needed to create the signature creamy sauce."
+      "inStock": true,
+      "stockQuantity": 5,
+      "storageLocation": "Zentrallager",
+      "isFavorite": false
     },
     {
       "id": "rice_sushi_koshihikari_japonica",
@@ -414,15 +652,10 @@
         "Nigiri",
         "Japan"
       ],
-      "isFavorite": false,
-      "tasteProfileDe": "Zarte Süße, feinsäuerlich-frischer Essighauch, glänzend, klebend mit spürbarem Einzelkorn.",
-      "tasteProfileEn": "Sweet subtle grain, clean rice vinegar tang, glossy, sticky yet firm individual kernels that melt in the mouth.",
-      "scienceExplainedDe": "Koshihikari ist der unangefochtene Standard für Meister-Sushi. Im Holzfass (Hangiri) wird der heiße Reis mit Sushizu (Reisessig, Zucker, Salz) vermengt und mit dem Fächer abgekühlt. Das Kühlen versiegelt die Stärke und verleiht den Körnern brillanten Glanz und perfekten Zusammenhalt für Nigiri.",
-      "scienceExplainedEn": "Sushi rice relies on short-grain japonica cultivars with high amylopectin. After thorough washing to remove excess powdery starch, it is steamed and transferred to a cedar wood tub ('hangiri'). Seasoned rice vinegar ('sushi-zu') is sliced through the rice with a flat wooden paddle while fanning rapidly. Fanning cools the rice quickly, locking in a mirror-like sheen and ideal cling without crushing kernels.",
-      "culinaryServingDe": "Die unverzichtbare Basis für Nigiri, Maki-Rollen, Chirashi, Poke Bowls und japanische Donburi-Gerichte.",
-      "culinaryServingEn": "Hand-formed Nigiri, rolled Maki, Chirashi bowls, Poke Bowls, and Japanese Donburi.",
-      "guestFaqDe": "Warum sollte Sushi-Reis handwarm serviert werden? Bei Kälte verhärtet die Stärke; körperwarm (ca. 36°C) schmilzt das Korn perfekt zusammen mit dem Fisch am Gaumen.",
-      "guestFaqEn": "Why must sushi rice be eaten at body temperature? Cold refrigerated sushi rice hardens starches (retrogradation); body temperature (36°C) preserves soft melt-in-mouth texture."
+      "inStock": true,
+      "stockQuantity": 5,
+      "storageLocation": "Zentrallager",
+      "isFavorite": false
     },
     {
       "id": "rice_schwarzer_venere_vollkorn",
@@ -454,15 +687,10 @@
         "Piedmont",
         "SeafoodPairing"
       ],
-      "isFavorite": false,
-      "tasteProfileDe": "Kräftig nussig, Noten von frisch gebackenem Brot und gerösteter Walnuss, fester elastischer Biss.",
-      "tasteProfileEn": "Earthy, intense toasted walnut, freshly baked sourdough crust, firm chewy whole-grain al dente texture.",
-      "scienceExplainedDe": "Einst im alten China als 'Verbotener Reis' den Kaisern vorbehalten, wird Riso Venere heute in der Po-Ebene kultiviert. Die tiefschwarze Farbe stammt von wertvollen Anthocyanen (starke Antioxidantien). Da die ballaststoffreiche Schale intakt bleibt, kocht Venere niemals matschig, sondern behält seinen knackigen Biss.",
-      "scienceExplainedEn": "Historically reserved exclusively for Chinese emperors ('Forbidden Rice'). In 1997, Italian agronomists in the Po Valley successfully crossed Chinese black rice with Italian varieties to create 'Riso Venere' (named after Venus, goddess of love). The pitch-black color comes from water-soluble anthocyanins (the same antioxidants found in blueberries). Because the bran layer is unpolished, it requires 35-40 minutes of cooking and stays toothsome without going mushy.",
-      "culinaryServingDe": "Optischer Hingucker zu gebratenen Riesengarnelen, Jakobsmuscheln, Meeresfrüchtesalaten und Edelfisch.",
-      "culinaryServingEn": "Striking visual contrast with seared tiger prawns, scallops, grilled salmon, or cold seafood bowls.",
-      "guestFaqDe": "Färbt Venere-Reis das Kochwasser lila? Ja, die natürlichen wasserlöslichen Anthocyan-Pigmente färben das Kochwasser tief dunkelviolett.",
-      "guestFaqEn": "Does black rice turn cooking water purple? Yes, natural anthocyanins dissolve into cooking water, turning it deep aubergine-purple."
+      "inStock": true,
+      "stockQuantity": 5,
+      "storageLocation": "Zentrallager",
+      "isFavorite": false
     },
     {
       "id": "rice_wildreis_zizania_aquatica",
@@ -494,15 +722,10 @@
         "HighProtein",
         "Autumn"
       ],
-      "isFavorite": false,
-      "tasteProfileDe": "Knackiger Biss, erdig, rauchige Holznote, herber Teegeschmack, kernig und nussig.",
-      "tasteProfileEn": "Crunchy pop, smoky toasted wood, wild mushroom, black tea undertone, robust vegetal earthiness.",
-      "scienceExplainedDe": "Botanisch ist Wildreis kein Reis, sondern ein Süßgras, das in den flachen Seen Nordamerikas wächst. Über Holzfeuer getrocknet, erhält es sein rauchiges Aroma. Beim Kochen platzt die harte Hülle nach 40 Minuten blütenartig auf und offenbart einen kernigen, herben Kern. Reich an pflanzlichem Eiweiß und Ballaststoffen.",
-      "scienceExplainedEn": "Wild rice is botanically NOT rice (Oryza), but an annual aquatic grass (Zizania palustris) native to shallow freshwater lakes of North America. Traditionally canoe-harvested by Native Americans and parched over wood fires to cure the hulls. High in protein (14%) and low in fat, its rigid fibrous outer hull 'curls' open like a blossom when cooked for 40-45 minutes, providing an unbeatable texture contrast in grain blends.",
-      "culinaryServingDe": "Klassische Beilage zu Wildgerichten (Reh, Hirsch), Entenbrust, herbstlichen Salaten oder als Reismischung.",
-      "culinaryServingEn": "Blended with white long-grain rice as a luxury side dish for roasted venison, duck breast, pheasant, or autumn root salads.",
-      "guestFaqDe": "Warum mischt man Wildreis oft mit Basmati oder Langkornreis? Wegen des sehr kernigen Bisses und des dominanten Aromas; die Mischung balanciert Textur und Geschmack.",
-      "guestFaqEn": "Why is wild rice often blended with long grain rice? Because wild rice is intensely chewy and expensive; blending tempers texture and cost while adding visual appeal."
+      "inStock": true,
+      "stockQuantity": 5,
+      "storageLocation": "Zentrallager",
+      "isFavorite": false
     },
     {
       "id": "rice_parboiled_science",
@@ -533,15 +756,10 @@
         "Vitamins",
         "CookingScience"
       ],
-      "isFavorite": false,
-      "tasteProfileDe": "Fester gleichmäßiger Biss, neutraler Reisgeschmack, absolut klebefrei und bissfest.",
-      "tasteProfileEn": "Firm, uniform al dente bite, neutral clean grain flavor, zero stickiness.",
-      "scienceExplainedDe": "Das ungeschälte Reiskorn wird unter hohem Dampfdruck behandelt. Dabei wandern bis zu 80% der B-Vitamine und Mineralstoffe aus der Schale ins Korninnere. Die Stärke geliert an der Oberfläche: Parboiled-Reis kocht garantiert körnig und verzeiht stundenlanges Warmhalten im Chafing Dish.",
-      "scienceExplainedEn": "Parboiling ('partially boiled') is a nutritional triumph. Raw unhusked paddy rice is soaked, steamed under pressure, and dried. Pressure forces water-soluble B-vitamins (B1, B3) from the bran directly into the endosperm. Starch gelatinizes, hardening the grain so it never goes mushy even during long buffet holding times.",
-      "culinaryServingDe": "Standard für Catering, Reissalate und Buffets, da er selbst nach Stunden nicht matschig wird.",
-      "culinaryServingEn": "Catering operations, rice salads, paella bases, and buffet operations where long holding times are required.",
-      "guestFaqDe": "Warum schimmert ungekochter Parboiled-Reis bernsteingelb? Durch die Dampfbehandlung lösen sich natürliche Pigmente aus der Schale; beim Kochen wird er strahlend weiß.",
-      "guestFaqEn": "Why does uncooked parboiled rice look amber/yellow? Heat dissolves natural bran pigments that migrate into the grain; it turns brilliant white upon boiling."
+      "inStock": true,
+      "stockQuantity": 5,
+      "storageLocation": "Zentrallager",
+      "isFavorite": false
     }
   ]
 }

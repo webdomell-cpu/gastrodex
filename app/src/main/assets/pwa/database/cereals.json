@@ -5,23 +5,24 @@
     {
       "id": "cereal_porridge_oats",
       "category": "cereals",
-      "nameDe": "Traditioneller Haferflocken-Porridge",
       "nameEn": "Traditional Scottish Porridge (Oatmeal)",
-      "subtitleDe": "Cremig gekochter Haferbrei mit Milch oder Wasser und einer Prise Meersalz",
+      "nameDe": "Traditioneller Haferflocken-Porridge",
       "subtitleEn": "Warm creamy simmered rolled oats with water or milk, a pinch of sea salt",
+      "subtitleDe": "Cremig gekochter Haferbrei mit Milch oder Wasser und einer Prise Meersalz",
+      "imageUrl": "https://images.unsplash.com/photo-1584776296944-ab6fb5763f75?w=800&auto=format&fit=crop&q=80",
       "origin": "Schottland & Nordeuropa",
-      "abv": "0.0% ABV",
       "isImport": false,
-      "tasteDe": "Nussige Hafernote, samtweiche cremige Textur, wohlig wärmend.",
+      "abv": "0.0% ABV",
       "tasteEn": "Deep nutty oat sweetness, velvety rich texture, comforting warmth.",
+      "tasteDe": "Nussige Hafernote, samtweiche cremige Textur, wohlig wärmend.",
+      "scienceEn": "Oats contain soluble dietary fiber called beta-glucan. When simmered in liquid, beta-glucan hydrates and forms a viscous colloidal gel, lowering glycemic response and cholesterol while giving porridge its signature creamy mouthfeel.",
       "scienceDe": "Hafer enthält lösliche Ballaststoffe namens Beta-Glucan. Beim Kochen binden sie Flüssigkeit und bilden ein visköses Gel, das den Blutzuckerspiegel stabilisiert und dem Porridge die cremige Konsistenz verleiht.",
-      "scienceExplainedEn": "Oats contain soluble dietary fiber called beta-glucan. When simmered in liquid, beta-glucan hydrates and forms a viscous colloidal gel, lowering glycemic response and cholesterol while giving porridge its signature creamy mouthfeel.",
-      "culinaryDe": "Warm in einer Schale serviert, verfeinert mit Beeren, Ahornsirup, Honig oder gerösteten Nüssen.",
       "culinaryEn": "Served warm in a bowl garnished with fresh berries, honey, maple syrup, or toasted nuts.",
-      "faqDe": "Salz oder Zucker in echtem Porridge? Traditionell kochen Schotten Haferbrei pur mit Wasser und einer Prise Salz.",
+      "culinaryDe": "Warm in einer Schale serviert, verfeinert mit Beeren, Ahornsirup, Honig oder gerösteten Nüssen.",
       "faqEn": "Salt or sugar in authentic porridge? Traditionally, Scots make porridge strictly with water and salt; modern versions often use milk and sweeteners.",
+      "faqDe": "Salz oder Zucker in echtem Porridge? Traditionell kochen Schotten Haferbrei pur mit Wasser und einer Prise Salz.",
       "allergens": [
-        "Gluten (Oats)"
+        "Gluten (Oats"
       ],
       "tags": [
         "Porridge",
@@ -30,26 +31,30 @@
         "Healthy",
         "Scottish"
       ],
-      "isFavorite": true
+      "inStock": true,
+      "stockQuantity": 5,
+      "storageLocation": "Zentrallager",
+      "isFavorite": false
     },
     {
       "id": "cereal_muesli_bircher",
       "category": "cereals",
-      "nameDe": "Original Birchermüesli (Dr. Bircher-Benner)",
       "nameEn": "Original Bircher Muesli (Zurich 1900)",
-      "subtitleDe": "Eingeweichte Haferflocken, geriebener Apfel mit Kerngehäuse, Kondensmilch, Zitrone & Nüsse",
+      "nameDe": "Original Birchermüesli (Dr. Bircher-Benner)",
       "subtitleEn": "Soaked raw oats, grated whole apple, condensed milk, lemon juice, and roasted hazelnuts",
+      "subtitleDe": "Eingeweichte Haferflocken, geriebener Apfel mit Kerngehäuse, Kondensmilch, Zitrone & Nüsse",
+      "imageUrl": "https://images.unsplash.com/photo-1517673132405-a56a62b18caf?w=800&auto=format&fit=crop&q=80",
       "origin": "Schweiz (Zürich, um 1900)",
-      "abv": "0.0% ABV",
       "isImport": false,
-      "tasteDe": "Erfrischende Fruchtsäure, cremige Süße, nussiger Biss, vollwertiger Charakter.",
+      "abv": "0.0% ABV",
       "tasteEn": "Refreshing fruit acidity, creamy dairy sweetness, nutty crunch, wholesome texture.",
+      "tasteDe": "Erfrischende Fruchtsäure, cremige Süße, nussiger Biss, vollwertiger Charakter.",
+      "scienceEn": "Invented by Swiss physician Maximilian Bircher-Benner as a raw-food health diet. Soaking oats activates enzymes and softens starches, while whole-apple pectin provides soluble fiber and natural gelling.",
       "scienceDe": "Entwickelt vom Schweizer Arzt Dr. Bircher-Benner als diätetische Rohkost. Das Einweichen schließt die Getreidestärke auf; Apfelpektin liefert wertvolle Ballaststoffe.",
-      "scienceExplainedEn": "Invented by Swiss physician Maximilian Bircher-Benner as a raw-food health diet. Soaking oats activates enzymes and softens starches, while whole-apple pectin provides soluble fiber and natural gelling.",
-      "culinaryDe": "Kühl serviert als gesundes Frühstück, dekoriert mit frischen Beeren und Mandelsplittern.",
       "culinaryEn": "Served chilled in breakfast bowls garnished with fresh berries and toasted almond slivers.",
-      "faqDe": "Warum wird der Apfel samt Kerngehäuse gerieben? Nach der Ursprungsrezeptur enthält das Kerngehäuse wertvolle Pektine und Vitamine.",
+      "culinaryDe": "Kühl serviert als gesundes Frühstück, dekoriert mit frischen Beeren und Mandelsplittern.",
       "faqEn": "Why grate the apple whole including core? Dr. Bircher-Benner believed the peel and core contain vital phytonutrients and pectin.",
+      "faqDe": "Warum wird der Apfel samt Kerngehäuse gerieben? Nach der Ursprungsrezeptur enthält das Kerngehäuse wertvolle Pektine und Vitamine.",
       "allergens": [
         "Milk",
         "Nuts"
@@ -61,28 +66,32 @@
         "Healthy",
         "RawFood"
       ],
-      "isFavorite": true
+      "inStock": true,
+      "stockQuantity": 5,
+      "storageLocation": "Zentrallager",
+      "isFavorite": false
     },
     {
       "id": "cereal_cornflakes_crisp",
       "category": "cereals",
-      "nameDe": "Klassische Cornflakes & Frühstücksflocken",
       "nameEn": "Classic Cornflakes & Crisp Flakes",
-      "subtitleDe": "Aus Maisgrieß gewalzte, getoastete goldgelbe Knusperflocken mit Malzaroma",
+      "nameDe": "Klassische Cornflakes & Frühstücksflocken",
       "subtitleEn": "Toasted milled corn grits formed into golden crispy flakes with malt flavoring",
+      "subtitleDe": "Aus Maisgrieß gewalzte, getoastete goldgelbe Knusperflocken mit Malzaroma",
+      "imageUrl": "https://images.unsplash.com/photo-1525351484163-7529414344d8?w=800&auto=format&fit=crop&q=80",
       "origin": "USA (Battle Creek, Michigan 1894)",
-      "abv": "0.0% ABV",
       "isImport": true,
-      "tasteDe": "Leichter Knusperbiss, getoastete Süße, milde Malznote.",
+      "abv": "0.0% ABV",
       "tasteEn": "Light crisp crunch, toasted corn sweetness, mild malty finish.",
+      "tasteDe": "Leichter Knusperbiss, getoastete Süße, milde Malznote.",
+      "scienceEn": "Corn grits are cooked under steam pressure with flavoring, dried, and flattened between heavy steel rollers before high-temperature oven toasting induces rapid starch expansion (crisp texture).",
       "scienceDe": "Maisgrieß wird dampfgegart, gewalzt und bei hoher Hitze im Ofen getoastet, wodurch die Stärke expandiert und die knusprige Flockenstruktur entsteht.",
-      "scienceExplainedEn": "Corn grits are cooked under steam pressure with flavoring, dried, and flattened between heavy steel rollers before high-temperature oven toasting induces rapid starch expansion (crisp texture).",
-      "culinaryDe": "In einer Schale mit kalter Frischmilch oder Joghurt direkt vor dem Verzehr serviert.",
       "culinaryEn": "Served in a bowl poured with cold fresh milk or yogurt just before consumption.",
-      "faqDe": "Wer erfand Cornflakes? Dr. John Harvey Kellogg entwickelte sie 1894 in Michigan als bekömmliche Diätnahrung.",
+      "culinaryDe": "In einer Schale mit kalter Frischmilch oder Joghurt direkt vor dem Verzehr serviert.",
       "faqEn": "Who invented cornflakes? Dr. John Harvey Kellogg invented them in 1894 at the Battle Creek Sanitarium as a bland health food.",
+      "faqDe": "Wer erfand Cornflakes? Dr. John Harvey Kellogg entwickelte sie 1894 in Michigan als bekömmliche Diätnahrung.",
       "allergens": [
-        "Gluten (Barley malt)"
+        "Gluten (Barley malt"
       ],
       "tags": [
         "Cornflakes",
@@ -91,26 +100,30 @@
         "Crispy",
         "Classic"
       ],
+      "inStock": true,
+      "stockQuantity": 5,
+      "storageLocation": "Zentrallager",
       "isFavorite": false
     },
     {
       "id": "cereal_chocolate_puffs",
       "category": "cereals",
-      "nameDe": "Schokopops & Knusper-Cerealien",
       "nameEn": "Chocolate Puffs & Sweet Breakfast Cereals",
-      "subtitleDe": "Extrudierte Getreidepops mit Kakao-, Zucker- und Honigglasur",
+      "nameDe": "Schokopops & Knusper-Cerealien",
       "subtitleEn": "Extruded puffed grains coated with cocoa, sugar, and honey glaze",
+      "subtitleDe": "Extrudierte Getreidepops mit Kakao-, Zucker- und Honigglasur",
+      "imageUrl": "https://images.unsplash.com/photo-1517673132405-a56a62b18caf?w=800&auto=format&fit=crop&q=80",
       "origin": "International / Modern Breakfast",
-      "abv": "0.0% ABV",
       "isImport": false,
-      "tasteDe": "Süße Kakaonote, luftiger Knusperbiss, färbt die Milch schokoladig ein.",
+      "abv": "0.0% ABV",
       "tasteEn": "Sweet chocolate richness, crispy airy crunch, turns milk deliciously chocolaty.",
+      "tasteDe": "Süße Kakaonote, luftiger Knusperbiss, färbt die Milch schokoladig ein.",
+      "scienceEn": "Produced via grain extrusion: dough is forced through a die under high pressure and temperature, causing trapped moisture to flash-expand into light puffed spheres, then coated with sugar-cocoa syrup.",
       "scienceDe": "Herstellung per Extrusion: Getreideteig wird unter Druck durch Düsen gepresst, expandiert schlagartig zu luftigen Pops und wird mit Kakaoglasur überzogen.",
-      "scienceExplainedEn": "Produced via grain extrusion: dough is forced through a die under high pressure and temperature, causing trapped moisture to flash-expand into light puffed spheres, then coated with sugar-cocoa syrup.",
-      "culinaryDe": "Mit kalter Milch zum Frühstück oder als crunchy Eistopping in der Gastronomie.",
       "culinaryEn": "Served with cold milk at breakfast or as an ice cream topping in gastronomy.",
-      "faqDe": "Warum bleiben sie erst knusprig? Die Zucker-Kakao-Glasur bildet eine Barriere gegen das Aufweichen durch Milch.",
+      "culinaryDe": "Mit kalter Milch zum Frühstück oder als crunchy Eistopping in der Gastronomie.",
       "faqEn": "Why do they stay crunchy initially? The sugar-cocoa coating creates a temporary moisture barrier against milk.",
+      "faqDe": "Warum bleiben sie erst knusprig? Die Zucker-Kakao-Glasur bildet eine Barriere gegen das Aufweichen durch Milch.",
       "allergens": [
         "Gluten"
       ],
@@ -121,6 +134,9 @@
         "KidsBreakfast",
         "SweetPuffs"
       ],
+      "inStock": true,
+      "stockQuantity": 5,
+      "storageLocation": "Zentrallager",
       "isFavorite": false
     }
   ]

@@ -543,7 +543,7 @@ object CuratedDairyCheeseEggsData {
             nameDe = "Spiegelei (Sunny Side Up vs. Over Easy)",
             subtitleEn = "Crisp golden underside, glistening tender white, liquid sunshine yolk",
             subtitleDe = "Krosser Rand, glänzend-weißes Eiklar und flüssig-cremiger Dotter",
-            imageUrl = "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=800&auto=format&fit=crop&q=80",
+            imageUrl = "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f0/Fried_Egg_2.jpg/330px-Fried_Egg_2.jpg",
             origin = "International Breakfast & Bistro Classics (Strammer Max)",
             isImport = false,
             alcoholProcess = AlcoholProductionType.NONE,

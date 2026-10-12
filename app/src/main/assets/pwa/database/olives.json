@@ -1,6 +1,6 @@
 {
   "category": "olives",
-  "count": 8,
+  "count": 7,
   "items": [
     {
       "id": "olive_kalamata_pdo",
@@ -31,15 +31,10 @@
         "PDO",
         "Meze"
       ],
-      "isFavorite": false,
-      "tasteProfileDe": "Fleischig-saftiger Biss, feine Weinessigsäure, edle herbe Fruchtnote, voller öliger Schmelz.",
-      "tasteProfileEn": "Rich, meaty flesh, winey fruity tartness from red wine vinegar, savory umami depth, gentle bitterness.",
-      "scienceExplainedDe": "Kalamata-Oliven (Sorte Kalamon) dürfen nur vollreif und dunkelviolett im Spätherbst von Hand gepflückt werden. Frisch vom Baum sind alle Oliven durch den Bitterstoff Oleuropein ungenießbar. Das traditionelle Verfahren: Die Früchte werden seitlich eingeschnitten, wochenlang in Salzlake gewässert und anschließend in Rotweinessig und Olivenöl eingelegt. Das verleiht ihnen den unnachahmlichen saftigen Biss und die feinsäuerliche Note.",
-      "scienceExplainedEn": "Kalamata olives (Kalamon cultivar) are harvested only when fully tree-ripened to a dark purple-black color in late autumn. Fresh raw olives are intensely bitter due to the defensive polyphenol oleuropein. Traditional Greek curing involves slitting each olive ('charaktis') and soaking them in brine to leach out bitterness, followed by curing in red wine vinegar and extra virgin olive oil. This preserves their firm yet juicy flesh and infuses characteristic winey acidity.",
-      "culinaryServingDe": "Klassisch im echten Bauernsalat (Choriatiki) mit Feta g.U., Oregano, Tomaten und Gurke; auf Meze-Platten oder zu geschmortem Lamm.",
-      "culinaryServingEn": "Classic Greek salad (Horiatiki) with authentic Feta PDO, oregano, tapas platters, and Mediterranean braised lamb.",
-      "guestFaqDe": "Warum sind echte Kalamata-Oliven nie pechschwarz? Weil sie natürlich am Baum reifen: Echte Kalamatas schimmern edel dunkelviolett, pflaumenblau bis weinrot – niemals gleichförmig kohlschwarz!",
-      "guestFaqEn": "Why are real Kalamata olives never jet-black? Kalamata olives ripen naturally into shades of aubergine, dark purple, and deep maroon; uniform jet-black indicates artificial chemical dyeing."
+      "inStock": true,
+      "stockQuantity": 5,
+      "storageLocation": "Zentrallager",
+      "isFavorite": false
     },
     {
       "id": "olive_spanische_gruen_manzanilla",
@@ -60,7 +55,9 @@
       "culinaryDe": "Der Inbegriff der spanischen Tapas-Kultur: Zu trockenem Fino-Sherry, Manchego-Käse oder als Baskischer Pintxo 'Gilda' mit Anchovis und eingelegter Peperoni am Spieß.",
       "faqEn": "What does Gordal mean? 'Gordal' translates to 'The Fat One' in Spanish, referring to its giant, juicy, plump size (queen olive).",
       "faqDe": "Was bedeutet 'Gordal'? Gordal heißt auf Spanisch 'die Dicke' – sie ist die größte Königsolive mit besonders üppigem Fruchtfleisch.",
-      "allergens": [],
+      "allergens": [
+        "None (unless stuffed with fish or nuts"
+      ],
       "tags": [
         "Manzanilla",
         "Gordal",
@@ -68,15 +65,10 @@
         "Tapas",
         "TabelOlives"
       ],
-      "isFavorite": false,
-      "tasteProfileDe": "Knackiger, fester Biss, mild-herbes Fruchtfleisch, angenehm salzig-erfrischend.",
-      "tasteProfileEn": "Crisp firm snap, refreshing herbal tang, delicate mild bitterness, savory brine.",
-      "scienceExplainedDe": "Grüne spanische Oliven werden frühreif geerntet. Beim berühmten 'Sevillana-Verfahren' wird das bittere Oleuropein in kurzer Zeit durch verdünnte alkalische Lösung (Natronlauge für wenige Stunden) neutralisiert. Nach gründlichem Wässern reifen die Oliven in Salzlake durch natürliche Milchsäurebakterien heran. Das erhält das knackige, feste Fruchtfleisch, das sich perfekt entkernen und mit Paprikapaste, Mandeln oder Anchovis füllen lässt.",
-      "scienceExplainedEn": "Spanish green olives are picked while firm and green in early autumn. In the 'Spanish/Seville method', olives are treated with a dilute food-grade alkaline solution (sodium hydroxide lye) for 6-8 hours to hydrolyze bitter oleuropein into non-bitter hydroxytyrosol. They are thoroughly washed with fresh water and placed in brine, where natural lactic acid bacteria (Lactobacillus plantarum) ferment sugars into lactic acid (lowering pH to ~3.8), creating their crisp texture and pleasant tangy bite.",
-      "culinaryServingDe": "Der Inbegriff der spanischen Tapas-Kultur: Zu trockenem Fino-Sherry, Manchego-Käse oder als Baskischer Pintxo 'Gilda' mit Anchovis und eingelegter Peperoni am Spieß.",
-      "culinaryServingEn": "Classic Spanish tapas bars served with ice-cold fino sherry, Marcona almonds, or skewered with anchovies (Gilda pintxo).",
-      "guestFaqDe": "Was bedeutet 'Gordal'? Gordal heißt auf Spanisch 'die Dicke' – sie ist die größte Königsolive mit besonders üppigem Fruchtfleisch.",
-      "guestFaqEn": "What does Gordal mean? 'Gordal' translates to 'The Fat One' in Spanish, referring to its giant, juicy, plump size (queen olive)."
+      "inStock": true,
+      "stockQuantity": 5,
+      "storageLocation": "Zentrallager",
+      "isFavorite": false
     },
     {
       "id": "olive_throuba_thassos_runzel",
@@ -107,15 +99,10 @@
         "PDO",
         "SunDried"
       ],
-      "isFavorite": false,
-      "tasteProfileDe": "Samtig-weiche Rosinen-Textur, hochkonzentriertes Olivenölaroma, milde Trockenfruchtsüße, kein Wassergeschmack.",
-      "tasteProfileEn": "Soft raisin-like texture, rich concentrated olive oil flavor, mellow fruity sweetness, no watery brine.",
-      "scienceExplainedDe": "Die Throuba-Olive von der Insel Thassos ist eine botanische Weltsensation: Sie muss weder in Lauge noch in Essig eingelegt werden! Beim Ausreifen am Baum bis in den Spätherbst bildet sich durch die feuchte ägäische Meeresbrise ein natürlicher Hefepilz (Phoma oleae), der den Bitterstoff Oleuropein direkt am Zweig enzymatisch abbaut. Die Oliven schrumpfen am Ast in der Herbstsonne zu delikaten Runzeloliven mit intensivem Olivenölschmelz.",
-      "scienceExplainedEn": "Throuba Thassos is a rare natural miracle of Mediterranean botany. Unlike virtually all other table olives on Earth, it does NOT require lye, boiling, or long water soaking to remove bitterness. As the fruit fully ripens on the tree into late November, a harmless symbiotic fungus (Phoma oleae) develops in the Aegean sea breeze, producing enzymes that hydrolyze bitter oleuropein directly while the olive is still attached to the branch. The olives naturally wrinkle and dry under the autumn sun.",
-      "culinaryServingDe": "Nur mit etwas nativem Olivenöl und Wild-Oregano beträufelt; perfekt zu Ziegenkäse, warmem Fladenbrot und gehaltvollem Rotwein.",
-      "culinaryServingEn": "Drizzled with extra virgin olive oil and oregano, alongside baked goat cheese, fresh country bread, and red wine.",
-      "guestFaqDe": "Warum sehen Runzeloliven aus wie Pflaumen? Weil sie das Wasser direkt am Baum durch Verdunstung verlieren; dadurch schmecken sie extrem cremig und ölreich.",
-      "guestFaqEn": "Why do wrinkled Throuba olives look like black prunes? They lose moisture naturally on the branch, concentrating natural olive oils without water dilution."
+      "inStock": true,
+      "stockQuantity": 5,
+      "storageLocation": "Zentrallager",
+      "isFavorite": false
     },
     {
       "id": "olive_echt_schwarz_vs_gefaerbt",
@@ -146,15 +133,10 @@
         "QualityCheck",
         "GastronomyKnowledge"
       ],
-      "isFavorite": false,
-      "tasteProfileDe": "Echt schwarz: Zart, weich, saftig, ölig-fruchtig. Künstlich geschwärzt: Gummig-hart, wässrig, metallischer Beigeschmack.",
-      "tasteProfileEn": "Real Black: Soft, tender, oily, complex savory fruit. Dyed Black: Rubber-firm, watery, metallic aftertaste.",
-      "scienceExplainedDe": "Eines der wichtigsten Unterscheidungsmerkmale im Restaurant: 1) Echte schwarze Oliven reifen bis zu 6 Monate am Baum, bis sie tiefviolett bis schwarzbraun sind. Sie sind weich, voller gesunder Fettsäuren und haben einen aromatischen Schmelz.\\n2) Chemisch geschwärzte Oliven (Standard auf Billigpizzen): Es sind billige, unreife, steinhart geerntete GRÜNE Oliven. Sie werden in Natronlauge gebadet, mit Sauerstoff begast und mit dem Zusatzstoff Eisen-II-gluconat (E579) tiefschwarz gefärbt. Sie schmecken wässrig-metallisch und bleiben unnatürlich zäh.",
-      "scienceExplainedEn": "A vital quality distinction in gastronomy: 1) Naturally black olives remain on the tree for months until fully ripe, changing from green to purple to deep brownish-black; their flesh is soft, rich in oleic acid, and contains authentic olive fruit complexity. 2) Chemically blackened olives are cheap, rock-hard, UNRIPE green olives soaked in lye, injected with compressed air/oxygen bubbles to oxidize the skin black, and fixed with Iron(II) gluconate (E579) or Iron lactate (E585). In the EU, these must be legally labeled as 'geschwärzt' (blackened).",
-      "culinaryServingDe": "Die gehobene Gastronomie serviert ausschließlich natürlich gereifte schwarze Oliven – am besten mit Stein, da entsteinte Oliven schnell wässern und an Geschmack verlieren.",
-      "culinaryServingEn": "High-end restaurants serve only naturally ripe black olives with pits intact (pitted olives lose volatile oils much faster).",
-      "guestFaqDe": "Wie erkennt der Gast geschwärzte Oliven? An der unnatürlichen Festigkeit und Farbe: Tief rabenschwarz, gummig-fest und oft mit metallischem Unterton.",
-      "guestFaqEn": "How can a guest tell if a black olive is fake? Check the pit and texture: if the olive is jet-black, rock-hard, and rubbery with a metallic hint, it was dyed with iron gluconate (E579)."
+      "inStock": true,
+      "stockQuantity": 5,
+      "storageLocation": "Zentrallager",
+      "isFavorite": false
     },
     {
       "id": "olive_arabisch_beldi_marokko",
@@ -185,15 +167,10 @@
         "Mezze",
         "PreservedLemon"
       ],
-      "isFavorite": false,
-      "tasteProfileDe": "Pikant-würzig, feine Säure eingelegter Salzzitronen, erdiger Kreuzkümmel, dezente Harissa-Schärfe.",
-      "tasteProfileEn": "Tangy, intensely savory, floral lemon salinity, warm cumin spice, gentle chili heat from harissa.",
-      "scienceExplainedDe": "In der arabischen und nordafrikanischen Gastronomie sind Beldi-Oliven der Star jeder Vorspeisentafel (Mezze). Sie werden nach der Ernte in grobem Meersalz trocken geschichtet, wodurch das Bitterwasser abtropft. Anschließend werden sie mit gehackten marokkanischen Salzzitronen (die wochenlang in Salzlake gereift sind), Knoblauch, Koriandersamen, Kreuzkümmel und scharfer Harissa mariniert – eine unvergleichliche Geschmacksexplosion zu frischem Fladenbrot.",
-      "scienceExplainedEn": "Beldi olives from Morocco are harvested late and dry-salted in layers of coarse sea salt ('dry-curing') for several weeks, draining moisture through woven baskets without water brine. The olives are then rinsed and tossed with preserved lemons (fermented in salt and their own juice until the rinds turn tender and fragrant), freshly toasted cumin, garlic, and hot harissa paste. This creates the quintessential Arab mezze staple, where rich olive oil balances spicy capsaicin and citrus.",
-      "culinaryServingDe": "Mittelpunkt der arabischen Mezze-Tafel: Mit warmem Fladenbrot (Khobz), Hummus, Baba Ghanoush und zu marokkanischen Schmortöpfen (Tajine).",
-      "culinaryServingEn": "Arab mezze table served with warm pita or khobz flatbread, hummus, labneh, and braised lamb tagine with prunes.",
-      "guestFaqDe": "Warum Salzzitronen dazu? Durch die Fermentation verliert die Zitronenschale ihre Bitterkeit und schmeckt betörend blumig-herb – die perfekte Frische zum Olivenöl.",
-      "guestFaqEn": "Why are preserved lemons used with olives? Salt-preserved lemons (L'hamd Marakad) have tender, non-bitter rinds rich in floral limonene oils that cut through the richness of cured olives."
+      "inStock": true,
+      "stockQuantity": 5,
+      "storageLocation": "Zentrallager",
+      "isFavorite": false
     },
     {
       "id": "olive_taggiasca_liguria",
@@ -224,15 +201,10 @@
         "Gourmet",
         "FineDining"
       ],
-      "isFavorite": false,
-      "tasteProfileDe": "Süßlich-mild, feine Haselnuss- und Mandelnoten, buttrig, keinerlei kratzende Bitterkeit.",
-      "tasteProfileEn": "Sweet, delicate, nutty almond notes, buttery smooth texture, completely free of harsh tannin.",
-      "scienceExplainedDe": "Die Taggiasca-Olive wurde von Benediktinermönchen nach Ligurien gebracht. Auf steilen Trockenstein-Terrassen direkt über dem Meer gewachsen, reifen die winzigen Früchte bunt von grün über violett bis braun. Sie besitzen einen extrem hohen natürlichen Ölgehalt und kaum Gerbstoffe. Ihr buttrig-süßer, nussiger Geschmack macht sie zum Liebling der europäischen Sterneköche.",
-      "scienceExplainedEn": "Taggiasca olives were brought to Liguria by Benedictine monks in the 17th century. Growing on precipitous, sun-drenched dry-stone terraces facing the sea, the small fruits develop exceptionally high lipid (oil) content and minimal bitter glucoside levels. Harvested carefully with wooden poles over nets, their delicate, sweet, hazelnut-scented pulp makes them a prized favorite in Michelin-starred gastronomy.",
-      "culinaryServingDe": "Klassiker der feinen ligurischen Küche: Zu gegrilltem Wolfsbarsch (Branzino), Rinderfilet, ligurischer Focaccia und feinen Salaten.",
-      "culinaryServingEn": "Paired with delicate white fish (sea bass / orata), veal scallopini, pasta with rabbit ragù, and focaccia ligure.",
-      "guestFaqDe": "Warum sind Taggiasca-Oliven so klein und verschiedenfarbig? Weil sie am Baum bunt gemischt reifen; das kleine Format enthält kaum Wasser, dafür geballtes Aroma und edles Öl.",
-      "guestFaqEn": "Why are Taggiasca olives so small and varied in color? Genuine Taggiasca olives are harvested when ripeness is mixed; their small size concentrates sugars and fats instead of water."
+      "inStock": true,
+      "stockQuantity": 5,
+      "storageLocation": "Zentrallager",
+      "isFavorite": false
     },
     {
       "id": "olive_arabisch_souri_nabali",
@@ -264,51 +236,10 @@
         "Mezze",
         "Makbous"
       ],
-      "isFavorite": false,
-      "tasteProfileDe": "Pfeffrige Schärfe, lebendige Zitrusfrische, angenehm herber Biss, feurige Chili-Note, vollfruchtiges Olivenaroma.",
-      "tasteProfileEn": "Vibrant peppery bite, crisp firm crunch, aromatic citrus acidity, spicy chili kick, deep grassy olive fruit.",
-      "scienceExplainedDe": "Der Nahe Osten ist die Wiege des Olivenbaums: Schon vor über 6.000 Jahren wurden in der Levante Oliven kultiviert. Die Sorten Souri (benannt nach der phönizischen Hafenstadt Tyros/Sour) und Nabali sind weltberühmt für ihren extrem hohen Ölgehalt und pfeffrige Polyphenole. Die arabische Zubereitung: Die grünen Früchte werden mit einem Holzhammer einzeln angeklopft ('Zeitoun Makbous'), damit Salzlake, Zitronensaft, Knoblauch und frische Chilis direkt ins Fruchtfleisch einziehen können – der unverzichtbare König jeder levantinischen Mezze-Tafel.",
-      "scienceExplainedEn": "The Levant is the evolutionary birthplace of olive domestication (dating back over 6,000 years). The Souri (named after the historic Phoenician city of Tyre/Sour) and Nabali cultivars are prized for very high oil yields and bold polyphenol levels. Traditional Arab preparation: Green olives are carefully 'cracked' (bruised with a stone or mallet, 'Makbous' or 'Zaytoun Majrouh') to allow brine, fresh lemon juice, garlic, and hot green peppers to penetrate directly into the flesh. Fermented naturally in 10% sea salt brine, maintaining crisp crunch and invigorating sharpness.",
-      "culinaryServingDe": "Unverzichtbar zum arabischen Frühstück und zur Mezze: Mit frischem Olivenöl, Za'atar, warmem Fladenbrot, Labneh (Frischkäsebällchen) und Falafel.",
-      "culinaryServingEn": "Essential Arab breakfast and mezze: Served with freshly pressed olive oil, za'atar, warm pita bread, labneh balls, and shakshuka.",
-      "guestFaqDe": "Warum werden die Oliven angeklopft? Das Anklopfen öffnet die Fruchthaut, sodass Bitterstoffe schneller entweichen und der Zitronen-Chili-Sud tief ins Fleisch zieht.",
-      "guestFaqEn": "Why are the olives cracked before brining? Cracking the skin allows bitter oleuropein to leach out much faster while infusing fresh lemon juice and chili deep into the fruit pulp."
-    },
-    {
-      "id": "olives_castelvetrano_sicily",
-      "category": "olives",
-      "nameEn": "Castelvetrano Green Olives (Nocellara)",
-      "nameDe": "Castelvetrano Oliven (Nocellara del Belice DOP)",
-      "subtitleEn": "Bright emerald green Sicilian olives renowned for buttery, mild, sweet crunch",
-      "subtitleDe": "Leuchtend smaragdgrüne sizilianische Oliven mit buttrig-mildem, knackigem Fruchtfleisch",
-      "imageUrl": "https://images.unsplash.com/photo-1541256942802-7b2996a600c3?w=800&auto=format&fit=crop&q=80",
-      "origin": "Italy (Sicily, Valle del Belice)",
-      "isImport": true,
-      "abv": "0.0% ABV",
-      "tasteEn": "Creamy sweet butter, fresh grass, crisp green apple, mild salinity, zero bitter bite.",
-      "tasteDe": "Süßliche Butter, frisches Gras, knackig-fester Biss, extrem mild und ohne bittere Herbe.",
-      "scienceEn": "Castelvetrano method: fresh green olives are cured using gentle alkaline lye wash that removes oleuropein bitterness in just days, locking in emerald color.",
-      "scienceDe": "Das Castelvetrano-Verfahren entbittert die Oliven schnell und schonend, wodurch die frische grüne Farbe und Knackigkeit erhalten bleiben.",
-      "culinaryEn": "The premier aperitivo olive; served alongside Prosecco, dry vermouth, or tossed into seafood salads.",
-      "culinaryDe": "Die beliebteste Aperitivo-Olive Italiens; unverzichtbar zum Sprizz, Martini oder milden Schafskäse.",
-      "faqEn": "Why are they so bright green? Picked early in harvest and processed without dark fermentation, retaining intact chlorophyll.",
-      "faqDe": "Warum sind sie so leuchtend grün? Früh geerntet und sofort verarbeitet, wodurch das Chlorophyll nicht oxidiert.",
-      "allergens": [],
-      "tags": [
-        "Olives",
-        "Castelvetrano",
-        "Sicily",
-        "DOP",
-        "Aperitivo"
-      ],
-      "tasteProfileDe": "Süßliche Butter, frisches Gras, knackig-fester Biss, extrem mild und ohne bittere Herbe.",
-      "tasteProfileEn": "Creamy sweet butter, fresh grass, crisp green apple, mild salinity, zero bitter bite.",
-      "scienceExplainedDe": "Das Castelvetrano-Verfahren entbittert die Oliven schnell und schonend, wodurch die frische grüne Farbe und Knackigkeit erhalten bleiben.",
-      "scienceExplainedEn": "Castelvetrano method: fresh green olives are cured using gentle alkaline lye wash that removes oleuropein bitterness in just days, locking in emerald color.",
-      "culinaryServingDe": "Die beliebteste Aperitivo-Olive Italiens; unverzichtbar zum Sprizz, Martini oder milden Schafskäse.",
-      "culinaryServingEn": "The premier aperitivo olive; served alongside Prosecco, dry vermouth, or tossed into seafood salads.",
-      "guestFaqDe": "Warum sind sie so leuchtend grün? Früh geerntet und sofort verarbeitet, wodurch das Chlorophyll nicht oxidiert.",
-      "guestFaqEn": "Why are they so bright green? Picked early in harvest and processed without dark fermentation, retaining intact chlorophyll."
+      "inStock": true,
+      "stockQuantity": 5,
+      "storageLocation": "Zentrallager",
+      "isFavorite": false
     }
   ]
 }

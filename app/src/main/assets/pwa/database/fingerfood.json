@@ -21,7 +21,9 @@
       "culinaryDe": "Warm serviert als Fingerfood: Klassisch Tomate-Basilikum, Hühnerlebermousse oder Feige-Gorgonzola.",
       "faqEn": "Why must bread be rubbed with garlic while still hot? Heat opens the bread pores and volatilizes garlic oils without tasting bitter or raw.",
       "faqDe": "Warum den Knoblauch auf das heiße Brot reiben? Die Hitze schmilzt das Knoblauchöl sanft in die Kruste, ohne scharf oder brennend zu schmecken.",
-      "allergens": [],
+      "allergens": [
+        "Cereals containing Gluten (Wheat"
+      ],
       "tags": [
         "Bruschetta",
         "Crostini",
@@ -29,15 +31,10 @@
         "Garlic",
         "Tomatoes"
       ],
-      "isFavorite": false,
-      "tasteProfileDe": "Knusprig geröstet, pikante Knoblauchschärfe, süßlich-fruchtige Tomatenfrische, aromatisches Olivenöl.",
-      "tasteProfileEn": "Crisp charred crunch, pungent garlic warmth, sweet juicy tomato acidity, grassy floral olive oil, herbal basil freshness.",
-      "scienceExplainedDe": "Das Wort Bruschetta stammt vom römischen 'bruscare' (über Kohlen rösten). Die raue, heiße Röstkruste wirkt wie eine Knoblauchreibe: Das ätherische Allicin der Knoblauchzehe wird mikrofein in die Poren gerieben. Mit reifen Tomaten und Olivenöl belegt, entsteht in 1–2 Bissen die pure Essenz mediterraner Gastfreundschaft.",
-      "scienceExplainedEn": "Bruschetta derives from the Roman dialect verb 'bruscare' (to toast over coals). Rubbing a raw, cut garlic clove against the hot, rough crust acts like a grater; garlic cell walls rupture, depositing allicin oils into the pores. Adding diced seeded tomatoes dressed with salt and EVOO creates a fast emulsion that seasons the warm bread without making it soggy immediately.",
-      "culinaryServingDe": "Warm serviert als Fingerfood: Klassisch Tomate-Basilikum, Hühnerlebermousse oder Feige-Gorgonzola.",
-      "culinaryServingEn": "Served warm as an aperitivo finger food: Classic Tomato-Basil, Chicken Liver Mousse, or Fig-Gorgonzola.",
-      "guestFaqDe": "Warum den Knoblauch auf das heiße Brot reiben? Die Hitze schmilzt das Knoblauchöl sanft in die Kruste, ohne scharf oder brennend zu schmecken.",
-      "guestFaqEn": "Why must bread be rubbed with garlic while still hot? Heat opens the bread pores and volatilizes garlic oils without tasting bitter or raw."
+      "inStock": true,
+      "stockQuantity": 5,
+      "storageLocation": "Zentrallager",
+      "isFavorite": false
     },
     {
       "id": "snack_mini_arancini_siciliani",
@@ -58,7 +55,9 @@
       "culinaryDe": "Heißes Fingerfood ohne Besteck, serviert mit Kräuter-Aioli oder feurigem Arrabbiata-Dip.",
       "faqEn": "Why does the mozzarella center melt without bursting the ball? Saffron rice acts as a thermal cushion, insulating the cheese core during rapid frying.",
       "faqDe": "Warum platzen Arancini beim Frittieren nicht? Die Reishülle puffert die Hitze ab, sodass der Käse schmilzt, ohne dass Dampfdruck die Hülle sprengt.",
-      "allergens": [],
+      "allergens": [
+        "Cereals containing Gluten (Wheat"
+      ],
       "tags": [
         "Arancini",
         "Sicily",
@@ -66,15 +65,10 @@
         "Fingerfood",
         "Mozzarella"
       ],
-      "isFavorite": false,
-      "tasteProfileDe": "Knusprige goldbraune Panade, cremiger Safranreis, schmelzender Käsestreck-Kern, würziges Ragù.",
-      "tasteProfileEn": "Ultra-crispy golden shell, creamy saffron rice interior, hot gooey cheese pull, rich savory ragù core.",
-      "scienceExplainedDe": "Arancini ('kleine Orangen') sind das Meisterwerk sizilianischer Straßenküche: Kaltes, geliertes Risotto lässt sich perfekt um einen Kern aus Mozzarella und Fleischragù formen. Beim Frittieren bei 175°C schützt die Panade den Reis, während der Mozzarella im Kern zu flüssigen Käsesträngen schmilzt.",
-      "scienceExplainedEn": "Arancini ('little oranges') solve the culinary challenge of repurposing leftover risotto. As cooked risotto cools, amylopectin starches retrograde and solidify, making the rice easily moldable around a chilled mozzarella cube. Coated in flour, egg, and breadcrumbs and deep-fried at 175°C, the exterior turns crisp in 3 minutes while latent heat melts the interior mozzarella into an elastic cheese pull.",
-      "culinaryServingDe": "Heißes Fingerfood ohne Besteck, serviert mit Kräuter-Aioli oder feurigem Arrabbiata-Dip.",
-      "culinaryServingEn": "Handheld party bite served with lemon wedges, spicy arrabbiata dip, or garlic herb aioli.",
-      "guestFaqDe": "Warum platzen Arancini beim Frittieren nicht? Die Reishülle puffert die Hitze ab, sodass der Käse schmilzt, ohne dass Dampfdruck die Hülle sprengt.",
-      "guestFaqEn": "Why does the mozzarella center melt without bursting the ball? Saffron rice acts as a thermal cushion, insulating the cheese core during rapid frying."
+      "inStock": true,
+      "stockQuantity": 5,
+      "storageLocation": "Zentrallager",
+      "isFavorite": false
     },
     {
       "id": "snack_yakitori_skewers",
@@ -96,7 +90,8 @@
       "faqEn": "Tare vs. Shio Yakitori? 'Tare' is sweet soy-mirin glazed; 'Shio' is seasoned purely with mineral sea salt and lemon juice.",
       "faqDe": "Unterschied Tare zu Shio? Tare ist süß-salzig glasiert; Shio wird pur nur mit Meersalz und Zitrone gewürzt.",
       "allergens": [
-        "Soybeans"
+        "Soybeans",
+        "Cereals containing Gluten (in Soy Sauce"
       ],
       "tags": [
         "Yakitori",
@@ -105,15 +100,10 @@
         "Tare",
         "Fingerfood"
       ],
-      "isFavorite": false,
-      "tasteProfileDe": "Rauchige Holzkohlenote, süß-salziges Umami der Tare-Glasur, saftiges Fleisch, süßliche Frühlingszwiebel.",
-      "tasteProfileEn": "Smoky binchotan charcoal char, sweet-savory umami glaze, succulent tender chicken, sweet roasted onion sharpness.",
-      "scienceExplainedDe": "Klassiker der japanischen Izakaya-Kultur: Auf Binchotan-Kohle gegrillt, die intensive Infrarothitze abgibt. Die Spieße werden mehrfach in die Tare-Sauce getaucht, wodurch der Zucker und die Soja-Aminosäuren eine glänzende, rauchige Umami-Glasur bilden.",
-      "scienceExplainedEn": "Cooked on narrow ceramic grills over white oak charcoal (Binchotan), which burns flameless at intense infrared temperatures (over 1000°C). Infrared radiation instantly caramelizes meat surfaces without drying interior juices. Skewers are dipped 2-3 times into a master 'Tare' vat; each dip sizzles onto the meat, building a shiny lacquered glaze of caramelized sugars, amino acids, and chicken lipids.",
-      "culinaryServingDe": "Heiß direkt vom Rost serviert mit Shichimi-Chiligewürz und eiskaltem japanischem Bier oder trockenem Sake.",
-      "culinaryServingEn": "Served piping hot from the grill with shichimi togarashi (7-spice chili blend) and cold Japanese draft beer.",
-      "guestFaqDe": "Unterschied Tare zu Shio? Tare ist süß-salzig glasiert; Shio wird pur nur mit Meersalz und Zitrone gewürzt.",
-      "guestFaqEn": "Tare vs. Shio Yakitori? 'Tare' is sweet soy-mirin glazed; 'Shio' is seasoned purely with mineral sea salt and lemon juice."
+      "inStock": true,
+      "stockQuantity": 5,
+      "storageLocation": "Zentrallager",
+      "isFavorite": false
     },
     {
       "id": "snack_empanadas_mini",
@@ -134,7 +124,9 @@
       "culinaryDe": "Handlich aus der Serviette gegessen, serviert mit feuriger Salsa Criolla oder frischem Chimichurri.",
       "faqEn": "Baked vs. Fried Empanadas? Mendoza/Salta style are oven-baked ('al horno'); coastal and street styles are deep-fried ('fritas').",
       "faqDe": "Gebacken oder frittiert? In den Andenregionen (Salta/Mendoza) werden sie im Ofen gebacken; an der Küste oft knusprig frittiert.",
-      "allergens": [],
+      "allergens": [
+        "Cereals containing Gluten (Wheat"
+      ],
       "tags": [
         "Empanadas",
         "Argentina",
@@ -142,15 +134,10 @@
         "Pastry",
         "Chimichurri"
       ],
-      "isFavorite": false,
-      "tasteProfileDe": "Mürbe Teighülle, saftige Fleischfüllung mit Kreuzkümmel- und Paprikanote, salzige Olive und süßliche Zwiebel.",
-      "tasteProfileEn": "Flaky tender pastry, warm aromatic cumin and paprika heat, juicy savory beef juices, briny olive contrast.",
-      "scienceExplainedDe": "Das Geheimnis des Teigs ist Schmalz oder Rinderfett, das für zarte Mürbheit sorgt. Das Rindfleisch wird mit reichlich Zwiebeln und Kreuzkümmel geschmort; beim Erkalten geliert der Fleischsaft, der beim Backen wieder zu einer saftigen Brühe schmilzt. Der kunstvoll geflochtene Teigrand ('repulgue') zeigt traditionell die Füllungsart an.",
-      "scienceExplainedEn": "Authentic Argentine empanada pastry uses rendered beef tallow ('grasa vacuna') or lard instead of plain vegetable shortening. The animal fat creates tender, flaky dough layers. Filling must contain equal parts onions to beef; as onions slow-cook and cool, they release moisture that solidifies into gelatin, turning into hot liquid broth when the pastry is baked at high heat (220°C). The sealed edge ('repulgue') indicates the filling variety.",
-      "culinaryServingDe": "Handlich aus der Serviette gegessen, serviert mit feuriger Salsa Criolla oder frischem Chimichurri.",
-      "culinaryServingEn": "Served hand-held with herbaceous Chimichurri or spicy Criolla salsa and Argentine Malbec.",
-      "guestFaqDe": "Gebacken oder frittiert? In den Andenregionen (Salta/Mendoza) werden sie im Ofen gebacken; an der Küste oft knusprig frittiert.",
-      "guestFaqEn": "Baked vs. Fried Empanadas? Mendoza/Salta style are oven-baked ('al horno'); coastal and street styles are deep-fried ('fritas')."
+      "inStock": true,
+      "stockQuantity": 5,
+      "storageLocation": "Zentrallager",
+      "isFavorite": false
     },
     {
       "id": "snack_gyoza_potstickers",
@@ -171,7 +158,9 @@
       "culinaryDe": "Kross nach oben serviert mit klassischem Dip aus Sojasauce, Reisessig und scharfem Rayu-Chiliöl.",
       "faqEn": "Why is napa cabbage salted before filling? Salt draws excess water out by osmosis, preventing the dumplings from getting soggy while preserving crisp crunch.",
       "faqDe": "Warum wird der Kohl vor dem Füllen eingesalzen? Das Salz entzieht dem Kohl Wasser, damit die Taschen beim Braten nicht verwässern.",
-      "allergens": [],
+      "allergens": [
+        "Cereals containing Gluten (Wheat"
+      ],
       "tags": [
         "Gyoza",
         "Potstickers",
@@ -179,15 +168,10 @@
         "Dumplings",
         "CrispyBottom"
       ],
-      "isFavorite": false,
-      "tasteProfileDe": "Spannender Texturkontrast: Knusprig-krosser Boden, seidig-weiche Oberseite, saftige würzige Fleischfüllung mit Ingwer.",
-      "tasteProfileEn": "Addictive textural contrast: glass-crisp fried bottom, silky tender steamed top, fragrant ginger-garlic pork broth inside.",
-      "scienceExplainedDe": "Gyoza vereinen zwei Garmethoden in einer Pfanne: Zuerst werden die Böden im heißen Sesamöl kross angebraten. Dann wird ein Schuss Wasser mit Stärke hinzugegeben und der Deckel geschlossen. Der heiße Dampf gart das Fleisch und macht die Teighülle samtig; wenn das Wasser verdampft ist, frittiert der Boden zu einer hauchdünnen Knusper-Spitze ('Hanetsuki').",
-      "scienceExplainedEn": "Gyoza are cooked via a two-stage method ('potstickers'): 1) Dumplings are arranged in a hot oiled skillet to fry the flat bottoms until golden brown. 2) Water (often mixed with cornstarch for a crispy lace skirt 'hanetsuki') is splashed in and covered immediately. Steam (100°C) cooks the wrappers and gelatinizes starch without burning. As water fully evaporates, the remaining oil re-crisps the bottom into shatteringly brittle lace.",
-      "culinaryServingDe": "Kross nach oben serviert mit klassischem Dip aus Sojasauce, Reisessig und scharfem Rayu-Chiliöl.",
-      "culinaryServingEn": "Arranged crispy-side up with dipping ramekins of soy sauce, rice vinegar, and spicy rayu chili oil.",
-      "guestFaqDe": "Warum wird der Kohl vor dem Füllen eingesalzen? Das Salz entzieht dem Kohl Wasser, damit die Taschen beim Braten nicht verwässern.",
-      "guestFaqEn": "Why is napa cabbage salted before filling? Salt draws excess water out by osmosis, preventing the dumplings from getting soggy while preserving crisp crunch."
+      "inStock": true,
+      "stockQuantity": 5,
+      "storageLocation": "Zentrallager",
+      "isFavorite": false
     },
     {
       "id": "snack_falafel_bites",
@@ -208,7 +192,9 @@
       "culinaryDe": "Heiß serviert auf cremiger Tahina-Sesamsauce oder Minzjoghurt mit rosa eingelegtem Rettich (Lifft).",
       "faqEn": "Why do cheap falafels feel heavy and dry? They were made from canned chickpeas or dry commercial falafel powder instead of fresh soaked legumes.",
       "faqDe": "Warum sind schlechte Falafel trocken und schwer? Weil billige Fertigmischungen oder Dosenkichererbsen statt frischer Rohware verwendet wurden.",
-      "allergens": [],
+      "allergens": [
+        "Sesame (in Tahini and crust"
+      ],
       "tags": [
         "Falafel",
         "Levant",
@@ -217,15 +203,10 @@
         "Tahini",
         "StreetFood"
       ],
-      "isFavorite": false,
-      "tasteProfileDe": "Herrlich krosse Kruste, federleicht-lockerer smaragdgrüner Kern, erdiger Kreuzkümmel, frische Kräuter, nussiger Sesam.",
-      "tasteProfileEn": "Deeply crunchy exterior, light fluffy vibrant-green crumb, warm earthy cumin and coriander spice, fresh herbal finish.",
-      "scienceExplainedDe": "Das unumstößliche Gesetz echter Falafel: Sie dürfen NIEMALS aus Dosenkichererbsen gemacht werden! Vorgekochte Kichererbsen werden beim Frittieren matschig und schwer. Rohe, 24 Stunden eingeweichte Kichererbsen werden mit frischen Kräutern grob gemahlen; beim Frittieren quillt die Stärke erst im Fett auf und bildet einen fluffig-leichten Kern mit extrem krosser Hülle.",
-      "scienceExplainedEn": "The cardinal rule of authentic falafel: use SOAKED DRIED CHICKPEAS, never canned or pre-cooked. Canned chickpeas have pre-gelatinized starch that turns into heavy, dense mush when fried. Soaked raw chickpeas retain intact starch granules that puff, expand, and set during frying (180°C), creating a light, airy, sponge-like interior packed with fresh herbal chlorophyll.",
-      "culinaryServingDe": "Heiß serviert auf cremiger Tahina-Sesamsauce oder Minzjoghurt mit rosa eingelegtem Rettich (Lifft).",
-      "culinaryServingEn": "Served hot on a bed of silky nutty tahini sauce or lemon-garlic mint yogurt with pickled pink turnips.",
-      "guestFaqDe": "Warum sind schlechte Falafel trocken und schwer? Weil billige Fertigmischungen oder Dosenkichererbsen statt frischer Rohware verwendet wurden.",
-      "guestFaqEn": "Why do cheap falafels feel heavy and dry? They were made from canned chickpeas or dry commercial falafel powder instead of fresh soaked legumes."
+      "inStock": true,
+      "stockQuantity": 5,
+      "storageLocation": "Zentrallager",
+      "isFavorite": false
     }
   ]
 }

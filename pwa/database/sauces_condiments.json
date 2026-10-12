@@ -9,7 +9,7 @@
       "nameDe": "Klassischer Tomatenketchup",
       "subtitleEn": "Concentrated ripe tomato paste, vinegar, cane sugar & warm spices (clove, allspice); high natural free glutamates",
       "subtitleDe": "Tomatenmark, Essig, Zucker, Salz, Gewürzextrakte (Piment, Nelke); süß-säuerlich, umamireich, glatt-viskos",
-      "imageUrl": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800&auto=format&fit=crop&q=80",
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/Ketchup_20160918_181342_%28cropped%29.jpg/330px-Ketchup_20160918_181342_%28cropped%29.jpg",
       "origin": "Origin in East Asia (Ke-tsiap fish sauce) refined in 19th Century America (Henry Heinz)",
       "isImport": false,
       "abv": "0.0% ABV",
@@ -31,15 +31,10 @@
         "Burger",
         "Condiments"
       ],
-      "isFavorite": false,
-      "tasteProfileDe": "Süß-säuerlich, umamireich, glatt-viskos, fruchtige Tomatentiefe, feine Nelkenwürze.",
-      "tasteProfileEn": "Sweet-tangy equilibrium, deep concentrated sun-dried tomato depth, warm clove spice, savory umami finish.",
-      "scienceExplainedDe": "Ketchup ist die vollendete Synergie aus süß, sauer, salzig und umami: Vollreife Tomaten besitzen enorme Mengen freier Glutaminsäure. Physikalisch ist Ketchup thixotrop (strukturviskos): In Ruhe zähflüssig, verflüssigt er sich durch Erschütterung (Klopfen auf den Flaschenhals).",
-      "scienceExplainedEn": "Ripe tomatoes contain the highest concentration of naturally occurring free L-glutamate of any common fruit (~140-250mg per 100g). Combined with acetic acid and sucrose, it creates a sensory 'flavor synergy' activating sweet, sour, salty, and umami receptors simultaneously. Ketchup is famously thixotropic (shear-thinning): thick at rest, flows when shaken.",
-      "culinaryServingDe": "Klassiker zu Burgern, Pommes Frites, Glasuren für Spareribs und Basis für BBQ- und Currywurstsaucen.",
-      "culinaryServingEn": "Burger topping, French fries, glaze base for barbecue sauces, meatloaf, or currywurst.",
-      "guestFaqDe": "Warum hilft Klopfen gegen verstopfte Ketchup-Flaschen? Durch die mechanische Erschütterung wird das zähe Pektin-Gitter kurzzeitig flüssig.",
-      "guestFaqEn": "Why does tapping a glass ketchup bottle make it pour? Mechanical force temporarily breaks the colloidal pectin network, lowering viscosity."
+      "inStock": true,
+      "stockQuantity": 5,
+      "storageLocation": "Zentrallager",
+      "isFavorite": false
     },
     {
       "id": "mustard_mittelscharf_vs_dijon",
@@ -48,7 +43,7 @@
       "nameDe": "Dijonsenf (Moutarde de Dijon)",
       "subtitleEn": "Brown/black mustard seeds, verjus or white wine, water, salt; sharp, pungent, unsweetened nasal kick",
       "subtitleDe": "Braune/schwarze Senfsaat, Verjus oder Weißwein, Wasser, Salz; scharf, stechend, säurebetont, ungesüßt",
-      "imageUrl": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800&auto=format&fit=crop&q=80",
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f4/Mustard.JPG/330px-Mustard.JPG",
       "origin": "France (Burgundy / Dijon)",
       "isImport": false,
       "abv": "0.0% ABV",
@@ -70,15 +65,10 @@
         "FrenchCuisine",
         "Emulsion"
       ],
-      "isFavorite": false,
-      "tasteProfileDe": "Scharf, stechend in der Nase, säurebetont, feinherb, ungesüßt, seidig-cremig.",
-      "tasteProfileEn": "Piercing nasal heat, clean pungent sharpness, dry white wine acidity, smooth fine texture, zero sugar.",
-      "scienceExplainedDe": "Dijonsenf basiert auf brauner Senfsaat mit dem Wirkstoff Sinigrin. Bei mechanischem Aufbrechen spaltet das Enzym Myrosinase das Sinigrin in flüchtiges Allylisothiocyanat – ein stechendes Senföl, das direkt in die Nase aufsteigt. Die Säure des Verjus/Weißweins bewahrt die Schärfe über Monate.",
-      "scienceExplainedEn": "Dijon mustard uses brown or black mustard seeds containing Sinigrin. When seeds are crushed in cold liquid, the enzyme myrosinase hydrolyzes sinigrin into volatile Allyl Isothiocyanate—a vaporous gas that evaporates into nasal passages (identical to wasabi/horseradish). Verjus or white wine acid stabilizes the enzyme reaction.",
-      "culinaryServingDe": "Unverzichtbarer Emulsionsanker für französische Vinaigrettes, Sauce Hollandaise, Beef Tartar und Lammkrusten.",
-      "culinaryServingEn": "Essential binding agent for French vinaigrettes, pan gravies, beef tartare, and herb crusts for rack of lamb.",
-      "guestFaqDe": "Warum verliert Senf beim Kochen seine Schärfe? Hitze zerstört das hitzeempfindliche Enzym Myrosinase; Senf in Saucen daher erst zum Schluss einrühren!",
-      "guestFaqEn": "Why does cooking mustard make it lose heat? High cooking heat denatures the fragile myrosinase enzyme; add mustard near the end of cooking."
+      "inStock": true,
+      "stockQuantity": 5,
+      "storageLocation": "Zentrallager",
+      "isFavorite": false
     },
     {
       "id": "mustard_bayerischer_suesser_senf",
@@ -87,7 +77,7 @@
       "nameDe": "Grobe Senfsorten (Körniger / Bayerischer Senf)",
       "subtitleEn": "Whole & coarsely cracked mustard seeds, caramelized beet sugar, cider vinegar; sweet-spicy with tactile crunch",
       "subtitleDe": "Ganze Senfkörner, karamellisierter Zucker, Essig; süß-würzig mit Texturbiss",
-      "imageUrl": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800&auto=format&fit=crop&q=80",
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/da/Senf-1.jpg/330px-Senf-1.jpg",
       "origin": "Germany (Bavaria / Munich, invented 1854 by Johann Conrad Develey) & France (Moutarde à l'ancienne)",
       "isImport": false,
       "abv": "0.0% ABV",
@@ -109,15 +99,10 @@
         "Develey",
         "Wholegrain"
       ],
-      "isFavorite": false,
-      "tasteProfileDe": "Süß-würzig mit kernigem Texturbiss, Malz- und Karamellschmelz, milde Würze ohne stechende Schärfe.",
-      "tasteProfileEn": "Malty caramel sweetness, pleasant rustic seed pop, mellow mustard warmth without nasal burn.",
-      "scienceExplainedDe": "1854 für die Münchner Weißwurst erfunden: Die Senfsaat wird geröstet (was scharfe Enzyme dämpft), nur grob gebrochen und mit karamellisiertem Zucker verfeinert. Das Knacken der intakten Senfkörner und die milde Süße harmonieren ideal mit Salzgebäck und Brühwürsten.",
-      "scienceExplainedEn": "Created in 1854 by Munich mustard pioneer Johann Conrad Develey. To accompany delicate Munich Weißwurst (which contains fragile veal and parsley that would be ruined by sharp mustard), Develey roasted mustard seeds to deactivate burning enzymes and stirred in caramelized sugar. Whole seeds pop pleasantly between the teeth.",
-      "culinaryServingDe": "Kultbegleiter zu Münchner Weißwurst, warmem Leberkäse, Charcuterie-Boards und Schinkenbroten.",
-      "culinaryServingEn": "Authentic Bavarian Weißwurst, warm Leberkäse, charcuterie boards, ham sandwiches, and roast pork glazes.",
-      "guestFaqDe": "Kann man süßen Senf zum Kochen nutzen? Perfekt für Krusten auf Schweinebraten, Schäufele oder als Glasur für Lachsfilet.",
-      "guestFaqEn": "Can sweet mustard be used for roasts? Yes, caramelized sugars glaze ham, pork belly, and salmon beautifully in the oven."
+      "inStock": true,
+      "stockQuantity": 5,
+      "storageLocation": "Zentrallager",
+      "isFavorite": false
     },
     {
       "id": "sauce_mayonnaise_echt_kewpie",
@@ -126,7 +111,7 @@
       "nameDe": "Mayonnaise (Klassisch Französisch / Japanische Kewpie)",
       "subtitleEn": "Cold oil-in-water emulsion; egg yolks, vegetable oil, vinegar/lemon (Kewpie uses rice vinegar & MSG)",
       "subtitleDe": "Eigelb, Öl, Essig/Zitronensaft (Kewpie: Reisessig & MSG); fettreich, seidig, cremig, mild-säuerlich",
-      "imageUrl": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800&auto=format&fit=crop&q=80",
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/60/Mayonnaise_%281%29.jpg/330px-Mayonnaise_%281%29.jpg",
       "origin": "Spain (Menorca / Mahón), France & Japan (Kewpie created 1925 by Toichiro Nakashima)",
       "isImport": false,
       "abv": "0.0% ABV",
@@ -139,7 +124,8 @@
       "faqEn": "Why does Kewpie taste richer than Western mayo? Kewpie uses exclusively egg yolks (no egg whites) and naturally fermented vinegars with umami seasoning.",
       "faqDe": "Warum schmeckt japanische Kewpie-Mayo so viel cremiger? Weil sie nur das reine Eigelb (kein wässriges Eiklar) und aromatischen Reisessig verwendet.",
       "allergens": [
-        "Eggs"
+        "Eggs",
+        "Mustard (in French mayo"
       ],
       "tags": [
         "Mayonnaise",
@@ -148,15 +134,10 @@
         "Lecithin",
         "Umami"
       ],
-      "isFavorite": false,
-      "tasteProfileDe": "Fettreich, seidig, cremig, mild-säuerlich; Kewpie schmeckt deutlich eireicher und intensiver umami.",
-      "tasteProfileEn": "Rich, unctuous, silky, creamy, mild acidity; Kewpie has intense egg-rich savoriness and umami depth.",
-      "scienceExplainedDe": "Mayonnaise ist eine Wasser-in-Öl-Emulsion: Eidotter-Lecithin hält Billionen mikroskopischer Öltröpfchen in der Schwebe. Die japanische Kewpie-Mayo nutzt ausschließlich Eigelb (kein Eiklar), milden Reisessig und einen Hauch MSG – wodurch sie gelber, dicker und geschmacklich unvergleichlich umamireich ist.",
-      "scienceExplainedEn": "Mayonnaise is a physical wonder: 75-80% oil suspended in 20% water. Egg yolk lecithin bridges hydrophobic oil and hydrophilic water. Kewpie mayonnaise uses ONLY egg yolks (roughly 4 yolks per 500g vs 1-2 whole eggs in western mayo), malt/apple vinegar, and monosodium glutamate (MSG), producing a distinctly yellow, ultra-custardy, umami-rich emulsion.",
-      "culinaryServingDe": "Mutter aller kalten Saucen: Sandwich-Spread, Basis für Remoulade, Aioli, Cocktailsauce und Sushi-Rolls.",
-      "culinaryServingEn": "Sandwich spreads, base for Remoulade, Tartare sauce, Aioli, Japanese Okonomiyaki, and sushi rolls.",
-      "guestFaqDe": "Warum schmeckt japanische Kewpie-Mayo so viel cremiger? Weil sie nur das reine Eigelb (kein wässriges Eiklar) und aromatischen Reisessig verwendet.",
-      "guestFaqEn": "Why does Kewpie taste richer than Western mayo? Kewpie uses exclusively egg yolks (no egg whites) and naturally fermented vinegars with umami seasoning."
+      "inStock": true,
+      "stockQuantity": 5,
+      "storageLocation": "Zentrallager",
+      "isFavorite": false
     },
     {
       "id": "sauce_tabasco_fermented",
@@ -165,7 +146,7 @@
       "nameDe": "Tabasco (Fermentierte Pepper Sauce)",
       "subtitleEn": "Tabasco chilies mashed with Avery Island salt, aged for 3 years in white oak bourbon barrels, blended with distilled vinegar",
       "subtitleDe": "Tabasco-Chilis (3 Jahre im Eichenfass gereift), Essig, Salz; essigscharf, dünnflüssig, fermentierte Säure",
-      "imageUrl": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800&auto=format&fit=crop&q=80",
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/80/Tabasco_Logo.svg/330px-Tabasco_Logo.svg.png",
       "origin": "USA (Louisiana / Avery Island, McIlhenny Company since 1868)",
       "isImport": true,
       "abv": "0.0% ABV",
@@ -187,15 +168,10 @@
         "Louisiana",
         "BloodyMary"
       ],
-      "isFavorite": false,
-      "tasteProfileDe": "Essigscharf, dünnflüssig, fermentierte pikante Säure, stechender Capsaicin-Kick, feine Holznote.",
-      "tasteProfileEn": "Sharp vinegar tang, pungent chili burn (2,500-5,000 Scoville), fermented oak wood depth, clean piercing finish.",
-      "scienceExplainedDe": "Seit 1868 auf Avery Island (Louisiana) hergestellt: Die Chilis werden gemahlen und reifen DREI JAHRE in alten Weißeichen-Bourbonfässern. Durch die langsame Milchsäuregärung im Holz entwickeln sich komplexe Fruchtester. Anschließend wird die Maische wochenlang mit Branntweinessig gerührt und gefiltert.",
-      "scienceExplainedEn": "Created in 1868 by Edmund McIlhenny. Ripe red tabasco chilies are crushed with salt into a mash, packed into reclaimed white oak whiskey barrels, sealed with salt crusts, and aged for up to THREE YEARS. Fermentation transforms harsh grassy chili notes into complex floral, lactic, and woody esters. Strained and stirred with distilled vinegar for 4 weeks before bottling.",
-      "culinaryServingDe": "Tröpfchenweise auf frische Austern, in den Bloody Mary Cocktail, zu Eintöpfen, Gumbo oder Rührei.",
-      "culinaryServingEn": "Dash on raw oysters, Bloody Mary cocktails, clam chowder, gumbo, chili con carne, or eggs Benedict.",
-      "guestFaqDe": "Warum ist Tabasco so essigbetont? Die Essigsäure schneidet perfekt durch fette Speisen, Meeresfrüchte und reinigt den Gaumen.",
-      "guestFaqEn": "Why does Tabasco taste more acidic than other hot sauces? High ratio of distilled vinegar cuts through rich animal fats and seafood brine."
+      "inStock": true,
+      "stockQuantity": 5,
+      "storageLocation": "Zentrallager",
+      "isFavorite": false
     },
     {
       "id": "sauce_sriracha_chili",
@@ -204,7 +180,7 @@
       "nameDe": "Sriracha (Knoblauch-Chilisauce)",
       "subtitleEn": "Sun-ripened red jalapeño chilies ground with garlic, sugar & vinegar; thick, sweet-garlicky, medium heat",
       "subtitleDe": "Rote Jalapeños/Chilis, Knoblauch, Essig, Zucker, Salz; mittelscharf, süßlich-knoblauchig, dickflüssig",
-      "imageUrl": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800&auto=format&fit=crop&q=80",
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4e/Siracha_sauce.jpg/330px-Siracha_sauce.jpg",
       "origin": "Thailand (Si Racha coastal town) & USA (Huy Fong Foods / David Tran)",
       "isImport": true,
       "abv": "0.0% ABV",
@@ -226,15 +202,10 @@
         "SpicyMayo",
         "AsianStreetFood"
       ],
-      "isFavorite": false,
-      "tasteProfileDe": "Mittelscharf, süßlich-knoblauchig, dickflüssig, ausgewogene Säure, haftet perfekt an Speisen.",
-      "tasteProfileEn": "Sweet upfront, pungent roasted garlic, medium chili glow (1,000-2,500 Scoville), thick clingy texture.",
-      "scienceExplainedDe": "Aus der thailändischen Küstenstadt Si Racha stammend, wurde Sriracha weltweit zum Kult: Reife rote Jalapeños werden erntefrisch mit Knoblauch und Zucker verarbeitet. Die milde Schärfe (ca. 2.000 Scoville) brennt nicht aggressiv, sondern verbindet sich durch den Zucker homogen mit Fett und Fleisch.",
-      "scienceExplainedEn": "Originating in the Thai town of Si Racha as a seafood dipping sauce, Sriracha was popularized globally by David Tran (Huy Fong). Red jalapeños are harvested at peak ripeness (producing high capsanthin pigments and natural sweetness) and processed within hours. Sugar balances capsaicin burn, while garlic supplies allicin-derived umami.",
-      "culinaryServingDe": "Unverzichtbar für asiatisches Street Food, Phở-Suppen, Poke Bowls und verrührt mit Mayo zu 'Spicy Mayo'.",
-      "culinaryServingEn": "Asian street food, Vietnamese Phở soup, poke bowls, and blended with mayonnaise to create Spicy Mayo.",
-      "guestFaqDe": "Wie macht man Spicy Mayo? Zu gleichen Teilen japanische Kewpie-Mayonnaise und Sriracha-Sauce glattrühren.",
-      "guestFaqEn": "What is Spicy Mayo? A 50/50 blend of Japanese Kewpie mayonnaise and Sriracha sauce."
+      "inStock": true,
+      "stockQuantity": 5,
+      "storageLocation": "Zentrallager",
+      "isFavorite": false
     },
     {
       "id": "sauce_barbecue_kansas_city",
@@ -243,7 +214,7 @@
       "nameDe": "Barbecue Sauce (Kansas City Style)",
       "subtitleEn": "Tomato paste, blackstrap molasses, brown sugar, cider vinegar, Worcestershire & liquid hickory smoke",
       "subtitleDe": "Tomate, Melasse/brauner Zucker, Apfelessig, Liquid Smoke; rauchig, dickflüssig, tief-süß, dunkel",
-      "imageUrl": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800&auto=format&fit=crop&q=80",
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/36/Pork_steaks_cooking-1.jpg/330px-Pork_steaks_cooking-1.jpg",
       "origin": "USA (Missouri & Kansas / Kansas City BBQ tradition)",
       "isImport": true,
       "abv": "0.0% ABV",
@@ -255,7 +226,9 @@
       "culinaryDe": "Klassische Glasur für Spareribs, Pulled Pork, Beef Brisket, Burger-Finish und BBQ-Marinaden.",
       "faqEn": "Why must sweet BBQ sauce only be brushed on at the end of grilling? High sugar content burns and chars bitter black if exposed to direct fire for more than 15-20 minutes.",
       "faqDe": "Warum BBQ-Sauce erst in den letzten 15 Minuten auftragen? Weil der hohe Zuckergehalt bei direkter Hitze sonst verbrennt und bitter wird.",
-      "allergens": [],
+      "allergens": [
+        "Fish (in Worcestershire sauce"
+      ],
       "tags": [
         "BBQSauce",
         "KansasCity",
@@ -264,15 +237,10 @@
         "Ribs",
         "PulledPork"
       ],
-      "isFavorite": false,
-      "tasteProfileDe": "Rauchig, dickflüssig, tief-süß, dunkles Karamell, balancierte Essigsäure, würziger Abgang.",
-      "tasteProfileEn": "Deep hickory smoke, caramelized molasses sweetness, tangy vinegar bite, thick glossy lacquered texture.",
-      "scienceExplainedDe": "Kansas City BBQ-Sauce ist der Weltstandard: Die Kombination aus dunkler Melasse und Tomatenmark karamellisiert auf gegrilltem Fleisch zu einer glänzenden Lack-Kruste. Apfelessig balanciert den hohen Zuckergehalt, während Hickory-Raucharomen authentischen Barbecue-Geschmack liefern.",
-      "scienceExplainedEn": "Kansas City style is the world's quintessential barbecue sauce. Molasses and brown sugar contain unrefined reducing sugars that caramelize rapidly under grill heat (Maillard reaction), forming a sticky, lacquered glaze on smoked meats. Natural liquid smoke (condensed hardwood vapor) provides guaiacol and syringol smoke phenols without bitter soot.",
-      "culinaryServingDe": "Klassische Glasur für Spareribs, Pulled Pork, Beef Brisket, Burger-Finish und BBQ-Marinaden.",
-      "culinaryServingEn": "Brushed on pork ribs during the final 15 minutes of smoking, pulled pork sandwiches, brisket, and burgers.",
-      "guestFaqDe": "Warum BBQ-Sauce erst in den letzten 15 Minuten auftragen? Weil der hohe Zuckergehalt bei direkter Hitze sonst verbrennt und bitter wird.",
-      "guestFaqEn": "Why must sweet BBQ sauce only be brushed on at the end of grilling? High sugar content burns and chars bitter black if exposed to direct fire for more than 15-20 minutes."
+      "inStock": true,
+      "stockQuantity": 5,
+      "storageLocation": "Zentrallager",
+      "isFavorite": false
     },
     {
       "id": "sauce_salsa_roja_verde_mexico",
@@ -281,7 +249,7 @@
       "nameDe": "Salsa Roja / Salsa Verde (Mexikanisch)",
       "subtitleEn": "Charred roasted tomatoes (Roja) or tart tomatillos (Verde) crushed with serrano chilies, white onion, cilantro & lime",
       "subtitleDe": "Geröstete Tomaten (Roja) bzw. Tomatillos (Verde), Zwiebeln, Koriander, Limette; frisch, säuerlich, pikant, stückig",
-      "imageUrl": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800&auto=format&fit=crop&q=80",
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9c/Various_salsas.jpg/330px-Various_salsas.jpg",
       "origin": "Mexico (Traditional Molcajete table salsas)",
       "isImport": true,
       "abv": "0.0% ABV",
@@ -304,15 +272,10 @@
         "Tacos",
         "Molcajete"
       ],
-      "isFavorite": false,
-      "tasteProfileDe": "Frisch, säuerlich, pikant, stückig; Roja mit Rauchnote, Verde mit spritziger Tomatillo-Fruchtsäure.",
-      "tasteProfileEn": "Roja: Smoky char, sweet roasted tomato, warming chili heat. Verde: Tart, citrusy, herbaceous, vibrant fresh acidity.",
-      "scienceExplainedDe": "Traditionell im Mörser aus Vulkangestein (Molcajete) gestampft: Bei Salsa Roja werden Tomaten auf der heißen Platte angekohlt, was rauchige Röstnoten erzeugt. Salsa Verde nutzt Tomatillos (mexikanische Blasenkirschen), deren natürliche Fruchtsäure und Pektin das Fett von gegrilltem Fleisch perfekt brechen.",
-      "scienceExplainedEn": "Authentic Mexican salsa is crushed in a volcanic stone mortar ('Molcajete'). 1) Salsa Roja chars tomatoes on a comal until black-spotted, producing smoky furans and sweet caramelization. 2) Salsa Verde uses tomatillos (Physalis philadelphica), which are not unripe tomatoes but lantern fruits rich in natural pectin and citric acid, giving a clean tart acidity that cuts through rich braised carnitas and melted cheese.",
-      "culinaryServingDe": "Unverzichtbar zu Tacos, Nachos, gegrilltem Rindfleisch, Quesadillas und Huevos Rancheros.",
-      "culinaryServingEn": "Table staple for tacos al pastor, carne asada, tortilla chips, huevos rancheros, and quesadillas.",
-      "guestFaqDe": "Was ist eine Tomatillo? Keine grüne Tomate, sondern eine papierhüllige Frucht (Physalis-Gattung) mit erfrischender Säure.",
-      "guestFaqEn": "What is a Tomatillo? A member of the nightshade family encased in a paper husk; tart, firm, and essential for authentic green salsa."
+      "inStock": true,
+      "stockQuantity": 5,
+      "storageLocation": "Zentrallager",
+      "isFavorite": false
     },
     {
       "id": "dressing_franzoesische_vinaigrette",
@@ -321,7 +284,7 @@
       "nameDe": "Klassische Vinaigrette (Französischer Stil)",
       "subtitleEn": "The golden 3:1 oil-to-acid ratio bound by Dijon mustard, minced shallot & fine wine vinegar into a silky emulsion",
       "subtitleDe": "3:1 Öl zu Essig (z. B. Dijon, Weißweinessig, Schalotte, Olivenöl); hell, säurebetont, emulgiert, pikant",
-      "imageUrl": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800&auto=format&fit=crop&q=80",
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/98/Vinaigrette_dressing_with_a_chopped_salad.jpg/330px-Vinaigrette_dressing_with_a_chopped_salad.jpg",
       "origin": "France (Classical French Bistro Cooking)",
       "isImport": false,
       "abv": "0.0% ABV",
@@ -343,15 +306,10 @@
         "Dijon",
         "Emulsion"
       ],
-      "isFavorite": false,
-      "tasteProfileDe": "Hell, säurebetont, emulgiert, pikant, fruchtiges Öl und Schalottenfrische.",
-      "tasteProfileEn": "Zesty, bright, peppery, harmonious acid punch tempered by fruity oil and mustard warmth.",
-      "scienceExplainedDe": "Folgt der goldenen Küchenregel: 3 Teile Öl auf 1 Teil Essig. Salz MUSS zuerst im Essig aufgelöst werden, da es sich in Öl nicht löst. Dijonsenf liefert pflanzliche Schleimstoffe als Emulsionsanker, die das Öl in der Schwebe halten.",
-      "scienceExplainedEn": "Governed by the culinary golden ratio: 3 parts oil to 1 part vinegar. Salt must be dissolved in the vinegar FIRST, because salt cannot dissolve in hydrophobic oil. Dijon mustard acts as a culinary stabilizer: the mucilage polysaccharides from mustard seeds coat suspended oil droplets, preventing separation into a greasy slick.",
-      "culinaryServingDe": "Klassisch zu Blattsalaten, Frisée mit Speck, lauwarmem Kartoffelsalat oder gedämpftem Spargel.",
-      "culinaryServingEn": "Tossed freshly with butterhead lettuce, frisée with warm bacon, warm potato salads, or steamed asparagus.",
-      "guestFaqDe": "Warum Salat erst kurz vor dem Servieren marinieren? Säure und Salz entziehen den Blättern durch Osmose Wasser – der Salat fällt zusammen.",
-      "guestFaqEn": "Why should salad only be dressed immediately before serving? Vinegar acids and salt draw water out of lettuce leaf cells by osmosis within minutes, causing wilting."
+      "inStock": true,
+      "stockQuantity": 5,
+      "storageLocation": "Zentrallager",
+      "isFavorite": false
     },
     {
       "id": "dressing_italienisches_dressing",
@@ -360,7 +318,7 @@
       "nameDe": "Italienisches Dressing (Italian Dressing)",
       "subtitleEn": "Extra virgin olive oil, aged red wine vinegar, crushed garlic, dried oregano, basil, thyme & lemon zest",
       "subtitleDe": "Olivenöl, Rotweinessig, Knoblauch, getrockneter Oregano, Basilikum, Zitrone; krautig, spritzig, mediterran",
-      "imageUrl": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800&auto=format&fit=crop&q=80",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Italian_dressing.jpg",
       "origin": "Italy & Italian-American Restaurant Tradition",
       "isImport": false,
       "abv": "0.0% ABV",
@@ -382,15 +340,10 @@
         "Mediterranean",
         "Salad"
       ],
-      "isFavorite": false,
-      "tasteProfileDe": "Krautig, spritzig, leicht ölig, pikante Knoblauchnote, aromatischer Oregano und frische Zitrone.",
-      "tasteProfileEn": "Herbaceous, punchy garlic aroma, zesty red wine vinegar bite, fruity olive oil richness, sun-drenched Mediterranean finish.",
-      "scienceExplainedDe": "Getrocknete mediterrane Kräuter (Oregano, Thymian) enthalten fettlösliche ätherische Öle, die sich am besten in Olivenöl lösen. Das Dressing schmeckt kräftig kräuterig und spritzig-sauer und bindet feuchte Tomaten-Gurken-Kombinationen perfekt ab.",
-      "scienceExplainedEn": "Dried herbs (especially oregano and basil) contain fat-soluble terpenes (carvacrol, thymol) that extract and bloom far more effectively in warm olive oil than in water. Crushing dried herbs directly into the oil releases essential oils before whisking with acidic red wine vinegar and lemon juice.",
-      "culinaryServingDe": "Klassisch zu gemischten Salaten, Tomaten-Gurken-Salat, kaltem Nudelsalat oder als Marinade für Grillhähnchen.",
-      "culinaryServingEn": "Tossed with chopped mixed garden salads, tomato-cucumber-onion combos, cold pasta salads, or grilled chicken marinade.",
-      "guestFaqDe": "Warum getrocknete Kräuter statt frischer? Getrocknete Kräuter laugen ihr Aroma stabil ins Öl aus, ohne im sauren Essig braun zu werden.",
-      "guestFaqEn": "Why dried herbs instead of fresh in Italian dressing? Dried herbs have concentrated oils that infuse vinegar without turning brown or slimy."
+      "inStock": true,
+      "stockQuantity": 5,
+      "storageLocation": "Zentrallager",
+      "isFavorite": false
     },
     {
       "id": "dressing_caesar_anchovis_parmigiano",
@@ -399,7 +352,7 @@
       "nameDe": "Original Caesar Salad Dressing",
       "subtitleEn": "Egg yolk, salted anchovies, garlic, Dijon, lemon, Worcestershire & Parmigiano Reggiano DOP; savory umami powerhouse",
       "subtitleDe": "Eigelb, Sardellen, Knoblauch, Parmesan, Zitronensaft, Worcestershire, Olivenöl; salzig-cremig, starkes Umami",
-      "imageUrl": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800&auto=format&fit=crop&q=80",
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Caesar_salad_%282%29.jpg/330px-Caesar_salad_%282%29.jpg",
       "origin": "Mexico (Tijuana / Caesar Cardini, July 4, 1924)",
       "isImport": false,
       "abv": "0.0% ABV",
@@ -412,7 +365,8 @@
       "faqEn": "Did the original 1924 Caesar Salad have anchovies? Caesar Cardini used Worcestershire sauce (which contains fermented anchovies); later whole anchovies were mashed in for richer depth.",
       "faqDe": "Waren 1924 ganze Sardellen im Rezept? Cardini nutzte anfangs nur Worcestershire-Sauce; später wurden pürierte Sardellenfilets zum weltweiten Standard.",
       "allergens": [
-        "Eggs"
+        "Eggs",
+        "Fish (Anchovies"
       ],
       "tags": [
         "CaesarSalad",
@@ -421,15 +375,10 @@
         "Umami",
         "SaladDressing"
       ],
-      "isFavorite": false,
-      "tasteProfileDe": "Salzig-cremig, starkes Umami, nussig, dicht, Knoblauchschärfe und feine Sardellenwürze.",
-      "tasteProfileEn": "Bold, savory umami explosion, garlic warmth, salty brine from anchovies, nutty aged cheese richness, thick creamy cling.",
-      "scienceExplainedDe": "1924 von Cesare Cardini erfunden: Die Kombination aus Inosinat (Anchovis) und freiem Glutamat (Parmigiano Reggiano) potenziert den Umami-Geschmack um das Achtfache. Emulgiert mit Eigelb und Knoblauch haftet das schwere Dressing perfekt an knackigen Römersalatblättern.",
-      "scienceExplainedEn": "Invented on July 4, 1924, by Caesar Cardini in Tijuana. The secret is synergistic umami: inosinates from cured anchovies multiply the sensory impact of free glutamates from Parmigiano Reggiano by 8x. The dense emulsion clings tightly to the sturdy, waxy ribs of chilled Romaine lettuce without sliding off.",
-      "culinaryServingDe": "Klassisch zu Römersalat (Romaine), Knoblauch-Croutons, gehobeltem Parmesan und saftigen Hähnchenstreifen.",
-      "culinaryServingEn": "Tossed with chilled Romaine hearts, garlic butter croutons, shaved parmesan, and grilled chicken breast or tiger prawns.",
-      "guestFaqDe": "Waren 1924 ganze Sardellen im Rezept? Cardini nutzte anfangs nur Worcestershire-Sauce; später wurden pürierte Sardellenfilets zum weltweiten Standard.",
-      "guestFaqEn": "Did the original 1924 Caesar Salad have anchovies? Caesar Cardini used Worcestershire sauce (which contains fermented anchovies); later whole anchovies were mashed in for richer depth."
+      "inStock": true,
+      "stockQuantity": 5,
+      "storageLocation": "Zentrallager",
+      "isFavorite": false
     },
     {
       "id": "dressing_joghurt_kraeuter_dressing",
@@ -438,7 +387,7 @@
       "nameDe": "Joghurt-Kräuter-Dressing",
       "subtitleEn": "Natural whole milk yogurt, sour cream, fresh dill, flat-leaf parsley, chives & lemon juice; lactic, cooling & light",
       "subtitleDe": "Naturjoghurt, Sauerrahm, Zitrone, Dill, Petersilie, Schnittlauch; milchsauer, frisch, kühlend, leicht",
-      "imageUrl": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800&auto=format&fit=crop&q=80",
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d6/Ranch_dressing.jpg/330px-Ranch_dressing.jpg",
       "origin": "Central Europe & Eastern Mediterranean / Balkan",
       "isImport": false,
       "abv": "0.0% ABV",
@@ -460,15 +409,10 @@
         "Dill",
         "LowCalorie"
       ],
-      "isFavorite": false,
-      "tasteProfileDe": "Milchsauer, frisch, kühlend, leicht, aromatische Gartenkräuter (Dill, Petersilie, Schnittlauch).",
-      "tasteProfileEn": "Lactic tang, cooling creamy freshness, vibrant garden herbs, gentle garlic hum, refreshing light body.",
-      "scienceExplainedDe": "Basiert auf Milchsäure und Kasein-Eiweißen statt Pflanzenöl: Deutlich kalorienärmer als Mayonnaise, mit natürlicher Milchsäurefrische. Frischer Dill und Schnittlauch spenden ätherische Öle, die Gurken und Rohkost perfekt umhüllen.",
-      "scienceExplainedEn": "Unlike heavy oil emulsions, yogurt-based dressings rely on fermented dairy proteins (micellar casein gels). Lactic acid from Lactobacillus fermentation provides clean tartness without high acetic acidity. Dill and chives contribute sulfurous and apiol freshness that cuts through raw vegetable bitterness.",
-      "culinaryServingDe": "Klassiker zu Gurkensalat, Rohkost-Platten, Falafel-Bowls, Ofenkartoffeln und gegrilltem Lachs.",
-      "culinaryServingEn": "Tossed with cucumber salad (Gurkensalat), raw vegetable crudités, falafel bowls, baked jacket potatoes, or grilled fish.",
-      "guestFaqDe": "Warum wird Gurkensalat mit Joghurt oft wässrig? Gurken vorher einsalzen und ausdrücken – so bleibt das Joghurtdressing wunderbar cremig.",
-      "guestFaqEn": "How do you keep yogurt dressing from turning watery on cucumbers? Salt cucumbers beforehand and drain excess water before tossing with yogurt."
+      "inStock": true,
+      "stockQuantity": 5,
+      "storageLocation": "Zentrallager",
+      "isFavorite": false
     },
     {
       "id": "dressing_french_dressing_cremig",
@@ -477,7 +421,7 @@
       "nameDe": "French Dressing (Klassisch-Cremig)",
       "subtitleEn": "Oil, vinegar, egg yolk/mayo, tomato paste & sweet paprika; sweet, mild-creamy & orange-pink hue",
       "subtitleDe": "Öl, Essig, Mayonnaise oder Eigelb, Tomatenmark/Paprikapulver, Zwiebel; süßlich, mild-cremig, orangerot",
-      "imageUrl": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800&auto=format&fit=crop&q=80",
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/Hamburger_topped_with_grilled_onions%2C_cheese_and_russian_dressing.jpg/330px-Hamburger_topped_with_grilled_onions%2C_cheese_and_russian_dressing.jpg",
       "origin": "USA & International Hotel / Buffet Cuisine",
       "isImport": false,
       "abv": "0.0% ABV",
@@ -499,15 +443,10 @@
         "PrawnCocktail",
         "Buffet"
       ],
-      "isFavorite": false,
-      "tasteProfileDe": "Süßlich, mild-cremig, orangerot, samtig auf der Zunge, milde Säure mit fruchtiger Paprika.",
-      "tasteProfileEn": "Sweet and mellow, creamy mild tang, savory tomato warmth, velvety orange-red emulsion.",
-      "scienceExplainedDe": "Im Hotel- und Buffet-Bereich bezeichnet 'French Dressing' die cremige, orangerote Sauce: Tomatenmark und Paprika verleihen die charakteristische Farbe und fruchtige Milde; emulgiertes Öl sorgt für dichte Sämigkeit, die selbst an glattem Eisbergsalat haftet.",
-      "scienceExplainedEn": "In international hotel catering, 'French Dressing' evolved from clear vinaigrette into an emulsified creamy, reddish-orange dressing. Tomato paste and sweet Hungarian paprika provide natural red carotenoid pigments and pectin body, while emulsified egg yolk and oil give a velvety, crowd-pleasing richness that clings to crisp iceberg lettuce.",
-      "culinaryServingDe": "Klassiker zu knackigem Eisbergsalat, Garnelen-Cocktails, gemischten Salattellern und Sandwich-Platten.",
-      "culinaryServingEn": "Standard for crisp Iceberg lettuce wedges, prawn cocktails, mixed hotel dinner salads, and club sandwiches.",
-      "guestFaqDe": "Unterschied French zu Thousand Island? Thousand Island enthält gehackte Gurkenstückchen und Ei; French Dressing ist vollkommen glatt püriert.",
-      "guestFaqEn": "French Dressing vs Thousand Island? Thousand Island contains chopped hard-boiled egg and pickle relish; French Dressing is completely smooth and sweeter."
+      "inStock": true,
+      "stockQuantity": 5,
+      "storageLocation": "Zentrallager",
+      "isFavorite": false
     },
     {
       "id": "dressing_honig_senf_dressing",
@@ -516,7 +455,7 @@
       "nameDe": "Honig-Senf-Dressing",
       "subtitleEn": "Wholegrain & smooth mustard, raw flower honey, apple cider vinegar & mild rapeseed oil; balanced sweet-heat harmony",
       "subtitleDe": "Körniger/mittelscharfer Senf, Bienenhonig, Apfelessig, Rapsöl; ausbalanciert süß-scharf, bindend",
-      "imageUrl": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800&auto=format&fit=crop&q=80",
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/da/Senf-1.jpg/330px-Senf-1.jpg",
       "origin": "Central Europe & Modern Bistro Gastronomy",
       "isImport": false,
       "abv": "0.0% ABV",
@@ -538,15 +477,10 @@
         "SmokedSalmon",
         "SweetSpicy"
       ],
-      "isFavorite": false,
-      "tasteProfileDe": "Ausbalanciert süß-scharf, bindend, samtige Konsistenz, fruchtige Honigsüße trifft pikanten Senfbiss.",
-      "tasteProfileEn": "Sweet floral honey upfront, sharp pungent mustard warmth, clean cider vinegar tang, rich emulsified texture.",
-      "scienceExplainedDe": "Honig und Senf bilden ein unschlagbares Paar: Die zähe Viskosität des Honigs und die pflanzlichen Schleimstoffe des Senfs emulgieren Öl und Essig zu einer cremigen Sauce, die sich nicht trennt. Die Schärfe des Senfs bricht die Süße des Honigs perfekt.",
-      "scienceExplainedEn": "Honey and mustard form a natural culinary synergy. Honey's high fructose and glucose viscosity slows down oil droplet movement, naturally stabilizing the emulsion. Meanwhile, mustard's allyl isothiocyanate pungency cuts through the honey's sweet coating, preventing cloying heaviness while seasoning bitter greens like arugula.",
-      "culinaryServingDe": "Hervorragend zu gratiniertem Ziegenkäse mit Walnüssen, Rucola, Räucherlachs und Hähnchenbrust.",
-      "culinaryServingEn": "Warm goat cheese salad with walnuts, wild arugula, smoked salmon platters, or grilled chicken breast.",
-      "guestFaqDe": "Wie lange hält Honig-Senf-Dressing? Durch den konservierenden Honig und Essig bleibt es im Kühlschrank mindestens 2–3 Wochen frisch.",
-      "guestFaqEn": "Can honey mustard dressing be made ahead? Yes, honey is a natural preservative; it keeps refrigerated for 2-3 weeks."
+      "inStock": true,
+      "stockQuantity": 5,
+      "storageLocation": "Zentrallager",
+      "isFavorite": false
     },
     {
       "id": "sauce_hollandaise_emulsion",
@@ -555,7 +489,7 @@
       "nameDe": "Sauce Hollandaise (Klassische warme Buttersauce)",
       "subtitleEn": "French mother sauce: Delicate warm emulsion of egg yolks, clarified butter & white wine reduction at 60-65°C",
       "subtitleDe": "Mutter aller Buttersaucen: Warme Emulsion aus Eigelb, geklärter Butter & Weißwein-Reduktion",
-      "imageUrl": "https://images.unsplash.com/photo-1525351484163-7529414344d8?w=800&auto=format&fit=crop&q=80",
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Hollandaise_sauce.jpg/330px-Hollandaise_sauce.jpg",
       "origin": "France (Classical French Haute Cuisine / Carême & Escoffier)",
       "isImport": false,
       "abv": "0.0% ABV",
@@ -568,7 +502,8 @@
       "faqEn": "Can Hollandaise be reheated in a microwave? Never: intense microwaves overheat egg proteins, causing the butter to separate completely into oil.",
       "faqDe": "Kann man Sauce Hollandaise wieder aufwärmen? Niemals in der Mikrowelle: Bei erneuter Hitze gerinnt das Ei und die Butter trennt sich als Fettsee.",
       "allergens": [
-        "Eggs"
+        "Eggs",
+        "Milk (Butter"
       ],
       "tags": [
         "Hollandaise",
@@ -578,15 +513,10 @@
         "FrenchCuisine",
         "Escoffier"
       ],
-      "isFavorite": false,
-      "tasteProfileDe": "Samtig, cremig-schmelzend, vollmundige Butternote mit feiner Säure-Frische von Zitrone und Weißwein.",
-      "tasteProfileEn": "Luxuriously velvety, rich dairy butteriness, bright lemony acidity, warm comforting froth.",
-      "scienceExplainedDe": "Empfindliche warme Wasser-in-Öl-Emulsion: Eidotter-Lecithin emulgiert Butterfett und Weinreduktion. Im Wasserbad muss die Temperatur exakt zwischen 60°C und 65°C gehalten werden. Bei über 68°C gerinnt das Eiprotein zu Rührei; ist die Butter zu kalt, stockt das Fett.",
-      "scienceExplainedEn": "Sauce Hollandaise is one of the five French Mother Sauces. Egg yolk lecithin bridges wine reduction and liquid butter fat. Over a gentle water bath strictly between 60°C and 65°C, egg yolks whisk into a thick sabayon ribbon. Exceeding 68°C curdles egg protein irreversibly into scrambled eggs; cold butter crystallizes and splits.",
-      "culinaryServingDe": "Klassiker der Spargelsaison zu weißem Stangenspargel; außerdem zu Eggs Benedict, pochiertem Lachs oder zartem Rinderfilet.",
-      "culinaryServingEn": "Served warm (55-60°C) with boiled white asparagus, Eggs Benedict, poached salmon, or steamed turbot.",
-      "guestFaqDe": "Kann man Sauce Hollandaise wieder aufwärmen? Niemals in der Mikrowelle: Bei erneuter Hitze gerinnt das Ei und die Butter trennt sich als Fettsee.",
-      "guestFaqEn": "Can Hollandaise be reheated in a microwave? Never: intense microwaves overheat egg proteins, causing the butter to separate completely into oil."
+      "inStock": true,
+      "stockQuantity": 5,
+      "storageLocation": "Zentrallager",
+      "isFavorite": false
     },
     {
       "id": "sauce_bearnaise_estragon",
@@ -595,7 +525,7 @@
       "nameDe": "Sauce Béarnaise (Kräuter-Buttersauce mit Estragon)",
       "subtitleEn": "Warm butter emulsion flavored with concentrated tarragon vinegar, shallots, fresh tarragon & chervil",
       "subtitleDe": "Klassische Ableitung der Hollandaise mit Reduktion aus Estragonessig, Schalotten, frischem Estragon & Kerbel",
-      "imageUrl": "https://images.unsplash.com/photo-1525351484163-7529414344d8?w=800&auto=format&fit=crop&q=80",
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/B%C3%A9arnaise_sauce_with_Tarragon_garnish.jpeg/330px-B%C3%A9arnaise_sauce_with_Tarragon_garnish.jpeg",
       "origin": "France (Saint-Germain-en-Laye near Paris, created 1836 by Chef Collinet)",
       "isImport": false,
       "abv": "0.0% ABV",
@@ -608,7 +538,8 @@
       "faqEn": "What is the difference between Hollandaise and Béarnaise? Hollandaise is seasoned with lemon juice; Béarnaise uses a reduction of tarragon vinegar, shallots, and fresh tarragon and chervil.",
       "faqDe": "Unterschied Hollandaise zu Béarnaise? Hollandaise wird mit Zitrone abgeschmeckt; Béarnaise basiert auf einer kräftigen Reduktion aus Estragonessig, Schalotten und frischen Kräutern.",
       "allergens": [
-        "Eggs"
+        "Eggs",
+        "Milk (Butter"
       ],
       "tags": [
         "Bearnaise",
@@ -617,128 +548,114 @@
         "Chateaubriand",
         "FrenchCuisine"
       ],
-      "isFavorite": false,
-      "tasteProfileDe": "Charakteristische herbe Anisnote durch Estragon, reichhaltiger Butterschmelz, pikante Essigfrische und Kerbelaroma.",
-      "tasteProfileEn": "Herbaceous anise warmth from fresh tarragon, rich buttery body, bright wine vinegar acidity, peppery aroma.",
-      "scienceExplainedDe": "1836 bei Paris erfunden: Basiert auf der Hollandaise, wird jedoch durch eine kräftige Reduktion aus Estragonessig, Weißwein, Schalotten und Mörserpfeffer angesetzt. Das ätherische Estragol des Estragons verleiht die typische Anisnote, die perfekt mit den Röstaromen von kurzgebratenem Rindfleisch harmoniert.",
-      "scienceExplainedEn": "Created in 1836 and named in honor of King Henry IV of France. The base technique is identical to Hollandaise, but driven by an intense reduction of tarragon vinegar, white wine, shallots, and black pepper. Volatile phenylpropanoid estragole in tarragon infuses a warm licorice-anise perfume that cuts through rich steak fats.",
-      "culinaryServingDe": "Die ultimative Steak-Sauce zu gegrilltem Rinderfilet, Chateaubriand, Entrecôte oder Lammkoteletts.",
-      "culinaryServingEn": "The holy grail sauce for grilled steaks: Chateaubriand, Tournedos Rossini, Ribeye, and grilled salmon.",
-      "guestFaqDe": "Unterschied Hollandaise zu Béarnaise? Hollandaise wird mit Zitrone abgeschmeckt; Béarnaise basiert auf einer kräftigen Reduktion aus Estragonessig, Schalotten und frischen Kräutern.",
-      "guestFaqEn": "What is the difference between Hollandaise and Béarnaise? Hollandaise is seasoned with lemon juice; Béarnaise uses a reduction of tarragon vinegar, shallots, and fresh tarragon and chervil."
+      "inStock": true,
+      "stockQuantity": 5,
+      "storageLocation": "Zentrallager",
+      "isFavorite": false
     },
     {
-      "id": "sauces_chimichurri_argentina",
+      "id": "sauce_aioli_garlic",
       "category": "sauces_condiments",
-      "nameEn": "Authentic Argentine Chimichurri",
-      "nameDe": "Argentinisches Chimichurri Tradicional",
-      "subtitleEn": "Herbal garlic marinade of fresh parsley, oregano, red pepper, and red wine vinegar",
-      "subtitleDe": "Würzige Kräutersauce aus frischer Petersilie, Bergano, Knoblauch, Chili und Weinessig",
-      "imageUrl": "https://images.unsplash.com/photo-1472476443507-c7a5948772fc?w=800&auto=format&fit=crop&q=80",
-      "origin": "Argentina (Pampas)",
+      "nameEn": "Authentic Catalan & Provençal Aioli (Allioli)",
+      "nameDe": "Echte Aioli (Katalanische Knoblauch-Olivenöl-Emulsion)",
+      "subtitleEn": "Pure mortar & pestle garlic emulsion with extra virgin olive oil; zero eggs in original recipe",
+      "subtitleDe": "Im Mörser zerstoßener Knoblauch emulgiert mit nativem Olivenöl; das Original ganz ohne Ei",
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/43/A%C3%AFoli_maison.jpg/330px-A%C3%AFoli_maison.jpg",
+      "origin": "Spain (Catalonia: Allioli) / France (Provence)",
       "isImport": true,
       "abv": "0.0% ABV",
-      "tasteEn": "Bright herbaceous parsley, pungent raw garlic, zesty vinegar acid, mild chili kick.",
-      "tasteDe": "Frische Gartenpetersilie, pikanter Knoblauch, spritziger Weinessig, Oregano und feine Chilischarfe.",
-      "scienceEn": "Vinegar acid denatures surface proteins on hot grilled meats while allicin from garlic stimulates salivary enzymes, cutting heavy beef fats.",
-      "scienceDe": "Die Essigsäure bricht die Fettwahrnehmung von gegrilltem Fleisch auf und hebt die Röstaromen hervor.",
-      "culinaryEn": "Spoon lavishly over grilled Bife de Chorizo (striploin), Asado ribs, or roasted choripán sausages.",
-      "culinaryDe": "Der unverzichtbare Begleiter zum argentinischen Asado, Rumpsteak und Choripán-Baguette.",
-      "faqEn": "Should it be blended smooth? No, authentic chimichurri is always finely hand-chopped to keep texture, never pureed in a blender.",
-      "faqDe": "Wird Chimichurri püriert? Niemals mit dem Pürierstab verarbeiten; traditionell werden die Kräuter fein von Hand gehackt.",
-      "allergens": [],
+      "tasteEn": "Pungent garlic rush, velvety rich green olive oil sweetness, intense piquant Mediterranean warmth.",
+      "tasteDe": "Kraftvoller Knoblauch, sahnig-dichter Schmelz, fruchtiges Olivenöl, belebende Schärfe.",
+      "scienceEn": "From Catalan 'all i oli' (garlic and oil). When garlic is mashed into a smooth paste with salt in a mortar, cellular mucilage and plant proteins act as natural emulsifiers. Adding olive oil drop by drop while pestling shears the oil into micro-droplets, forming a firm mayonnaise-like emulsion without any egg yolk!",
+      "scienceDe": "Katalanisch für 'all i oli' (Knoblauch und Öl). Werden Knoblauchzehen mit grobem Meersalz im Mörser zerrieben, wirken pflanzliche Schleimstoffe als natürliche Emulgatoren. Tropfenweises Einrühren von Olivenöl erzeugt eine standfeste, cremige Emulsion – ganz ohne Ei!",
+      "culinaryEn": "Served with Patatas Bravas, grilled seafood, fideuà, roasted meats, crusty bread.",
+      "culinaryDe": "Zu spanischen Patatas Bravas, gegrilltem Fisch, Paella und frischem Weißbrot serviert.",
+      "faqEn": "Does authentic Aioli contain egg? Historically no: genuine Catalan allioli is 100% garlic and olive oil. Modern bistros often add egg yolk for faster stabilization.",
+      "faqDe": "Gehört Ei in die echte Aioli? Traditionell nein! Original-katalanische Aioli besteht rein aus Knoblauch, Salz und Olivenöl. In der Bistroküche hilft Eigelb beim Binden.",
+      "allergens": [
+        "None"
+      ],
+      "tags": [
+        "Aioli",
+        "Allioli",
+        "Garlic",
+        "Spain",
+        "Emulsion",
+        "Tapas"
+      ],
+      "inStock": true,
+      "stockQuantity": 5,
+      "storageLocation": "Zentrallager",
+      "isFavorite": false
+    },
+    {
+      "id": "sauce_chimichurri_argentine",
+      "category": "sauces_condiments",
+      "nameEn": "Argentine Chimichurri (Asado Steak Sauce)",
+      "nameDe": "Argentinisches Chimichurri (Asado-Steaksauce)",
+      "subtitleEn": "Finely chopped flat-leaf parsley, oregano, garlic, red wine vinegar & chili olive oil",
+      "subtitleDe": "Gehackte Glattpetersilie, Oregano, Knoblauch, Rotweinessig & Olivenöl für gegrilltes Fleisch",
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/Chimichurri_Sauce_Recipe_%2813294574784%29.jpg/330px-Chimichurri_Sauce_Recipe_%2813294574784%29.jpg",
+      "origin": "Argentina & Uruguay (Pampas Gaucho Culture)",
+      "isImport": true,
+      "abv": "0.0% ABV",
+      "tasteEn": "Vibrant herbaceous punch, bright acidic tang, warming chili glow, rich olive oil body.",
+      "tasteDe": "Frisch-kräuterig, spritzige Weinessigsäure, wärmende Schärfe, vollmundiges Öl.",
+      "scienceEn": "Chimichurri is an unheated herb macerate. Red wine vinegar draws out water-soluble aromatic compounds and softens harsh raw garlic pungency, while olive oil extracts fat-soluble essential oils from oregano and chili. The high acidity cuts straight through rich, fatty grilled beef steaks (Bife de Chorizo).",
+      "scienceDe": "Ungekochte Kräuter-Mazeration: Der Rotweinessig bricht die Schärfe des rohen Knoblauchs, während das Olivenöl die ätherischen Öle des Oreganos bindet. Die Säure spaltet das Fett marmorierter Rindersteaks am Gaumen optimal auf.",
+      "culinaryEn": "Spoon over hot grilled ribeye steaks, flank steak, Choripán sausage sandwiches, empanadas.",
+      "culinaryDe": "Zu Rindersteaks (Ribeye, Flank), Grillwürsten (Choripán) und Lammkoteletts serviert.",
+      "faqEn": "Should Chimichurri be blended in a food processor? Never! Pureeing with high-speed blades bruises parsley into bitter grass clippings; always chop finely by hand.",
+      "faqDe": "Darf man Chimichurri im Mixer pürieren? Auf keinen Fall! Schnelle Klingen zerschlagen die Petersilie bitter wie Rasenschnitt; Chimichurri wird immer von Hand fein gehackt.",
+      "allergens": [
+        "None"
+      ],
       "tags": [
         "Chimichurri",
         "Argentina",
         "Asado",
-        "Steak",
-        "Sauce",
-        "Garlic"
+        "SteakSauce",
+        "Herbs"
       ],
-      "tasteProfileDe": "Frische Gartenpetersilie, pikanter Knoblauch, spritziger Weinessig, Oregano und feine Chilischarfe.",
-      "tasteProfileEn": "Bright herbaceous parsley, pungent raw garlic, zesty vinegar acid, mild chili kick.",
-      "scienceExplainedDe": "Die Essigsäure bricht die Fettwahrnehmung von gegrilltem Fleisch auf und hebt die Röstaromen hervor.",
-      "scienceExplainedEn": "Vinegar acid denatures surface proteins on hot grilled meats while allicin from garlic stimulates salivary enzymes, cutting heavy beef fats.",
-      "culinaryServingDe": "Der unverzichtbare Begleiter zum argentinischen Asado, Rumpsteak und Choripán-Baguette.",
-      "culinaryServingEn": "Spoon lavishly over grilled Bife de Chorizo (striploin), Asado ribs, or roasted choripán sausages.",
-      "guestFaqDe": "Wird Chimichurri püriert? Niemals mit dem Pürierstab verarbeiten; traditionell werden die Kräuter fein von Hand gehackt.",
-      "guestFaqEn": "Should it be blended smooth? No, authentic chimichurri is always finely hand-chopped to keep texture, never pureed in a blender."
+      "inStock": true,
+      "stockQuantity": 5,
+      "storageLocation": "Zentrallager",
+      "isFavorite": false
     },
     {
-      "id": "sauces_romesco_catalonia",
+      "id": "sauce_demi_glace_jus",
       "category": "sauces_condiments",
-      "nameEn": "Catalan Salsa Romesco",
-      "nameDe": "Katalanische Salsa Romesco",
-      "subtitleEn": "Toasted almond, hazelnut, ñora pepper, roasted garlic, and olive oil condiment",
-      "subtitleDe": "Traditionelle katalanische Sauce aus gerösteten Mandeln, Haselnüssen, Tomaten und Ñora-Chilis",
-      "imageUrl": "https://images.unsplash.com/photo-1472476443507-c7a5948772fc?w=800&auto=format&fit=crop&q=80",
-      "origin": "Spain (Catalonia, Tarragona)",
-      "isImport": true,
+      "nameEn": "Veal Demi-Glace & Glace de Viande (Haute Cuisine Jus)",
+      "nameDe": "Kalbsjus & Demi-Glace (Klassische Braune Grundsauce)",
+      "subtitleEn": "48-hour slow collagen extraction from roasted veal marrow bones & mirepoix, mirror reduction",
+      "subtitleDe": "48-Stunden-Kollagenreduktion aus gerösteten Kalbsknochen & Röstgemüse; glasiger Spiegel",
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/C%C3%B4te_de_Porc_Fermi%C3%A8re.jpg/330px-C%C3%B4te_de_Porc_Fermi%C3%A8re.jpg",
+      "origin": "France (Auguste Escoffier / Haute Cuisine Brigade)",
+      "isImport": false,
       "abv": "0.0% ABV",
-      "tasteEn": "Rich roasted nuts, sweet dried paprika, smoky char, rounded garlic, pleasant vinegar tang.",
-      "tasteDe": "Nussig-cremig, geröstete Paprika, Knoblauch, dezente Rauchnote und feine Essigsäure.",
-      "scienceEn": "Ground toasted nuts provide natural emulsifiers that bind olive oil, tomato paste, and rehydrated dried ñora pepper pulp into a velvety sauce without dairy.",
-      "scienceDe": "Das Öl der gerösteten Nüsse emulgiert mit Tomaten und Sherryessig zu einer cremigen Bindung ganz ohne Milchprodukte.",
-      "culinaryEn": "Classic accompaniment for grilled Calçots (green scallions), roasted fish, or grilled vegetables.",
-      "culinaryDe": "Das Nationalgericht zur Calçotada (gegrillte Frühlingszwiebeln), zu gegrilltem Fisch und Gemüse.",
-      "faqEn": "What are Ñora peppers? Small, round, sweet dried peppers native to eastern Spain, essential for genuine earthy romesco flavor.",
-      "faqDe": "Was sind Ñora-Paprikas? Runde, mild-süße getrocknete Paprikaschoten aus Spanien, die der Sauce ihre rote Tiefe geben.",
+      "tasteEn": "Massive deep roasted umami, gelatinous lip-coating velvet glaze, sweet caramelization, zero artificial starches.",
+      "tasteDe": "Tiefgründiges Fleisch-Umami, samtiger Glanz, geliert auf den Lippen, reine Naturkraft ohne Mehlpampe.",
+      "scienceEn": "Escoffier's Mother Sauce evolution: Roasted veal bones are simmered gently for up to 24-48 hours. Connective collagen slowly hydrolyzes into soluble GELATIN. The stock (Fond brun) is reduced down by half (Demi-Glace) or three-quarters (Glace de Viande). Gelatin molecules coat the tongue, delivering luxurious viscosity and binding pan sauces to a mirror finish ('Napper').",
+      "scienceDe": "Das Herz der klassischen Sauce: Kalbsknochen werden stundenlang geröstet und ausgekocht. Das feste Kollagen verwandelt sich bei sanfter Hitze in flüssige GELATINE. Durch das Reduzieren um 50% (Demi-Glace) verdichtet sich die Gelatine so stark, dass die Sauce von Natur aus glänzend andickt und Fleisch glasiert ('Nappieren').",
+      "culinaryEn": "The foundation for Sauce Bordelaise, Sauce au Poivre, Madeira sauce, and glossy reductions for tournedos and venison.",
+      "culinaryDe": "Basis für Pfeffersaucen, Trüffelsaucen, Portweinjus und zum Hochglanz-Glasieren von Rinderfilet.",
+      "faqEn": "Why does real restaurant jus turn into a firm jelly when cold? Pure extracted collagen protein sets into natural gelatin when chilled below 15°C.",
+      "faqDe": "Warum wird echter Kalbsjus im Kühlschrank fest wie Gelee? Weil er voller reiner Natur-Gelatine aus den Kalbsknochen steckt – das Gütesiegel handwerklicher Spitzenküche!",
       "allergens": [
-        "Nuts (Almonds, Hazelnuts)"
+        "Celery (Sellerie im Mirepoix"
       ],
       "tags": [
-        "Romesco",
-        "Spain",
-        "Catalonia",
-        "Nuts",
-        "Calcot",
-        "Sauce"
+        "DemiGlace",
+        "Kalbsjus",
+        "Escoffier",
+        "Collagen",
+        "Umami",
+        "HauteCuisine"
       ],
-      "tasteProfileDe": "Nussig-cremig, geröstete Paprika, Knoblauch, dezente Rauchnote und feine Essigsäure.",
-      "tasteProfileEn": "Rich roasted nuts, sweet dried paprika, smoky char, rounded garlic, pleasant vinegar tang.",
-      "scienceExplainedDe": "Das Öl der gerösteten Nüsse emulgiert mit Tomaten und Sherryessig zu einer cremigen Bindung ganz ohne Milchprodukte.",
-      "scienceExplainedEn": "Ground toasted nuts provide natural emulsifiers that bind olive oil, tomato paste, and rehydrated dried ñora pepper pulp into a velvety sauce without dairy.",
-      "culinaryServingDe": "Das Nationalgericht zur Calçotada (gegrillte Frühlingszwiebeln), zu gegrilltem Fisch und Gemüse.",
-      "culinaryServingEn": "Classic accompaniment for grilled Calçots (green scallions), roasted fish, or grilled vegetables.",
-      "guestFaqDe": "Was sind Ñora-Paprikas? Runde, mild-süße getrocknete Paprikaschoten aus Spanien, die der Sauce ihre rote Tiefe geben.",
-      "guestFaqEn": "What are Ñora peppers? Small, round, sweet dried peppers native to eastern Spain, essential for genuine earthy romesco flavor."
-    },
-    {
-      "id": "sauces_harissa_tunisia",
-      "category": "sauces_condiments",
-      "nameEn": "Tunisian Traditional Harissa (UNESCO)",
-      "nameDe": "Traditionelle Tunesische Harissa (UNESCO)",
-      "subtitleEn": "Sun-dried red chili paste pounded with garlic, caraway, coriander, and olive oil",
-      "subtitleDe": "In der Sonne getrocknete rote Baklouti-Chilis mit Knoblauch, Koriander und Kreuzkümmel",
-      "imageUrl": "https://images.unsplash.com/photo-1472476443507-c7a5948772fc?w=800&auto=format&fit=crop&q=80",
-      "origin": "Tunisia (Nabeul / Cap Bon)",
-      "isImport": true,
-      "abv": "0.0% ABV",
-      "tasteEn": "Smoky fiery chili heat, earthy cumin & caraway, sweet roasted pepper, pungent garlic.",
-      "tasteDe": "Feurige Chilischärfe, erdiges Kreuzkümmel- und Kümmelaroma, Knoblauch und fruchtige Paprika.",
-      "scienceEn": "Capsaicin from sun-dried chilies stimulates TRPV1 heat receptors; essential oils in caraway and coriander tame sharpness with floral terpenes.",
-      "scienceDe": "Capsaicin sorgt für den Schärfereiz, während Kreuzkümmel und Olivenöl die Schärfe harmonisch im Mund verteilen.",
-      "culinaryEn": "Stirred into couscous broths, shakshuka, marinades, or mixed with olive oil as a table bread dip.",
-      "culinaryDe": "Grundlage für Shakshuka, Couscous, Lamm-Marinaden oder mit Olivenöl als Brotdip.",
-      "faqEn": "Is Harissa UNESCO recognized? Yes, in 2022 Tunisia's traditional culinary skills of Harissa crafting were inscribed on UNESCO's Intangible Heritage list.",
-      "faqDe": "Ist Harissa UNESCO-Kulturerbe? Ja, das traditionelle Handwerk der Harissa-Herstellung wurde 2022 von der UNESCO anerkannt.",
-      "allergens": [],
-      "tags": [
-        "Harissa",
-        "Tunisia",
-        "Chili",
-        "UNESCO",
-        "Spicy",
-        "Condiment"
-      ],
-      "tasteProfileDe": "Feurige Chilischärfe, erdiges Kreuzkümmel- und Kümmelaroma, Knoblauch und fruchtige Paprika.",
-      "tasteProfileEn": "Smoky fiery chili heat, earthy cumin & caraway, sweet roasted pepper, pungent garlic.",
-      "scienceExplainedDe": "Capsaicin sorgt für den Schärfereiz, während Kreuzkümmel und Olivenöl die Schärfe harmonisch im Mund verteilen.",
-      "scienceExplainedEn": "Capsaicin from sun-dried chilies stimulates TRPV1 heat receptors; essential oils in caraway and coriander tame sharpness with floral terpenes.",
-      "culinaryServingDe": "Grundlage für Shakshuka, Couscous, Lamm-Marinaden oder mit Olivenöl als Brotdip.",
-      "culinaryServingEn": "Stirred into couscous broths, shakshuka, marinades, or mixed with olive oil as a table bread dip.",
-      "guestFaqDe": "Ist Harissa UNESCO-Kulturerbe? Ja, das traditionelle Handwerk der Harissa-Herstellung wurde 2022 von der UNESCO anerkannt.",
-      "guestFaqEn": "Is Harissa UNESCO recognized? Yes, in 2022 Tunisia's traditional culinary skills of Harissa crafting were inscribed on UNESCO's Intangible Heritage list."
+      "inStock": true,
+      "stockQuantity": 5,
+      "storageLocation": "Zentrallager",
+      "isFavorite": false
     }
   ]
 }
