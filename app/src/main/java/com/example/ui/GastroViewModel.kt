@@ -532,6 +532,19 @@ class GastroViewModel(
         context.startActivity(shareIntent)
     }
 
+    private fun shuffleQuestionOptions(q: QuizQuestion): QuizQuestion {
+        val correctEn = q.optionsEn.getOrNull(q.correctIndex) ?: q.optionsEn.first()
+        val indices = q.optionsEn.indices.toList().shuffled()
+        val newOptsEn = indices.map { q.optionsEn[it] }
+        val newOptsDe = indices.map { q.optionsDe[it] }
+        val newCorrectIndex = newOptsEn.indexOf(correctEn).coerceAtLeast(0)
+        return q.copy(
+            optionsEn = newOptsEn,
+            optionsDe = newOptsDe,
+            correctIndex = newCorrectIndex
+        )
+    }
+
     // Quiz actions & dynamic category filters
     fun configureAndStartQuiz(category: GastroCategory, count: Int = 10) {
         quizCategory.value = category
@@ -541,7 +554,8 @@ class GastroViewModel(
         } else {
             quizQuestions.filter { it.category == category }.ifEmpty { quizQuestions }
         }
-        activeSessionQuestions.value = pool.shuffled().take(count.coerceAtLeast(1))
+        val shuffledPool = pool.shuffled().take(count.coerceAtLeast(1))
+        activeSessionQuestions.value = shuffledPool.map { shuffleQuestionOptions(it) }
         quizState.value = QuizSessionState()
     }
 

@@ -656,7 +656,7 @@ fun sendQuizResultReport(context: Context, staffName: String, score: Int, total:
 
     val intent = Intent(Intent.ACTION_SEND).apply {
         type = "text/plain"
-        putExtra(Intent.EXTRA_SUBJECT, "GastroCodex Quiz-Ergebnis: $staffName ($percent%)")
+        putExtra(Intent.EXTRA_SUBJECT, if (language == Language.DE) "GastroCodex Quiz-Ergebnis: $staffName ($percent%)" else "GastroCodex Quiz Result: $staffName ($percent%)")
         putExtra(Intent.EXTRA_TEXT, reportText)
     }
     context.startActivity(Intent.createChooser(intent, if (language == Language.DE) "Ergebnis senden via WhatsApp / E-Mail" else "Send Result via WhatsApp / Email"))

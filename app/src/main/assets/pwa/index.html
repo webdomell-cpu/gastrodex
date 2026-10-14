@@ -190,6 +190,12 @@
   <!-- PANE 3: COFFEE LAB -->
     <main id="pane-coffee" class="tab-pane">
     <div class="container" style="padding-top: 16px;">
+      <div style="margin-bottom: 14px;">
+        <button onclick="switchTab('home')" class="btn-subtle" style="display:inline-flex; align-items:center; gap:6px; padding:6px 14px; border-radius:20px; font-size:0.82rem; font-weight:700; background:var(--bg-surface-variant); border:1px solid var(--border-subtle); color:var(--text-secondary); cursor:pointer;">
+          <span class="material-symbols-outlined" style="font-size:16px;">arrow_back</span>
+          <span id="coffeeBackBtn">Zurück zur Übersicht</span>
+        </button>
+      </div>
       <div class="detail-section" style="margin-bottom: 16px;">
         <h2 style="font-size: 1.25rem; font-weight: 800; color: var(--accent-gold); margin-bottom: 8px;" id="coffeeHeaderTitle">☕ Kaffeespezialitäten & Schichten-Labor</h2>
         <p style="font-size: 0.88rem; color: var(--text-secondary);" id="coffeeHeaderSub">
@@ -276,6 +282,12 @@
   <!-- PANE 5: QUIZ TRAINER (10 QUESTIONS WITH CATEGORY FILTER) -->
     <main id="pane-quiz" class="tab-pane">
     <div class="container" style="padding-top: 16px;">
+      <div style="margin-bottom: 14px;">
+        <button onclick="switchTab('home')" class="btn-subtle" style="display:inline-flex; align-items:center; gap:6px; padding:6px 14px; border-radius:20px; font-size:0.82rem; font-weight:700; background:var(--bg-surface-variant); border:1px solid var(--border-subtle); color:var(--text-secondary); cursor:pointer;">
+          <span class="material-symbols-outlined" style="font-size:16px;">arrow_back</span>
+          <span id="quizBackBtn">Zurück zur Übersicht</span>
+        </button>
+      </div>
       
       <!-- Quiz Header & Settings Card -->
       <div class="detail-section" style="margin-bottom: 16px;">
@@ -376,7 +388,7 @@
         <div class="detail-section" style="background: var(--bg-surface-variant); border-radius: var(--radius-md);">
           <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 12px; text-align: center;">
             <div style="padding: 6px;">
-              <div style="font-size: 0.72rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase;">Herkunft</div>
+              <div id="detailOriginLabel" style="font-size: 0.72rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase;">Herkunft</div>
               <div id="detailOrigin" style="font-weight: 700; font-size: 0.88rem; color: var(--text-primary); margin-top: 2px;"></div>
             </div>
             <div style="padding: 6px;">
@@ -392,54 +404,54 @@
 
         <!-- High-Contrast Gast-Fragen Card -->
         <div class="detail-section faq-highlight-box" id="detailFaqBox">
-          <h4 class="detail-section-title" style="color: var(--accent-gold); font-size: 0.9rem;">
+          <h4 class="detail-section-title" id="detailFaqTitle" style="color: var(--accent-gold); font-size: 0.9rem;">
             <span class="material-symbols-outlined" style="font-size: 18px;">help_outline</span>
-            Gastfragen souverän beantworten
+            <span>Gastfragen souverän beantworten</span>
           </h4>
           <p id="detailFaq" class="detail-section-text" style="color: #ffffff; font-size: 0.92rem; line-height: 1.6;"></p>
         </div>
 
         <!-- Wissenschaft & Herstellung -->
         <div class="detail-section" id="detailScienceBox">
-          <h4 class="detail-section-title">
+          <h4 class="detail-section-title" id="detailScienceTitle">
             <span class="material-symbols-outlined" style="font-size: 18px;">science</span>
-            Wissenschaft & Herstellung
+            <span>Wissenschaft & Herstellung</span>
           </h4>
           <p id="detailScience" class="detail-section-text"></p>
         </div>
 
         <!-- Rohstoffe & Botanicals -->
         <div class="detail-section" id="detailRawMaterialBox">
-          <h4 class="detail-section-title">
+          <h4 class="detail-section-title" id="detailRawMaterialTitle">
             <span class="material-symbols-outlined" style="font-size: 18px;">spa</span>
-            Rohstoffe & Botanicals
+            <span>Rohstoffe & Botanicals</span>
           </h4>
           <p id="detailRawMaterial" class="detail-section-text"></p>
         </div>
 
         <!-- Sensorik & Geschmacksprofil -->
         <div class="detail-section" id="detailTasteBox">
-          <h4 class="detail-section-title">
+          <h4 class="detail-section-title" id="detailTasteTitle">
             <span class="material-symbols-outlined" style="font-size: 18px;">restaurant</span>
-            Sensorik & Geschmacksprofil
+            <span>Sensorik & Geschmacksprofil</span>
           </h4>
           <p id="detailTaste" class="detail-section-text"></p>
         </div>
 
         <!-- Servierempfehlung & Gastronomie-Einsatz -->
         <div class="detail-section" id="detailCulinaryBox">
-          <h4 class="detail-section-title">
+          <h4 class="detail-section-title" id="detailCulinaryTitle">
             <span class="material-symbols-outlined" style="font-size: 18px;">local_bar</span>
-            Servierempfehlung & Gastronomie-Einsatz
+            <span>Servierempfehlung & Gastronomie-Einsatz</span>
           </h4>
           <p id="detailCulinary" class="detail-section-text"></p>
         </div>
 
         <!-- Allergen- & Inhaltsstoffhinweis Card -->
         <div id="detailAllergenSection" class="detail-section allergen-highlight-box" style="display: none;">
-          <h4 class="detail-section-title" style="color: #ff6b6b; font-size: 0.85rem;">
+          <h4 class="detail-section-title" id="detailAllergenTitle" style="color: #ff6b6b; font-size: 0.85rem;">
             <span class="material-symbols-outlined" style="font-size: 18px;">warning</span>
-            Allergen- & Inhaltsstoffhinweis (EU)
+            <span>Allergen- & Inhaltsstoffhinweis (EU)</span>
           </h4>
           <p id="detailAllergens" class="detail-section-text" style="color: #ffe3e3; font-weight: 600;"></p>
         </div>
@@ -457,20 +469,20 @@
   <div id="categoryGridModal" class="modal-overlay" onclick="closeCategoryGridModal(event)">
     <div class="modal-card" style="max-width: 600px; max-height: 85vh; display: flex; flex-direction: column;">
       <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px;">
-        <h3 style="font-size: 1.15rem; font-weight: 800; color: var(--accent-gold); display: flex; align-items: center; gap: 8px;">
+        <h3 id="categoryModalTitle" style="font-size: 1.15rem; font-weight: 800; color: var(--accent-gold); display: flex; align-items: center; gap: 8px;">
           <span class="material-symbols-outlined">grid_view</span>
-          Kategorie-Schnellauswahl (24)
+          <span>Kategorie-Schnellauswahl (24)</span>
         </h3>
         <button class="modal-close-btn" onclick="closeCategoryGridModal()">×</button>
       </div>
-      <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 12px;">
+      <p id="categoryModalSub" style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 12px;">
         Wähle direkt eine der 24 Fachkategorien aus der Gastronomie-Wissensdatenbank:
       </p>
       <div id="categoryGridContainer" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 8px; overflow-y: auto; padding-right: 4px; max-height: 55vh;">
         <!-- Injected via renderCategoryGrid() in app.js -->
       </div>
       <div style="margin-top: 14px; text-align: right;">
-        <button class="btn-primary" style="padding: 8px 16px; font-size: 0.85rem;" onclick="closeCategoryGridModal()">Fertig</button>
+        <button id="categoryModalCloseBtn" class="btn-primary" style="padding: 8px 16px; font-size: 0.85rem;" onclick="closeCategoryGridModal()">Fertig</button>
       </div>
     </div>
   </div>
@@ -483,7 +495,7 @@
       <p id="inPrepText" style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5; margin-bottom: 20px;">
         Dieser Bereich wird aktuell für dich entwickelt und steht in Kürze zur Verfügung.
       </p>
-      <button class="btn-primary" style="width: 100%; padding: 10px;" onclick="closeInPrepModal()">Verstanden</button>
+      <button id="inPrepCloseBtn" class="btn-primary" style="width: 100%; padding: 10px;" onclick="closeInPrepModal()">Verstanden</button>
     </div>
   </div>
 
@@ -497,7 +509,7 @@
       </div>
     </div>
     <div class="pwa-install-actions">
-      <button class="pwa-btn-dismiss" onclick="dismissInstallPrompt()">Später</button>
+      <button id="pwaInstallDismissBtn" class="pwa-btn-dismiss" onclick="dismissInstallPrompt()">Später</button>
       <button class="pwa-btn-install" id="pwaInstallBtn" onclick="triggerPwaInstall()">📲 Installieren</button>
     </div>
   </div>
@@ -506,17 +518,17 @@
   <div id="iosInstallModal" class="modal-overlay" onclick="closeIosInstallModal(event)">
     <div class="modal-card" style="max-width: 480px; text-align: center; padding: 24px 20px;">
       <div style="font-size: 2.2rem; margin-bottom: 8px;">📲</div>
-      <h3 style="font-size: 1.2rem; font-weight: 800; color: var(--accent-gold); margin-bottom: 8px;">
+      <h3 id="iosInstallTitle" style="font-size: 1.2rem; font-weight: 800; color: var(--accent-gold); margin-bottom: 8px;">
         Zum Startbildschirm hinzufügen
       </h3>
-      <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5; margin-bottom: 16px;">
+      <p id="iosInstallSub" style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5; margin-bottom: 16px;">
         Nutze GastroDex wie eine echte App direkt auf deinem Smartphone:
       </p>
-      <div style="background: var(--bg-surface-variant); padding: 14px; border-radius: var(--radius-md); text-align: left; font-size: 0.86rem; color: var(--text-primary); margin-bottom: 18px; border: 1px solid var(--border-subtle);">
+      <div id="iosInstallSteps" style="background: var(--bg-surface-variant); padding: 14px; border-radius: var(--radius-md); text-align: left; font-size: 0.86rem; color: var(--text-primary); margin-bottom: 18px; border: 1px solid var(--border-subtle);">
         <p style="margin-bottom: 8px;">1. Im Browser auf das <strong>Teilen-Symbol</strong> <span style="font-size: 1.1rem; vertical-align: middle;">⎋</span> (iOS Safari) oder die <strong>Drei Punkte</strong> <strong>⋮</strong> (Chrome/Android) tippen.</p>
         <p>2. Wähle <strong>„Zum Home-Bildschirm“</strong> bzw. <strong>„App installieren“</strong> aus.</p>
       </div>
-      <button class="btn-primary" style="width: 100%; padding: 10px;" onclick="closeIosInstallModal()">Verstanden</button>
+      <button id="iosInstallBtn" class="btn-primary" style="width: 100%; padding: 10px;" onclick="closeIosInstallModal()">Verstanden</button>
     </div>
   </div>
 
@@ -541,6 +553,14 @@
     <button class="nav-item" id="tab-science" onclick="switchTab('science')">
       <span class="nav-item-icon material-symbols-outlined">science</span>
       <span id="tabScienceLabel">Science</span>
+    </button>
+    <button class="nav-item" id="tab-cocktails" onclick="switchTab('cocktails')">
+      <span class="nav-item-icon material-symbols-outlined">local_bar</span>
+      <span id="tabCocktailsLabel">Cocktails</span>
+    </button>
+    <button class="nav-item" id="tab-service" onclick="switchTab('service')">
+      <span class="nav-item-icon material-symbols-outlined">room_service</span>
+      <span id="tabServiceLabel">Service</span>
     </button>
     <button class="nav-item" id="tab-quiz" onclick="switchTab('quiz')">
       <span class="nav-item-icon material-symbols-outlined">quiz</span>

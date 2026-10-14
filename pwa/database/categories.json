@@ -59,6 +59,12 @@
       "titleDe": "Longdrinks & Service",
       "titleEn": "Longdrinks & Service",
       "icon": "room_service"
+    },
+    {
+      "id": "service",
+      "titleDe": "Service & Tischkultur",
+      "titleEn": "Service & Table Culture",
+      "icon": "room_service"
     }
   ]
 }

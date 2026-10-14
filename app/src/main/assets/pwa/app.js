@@ -499,10 +499,90 @@ function renderLanguageLabels() {
   const homeServiceSub = document.getElementById('homeCardServiceSub');
   if (homeServiceSub) homeServiceSub.textContent = isDe ? "Tischdecke & HACCP" : "Table & HACCP";
 
+  const tabCocktailsLabel = document.getElementById('tabCocktailsLabel');
+  if (tabCocktailsLabel) tabCocktailsLabel.textContent = isDe ? "Cocktails" : "Cocktails";
+  const tabServiceLabel = document.getElementById('tabServiceLabel');
+  if (tabServiceLabel) tabServiceLabel.textContent = isDe ? "Service" : "Service";
+
+  const coffeeBackBtn = document.getElementById('coffeeBackBtn');
+  if (coffeeBackBtn) coffeeBackBtn.textContent = isDe ? 'Zurück zur Übersicht' : 'Back to Overview';
+  const quizBackBtn = document.getElementById('quizBackBtn');
+  if (quizBackBtn) quizBackBtn.textContent = isDe ? 'Zurück zur Übersicht' : 'Back to Overview';
+
   const homeRecipes = document.getElementById('homeCardRecipes');
   if (homeRecipes) homeRecipes.textContent = isDe ? "Basis-Rezepte" : "Basic Recipes";
   const homeRecipesSub = document.getElementById('homeCardRecipesSub');
   if (homeRecipesSub) homeRecipesSub.textContent = isDe ? "In Vorbereitung" : "Coming Soon";
+
+  // Detail Modal section headers & labels
+  const originLabel = document.getElementById('detailOriginLabel');
+  if (originLabel) originLabel.textContent = isDe ? 'Herkunft' : 'Origin';
+
+  const faqTitle = document.getElementById('detailFaqTitle');
+  if (faqTitle) faqTitle.innerHTML = `<span class="material-symbols-outlined" style="font-size: 18px;">help_outline</span><span>${isDe ? 'Gastfragen souverän beantworten' : 'How to Explain to a Guest'}</span>`;
+
+  const scienceTitle = document.getElementById('detailScienceTitle');
+  if (scienceTitle) scienceTitle.innerHTML = `<span class="material-symbols-outlined" style="font-size: 18px;">science</span><span>${isDe ? 'Wissenschaft & Herstellung' : 'Science & Production'}</span>`;
+
+  const rawTitle = document.getElementById('detailRawMaterialTitle');
+  if (rawTitle) rawTitle.innerHTML = `<span class="material-symbols-outlined" style="font-size: 18px;">spa</span><span>${isDe ? 'Rohstoffe & Botanicals' : 'Raw Materials & Botanicals'}</span>`;
+
+  const tasteTitle = document.getElementById('detailTasteTitle');
+  if (tasteTitle) tasteTitle.innerHTML = `<span class="material-symbols-outlined" style="font-size: 18px;">restaurant</span><span>${isDe ? 'Sensorik & Geschmacksprofil' : 'Sensory & Flavor Profile'}</span>`;
+
+  const culinaryTitle = document.getElementById('detailCulinaryTitle');
+  if (culinaryTitle) culinaryTitle.innerHTML = `<span class="material-symbols-outlined" style="font-size: 18px;">local_bar</span><span>${isDe ? 'Servierempfehlung & Gastronomie-Einsatz' : 'Serving Recommendation & Bar Use'}</span>`;
+
+  const allergenTitle = document.getElementById('detailAllergenTitle');
+  if (allergenTitle) allergenTitle.innerHTML = `<span class="material-symbols-outlined" style="font-size: 18px;">warning</span><span>${isDe ? 'Allergen- & Inhaltsstoffhinweis (EU)' : 'Allergen & Ingredient Notice (EU)'}</span>`;
+
+  // Filter Buttons
+  const filterFavBtn = document.getElementById('filterFavBtn');
+  if (filterFavBtn) filterFavBtn.textContent = isDe ? '❤️ Favoriten' : '❤️ Favorites';
+  const filterStockBtn = document.getElementById('filterStockBtn');
+  if (filterStockBtn) filterStockBtn.textContent = isDe ? '📦 Auf Lager' : '📦 In Stock';
+
+  // Quiz Next Button
+  const quizNextBtn = document.getElementById('quizNextBtn');
+  if (quizNextBtn) quizNextBtn.textContent = isDe ? 'Nächste Frage ➜' : 'Next Question ➜';
+
+  // Category Grid Modal
+  const catModalTitle = document.getElementById('categoryModalTitle');
+  if (catModalTitle) catModalTitle.innerHTML = `<span class="material-symbols-outlined">grid_view</span><span>${isDe ? 'Kategorie-Schnellauswahl (24)' : 'Category Quick Select (24)'}</span>`;
+  const catModalSub = document.getElementById('categoryModalSub');
+  if (catModalSub) catModalSub.textContent = isDe ? 'Wähle direkt eine der 24 Fachkategorien aus der Gastronomie-Wissensdatenbank:' : 'Select directly from the 24 gastronomy categories in the knowledge database:';
+  const catModalClose = document.getElementById('categoryModalCloseBtn');
+  if (catModalClose) catModalClose.textContent = isDe ? 'Fertig' : 'Done';
+
+  // In Prep Modal
+  const inPrepTitle = document.getElementById('inPrepTitle');
+  if (inPrepTitle) inPrepTitle.textContent = isDe ? 'In Vorbereitung' : 'Coming Soon';
+  const inPrepText = document.getElementById('inPrepText');
+  if (inPrepText) inPrepText.textContent = isDe ? 'Dieser Bereich wird aktuell für dich entwickelt und steht in Kürze zur Verfügung.' : 'This section is currently under development and will be available soon.';
+  const inPrepClose = document.getElementById('inPrepCloseBtn');
+  if (inPrepClose) inPrepClose.textContent = isDe ? 'Verstanden' : 'Got it';
+
+  // iOS Install Modal
+  const iosTitle = document.getElementById('iosInstallTitle');
+  if (iosTitle) iosTitle.textContent = isDe ? 'Zum Startbildschirm hinzufügen' : 'Add to Home Screen';
+  const iosSub = document.getElementById('iosInstallSub');
+  if (iosSub) iosSub.textContent = isDe ? 'Nutze GastroDex wie eine echte App direkt auf deinem Smartphone:' : 'Use GastroDex like a native app directly on your smartphone:';
+  const iosSteps = document.getElementById('iosInstallSteps');
+  if (iosSteps) iosSteps.innerHTML = isDe ? 
+    '<p style="margin-bottom: 8px;">1. Im Browser auf das <strong>Teilen-Symbol</strong> <span style="font-size: 1.1rem; vertical-align: middle;">⎋</span> (iOS Safari) oder die <strong>Drei Punkte</strong> <strong>⋮</strong> (Chrome/Android) tippen.</p><p>2. Wähle <strong>„Zum Home-Bildschirm“</strong> bzw. <strong>„App installieren“</strong> aus.</p>' : 
+    '<p style="margin-bottom: 8px;">1. In your browser tap the <strong>Share icon</strong> <span style="font-size: 1.1rem; vertical-align: middle;">⎋</span> (iOS Safari) or the <strong>Three dots</strong> <strong>⋮</strong> (Chrome/Android).</p><p>2. Select <strong>"Add to Home Screen"</strong> or <strong>"Install App"</strong>.</p>';
+  const iosBtn = document.getElementById('iosInstallBtn');
+  if (iosBtn) iosBtn.textContent = isDe ? 'Verstanden' : 'Got it';
+
+  // PWA Install Banner
+  const pwaTitle = document.getElementById('pwaInstallTitle');
+  if (pwaTitle) pwaTitle.textContent = isDe ? 'GastroDex installieren?' : 'Install GastroDex?';
+  const pwaSub = document.getElementById('pwaInstallSub');
+  if (pwaSub) pwaSub.textContent = isDe ? 'Als Web-App auf dem Homescreen speichern für blitzschnellen Offline-Zugriff.' : 'Save as web app on your home screen for instant offline access.';
+  const pwaDismiss = document.getElementById('pwaInstallDismissBtn');
+  if (pwaDismiss) pwaDismiss.textContent = isDe ? 'Später' : 'Later';
+  const pwaInstall = document.getElementById('pwaInstallBtn');
+  if (pwaInstall) pwaInstall.textContent = isDe ? '📲 Installieren' : '📲 Install';
 }
 
 function renderKnowledgeGuides() {
@@ -519,6 +599,13 @@ function renderWineGuide(isDe) {
   const el = document.getElementById('wineGuideContent');
   if (!el) return;
   el.innerHTML = `
+    <!-- Back to Overview Button -->
+    <div style="margin-bottom: 14px;">
+      <button onclick="switchTab('home')" class="btn-subtle" style="display:inline-flex; align-items:center; gap:6px; padding:6px 14px; border-radius:20px; font-size:0.82rem; font-weight:700; background:var(--bg-surface-variant); border:1px solid var(--border-subtle); color:var(--text-secondary); cursor:pointer;">
+        <span class="material-symbols-outlined" style="font-size:16px;">arrow_back</span>
+        <span>${isDe ? 'Zurück zur Übersicht' : 'Back to Overview'}</span>
+      </button>
+    </div>
     <div class="detail-section" style="margin-bottom: 16px;">
       <h2 style="font-size: 1.25rem; font-weight: 800; color: var(--accent-gold); margin-bottom: 8px;">
         🍷 ${isDe ? 'Wein- & Schaumweinkompass' : 'Wine & Sparkling Wine Master Guide'}
@@ -594,57 +681,148 @@ function renderCoffeeGuide(isDe) {
   updateCoffeeComparison();
 }
 
+
+let currentServiceSchema = 'gala';
+
+function setServiceSchema(schema) {
+  currentServiceSchema = schema;
+  renderServiceGuide(currentLang === 'de');
+}
+
 function renderCocktailsGuide(isDe) {
   const el = document.getElementById('cocktailsGuideContent');
   if (!el) return;
   el.innerHTML = `
+    <!-- Back to Overview Button -->
+    <div style="margin-bottom: 14px;">
+      <button onclick="switchTab('home')" class="btn-subtle" style="display:inline-flex; align-items:center; gap:6px; padding:6px 14px; border-radius:20px; font-size:0.82rem; font-weight:700; background:var(--bg-surface-variant); border:1px solid var(--border-subtle); color:var(--text-secondary); cursor:pointer;">
+        <span class="material-symbols-outlined" style="font-size:16px;">arrow_back</span>
+        <span>${isDe ? 'Zurück zur Übersicht' : 'Back to Overview'}</span>
+      </button>
+    </div>
+
+    <!-- Header Section -->
     <div class="detail-section" style="margin-bottom: 16px;">
       <h2 style="font-size: 1.25rem; font-weight: 800; color: var(--accent-gold); margin-bottom: 8px;">
-        🍸 ${isDe ? 'Cocktails, Longdrinks & Bar-Technik' : 'Cocktails, Highballs & Bar Technique'}
+        🍸 ${isDe ? 'Cocktails, Bar-Technik & Longdrinks' : 'Cocktails, Bar Technique & Highballs'}
       </h2>
       <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5;">
         ${isDe ? 
-          'Klassische Bar-Rezepte, Highball-Balance, Eis-Physik und die grundlegenden Handgriffe professioneller Bartender.' : 
-          'Classic bar recipes, highball balance, ice thermodynamics, and fundamental mixology techniques.'}
+          'Klassische Bar-Rezepte, Highball-Balance, Eis-Thermodynamik, Rühr- und Schütteltechnik mit fotorealistischen Impressionen für Bartender und Servicekräfte.' : 
+          'Classic bar recipes, highball balance, ice thermodynamics, stirring & shaking craft with photo inspiration for bartenders and floor staff.'}
       </p>
     </div>
 
-    <div class="detail-section" style="margin-bottom: 14px;">
-      <h3 class="detail-section-title">🧊 ${isDe ? 'Eis-Physik & Glas-Kompensation' : 'Ice Thermodynamics & Glass Pre-Chilling'}</h3>
+    <!-- Section 1: Classic Cocktails with Photos -->
+    <div class="detail-section" style="margin-bottom: 16px;">
+      <h3 class="detail-section-title" style="margin-bottom: 12px;">🍹 ${isDe ? '1. Zeitlose Bar-Klassiker & Rezepturen' : '1. Timeless Bar Classics & Recipes'}</h3>
+      
+      <!-- Negroni Card -->
+      <div style="background: var(--bg-surface-variant); border-radius: 12px; overflow: hidden; margin-bottom: 14px; border: 1px solid var(--border-subtle);">
+        <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=800&auto=format&fit=crop&q=80" alt="Negroni Cocktail" style="width: 100%; height: 180px; object-fit: cover; display: block;" />
+        <div style="padding: 14px;">
+          <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 6px;">
+            <h4 style="font-size: 1.05rem; font-weight: 800; color: var(--accent-gold);">Negroni (IBA Official)</h4>
+            <span style="font-size: 0.75rem; font-weight: 700; background: rgba(231,111,81,0.2); color: #e76f51; padding: 2px 8px; border-radius: 10px;">${isDe ? 'Gerührt (Stirred)' : 'Stirred'}</span>
+          </div>
+          <p style="font-size: 0.85rem; color: var(--text-primary); margin-bottom: 6px;">
+            <strong>${isDe ? 'Zutaten:' : 'Ingredients:'}</strong> 3 cl Dry Gin, 3 cl Campari (Bitter), 3 cl Vermouth Rosso (Süß).
+          </p>
+          <p style="font-size: 0.83rem; color: var(--text-secondary); line-height: 1.4;">
+            <strong>${isDe ? 'Zubereitung:' : 'Method:'}</strong> ${isDe ? 
+              'Im Rührglas auf massivem Eis 30 Sekunden kalt rühren, bis das Glas beschlägt. In einen Tumbler mit frischem Eisblock abseihen, mit Orangenzeste abspritzen und garnieren.' : 
+              'Stir with large ice in a mixing glass for 30s until chilled. Strain into rocks glass over a fresh clear ice block; express orange peel.'}
+          </p>
+        </div>
+      </div>
+
+      <!-- Gin & Tonic Card -->
+      <div style="background: var(--bg-surface-variant); border-radius: 12px; overflow: hidden; margin-bottom: 14px; border: 1px solid var(--border-subtle);">
+        <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=800&auto=format&fit=crop&q=80" alt="Gin Tonic Highball" style="width: 100%; height: 180px; object-fit: cover; display: block;" />
+        <div style="padding: 14px;">
+          <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 6px;">
+            <h4 style="font-size: 1.05rem; font-weight: 800; color: var(--accent-gold);">Gin & Tonic (Highball Standard)</h4>
+            <span style="font-size: 0.75rem; font-weight: 700; background: rgba(42,157,143,0.2); color: #2a9d8f; padding: 2px 8px; border-radius: 10px;">${isDe ? 'Gäste-Glas (Built)' : 'Built in Glass'}</span>
+          </div>
+          <p style="font-size: 0.85rem; color: var(--text-primary); margin-bottom: 6px;">
+            <strong>${isDe ? 'Zutaten:' : 'Ingredients:'}</strong> 5 cl Premium Dry Gin, 150–200 ml Tonic Water (chilled).
+          </p>
+          <p style="font-size: 0.83rem; color: var(--text-secondary); line-height: 1.4;">
+            <strong>${isDe ? 'Zubereitung:' : 'Method:'}</strong> ${isDe ? 
+              'Ballonglas oder Highball komplett mit großen Eiswürfeln füllen. Gin eingießen, eiskaltes Tonic vorsichtig über den Barlöffel einfließen lassen (Kohlensäureschutz), einmal sanft anheben. Garnitur: Zitruszeste oder Gurkenscheibe.' : 
+              'Fill balloon or highball glass with solid ice. Pour gin, gently pour cold tonic water over barspoon to preserve bubbles, lift once. Garnish: Citrus twist or cucumber slice.'}
+          </p>
+        </div>
+      </div>
+
+      <!-- Espresso Martini Card -->
+      <div style="background: var(--bg-surface-variant); border-radius: 12px; overflow: hidden; margin-bottom: 14px; border: 1px solid var(--border-subtle);">
+        <img src="https://images.unsplash.com/photo-1510591509098-f4fdc6d0ff04?w=800&auto=format&fit=crop&q=80" alt="Espresso Martini" style="width: 100%; height: 180px; object-fit: cover; display: block;" />
+        <div style="padding: 14px;">
+          <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 6px;">
+            <h4 style="font-size: 1.05rem; font-weight: 800; color: var(--accent-gold);">Espresso Martini</h4>
+            <span style="font-size: 0.75rem; font-weight: 700; background: rgba(251,133,0,0.2); color: #fb8500; padding: 2px 8px; border-radius: 10px;">${isDe ? 'Kräftig geschüttelt' : 'Hard Shake'}</span>
+          </div>
+          <p style="font-size: 0.85rem; color: var(--text-primary); margin-bottom: 6px;">
+            <strong>${isDe ? 'Zutaten:' : 'Ingredients:'}</strong> 4 cl Vodka, 2 cl Kaffeelikör (Kahlúa), 3 cl frischer Espresso, 1 cl Zuckersirup.
+          </p>
+          <p style="font-size: 0.83rem; color: var(--text-secondary); line-height: 1.4;">
+            <strong>${isDe ? 'Zubereitung:' : 'Method:'}</strong> ${isDe ? 
+              'Sehr kräftig mit Eis im Shaker schütteln (Hard Shake), um das Kaffeefett zu einer dichten, samtigen Schaumkrone zu emulgieren. Fein in eine vorgekühlte Coupette seihen. Mit 3 Kaffeebohnen garnieren.' : 
+              'Shake intensely with ice (Hard Shake) to emulsify coffee oils into a thick velvet crema. Fine-strain into chilled coupe. Garnish with 3 coffee beans.'}
+          </p>
+        </div>
+      </div>
+
+      <!-- Moscow Mule Card -->
+      <div style="background: var(--bg-surface-variant); border-radius: 12px; overflow: hidden; border: 1px solid var(--border-subtle);">
+        <img src="https://images.unsplash.com/photo-1556881286-fc6915169721?w=800&auto=format&fit=crop&q=80" alt="Moscow Mule Copper Mug" style="width: 100%; height: 180px; object-fit: cover; display: block;" />
+        <div style="padding: 14px;">
+          <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 6px;">
+            <h4 style="font-size: 1.05rem; font-weight: 800; color: var(--accent-gold);">Moscow Mule</h4>
+            <span style="font-size: 0.75rem; font-weight: 700; background: rgba(33,158,188,0.2); color: #219ebc; padding: 2px 8px; border-radius: 10px;">${isDe ? 'Kupferbecher' : 'Copper Mug'}</span>
+          </div>
+          <p style="font-size: 0.85rem; color: var(--text-primary); margin-bottom: 6px;">
+            <strong>${isDe ? 'Zutaten:' : 'Ingredients:'}</strong> 5 cl Vodka, 2 cl frischer Limettensaft, 150 ml Spicy Ginger Beer.
+          </p>
+          <p style="font-size: 0.83rem; color: var(--text-secondary); line-height: 1.4;">
+            <strong>${isDe ? 'Zubereitung:' : 'Method:'}</strong> ${isDe ? 
+              'Im Kupferbecher auf reichlich Crushed Ice oder Eiswürfeln bauen. Vodka und Limettensaft hinzugeben, mit Ginger Beer auffüllen. Mit Gurkenscheibe und Minzzweig servieren.' : 
+              'Build in traditional copper mug over ice. Add vodka and lime juice, top with ginger beer. Garnish with cucumber wheel and fresh mint sprig.'}
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 2: Bar Technique & Ice Thermodynamics -->
+    <div class="detail-section" style="margin-bottom: 16px;">
+      <h3 class="detail-section-title" style="margin-bottom: 12px;">🧊 ${isDe ? '2. Eis-Thermodynamik & Bartender-Handwerk' : '2. Ice Thermodynamics & Bartending Craft'}</h3>
+      
+      <div style="border-radius: 12px; overflow: hidden; margin-bottom: 12px; border: 1px solid var(--border-subtle);">
+        <img src="https://images.unsplash.com/photo-1560512823-829485b8bf24?w=800&auto=format&fit=crop&q=80" alt="Clear Ice Blocks" style="width: 100%; height: 180px; object-fit: cover; display: block;" />
+      </div>
       <p class="detail-section-text">
-        • <strong>${isDe ? 'Großes Eis vs. Schmelzwasser:' : 'Large Ice Blocks vs. Dilution:'}</strong> ${isDe ? 
-          'Große, kristallklare Eiswürfel oder Sphären besitzen ein geringeres Oberflächen-zu-Volumen-Verhältnis. Sie schmelzen extrem langsam, kühlen den Drink maximal und verhindern Verwässern.' : 
-          'Large crystal-clear ice blocks possess a low surface-to-volume ratio, chilling drinks rapidly with minimal dilution.'}<br/>
+        • <strong>${isDe ? 'Klare Eisblöcke (Clear Ice):' : 'Directionally Frozen Clear Ice:'}</strong> ${isDe ? 
+          'Durch gerichtete Einfrierung entstehen kristallklare Eisblöcke ohne Luftblasen und Kalk. Sie schmelzen bis zu 3x langsamer als hohle Maschineneiswürfel und halten Drinks eiskalt ohne Verwässerung.' : 
+          'Directionally frozen clear ice has zero trapped air or minerals. It melts up to 3x slower than hollow machine ice, chilling without dilution.'}<br/>
         • <strong>${isDe ? 'Glas-Vorkühlung:' : 'Glass Pre-Chilling:'}</strong> ${isDe ? 
-          'Ein vorgekühltes Ballonglas oder Tumbler verhindert den thermischen Schock beim Eingießen und hält Kohlensäure länger im Getränk gebunden.' : 
-          'Pre-chilled glassware prevents thermal shock and preserves carbonation.'}
+          'Gläser vor dem Einschenken im Tiefkühler kühlen oder mit Eiswürfeln vorrühren. Verhindert Temperaturschocks und stabilisiert die Kohlensäure.' : 
+          'Keep glassware in freezer or stir with ice before pouring. Prevents temperature shock and preserves sparkling carbonation.'}
       </p>
-    </div>
 
-    <div class="detail-section" style="margin-bottom: 14px;">
-      <h3 class="detail-section-title">🍹 ${isDe ? 'Klassische Longdrink-Standards' : 'Classic Highball & Cocktail Standards'}</h3>
-      <p class="detail-section-text">
-        • <strong>Gin & Tonic:</strong> ${isDe ? 
-          '5 cl Dry Gin, 150-200 ml Premium Tonic Water, reichlich massives Eis, frische botanische Garnitur (Zitruszeste, Rosmarinzweig oder Gurke).' : 
-          '5 cl dry gin, 150-200 ml premium tonic, abundant solid ice, fresh botanical garnish.'}<br/>
-        • <strong>Moscow Mule:</strong> ${isDe ? 
-          '5 cl Vodka, 2 cl frischer Limettensaft, 150 ml würziges Ginger Beer, Gurkenscheibe & Minze im eiskalten Kupferbecher.' : 
-          '5 cl vodka, 2 cl fresh lime juice, 150 ml spicy ginger beer, cucumber wheel & mint in a chilled copper mug.'}<br/>
-        • <strong>Negroni (IBA Official):</strong> ${isDe ? 
-          'Zu gleichen Teilen (je 3 cl) London Dry Gin, Roter Wermut (Vermouth Rosso) und Campari; auf Eis im Rührglas gerührt, mit Orangenzeste im Tumbler serviert.' : 
-          'Equal parts (3 cl each) gin, sweet vermouth, and Campari; stirred with ice and garnished with orange peel.'}
-      </p>
-    </div>
-
-    <div class="detail-section">
-      <h3 class="detail-section-title">🥄 ${isDe ? 'Rühren (Stir) vs. Schütteln (Shake)' : 'Stirring vs. Shaking Technique'}</h3>
+      <div style="border-radius: 12px; overflow: hidden; margin: 16px 0 12px 0; border: 1px solid var(--border-subtle);">
+        <img src="https://images.unsplash.com/photo-1572116469696-31de0f17cc34?w=800&auto=format&fit=crop&q=80" alt="Bartender Stirring" style="width: 100%; height: 180px; object-fit: cover; display: block;" />
+      </div>
+      <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--accent-gold); margin-bottom: 6px;">
+        🥄 ${isDe ? 'Rühren (Stir) vs. Schütteln (Shake)' : 'Stirring vs. Shaking Technique'}
+      </h4>
       <p class="detail-section-text">
         • <strong>${isDe ? 'Rühren (Stir):' : 'Stirring:'}</strong> ${isDe ? 
-          'Für Drinks aus rein klaren Spirituosen ohne Zitrussaft oder Eiweiß (z.B. Martini, Negroni, Manhattan). Verhindert Trübung und Luftblasen für eine seidige, glasklare Textur.' : 
-          'For spirit-only cocktails without citrus or egg (Martini, Negroni, Manhattan). Preserves silky clarity and velvet mouthfeel.'}<br/>
+          'Für reine Spirituosen-Mischungen ohne Zitrussäfte oder Eier (z.B. Negroni, Manhattan, Martini). Erhält die kristallklare, seidenweiche Textur ohne Trübung.' : 
+          'For spirit-only cocktails without citrus or cream (Negroni, Manhattan, Dry Martini). Preserves diamond clarity and unctuous viscosity.'}<br/>
         • <strong>${isDe ? 'Schütteln (Shake):' : 'Shaking:'}</strong> ${isDe ? 
-          'Für Rezepte mit Zitrussäften, Eiweiß, Sahne oder Pürees (z.B. Whiskey Sour, Daiquiri). Kühlt blitzschnell ab und erzeugt durch Belüftung eine feine, cremige Schaumkrone.' : 
-          'For drinks containing citrus juices, egg whites, cream, or syrups (Whiskey Sour, Daiquiri). Chills instantly and aerates to create a luscious frothy head.'}
+          'Für Drinks mit Zitrussäften, Eiweiß, Sahne oder Pürees (z.B. Sour, Daiquiri, Espresso Martini). Erzeugt Mikrobelüftung und eine dichte Schaumkrone.' : 
+          'For drinks with citrus juices, egg whites, cream, or syrups (Sour, Daiquiri, Espresso Martini). Aerates and creates velvety microfoam.'}
       </p>
     </div>
   `;
@@ -653,84 +831,331 @@ function renderCocktailsGuide(isDe) {
 function renderServiceGuide(isDe) {
   const el = document.getElementById('serviceCultureContent');
   if (!el) return;
+
+  // Schema diagram SVGs
+  const galaSvg = `
+    <svg viewBox="0 0 700 420" style="width:100%; height:auto; display:block; background:#181512; border-radius:12px; border:1px solid #3d3429;">
+      <!-- Table Edge Indicator -->
+      <line x1="20" y1="395" x2="680" y2="395" stroke="#c98822" stroke-width="2" stroke-dasharray="6,4" />
+      <text x="350" y="412" fill="#c98822" font-size="12" font-weight="700" text-anchor="middle">${isDe ? 'TISCHKANTE (Abstand Teller & Besteck: genormte 1-2 cm)' : 'TABLE EDGE (Standard Cutlery Margin: 1-2 cm)'}</text>
+      
+      <!-- Charger Plate & Dinner Plate -->
+      <circle cx="350" cy="245" r="110" fill="#241e17" stroke="#8d6e63" stroke-width="3"/>
+      <circle cx="350" cy="245" r="85" fill="#2d241c" stroke="#c98822" stroke-width="2"/>
+      <circle cx="350" cy="245" r="60" fill="#382d22" stroke="#5d4037" stroke-width="1.5"/>
+      <text x="350" y="240" fill="#ffffff" font-size="13" font-weight="800" text-anchor="middle">${isDe ? 'PLATZTELLER' : 'CHARGER'}</text>
+      <text x="350" y="258" fill="#c98822" font-size="11" font-weight="600" text-anchor="middle">${isDe ? '& Speiseteller' : '& Dinner Plate'}</text>
+
+      <!-- Napkin on Plate -->
+      <polygon points="325,185 375,185 365,225 335,225" fill="#e0e0e0" stroke="#bdbdbd" stroke-width="1.5"/>
+      <text x="350" y="208" fill="#181512" font-size="9" font-weight="700" text-anchor="middle">${isDe ? 'SERVIETTE' : 'NAPKIN'}</text>
+
+      <!-- Left: Forks (Outside to inside) -->
+      <!-- 1. Salad Fork (Far Left) -->
+      <rect x="180" y="160" width="10" height="200" rx="3" fill="#cfd8dc" stroke="#90a4ae" stroke-width="1"/>
+      <rect x="176" y="135" width="18" height="35" rx="2" fill="#b0bec5"/>
+      <text x="185" y="380" fill="#a09080" font-size="10" font-weight="600" text-anchor="middle">${isDe ? 'Vorspeisen-' : 'Salad'}</text>
+      <text x="185" y="392" fill="#a09080" font-size="9" text-anchor="middle">${isDe ? 'gabel' : 'Fork'}</text>
+
+      <!-- 2. Fish Fork (Middle) -->
+      <rect x="225" y="150" width="10" height="210" rx="3" fill="#cfd8dc" stroke="#90a4ae" stroke-width="1"/>
+      <rect x="221" y="125" width="18" height="35" rx="2" fill="#b0bec5"/>
+      <text x="230" y="380" fill="#a09080" font-size="10" font-weight="600" text-anchor="middle">${isDe ? 'Fischgabel' : 'Fish Fork'}</text>
+
+      <!-- 3. Dinner Fork (Inner Left) -->
+      <rect x="270" y="140" width="11" height="220" rx="3" fill="#eceff1" stroke="#b0bec5" stroke-width="1"/>
+      <rect x="266" y="110" width="19" height="40" rx="2" fill="#cfd8dc"/>
+      <text x="275" y="380" fill="#c98822" font-size="10" font-weight="700" text-anchor="middle">${isDe ? 'Menügabel' : 'Dinner Fork'}</text>
+
+      <!-- Right: Knives & Spoon (Outside to inside) -->
+      <!-- 1. Dinner Knife (Inner Right, blade facing plate) -->
+      <rect x="420" y="140" width="11" height="220" rx="3" fill="#eceff1" stroke="#b0bec5" stroke-width="1"/>
+      <path d="M 420 140 Q 431 100 420 90 L 420 140 Z" fill="#cfd8dc"/>
+      <text x="425" y="380" fill="#c98822" font-size="10" font-weight="700" text-anchor="middle">${isDe ? 'Menümesser' : 'Dinner Knife'}</text>
+
+      <!-- 2. Fish Knife (Middle Right) -->
+      <rect x="465" y="150" width="10" height="210" rx="3" fill="#cfd8dc" stroke="#90a4ae" stroke-width="1"/>
+      <polygon points="465,150 475,150 475,115 465,125" fill="#b0bec5"/>
+      <text x="470" y="380" fill="#a09080" font-size="10" font-weight="600" text-anchor="middle">${isDe ? 'Fischmesser' : 'Fish Knife'}</text>
+
+      <!-- 3. Soup Spoon (Far Right) -->
+      <rect x="510" y="160" width="10" height="200" rx="3" fill="#cfd8dc" stroke="#90a4ae" stroke-width="1"/>
+      <ellipse cx="515" cy="140" rx="14" ry="22" fill="#b0bec5"/>
+      <text x="515" y="380" fill="#a09080" font-size="10" font-weight="600" text-anchor="middle">${isDe ? 'Suppenlöffel' : 'Soup Spoon'}</text>
+
+      <!-- Top: Dessert Cutlery -->
+      <!-- Dessert Spoon (Handle to right) -->
+      <rect x="300" y="90" width="100" height="8" rx="2" fill="#cfd8dc"/>
+      <ellipse cx="295" cy="94" rx="14" ry="9" fill="#b0bec5"/>
+      <text x="350" y="82" fill="#c98822" font-size="10" font-weight="700" text-anchor="middle">${isDe ? 'Dessertlöffel (Griff rechts ➔)' : 'Dessert Spoon (➔ handle right)'}</text>
+
+      <!-- Dessert Fork (Handle to left) -->
+      <rect x="300" y="112" width="100" height="8" rx="2" fill="#cfd8dc"/>
+      <rect x="400" y="108" width="18" height="16" rx="2" fill="#b0bec5"/>
+      <text x="350" y="135" fill="#a09080" font-size="10" font-weight="600" text-anchor="middle">${isDe ? 'Dessertgabel (Griff links ⬅)' : 'Dessert Fork (⬅ handle left)'}</text>
+
+      <!-- Top Left: Bread Plate & Butter Knife -->
+      <circle cx="160" cy="80" r="45" fill="#2d241c" stroke="#8d6e63" stroke-width="2"/>
+      <text x="160" y="76" fill="#e0e0e0" font-size="10" font-weight="700" text-anchor="middle">${isDe ? 'Brotteller' : 'Bread Plate'}</text>
+      <!-- Butter Knife on plate -->
+      <rect x="180" y="45" width="6" height="70" rx="2" fill="#cfd8dc" transform="rotate(-20 180 80)"/>
+      <text x="160" y="92" fill="#c98822" font-size="8.5" text-anchor="middle">${isDe ? 'Buttermesser' : 'Butter Knife'}</text>
+
+      <!-- Top Right: Glassware Hierarchy (45° Diagonal) -->
+      <!-- 1. Water Glass (Anchor / Richtglas over Dinner Knife) -->
+      <circle cx="430" cy="55" r="24" fill="#219ebc" fill-opacity="0.25" stroke="#219ebc" stroke-width="2.5"/>
+      <text x="430" y="52" fill="#81d4fa" font-size="10" font-weight="800" text-anchor="middle">${isDe ? 'Wasserglas' : 'Water Goblet'}</text>
+      <text x="430" y="65" fill="#ffffff" font-size="8.5" font-weight="600" text-anchor="middle">${isDe ? '(Richtglas)' : '(Anchor)'}</text>
+
+      <!-- 2. Red Wine Glass (Diagonal right down) -->
+      <circle cx="490" cy="65" r="22" fill="#9e2a2b" fill-opacity="0.3" stroke="#e07a5f" stroke-width="2"/>
+      <text x="490" y="63" fill="#ffcdd2" font-size="9" font-weight="700" text-anchor="middle">${isDe ? 'Rotweinglas' : 'Red Wine'}</text>
+
+      <!-- 3. White Wine Glass -->
+      <circle cx="545" cy="80" r="19" fill="#ffb703" fill-opacity="0.25" stroke="#ffb703" stroke-width="2"/>
+      <text x="545" y="78" fill="#ffe082" font-size="9" font-weight="700" text-anchor="middle">${isDe ? 'Weißwein' : 'White Wine'}</text>
+
+      <!-- 4. Champagne Flute -->
+      <circle cx="595" cy="98" r="16" fill="#fb8500" fill-opacity="0.25" stroke="#fb8500" stroke-width="1.8"/>
+      <text x="595" y="96" fill="#ffe0b2" font-size="8" font-weight="700" text-anchor="middle">${isDe ? 'Champagner' : 'Flute'}</text>
+    </svg>
+  `;
+
+  const alacarteSvg = `
+    <svg viewBox="0 0 600 360" style="width:100%; height:auto; display:block; background:#181512; border-radius:12px; border:1px solid #3d3429;">
+      <line x1="20" y1="335" x2="580" y2="335" stroke="#c98822" stroke-width="2" stroke-dasharray="6,4" />
+      <text x="300" y="352" fill="#c98822" font-size="12" font-weight="700" text-anchor="middle">${isDe ? 'TISCHKANTE (1-2 cm Abstand für Teller & Besteck)' : 'TABLE EDGE (1-2 cm Cutlery Margin)'}</text>
+      
+      <!-- Dinner Plate -->
+      <circle cx="300" cy="205" r="95" fill="#241e17" stroke="#c98822" stroke-width="3"/>
+      <circle cx="300" cy="205" r="70" fill="#2d241c" stroke="#5d4037" stroke-width="1.5"/>
+      <text x="300" y="200" fill="#ffffff" font-size="14" font-weight="800" text-anchor="middle">${isDe ? 'SPEISETELER' : 'DINNER PLATE'}</text>
+      
+      <!-- Folded Napkin -->
+      <polygon points="275,150 325,150 315,190 285,190" fill="#e0e0e0" stroke="#bdbdbd" stroke-width="1.5"/>
+      <text x="300" y="173" fill="#181512" font-size="9" font-weight="700" text-anchor="middle">${isDe ? 'SERVIETTE' : 'NAPKIN'}</text>
+
+      <!-- Left: Dinner Fork -->
+      <rect x="170" y="110" width="12" height="210" rx="3" fill="#eceff1" stroke="#b0bec5" stroke-width="1"/>
+      <rect x="166" y="80" width="20" height="40" rx="2" fill="#cfd8dc"/>
+      <text x="176" y="318" fill="#c98822" font-size="11" font-weight="700" text-anchor="middle">${isDe ? 'Menügabel' : 'Dinner Fork'}</text>
+
+      <!-- Right: Dinner Knife (Blade facing inside) -->
+      <rect x="420" y="110" width="12" height="210" rx="3" fill="#eceff1" stroke="#b0bec5" stroke-width="1"/>
+      <path d="M 420 110 Q 432 70 420 60 L 420 110 Z" fill="#cfd8dc"/>
+      <text x="426" y="318" fill="#c98822" font-size="11" font-weight="700" text-anchor="middle">${isDe ? 'Menümesser' : 'Dinner Knife'}</text>
+
+      <!-- Top Right: Water & Wine Glass -->
+      <circle cx="430" cy="40" r="22" fill="#219ebc" fill-opacity="0.3" stroke="#219ebc" stroke-width="2"/>
+      <text x="430" y="44" fill="#81d4fa" font-size="10" font-weight="800" text-anchor="middle">${isDe ? 'Wasserglas' : 'Water Glass'}</text>
+      <circle cx="485" cy="52" r="19" fill="#9e2a2b" fill-opacity="0.3" stroke="#e07a5f" stroke-width="1.8"/>
+      <text x="485" y="55" fill="#ffcdd2" font-size="9" font-weight="700" text-anchor="middle">${isDe ? 'Weinglas' : 'Wine Glass'}</text>
+
+      <!-- Top Left: Bread Plate -->
+      <circle cx="150" cy="55" r="35" fill="#2d241c" stroke="#8d6e63" stroke-width="2"/>
+      <text x="150" y="58" fill="#e0e0e0" font-size="9.5" font-weight="700" text-anchor="middle">${isDe ? 'Brotteller' : 'Bread Plate'}</text>
+    </svg>
+  `;
+
+  const breakfastSvg = `
+    <svg viewBox="0 0 600 360" style="width:100%; height:auto; display:block; background:#181512; border-radius:12px; border:1px solid #3d3429;">
+      <line x1="20" y1="335" x2="580" y2="335" stroke="#c98822" stroke-width="2" stroke-dasharray="6,4" />
+      <text x="300" y="352" fill="#c98822" font-size="12" font-weight="700" text-anchor="middle">${isDe ? 'TISCHKANTE (1-2 cm Abstand für Frühstücksgedeck)' : 'TABLE EDGE (1-2 cm Breakfast Cover Margin)'}</text>
+      
+      <!-- Breakfast Plate -->
+      <circle cx="280" cy="205" r="85" fill="#241e17" stroke="#c98822" stroke-width="3"/>
+      <text x="280" y="200" fill="#ffffff" font-size="13" font-weight="800" text-anchor="middle">${isDe ? 'FRÜHSTÜCKS-' : 'BREAKFAST'}</text>
+      <text x="280" y="218" fill="#c98822" font-size="11" font-weight="600" text-anchor="middle">${isDe ? 'TELLER' : 'PLATE'}</text>
+
+      <!-- Left: Breakfast Fork -->
+      <rect x="155" y="130" width="10" height="190" rx="2" fill="#eceff1"/>
+      <rect x="151" y="105" width="18" height="35" rx="2" fill="#cfd8dc"/>
+      <text x="160" y="318" fill="#c98822" font-size="10" font-weight="700" text-anchor="middle">${isDe ? 'Gabel' : 'Fork'}</text>
+
+      <!-- Right: Breakfast Knife -->
+      <rect x="395" y="130" width="10" height="190" rx="2" fill="#eceff1"/>
+      <path d="M 395 130 Q 405 95 395 85 L 395 130 Z" fill="#cfd8dc"/>
+      <text x="400" y="318" fill="#c98822" font-size="10" font-weight="700" text-anchor="middle">${isDe ? 'Messer' : 'Knife'}</text>
+
+      <!-- Top Right: Coffee Cup & Saucer + Spoon -->
+      <circle cx="490" cy="115" r="42" fill="#2d241c" stroke="#8d6e63" stroke-width="2"/>
+      <circle cx="490" cy="115" r="28" fill="#3e2723" stroke="#c98822" stroke-width="2"/>
+      <path d="M 518 115 A 8 8 0 0 1 518 125" stroke="#c98822" stroke-width="3" fill="none"/>
+      <!-- Teaspoon -->
+      <rect x="525" y="125" width="6" height="50" rx="2" fill="#cfd8dc" transform="rotate(-30 525 125)"/>
+      <text x="490" y="112" fill="#ffffff" font-size="9" font-weight="800" text-anchor="middle">${isDe ? 'Kaffee-' : 'Coffee'}</text>
+      <text x="490" y="124" fill="#c98822" font-size="8.5" text-anchor="middle">${isDe ? 'tasse' : 'Cup'}</text>
+
+      <!-- Top Right: Juice Glass -->
+      <circle cx="430" cy="45" r="20" fill="#fb8500" fill-opacity="0.3" stroke="#fb8500" stroke-width="1.8"/>
+      <text x="430" y="48" fill="#ffe0b2" font-size="9" font-weight="700" text-anchor="middle">${isDe ? 'Saftglas' : 'Juice Glass'}</text>
+    </svg>
+  `;
+
+  let activeSvg = galaSvg;
+  if (currentServiceSchema === 'alacarte') activeSvg = alacarteSvg;
+  if (currentServiceSchema === 'breakfast') activeSvg = breakfastSvg;
+
   el.innerHTML = `
+    <!-- Back to Overview Button -->
+    <div style="margin-bottom: 14px;">
+      <button onclick="switchTab('home')" class="btn-subtle" style="display:inline-flex; align-items:center; gap:6px; padding:6px 14px; border-radius:20px; font-size:0.82rem; font-weight:700; background:var(--bg-surface-variant); border:1px solid var(--border-subtle); color:var(--text-secondary); cursor:pointer;">
+        <span class="material-symbols-outlined" style="font-size:16px;">arrow_back</span>
+        <span>${isDe ? 'Zurück zur Übersicht' : 'Back to Overview'}</span>
+      </button>
+    </div>
+
+    <!-- Header Section -->
     <div class="detail-section" style="margin-bottom: 16px;">
       <h2 style="font-size: 1.25rem; font-weight: 800; color: var(--accent-gold); margin-bottom: 8px;">
-        🛎️ ${isDe ? 'Service & Tischkultur (Eindecken, Gläser & Knigge)' : 'Service & Table Culture (Setting, Glassware & Etiquette)'}
+        🛎️ ${isDe ? 'Service, Eindecken & Tischkultur' : 'Service, Table Setting & Etiquette'}
       </h2>
       <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5;">
         ${isDe ? 
-          'Professionelles Eindecken, Menü-Hierarchien, Besteckkunde, Servietten-Faltregeln und Weinservice-Standards im Restaurant.' : 
-          'Professional table setting, cutlery logic, glassware hierarchy, napkin etiquette, and wine service standards.'}
+          'Professionelle Eindeck-Schemata, Couvert-Architektur, Gläser-Hierarchie, Serviettenfalttechniken und Servierregeln mit fotorealistischen Vorlagen.' : 
+          'Professional table setting blueprints, cover architecture, glassware hierarchy, napkin folding craft, and service etiquette with photo inspiration.'}
       </p>
     </div>
 
-    <div class="detail-section" style="margin-bottom: 14px;">
-      <h3 class="detail-section-title">🍽️ ${isDe ? 'Professionelle Tisch-Eindeckung' : 'Professional Table Setting Protocol'}</h3>
-      <p class="detail-section-text">
-        • <strong>${isDe ? 'Abstand zur Tischkante:' : 'Table Edge Distance:'}</strong> ${isDe ? 
-          'Genormte 1 bis 2 cm (entspricht ca. zwei Fingerbreiten bzw. Daumenbreite).' : 
-          'Standard 1 to 2 cm (approx. two finger breadths from the edge).'}<br/>
-        • <strong>${isDe ? 'Besteck-Logik:' : 'Cutlery Sequence:'}</strong> ${isDe ? 
-          'Von außen nach innen arbeiten. Der erste Gang liegt ganz außen. Gabeln stets links, Messer (Schneide immer nach innen zum Teller) und Suppenlöffel rechts.' : 
-          'Work from outside in. First course is outermost. Forks on the left, knives (cutting edge inward facing plate) and soup spoon on the right.'}<br/>
-        • <strong>${isDe ? 'Brotteller & Buttermesser:' : 'Bread Plate & Butter Knife:'}</strong> ${isDe ? 
-          'Steht links neben dem Couvert. Das Buttermesser liegt auf der rechten Kante des Brottellers mit Klinge nach links.' : 
-          'Positioned left of the cover. Butter spreader lies on the right edge with blade facing left.'}<br/>
-        • <strong>${isDe ? 'Dessertbesteck:' : 'Dessert Cutlery:'}</strong> ${isDe ? 
-          'Oberhalb des Platztellers platziert. Löffel zeigt nach links (Griff rechts), Gabel darunter zeigt nach rechts (Griff links).' : 
-          'Above the show plate. Spoon points left (handle right), fork points right (handle left).'}
-      </p>
+    <!-- 1. Interactive Table Cover Scheme Visualizer -->
+    <div class="detail-section" style="margin-bottom: 16px;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; flex-wrap: wrap; gap: 8px;">
+        <h3 class="detail-section-title" style="margin: 0;">📐 ${isDe ? 'Eindeck-Schemata (Vorlagen)' : 'Table Setting Blueprints'}</h3>
+        
+        <!-- Scheme Switcher Buttons -->
+        <div style="display: flex; gap: 6px;">
+          <button onclick="setServiceSchema('gala')" class="btn-subtle" style="padding: 4px 10px; border-radius: 8px; font-size: 0.78rem; font-weight: 700; background: ${currentServiceSchema === 'gala' ? 'var(--accent-gold)' : 'var(--bg-surface-variant)'}; color: ${currentServiceSchema === 'gala' ? '#000' : 'var(--text-primary)'}; border: 1px solid var(--border-subtle); cursor: pointer;">
+            ${isDe ? 'Gala (5-Gänge)' : 'Gala Dinner'}
+          </button>
+          <button onclick="setServiceSchema('alacarte')" class="btn-subtle" style="padding: 4px 10px; border-radius: 8px; font-size: 0.78rem; font-weight: 700; background: ${currentServiceSchema === 'alacarte' ? 'var(--accent-gold)' : 'var(--bg-surface-variant)'}; color: ${currentServiceSchema === 'alacarte' ? '#000' : 'var(--text-primary)'}; border: 1px solid var(--border-subtle); cursor: pointer;">
+            ${isDe ? 'À-la-carte' : 'À la carte'}
+          </button>
+          <button onclick="setServiceSchema('breakfast')" class="btn-subtle" style="padding: 4px 10px; border-radius: 8px; font-size: 0.78rem; font-weight: 700; background: ${currentServiceSchema === 'breakfast' ? 'var(--accent-gold)' : 'var(--bg-surface-variant)'}; color: ${currentServiceSchema === 'breakfast' ? '#000' : 'var(--text-primary)'}; border: 1px solid var(--border-subtle); cursor: pointer;">
+            ${isDe ? 'Frühstück' : 'Breakfast'}
+          </button>
+        </div>
+      </div>
+
+      <!-- Rendered SVG Schema -->
+      <div style="margin-bottom: 14px;">
+        ${activeSvg}
+      </div>
+
+      <div style="background: var(--bg-surface-variant); padding: 12px; border-radius: var(--radius-md); font-size: 0.83rem; line-height: 1.5; color: var(--text-secondary); border: 1px solid var(--border-subtle);">
+        • <strong>${isDe ? 'Abstand zur Tischkante:' : 'Margin from Edge:'}</strong> ${isDe ? 'Genau 1 bis 2 cm (zwei Daumenbreiten) für Teller und Besteckstiele.' : 'Strictly 1 to 2 cm (two thumbs) for plates and cutlery handles.'}<br/>
+        • <strong>${isDe ? 'Besteck-Reihenfolge:' : 'Cutlery Sequence:'}</strong> ${isDe ? 'Grundsätzlich von außen nach innen zum Teller hin gangweise arbeiten.' : 'Work from the outermost cutlery inward toward the plate.'}<br/>
+        • <strong>${isDe ? 'Richtglas-Prinzip:' : 'Anchor Goblet:'}</strong> ${isDe ? 'Das Haupt-Wasserglas steht exakt senkrecht über der Spitze des Fleischmessers; die Weinkelche reihen sich im 45°-Winkel schräg rechts darunter an.' : 'Water goblet stands precisely above the dinner knife tip; wine stems slope down diagonally at 45 degrees.'}
+      </div>
     </div>
 
-    <div class="detail-section" style="margin-bottom: 14px;">
-      <h3 class="detail-section-title">🍷 ${isDe ? 'Gläser-Hierarchie & Anordnung' : 'Glassware Arrangement & Hierarchy'}</h3>
-      <p class="detail-section-text">
-        • <strong>${isDe ? 'Richtglas:' : 'Anchor Glass:'}</strong> ${isDe ? 
-          'Das Haupt-Wasserglas (oder Hauptweinglas) steht exakt über der Spitze des großen Fleischmessers.' : 
-          'Water goblet positioned precisely above the tip of the dinner knife.'}<br/>
-        • <strong>${isDe ? 'Diagonale Aufstellung (Klassiker):' : 'Diagonal Setting (Classic):'}</strong> ${isDe ? 
-          'Vom Wasserglas ausgehend schräg nach rechts unten im 45°-Winkel: Rotweinglas, Weißweinglas, optional Champagnerflöte.' : 
-          'From water glass sloping down right at 45 degrees: red wine glass, white wine glass, champagne flute.'}<br/>
-        • <strong>${isDe ? 'Dreiecks-Aufstellung:' : 'Triangle Setting:'}</strong> ${isDe ? 
-          'Kompakte Eleganz für Rundtische: Wasserglas hinten, Rotweinglas vorne links, Weißweinglas vorne rechts.' : 
-          'Compact elegance for round tables: water back, red wine front left, white wine front right.'}
-      </p>
+    <!-- 2. Photo Reference Gallery -->
+    <div class="detail-section" style="margin-bottom: 16px;">
+      <h3 class="detail-section-title" style="margin-bottom: 12px;">📸 ${isDe ? 'Fotogalerie & Praxis-Vorlagen' : 'Photo Reference Library & Setting Standards'}</h3>
+      
+      <!-- Photo 1: Banquet Table -->
+      <div style="background: var(--bg-surface-variant); border-radius: 12px; overflow: hidden; margin-bottom: 14px; border: 1px solid var(--border-subtle);">
+        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&auto=format&fit=crop&q=80" alt="Gala Table Setting" style="width: 100%; height: 180px; object-fit: cover; display: block;" />
+        <div style="padding: 12px;">
+          <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--accent-gold); margin-bottom: 4px;">
+            ${isDe ? 'Festliche Gala-Tafel & Couvert-Architektur' : 'Gala Dinner Banquet & Setting Architecture'}
+          </h4>
+          <p style="font-size: 0.82rem; color: var(--text-secondary); margin: 0;">
+            ${isDe ? 'Makellose Symmetrie, gebügelte Tischwäsche mit 25-30 cm Überhang, glänzendes Tafelsilber und zentrierte Stoffservietten.' : 'Pristine symmetry, ironed linen tablecloth with 25-30 cm drop, polished silverware and centered napkins.'}
+          </p>
+        </div>
+      </div>
+
+      <!-- Photo 2: Glassware Hierarchy -->
+      <div style="background: var(--bg-surface-variant); border-radius: 12px; overflow: hidden; margin-bottom: 14px; border: 1px solid var(--border-subtle);">
+        <img src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?w=800&auto=format&fit=crop&q=80" alt="Glassware Hierarchy" style="width: 100%; height: 180px; object-fit: cover; display: block;" />
+        <div style="padding: 12px;">
+          <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--accent-gold); margin-bottom: 4px;">
+            ${isDe ? 'Kristallgläser-Hierarchie & Anordnung' : 'Crystal Glassware Hierarchy & Stem Alignment'}
+          </h4>
+          <p style="font-size: 0.82rem; color: var(--text-secondary); margin: 0;">
+            ${isDe ? 'Wasserglas über der Messerspitze, gefolgt von Rotweinkelch, Weißweinkelch und Dessert-/Sektkelch im 45°-Winkel.' : 'Water goblet at knife tip, followed by red wine bowl, white wine stem, and dessert flute at 45 degrees.'}
+          </p>
+        </div>
+      </div>
+
+      <!-- Photo 3: Napkin Folds -->
+      <div style="background: var(--bg-surface-variant); border-radius: 12px; overflow: hidden; margin-bottom: 14px; border: 1px solid var(--border-subtle);">
+        <img src="https://images.unsplash.com/photo-1578474846511-04ba529f0b88?w=800&auto=format&fit=crop&q=80" alt="Napkin Folding" style="width: 100%; height: 180px; object-fit: cover; display: block;" />
+        <div style="padding: 12px;">
+          <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--accent-gold); margin-bottom: 4px;">
+            ${isDe ? 'Serviettenfaltkunst & Hygiene-Schutz' : 'Napkin Folding Art & Sanitary Protection'}
+          </h4>
+          <p style="font-size: 0.82rem; color: var(--text-secondary); margin: 0;">
+            ${isDe ? 'Bischofsmütze, Tafelspitz und Bestecktasche. Wichtig: Mundberührungsflächen beim Falten niemals mit bloßen Fingern berühren!' : 'Bishop’s Hat, Fan, and Cutlery Pouch. Critical: Never touch mouth-contact areas during folding!'}
+          </p>
+        </div>
+      </div>
+
+      <!-- Photo 4: Service Etiquette -->
+      <div style="background: var(--bg-surface-variant); border-radius: 12px; overflow: hidden; border: 1px solid var(--border-subtle);">
+        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&auto=format&fit=crop&q=80" alt="Service Presentation" style="width: 100%; height: 180px; object-fit: cover; display: block;" />
+        <div style="padding: 12px;">
+          <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--accent-gold); margin-bottom: 4px;">
+            ${isDe ? 'Präsentations- und Einsetz-Etikette' : 'Presentation & Serving Etiquette'}
+          </h4>
+          <p style="font-size: 0.82rem; color: var(--text-secondary); margin: 0;">
+            ${isDe ? 'Speisen und Getränke grundsätzlich von der rechten Seite des Gastes einsetzen. Leere Teller von links abräumen.' : 'Serve food and beverages strictly from the guest’s right side. Clear empty courses from the left.'}
+          </p>
+        </div>
+      </div>
     </div>
 
-    <div class="detail-section" style="margin-bottom: 14px;">
-      <h3 class="detail-section-title">🍴 ${isDe ? 'Vorlegebesteck & Kreuzkontaminationsschutz' : 'Serving Cutlery & Anti-Contamination Rules'}</h3>
-      <p class="detail-section-text">
-        • <strong>${isDe ? 'Strikte Zuordnung:' : 'Strict Separation:'}</strong> ${isDe ? 
-          'Jede Platte und Schüssel erhält ein eigenes, fest zugeordnetes Vorlegebesteck (Salatzange, Tortenheber, Suppenkelle).' : 
-          'Every platter receives its dedicated serving utensil (tongs, cake server, ladle).'}<br/>
-        • <strong>${isDe ? 'Allergen- & Keimschutz:' : 'Allergen & Cross-Contamination Guard:'}</strong> ${isDe ? 
-          'Niemals Vorlegebestecke zwischen Allergenen (z.B. Nüsse, Milch) oder Roh- und Garwaren vertauschen!' : 
-          'Never cross utensils between allergens (nuts, dairy) or raw and cooked items!'}
-      </p>
-    </div>
-
+    <!-- 3. Dedicated Service Knowledge Entries (From Database) -->
     <div class="detail-section">
-      <h3 class="detail-section-title">👥 ${isDe ? 'Service-Etikette & Weinservice' : 'Service Etiquette & Wine Presentation'}</h3>
-      <p class="detail-section-text">
-        • <strong>${isDe ? 'Einsetzen & Servieren:' : 'Placing & Serving:'}</strong> ${isDe ? 
-          'Grundsätzlich von der rechten Seite des Gastes mit der rechten Hand. Vorlegeplatten von links präsentieren.' : 
-          'Always served from the guest\'s right side with the right hand. Sharing platters presented from the left.'}<br/>
-        • <strong>${isDe ? 'Weinservice:' : 'Wine Service:'}</strong> ${isDe ? 
-          'Flaschenetikett zeigt stets sichtbar zum Gast. Glas beim Einschenken niemals anheben; Tropfen mit eleganter Drehung und Serviette auffangen.' : 
-          'Label kept facing the host. Never lift the glass while pouring; catch drops with a quarter-turn rotation and service cloth.'}<br/>
-        • <strong>${isDe ? 'Bestecksprache:' : 'Cutlery Language:'}</strong> ${isDe ? 
-          'Parallel auf 20 nach 4 Uhr = Gang beendet, bereit zum Abservieren. Gekreuzt auf dem Teller = kurze Essenspause.' : 
-          'Parallel at twenty past four = course finished, ready to clear. Crossed on plate = pausing.'}
-      </p>
+      <h3 class="detail-section-title" style="margin-bottom: 12px;">📖 ${isDe ? '3. Fachartikel: Service & Tischkultur' : '3. Reference Entries: Service & Table Culture'}</h3>
+      <div style="display: flex; flex-direction: column; gap: 12px;">
+        ${renderServiceCatalogItems(isDe)}
+      </div>
     </div>
   `;
+}
+
+function renderServiceCatalogItems(isDe) {
+  const serviceItems = items.filter(it => it.category === 'service' || it.category === 'non_food');
+  if (serviceItems.length === 0) {
+    return `<p style="font-size: 0.85rem; color: var(--text-muted);">${isDe ? 'Keine Service-Einträge gefunden.' : 'No service entries found.'}</p>`;
+  }
+
+  return serviceItems.map(it => {
+    const title = isDe ? (it.nameDe || it.nameEn) : (it.nameEn || it.nameDe);
+    const sub = isDe ? (it.subtitleDe || it.subtitleEn) : (it.subtitleEn || it.subtitleDe);
+    const science = isDe ? (it.scienceDe || it.scienceExplainedDe || '') : (it.scienceExplainedEn || it.scienceDe || '');
+    const culinary = isDe ? (it.culinaryDe || it.culinaryServingDe || '') : (it.culinaryServingEn || it.culinaryEn || '');
+    const imgUrl = it.imageUrl || 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&auto=format&fit=crop&q=80';
+
+    return `
+      <div style="background: var(--bg-surface-variant); border-radius: 12px; padding: 12px; border: 1px solid var(--border-subtle); display: flex; gap: 12px; align-items: flex-start;">
+        <img src="${imgUrl}" alt="${title}" style="width: 75px; height: 75px; object-fit: cover; border-radius: 8px; flex-shrink: 0;" />
+        <div style="flex: 1; min-width: 0;">
+          <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary); margin-bottom: 4px;">${title}</h4>
+          <p style="font-size: 0.8rem; color: var(--accent-gold); font-weight: 600; margin-bottom: 6px;">${sub}</p>
+          <p style="font-size: 0.8rem; color: var(--text-secondary); line-height: 1.4; margin-bottom: 8px;">${science || culinary}</p>
+          <button onclick="showItemDetail('${it.id}')" style="display: inline-flex; align-items: center; gap: 4px; padding: 4px 10px; border-radius: 6px; font-size: 0.76rem; font-weight: 700; background: var(--bg-surface); border: 1px solid var(--border-subtle); color: var(--accent-gold); cursor: pointer;">
+            <span class="material-symbols-outlined" style="font-size: 15px;">visibility</span>
+            <span>${isDe ? 'Im Detail ansehen' : 'View Full Details'}</span>
+          </button>
+        </div>
+      </div>
+    `;
+  }).join('');
 }
 
 function renderScienceGuide(isDe) {
   const el = document.getElementById('scienceGuideContent');
   if (!el) return;
   el.innerHTML = `
+    <!-- Back to Overview Button -->
+    <div style="margin-bottom: 14px;">
+      <button onclick="switchTab('home')" class="btn-subtle" style="display:inline-flex; align-items:center; gap:6px; padding:6px 14px; border-radius:20px; font-size:0.82rem; font-weight:700; background:var(--bg-surface-variant); border:1px solid var(--border-subtle); color:var(--text-secondary); cursor:pointer;">
+        <span class="material-symbols-outlined" style="font-size:16px;">arrow_back</span>
+        <span>${isDe ? 'Zurück zur Übersicht' : 'Back to Overview'}</span>
+      </button>
+    </div>
     <div class="detail-section" style="margin-bottom: 16px;">
       <h2 style="font-size: 1.25rem; font-weight: 800; color: var(--accent-gold); margin-bottom: 8px;">
         🔬 ${isDe ? 'Wirkungslehre & Gastronomie-Physik' : 'Science & Culinary Physics'}
@@ -1484,9 +1909,18 @@ function switchTab(tabId) {
   document.querySelectorAll('.nav-item').forEach(el => el.classList.remove('active'));
   document.querySelectorAll('.tab-pane').forEach(el => el.classList.remove('active'));
 
-  document.getElementById(`tab-${tabId}`).classList.add('active');
+  const tabBtn = document.getElementById(`tab-${tabId}`);
+  if (tabBtn) tabBtn.classList.add('active');
   const targetPane = document.getElementById(`pane-${tabId}`);
   if (targetPane) targetPane.classList.add('active');
+
+  const isDe = (currentLang === 'de');
+  if (tabId === 'cocktails') renderCocktailsGuide(isDe);
+  if (tabId === 'service') renderServiceGuide(isDe);
+  if (tabId === 'wine') renderWineGuide(isDe);
+  if (tabId === 'coffee') renderCoffeeGuide(isDe);
+  if (tabId === 'science') renderScienceGuide(isDe);
+  if (tabId === 'quiz') renderQuizHeaderStrings(isDe);
 
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }

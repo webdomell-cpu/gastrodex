@@ -730,5 +730,6 @@ fun getCategoryIcon(category: GastroCategory): ImageVector {
         GastroCategory.BREAD_BAKERY -> Icons.Default.BakeryDining
         GastroCategory.FINGERFOOD_SNACKS -> Icons.Default.BreakfastDining
         GastroCategory.CEREALS_BREAKFAST -> Icons.Default.Grain
+        GastroCategory.SERVICE -> Icons.Default.RoomService
     }
 }

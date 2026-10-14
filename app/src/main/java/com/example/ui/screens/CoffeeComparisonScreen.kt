@@ -458,31 +458,31 @@ fun ArabicaVsRobustaTab(language: Language) {
                 }
                 Spacer(modifier = Modifier.height(12.dp))
 
-                MatrixRow("Kriterium / Metric", "Coffea Arabica", "Coffea Robusta (Canephora)", isHeader = true)
+                MatrixRow(if (language == Language.DE) "Kriterium" else "Metric", "Coffea Arabica", "Coffea Robusta (Canephora)", isHeader = true)
                 MatrixRow(
                     if (language == Language.DE) "Anbauhöhe" else "Altitude",
-                    "900 - 2.200 m (Hochland)",
-                    "0 - 900 m (Tiefland)"
+                    if (language == Language.DE) "900 - 2.200 m (Hochland)" else "900 - 2,200 m (Highlands)",
+                    if (language == Language.DE) "0 - 900 m (Tiefland)" else "0 - 900 m (Lowlands)"
                 )
                 MatrixRow(
                     if (language == Language.DE) "Chromosomensatz" else "Genetics",
-                    "44 Chromosomen (selbstbestäubend)",
-                    "22 Chromosomen (fremdbestäubend)"
+                    if (language == Language.DE) "44 Chromosomen (selbstbestäubend)" else "44 Chromosomes (self-pollinating)",
+                    if (language == Language.DE) "22 Chromosomen (fremdbestäubend)" else "22 Chromosomes (cross-pollinating)"
                 )
                 MatrixRow(
                     if (language == Language.DE) "Koffeingehalt" else "Caffeine",
                     "1,2% - 1,5%",
-                    "2,2% - 2,7% (ca. doppelt so viel!)"
+                    if (language == Language.DE) "2,2% - 2,7% (ca. doppelt so viel!)" else "2.2% - 2.7% (~double caffeine!)"
                 )
                 MatrixRow(
                     if (language == Language.DE) "Zuckergehalt (Saccharose)" else "Sugar Content",
-                    "6% - 9% (süß & fruchtig)",
-                    "3% - 5% (herber)"
+                    if (language == Language.DE) "6% - 9% (süß & fruchtig)" else "6% - 9% (sweet & fruity)",
+                    if (language == Language.DE) "3% - 5% (herber)" else "3% - 5% (more bitter)"
                 )
                 MatrixRow(
                     if (language == Language.DE) "Fette / Lipide" else "Lipids / Oils",
-                    "15% - 17% (eleganter Körper)",
-                    "10% - 12% (bildet mehr Crema)"
+                    if (language == Language.DE) "15% - 17% (eleganter Körper)" else "15% - 17% (elegant body)",
+                    if (language == Language.DE) "10% - 12% (bildet mehr Crema)" else "10% - 12% (builds more crema)"
                 )
                 MatrixRow(
                     if (language == Language.DE) "Geschmacksprofil" else "Flavor Notes",

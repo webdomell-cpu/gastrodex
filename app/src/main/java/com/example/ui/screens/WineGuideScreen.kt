@@ -193,23 +193,23 @@ fun WineGuideScreen(
         ) {
             Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
                 GrapeItem(
-                    grape = "Riesling (Weiß)",
+                    grape = if (language == Language.DE) "Riesling (Weiß)" else "Riesling (White)",
                     profile = if (language == Language.DE) "Mosel, Rheingau | Rassige Weinsäure, Schiefermineralik, Pfirsich, im Alter edle Petrolnote (TDN). Aus Riesling-Trauben gekeltert." else "Mosel, Rheingau | Crisp acidity, slate minerality, white peach, aged TDN petrol note."
                 )
                 GrapeItem(
-                    grape = "Sauvignon Blanc (Weiß)",
+                    grape = if (language == Language.DE) "Sauvignon Blanc (Weiß)" else "Sauvignon Blanc (White)",
                     profile = if (language == Language.DE) "Loire, Neuseeland | Grasig-frische Pyrazine, Stachelbeere, Grapefruit, Holunderblüte." else "Loire, Marlborough | Cut grass pyrazines, gooseberry, vibrant grapefruit zest."
                 )
                 GrapeItem(
-                    grape = "Chardonnay (Weiß)",
+                    grape = if (language == Language.DE) "Chardonnay (Weiß)" else "Chardonnay (White)",
                     profile = if (language == Language.DE) "Burgund, Chablis | Buttriger Schmelz (Diacetyl durch BSA/Milchsäuregärung), Haselnuss, Barrique-Vanille." else "Burgundy, Chablis | Creamy butter (malolactic diacetyl), toasted brioche, hazelnut oak."
                 )
                 GrapeItem(
-                    grape = "Spätburgunder / Pinot Noir (Rot)",
+                    grape = if (language == Language.DE) "Spätburgunder / Pinot Noir (Rot)" else "Pinot Noir (Red)",
                     profile = if (language == Language.DE) "Baden, Burgund | Dünnschalig, helles Rubinrot, Sauerkirsche, Himbeere, feines samtiges Tannin, Waldboden." else "Baden, Burgundy | Thin-skinned, pale ruby, sour cherry, forest floor, silky tannins."
                 )
                 GrapeItem(
-                    grape = "Cabernet Sauvignon (Rot)",
+                    grape = if (language == Language.DE) "Cabernet Sauvignon (Rot)" else "Cabernet Sauvignon (Red)",
                     profile = if (language == Language.DE) "Bordeaux, Napa | Dicke Beerenhaut, kräftige Gerbstoffe (Tannine), Cassis (Schwarze Johannisbeere), Zedernholz." else "Bordeaux, Napa | Thick skins, heavy structured tannins, cassis blackcurrant, cedar wood."
                 )
             }
