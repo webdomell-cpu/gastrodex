@@ -2,68 +2,146 @@
   "categories": [
     {
       "id": "spirits",
-      "titleDe": "Spirituosen & Bar",
-      "titleEn": "Spirits & Bar",
+      "titleDe": "🥃 Spirituosen & Destillate",
+      "titleEn": "🥃 Spirits & Distillates",
       "icon": "liquor"
     },
     {
       "id": "wine",
-      "titleDe": "Wein & Schaumwein",
-      "titleEn": "Wine & Sparkling",
+      "titleDe": "🍷 Wein & Schaumweine",
+      "titleEn": "🍷 Wine & Champagne",
       "icon": "wine_bar"
     },
     {
       "id": "beer",
-      "titleDe": "Bier & Braukunst",
-      "titleEn": "Beer & Brewing",
+      "titleDe": "🍺 Bier & Braukunst",
+      "titleEn": "🍺 Beer & Brewing",
       "icon": "sports_bar"
     },
     {
+      "id": "tea",
+      "titleDe": "🍵 Teekunde & Aufgüsse",
+      "titleEn": "🍵 Tea & Infusions",
+      "icon": "emoji_food_beverage"
+    },
+    {
       "id": "coffee",
-      "titleDe": "Kaffee & Heißgetränke",
-      "titleEn": "Coffee & Hot Drinks",
+      "titleDe": "☕ Kaffeespezialitäten",
+      "titleEn": "☕ Coffee Specialties",
       "icon": "coffee"
     },
     {
-      "id": "fruit",
-      "titleDe": "Obst & Früchte",
-      "titleEn": "Fruit & Produce",
-      "icon": "nutrition"
+      "id": "pasta_rice",
+      "titleDe": "🍝 Pasta & Reisvariationen",
+      "titleEn": "🍝 Pasta & Rice Varieties",
+      "icon": "dinner_dining"
     },
     {
-      "id": "vegetables",
-      "titleDe": "Gemüse & Kräuter",
-      "titleEn": "Vegetables & Herbs",
-      "icon": "eco"
+      "id": "sauces_condiments",
+      "titleDe": "🥣 Saucen, Dressings & Senf",
+      "titleEn": "🥣 Sauces, Dressings & Mustard",
+      "icon": "soup_kitchen"
+    },
+    {
+      "id": "soft_drinks",
+      "titleDe": "🥤 Erfrischung & Mixer",
+      "titleEn": "🥤 Soft Drinks & Mixers",
+      "icon": "local_bar"
+    },
+    {
+      "id": "dairy",
+      "titleDe": "🥛 Milch & Molkerei",
+      "titleEn": "🥛 Dairy & Milk Science",
+      "icon": "breakfast_dining"
     },
     {
       "id": "cheese",
-      "titleDe": "Käse & Milchprodukte",
-      "titleEn": "Cheese & Dairy",
-      "icon": "cheese"
-    },
-    {
-      "id": "meat",
-      "titleDe": "Fleisch & Delikatessen",
-      "titleEn": "Meat & Delicatessen",
-      "icon": "kebab_dining"
-    },
-    {
-      "id": "bakery",
-      "titleDe": "Brot & Backwaren",
-      "titleEn": "Bakery & Pastry",
+      "titleDe": "🧀 Käsekunde & g.U.",
+      "titleEn": "🧀 Cheese & DOP / g.U.",
       "icon": "bakery_dining"
     },
     {
-      "id": "longdrinks_service",
-      "titleDe": "Longdrinks & Service",
-      "titleEn": "Longdrinks & Service",
-      "icon": "room_service"
+      "id": "eggs",
+      "titleDe": "🍳 Eierspeisen & Eierkunde",
+      "titleEn": "🍳 Egg Dishes & Science",
+      "icon": "egg"
+    },
+    {
+      "id": "vegetables",
+      "titleDe": "🍄 Gemüse & Speisepilze",
+      "titleEn": "🍄 Vegetables & Mushrooms",
+      "icon": "yard"
+    },
+    {
+      "id": "fruits",
+      "titleDe": "🍓 Früchte & Beeren",
+      "titleEn": "🍓 Fruits & Berries",
+      "icon": "spa"
+    },
+    {
+      "id": "nuts",
+      "titleDe": "🥜 Nüsse & Saaten",
+      "titleEn": "🥜 Nuts & Seeds",
+      "icon": "grain"
+    },
+    {
+      "id": "spices_herbs",
+      "titleDe": "🌿 Gewürze & Kräuter",
+      "titleEn": "🌿 Spices & Herbs",
+      "icon": "spa"
+    },
+    {
+      "id": "fish_seafood",
+      "titleDe": "🐟 Fisch & Meeresfrüchte",
+      "titleEn": "🐟 Fish & Seafood",
+      "icon": "set_meal"
+    },
+    {
+      "id": "olives",
+      "titleDe": "🫒 Oliven",
+      "titleEn": "🫒 Olives",
+      "icon": "eco"
+    },
+    {
+      "id": "oils_vinegars",
+      "titleDe": "🏺 Öle & Essig",
+      "titleEn": "🏺 Oils & Vinegars",
+      "icon": "opacity"
+    },
+    {
+      "id": "charcuterie",
+      "titleDe": "🥩 Deli & Aufschnitt",
+      "titleEn": "🥩 Charcuterie & Cold Cuts",
+      "icon": "dinner_dining"
+    },
+    {
+      "id": "meat_cuts",
+      "titleDe": "🥩 Fleischstücke & Cuts",
+      "titleEn": "🥩 Steaks & Meat Cuts",
+      "icon": "restaurant"
+    },
+    {
+      "id": "bread_bakery",
+      "titleDe": "🥖 Brote & Backwaren",
+      "titleEn": "🥖 Breads & Rolls",
+      "icon": "bakery_dining"
+    },
+    {
+      "id": "fingerfood",
+      "titleDe": "🥟 Fingerfood & Snacks",
+      "titleEn": "🥟 Fingerfood, Bites & Snacks",
+      "icon": "breakfast_dining"
+    },
+    {
+      "id": "cereals",
+      "titleDe": "🥣 Cereals & Frühstück",
+      "titleEn": "🥣 Cereals & Breakfast",
+      "icon": "grain"
     },
     {
       "id": "service",
-      "titleDe": "Service & Tischkultur",
-      "titleEn": "Service & Table Culture",
+      "titleDe": "🛎️ Service & Tischkultur",
+      "titleEn": "🛎️ Service & Table Culture",
       "icon": "room_service"
     }
   ]

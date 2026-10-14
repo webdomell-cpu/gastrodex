@@ -125,6 +125,20 @@
 
       </div>
 
+      <!-- Direct Category Launcher on HomeScreen (Matching Android App Experience) -->
+      <div class="detail-section" style="margin-top: 20px;">
+        <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 12px;">
+          <h3 style="font-size: 1.1rem; font-weight: 800; color: var(--text-primary); margin: 0;" id="homeDirectCatTitle">
+            Direkte Kategorie-Auswahl
+          </h3>
+          <button onclick="switchTab('catalog')" class="btn-subtle" style="font-size: 0.8rem; font-weight: 700; color: var(--accent-gold); background: none; border: none; cursor: pointer; padding: 4px;" id="homeDirectCatAllBtn">
+            Alle anzeigen ➔
+          </button>
+        </div>
+        <div id="homeCategoryGrid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(135px, 1fr)); gap: 8px;">
+          <!-- Dynamically injected via renderHomeCategoryLauncher() -->
+        </div>
+      </div>
 
     </div>
   </main>

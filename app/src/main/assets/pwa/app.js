@@ -410,11 +410,10 @@ document.addEventListener('DOMContentLoaded', () => {
   renderKnowledgeGuides();
   renderCategoryChips();
   renderQuizCategoryButtons();
+  renderHomeCategoryLauncher();
   renderCatalog();
   setupEventListeners();
   initQuizSession('all', 10);
-  updateCoffeeComparison();
-  updateCoffeeComparison();
   updateCoffeeComparison();
   syncWithFirebaseCloud();
   setupFirebaseRealtimeListener();
@@ -427,6 +426,7 @@ function toggleLanguage() {
   renderKnowledgeGuides();
   renderCategoryChips();
   renderQuizCategoryButtons();
+  renderHomeCategoryLauncher();
   renderCatalog();
     if (quizIsRevealed || !quizIsCompleted) {
     renderCurrentQuestion();
@@ -1304,6 +1304,24 @@ function renderQuizCategoryButtons() {
   });
 }
 
+function selectCategoryAndOpenCatalog(catId) {
+  activeCategory = catId;
+  switchTab('catalog');
+  renderCategoryChips();
+  renderCategoryGrid();
+  renderQuizCategoryButtons();
+  renderCatalog();
+  const modal = document.getElementById('categoryGridModal');
+  if (modal) modal.classList.remove('active');
+  setTimeout(() => {
+    const chip = document.querySelector(`.chip[data-cat="${catId}"]`);
+    if (chip) {
+      chip.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+    }
+  }, 60);
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
 function renderCategoryChips() {
   const container = document.getElementById('categoryScroll');
   if (!container) return;
@@ -1311,15 +1329,12 @@ function renderCategoryChips() {
   CATEGORIES_LIST.forEach(cat => {
     const chip = document.createElement('button');
     chip.className = `chip ${activeCategory === cat.id ? 'active' : ''}`;
+    chip.setAttribute('data-cat', cat.id);
     const iconSpan = cat.icon ? `<span class="chip-icon material-symbols-outlined">${cat.icon}</span>` : '';
     const label = (currentLang === 'de') ? cat.titleDe : cat.titleEn;
     chip.innerHTML = `${iconSpan}<span>${label}</span>`;
     chip.onclick = () => {
-      activeCategory = cat.id;
-      renderCategoryChips();
-      renderCategoryGrid();
-      renderQuizCategoryButtons();
-      renderCatalog();
+      selectCategoryAndOpenCatalog(cat.id);
     };
     container.appendChild(chip);
   });
@@ -1343,6 +1358,7 @@ function renderCategoryGrid() {
   const container = document.getElementById('categoryGridContainer');
   if (!container) return;
   container.innerHTML = '';
+  const isDe = (currentLang === 'de');
 
   CATEGORIES_LIST.forEach(cat => {
     const isSelected = activeCategory === cat.id;
@@ -1363,25 +1379,77 @@ function renderCategoryGrid() {
       ? items.length 
       : items.filter(it => it.category === cat.id).length;
 
-    const label = (currentLang === 'de') ? cat.titleDe : cat.titleEn;
+    const label = isDe ? cat.titleDe : cat.titleEn;
     const iconHtml = cat.icon ? `<span class="material-symbols-outlined" style="font-size: 24px; color: ${isSelected ? 'var(--accent-gold)' : 'var(--text-secondary)'};">${cat.icon}</span>` : '';
 
     item.innerHTML = `
       ${iconHtml}
-      <div style="font-size: 0.84rem; font-weight: ${isSelected ? '800' : '600'}; color: ${isSelected ? 'var(--text-primary)' : 'var(--text-primary)'}; line-height: 1.2;">${label}</div>
-      <div style="font-size: 0.72rem; color: var(--text-muted); margin-top: 1px;">${count} Einträge</div>
+      <div style="font-size: 0.84rem; font-weight: ${isSelected ? '800' : '600'}; color: var(--text-primary); line-height: 1.2;">${label}</div>
+      <div style="font-size: 0.72rem; color: var(--text-muted); margin-top: 1px;">${count} ${isDe ? 'Einträge' : 'Entries'}</div>
     `;
 
     item.onclick = () => {
-      activeCategory = cat.id;
-      renderCategoryChips();
-      renderCategoryGrid();
-      renderQuizCategoryButtons();
-      renderCatalog();
-      closeCategoryGridModal();
+      selectCategoryAndOpenCatalog(cat.id);
     };
 
     container.appendChild(item);
+  });
+}
+
+function renderHomeCategoryLauncher() {
+  const container = document.getElementById('homeCategoryGrid');
+  if (!container) return;
+  container.innerHTML = '';
+  const isDe = (currentLang === 'de');
+
+  const titleEl = document.getElementById('homeDirectCatTitle');
+  if (titleEl) titleEl.textContent = isDe ? 'Direkte Kategorie-Auswahl (24)' : 'Explore Categories Directly (24)';
+
+  const allBtn = document.getElementById('homeDirectCatAllBtn');
+  if (allBtn) allBtn.textContent = isDe ? 'Alle anzeigen ➔' : 'View all ➔';
+
+  // The 24 specialized categories
+  const specificCats = CATEGORIES_LIST.filter(c => c.id !== 'all');
+
+  specificCats.forEach(cat => {
+    const card = document.createElement('div');
+    card.style.padding = '10px 10px';
+    card.style.borderRadius = '12px';
+    card.style.border = '1px solid var(--border-subtle)';
+    card.style.background = 'var(--bg-surface-variant)';
+    card.style.cursor = 'pointer';
+    card.style.transition = 'all 0.15s ease';
+    card.style.display = 'flex';
+    card.style.alignItems = 'center';
+    card.style.gap = '10px';
+
+    const count = items.filter(it => it.category === cat.id).length;
+    const label = isDe ? cat.titleDe : cat.titleEn;
+    const iconHtml = cat.icon ? `<span class="material-symbols-outlined" style="font-size: 24px; color: var(--accent-gold); flex-shrink: 0;">${cat.icon}</span>` : '';
+
+    card.innerHTML = `
+      ${iconHtml}
+      <div style="flex: 1; min-width: 0;">
+        <div style="font-size: 0.84rem; font-weight: 700; color: var(--text-primary); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">${label}</div>
+        <div style="font-size: 0.72rem; color: var(--text-muted); margin-top: 1px;">${count} ${isDe ? 'Einträge' : 'Entries'}</div>
+      </div>
+      <span class="material-symbols-outlined" style="font-size: 16px; color: var(--text-muted); flex-shrink: 0;">chevron_right</span>
+    `;
+
+    card.onmouseover = () => {
+      card.style.borderColor = 'var(--accent-gold)';
+      card.style.background = 'var(--bg-surface)';
+    };
+    card.onmouseout = () => {
+      card.style.borderColor = 'var(--border-subtle)';
+      card.style.background = 'var(--bg-surface-variant)';
+    };
+
+    card.onclick = () => {
+      selectCategoryAndOpenCatalog(cat.id);
+    };
+
+    container.appendChild(card);
   });
 }
 
@@ -1915,6 +1983,7 @@ function switchTab(tabId) {
   if (targetPane) targetPane.classList.add('active');
 
   const isDe = (currentLang === 'de');
+  if (tabId === 'home') renderHomeCategoryLauncher();
   if (tabId === 'cocktails') renderCocktailsGuide(isDe);
   if (tabId === 'service') renderServiceGuide(isDe);
   if (tabId === 'wine') renderWineGuide(isDe);

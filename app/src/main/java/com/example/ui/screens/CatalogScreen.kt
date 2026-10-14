@@ -92,7 +92,7 @@ fun CatalogScreen(
             onDismissRequest = { showCategoryGridDialog = false },
             title = {
                 Text(
-                    text = if (language == Language.DE) "Kategorie-Schnellauswahl (${GastroCategory.entries.size})" else "Category Quick Select (${GastroCategory.entries.size})",
+                    text = if (language == Language.DE) "Kategorie-Schnellauswahl (24 Fachbereiche)" else "Category Quick Select (24 Categories)",
                     style = MaterialTheme.typography.titleMedium,
                     fontWeight = FontWeight.Bold
                 )
@@ -218,13 +218,13 @@ fun CatalogScreen(
                     ) {
                         Icon(
                             imageVector = Icons.Default.GridView,
-                            contentDescription = if (language == Language.DE) "Alle 21 Kategorien" else "All 21 Categories",
+                            contentDescription = if (language == Language.DE) "Alle 24 Fachkategorien" else "All 24 Categories",
                             tint = MaterialTheme.colorScheme.onSecondaryContainer,
                             modifier = Modifier.size(18.dp)
                         )
                         Spacer(modifier = Modifier.width(4.dp))
                         Text(
-                            text = if (language == Language.DE) "21 Kat." else "21 Cats",
+                            text = if (language == Language.DE) "24 Kat." else "24 Cats",
                             style = MaterialTheme.typography.labelSmall,
                             fontWeight = FontWeight.Bold,
                             color = MaterialTheme.colorScheme.onSecondaryContainer
