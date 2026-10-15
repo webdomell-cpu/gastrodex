@@ -519,7 +519,7 @@ function renderLanguageLabels() {
   if (originLabel) originLabel.textContent = isDe ? 'Herkunft' : 'Origin';
 
   const faqTitle = document.getElementById('detailFaqTitle');
-  if (faqTitle) faqTitle.innerHTML = `<span class="material-symbols-outlined" style="font-size: 18px;">help_outline</span><span>${isDe ? 'Gastfragen souverän beantworten' : 'How to Explain to a Guest'}</span>`;
+  if (faqTitle) faqTitle.innerHTML = `<span class="material-symbols-outlined" style="font-size: 18px;">help_outline</span><span>${isDe ? 'Gastfragen souverän beantworten' : 'How to Answer Guest Inquiries'}</span>`;
 
   const scienceTitle = document.getElementById('detailScienceTitle');
   if (scienceTitle) scienceTitle.innerHTML = `<span class="material-symbols-outlined" style="font-size: 18px;">science</span><span>${isDe ? 'Wissenschaft & Herstellung' : 'Science & Production'}</span>`;
@@ -548,7 +548,7 @@ function renderLanguageLabels() {
 
   // Category Grid Modal
   const catModalTitle = document.getElementById('categoryModalTitle');
-  if (catModalTitle) catModalTitle.innerHTML = `<span class="material-symbols-outlined">grid_view</span><span>${isDe ? 'Kategorie-Schnellauswahl (24)' : 'Category Quick Select (24)'}</span>`;
+  if (catModalTitle) catModalTitle.innerHTML = `<span class="material-symbols-outlined">grid_view</span><span>${isDe ? 'Kategorie-Schnellauswahl (24 Fachbereiche)' : 'Category Quick Select (24 Categories)'}</span>`;
   const catModalSub = document.getElementById('categoryModalSub');
   if (catModalSub) catModalSub.textContent = isDe ? 'Wähle direkt eine der 24 Fachkategorien aus der Gastronomie-Wissensdatenbank:' : 'Select directly from the 24 gastronomy categories in the knowledge database:';
   const catModalClose = document.getElementById('categoryModalCloseBtn');
@@ -1306,19 +1306,26 @@ function renderQuizCategoryButtons() {
 
 function selectCategoryAndOpenCatalog(catId) {
   activeCategory = catId;
-  switchTab('catalog');
-  renderCategoryChips();
-  renderCategoryGrid();
-  renderQuizCategoryButtons();
-  renderCatalog();
+  searchQuery = '';
+  const searchInput = document.getElementById('searchInput');
+  if (searchInput) searchInput.value = '';
+
+  // Cleanly close the category grid modal
   const modal = document.getElementById('categoryGridModal');
   if (modal) modal.classList.remove('active');
+
+  // Switch to catalog
+  switchTab('catalog');
+  renderCategoryChips();
+  renderCatalog();
+  renderQuizCategoryButtons();
+
   setTimeout(() => {
     const chip = document.querySelector(`.chip[data-cat="${catId}"]`);
     if (chip) {
       chip.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
     }
-  }, 60);
+  }, 80);
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
@@ -1333,7 +1340,11 @@ function renderCategoryChips() {
     const iconSpan = cat.icon ? `<span class="chip-icon material-symbols-outlined">${cat.icon}</span>` : '';
     const label = (currentLang === 'de') ? cat.titleDe : cat.titleEn;
     chip.innerHTML = `${iconSpan}<span>${label}</span>`;
-    chip.onclick = () => {
+    chip.onclick = (e) => {
+      if (e) {
+        e.preventDefault();
+        e.stopPropagation();
+      }
       selectCategoryAndOpenCatalog(cat.id);
     };
     container.appendChild(chip);
@@ -1347,8 +1358,10 @@ function openCategoryGridModal() {
 }
 
 function closeCategoryGridModal(e) {
-  if (e && e.target && e.target.id !== 'categoryGridModal' && !e.target.classList.contains('modal-close-btn') && !e.target.classList.contains('btn-primary')) {
-    return;
+  if (e) {
+    if (e.target && e.target.id !== 'categoryGridModal' && !e.target.classList.contains('modal-close-btn') && e.target.id !== 'categoryModalCloseBtn') {
+      return;
+    }
   }
   const modal = document.getElementById('categoryGridModal');
   if (modal) modal.classList.remove('active');
@@ -1363,8 +1376,9 @@ function renderCategoryGrid() {
   CATEGORIES_LIST.forEach(cat => {
     const isSelected = activeCategory === cat.id;
     const item = document.createElement('div');
-    item.style.padding = '10px 8px';
-    item.style.borderRadius = '10px';
+    item.className = 'cat-grid-card';
+    item.style.padding = '12px 10px';
+    item.style.borderRadius = '12px';
     item.style.border = isSelected ? '2px solid var(--accent-gold)' : '1px solid var(--border-subtle)';
     item.style.background = isSelected ? 'var(--accent-gold-container)' : 'var(--bg-surface)';
     item.style.cursor = 'pointer';
@@ -1373,22 +1387,26 @@ function renderCategoryGrid() {
     item.style.display = 'flex';
     item.style.flexDirection = 'column';
     item.style.alignItems = 'center';
-    item.style.gap = '4px';
+    item.style.gap = '6px';
 
     const count = cat.id === 'all' 
       ? items.length 
       : items.filter(it => it.category === cat.id).length;
 
     const label = isDe ? cat.titleDe : cat.titleEn;
-    const iconHtml = cat.icon ? `<span class="material-symbols-outlined" style="font-size: 24px; color: ${isSelected ? 'var(--accent-gold)' : 'var(--text-secondary)'};">${cat.icon}</span>` : '';
+    const iconHtml = cat.icon ? `<span class="material-symbols-outlined" style="font-size: 26px; color: ${isSelected ? 'var(--accent-gold)' : 'var(--text-secondary)'};">${cat.icon}</span>` : '';
 
     item.innerHTML = `
       ${iconHtml}
-      <div style="font-size: 0.84rem; font-weight: ${isSelected ? '800' : '600'}; color: var(--text-primary); line-height: 1.2;">${label}</div>
-      <div style="font-size: 0.72rem; color: var(--text-muted); margin-top: 1px;">${count} ${isDe ? 'Einträge' : 'Entries'}</div>
+      <div style="font-size: 0.85rem; font-weight: ${isSelected ? '800' : '700'}; color: var(--text-primary); line-height: 1.25;">${label}</div>
+      <div style="font-size: 0.74rem; color: var(--text-muted); margin-top: 1px;">${count} ${isDe ? 'Einträge' : 'Entries'}</div>
     `;
 
-    item.onclick = () => {
+    item.onclick = (e) => {
+      if (e) {
+        e.preventDefault();
+        e.stopPropagation();
+      }
       selectCategoryAndOpenCatalog(cat.id);
     };
 
@@ -1413,7 +1431,7 @@ function renderHomeCategoryLauncher() {
 
   specificCats.forEach(cat => {
     const card = document.createElement('div');
-    card.style.padding = '10px 10px';
+    card.style.padding = '12px 10px';
     card.style.borderRadius = '12px';
     card.style.border = '1px solid var(--border-subtle)';
     card.style.background = 'var(--bg-surface-variant)';
@@ -1445,7 +1463,11 @@ function renderHomeCategoryLauncher() {
       card.style.background = 'var(--bg-surface-variant)';
     };
 
-    card.onclick = () => {
+    card.onclick = (e) => {
+      if (e) {
+        e.preventDefault();
+        e.stopPropagation();
+      }
       selectCategoryAndOpenCatalog(cat.id);
     };
 
@@ -1663,6 +1685,28 @@ function showItemDetail(id) {
     }
   }
 
+  // Dynamic Translation of Detail Modal Section Headers
+  const originLabel = document.getElementById('detailOriginLabel');
+  if (originLabel) originLabel.textContent = isDe ? 'Herkunft' : 'Origin';
+
+  const faqTitle = document.getElementById('detailFaqTitle');
+  if (faqTitle) faqTitle.innerHTML = `<span class="material-symbols-outlined" style="font-size: 18px;">help_outline</span><span>${isDe ? 'Gastfragen souverän beantworten' : 'How to Answer Guest Inquiries'}</span>`;
+
+  const scienceTitle = document.getElementById('detailScienceTitle');
+  if (scienceTitle) scienceTitle.innerHTML = `<span class="material-symbols-outlined" style="font-size: 18px;">science</span><span>${isDe ? 'Wissenschaft & Herstellung' : 'Science & Production Breakdown'}</span>`;
+
+  const rawTitle = document.getElementById('detailRawMaterialTitle');
+  if (rawTitle) rawTitle.innerHTML = `<span class="material-symbols-outlined" style="font-size: 18px;">spa</span><span>${isDe ? 'Rohstoffe & Botanicals' : 'Raw Materials & Botanicals'}</span>`;
+
+  const tasteTitle = document.getElementById('detailTasteTitle');
+  if (tasteTitle) tasteTitle.innerHTML = `<span class="material-symbols-outlined" style="font-size: 18px;">restaurant</span><span>${isDe ? 'Sensorik & Geschmacksprofil' : 'Sensory & Tasting Notes'}</span>`;
+
+  const culinaryTitle = document.getElementById('detailCulinaryTitle');
+  if (culinaryTitle) culinaryTitle.innerHTML = `<span class="material-symbols-outlined" style="font-size: 18px;">local_bar</span><span>${isDe ? 'Servierempfehlung & Gastronomie-Einsatz' : 'Service & Culinary Applications'}</span>`;
+
+  const allergenTitle = document.getElementById('detailAllergenTitle');
+  if (allergenTitle) allergenTitle.innerHTML = `<span class="material-symbols-outlined" style="font-size: 18px;">warning</span><span>${isDe ? 'Allergen- & Inhaltsstoffhinweis (EU)' : 'Allergen & Ingredient Notice (EU)'}</span>`;
+
   // Content sections
   const faqEl = document.getElementById('detailFaq');
   if (faqEl) faqEl.textContent = faq || (isDe ? 'Unsere exklusive Hausspezialität, sorgfältig ausgewählt für erstklassigen Genuss.' : 'Curated house specialty selected for premium enjoyment.');
@@ -1671,13 +1715,25 @@ function showItemDetail(id) {
   if (sciEl) sciEl.textContent = science || (isDe ? 'Zubereitung nach traditionellen gastronomischen Handwerksstandards.' : 'Prepared according to traditional gastronomy standards.');
 
   const rawEl = document.getElementById('detailRawMaterial');
-  if (rawEl) rawEl.textContent = raw || (isDe ? 'Ausgewählte Gastronomie-Zutaten' : 'Curated ingredients');
+  const rawBox = document.getElementById('detailRawMaterialBox');
+  if (rawEl) {
+    rawEl.textContent = raw || (isDe ? 'Ausgewählte Gastronomie-Zutaten' : 'Curated ingredients');
+    if (rawBox) rawBox.style.display = raw ? 'block' : 'none';
+  }
 
   const tasteEl = document.getElementById('detailTaste');
-  if (tasteEl) tasteEl.textContent = taste || (isDe ? 'Ausgewogenes, sortentypisches Aromenspiel.' : 'Balanced varietal flavor profile.');
+  const tasteBox = document.getElementById('detailTasteBox');
+  if (tasteEl) {
+    tasteEl.textContent = taste || (isDe ? 'Ausgewogenes, sortentypisches Aromenspiel.' : 'Balanced varietal flavor profile.');
+    if (tasteBox) tasteBox.style.display = taste ? 'block' : 'none';
+  }
 
   const culEl = document.getElementById('detailCulinary');
-  if (culEl) culEl.textContent = culinary || (isDe ? 'Im passenden Glas bei optimaler Serviertemperatur anreichen.' : 'Serve in appropriate glassware at optimal temperature.');
+  const culBox = document.getElementById('detailCulinaryBox');
+  if (culEl) {
+    culEl.textContent = culinary || (isDe ? 'Im passenden Glas bei optimaler Serviertemperatur anreichen.' : 'Serve in appropriate glassware at optimal temperature.');
+    if (culBox) culBox.style.display = culinary ? 'block' : 'none';
+  }
 
   // Allergens section
   const allergenSec = document.getElementById('detailAllergenSection');

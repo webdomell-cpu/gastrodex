@@ -131,7 +131,7 @@
           <h3 style="font-size: 1.1rem; font-weight: 800; color: var(--text-primary); margin: 0;" id="homeDirectCatTitle">
             Direkte Kategorie-Auswahl
           </h3>
-          <button onclick="switchTab('catalog')" class="btn-subtle" style="font-size: 0.8rem; font-weight: 700; color: var(--accent-gold); background: none; border: none; cursor: pointer; padding: 4px;" id="homeDirectCatAllBtn">
+          <button onclick="openCategoryGridModal()" class="btn-subtle" style="font-size: 0.8rem; font-weight: 700; color: var(--accent-gold); background: none; border: none; cursor: pointer; padding: 4px;" id="homeDirectCatAllBtn">
             Alle anzeigen ➔
           </button>
         </div>
@@ -481,13 +481,13 @@
 
   <!-- CATEGORY QUICK-GRID MODAL -->
   <div id="categoryGridModal" class="modal-overlay" onclick="closeCategoryGridModal(event)">
-    <div class="modal-card" style="max-width: 600px; max-height: 85vh; display: flex; flex-direction: column;">
+    <div class="modal-card" style="max-width: 600px; max-height: 85vh; display: flex; flex-direction: column;" onclick="event.stopPropagation()">
       <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px;">
         <h3 id="categoryModalTitle" style="font-size: 1.15rem; font-weight: 800; color: var(--accent-gold); display: flex; align-items: center; gap: 8px;">
           <span class="material-symbols-outlined">grid_view</span>
-          <span>Kategorie-Schnellauswahl (24)</span>
+          <span>Kategorie-Schnellauswahl (24 Fachbereiche)</span>
         </h3>
-        <button class="modal-close-btn" onclick="closeCategoryGridModal()">×</button>
+        <button class="modal-close-btn" onclick="closeCategoryGridModal(event)">×</button>
       </div>
       <p id="categoryModalSub" style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 12px;">
         Wähle direkt eine der 24 Fachkategorien aus der Gastronomie-Wissensdatenbank:
@@ -496,7 +496,7 @@
         <!-- Injected via renderCategoryGrid() in app.js -->
       </div>
       <div style="margin-top: 14px; text-align: right;">
-        <button id="categoryModalCloseBtn" class="btn-primary" style="padding: 8px 16px; font-size: 0.85rem;" onclick="closeCategoryGridModal()">Fertig</button>
+        <button id="categoryModalCloseBtn" class="btn-primary" style="padding: 8px 16px; font-size: 0.85rem;" onclick="closeCategoryGridModal(event)">Fertig</button>
       </div>
     </div>
   </div>

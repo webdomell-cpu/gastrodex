@@ -25,7 +25,8 @@ const CATEGORIES = [
   { id: 'meat_cuts', titleDe: '🥩 Fleischstücke & Cuts', titleEn: '🥩 Steaks & Meat Cuts', icon: 'restaurant' },
   { id: 'bread_bakery', titleDe: '🥖 Brote & Backwaren', titleEn: '🥖 Breads & Rolls', icon: 'bakery_dining' },
   { id: 'fingerfood', titleDe: '🥟 Fingerfood & Snacks', titleEn: '🥟 Fingerfood, Bites & Snacks', icon: 'breakfast_dining' },
-  { id: 'cereals', titleDe: '🥣 Cereals & Frühstück', titleEn: '🥣 Cereals & Breakfast', icon: 'grain' }
+  { id: 'cereals', titleDe: '🥣 Cereals & Frühstück', titleEn: '🥣 Cereals & Breakfast', icon: 'grain' },
+  { id: 'service', titleDe: '🛎️ Service & Tischkultur', titleEn: '🛎️ Service & Table Etiquette', icon: 'room_service' }
 ];
 
 const kotlinFiles = [
@@ -44,7 +45,8 @@ const kotlinFiles = [
   'app/src/main/java/com/example/data/CuratedOilsVinegarsData.kt',
   'app/src/main/java/com/example/data/CuratedMeatDeliData.kt',
   'app/src/main/java/com/example/data/CuratedBakerySnacksData.kt',
-  'app/src/main/java/com/example/data/CuratedCerealsData.kt'
+  'app/src/main/java/com/example/data/CuratedCerealsData.kt',
+  'app/src/main/java/com/example/data/CuratedServiceData.kt'
 ];
 
 function parseKotlinItems(filePath) {
@@ -142,12 +144,22 @@ function parseKotlinItems(filePath) {
       abv: getField('abv'),
       tasteEn: getField('tasteProfileEn'),
       tasteDe: getField('tasteProfileDe'),
+      tasteProfileEn: getField('tasteProfileEn'),
+      tasteProfileDe: getField('tasteProfileDe'),
       scienceEn: getField('scienceExplainedEn'),
       scienceDe: getField('scienceExplainedDe'),
+      scienceExplainedEn: getField('scienceExplainedEn'),
+      scienceExplainedDe: getField('scienceExplainedDe'),
       culinaryEn: getField('culinaryServingEn'),
       culinaryDe: getField('culinaryServingDe'),
+      culinaryServingEn: getField('culinaryServingEn'),
+      culinaryServingDe: getField('culinaryServingDe'),
       faqEn: getField('guestFaqEn'),
       faqDe: getField('guestFaqDe'),
+      guestFaqEn: getField('guestFaqEn'),
+      guestFaqDe: getField('guestFaqDe'),
+      rawMaterialEn: getField('rawMaterialEn'),
+      rawMaterialDe: getField('rawMaterialDe'),
       allergens: getList('allergens').length > 0 ? getList('allergens') : ['None'],
       tags: getList('tags').length > 0 ? getList('tags') : [],
       inStock: true,

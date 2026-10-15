@@ -29,7 +29,11 @@
         "Gala",
         "RestaurantBasics"
       ],
-      "isFavorite": true
+      "isFavorite": true,
+      "guestFaqEn": "Why is fork on left and knife on right? Historically, right-handed diners held cutting blades in their dominant right hand.",
+      "guestFaqDe": "Warum liegt die Gabel links und das Messer rechts? Historisch führten Rechtshänder Schneidewerkzeuge in der rechten dominanten Hand.",
+      "tasteProfileEn": "Precise geometry, pristine symmetry, gleaming polished silver.",
+      "culinaryServingEn": "Forks placed on left (tines up), knives on right (blades facing plate). The anchor water goblet aligns above the tip of the dinner knife."
     },
     {
       "id": "service_napkin_folding_hygiene",
@@ -58,7 +62,11 @@
         "ServiceHygiene",
         "TableArt"
       ],
-      "isFavorite": false
+      "isFavorite": false,
+      "guestFaqEn": "Where should the napkin go when leaving the table temporarily? Placed on your chair seat; never crumpled on a used plate.",
+      "guestFaqDe": "Wohin mit der Serviette beim Verlassen des Tisches? Auf die Stuhlsitzfläche legen – niemals geknüllt auf den Teller werfen.",
+      "tasteProfileEn": "Immaculate crisp folds, aesthetic table architecture, sanitary handling.",
+      "culinaryServingEn": "Placed centered on charger plate, standing inside water glass, or tucked neatly as a cutlery pouch."
     },
     {
       "id": "service_cutlery_glassware_rules",
@@ -87,7 +95,11 @@
         "ServiceRules",
         "Etiquette"
       ],
-      "isFavorite": true
+      "isFavorite": true,
+      "guestFaqEn": "Why use specific wine glasses? Bowl geometry directs wine to specific tongue zones and concentrates volatile bouquet aromas.",
+      "guestFaqDe": "Warum gibt es spezielle Weingläser? Die Kelchgeometrie lenkt den Wein auf bestimmte Zungenareale und konzentriert flüchtige Duftaromen.",
+      "tasteProfileEn": "Precise tool matching, immaculate sanitation, zero cross-contamination of dishes.",
+      "culinaryServingEn": "Always present serving spoons and forks resting cleanly on the rim of the platter facing the guest."
     },
     {
       "id": "service_presentation_standards",
@@ -116,7 +128,11 @@
         "Presentation",
         "ServiceRules"
       ],
-      "isFavorite": false
+      "isFavorite": false,
+      "guestFaqEn": "What is the golden rule of hospitality? The guest’s comfort, well-being and uninterrupted dining pleasure take top priority.",
+      "guestFaqDe": "Was ist die goldene Regel der Gastlichkeit? Das Wohlbefinden und der ungestörte Genuss des Gastes stehen zu jeder Zeit an erster Stelle.",
+      "tasteProfileEn": "Seamless hospitality, discreet elegance, anticipatory service flow.",
+      "culinaryServingEn": "Executing service with quiet confidence, maintaining eye contact, and clearing empty plates promptly."
     },
     {
       "id": "service_table_coverage",
@@ -144,7 +160,11 @@
         "Linen",
         "RestaurantStandards"
       ],
-      "isFavorite": false
+      "isFavorite": false,
+      "guestFaqEn": "What is the proper drop length for a tablecloth? Exactly 25 to 30 cm — it should approach the chair seat without pooling on guests’ laps.",
+      "guestFaqDe": "Wie lang muss der Überhang einer Tischdecke sein? Genau 25 bis 30 cm – sie darf die Stuhlfläche knapp berühren, aber niemals auf den Beinen der Gäste aufliegen.",
+      "tasteProfileEn": "Immaculate linen, sound-dampening acoustic feel, elegant room ambiance.",
+      "culinaryServingEn": "Align the tablecloth’s center crease with the room’s main axis; uniform drop of 25 to 30 cm around all edges."
     }
   ]
 }

@@ -373,7 +373,7 @@ fun ItemDetailScreen(
                             text = if (language == Language.DE)
                                 "Gastfragen souverän beantworten"
                             else
-                                "How to Explain to a Guest",
+                                "How to Answer Guest Inquiries",
                             style = MaterialTheme.typography.titleMedium,
                             fontWeight = FontWeight.Bold,
                             color = MaterialTheme.colorScheme.onSurface
@@ -628,6 +628,7 @@ fun DetailSectionCard(
     icon: androidx.compose.ui.graphics.vector.ImageVector,
     content: String
 ) {
+    if (content.isBlank()) return
     Card(
         shape = RoundedCornerShape(16.dp),
         colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant),
